@@ -1,14 +1,19 @@
 ---
 uid: Microsoft.Azure.Management.Compute.VirtualMachinesOperationsExtensions.Capture(Microsoft.Azure.Management.Compute.IVirtualMachinesOperations,System.String,System.String,Microsoft.Azure.Management.Compute.Models.VirtualMachineCaptureParameters)
-summary: *content
+description: *content
 ---
 
+OVERWRITES "description"
 Here is content that is injected by the overwrite file method, so writers can add as much as they want to the generated API documentation in Markown format.
+
+DOUGE TEST --Remove for Demo
 
 ---
 uid: Microsoft.Azure.Management.Compute.VirtualMachinesOperationsExtensions.Capture(Microsoft.Azure.Management.Compute.IVirtualMachinesOperations,System.String,System.String,Microsoft.Azure.Management.Compute.Models.VirtualMachineCaptureParameters)
 remarks: *content
 ---
+
+OVERWRITES remarks
 
 The code below demonstrates how to call the Capture method using the Azure .NET SDK. 
 
