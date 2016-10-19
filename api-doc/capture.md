@@ -3,10 +3,8 @@ uid: Microsoft.Azure.Management.Compute.VirtualMachinesOperationsExtensions.Capt
 description: *content
 ---
 
-OVERWRITES "description"
+OVERWRITES "description" HI EVERYBODY
 Here is content that is injected by the overwrite file method, so writers can add as much as they want to the generated API documentation in Markown format.
-
-DOUGE TEST --Remove for Demo
 
 ---
 uid: Microsoft.Azure.Management.Compute.VirtualMachinesOperationsExtensions.Capture(Microsoft.Azure.Management.Compute.IVirtualMachinesOperations,System.String,System.String,Microsoft.Azure.Management.Compute.Models.VirtualMachineCaptureParameters)
