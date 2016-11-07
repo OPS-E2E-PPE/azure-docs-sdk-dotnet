@@ -31,8 +31,18 @@ items:
   summary: "\nSpecifies the set of possible permissions for a shared access queue policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessQueuePermissions : int'
-    content.vb: Public Enum SharedAccessQueuePermissions As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessQueuePermissions
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessQueuePermissions
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -64,8 +74,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Queue.SharedAccessQueuePermissions
   modifiers.csharp:
@@ -99,8 +108,7 @@ items:
   summary: "\nPermission to peek messages and get queue metadata granted.\n"
   example: []
   syntax:
-    content: Read = null
-    content.vb: Read = Nothing
+    content: Read = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Queue.SharedAccessQueuePermissions
   modifiers.csharp:
@@ -134,8 +142,7 @@ items:
   summary: "\nPermission to add messages granted.\n"
   example: []
   syntax:
-    content: Add = null
-    content.vb: Add = Nothing
+    content: Add = 2
     return:
       type: Microsoft.WindowsAzure.Storage.Queue.SharedAccessQueuePermissions
   modifiers.csharp:
@@ -169,8 +176,7 @@ items:
   summary: "\nPermissions to update messages granted.\n"
   example: []
   syntax:
-    content: Update = null
-    content.vb: Update = Nothing
+    content: Update = 4
     return:
       type: Microsoft.WindowsAzure.Storage.Queue.SharedAccessQueuePermissions
   modifiers.csharp:
@@ -204,8 +210,7 @@ items:
   summary: "\nPermission to get and delete messages granted.\n"
   example: []
   syntax:
-    content: ProcessMessages = null
-    content.vb: ProcessMessages = Nothing
+    content: ProcessMessages = 8
     return:
       type: Microsoft.WindowsAzure.Storage.Queue.SharedAccessQueuePermissions
   modifiers.csharp:

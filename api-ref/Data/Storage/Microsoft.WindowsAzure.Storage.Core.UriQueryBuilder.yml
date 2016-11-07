@@ -8,10 +8,10 @@ items:
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.#ctor
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.#ctor(Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder)
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Add(System.String,System.String)
-  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(IEnumerable{KeyValuePair{System.String,System.String}})
+  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(Microsoft.WindowsAzure.Storage.StorageUri)
-  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(Uri)
-  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(Uri)
+  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(System.Uri)
+  - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(System.Uri)
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Item(System.String)
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Parameters
   - Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.ToString
@@ -36,12 +36,17 @@ items:
   summary: "\nA convenience class for constructing URI query strings.\n"
   example: []
   syntax:
-    content: 'public class UriQueryBuilder : object'
-    content.vb: >-
-      Public Class UriQueryBuilder
-          Inherits Object
+    content: public class UriQueryBuilder
+    content.vb: Public Class UriQueryBuilder
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -145,7 +150,7 @@ items:
     content.vb: Protected ReadOnly Property Parameters As IDictionary(Of String, String)
     parameters: []
     return:
-      type: IDictionary{System.String,System.String}
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
   overload: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Parameters*
   modifiers.csharp:
   - protected
@@ -237,16 +242,16 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(IEnumerable{KeyValuePair{System.String,System.String}})
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(IEnumerable{KeyValuePair{System.String,System.String}})
-  id: AddRange(IEnumerable{KeyValuePair{System.String,System.String}})
+- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  id: AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
   parent: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
   langs:
   - csharp
   - vb
   name: AddRange(IEnumerable<KeyValuePair<String, String>>)
   nameWithType: UriQueryBuilder.AddRange(IEnumerable<KeyValuePair<String, String>>)
-  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(IEnumerable<KeyValuePair<System.String, System.String>>)
+  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
   type: Method
   source:
     remote:
@@ -266,7 +271,7 @@ items:
     content.vb: Public Sub AddRange(parameters As IEnumerable(Of KeyValuePair(Of String, String)))
     parameters:
     - id: parameters
-      type: IEnumerable{KeyValuePair{System.String,System.String}}
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
       description: The set of query string name/value pairs
   overload: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange*
   nameWithType.vb: UriQueryBuilder.AddRange(IEnumerable(Of KeyValuePair(Of String, String)))
@@ -274,7 +279,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(IEnumerable(Of KeyValuePair(Of System.String, System.String)))
+  fullName.vb: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
   name.vb: AddRange(IEnumerable(Of KeyValuePair(Of String, String)))
 - uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.ToString
   commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.ToString
@@ -298,14 +303,15 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Core
-  summary: "\nReturns a <see cref=\"!:System.String\"></see> containing the URI.\n"
+  summary: "\nReturns a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> containing the URI.\n"
   example: []
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: "\nA <see cref=\"!:System.String\"></see> containing the URI.\n"
+      description: "\nA <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> containing the URI.\n"
+  overridden: System.Object.ToString
   overload: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.ToString*
   modifiers.csharp:
   - public
@@ -352,16 +358,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(Uri)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(Uri)
-  id: AddToUri(Uri)
+- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(System.Uri)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(System.Uri)
+  id: AddToUri(System.Uri)
   parent: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
   langs:
   - csharp
   - vb
   name: AddToUri(Uri)
   nameWithType: UriQueryBuilder.AddToUri(Uri)
-  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(Uri)
+  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri(System.Uri)
   type: Method
   source:
     remote:
@@ -381,11 +387,11 @@ items:
     content.vb: Public Overridable Function AddToUri(uri As Uri) As Uri
     parameters:
     - id: uri
-      type: Uri
-      description: A <see cref="!:System.Uri"></see> object containing the original URI, including any existing query parameters.
+      type: System.Uri
+      description: A <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> object containing the original URI, including any existing query parameters.
     return:
-      type: Uri
-      description: A <see cref="!:System.Uri"></see> object with the new query parameter appended.
+      type: System.Uri
+      description: A <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> object with the new query parameter appended.
   overload: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUri*
   modifiers.csharp:
   - public
@@ -393,16 +399,16 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(Uri)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(Uri)
-  id: AddToUriCore(Uri)
+- uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(System.Uri)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(System.Uri)
+  id: AddToUriCore(System.Uri)
   parent: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
   langs:
   - csharp
   - vb
   name: AddToUriCore(Uri)
   nameWithType: UriQueryBuilder.AddToUriCore(Uri)
-  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(Uri)
+  fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore(System.Uri)
   type: Method
   source:
     remote:
@@ -422,11 +428,11 @@ items:
     content.vb: Protected Function AddToUriCore(uri As Uri) As Uri
     parameters:
     - id: uri
-      type: Uri
-      description: A <see cref="!:System.Uri"></see> object containing the original URI, including any existing query parameters.
+      type: System.Uri
+      description: A <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> object containing the original URI, including any existing query parameters.
     return:
-      type: Uri
-      description: A <see cref="!:System.Uri"></see> object with the new query parameter appended.
+      type: System.Uri
+      description: A <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> object with the new query parameter appended.
   overload: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore*
   modifiers.csharp:
   - protected
@@ -440,10 +446,266 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Core
   fullName: Microsoft.WindowsAzure.Storage.Core
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
   commentId: T:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
   parent: Microsoft.WindowsAzure.Storage.Core
@@ -463,20 +725,21 @@ references:
   name: Parameters
   nameWithType: UriQueryBuilder.Parameters
   fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Parameters
-- uid: IDictionary{System.String,System.String}
-  commentId: '!:IDictionary{System.String,System.String}'
-  definition: IDictionary`2
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
   name: IDictionary<String, String>
   nameWithType: IDictionary<String, String>
-  fullName: IDictionary<System.String, System.String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
   nameWithType.vb: IDictionary(Of String, String)
-  fullname.vb: IDictionary(Of System.String, System.String)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
   name.vb: IDictionary(Of String, String)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -498,10 +761,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -522,56 +785,63 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IDictionary`2
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
   isExternal: true
-  name: IDictionary<, >
-  nameWithType: IDictionary<, >
-  fullName: IDictionary<, >
-  nameWithType.vb: IDictionary(Of , )
-  fullname.vb: IDictionary(Of , )
-  name.vb: IDictionary(Of , )
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Item*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Item
   isExternal: false
@@ -579,6 +849,8 @@ references:
   nameWithType: UriQueryBuilder.Item
   fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.Item
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -595,28 +867,29 @@ references:
   name: AddRange
   nameWithType: UriQueryBuilder.AddRange
   fullName: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddRange
-- uid: IEnumerable{KeyValuePair{System.String,System.String}}
-  commentId: '!:IEnumerable{KeyValuePair{System.String,System.String}}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<KeyValuePair<String, String>>
   nameWithType: IEnumerable<KeyValuePair<String, String>>
-  fullName: IEnumerable<KeyValuePair<System.String, System.String>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>
   nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, String))
-  fullname.vb: IEnumerable(Of KeyValuePair(Of System.String, System.String))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String))
   name.vb: IEnumerable(Of KeyValuePair(Of String, String))
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: KeyValuePair`2
+  - uid: System.Collections.Generic.KeyValuePair`2
     name: KeyValuePair
     nameWithType: KeyValuePair
-    fullName: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: <
     nameWithType: <
@@ -641,18 +914,18 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: KeyValuePair`2
+  - uid: System.Collections.Generic.KeyValuePair`2
     name: KeyValuePair
     nameWithType: KeyValuePair
-    fullName: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -676,41 +949,73 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullname.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -739,11 +1044,13 @@ references:
   name: Microsoft.WindowsAzure.Storage
   nameWithType: Microsoft.WindowsAzure.Storage
   fullName: Microsoft.WindowsAzure.Storage
-- uid: Uri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
   isExternal: true
   name: Uri
   nameWithType: Uri
-  fullName: Uri
+  fullName: System.Uri
 - uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder.AddToUriCore
   isExternal: false

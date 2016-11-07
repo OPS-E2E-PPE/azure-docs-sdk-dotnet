@@ -5,11 +5,12 @@ items:
   id: FileHttpResponseParsers
   parent: Microsoft.WindowsAzure.Storage.File.Protocol
   children:
-  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(Stream)
-  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(Stream)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(System.IO.Stream)
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(System.IO.Stream)
   langs:
   - csharp
   - vb
@@ -19,22 +20,30 @@ items:
   type: Class
   source:
     remote:
-      path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
+      path: Lib/Common/File/Protocol/FileHttpResponseParsers.Common.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
     id: FileHttpResponseParsers
-    path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-    startLine: 28
+    path: Lib/Common/File/Protocol/FileHttpResponseParsers.Common.cs
+    startLine: 30
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.File.Protocol
+  summary: "\nProvides methods for parsing responses to operations on files in the File service.\n"
+  example: []
   syntax:
-    content: 'public static class FileHttpResponseParsers : object'
-    content.vb: >-
-      Public Module FileHttpResponseParsers
-          Inherits Object
+    content: public static class FileHttpResponseParsers
+    content.vb: Public Module FileHttpResponseParsers
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -42,16 +51,180 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(Stream)
-  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(Stream)
-  id: ReadServiceProperties(Stream)
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  id: GetRequestId(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetRequestId(HttpWebResponse)
+  nameWithType: FileHttpResponseParsers.GetRequestId(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetRequestId
+    path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+    startLine: 41
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
+  summary: "\nGets the request ID from the response.\n"
+  example: []
+  syntax:
+    content: public static string GetRequestId(HttpWebResponse response)
+    content.vb: Public Shared Function GetRequestId(response As HttpWebResponse) As String
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The web response.
+    return:
+      type: System.String
+      description: A unique value associated with the request.
+  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  id: GetProperties(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetProperties(HttpWebResponse)
+  nameWithType: FileHttpResponseParsers.GetProperties(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetProperties
+    path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+    startLine: 51
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
+  summary: "\nGets the file's properties from the response.\n"
+  example: []
+  syntax:
+    content: public static FileProperties GetProperties(HttpWebResponse response)
+    content.vb: Public Shared Function GetProperties(response As HttpWebResponse) As FileProperties
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The web response.
+    return:
+      type: Microsoft.WindowsAzure.Storage.File.FileProperties
+      description: The file's properties.
+  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  id: GetMetadata(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetMetadata(HttpWebResponse)
+  nameWithType: FileHttpResponseParsers.GetMetadata(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetMetadata
+    path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+    startLine: 103
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
+  summary: "\nGets the user-defined metadata.\n"
+  example: []
+  syntax:
+    content: public static IDictionary<string, string> GetMetadata(HttpWebResponse response)
+    content.vb: Public Shared Function GetMetadata(response As HttpWebResponse) As IDictionary(Of String, String)
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The response from server.
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+      description: A <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref> of the metadata.
+  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(System.Net.HttpWebResponse)
+  id: GetCopyAttributes(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetCopyAttributes(HttpWebResponse)
+  nameWithType: FileHttpResponseParsers.GetCopyAttributes(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetCopyAttributes
+    path: Lib/ClassLibraryCommon/File/Protocol/FileHttpResponseParsers.cs
+    startLine: 113
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
+  summary: "\nExtracts a <xref href=\"Microsoft.WindowsAzure.Storage.Blob.CopyState\" data-throw-if-not-resolved=\"false\"></xref> object from the headers of a web response.\n"
+  example: []
+  syntax:
+    content: public static CopyState GetCopyAttributes(HttpWebResponse response)
+    content.vb: Public Shared Function GetCopyAttributes(response As HttpWebResponse) As CopyState
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The HTTP web response.
+    return:
+      type: Microsoft.WindowsAzure.Storage.Blob.CopyState
+      description: A <xref href="Microsoft.WindowsAzure.Storage.Blob.CopyState" data-throw-if-not-resolved="false"></xref> object, or <code>null</code> if the web response does not include copy state.
+  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(System.IO.Stream)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(System.IO.Stream)
+  id: ReadServiceProperties(System.IO.Stream)
   parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
   langs:
   - csharp
   - vb
   name: ReadServiceProperties(Stream)
   nameWithType: FileHttpResponseParsers.ReadServiceProperties(Stream)
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(Stream)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties(System.IO.Stream)
   type: Method
   source:
     remote:
@@ -71,7 +244,7 @@ items:
     content.vb: Public Shared Function ReadServiceProperties(inputStream As Stream) As FileServiceProperties
     parameters:
     - id: inputStream
-      type: Stream
+      type: System.IO.Stream
       description: The stream from which to read the service properties.
     return:
       type: Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
@@ -83,16 +256,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(Stream)
-  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(Stream)
-  id: ReadServiceStats(Stream)
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(System.IO.Stream)
+  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(System.IO.Stream)
+  id: ReadServiceStats(System.IO.Stream)
   parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
   langs:
   - csharp
   - vb
   name: ReadServiceStats(Stream)
   nameWithType: FileHttpResponseParsers.ReadServiceStats(Stream)
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(Stream)
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats(System.IO.Stream)
   type: Method
   source:
     remote:
@@ -112,135 +285,12 @@ items:
     content.vb: Public Shared Function ReadServiceStats(inputStream As Stream) As ServiceStats
     parameters:
     - id: inputStream
-      type: Stream
+      type: System.IO.Stream
       description: The stream from which to read the service stats.
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
       description: The service stats stored in the stream.
   overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(HttpResponseMessage)
-  id: GetProperties(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetProperties(HttpResponseMessage)
-  nameWithType: FileHttpResponseParsers.GetProperties(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetProperties
-    path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-    startLine: 39
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
-  summary: "\nGets the file's properties from the response.\n"
-  example: []
-  syntax:
-    content: public static FileProperties GetProperties(HttpResponseMessage response)
-    content.vb: Public Shared Function GetProperties(response As HttpResponseMessage) As FileProperties
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The web response.
-    return:
-      type: Microsoft.WindowsAzure.Storage.File.FileProperties
-      description: The file's properties.
-  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(HttpResponseMessage)
-  id: GetCopyAttributes(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetCopyAttributes(HttpResponseMessage)
-  nameWithType: FileHttpResponseParsers.GetCopyAttributes(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetCopyAttributes
-    path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-    startLine: 100
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
-  summary: "\nExtracts a <xref href=\"Microsoft.WindowsAzure.Storage.Blob.CopyState\" data-throw-if-not-resolved=\"false\"></xref> object from the headers of a web response.\n"
-  example: []
-  syntax:
-    content: public static CopyState GetCopyAttributes(HttpResponseMessage response)
-    content.vb: Public Shared Function GetCopyAttributes(response As HttpResponseMessage) As CopyState
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The HTTP web response.
-    return:
-      type: Microsoft.WindowsAzure.Storage.Blob.CopyState
-      description: A <xref href="Microsoft.WindowsAzure.Storage.Blob.CopyState" data-throw-if-not-resolved="false"></xref> object, or null if the web response does not contain a copy status.
-  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetCopyAttributes*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  id: GetMetadata(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetMetadata(HttpResponseMessage)
-  nameWithType: FileHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetMetadata
-    path: Lib/WindowsRuntime/File/Protocol/FileHttpResponseParsers.cs
-    startLine: 110
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.File.Protocol
-  summary: "\nGets the user-defined metadata.\n"
-  example: []
-  syntax:
-    content: public static IDictionary<string, string> GetMetadata(HttpResponseMessage response)
-    content.vb: Public Shared Function GetMetadata(response As HttpResponseMessage) As IDictionary(Of String, String)
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The response from server.
-    return:
-      type: IDictionary{System.String,System.String}
-      description: A <see cref="!:IDictionary"></see> of the metadata.
-  overload: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata*
   modifiers.csharp:
   - public
   - static
@@ -255,58 +305,329 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.File.Protocol
   fullName: Microsoft.WindowsAzure.Storage.File.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties
-  isExternal: false
-  name: ReadServiceProperties
-  nameWithType: FileHttpResponseParsers.ReadServiceProperties
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties
-- uid: Stream
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
   isExternal: true
-  name: Stream
-  nameWithType: Stream
-  fullName: Stream
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
-  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
-  parent: Microsoft.WindowsAzure.Storage.File.Protocol
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
   isExternal: false
-  name: FileServiceProperties
-  nameWithType: FileServiceProperties
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId
   isExternal: false
-  name: ReadServiceStats
-  nameWithType: FileHttpResponseParsers.ReadServiceStats
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
-  commentId: T:Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  name: GetRequestId
+  nameWithType: FileHttpResponseParsers.GetRequestId
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetRequestId
+- uid: System.Net.HttpWebResponse
+  commentId: T:System.Net.HttpWebResponse
+  parent: System.Net
+  isExternal: true
+  name: HttpWebResponse
+  nameWithType: HttpWebResponse
+  fullName: System.Net.HttpWebResponse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Net
+  commentId: N:System.Net
   isExternal: false
-  name: ServiceStats
-  nameWithType: ServiceStats
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol
-  commentId: N:Microsoft.WindowsAzure.Storage.Shared.Protocol
-  isExternal: false
-  name: Microsoft.WindowsAzure.Storage.Shared.Protocol
-  nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties*
   commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties
   isExternal: false
   name: GetProperties
   nameWithType: FileHttpResponseParsers.GetProperties
   fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetProperties
-- uid: HttpResponseMessage
-  isExternal: true
-  name: HttpResponseMessage
-  nameWithType: HttpResponseMessage
-  fullName: HttpResponseMessage
 - uid: Microsoft.WindowsAzure.Storage.File.FileProperties
   commentId: T:Microsoft.WindowsAzure.Storage.File.FileProperties
   parent: Microsoft.WindowsAzure.Storage.File
@@ -320,6 +641,131 @@ references:
   name: Microsoft.WindowsAzure.Storage.File
   nameWithType: Microsoft.WindowsAzure.Storage.File
   fullName: Microsoft.WindowsAzure.Storage.File
+- uid: System.Collections.IDictionary
+  commentId: T:System.Collections.IDictionary
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata
+  isExternal: false
+  name: GetMetadata
+  nameWithType: FileHttpResponseParsers.GetMetadata
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, String>
+  nameWithType: IDictionary<String, String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: IDictionary(Of String, String)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
+  name.vb: IDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Blob.CopyState
   commentId: T:Microsoft.WindowsAzure.Storage.Blob.CopyState
   parent: Microsoft.WindowsAzure.Storage.Blob
@@ -339,118 +785,48 @@ references:
   name: Microsoft.WindowsAzure.Storage.Blob
   nameWithType: Microsoft.WindowsAzure.Storage.Blob
   fullName: Microsoft.WindowsAzure.Storage.Blob
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties
   isExternal: false
-  name: GetMetadata
-  nameWithType: FileHttpResponseParsers.GetMetadata
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.GetMetadata
-- uid: IDictionary{System.String,System.String}
-  commentId: '!:IDictionary{System.String,System.String}'
-  definition: IDictionary`2
-  name: IDictionary<String, String>
-  nameWithType: IDictionary<String, String>
-  fullName: IDictionary<System.String, System.String>
-  nameWithType.vb: IDictionary(Of String, String)
-  fullname.vb: IDictionary(Of System.String, System.String)
-  name.vb: IDictionary(Of String, String)
-  spec.csharp:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: IDictionary`2
+  name: ReadServiceProperties
+  nameWithType: FileHttpResponseParsers.ReadServiceProperties
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceProperties
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
   isExternal: true
-  name: IDictionary<, >
-  nameWithType: IDictionary<, >
-  fullName: IDictionary<, >
-  nameWithType.vb: IDictionary(Of , )
-  fullname.vb: IDictionary(Of , )
-  name.vb: IDictionary(Of , )
-  spec.csharp:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol
+  isExternal: false
+  name: FileServiceProperties
+  nameWithType: FileServiceProperties
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileServiceProperties
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats
+  isExternal: false
+  name: ReadServiceStats
+  nameWithType: FileHttpResponseParsers.ReadServiceStats
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers.ReadServiceStats
+- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
+  commentId: T:Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
+  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  isExternal: false
+  name: ServiceStats
+  nameWithType: ServiceStats
+  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
+- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  commentId: N:Microsoft.WindowsAzure.Storage.Shared.Protocol
+  isExternal: false
+  name: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
+  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol

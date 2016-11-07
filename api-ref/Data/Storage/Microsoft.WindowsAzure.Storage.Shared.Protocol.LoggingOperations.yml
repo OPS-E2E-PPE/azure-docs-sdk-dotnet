@@ -31,8 +31,18 @@ items:
   summary: "\nEnumeration representing the state of logging in a service.\n"
   example: []
   syntax:
-    content: 'public enum LoggingOperations : int'
-    content.vb: Public Enum LoggingOperations As Integer
+    content: >-
+      [Flags]
+
+      public enum LoggingOperations
+    content.vb: >-
+      <Flags>
+
+      Public Enum LoggingOperations
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -64,8 +74,7 @@ items:
   summary: "\nLogging is disabled.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations
   modifiers.csharp:
@@ -99,8 +108,7 @@ items:
   summary: "\nLog read operations.\n"
   example: []
   syntax:
-    content: Read = null
-    content.vb: Read = Nothing
+    content: Read = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations
   modifiers.csharp:
@@ -134,8 +142,7 @@ items:
   summary: "\nLog write operations.\n"
   example: []
   syntax:
-    content: Write = null
-    content.vb: Write = Nothing
+    content: Write = 2
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations
   modifiers.csharp:
@@ -169,8 +176,7 @@ items:
   summary: "\nLog delete operations.\n"
   example: []
   syntax:
-    content: Delete = null
-    content.vb: Delete = Nothing
+    content: Delete = 4
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations
   modifiers.csharp:
@@ -204,8 +210,7 @@ items:
   summary: "\nLog all operations.\n"
   example: []
   syntax:
-    content: All = null
-    content.vb: All = Nothing
+    content: All = 7
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations
   modifiers.csharp:

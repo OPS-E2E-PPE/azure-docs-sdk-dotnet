@@ -7,10 +7,12 @@ items:
   children:
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.#ctor
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.#ctor(System.String,System.String)
+  - Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+  - Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.ETag
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.PartitionKey
-  - Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  - Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  - Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  - Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.RowKey
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.Timestamp
   - Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
@@ -34,18 +36,25 @@ items:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
   summary: "\nRepresents the base object type for a table entity in the Table service.\n"
-  remarks: "<xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity\" data-throw-if-not-resolved=\"false\"></xref> provides a base implementation for the <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity\" data-throw-if-not-resolved=\"false\"></xref> interface that provides <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary%7bSystem.String%2cMicrosoft.WindowsAzure.Storage.Table.EntityProperty%7d%2cMicrosoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> methods that by default serialize and \n    deserialize all properties via reflection. A table entity class may extend this class and override the <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary%7bSystem.String%2cMicrosoft.WindowsAzure.Storage.Table.EntityProperty%7d%2cMicrosoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> methods to provide customized or better performing serialization logic."
+  remarks: "<xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity\" data-throw-if-not-resolved=\"false\"></xref> provides a base implementation for the <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity\" data-throw-if-not-resolved=\"false\"></xref> interface that provides <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary%7bSystem.String%2cMicrosoft.WindowsAzure.Storage.Table.EntityProperty%7d%2cMicrosoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> methods that by default serialize and \n    deserialize all properties via reflection. A table entity class may extend this class and override the <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary%7bSystem.String%2cMicrosoft.WindowsAzure.Storage.Table.EntityProperty%7d%2cMicrosoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Microsoft.WindowsAzure.Storage.Table.ITableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)\" data-throw-if-not-resolved=\"false\"></xref> methods to provide customized or better performing serialization logic."
   example: []
   syntax:
-    content: 'public class TableEntity : object, ITableEntity'
+    content: 'public class TableEntity : ITableEntity'
     content.vb: >-
       Public Class TableEntity
-          Inherits Object
           Implements ITableEntity
   inheritance:
   - System.Object
   implements:
   - Microsoft.WindowsAzure.Storage.Table.ITableEntity
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -232,8 +241,8 @@ items:
     content.vb: Public Property Timestamp As DateTimeOffset
     parameters: []
     return:
-      type: DateTimeOffset
-      description: A <see cref="!:DateTimeOffset"></see> containing the timestamp of the entity.
+      type: System.DateTimeOffset
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> containing the timestamp of the entity.
   overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.Timestamp*
   implements:
   - Microsoft.WindowsAzure.Storage.Table.ITableEntity.Timestamp
@@ -283,16 +292,16 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  id: ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  id: ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
   parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
   langs:
   - csharp
   - vb
   name: ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
   nameWithType: TableEntity.ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
-  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
   type: Method
   source:
     remote:
@@ -305,21 +314,21 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
-  summary: "\nDeserializes the entity using the specified <see cref=\"!:IDictionary&lt;TKey,TValue&gt;\"></see> that maps property names to typed <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> values. \n"
+  summary: "\nDeserializes the entity using the specified <xref href=\"System.Collections.Generic.IDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> that maps property names to typed <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> values. \n"
   example: []
   syntax:
     content: public virtual void ReadEntity(IDictionary<string, EntityProperty> properties, OperationContext operationContext)
     content.vb: Public Overridable Sub ReadEntity(properties As IDictionary(Of String, EntityProperty), operationContext As OperationContext)
     parameters:
     - id: properties
-      type: IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
-      description: An <see cref="!:IDictionary&lt;TKey,TValue&gt;"></see> object that maps property names to typed <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> values.
+      type: System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+      description: An <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> object that maps property names to typed <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> values.
     - id: operationContext
       type: Microsoft.WindowsAzure.Storage.OperationContext
       description: An <xref href="Microsoft.WindowsAzure.Storage.OperationContext" data-throw-if-not-resolved="false"></xref> object that represents the context for the current operation.
   overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity*
   implements:
-  - Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  - Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
   nameWithType.vb: TableEntity.ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
   modifiers.csharp:
   - public
@@ -327,18 +336,18 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
   name.vb: ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
-- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  id: ReadUserObject(System.Object,IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object,System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  id: ReadUserObject(System.Object,System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
   parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
   langs:
   - csharp
   - vb
   name: ReadUserObject(Object, IDictionary<String, EntityProperty>, OperationContext)
   nameWithType: TableEntity.ReadUserObject(Object, IDictionary<String, EntityProperty>, OperationContext)
-  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object, IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object, System.Collections.Generic.IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
   type: Method
   source:
     remote:
@@ -351,7 +360,7 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
-  summary: "\nDeserializes a custom entity instance using the specified <see cref=\"!:IDictionary&lt;TKey,TValue&gt;\"></see> of property names to <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> data typed values. \n"
+  summary: "\nDeserializes a custom entity instance using the specified <xref href=\"System.Collections.Generic.IDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> of property names to <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> data typed values. \n"
   example: []
   syntax:
     content: public static void ReadUserObject(object entity, IDictionary<string, EntityProperty> properties, OperationContext operationContext)
@@ -361,8 +370,8 @@ items:
       type: System.Object
       description: The custom entity instance being deserialized.
     - id: properties
-      type: IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
-      description: An <see cref="!:IDictionary&lt;TKey,TValue&gt;"></see> object that maps string property names to <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> data values to deserialize and store in this table entity instance.
+      type: System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+      description: An <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> object that maps string property names to <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> data values to deserialize and store in this table entity instance.
     - id: operationContext
       type: Microsoft.WindowsAzure.Storage.OperationContext
       description: An <xref href="Microsoft.WindowsAzure.Storage.OperationContext" data-throw-if-not-resolved="false"></xref> object that represents the context for the current operation.
@@ -374,7 +383,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object, IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject(System.Object, System.Collections.Generic.IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
   name.vb: ReadUserObject(Object, IDictionary(Of String, EntityProperty), OperationContext)
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
   commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
@@ -398,7 +407,7 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
-  summary: "\nSerializes the <see cref=\"!:IDictionary&lt;TKey,TValue&gt;\"></see> of property names mapped to <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> data values from this <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  summary: "\nSerializes the <xref href=\"System.Collections.Generic.IDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> of property names mapped to <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> data values from this <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   example: []
   syntax:
     content: public virtual IDictionary<string, EntityProperty> WriteEntity(OperationContext operationContext)
@@ -408,8 +417,8 @@ items:
       type: Microsoft.WindowsAzure.Storage.OperationContext
       description: An <xref href="Microsoft.WindowsAzure.Storage.OperationContext" data-throw-if-not-resolved="false"></xref> object that represents the context for the current operation.
     return:
-      type: IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
-      description: An <see cref="!:IDictionary&lt;TKey,TValue&gt;"></see> object that maps string property names to <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> typed values created by serializing this table entity instance.
+      type: System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+      description: An <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> object that maps string property names to <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> typed values created by serializing this table entity instance.
   overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity*
   implements:
   - Microsoft.WindowsAzure.Storage.Table.ITableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
@@ -441,7 +450,7 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
-  summary: "\nCreate a <see cref=\"!:IDictionary&lt;TKey,TValue&gt;\"></see> of <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> objects for all the properties of the specified entity object.\n"
+  summary: "\nCreate a <xref href=\"System.Collections.Generic.IDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> of <xref href=\"Microsoft.WindowsAzure.Storage.Table.EntityProperty\" data-throw-if-not-resolved=\"false\"></xref> objects for all the properties of the specified entity object.\n"
   example: []
   syntax:
     content: public static IDictionary<string, EntityProperty> WriteUserObject(object entity, OperationContext operationContext)
@@ -454,8 +463,8 @@ items:
       type: Microsoft.WindowsAzure.Storage.OperationContext
       description: An <xref href="Microsoft.WindowsAzure.Storage.OperationContext" data-throw-if-not-resolved="false"></xref> object that represents the context for the current operation.
     return:
-      type: IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
-      description: An <see cref="!:IDictionary&lt;TKey,TValue&gt;"></see> of <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> objects for all the properties of the specified entity object.
+      type: System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+      description: An <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> of <xref href="Microsoft.WindowsAzure.Storage.Table.EntityProperty" data-throw-if-not-resolved="false"></xref> objects for all the properties of the specified entity object.
   overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteUserObject*
   modifiers.csharp:
   - public
@@ -463,9 +472,89 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+  id: DisableCompiledSerializers
+  parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
+  langs:
+  - csharp
+  - vb
+  name: DisableCompiledSerializers
+  nameWithType: TableEntity.DisableCompiledSerializers
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Table/TableEntity.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: DisableCompiledSerializers
+    path: Lib/Common/Table/TableEntity.cs
+    startLine: 444
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Table
+  summary: "\nDisables the ability to dynamically generate read and write lambdas at runtime. Setting this to false will clear out the static cache shared across all type instances that derive from TableEntity.\n"
+  example: []
+  syntax:
+    content: public static bool DisableCompiledSerializers { get; set; }
+    content.vb: Public Shared Property DisableCompiledSerializers As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache
+  id: DisablePropertyResolverCache
+  parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
+  langs:
+  - csharp
+  - vb
+  name: DisablePropertyResolverCache
+  nameWithType: TableEntity.DisablePropertyResolverCache
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Table/TableEntity.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: DisablePropertyResolverCache
+    path: Lib/Common/Table/TableEntity.cs
+    startLine: 798
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Table
+  summary: "\nGets or sets the status of the property resolver cache for the <xref href=\"Microsoft.WindowsAzure.Storage.Table.TableEntity\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  remarks: "\nThe property resolver cache caches known entity types and their respective property resolver dictionaries when entities are deserialized \nand the payload does not include JSON metadata. For most scenarios, disabling the property resolver cache is not recommended due to its \neffect on performance. \n"
+  example: []
+  syntax:
+    content: public static bool DisablePropertyResolverCache { get; set; }
+    content.vb: Public Shared Property DisablePropertyResolverCache As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity
   commentId: T:Microsoft.WindowsAzure.Storage.Table.TableEntity
+  parent: Microsoft.WindowsAzure.Storage.Table
   isExternal: false
   name: TableEntity
   nameWithType: TableEntity
@@ -477,32 +566,28 @@ references:
   name: ITableEntity
   nameWithType: ITableEntity
   fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity
-- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
-- uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
-  parent: Microsoft.WindowsAzure.Storage.Table.ITableEntity
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
   isExternal: true
   name: ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
-  nameWithType: ITableEntity.ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
-  fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
-  nameWithType.vb: ITableEntity.ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
-  fullname.vb: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
+  nameWithType: TableEntity.ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
+  nameWithType.vb: TableEntity.ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
+  fullname.vb: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
   name.vb: ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
   spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
     name: ReadEntity
-    nameWithType: ITableEntity.ReadEntity
-    fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity
+    nameWithType: TableEntity.ReadEntity
+    fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity
   - name: (
     nameWithType: (
     fullName: (
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -533,17 +618,146 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+    name: ReadEntity
+    nameWithType: TableEntity.ReadEntity
+    fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.WindowsAzure.Storage.Table.EntityProperty
+    name: EntityProperty
+    nameWithType: EntityProperty
+    fullName: Microsoft.WindowsAzure.Storage.Table.EntityProperty
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.WindowsAzure.Storage.OperationContext
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: Microsoft.WindowsAzure.Storage.OperationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
+  parent: Microsoft.WindowsAzure.Storage.Table.TableEntity
+  isExternal: false
+  name: WriteEntity(OperationContext)
+  nameWithType: TableEntity.WriteEntity(OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
+  spec.csharp:
+  - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
+    name: WriteEntity
+    nameWithType: TableEntity.WriteEntity
+    fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.WindowsAzure.Storage.OperationContext
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: Microsoft.WindowsAzure.Storage.OperationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity(Microsoft.WindowsAzure.Storage.OperationContext)
+    name: WriteEntity
+    nameWithType: TableEntity.WriteEntity
+    fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.WindowsAzure.Storage.OperationContext
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: Microsoft.WindowsAzure.Storage.OperationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+  parent: Microsoft.WindowsAzure.Storage.Table.ITableEntity
+  isExternal: true
+  name: ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
+  nameWithType: ITableEntity.ReadEntity(IDictionary<String, EntityProperty>, OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>, Microsoft.WindowsAzure.Storage.OperationContext)
+  nameWithType.vb: ITableEntity.ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
+  fullname.vb: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty), Microsoft.WindowsAzure.Storage.OperationContext)
+  name.vb: ReadEntity(IDictionary(Of String, EntityProperty), OperationContext)
+  spec.csharp:
+  - uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
     name: ReadEntity
     nameWithType: ITableEntity.ReadEntity
     fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity
   - name: (
     nameWithType: (
     fullName: (
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.WindowsAzure.Storage.Table.EntityProperty
+    name: EntityProperty
+    nameWithType: EntityProperty
+    fullName: Microsoft.WindowsAzure.Storage.Table.EntityProperty
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.WindowsAzure.Storage.OperationContext
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: Microsoft.WindowsAzure.Storage.OperationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity(System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty},Microsoft.WindowsAzure.Storage.OperationContext)
+    name: ReadEntity
+    nameWithType: ITableEntity.ReadEntity
+    fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ReadEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -617,10 +831,297 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Table
   fullName: Microsoft.WindowsAzure.Storage.Table
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.#ctor*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.#ctor
   isExternal: false
@@ -628,6 +1129,8 @@ references:
   nameWithType: TableEntity.TableEntity
   fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.TableEntity
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -658,6 +1161,13 @@ references:
   name: RowKey
   nameWithType: ITableEntity.RowKey
   fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.RowKey
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.Timestamp*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.Timestamp
   isExternal: false
@@ -671,11 +1181,6 @@ references:
   name: Timestamp
   nameWithType: ITableEntity.Timestamp
   fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.Timestamp
-- uid: DateTimeOffset
-  isExternal: true
-  name: DateTimeOffset
-  nameWithType: DateTimeOffset
-  fullName: DateTimeOffset
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ETag*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.ETag
   isExternal: false
@@ -689,6 +1194,57 @@ references:
   name: ETag
   nameWithType: ITableEntity.ETag
   fullName: Microsoft.WindowsAzure.Storage.Table.ITableEntity.ETag
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Table.EntityProperty
   commentId: T:Microsoft.WindowsAzure.Storage.Table.EntityProperty
   parent: Microsoft.WindowsAzure.Storage.Table
@@ -709,20 +1265,21 @@ references:
   name: ReadEntity
   nameWithType: TableEntity.ReadEntity
   fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadEntity
-- uid: IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
-  commentId: '!:IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}'
-  definition: IDictionary`2
+- uid: System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,Microsoft.WindowsAzure.Storage.Table.EntityProperty}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
   name: IDictionary<String, EntityProperty>
   nameWithType: IDictionary<String, EntityProperty>
-  fullName: IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>
+  fullName: System.Collections.Generic.IDictionary<System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty>
   nameWithType.vb: IDictionary(Of String, EntityProperty)
-  fullname.vb: IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, Microsoft.WindowsAzure.Storage.Table.EntityProperty)
   name.vb: IDictionary(Of String, EntityProperty)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -743,10 +1300,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -772,56 +1329,12 @@ references:
   name: Microsoft.WindowsAzure.Storage
   nameWithType: Microsoft.WindowsAzure.Storage
   fullName: Microsoft.WindowsAzure.Storage
-- uid: IDictionary`2
-  isExternal: true
-  name: IDictionary<, >
-  nameWithType: IDictionary<, >
-  fullName: IDictionary<, >
-  nameWithType.vb: IDictionary(Of , )
-  fullname.vb: IDictionary(Of , )
-  name.vb: IDictionary(Of , )
-  spec.csharp:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.ReadUserObject
   isExternal: false
@@ -840,3 +1353,22 @@ references:
   name: WriteUserObject
   nameWithType: TableEntity.WriteUserObject
   fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.WriteUserObject
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+  isExternal: false
+  name: DisableCompiledSerializers
+  nameWithType: TableEntity.DisableCompiledSerializers
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisableCompiledSerializers
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache
+  isExternal: false
+  name: DisablePropertyResolverCache
+  nameWithType: TableEntity.DisablePropertyResolverCache
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEntity.DisablePropertyResolverCache

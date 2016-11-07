@@ -39,12 +39,18 @@ items:
   summary: "\nConstants for Result Continuations\n"
   example: []
   syntax:
-    content: 'public static class ContinuationConstants : object'
-    content.vb: >-
-      Public Module ContinuationConstants
-          Inherits Object
+    content: public static class ContinuationConstants
+    content.vb: Public Module ContinuationConstants
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -77,8 +83,8 @@ items:
   summary: "\nTop Element for Continuation Tokens\n"
   example: []
   syntax:
-    content: public const string ContinuationTopElement = null
-    content.vb: Public Const ContinuationTopElement As String = Nothing
+    content: public const string ContinuationTopElement = "ContinuationToken"
+    content.vb: Public Const ContinuationTopElement As String = "ContinuationToken"
     return:
       type: System.String
   modifiers.csharp:
@@ -112,8 +118,8 @@ items:
   summary: "\nXML element for the next marker.\n"
   example: []
   syntax:
-    content: public const string NextMarkerElement = null
-    content.vb: Public Const NextMarkerElement As String = Nothing
+    content: public const string NextMarkerElement = "NextMarker"
+    content.vb: Public Const NextMarkerElement As String = "NextMarker"
     return:
       type: System.String
   modifiers.csharp:
@@ -147,8 +153,8 @@ items:
   summary: "\nXML element for the next partition key.\n"
   example: []
   syntax:
-    content: public const string NextPartitionKeyElement = null
-    content.vb: Public Const NextPartitionKeyElement As String = Nothing
+    content: public const string NextPartitionKeyElement = "NextPartitionKey"
+    content.vb: Public Const NextPartitionKeyElement As String = "NextPartitionKey"
     return:
       type: System.String
   modifiers.csharp:
@@ -182,8 +188,8 @@ items:
   summary: "\nXML element for the next row key.\n"
   example: []
   syntax:
-    content: public const string NextRowKeyElement = null
-    content.vb: Public Const NextRowKeyElement As String = Nothing
+    content: public const string NextRowKeyElement = "NextRowKey"
+    content.vb: Public Const NextRowKeyElement As String = "NextRowKey"
     return:
       type: System.String
   modifiers.csharp:
@@ -217,8 +223,8 @@ items:
   summary: "\nXML element for the next table name.\n"
   example: []
   syntax:
-    content: public const string NextTableNameElement = null
-    content.vb: Public Const NextTableNameElement As String = Nothing
+    content: public const string NextTableNameElement = "NextTableName"
+    content.vb: Public Const NextTableNameElement As String = "NextTableName"
     return:
       type: System.String
   modifiers.csharp:
@@ -252,8 +258,8 @@ items:
   summary: "\nXML element for the target location.\n"
   example: []
   syntax:
-    content: public const string TargetLocationElement = null
-    content.vb: Public Const TargetLocationElement As String = Nothing
+    content: public const string TargetLocationElement = "TargetLocation"
+    content.vb: Public Const TargetLocationElement As String = "TargetLocation"
     return:
       type: System.String
   modifiers.csharp:
@@ -287,8 +293,8 @@ items:
   summary: "\nXML element for the token version.\n"
   example: []
   syntax:
-    content: public const string VersionElement = null
-    content.vb: Public Const VersionElement As String = Nothing
+    content: public const string VersionElement = "Version"
+    content.vb: Public Const VersionElement As String = "Version"
     return:
       type: System.String
   modifiers.csharp:
@@ -322,8 +328,8 @@ items:
   summary: "\nStores the current token version value.\n"
   example: []
   syntax:
-    content: public const string CurrentVersion = null
-    content.vb: Public Const CurrentVersion As String = Nothing
+    content: public const string CurrentVersion = "2.0"
+    content.vb: Public Const CurrentVersion As String = "2.0"
     return:
       type: System.String
   modifiers.csharp:
@@ -357,8 +363,8 @@ items:
   summary: "\nXML element for the token type.\n"
   example: []
   syntax:
-    content: public const string TypeElement = null
-    content.vb: Public Const TypeElement As String = Nothing
+    content: public const string TypeElement = "Type"
+    content.vb: Public Const TypeElement As String = "Type"
     return:
       type: System.String
   modifiers.csharp:
@@ -392,8 +398,8 @@ items:
   summary: "\nSpecifies the blob continuation token type.\n"
   example: []
   syntax:
-    content: public const string BlobType = null
-    content.vb: Public Const BlobType As String = Nothing
+    content: public const string BlobType = "Blob"
+    content.vb: Public Const BlobType As String = "Blob"
     return:
       type: System.String
   modifiers.csharp:
@@ -427,8 +433,8 @@ items:
   summary: "\nSpecifies the queue continuation token type.\n"
   example: []
   syntax:
-    content: public const string QueueType = null
-    content.vb: Public Const QueueType As String = Nothing
+    content: public const string QueueType = "Queue"
+    content.vb: Public Const QueueType As String = "Queue"
     return:
       type: System.String
   modifiers.csharp:
@@ -462,8 +468,8 @@ items:
   summary: "\nSpecifies the table continuation token type.\n"
   example: []
   syntax:
-    content: public const string TableType = null
-    content.vb: Public Const TableType As String = Nothing
+    content: public const string TableType = "Table"
+    content.vb: Public Const TableType As String = "Table"
     return:
       type: System.String
   modifiers.csharp:
@@ -497,8 +503,8 @@ items:
   summary: "\nSpecifies the file continuation token type.\n"
   example: []
   syntax:
-    content: public const string FileType = null
-    content.vb: Public Const FileType As String = Nothing
+    content: public const string FileType = "File"
+    content.vb: Public Const FileType As String = "File"
     return:
       type: System.String
   modifiers.csharp:
@@ -515,11 +521,300 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

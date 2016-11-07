@@ -46,12 +46,18 @@ items:
   summary: "\nConstants for analytics client\n"
   example: []
   syntax:
-    content: 'public static class AnalyticsConstants : object'
-    content.vb: >-
-      Public Module AnalyticsConstants
-          Inherits Object
+    content: public static class AnalyticsConstants
+    content.vb: Public Module AnalyticsConstants
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -84,8 +90,8 @@ items:
   summary: "\nConstant for the logs container.\n"
   example: []
   syntax:
-    content: public const string LogsContainer = null
-    content.vb: Public Const LogsContainer As String = Nothing
+    content: public const string LogsContainer = "$logs"
+    content.vb: Public Const LogsContainer As String = "$logs"
     return:
       type: System.String
   modifiers.csharp:
@@ -119,8 +125,8 @@ items:
   summary: "\nConstant for the blob capacity metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsCapacityBlob = null
-    content.vb: Public Const MetricsCapacityBlob As String = Nothing
+    content: public const string MetricsCapacityBlob = "$MetricsCapacityBlob"
+    content.vb: Public Const MetricsCapacityBlob As String = "$MetricsCapacityBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -154,8 +160,8 @@ items:
   summary: "\nConstant for the blob service primary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourPrimaryTransactionsBlob = null
-    content.vb: Public Const MetricsHourPrimaryTransactionsBlob As String = Nothing
+    content: public const string MetricsHourPrimaryTransactionsBlob = "$MetricsHourPrimaryTransactionsBlob"
+    content.vb: Public Const MetricsHourPrimaryTransactionsBlob As String = "$MetricsHourPrimaryTransactionsBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -189,8 +195,8 @@ items:
   summary: "\nConstant for the table service primary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourPrimaryTransactionsTable = null
-    content.vb: Public Const MetricsHourPrimaryTransactionsTable As String = Nothing
+    content: public const string MetricsHourPrimaryTransactionsTable = "$MetricsHourPrimaryTransactionsTable"
+    content.vb: Public Const MetricsHourPrimaryTransactionsTable As String = "$MetricsHourPrimaryTransactionsTable"
     return:
       type: System.String
   modifiers.csharp:
@@ -224,8 +230,8 @@ items:
   summary: "\nConstant for the queue service primary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourPrimaryTransactionsQueue = null
-    content.vb: Public Const MetricsHourPrimaryTransactionsQueue As String = Nothing
+    content: public const string MetricsHourPrimaryTransactionsQueue = "$MetricsHourPrimaryTransactionsQueue"
+    content.vb: Public Const MetricsHourPrimaryTransactionsQueue As String = "$MetricsHourPrimaryTransactionsQueue"
     return:
       type: System.String
   modifiers.csharp:
@@ -259,8 +265,8 @@ items:
   summary: "\nConstant for the file service primary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourPrimaryTransactionsFile = null
-    content.vb: Public Const MetricsHourPrimaryTransactionsFile As String = Nothing
+    content: public const string MetricsHourPrimaryTransactionsFile = "$MetricsHourPrimaryTransactionsFile"
+    content.vb: Public Const MetricsHourPrimaryTransactionsFile As String = "$MetricsHourPrimaryTransactionsFile"
     return:
       type: System.String
   modifiers.csharp:
@@ -294,8 +300,8 @@ items:
   summary: "\nConstant for the blob service primary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinutePrimaryTransactionsBlob = null
-    content.vb: Public Const MetricsMinutePrimaryTransactionsBlob As String = Nothing
+    content: public const string MetricsMinutePrimaryTransactionsBlob = "$MetricsMinutePrimaryTransactionsBlob"
+    content.vb: Public Const MetricsMinutePrimaryTransactionsBlob As String = "$MetricsMinutePrimaryTransactionsBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -329,8 +335,8 @@ items:
   summary: "\nConstant for the table service primary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinutePrimaryTransactionsTable = null
-    content.vb: Public Const MetricsMinutePrimaryTransactionsTable As String = Nothing
+    content: public const string MetricsMinutePrimaryTransactionsTable = "$MetricsMinutePrimaryTransactionsTable"
+    content.vb: Public Const MetricsMinutePrimaryTransactionsTable As String = "$MetricsMinutePrimaryTransactionsTable"
     return:
       type: System.String
   modifiers.csharp:
@@ -364,8 +370,8 @@ items:
   summary: "\nConstant for the queue service primary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinutePrimaryTransactionsQueue = null
-    content.vb: Public Const MetricsMinutePrimaryTransactionsQueue As String = Nothing
+    content: public const string MetricsMinutePrimaryTransactionsQueue = "$MetricsMinutePrimaryTransactionsQueue"
+    content.vb: Public Const MetricsMinutePrimaryTransactionsQueue As String = "$MetricsMinutePrimaryTransactionsQueue"
     return:
       type: System.String
   modifiers.csharp:
@@ -399,8 +405,8 @@ items:
   summary: "\nConstant for the file service primary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinutePrimaryTransactionsFile = null
-    content.vb: Public Const MetricsMinutePrimaryTransactionsFile As String = Nothing
+    content: public const string MetricsMinutePrimaryTransactionsFile = "$MetricsMinutePrimaryTransactionsFile"
+    content.vb: Public Const MetricsMinutePrimaryTransactionsFile As String = "$MetricsMinutePrimaryTransactionsFile"
     return:
       type: System.String
   modifiers.csharp:
@@ -434,8 +440,8 @@ items:
   summary: "\nConstant for the blob service secondary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourSecondaryTransactionsBlob = null
-    content.vb: Public Const MetricsHourSecondaryTransactionsBlob As String = Nothing
+    content: public const string MetricsHourSecondaryTransactionsBlob = "$MetricsHourSecondaryTransactionsBlob"
+    content.vb: Public Const MetricsHourSecondaryTransactionsBlob As String = "$MetricsHourSecondaryTransactionsBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -469,8 +475,8 @@ items:
   summary: "\nConstant for the table service secondary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourSecondaryTransactionsTable = null
-    content.vb: Public Const MetricsHourSecondaryTransactionsTable As String = Nothing
+    content: public const string MetricsHourSecondaryTransactionsTable = "$MetricsHourSecondaryTransactionsTable"
+    content.vb: Public Const MetricsHourSecondaryTransactionsTable As String = "$MetricsHourSecondaryTransactionsTable"
     return:
       type: System.String
   modifiers.csharp:
@@ -504,8 +510,8 @@ items:
   summary: "\nConstant for the queue service secondary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourSecondaryTransactionsQueue = null
-    content.vb: Public Const MetricsHourSecondaryTransactionsQueue As String = Nothing
+    content: public const string MetricsHourSecondaryTransactionsQueue = "$MetricsHourSecondaryTransactionsQueue"
+    content.vb: Public Const MetricsHourSecondaryTransactionsQueue As String = "$MetricsHourSecondaryTransactionsQueue"
     return:
       type: System.String
   modifiers.csharp:
@@ -539,8 +545,8 @@ items:
   summary: "\nConstant for the file service secondary location hourly metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsHourSecondaryTransactionsFile = null
-    content.vb: Public Const MetricsHourSecondaryTransactionsFile As String = Nothing
+    content: public const string MetricsHourSecondaryTransactionsFile = "$MetricsHourSecondaryTransactionsFile"
+    content.vb: Public Const MetricsHourSecondaryTransactionsFile As String = "$MetricsHourSecondaryTransactionsFile"
     return:
       type: System.String
   modifiers.csharp:
@@ -574,8 +580,8 @@ items:
   summary: "\nConstant for the blob service secondary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinuteSecondaryTransactionsBlob = null
-    content.vb: Public Const MetricsMinuteSecondaryTransactionsBlob As String = Nothing
+    content: public const string MetricsMinuteSecondaryTransactionsBlob = "$MetricsMinuteSecondaryTransactionsBlob"
+    content.vb: Public Const MetricsMinuteSecondaryTransactionsBlob As String = "$MetricsMinuteSecondaryTransactionsBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -609,8 +615,8 @@ items:
   summary: "\nConstant for the table service secondary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinuteSecondaryTransactionsTable = null
-    content.vb: Public Const MetricsMinuteSecondaryTransactionsTable As String = Nothing
+    content: public const string MetricsMinuteSecondaryTransactionsTable = "$MetricsMinuteSecondaryTransactionsTable"
+    content.vb: Public Const MetricsMinuteSecondaryTransactionsTable As String = "$MetricsMinuteSecondaryTransactionsTable"
     return:
       type: System.String
   modifiers.csharp:
@@ -644,8 +650,8 @@ items:
   summary: "\nConstant for the queue service secondary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinuteSecondaryTransactionsQueue = null
-    content.vb: Public Const MetricsMinuteSecondaryTransactionsQueue As String = Nothing
+    content: public const string MetricsMinuteSecondaryTransactionsQueue = "$MetricsMinuteSecondaryTransactionsQueue"
+    content.vb: Public Const MetricsMinuteSecondaryTransactionsQueue As String = "$MetricsMinuteSecondaryTransactionsQueue"
     return:
       type: System.String
   modifiers.csharp:
@@ -679,8 +685,8 @@ items:
   summary: "\nConstant for the file service secondary location minute metrics table.\n"
   example: []
   syntax:
-    content: public const string MetricsMinuteSecondaryTransactionsFile = null
-    content.vb: Public Const MetricsMinuteSecondaryTransactionsFile As String = Nothing
+    content: public const string MetricsMinuteSecondaryTransactionsFile = "$MetricsMinuteSecondaryTransactionsFile"
+    content.vb: Public Const MetricsMinuteSecondaryTransactionsFile As String = "$MetricsMinuteSecondaryTransactionsFile"
     return:
       type: System.String
   modifiers.csharp:
@@ -714,8 +720,8 @@ items:
   summary: "\nConstant for default logging version.\n"
   example: []
   syntax:
-    content: public const string LoggingVersionV1 = null
-    content.vb: Public Const LoggingVersionV1 As String = Nothing
+    content: public const string LoggingVersionV1 = "1.0"
+    content.vb: Public Const LoggingVersionV1 As String = "1.0"
     return:
       type: System.String
   modifiers.csharp:
@@ -749,8 +755,8 @@ items:
   summary: "\nConstant for default metrics version.\n"
   example: []
   syntax:
-    content: public const string MetricsVersionV1 = null
-    content.vb: Public Const MetricsVersionV1 As String = Nothing
+    content: public const string MetricsVersionV1 = "1.0"
+    content.vb: Public Const MetricsVersionV1 As String = "1.0"
     return:
       type: System.String
   modifiers.csharp:
@@ -767,11 +773,300 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

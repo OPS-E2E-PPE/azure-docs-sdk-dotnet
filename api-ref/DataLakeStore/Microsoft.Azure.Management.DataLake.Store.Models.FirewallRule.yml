@@ -6,9 +6,8 @@ items:
   parent: Microsoft.Azure.Management.DataLake.Store.Models
   children:
   - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor
-  - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
+  - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
   - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Id
-  - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
   - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Name
   - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Properties
   - Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Type
@@ -83,16 +82,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
-  commentId: M:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
-  id: '#ctor(System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)'
+- uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
+  commentId: M:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
+  id: '#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)'
   parent: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule
   langs:
   - csharp
   - vb
-  name: FirewallRule(String, String, String, String, FirewallRuleProperties)
-  nameWithType: FirewallRule.FirewallRule(String, String, String, String, FirewallRuleProperties)
-  fullName: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.FirewallRule(System.String, System.String, System.String, System.String, Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
+  name: FirewallRule(String, String, String, FirewallRuleProperties)
+  nameWithType: FirewallRule.FirewallRule(String, String, String, FirewallRuleProperties)
+  fullName: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.FirewallRule(System.String, System.String, System.String, Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties)
   type: Constructor
   source:
     remote:
@@ -101,15 +100,15 @@ items:
       repo: https://github.com/Azure/azure-sdk-for-net.git
     id: .ctor
     path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 39
+    startLine: 37
   assemblies:
   - Microsoft.Azure.Management.DataLake.Store
   namespace: Microsoft.Azure.Management.DataLake.Store.Models
   summary: "\nInitializes a new instance of the FirewallRule class.\n"
   example: []
   syntax:
-    content: public FirewallRule(string name = null, string type = null, string id = null, string location = null, FirewallRuleProperties properties = null)
-    content.vb: Public Sub New(name As String = Nothing, type As String = Nothing, id As String = Nothing, location As String = Nothing, properties As FirewallRuleProperties = Nothing)
+    content: public FirewallRule(string name = null, string type = null, string id = null, FirewallRuleProperties properties = null)
+    content.vb: Public Sub New(name As String = Nothing, type As String = Nothing, id As String = Nothing, properties As FirewallRuleProperties = Nothing)
     parameters:
     - id: name
       type: System.String
@@ -122,13 +121,7 @@ items:
         Rule.
     - id: id
       type: System.String
-      description: the firewall rule's subscription ID.
-    - id: location
-      type: System.String
-      description: >-
-        the firewall rule's regional
-
-        location.
+      description: the firewall rule's full ID.
     - id: properties
       type: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRuleProperties
       description: >-
@@ -158,7 +151,7 @@ items:
       repo: https://github.com/Azure/azure-sdk-for-net.git
     id: Name
     path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 51
+    startLine: 48
   assemblies:
   - Microsoft.Azure.Management.DataLake.Store
   namespace: Microsoft.Azure.Management.DataLake.Store.Models
@@ -209,7 +202,7 @@ items:
       repo: https://github.com/Azure/azure-sdk-for-net.git
     id: Type
     path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 57
+    startLine: 54
   assemblies:
   - Microsoft.Azure.Management.DataLake.Store
   namespace: Microsoft.Azure.Management.DataLake.Store.Models
@@ -260,11 +253,11 @@ items:
       repo: https://github.com/Azure/azure-sdk-for-net.git
     id: Id
     path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 63
+    startLine: 60
   assemblies:
   - Microsoft.Azure.Management.DataLake.Store
   namespace: Microsoft.Azure.Management.DataLake.Store.Models
-  summary: "\nGets or sets the firewall rule's subscription ID.\n"
+  summary: "\nGets or sets the firewall rule's full ID.\n"
   example: []
   syntax:
     content: >-
@@ -293,57 +286,6 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
-  commentId: P:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
-  id: Location
-  parent: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule
-  langs:
-  - csharp
-  - vb
-  name: Location
-  nameWithType: FirewallRule.Location
-  fullName: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
-  type: Property
-  source:
-    remote:
-      path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-      branch: AutoRest
-      repo: https://github.com/Azure/azure-sdk-for-net.git
-    id: Location
-    path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 69
-  assemblies:
-  - Microsoft.Azure.Management.DataLake.Store
-  namespace: Microsoft.Azure.Management.DataLake.Store.Models
-  summary: "\nGets or sets the firewall rule's regional location.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty(PropertyName = "location")]
-
-      public string Location { get; set; }
-    content.vb: >-
-      <JsonProperty(PropertyName:="location")>
-
-      Public Property Location As String
-    parameters: []
-    return:
-      type: System.String
-  overload: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: PropertyName
-      type: System.String
-      value: location
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Properties
   commentId: P:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Properties
   id: Properties
@@ -362,7 +304,7 @@ items:
       repo: https://github.com/Azure/azure-sdk-for-net.git
     id: Properties
     path: src/ResourceManagement/DataLake.Store/Microsoft.Azure.Management.DataLake.Store/Generated/Models/FirewallRule.cs
-    startLine: 75
+    startLine: 66
   assemblies:
   - Microsoft.Azure.Management.DataLake.Store
   namespace: Microsoft.Azure.Management.DataLake.Store.Models
@@ -732,12 +674,6 @@ references:
   name: Id
   nameWithType: FirewallRule.Id
   fullName: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Id
-- uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location*
-  commentId: Overload:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
-  isExternal: false
-  name: Location
-  nameWithType: FirewallRule.Location
-  fullName: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Location
 - uid: Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Properties*
   commentId: Overload:Microsoft.Azure.Management.DataLake.Store.Models.FirewallRule.Properties
   isExternal: false

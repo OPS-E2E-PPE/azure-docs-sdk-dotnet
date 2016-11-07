@@ -28,8 +28,8 @@ items:
   summary: "\nSpecifies the set of possible signed protocols for a shared access account policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessProtocol : int'
-    content.vb: Public Enum SharedAccessProtocol As Integer
+    content: public enum SharedAccessProtocol
+    content.vb: Public Enum SharedAccessProtocol
   modifiers.csharp:
   - public
   - enum
@@ -61,8 +61,7 @@ items:
   summary: "\nPermission to use SAS only through https granted.\n"
   example: []
   syntax:
-    content: HttpsOnly = null
-    content.vb: HttpsOnly = Nothing
+    content: HttpsOnly = 1
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessProtocol
   modifiers.csharp:
@@ -96,8 +95,7 @@ items:
   summary: "\nPermission to use SAS through https or http granted. Equivalent to not specifying any permission at all.\n"
   example: []
   syntax:
-    content: HttpsOrHttp = null
-    content.vb: HttpsOrHttp = Nothing
+    content: HttpsOrHttp = 2
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessProtocol
   modifiers.csharp:

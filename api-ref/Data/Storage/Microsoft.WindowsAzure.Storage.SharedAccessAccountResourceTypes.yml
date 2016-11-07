@@ -30,8 +30,18 @@ items:
   summary: "\nSpecifies the set of possible signed resource types for a shared access account policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessAccountResourceTypes : int'
-    content.vb: Public Enum SharedAccessAccountResourceTypes As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessAccountResourceTypes
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessAccountResourceTypes
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -63,8 +73,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
   modifiers.csharp:
@@ -98,8 +107,7 @@ items:
   summary: "\nPermission to access service level APIs granted.\n"
   example: []
   syntax:
-    content: Service = null
-    content.vb: Service = Nothing
+    content: Service = 1
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
   modifiers.csharp:
@@ -133,8 +141,7 @@ items:
   summary: "\nPermission to access container level APIs (Blob Containers, Tables, Queues, File Shares) granted.\n"
   example: []
   syntax:
-    content: Container = null
-    content.vb: Container = Nothing
+    content: Container = 2
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
   modifiers.csharp:
@@ -168,8 +175,7 @@ items:
   summary: "\nPermission to access object level APIs (Blobs, Table Entities, Queue Messages, Files) granted\n"
   example: []
   syntax:
-    content: Object = null
-    content.vb: Object = Nothing
+    content: Object = 4
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
   modifiers.csharp:

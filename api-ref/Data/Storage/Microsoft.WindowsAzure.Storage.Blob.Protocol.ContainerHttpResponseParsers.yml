@@ -5,10 +5,11 @@ items:
   id: ContainerHttpResponseParsers
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol
   children:
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(HttpResponseMessage)
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(System.IO.Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
   langs:
   - csharp
   - vb
@@ -18,22 +19,30 @@ items:
   type: Class
   source:
     remote:
-      path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
+      path: Lib/Common/Blob/Protocol/ContainerHttpResponseParsers.Common.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
     id: ContainerHttpResponseParsers
-    path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-    startLine: 25
+    path: Lib/Common/Blob/Protocol/ContainerHttpResponseParsers.Common.cs
+    startLine: 30
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
+  summary: "\nProvides a set of methods for parsing container responses from the Blob service.\n"
+  example: []
   syntax:
-    content: 'public static class ContainerHttpResponseParsers : object'
-    content.vb: >-
-      Public Module ContainerHttpResponseParsers
-          Inherits Object
+    content: public static class ContainerHttpResponseParsers
+    content.vb: Public Module ContainerHttpResponseParsers
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -41,16 +50,180 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
-  id: ReadSharedAccessIdentifiers(Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  id: GetRequestId(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetRequestId(HttpWebResponse)
+  nameWithType: ContainerHttpResponseParsers.GetRequestId(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetRequestId
+    path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+    startLine: 34
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
+  summary: "\nGets the request ID from the response.\n"
+  example: []
+  syntax:
+    content: public static string GetRequestId(HttpWebResponse response)
+    content.vb: Public Shared Function GetRequestId(response As HttpWebResponse) As String
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The web response.
+    return:
+      type: System.String
+      description: A unique value associated with the request.
+  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  id: GetProperties(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetProperties(HttpWebResponse)
+  nameWithType: ContainerHttpResponseParsers.GetProperties(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetProperties
+    path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+    startLine: 44
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
+  summary: "\nGets the container's properties from the response.\n"
+  example: []
+  syntax:
+    content: public static BlobContainerProperties GetProperties(HttpWebResponse response)
+    content.vb: Public Shared Function GetProperties(response As HttpWebResponse) As BlobContainerProperties
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The web response.
+    return:
+      type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerProperties
+      description: The container's attributes.
+  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  id: GetMetadata(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetMetadata(HttpWebResponse)
+  nameWithType: ContainerHttpResponseParsers.GetMetadata(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetMetadata
+    path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+    startLine: 71
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
+  summary: "\nGets the user-defined metadata.\n"
+  example: []
+  syntax:
+    content: public static IDictionary<string, string> GetMetadata(HttpWebResponse response)
+    content.vb: Public Shared Function GetMetadata(response As HttpWebResponse) As IDictionary(Of String, String)
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The response from server.
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+      description: A <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> of the metadata.
+  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(System.Net.HttpWebResponse)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(System.Net.HttpWebResponse)
+  id: GetAcl(System.Net.HttpWebResponse)
+  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
+  langs:
+  - csharp
+  - vb
+  name: GetAcl(HttpWebResponse)
+  nameWithType: ContainerHttpResponseParsers.GetAcl(HttpWebResponse)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(System.Net.HttpWebResponse)
+  type: Method
+  source:
+    remote:
+      path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: GetAcl
+    path: Lib/ClassLibraryCommon/Blob/Protocol/ContainerHttpResponseParsers.cs
+    startLine: 81
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
+  summary: "\nGets the ACL for the container from the response.\n"
+  example: []
+  syntax:
+    content: public static BlobContainerPublicAccessType GetAcl(HttpWebResponse response)
+    content.vb: Public Shared Function GetAcl(response As HttpWebResponse) As BlobContainerPublicAccessType
+    parameters:
+    - id: response
+      type: System.Net.HttpWebResponse
+      description: The web response.
+    return:
+      type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPublicAccessType
+      description: A value indicating the public access level for the container.
+  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(System.IO.Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(System.IO.Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
+  id: ReadSharedAccessIdentifiers(System.IO.Stream,Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
   langs:
   - csharp
   - vb
   name: ReadSharedAccessIdentifiers(Stream, BlobContainerPermissions)
   nameWithType: ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(Stream, BlobContainerPermissions)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(Stream, Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers(System.IO.Stream, Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions)
   type: Method
   source:
     remote:
@@ -70,135 +243,12 @@ items:
     content.vb: Public Shared Sub ReadSharedAccessIdentifiers(inputStream As Stream, permissions As BlobContainerPermissions)
     parameters:
     - id: inputStream
-      type: Stream
+      type: System.IO.Stream
       description: The stream of XML policies.
     - id: permissions
       type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
       description: The permissions object to which the policies are to be written.
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(HttpResponseMessage)
-  id: GetProperties(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetProperties(HttpResponseMessage)
-  nameWithType: ContainerHttpResponseParsers.GetProperties(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetProperties
-    path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-    startLine: 36
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
-  summary: "\nGets the container's properties from the response.\n"
-  example: []
-  syntax:
-    content: public static BlobContainerProperties GetProperties(HttpResponseMessage response)
-    content.vb: Public Shared Function GetProperties(response As HttpResponseMessage) As BlobContainerProperties
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The web response.
-    return:
-      type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerProperties
-      description: The container's attributes.
-  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  id: GetMetadata(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetMetadata(HttpResponseMessage)
-  nameWithType: ContainerHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetMetadata
-    path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-    startLine: 65
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
-  summary: "\nGets the user-defined metadata.\n"
-  example: []
-  syntax:
-    content: public static IDictionary<string, string> GetMetadata(HttpResponseMessage response)
-    content.vb: Public Shared Function GetMetadata(response As HttpResponseMessage) As IDictionary(Of String, String)
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The response from server.
-    return:
-      type: IDictionary{System.String,System.String}
-      description: A <see cref="!:IDictionary"></see> of the metadata.
-  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(HttpResponseMessage)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(HttpResponseMessage)
-  id: GetAcl(HttpResponseMessage)
-  parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
-  langs:
-  - csharp
-  - vb
-  name: GetAcl(HttpResponseMessage)
-  nameWithType: ContainerHttpResponseParsers.GetAcl(HttpResponseMessage)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl(HttpResponseMessage)
-  type: Method
-  source:
-    remote:
-      path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: GetAcl
-    path: Lib/WindowsRuntime/Blob/Protocol/ContainerHttpResponseParsers.cs
-    startLine: 75
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.Blob.Protocol
-  summary: "\nGets the ACL for the container from the response.\n"
-  example: []
-  syntax:
-    content: public static BlobContainerPublicAccessType GetAcl(HttpResponseMessage response)
-    content.vb: Public Shared Function GetAcl(response As HttpResponseMessage) As BlobContainerPublicAccessType
-    parameters:
-    - id: response
-      type: HttpResponseMessage
-      description: The web response.
-    return:
-      type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPublicAccessType
-      description: A value indicating the public access level for the container.
-  overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl*
   modifiers.csharp:
   - public
   - static
@@ -213,45 +263,329 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Blob.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
-  isExternal: false
-  name: ReadSharedAccessIdentifiers
-  nameWithType: ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
-- uid: Stream
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
   isExternal: true
-  name: Stream
-  nameWithType: Stream
-  fullName: Stream
-- uid: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
-  commentId: T:Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
-  parent: Microsoft.WindowsAzure.Storage.Blob
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
   isExternal: false
-  name: BlobContainerPermissions
-  nameWithType: BlobContainerPermissions
-  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
-- uid: Microsoft.WindowsAzure.Storage.Blob
-  commentId: N:Microsoft.WindowsAzure.Storage.Blob
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId
   isExternal: false
-  name: Microsoft.WindowsAzure.Storage.Blob
-  nameWithType: Microsoft.WindowsAzure.Storage.Blob
-  fullName: Microsoft.WindowsAzure.Storage.Blob
+  name: GetRequestId
+  nameWithType: ContainerHttpResponseParsers.GetRequestId
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetRequestId
+- uid: System.Net.HttpWebResponse
+  commentId: T:System.Net.HttpWebResponse
+  parent: System.Net
+  isExternal: true
+  name: HttpWebResponse
+  nameWithType: HttpWebResponse
+  fullName: System.Net.HttpWebResponse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: false
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties
   isExternal: false
   name: GetProperties
   nameWithType: ContainerHttpResponseParsers.GetProperties
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetProperties
-- uid: HttpResponseMessage
-  isExternal: true
-  name: HttpResponseMessage
-  nameWithType: HttpResponseMessage
-  fullName: HttpResponseMessage
 - uid: Microsoft.WindowsAzure.Storage.Blob.BlobContainerProperties
   commentId: T:Microsoft.WindowsAzure.Storage.Blob.BlobContainerProperties
   parent: Microsoft.WindowsAzure.Storage.Blob
@@ -259,26 +593,84 @@ references:
   name: BlobContainerProperties
   nameWithType: BlobContainerProperties
   fullName: Microsoft.WindowsAzure.Storage.Blob.BlobContainerProperties
+- uid: Microsoft.WindowsAzure.Storage.Blob
+  commentId: N:Microsoft.WindowsAzure.Storage.Blob
+  isExternal: false
+  name: Microsoft.WindowsAzure.Storage.Blob
+  nameWithType: Microsoft.WindowsAzure.Storage.Blob
+  fullName: Microsoft.WindowsAzure.Storage.Blob
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata
   isExternal: false
   name: GetMetadata
   nameWithType: ContainerHttpResponseParsers.GetMetadata
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetMetadata
-- uid: IDictionary{System.String,System.String}
-  commentId: '!:IDictionary{System.String,System.String}'
-  definition: IDictionary`2
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
   name: IDictionary<String, String>
   nameWithType: IDictionary<String, String>
-  fullName: IDictionary<System.String, System.String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
   nameWithType.vb: IDictionary(Of String, String)
-  fullname.vb: IDictionary(Of System.String, System.String)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
   name.vb: IDictionary(Of String, String)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -300,10 +692,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -324,56 +716,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IDictionary`2
-  isExternal: true
-  name: IDictionary<, >
-  nameWithType: IDictionary<, >
-  fullName: IDictionary<, >
-  nameWithType.vb: IDictionary(Of , )
-  fullname.vb: IDictionary(Of , )
-  name.vb: IDictionary(Of , )
-  spec.csharp:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: IDictionary
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.GetAcl
   isExternal: false
@@ -387,3 +735,29 @@ references:
   name: BlobContainerPublicAccessType
   nameWithType: BlobContainerPublicAccessType
   fullName: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPublicAccessType
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
+  isExternal: false
+  name: ReadSharedAccessIdentifiers
+  nameWithType: ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers.ReadSharedAccessIdentifiers
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
+  commentId: T:Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
+  parent: Microsoft.WindowsAzure.Storage.Blob
+  isExternal: false
+  name: BlobContainerPermissions
+  nameWithType: BlobContainerPermissions
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPermissions
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO

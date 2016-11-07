@@ -4,7 +4,11 @@
       "url": "https://github.com/Azure/azure-sdk-for-net.git",
       "branch": "AutoRest",
       "name": "azure-sdk-for-net",
-      "build_script": "& msbuild build.proj"
+      "build_scripts": [
+        "& dotnet restore",
+        "& nuget restore src/ResourceManagement/Automation/Automation.sln",
+        "& ../../scripts/RemoveBCL.exe src/ResourceManagement/Automation/AutomationManagement/AutomationManagement.csproj"
+      ]
     },
     {
       "url": "https://github.com/Azure/elastic-db-tools",
@@ -14,49 +18,71 @@
     {
       "url": "https://github.com/Azure/azure-sdk-for-net",
       "branch": "master",
-      "name": "azure-sdk-for-net-master"
+      "name": "azure-sdk-for-net-master",
+      "build_scripts": [
+        "& nuget restore src/ResourceManagement/DataFactory",
+        "& nuget restore src/ResourceManagement/StreamAnalytics/StreamAnalytics.sln",
+        "& ../../scripts/RemoveBCL.exe src/ResourceManagement/DataFactory/DataFactoryManagement/DataFactoryManagement.csproj",
+        "& ../../scripts/RemoveBCL.exe src/ResourceManagement/StreamAnalytics/StreamAnalyticsManagement/StreamAnalyticsManagement.csproj"
+      ]
     },
     {
       "url": "https://github.com/Microsoft/ApplicationInsights-dotnet",
       "branch": "master",
-      "name": "ApplicationInsights-dotnet"
+      "name": "ApplicationInsights-dotnet",
+      "build_scripts": ["Start-process ./buildRelease.cmd -redirectStandardInput buildDebug.cmd"]
     },
     {
       "url": "https://github.com/Azure/azure-sdk-for-media-services",
       "branch": "master",
-      "name": "azure-sdk-for-media-services"
+      "name": "azure-sdk-for-media-services",
+      "build_scripts": ["& nuget restore"]
+    },
+    {
+      "url": "https://github.com/Azure/azure-sdk-for-media-services-extensions",
+      "branch": "dev",
+      "name": "azure-sdk-for-media-services-extensions",
+      "build_scripts": ["& nuget restore"]
     },
     {
       "url": "https://github.com/Azure/azure-iot-sdks",
-      "branch": "master",
-      "name": "azure-iot-sdks"
+      "branch": "release_2016_1014",
+      "name": "azure-iot-sdks",
+      "build_scripts": ["& nuget restore csharp/device/iothub_csharp_deviceclient.sln"]
     },
     {
       "url": "https://github.com/Azure/azure-storage-net",
       "branch": "master",
-      "name": "azure-storage-net"
+      "name": "azure-storage-net",
+      "build_scripts": ["& nuget restore Microsoft.WindowsAzure.Storage.sln"]
     },
     {
       "url": "https://github.com/Azure/azure-storage-net-data-movement",
       "branch": "master",
-      "name": "azure-storage-net-data-movement"
+      "name": "azure-storage-net-data-movement",
+      "build_scripts": ["& dotnet restore"]
     },
     {
       "url": "https://github.com/Microsoft/PowerBI-CSharp",
       "branch": "master",
-      "name": "PowerBI-CSharp"
+      "name": "PowerBI-CSharp",
+      "build_scripts": ["& nuget restore sdk"]
     },
     {
-      "url": "https://msazure.visualstudio.com/DefaultCollection/One/_git/AAPT-Mobile-Push",
+      "url": "https://msazure.visualstudio.com/One/_git/AAPT-Mobile-Push",
       "branch": "master",
       "name": "msazure-vso-notificationhubs",
-      "build_script": "& ../../scripts/RemoveImportTag.exe ."
+      "build_scripts": ["& ../../scripts/RemoveImportTag.exe ."]
     },
     {
-      "url": "https://msazure.visualstudio.com/DefaultCollection/One/_git/ServiceBus-Messaging",
-      "branch": "master",
-      "name": "msazure-vso-servicebusmessaging",
-      "build_script": "& ../../scripts/RemoveImportTag.exe ."
+      "url": "https://msazure.visualstudio.com/One/_git/ServiceBus-Messaging",
+      "branch": "release_10_12_2016",
+      "name": "msazure-vso-servicebusmessaging"
+    },
+    {
+      "url": "https://msazure.visualstudio.com/One/_git/WindowsFabric",
+      "branch": "release_5.3",
+      "name": "msazure-vso-servicefabric"
     }
   ]
 }

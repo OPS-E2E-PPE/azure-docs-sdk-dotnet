@@ -31,8 +31,18 @@ items:
   summary: "\nSpecifies the set of possible permissions for a shared access table policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessTablePermissions : int'
-    content.vb: Public Enum SharedAccessTablePermissions As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessTablePermissions
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessTablePermissions
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -64,8 +74,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Table.SharedAccessTablePermissions
   modifiers.csharp:
@@ -99,8 +108,7 @@ items:
   summary: "\nPermission to query entities granted.\n"
   example: []
   syntax:
-    content: Query = null
-    content.vb: Query = Nothing
+    content: Query = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Table.SharedAccessTablePermissions
   modifiers.csharp:
@@ -134,8 +142,7 @@ items:
   summary: "\nPermission to add entities granted.\n"
   example: []
   syntax:
-    content: Add = null
-    content.vb: Add = Nothing
+    content: Add = 2
     return:
       type: Microsoft.WindowsAzure.Storage.Table.SharedAccessTablePermissions
   modifiers.csharp:
@@ -169,8 +176,7 @@ items:
   summary: "\nPermission to modify entities granted.\n"
   example: []
   syntax:
-    content: Update = null
-    content.vb: Update = Nothing
+    content: Update = 4
     return:
       type: Microsoft.WindowsAzure.Storage.Table.SharedAccessTablePermissions
   modifiers.csharp:
@@ -204,8 +210,7 @@ items:
   summary: "\nPermission to delete entities granted.\n"
   example: []
   syntax:
-    content: Delete = null
-    content.vb: Delete = Nothing
+    content: Delete = 8
     return:
       type: Microsoft.WindowsAzure.Storage.Table.SharedAccessTablePermissions
   modifiers.csharp:

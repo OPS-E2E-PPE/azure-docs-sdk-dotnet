@@ -69,6 +69,13 @@ items:
       type: System.Byte[]
       description: A byte array specifying the buffer to return to the pool.
   overload: Microsoft.WindowsAzure.Storage.IBufferManager.ReturnBuffer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Buffer reference cannot be null.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Length of buffer does not match the pool's buffer length property.
   nameWithType.vb: IBufferManager.ReturnBuffer(Byte())
   fullName.vb: Microsoft.WindowsAzure.Storage.IBufferManager.ReturnBuffer(System.Byte())
   name.vb: ReturnBuffer(Byte())
@@ -107,6 +114,10 @@ items:
       type: System.Byte[]
       description: A byte array that is the requested size of the buffer.
   overload: Microsoft.WindowsAzure.Storage.IBufferManager.TakeBuffer*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The value specified for <em>bufferSize</em> cannot be less than zero.
 - uid: Microsoft.WindowsAzure.Storage.IBufferManager.GetDefaultBufferSize
   commentId: M:Microsoft.WindowsAzure.Storage.IBufferManager.GetDefaultBufferSize
   id: GetDefaultBufferSize
@@ -151,6 +162,10 @@ references:
   name: ReturnBuffer
   nameWithType: IBufferManager.ReturnBuffer
   fullName: Microsoft.WindowsAzure.Storage.IBufferManager.ReturnBuffer
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
 - uid: System.Byte[]
   name: Byte[]
   nameWithType: Byte[]
@@ -182,11 +197,21 @@ references:
   name: TakeBuffer
   nameWithType: IBufferManager.TakeBuffer
   fullName: Microsoft.WindowsAzure.Storage.IBufferManager.TakeBuffer
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.IBufferManager.GetDefaultBufferSize*
   commentId: Overload:Microsoft.WindowsAzure.Storage.IBufferManager.GetDefaultBufferSize
   isExternal: false

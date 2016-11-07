@@ -6,22 +6,25 @@ items:
   parent: Microsoft.WindowsAzure.Storage.Core
   children:
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.#ctor(Microsoft.WindowsAzure.Storage.IBufferManager,System.Int32)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo(System.IO.Stream,System.Nullable{System.DateTime},System.AsyncCallback,System.Object)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanRead
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanSeek
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanWrite
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Dispose(System.Boolean)
-  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync(Stream,System.Nullable{DateTime})
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo(System.IAsyncResult)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead(System.IAsyncResult)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite(System.IAsyncResult)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo(System.IO.Stream,System.Nullable{System.DateTime})
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush
-  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync(CancellationToken)
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Length
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Position
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Read(System.Byte[],System.Int32,System.Int32)
-  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
-  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,SeekOrigin)
+  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.SetLength(System.Int64)
   - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write(System.Byte[],System.Int32,System.Int32)
-  - Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
   langs:
   - csharp
   - vb
@@ -43,12 +46,42 @@ items:
   summary: "\nCreates a multi-buffer stream whose backing store is memory.\n"
   example: []
   syntax:
-    content: 'public class MultiBufferMemoryStream : Stream'
+    content: 'public class MultiBufferMemoryStream : Stream, IDisposable'
     content.vb: >-
       Public Class MultiBufferMemoryStream
           Inherits Stream
+          Implements IDisposable
   inheritance:
   - System.Object
+  - System.MarshalByRefObject
+  - System.IO.Stream
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.IO.Stream.Null
+  - System.IO.Stream.CopyTo(System.IO.Stream)
+  - System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  - System.IO.Stream.Close
+  - System.IO.Stream.Dispose
+  - System.IO.Stream.CreateWaitHandle
+  - System.IO.Stream.ReadByte
+  - System.IO.Stream.WriteByte(System.Byte)
+  - System.IO.Stream.Synchronized(System.IO.Stream)
+  - System.IO.Stream.ObjectInvariant
+  - System.IO.Stream.CanTimeout
+  - System.IO.Stream.ReadTimeout
+  - System.IO.Stream.WriteTimeout
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.MarshalByRefObject.CreateObjRef(System.Type)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -77,11 +110,11 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Core
-  summary: "\n Initializes a new instance of the <xref href=\"Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream\" data-throw-if-not-resolved=\"false\"></xref> class with the specified buffer manager.\n"
+  summary: "\nInitializes a new instance of the <xref href=\"Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream\" data-throw-if-not-resolved=\"false\"></xref> class with the specified buffer manager.\n"
   example: []
   syntax:
-    content: public MultiBufferMemoryStream(IBufferManager bufferManager, int bufferSize = null)
-    content.vb: Public Sub New(bufferManager As IBufferManager, bufferSize As Integer = Nothing)
+    content: public MultiBufferMemoryStream(IBufferManager bufferManager, int bufferSize = 65536)
+    content.vb: Public Sub New(bufferManager As IBufferManager, bufferSize As Integer = 65536)
     parameters:
     - id: bufferManager
       type: Microsoft.WindowsAzure.Storage.IBufferManager
@@ -125,6 +158,7 @@ items:
     return:
       type: System.Boolean
       description: <code>true</code> if the stream supports reading; otherwise, <code>false</code>.
+  overridden: System.IO.Stream.CanRead
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanRead*
   modifiers.csharp:
   - public
@@ -165,6 +199,7 @@ items:
     return:
       type: System.Boolean
       description: <code>true</code> if the stream supports seeking; otherwise, <code>false</code>.
+  overridden: System.IO.Stream.CanSeek
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanSeek*
   modifiers.csharp:
   - public
@@ -205,6 +240,7 @@ items:
     return:
       type: System.Boolean
       description: <code>true</code> if the stream supports writing; otherwise, <code>false</code>.
+  overridden: System.IO.Stream.CanWrite
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanWrite*
   modifiers.csharp:
   - public
@@ -245,6 +281,7 @@ items:
     return:
       type: System.Int64
       description: A long value representing the length of the stream in bytes.
+  overridden: System.IO.Stream.Length
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Length*
   modifiers.csharp:
   - public
@@ -285,6 +322,7 @@ items:
     return:
       type: System.Int64
       description: The current position within the stream.
+  overridden: System.IO.Stream.Position
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Position*
   modifiers.csharp:
   - public
@@ -334,6 +372,7 @@ items:
     return:
       type: System.Int32
       description: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.
+  overridden: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Read*
   nameWithType.vb: MultiBufferMemoryStream.Read(Byte(), Int32, Int32)
   modifiers.csharp:
@@ -344,69 +383,115 @@ items:
   - Overrides
   fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Read(System.Byte(), System.Int32, System.Int32)
   name.vb: Read(Byte(), Int32, Int32)
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
-  id: ReadAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  id: BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
   parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   langs:
   - csharp
   - vb
-  name: ReadAsync(Byte[], Int32, Int32, CancellationToken)
-  nameWithType: MultiBufferMemoryStream.ReadAsync(Byte[], Int32, Int32, CancellationToken)
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync(System.Byte[], System.Int32, System.Int32, CancellationToken)
+  name: BeginRead(Byte[], Int32, Int32, AsyncCallback, Object)
+  nameWithType: MultiBufferMemoryStream.BeginRead(Byte[], Int32, Int32, AsyncCallback, Object)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)
   type: Method
   source:
     remote:
       path: Lib/Common/Core/MultiBufferMemoryStream.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
-    id: ReadAsync
+    id: BeginRead
     path: Lib/Common/Core/MultiBufferMemoryStream.cs
-    startLine: 230
+    startLine: 187
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Core
-  summary: "\nAsynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.\n"
+  summary: "\nBegins an asynchronous read operation.\n"
   example: []
   syntax:
-    content: public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
-    content.vb: Public Overrides Function ReadAsync(buffer As Byte(), offset As Integer, count As Integer, cancellationToken As CancellationToken) As Task(Of Integer)
+    content: public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, object state)
+    content.vb: Public Overrides Function BeginRead(buffer As Byte(), offset As Integer, count As Integer, callback As AsyncCallback, state As Object) As IAsyncResult
     parameters:
     - id: buffer
       type: System.Byte[]
-      description: The buffer to write the data into.
+      description: When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.
     - id: offset
       type: System.Int32
-      description: The byte offset in buffer at which to begin writing data from the stream.
+      description: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
     - id: count
       type: System.Int32
-      description: The maximum number of bytes to read.
-    - id: cancellationToken
-      type: CancellationToken
-      description: The token to monitor for cancellation requests.
+      description: The maximum number of bytes to be read.
+    - id: callback
+      type: System.AsyncCallback
+      description: An optional asynchronous callback, to be called when the read is complete.
+    - id: state
+      type: System.Object
+      description: A user-provided object that distinguishes this particular asynchronous read request from other requests.
     return:
-      type: Task{System.Int32}
-      description: A task that represents the asynchronous read operation.
-  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync*
-  nameWithType.vb: MultiBufferMemoryStream.ReadAsync(Byte(), Int32, Int32, CancellationToken)
+      type: System.IAsyncResult
+      description: An IAsyncResult that represents the asynchronous read, which could still be pending.
+  overridden: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead*
+  nameWithType.vb: MultiBufferMemoryStream.BeginRead(Byte(), Int32, Int32, AsyncCallback, Object)
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync(System.Byte(), System.Int32, System.Int32, CancellationToken)
-  name.vb: ReadAsync(Byte(), Int32, Int32, CancellationToken)
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,SeekOrigin)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,SeekOrigin)
-  id: Seek(System.Int64,SeekOrigin)
+  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead(System.Byte(), System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  name.vb: BeginRead(Byte(), Int32, Int32, AsyncCallback, Object)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead(System.IAsyncResult)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead(System.IAsyncResult)
+  id: EndRead(System.IAsyncResult)
+  parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
+  langs:
+  - csharp
+  - vb
+  name: EndRead(IAsyncResult)
+  nameWithType: MultiBufferMemoryStream.EndRead(IAsyncResult)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: Lib/Common/Core/MultiBufferMemoryStream.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EndRead
+    path: Lib/Common/Core/MultiBufferMemoryStream.cs
+    startLine: 213
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Core
+  summary: "\nWaits for the pending asynchronous read to complete.\n"
+  example: []
+  syntax:
+    content: public override int EndRead(IAsyncResult asyncResult)
+    content.vb: Public Overrides Function EndRead(asyncResult As IAsyncResult) As Integer
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: The reference to the pending asynchronous request to finish.
+    return:
+      type: System.Int32
+      description: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.
+  overridden: System.IO.Stream.EndRead(System.IAsyncResult)
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)
+  id: Seek(System.Int64,System.IO.SeekOrigin)
   parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   langs:
   - csharp
   - vb
   name: Seek(Int64, SeekOrigin)
   nameWithType: MultiBufferMemoryStream.Seek(Int64, SeekOrigin)
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64, SeekOrigin)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek(System.Int64, System.IO.SeekOrigin)
   type: Method
   source:
     remote:
@@ -429,12 +514,17 @@ items:
       type: System.Int64
       description: A byte offset relative to the origin parameter.
     - id: origin
-      type: SeekOrigin
+      type: System.IO.SeekOrigin
       description: A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.
     return:
       type: System.Int64
       description: The new position within the current stream.
+  overridden: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <em>offset</em> is invalid for SeekOrigin.
   modifiers.csharp:
   - public
   - override
@@ -472,7 +562,12 @@ items:
     - id: value
       type: System.Int64
       description: The desired length of the current stream in bytes.
+  overridden: System.IO.Stream.SetLength(System.Int64)
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.SetLength*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: If the <em>value</em> is negative.
   modifiers.csharp:
   - public
   - override
@@ -516,6 +611,7 @@ items:
     - id: count
       type: System.Int32
       description: 'The number of bytes to write. '
+  overridden: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write*
   nameWithType.vb: MultiBufferMemoryStream.Write(Byte(), Int32, Int32)
   modifiers.csharp:
@@ -526,59 +622,102 @@ items:
   - Overrides
   fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write(System.Byte(), System.Int32, System.Int32)
   name.vb: Write(Byte(), Int32, Int32)
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
-  id: WriteAsync(System.Byte[],System.Int32,System.Int32,CancellationToken)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  id: BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
   parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   langs:
   - csharp
   - vb
-  name: WriteAsync(Byte[], Int32, Int32, CancellationToken)
-  nameWithType: MultiBufferMemoryStream.WriteAsync(Byte[], Int32, Int32, CancellationToken)
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync(System.Byte[], System.Int32, System.Int32, CancellationToken)
+  name: BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object)
+  nameWithType: MultiBufferMemoryStream.BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)
   type: Method
   source:
     remote:
       path: Lib/Common/Core/MultiBufferMemoryStream.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
-    id: WriteAsync
+    id: BeginWrite
     path: Lib/Common/Core/MultiBufferMemoryStream.cs
-    startLine: 358
+    startLine: 317
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Core
-  summary: "\nAsynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.\n"
+  summary: "\nBegins an asynchronous write operation.\n"
   example: []
   syntax:
-    content: public override Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
-    content.vb: Public Overrides Function WriteAsync(buffer As Byte(), offset As Integer, count As Integer, cancellationToken As CancellationToken) As Task
+    content: public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, object state)
+    content.vb: Public Overrides Function BeginWrite(buffer As Byte(), offset As Integer, count As Integer, callback As AsyncCallback, state As Object) As IAsyncResult
     parameters:
     - id: buffer
       type: System.Byte[]
       description: The buffer to write data from.
     - id: offset
       type: System.Int32
-      description: The zero-based byte offset in buffer from which to begin copying bytes to the stream.
+      description: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
     - id: count
       type: System.Int32
-      description: The maximum number of bytes to write.
-    - id: cancellationToken
-      type: CancellationToken
-      description: The token to monitor for cancellation requests.
+      description: The number of bytes to write.
+    - id: callback
+      type: System.AsyncCallback
+      description: An optional asynchronous callback, to be called when the write is complete.
+    - id: state
+      type: System.Object
+      description: A user-provided object that distinguishes this particular asynchronous write request from other requests.
     return:
-      type: Task
-      description: A task that represents the asynchronous write operation.
-  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync*
-  nameWithType.vb: MultiBufferMemoryStream.WriteAsync(Byte(), Int32, Int32, CancellationToken)
+      type: System.IAsyncResult
+      description: An IAsyncResult that represents the asynchronous write, which could still be pending.
+  overridden: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite*
+  nameWithType.vb: MultiBufferMemoryStream.BeginWrite(Byte(), Int32, Int32, AsyncCallback, Object)
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync(System.Byte(), System.Int32, System.Int32, CancellationToken)
-  name.vb: WriteAsync(Byte(), Int32, Int32, CancellationToken)
+  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite(System.Byte(), System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  name.vb: BeginWrite(Byte(), Int32, Int32, AsyncCallback, Object)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite(System.IAsyncResult)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite(System.IAsyncResult)
+  id: EndWrite(System.IAsyncResult)
+  parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
+  langs:
+  - csharp
+  - vb
+  name: EndWrite(IAsyncResult)
+  nameWithType: MultiBufferMemoryStream.EndWrite(IAsyncResult)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: Lib/Common/Core/MultiBufferMemoryStream.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EndWrite
+    path: Lib/Common/Core/MultiBufferMemoryStream.cs
+    startLine: 342
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Core
+  summary: "\nEnds an asynchronous write operation.\n"
+  example: []
+  syntax:
+    content: public override void EndWrite(IAsyncResult asyncResult)
+    content.vb: Public Overrides Sub EndWrite(asyncResult As IAsyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: The reference to the pending asynchronous request to finish.
+  overridden: System.IO.Stream.EndWrite(System.IAsyncResult)
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush
   commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush
   id: Flush
@@ -606,6 +745,7 @@ items:
   syntax:
     content: public override void Flush()
     content.vb: Public Overrides Sub Flush
+  overridden: System.IO.Stream.Flush
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush*
   modifiers.csharp:
   - public
@@ -613,92 +753,135 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync(CancellationToken)
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync(CancellationToken)
-  id: FlushAsync(CancellationToken)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo(System.IO.Stream,System.Nullable{System.DateTime})
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo(System.IO.Stream,System.Nullable{System.DateTime})
+  id: FastCopyTo(System.IO.Stream,System.Nullable{System.DateTime})
   parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   langs:
   - csharp
   - vb
-  name: FlushAsync(CancellationToken)
-  nameWithType: MultiBufferMemoryStream.FlushAsync(CancellationToken)
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync(CancellationToken)
+  name: FastCopyTo(Stream, Nullable<DateTime>)
+  nameWithType: MultiBufferMemoryStream.FastCopyTo(Stream, Nullable<DateTime>)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo(System.IO.Stream, System.Nullable<System.DateTime>)
   type: Method
   source:
     remote:
       path: Lib/Common/Core/MultiBufferMemoryStream.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
-    id: FlushAsync
+    id: FastCopyTo
     path: Lib/Common/Core/MultiBufferMemoryStream.cs
-    startLine: 377
-  assemblies:
-  - Microsoft.WindowsAzure.Storage
-  namespace: Microsoft.WindowsAzure.Storage.Core
-  summary: "\nDoes not perform any operation as it's an in-memory stream.\n"
-  example: []
-  syntax:
-    content: public override Task FlushAsync(CancellationToken cancellationToken)
-    content.vb: Public Overrides Function FlushAsync(cancellationToken As CancellationToken) As Task
-    parameters:
-    - id: cancellationToken
-      type: CancellationToken
-      description: The token to monitor for cancellation requests.
-    return:
-      type: Task
-      description: A task that represents the asynchronous flush operation.
-  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync(Stream,System.Nullable{DateTime})
-  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync(Stream,System.Nullable{DateTime})
-  id: FastCopyToAsync(Stream,System.Nullable{DateTime})
-  parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
-  langs:
-  - csharp
-  - vb
-  name: FastCopyToAsync(Stream, Nullable<DateTime>)
-  nameWithType: MultiBufferMemoryStream.FastCopyToAsync(Stream, Nullable<DateTime>)
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync(Stream, System.Nullable<DateTime>)
-  type: Method
-  source:
-    remote:
-      path: Lib/Common/Core/MultiBufferMemoryStream.cs
-      branch: master
-      repo: https://github.com/Azure/azure-storage-net
-    id: FastCopyToAsync
-    path: Lib/Common/Core/MultiBufferMemoryStream.cs
-    startLine: 554
+    startLine: 390
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Core
   summary: "\nReads the bytes from the current stream and writes them to another stream. This method writes directly to the destination stream, \nrather than copying the data into a temporary buffer.\n"
   example: []
   syntax:
-    content: public Task FastCopyToAsync(Stream destination, DateTime? expiryTime)
-    content.vb: Public Function FastCopyToAsync(destination As Stream, expiryTime As DateTime?) As Task
+    content: public void FastCopyTo(Stream destination, DateTime? expiryTime)
+    content.vb: Public Sub FastCopyTo(destination As Stream, expiryTime As Date?)
     parameters:
     - id: destination
-      type: Stream
+      type: System.IO.Stream
       description: The stream to which the contents of the current stream will be copied.
     - id: expiryTime
-      type: System.Nullable{DateTime}
+      type: System.Nullable{System.DateTime}
       description: A DateTime indicating the expiry time.
-    return:
-      type: Task
-      description: A task that represents the asynchronous copy operation.
-  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync*
-  nameWithType.vb: MultiBufferMemoryStream.FastCopyToAsync(Stream, Nullable(Of DateTime))
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo*
+  nameWithType.vb: MultiBufferMemoryStream.FastCopyTo(Stream, Nullable(Of DateTime))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync(Stream, System.Nullable(Of DateTime))
-  name.vb: FastCopyToAsync(Stream, Nullable(Of DateTime))
+  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo(System.IO.Stream, System.Nullable(Of System.DateTime))
+  name.vb: FastCopyTo(Stream, Nullable(Of DateTime))
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo(System.IO.Stream,System.Nullable{System.DateTime},System.AsyncCallback,System.Object)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo(System.IO.Stream,System.Nullable{System.DateTime},System.AsyncCallback,System.Object)
+  id: BeginFastCopyTo(System.IO.Stream,System.Nullable{System.DateTime},System.AsyncCallback,System.Object)
+  parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
+  langs:
+  - csharp
+  - vb
+  name: BeginFastCopyTo(Stream, Nullable<DateTime>, AsyncCallback, Object)
+  nameWithType: MultiBufferMemoryStream.BeginFastCopyTo(Stream, Nullable<DateTime>, AsyncCallback, Object)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo(System.IO.Stream, System.Nullable<System.DateTime>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Lib/Common/Core/MultiBufferMemoryStream.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: BeginFastCopyTo
+    path: Lib/Common/Core/MultiBufferMemoryStream.cs
+    startLine: 436
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Core
+  summary: "\nBegins an asynchronous fast-copy operation.\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginFastCopyTo(Stream destination, DateTime? expiryTime, AsyncCallback callback, object state)
+    content.vb: Public Function BeginFastCopyTo(destination As Stream, expiryTime As Date?, callback As AsyncCallback, state As Object) As IAsyncResult
+    parameters:
+    - id: destination
+      type: System.IO.Stream
+      description: The stream to which the contents of the current stream will be copied.
+    - id: expiryTime
+      type: System.Nullable{System.DateTime}
+      description: DateTime indicating the expiry time.
+    - id: callback
+      type: System.AsyncCallback
+      description: An optional asynchronous callback, to be called when the copy is complete.
+    - id: state
+      type: System.Object
+      description: A user-provided object that distinguishes this particular asynchronous copy request from other requests.
+    return:
+      type: System.IAsyncResult
+      description: An IAsyncResult that represents the asynchronous copy, which could still be pending.
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo*
+  nameWithType.vb: MultiBufferMemoryStream.BeginFastCopyTo(Stream, Nullable(Of DateTime), AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo(System.IO.Stream, System.Nullable(Of System.DateTime), System.AsyncCallback, System.Object)
+  name.vb: BeginFastCopyTo(Stream, Nullable(Of DateTime), AsyncCallback, Object)
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo(System.IAsyncResult)
+  commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo(System.IAsyncResult)
+  id: EndFastCopyTo(System.IAsyncResult)
+  parent: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
+  langs:
+  - csharp
+  - vb
+  name: EndFastCopyTo(IAsyncResult)
+  nameWithType: MultiBufferMemoryStream.EndFastCopyTo(IAsyncResult)
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: Lib/Common/Core/MultiBufferMemoryStream.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EndFastCopyTo
+    path: Lib/Common/Core/MultiBufferMemoryStream.cs
+    startLine: 539
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Core
+  summary: "\nEnds an asynchronous copy operation.\n"
+  example: []
+  syntax:
+    content: public void EndFastCopyTo(IAsyncResult asyncResult)
+    content.vb: Public Sub EndFastCopyTo(asyncResult As IAsyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: The reference to the pending asynchronous request to finish.
+  overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash
   commentId: M:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash
   id: ComputeMD5Hash
@@ -765,6 +948,7 @@ items:
     - id: disposing
       type: System.Boolean
       description: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  overridden: System.IO.Stream.Dispose(System.Boolean)
   overload: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Dispose*
   modifiers.csharp:
   - protected
@@ -780,10 +964,831 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Core
   fullName: Microsoft.WindowsAzure.Storage.Core
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IO.Stream.Null
+  commentId: F:System.IO.Stream.Null
+  parent: System.IO.Stream
+  isExternal: true
+  name: Null
+  nameWithType: Stream.Null
+  fullName: System.IO.Stream.Null
+- uid: System.IO.Stream.CopyTo(System.IO.Stream)
+  commentId: M:System.IO.Stream.CopyTo(System.IO.Stream)
+  parent: System.IO.Stream
+  isExternal: true
+  name: CopyTo(Stream)
+  nameWithType: Stream.CopyTo(Stream)
+  fullName: System.IO.Stream.CopyTo(System.IO.Stream)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream)
+    name: CopyTo
+    nameWithType: Stream.CopyTo
+    fullName: System.IO.Stream.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream)
+    name: CopyTo
+    nameWithType: Stream.CopyTo
+    fullName: System.IO.Stream.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  commentId: M:System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  name: CopyTo(Stream, Int32)
+  nameWithType: Stream.CopyTo(Stream, Int32)
+  fullName: System.IO.Stream.CopyTo(System.IO.Stream, System.Int32)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+    name: CopyTo
+    nameWithType: Stream.CopyTo
+    fullName: System.IO.Stream.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+    name: CopyTo
+    nameWithType: Stream.CopyTo
+    fullName: System.IO.Stream.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.Close
+  commentId: M:System.IO.Stream.Close
+  parent: System.IO.Stream
+  isExternal: true
+  name: Close()
+  nameWithType: Stream.Close()
+  fullName: System.IO.Stream.Close()
+  spec.csharp:
+  - uid: System.IO.Stream.Close
+    name: Close
+    nameWithType: Stream.Close
+    fullName: System.IO.Stream.Close
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Close
+    name: Close
+    nameWithType: Stream.Close
+    fullName: System.IO.Stream.Close
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.Dispose
+  commentId: M:System.IO.Stream.Dispose
+  parent: System.IO.Stream
+  isExternal: true
+  name: Dispose()
+  nameWithType: Stream.Dispose()
+  fullName: System.IO.Stream.Dispose()
+  spec.csharp:
+  - uid: System.IO.Stream.Dispose
+    name: Dispose
+    nameWithType: Stream.Dispose
+    fullName: System.IO.Stream.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Dispose
+    name: Dispose
+    nameWithType: Stream.Dispose
+    fullName: System.IO.Stream.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.CreateWaitHandle
+  commentId: M:System.IO.Stream.CreateWaitHandle
+  parent: System.IO.Stream
+  isExternal: true
+  name: CreateWaitHandle()
+  nameWithType: Stream.CreateWaitHandle()
+  fullName: System.IO.Stream.CreateWaitHandle()
+  spec.csharp:
+  - uid: System.IO.Stream.CreateWaitHandle
+    name: CreateWaitHandle
+    nameWithType: Stream.CreateWaitHandle
+    fullName: System.IO.Stream.CreateWaitHandle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.CreateWaitHandle
+    name: CreateWaitHandle
+    nameWithType: Stream.CreateWaitHandle
+    fullName: System.IO.Stream.CreateWaitHandle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.ReadByte
+  commentId: M:System.IO.Stream.ReadByte
+  parent: System.IO.Stream
+  isExternal: true
+  name: ReadByte()
+  nameWithType: Stream.ReadByte()
+  fullName: System.IO.Stream.ReadByte()
+  spec.csharp:
+  - uid: System.IO.Stream.ReadByte
+    name: ReadByte
+    nameWithType: Stream.ReadByte
+    fullName: System.IO.Stream.ReadByte
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.ReadByte
+    name: ReadByte
+    nameWithType: Stream.ReadByte
+    fullName: System.IO.Stream.ReadByte
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.WriteByte(System.Byte)
+  commentId: M:System.IO.Stream.WriteByte(System.Byte)
+  parent: System.IO.Stream
+  isExternal: true
+  name: WriteByte(Byte)
+  nameWithType: Stream.WriteByte(Byte)
+  fullName: System.IO.Stream.WriteByte(System.Byte)
+  spec.csharp:
+  - uid: System.IO.Stream.WriteByte(System.Byte)
+    name: WriteByte
+    nameWithType: Stream.WriteByte
+    fullName: System.IO.Stream.WriteByte
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.WriteByte(System.Byte)
+    name: WriteByte
+    nameWithType: Stream.WriteByte
+    fullName: System.IO.Stream.WriteByte
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.Synchronized(System.IO.Stream)
+  commentId: M:System.IO.Stream.Synchronized(System.IO.Stream)
+  parent: System.IO.Stream
+  isExternal: true
+  name: Synchronized(Stream)
+  nameWithType: Stream.Synchronized(Stream)
+  fullName: System.IO.Stream.Synchronized(System.IO.Stream)
+  spec.csharp:
+  - uid: System.IO.Stream.Synchronized(System.IO.Stream)
+    name: Synchronized
+    nameWithType: Stream.Synchronized
+    fullName: System.IO.Stream.Synchronized
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Synchronized(System.IO.Stream)
+    name: Synchronized
+    nameWithType: Stream.Synchronized
+    fullName: System.IO.Stream.Synchronized
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.ObjectInvariant
+  commentId: M:System.IO.Stream.ObjectInvariant
+  parent: System.IO.Stream
+  isExternal: true
+  name: ObjectInvariant()
+  nameWithType: Stream.ObjectInvariant()
+  fullName: System.IO.Stream.ObjectInvariant()
+  spec.csharp:
+  - uid: System.IO.Stream.ObjectInvariant
+    name: ObjectInvariant
+    nameWithType: Stream.ObjectInvariant
+    fullName: System.IO.Stream.ObjectInvariant
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.ObjectInvariant
+    name: ObjectInvariant
+    nameWithType: Stream.ObjectInvariant
+    fullName: System.IO.Stream.ObjectInvariant
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.CanTimeout
+  commentId: P:System.IO.Stream.CanTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  name: CanTimeout
+  nameWithType: Stream.CanTimeout
+  fullName: System.IO.Stream.CanTimeout
+- uid: System.IO.Stream.ReadTimeout
+  commentId: P:System.IO.Stream.ReadTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  name: ReadTimeout
+  nameWithType: Stream.ReadTimeout
+  fullName: System.IO.Stream.ReadTimeout
+- uid: System.IO.Stream.WriteTimeout
+  commentId: P:System.IO.Stream.WriteTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  name: WriteTimeout
+  nameWithType: Stream.WriteTimeout
+  fullName: System.IO.Stream.WriteTimeout
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: MemberwiseClone(Boolean)
+  nameWithType: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+  commentId: M:System.MarshalByRefObject.CreateObjRef(System.Type)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: CreateObjRef(Type)
+  nameWithType: MarshalByRefObject.CreateObjRef(Type)
+  fullName: System.MarshalByRefObject.CreateObjRef(System.Type)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+    name: CreateObjRef
+    nameWithType: MarshalByRefObject.CreateObjRef
+    fullName: System.MarshalByRefObject.CreateObjRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+    name: CreateObjRef
+    nameWithType: MarshalByRefObject.CreateObjRef
+    fullName: System.MarshalByRefObject.CreateObjRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   commentId: T:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream
   isExternal: false
@@ -804,6 +1809,8 @@ references:
   nameWithType: MultiBufferMemoryStream.MultiBufferMemoryStream
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.MultiBufferMemoryStream
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -814,6 +1821,13 @@ references:
   name: Microsoft.WindowsAzure.Storage
   nameWithType: Microsoft.WindowsAzure.Storage
   fullName: Microsoft.WindowsAzure.Storage
+- uid: System.IO.Stream.CanRead
+  commentId: P:System.IO.Stream.CanRead
+  parent: System.IO.Stream
+  isExternal: true
+  name: CanRead
+  nameWithType: Stream.CanRead
+  fullName: System.IO.Stream.CanRead
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanRead*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanRead
   isExternal: false
@@ -821,22 +1835,45 @@ references:
   nameWithType: MultiBufferMemoryStream.CanRead
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanRead
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.IO.Stream.CanSeek
+  commentId: P:System.IO.Stream.CanSeek
+  parent: System.IO.Stream
+  isExternal: true
+  name: CanSeek
+  nameWithType: Stream.CanSeek
+  fullName: System.IO.Stream.CanSeek
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanSeek*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanSeek
   isExternal: false
   name: CanSeek
   nameWithType: MultiBufferMemoryStream.CanSeek
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanSeek
+- uid: System.IO.Stream.CanWrite
+  commentId: P:System.IO.Stream.CanWrite
+  parent: System.IO.Stream
+  isExternal: true
+  name: CanWrite
+  nameWithType: Stream.CanWrite
+  fullName: System.IO.Stream.CanWrite
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanWrite*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanWrite
   isExternal: false
   name: CanWrite
   nameWithType: MultiBufferMemoryStream.CanWrite
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.CanWrite
+- uid: System.IO.Stream.Length
+  commentId: P:System.IO.Stream.Length
+  parent: System.IO.Stream
+  isExternal: true
+  name: Length
+  nameWithType: Stream.Length
+  fullName: System.IO.Stream.Length
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Length*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Length
   isExternal: false
@@ -844,16 +1881,107 @@ references:
   nameWithType: MultiBufferMemoryStream.Length
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Length
 - uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
+- uid: System.IO.Stream.Position
+  commentId: P:System.IO.Stream.Position
+  parent: System.IO.Stream
+  isExternal: true
+  name: Position
+  nameWithType: Stream.Position
+  fullName: System.IO.Stream.Position
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Position*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Position
   isExternal: false
   name: Position
   nameWithType: MultiBufferMemoryStream.Position
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Position
+- uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  name: Read(Byte[], Int32, Int32)
+  nameWithType: Stream.Read(Byte[], Int32, Int32)
+  fullName: System.IO.Stream.Read(System.Byte[], System.Int32, System.Int32)
+  nameWithType.vb: Stream.Read(Byte(), Int32, Int32)
+  fullname.vb: System.IO.Stream.Read(System.Byte(), System.Int32, System.Int32)
+  name.vb: Read(Byte(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+    name: Read
+    nameWithType: Stream.Read
+    fullName: System.IO.Stream.Read
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+    name: Read
+    nameWithType: Stream.Read
+    fullName: System.IO.Stream.Read
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Read*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Read
   isExternal: false
@@ -885,95 +2013,241 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync
-  isExternal: false
-  name: ReadAsync
-  nameWithType: MultiBufferMemoryStream.ReadAsync
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ReadAsync
-- uid: CancellationToken
+- uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  parent: System.IO.Stream
   isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: CancellationToken
-- uid: Task{System.Int32}
-  commentId: '!:Task{System.Int32}'
-  definition: Task`1
-  name: Task<Int32>
-  nameWithType: Task<Int32>
-  fullName: Task<System.Int32>
-  nameWithType.vb: Task(Of Int32)
-  fullname.vb: Task(Of System.Int32)
-  name.vb: Task(Of Int32)
+  name: BeginRead(Byte[], Int32, Int32, AsyncCallback, Object)
+  nameWithType: Stream.BeginRead(Byte[], Int32, Int32, AsyncCallback, Object)
+  fullName: System.IO.Stream.BeginRead(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  nameWithType.vb: Stream.BeginRead(Byte(), Int32, Int32, AsyncCallback, Object)
+  fullname.vb: System.IO.Stream.BeginRead(System.Byte(), System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  name.vb: BeginRead(Byte(), Int32, Int32, AsyncCallback, Object)
   spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginRead
+    nameWithType: Stream.BeginRead
+    fullName: System.IO.Stream.BeginRead
     isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
     name: Int32
     nameWithType: Int32
     fullName: System.Int32
     isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
     name: Int32
     nameWithType: Int32
     fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    nameWithType: AsyncCallback
+    fullName: System.AsyncCallback
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
-  isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullname.vb: Task(Of )
-  name.vb: Task(Of )
-  spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
   spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginRead
+    nameWithType: Stream.BeginRead
+    fullName: System.IO.Stream.BeginRead
     isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    nameWithType: AsyncCallback
+    fullName: System.AsyncCallback
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead
+  isExternal: false
+  name: BeginRead
+  nameWithType: MultiBufferMemoryStream.BeginRead
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginRead
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: System.IO.Stream.EndRead(System.IAsyncResult)
+  commentId: M:System.IO.Stream.EndRead(System.IAsyncResult)
+  parent: System.IO.Stream
+  isExternal: true
+  name: EndRead(IAsyncResult)
+  nameWithType: Stream.EndRead(IAsyncResult)
+  fullName: System.IO.Stream.EndRead(System.IAsyncResult)
+  spec.csharp:
+  - uid: System.IO.Stream.EndRead(System.IAsyncResult)
+    name: EndRead
+    nameWithType: Stream.EndRead
+    fullName: System.IO.Stream.EndRead
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    nameWithType: IAsyncResult
+    fullName: System.IAsyncResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.EndRead(System.IAsyncResult)
+    name: EndRead
+    nameWithType: Stream.EndRead
+    fullName: System.IO.Stream.EndRead
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    nameWithType: IAsyncResult
+    fullName: System.IAsyncResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead
+  isExternal: false
+  name: EndRead
+  nameWithType: MultiBufferMemoryStream.EndRead
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndRead
+- uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+  commentId: M:System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+  parent: System.IO.Stream
+  isExternal: true
+  name: Seek(Int64, SeekOrigin)
+  nameWithType: Stream.Seek(Int64, SeekOrigin)
+  fullName: System.IO.Stream.Seek(System.Int64, System.IO.SeekOrigin)
+  spec.csharp:
+  - uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+    name: Seek
+    nameWithType: Stream.Seek
+    fullName: System.IO.Stream.Seek
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SeekOrigin
+    name: SeekOrigin
+    nameWithType: SeekOrigin
+    fullName: System.IO.SeekOrigin
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+    name: Seek
+    nameWithType: Stream.Seek
+    fullName: System.IO.Stream.Seek
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SeekOrigin
+    name: SeekOrigin
+    nameWithType: SeekOrigin
+    fullName: System.IO.SeekOrigin
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -983,66 +2257,371 @@ references:
   name: Seek
   nameWithType: MultiBufferMemoryStream.Seek
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Seek
-- uid: SeekOrigin
-  commentId: '!:SeekOrigin'
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+- uid: System.IO.SeekOrigin
+  commentId: T:System.IO.SeekOrigin
+  parent: System.IO
   isExternal: true
   name: SeekOrigin
   nameWithType: SeekOrigin
-  fullName: SeekOrigin
+  fullName: System.IO.SeekOrigin
+- uid: System.IO.Stream.SetLength(System.Int64)
+  commentId: M:System.IO.Stream.SetLength(System.Int64)
+  parent: System.IO.Stream
+  isExternal: true
+  name: SetLength(Int64)
+  nameWithType: Stream.SetLength(Int64)
+  fullName: System.IO.Stream.SetLength(System.Int64)
+  spec.csharp:
+  - uid: System.IO.Stream.SetLength(System.Int64)
+    name: SetLength
+    nameWithType: Stream.SetLength
+    fullName: System.IO.Stream.SetLength
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.SetLength(System.Int64)
+    name: SetLength
+    nameWithType: Stream.SetLength
+    fullName: System.IO.Stream.SetLength
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.SetLength*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.SetLength
   isExternal: false
   name: SetLength
   nameWithType: MultiBufferMemoryStream.SetLength
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.SetLength
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+- uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  name: Write(Byte[], Int32, Int32)
+  nameWithType: Stream.Write(Byte[], Int32, Int32)
+  fullName: System.IO.Stream.Write(System.Byte[], System.Int32, System.Int32)
+  nameWithType.vb: Stream.Write(Byte(), Int32, Int32)
+  fullname.vb: System.IO.Stream.Write(System.Byte(), System.Int32, System.Int32)
+  name.vb: Write(Byte(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+    name: Write
+    nameWithType: Stream.Write
+    fullName: System.IO.Stream.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+    name: Write
+    nameWithType: Stream.Write
+    fullName: System.IO.Stream.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write
   isExternal: false
   name: Write
   nameWithType: MultiBufferMemoryStream.Write
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Write
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync
-  isExternal: false
-  name: WriteAsync
-  nameWithType: MultiBufferMemoryStream.WriteAsync
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.WriteAsync
-- uid: Task
+- uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  parent: System.IO.Stream
   isExternal: true
-  name: Task
-  nameWithType: Task
-  fullName: Task
+  name: BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object)
+  nameWithType: Stream.BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object)
+  fullName: System.IO.Stream.BeginWrite(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  nameWithType.vb: Stream.BeginWrite(Byte(), Int32, Int32, AsyncCallback, Object)
+  fullname.vb: System.IO.Stream.BeginWrite(System.Byte(), System.Int32, System.Int32, System.AsyncCallback, System.Object)
+  name.vb: BeginWrite(Byte(), Int32, Int32, AsyncCallback, Object)
+  spec.csharp:
+  - uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginWrite
+    nameWithType: Stream.BeginWrite
+    fullName: System.IO.Stream.BeginWrite
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    nameWithType: AsyncCallback
+    fullName: System.AsyncCallback
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginWrite
+    nameWithType: Stream.BeginWrite
+    fullName: System.IO.Stream.BeginWrite
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    nameWithType: AsyncCallback
+    fullName: System.AsyncCallback
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite
+  isExternal: false
+  name: BeginWrite
+  nameWithType: MultiBufferMemoryStream.BeginWrite
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginWrite
+- uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+  commentId: M:System.IO.Stream.EndWrite(System.IAsyncResult)
+  parent: System.IO.Stream
+  isExternal: true
+  name: EndWrite(IAsyncResult)
+  nameWithType: Stream.EndWrite(IAsyncResult)
+  fullName: System.IO.Stream.EndWrite(System.IAsyncResult)
+  spec.csharp:
+  - uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+    name: EndWrite
+    nameWithType: Stream.EndWrite
+    fullName: System.IO.Stream.EndWrite
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    nameWithType: IAsyncResult
+    fullName: System.IAsyncResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+    name: EndWrite
+    nameWithType: Stream.EndWrite
+    fullName: System.IO.Stream.EndWrite
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    nameWithType: IAsyncResult
+    fullName: System.IAsyncResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite
+  isExternal: false
+  name: EndWrite
+  nameWithType: MultiBufferMemoryStream.EndWrite
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndWrite
+- uid: System.IO.Stream.Flush
+  commentId: M:System.IO.Stream.Flush
+  parent: System.IO.Stream
+  isExternal: true
+  name: Flush()
+  nameWithType: Stream.Flush()
+  fullName: System.IO.Stream.Flush()
+  spec.csharp:
+  - uid: System.IO.Stream.Flush
+    name: Flush
+    nameWithType: Stream.Flush
+    fullName: System.IO.Stream.Flush
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Flush
+    name: Flush
+    nameWithType: Stream.Flush
+    fullName: System.IO.Stream.Flush
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush
   isExternal: false
   name: Flush
   nameWithType: MultiBufferMemoryStream.Flush
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Flush
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo
   isExternal: false
-  name: FlushAsync
-  nameWithType: MultiBufferMemoryStream.FlushAsync
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FlushAsync
-- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync
-  isExternal: false
-  name: FastCopyToAsync
-  nameWithType: MultiBufferMemoryStream.FastCopyToAsync
-  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyToAsync
-- uid: Stream
-  isExternal: true
-  name: Stream
-  nameWithType: Stream
-  fullName: Stream
-- uid: System.Nullable{DateTime}
-  commentId: '!:System.Nullable{DateTime}'
+  name: FastCopyTo
+  nameWithType: MultiBufferMemoryStream.FastCopyTo
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.FastCopyTo
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<DateTime>
   nameWithType: Nullable<DateTime>
-  fullName: System.Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
   nameWithType.vb: Nullable(Of DateTime)
-  fullname.vb: System.Nullable(Of DateTime)
+  fullname.vb: System.Nullable(Of System.DateTime)
   name.vb: Nullable(Of DateTime)
   spec.csharp:
   - uid: System.Nullable`1
@@ -1053,10 +2632,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: DateTime
+  - uid: System.DateTime
     name: DateTime
     nameWithType: DateTime
-    fullName: DateTime
+    fullName: System.DateTime
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1070,22 +2649,23 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: DateTime
+  - uid: System.DateTime
     name: DateTime
     nameWithType: DateTime
-    fullName: DateTime
+    fullName: System.DateTime
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -1095,9 +2675,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1110,12 +2690,24 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo
+  isExternal: false
+  name: BeginFastCopyTo
+  nameWithType: MultiBufferMemoryStream.BeginFastCopyTo
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.BeginFastCopyTo
+- uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo
+  isExternal: false
+  name: EndFastCopyTo
+  nameWithType: MultiBufferMemoryStream.EndFastCopyTo
+  fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.EndFastCopyTo
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash
   isExternal: false
@@ -1123,10 +2715,53 @@ references:
   nameWithType: MultiBufferMemoryStream.ComputeMD5Hash
   fullName: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.ComputeMD5Hash
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.IO.Stream.Dispose(System.Boolean)
+  commentId: M:System.IO.Stream.Dispose(System.Boolean)
+  parent: System.IO.Stream
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: Stream.Dispose(Boolean)
+  fullName: System.IO.Stream.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: System.IO.Stream.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Stream.Dispose
+    fullName: System.IO.Stream.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Stream.Dispose
+    fullName: System.IO.Stream.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Dispose*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Core.MultiBufferMemoryStream.Dispose
   isExternal: false

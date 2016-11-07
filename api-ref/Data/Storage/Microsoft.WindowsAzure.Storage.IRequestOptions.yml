@@ -7,6 +7,7 @@ items:
   children:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.LocationMode
   - Microsoft.WindowsAzure.Storage.IRequestOptions.MaximumExecutionTime
+  - Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
   - Microsoft.WindowsAzure.Storage.IRequestOptions.RetryPolicy
   - Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
   langs:
@@ -138,8 +139,8 @@ items:
     content.vb: Property ServerTimeout As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> containing the server timeout interval.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> containing the server timeout interval.
   overload: Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout*
   modifiers.csharp:
   - get
@@ -173,9 +174,44 @@ items:
     content.vb: Property MaximumExecutionTime As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> containing the maximum execution time across all potential retries.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> containing the maximum execution time across all potential retries.
   overload: Microsoft.WindowsAzure.Storage.IRequestOptions.MaximumExecutionTime*
+  modifiers.csharp:
+  - get
+  - set
+- uid: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  commentId: P:Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  id: RequireEncryption
+  parent: Microsoft.WindowsAzure.Storage.IRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: RequireEncryption
+  nameWithType: IRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/IRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: RequireEncryption
+    path: Lib/Common/IRequestOptions.cs
+    startLine: 57
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage
+  summary: "\nGets or sets a value to indicate whether data written and read by the client library should be encrypted.\n"
+  example: []
+  syntax:
+    content: bool ? RequireEncryption { get; set; }
+    content.vb: Property RequireEncryption As Boolean?
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+      description: Use <code>true</code> to specify that data should be encrypted/decrypted for all transactions; otherwise, <code>false</code>.
+  overload: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption*
   modifiers.csharp:
   - get
   - set
@@ -265,7 +301,8 @@ references:
   nameWithType: IRequestOptions.LocationMode
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.LocationMode
 - uid: System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
-  commentId: '!:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}'
+  commentId: T:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<LocationMode>
   nameWithType: Nullable<LocationMode>
@@ -306,13 +343,14 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -322,9 +360,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -337,26 +375,40 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout*
   commentId: Overload:Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
   isExternal: false
   name: ServerTimeout
   nameWithType: IRequestOptions.ServerTimeout
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
-- uid: System.Nullable{TimeSpan}
-  commentId: '!:System.Nullable{TimeSpan}'
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<TimeSpan>
   nameWithType: Nullable<TimeSpan>
-  fullName: System.Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
   nameWithType.vb: Nullable(Of TimeSpan)
-  fullname.vb: System.Nullable(Of TimeSpan)
+  fullname.vb: System.Nullable(Of System.TimeSpan)
   name.vb: Nullable(Of TimeSpan)
   spec.csharp:
   - uid: System.Nullable`1
@@ -367,10 +419,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -384,10 +436,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
@@ -398,3 +450,53 @@ references:
   name: MaximumExecutionTime
   nameWithType: IRequestOptions.MaximumExecutionTime
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.MaximumExecutionTime
+- uid: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  isExternal: false
+  name: RequireEncryption
+  nameWithType: IRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullname.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

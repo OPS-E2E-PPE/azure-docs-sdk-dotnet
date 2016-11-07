@@ -148,12 +148,18 @@ items:
   summary: "\nContains storage constants.\n"
   example: []
   syntax:
-    content: 'public static class Constants : object'
-    content.vb: >-
-      Public Module Constants
-          Inherits Object
+    content: public static class Constants
+    content.vb: Public Module Constants
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -186,8 +192,8 @@ items:
   summary: "\nConstant for the max value of ParallelOperationThreadCount for Block Blobs.\n"
   example: []
   syntax:
-    content: public const int MaxParallelOperationThreadCount = null
-    content.vb: Public Const MaxParallelOperationThreadCount As Integer = Nothing
+    content: public const int MaxParallelOperationThreadCount = 64
+    content.vb: Public Const MaxParallelOperationThreadCount As Integer = 64
     return:
       type: System.Int32
   modifiers.csharp:
@@ -221,8 +227,8 @@ items:
   summary: "\nMaximum number of shared access policy identifiers supported by server.\n"
   example: []
   syntax:
-    content: public const int MaxSharedAccessPolicyIdentifiers = null
-    content.vb: Public Const MaxSharedAccessPolicyIdentifiers As Integer = Nothing
+    content: public const int MaxSharedAccessPolicyIdentifiers = 5
+    content.vb: Public Const MaxSharedAccessPolicyIdentifiers As Integer = 5
     return:
       type: System.Int32
   modifiers.csharp:
@@ -256,8 +262,8 @@ items:
   summary: "\nDefault Write Block Size used by Blob stream.\n"
   example: []
   syntax:
-    content: public const int DefaultWriteBlockSizeBytes = null
-    content.vb: Public Const DefaultWriteBlockSizeBytes As Integer = Nothing
+    content: public const int DefaultWriteBlockSizeBytes = 4194304
+    content.vb: Public Const DefaultWriteBlockSizeBytes As Integer = 4194304
     return:
       type: System.Int32
   modifiers.csharp:
@@ -291,8 +297,8 @@ items:
   summary: "\nThe maximum size of a blob before it must be separated into blocks.\n"
   example: []
   syntax:
-    content: public const long MaxSingleUploadBlobSize = null
-    content.vb: Public Const MaxSingleUploadBlobSize As Long = Nothing
+    content: public const long MaxSingleUploadBlobSize = 67108864L
+    content.vb: Public Const MaxSingleUploadBlobSize As Long = 67108864L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -326,8 +332,8 @@ items:
   summary: "\nThe maximum size of a single block.\n"
   example: []
   syntax:
-    content: public const int MaxBlockSize = null
-    content.vb: Public Const MaxBlockSize As Integer = Nothing
+    content: public const int MaxBlockSize = 4194304
+    content.vb: Public Const MaxBlockSize As Integer = 4194304
     return:
       type: System.Int32
   modifiers.csharp:
@@ -361,8 +367,8 @@ items:
   summary: "\nThe maximum size of a range get operation that returns content MD5.\n"
   example: []
   syntax:
-    content: public const int MaxRangeGetContentMD5Size = null
-    content.vb: Public Const MaxRangeGetContentMD5Size As Integer = Nothing
+    content: public const int MaxRangeGetContentMD5Size = 4194304
+    content.vb: Public Const MaxRangeGetContentMD5Size As Integer = 4194304
     return:
       type: System.Int32
   modifiers.csharp:
@@ -396,8 +402,8 @@ items:
   summary: "\nThe maximum number of blocks.\n"
   example: []
   syntax:
-    content: public const long MaxBlockNumber = null
-    content.vb: Public Const MaxBlockNumber As Long = Nothing
+    content: public const long MaxBlockNumber = 50000L
+    content.vb: Public Const MaxBlockNumber As Long = 50000L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -431,8 +437,8 @@ items:
   summary: "\nThe maximum size of a blob with blocks.\n"
   example: []
   syntax:
-    content: public const long MaxBlobSize = null
-    content.vb: Public Const MaxBlobSize As Long = Nothing
+    content: public const long MaxBlobSize = 209715200000L
+    content.vb: Public Const MaxBlobSize As Long = 209715200000L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -469,7 +475,7 @@ items:
     content: public static readonly TimeSpan MaxMaximumExecutionTime
     content.vb: Public Shared ReadOnly MaxMaximumExecutionTime As TimeSpan
     return:
-      type: TimeSpan
+      type: System.TimeSpan
   modifiers.csharp:
   - public
   - static
@@ -506,7 +512,7 @@ items:
     content: public static readonly TimeSpan DefaultClientSideTimeout
     content.vb: Public Shared ReadOnly DefaultClientSideTimeout As TimeSpan
     return:
-      type: TimeSpan
+      type: System.TimeSpan
   modifiers.csharp:
   - public
   - static
@@ -543,7 +549,7 @@ items:
     content: public static readonly TimeSpan MaximumRetryBackoff
     content.vb: Public Shared ReadOnly MaximumRetryBackoff As TimeSpan
     return:
-      type: TimeSpan
+      type: System.TimeSpan
   modifiers.csharp:
   - public
   - static
@@ -580,7 +586,7 @@ items:
     content: public static readonly TimeSpan MaximumAllowedTimeout
     content.vb: Public Shared ReadOnly MaximumAllowedTimeout As TimeSpan
     return:
-      type: TimeSpan
+      type: System.TimeSpan
   modifiers.csharp:
   - public
   - static
@@ -614,8 +620,8 @@ items:
   summary: "\nThe size of a page in a PageBlob.\n"
   example: []
   syntax:
-    content: public const int PageSize = null
-    content.vb: Public Const PageSize As Integer = Nothing
+    content: public const int PageSize = 512
+    content.vb: Public Const PageSize As Integer = 512
     return:
       type: System.Int32
   modifiers.csharp:
@@ -649,8 +655,8 @@ items:
   summary: "\nA constant representing a kilo-byte (Non-SI version).\n"
   example: []
   syntax:
-    content: public const long KB = null
-    content.vb: Public Const KB As Long = Nothing
+    content: public const long KB = 1024L
+    content.vb: Public Const KB As Long = 1024L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -684,8 +690,8 @@ items:
   summary: "\nA constant representing a megabyte (Non-SI version).\n"
   example: []
   syntax:
-    content: public const long MB = null
-    content.vb: Public Const MB As Long = Nothing
+    content: public const long MB = 1048576L
+    content.vb: Public Const MB As Long = 1048576L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -719,8 +725,8 @@ items:
   summary: "\nA constant representing a megabyte (Non-SI version).\n"
   example: []
   syntax:
-    content: public const long GB = null
-    content.vb: Public Const GB As Long = Nothing
+    content: public const long GB = 1073741824L
+    content.vb: Public Const GB As Long = 1073741824L
     return:
       type: System.Int64
   modifiers.csharp:
@@ -754,8 +760,8 @@ items:
   summary: "\nXML element for committed blocks.\n"
   example: []
   syntax:
-    content: public const string CommittedBlocksElement = null
-    content.vb: Public Const CommittedBlocksElement As String = Nothing
+    content: public const string CommittedBlocksElement = "CommittedBlocks"
+    content.vb: Public Const CommittedBlocksElement As String = "CommittedBlocks"
     return:
       type: System.String
   modifiers.csharp:
@@ -789,8 +795,8 @@ items:
   summary: "\nXML element for uncommitted blocks.\n"
   example: []
   syntax:
-    content: public const string UncommittedBlocksElement = null
-    content.vb: Public Const UncommittedBlocksElement As String = Nothing
+    content: public const string UncommittedBlocksElement = "UncommittedBlocks"
+    content.vb: Public Const UncommittedBlocksElement As String = "UncommittedBlocks"
     return:
       type: System.String
   modifiers.csharp:
@@ -824,8 +830,8 @@ items:
   summary: "\nXML element for blocks.\n"
   example: []
   syntax:
-    content: public const string BlockElement = null
-    content.vb: Public Const BlockElement As String = Nothing
+    content: public const string BlockElement = "Block"
+    content.vb: Public Const BlockElement As String = "Block"
     return:
       type: System.String
   modifiers.csharp:
@@ -859,8 +865,8 @@ items:
   summary: "\nXML element for names.\n"
   example: []
   syntax:
-    content: public const string NameElement = null
-    content.vb: Public Const NameElement As String = Nothing
+    content: public const string NameElement = "Name"
+    content.vb: Public Const NameElement As String = "Name"
     return:
       type: System.String
   modifiers.csharp:
@@ -894,8 +900,8 @@ items:
   summary: "\nXML element for sizes.\n"
   example: []
   syntax:
-    content: public const string SizeElement = null
-    content.vb: Public Const SizeElement As String = Nothing
+    content: public const string SizeElement = "Size"
+    content.vb: Public Const SizeElement As String = "Size"
     return:
       type: System.String
   modifiers.csharp:
@@ -929,8 +935,8 @@ items:
   summary: "\nXML element for block lists.\n"
   example: []
   syntax:
-    content: public const string BlockListElement = null
-    content.vb: Public Const BlockListElement As String = Nothing
+    content: public const string BlockListElement = "BlockList"
+    content.vb: Public Const BlockListElement As String = "BlockList"
     return:
       type: System.String
   modifiers.csharp:
@@ -964,8 +970,8 @@ items:
   summary: "\nXML element for queue message lists.\n"
   example: []
   syntax:
-    content: public const string MessagesElement = null
-    content.vb: Public Const MessagesElement As String = Nothing
+    content: public const string MessagesElement = "QueueMessagesList"
+    content.vb: Public Const MessagesElement As String = "QueueMessagesList"
     return:
       type: System.String
   modifiers.csharp:
@@ -999,8 +1005,8 @@ items:
   summary: "\nXML element for queue messages.\n"
   example: []
   syntax:
-    content: public const string MessageElement = null
-    content.vb: Public Const MessageElement As String = Nothing
+    content: public const string MessageElement = "QueueMessage"
+    content.vb: Public Const MessageElement As String = "QueueMessage"
     return:
       type: System.String
   modifiers.csharp:
@@ -1034,8 +1040,8 @@ items:
   summary: "\nXML element for message IDs.\n"
   example: []
   syntax:
-    content: public const string MessageIdElement = null
-    content.vb: Public Const MessageIdElement As String = Nothing
+    content: public const string MessageIdElement = "MessageId"
+    content.vb: Public Const MessageIdElement As String = "MessageId"
     return:
       type: System.String
   modifiers.csharp:
@@ -1069,8 +1075,8 @@ items:
   summary: "\nXML element for insertion times.\n"
   example: []
   syntax:
-    content: public const string InsertionTimeElement = null
-    content.vb: Public Const InsertionTimeElement As String = Nothing
+    content: public const string InsertionTimeElement = "InsertionTime"
+    content.vb: Public Const InsertionTimeElement As String = "InsertionTime"
     return:
       type: System.String
   modifiers.csharp:
@@ -1104,8 +1110,8 @@ items:
   summary: "\nXML element for expiration times.\n"
   example: []
   syntax:
-    content: public const string ExpirationTimeElement = null
-    content.vb: Public Const ExpirationTimeElement As String = Nothing
+    content: public const string ExpirationTimeElement = "ExpirationTime"
+    content.vb: Public Const ExpirationTimeElement As String = "ExpirationTime"
     return:
       type: System.String
   modifiers.csharp:
@@ -1139,8 +1145,8 @@ items:
   summary: "\nXML element for pop receipts.\n"
   example: []
   syntax:
-    content: public const string PopReceiptElement = null
-    content.vb: Public Const PopReceiptElement As String = Nothing
+    content: public const string PopReceiptElement = "PopReceipt"
+    content.vb: Public Const PopReceiptElement As String = "PopReceipt"
     return:
       type: System.String
   modifiers.csharp:
@@ -1174,8 +1180,8 @@ items:
   summary: "\nXML element for the time next visible fields.\n"
   example: []
   syntax:
-    content: public const string TimeNextVisibleElement = null
-    content.vb: Public Const TimeNextVisibleElement As String = Nothing
+    content: public const string TimeNextVisibleElement = "TimeNextVisible"
+    content.vb: Public Const TimeNextVisibleElement As String = "TimeNextVisible"
     return:
       type: System.String
   modifiers.csharp:
@@ -1209,8 +1215,8 @@ items:
   summary: "\nXML element for message texts.\n"
   example: []
   syntax:
-    content: public const string MessageTextElement = null
-    content.vb: Public Const MessageTextElement As String = Nothing
+    content: public const string MessageTextElement = "MessageText"
+    content.vb: Public Const MessageTextElement As String = "MessageText"
     return:
       type: System.String
   modifiers.csharp:
@@ -1244,8 +1250,8 @@ items:
   summary: "\nXML element for dequeue counts.\n"
   example: []
   syntax:
-    content: public const string DequeueCountElement = null
-    content.vb: Public Const DequeueCountElement As String = Nothing
+    content: public const string DequeueCountElement = "DequeueCount"
+    content.vb: Public Const DequeueCountElement As String = "DequeueCount"
     return:
       type: System.String
   modifiers.csharp:
@@ -1279,8 +1285,8 @@ items:
   summary: "\nXML element for page ranges.\n"
   example: []
   syntax:
-    content: public const string PageRangeElement = null
-    content.vb: Public Const PageRangeElement As String = Nothing
+    content: public const string PageRangeElement = "PageRange"
+    content.vb: Public Const PageRangeElement As String = "PageRange"
     return:
       type: System.String
   modifiers.csharp:
@@ -1314,8 +1320,8 @@ items:
   summary: "\nXML element for clear ranges.\n"
   example: []
   syntax:
-    content: public const string ClearRangeElement = null
-    content.vb: Public Const ClearRangeElement As String = Nothing
+    content: public const string ClearRangeElement = "ClearRange"
+    content.vb: Public Const ClearRangeElement As String = "ClearRange"
     return:
       type: System.String
   modifiers.csharp:
@@ -1349,8 +1355,8 @@ items:
   summary: "\nXML element for page list elements.\n"
   example: []
   syntax:
-    content: public const string PageListElement = null
-    content.vb: Public Const PageListElement As String = Nothing
+    content: public const string PageListElement = "PageList"
+    content.vb: Public Const PageListElement As String = "PageList"
     return:
       type: System.String
   modifiers.csharp:
@@ -1384,8 +1390,8 @@ items:
   summary: "\nXML element for page range start elements.\n"
   example: []
   syntax:
-    content: public const string StartElement = null
-    content.vb: Public Const StartElement As String = Nothing
+    content: public const string StartElement = "Start"
+    content.vb: Public Const StartElement As String = "Start"
     return:
       type: System.String
   modifiers.csharp:
@@ -1419,8 +1425,8 @@ items:
   summary: "\nXML element for page range end elements.\n"
   example: []
   syntax:
-    content: public const string EndElement = null
-    content.vb: Public Const EndElement As String = Nothing
+    content: public const string EndElement = "End"
+    content.vb: Public Const EndElement As String = "End"
     return:
       type: System.String
   modifiers.csharp:
@@ -1454,8 +1460,8 @@ items:
   summary: "\nXML element for delimiters.\n"
   example: []
   syntax:
-    content: public const string DelimiterElement = null
-    content.vb: Public Const DelimiterElement As String = Nothing
+    content: public const string DelimiterElement = "Delimiter"
+    content.vb: Public Const DelimiterElement As String = "Delimiter"
     return:
       type: System.String
   modifiers.csharp:
@@ -1489,8 +1495,8 @@ items:
   summary: "\nXML element for blob prefixes.\n"
   example: []
   syntax:
-    content: public const string BlobPrefixElement = null
-    content.vb: Public Const BlobPrefixElement As String = Nothing
+    content: public const string BlobPrefixElement = "BlobPrefix"
+    content.vb: Public Const BlobPrefixElement As String = "BlobPrefix"
     return:
       type: System.String
   modifiers.csharp:
@@ -1524,8 +1530,8 @@ items:
   summary: "\nXML element for content type fields.\n"
   example: []
   syntax:
-    content: public const string CacheControlElement = null
-    content.vb: Public Const CacheControlElement As String = Nothing
+    content: public const string CacheControlElement = "Cache-Control"
+    content.vb: Public Const CacheControlElement As String = "Cache-Control"
     return:
       type: System.String
   modifiers.csharp:
@@ -1559,8 +1565,8 @@ items:
   summary: "\nXML element for content type fields.\n"
   example: []
   syntax:
-    content: public const string ContentTypeElement = null
-    content.vb: Public Const ContentTypeElement As String = Nothing
+    content: public const string ContentTypeElement = "Content-Type"
+    content.vb: Public Const ContentTypeElement As String = "Content-Type"
     return:
       type: System.String
   modifiers.csharp:
@@ -1594,8 +1600,8 @@ items:
   summary: "\nXML element for content encoding fields.\n"
   example: []
   syntax:
-    content: public const string ContentEncodingElement = null
-    content.vb: Public Const ContentEncodingElement As String = Nothing
+    content: public const string ContentEncodingElement = "Content-Encoding"
+    content.vb: Public Const ContentEncodingElement As String = "Content-Encoding"
     return:
       type: System.String
   modifiers.csharp:
@@ -1629,8 +1635,8 @@ items:
   summary: "\nXML element for content language fields.\n"
   example: []
   syntax:
-    content: public const string ContentLanguageElement = null
-    content.vb: Public Const ContentLanguageElement As String = Nothing
+    content: public const string ContentLanguageElement = "Content-Language"
+    content.vb: Public Const ContentLanguageElement As String = "Content-Language"
     return:
       type: System.String
   modifiers.csharp:
@@ -1664,8 +1670,8 @@ items:
   summary: "\nXML element for content length fields.\n"
   example: []
   syntax:
-    content: public const string ContentLengthElement = null
-    content.vb: Public Const ContentLengthElement As String = Nothing
+    content: public const string ContentLengthElement = "Content-Length"
+    content.vb: Public Const ContentLengthElement As String = "Content-Length"
     return:
       type: System.String
   modifiers.csharp:
@@ -1699,8 +1705,8 @@ items:
   summary: "\nXML element for content MD5 fields.\n"
   example: []
   syntax:
-    content: public const string ContentMD5Element = null
-    content.vb: Public Const ContentMD5Element As String = Nothing
+    content: public const string ContentMD5Element = "Content-MD5"
+    content.vb: Public Const ContentMD5Element As String = "Content-MD5"
     return:
       type: System.String
   modifiers.csharp:
@@ -1734,8 +1740,8 @@ items:
   summary: "\nXML element for enumeration results.\n"
   example: []
   syntax:
-    content: public const string EnumerationResultsElement = null
-    content.vb: Public Const EnumerationResultsElement As String = Nothing
+    content: public const string EnumerationResultsElement = "EnumerationResults"
+    content.vb: Public Const EnumerationResultsElement As String = "EnumerationResults"
     return:
       type: System.String
   modifiers.csharp:
@@ -1769,8 +1775,8 @@ items:
   summary: "\nXML element for service endpoint.\n"
   example: []
   syntax:
-    content: public const string ServiceEndpointElement = null
-    content.vb: Public Const ServiceEndpointElement As String = Nothing
+    content: public const string ServiceEndpointElement = "ServiceEndpoint"
+    content.vb: Public Const ServiceEndpointElement As String = "ServiceEndpoint"
     return:
       type: System.String
   modifiers.csharp:
@@ -1804,8 +1810,8 @@ items:
   summary: "\nXML element for container name.\n"
   example: []
   syntax:
-    content: public const string ContainerNameElement = null
-    content.vb: Public Const ContainerNameElement As String = Nothing
+    content: public const string ContainerNameElement = "ContainerName"
+    content.vb: Public Const ContainerNameElement As String = "ContainerName"
     return:
       type: System.String
   modifiers.csharp:
@@ -1839,8 +1845,8 @@ items:
   summary: "\nXML element for share name.\n"
   example: []
   syntax:
-    content: public const string ShareNameElement = null
-    content.vb: Public Const ShareNameElement As String = Nothing
+    content: public const string ShareNameElement = "ShareName"
+    content.vb: Public Const ShareNameElement As String = "ShareName"
     return:
       type: System.String
   modifiers.csharp:
@@ -1874,8 +1880,8 @@ items:
   summary: "\nXML element for directory path.\n"
   example: []
   syntax:
-    content: public const string DirectoryPathElement = null
-    content.vb: Public Const DirectoryPathElement As String = Nothing
+    content: public const string DirectoryPathElement = "DirectoryPath"
+    content.vb: Public Const DirectoryPathElement As String = "DirectoryPath"
     return:
       type: System.String
   modifiers.csharp:
@@ -1909,8 +1915,8 @@ items:
   summary: "\nXML element for blobs.\n"
   example: []
   syntax:
-    content: public const string BlobsElement = null
-    content.vb: Public Const BlobsElement As String = Nothing
+    content: public const string BlobsElement = "Blobs"
+    content.vb: Public Const BlobsElement As String = "Blobs"
     return:
       type: System.String
   modifiers.csharp:
@@ -1944,8 +1950,8 @@ items:
   summary: "\nXML element for prefixes.\n"
   example: []
   syntax:
-    content: public const string PrefixElement = null
-    content.vb: Public Const PrefixElement As String = Nothing
+    content: public const string PrefixElement = "Prefix"
+    content.vb: Public Const PrefixElement As String = "Prefix"
     return:
       type: System.String
   modifiers.csharp:
@@ -1979,8 +1985,8 @@ items:
   summary: "\nXML element for maximum results.\n"
   example: []
   syntax:
-    content: public const string MaxResultsElement = null
-    content.vb: Public Const MaxResultsElement As String = Nothing
+    content: public const string MaxResultsElement = "MaxResults"
+    content.vb: Public Const MaxResultsElement As String = "MaxResults"
     return:
       type: System.String
   modifiers.csharp:
@@ -2014,8 +2020,8 @@ items:
   summary: "\nXML element for markers.\n"
   example: []
   syntax:
-    content: public const string MarkerElement = null
-    content.vb: Public Const MarkerElement As String = Nothing
+    content: public const string MarkerElement = "Marker"
+    content.vb: Public Const MarkerElement As String = "Marker"
     return:
       type: System.String
   modifiers.csharp:
@@ -2049,8 +2055,8 @@ items:
   summary: "\nXML element for the next marker.\n"
   example: []
   syntax:
-    content: public const string NextMarkerElement = null
-    content.vb: Public Const NextMarkerElement As String = Nothing
+    content: public const string NextMarkerElement = "NextMarker"
+    content.vb: Public Const NextMarkerElement As String = "NextMarker"
     return:
       type: System.String
   modifiers.csharp:
@@ -2084,8 +2090,8 @@ items:
   summary: "\nXML element for the ETag.\n"
   example: []
   syntax:
-    content: public const string EtagElement = null
-    content.vb: Public Const EtagElement As String = Nothing
+    content: public const string EtagElement = "Etag"
+    content.vb: Public Const EtagElement As String = "Etag"
     return:
       type: System.String
   modifiers.csharp:
@@ -2119,8 +2125,8 @@ items:
   summary: "\nXML element for the last modified date.\n"
   example: []
   syntax:
-    content: public const string LastModifiedElement = null
-    content.vb: Public Const LastModifiedElement As String = Nothing
+    content: public const string LastModifiedElement = "Last-Modified"
+    content.vb: Public Const LastModifiedElement As String = "Last-Modified"
     return:
       type: System.String
   modifiers.csharp:
@@ -2154,8 +2160,8 @@ items:
   summary: "\nXML element for the server encryption status.\n"
   example: []
   syntax:
-    content: public const string ServerEncryptionElement = null
-    content.vb: Public Const ServerEncryptionElement As String = Nothing
+    content: public const string ServerEncryptionElement = "ServerEncrypted"
+    content.vb: Public Const ServerEncryptionElement As String = "ServerEncrypted"
     return:
       type: System.String
   modifiers.csharp:
@@ -2189,8 +2195,8 @@ items:
   summary: "\nXML element for the Url.\n"
   example: []
   syntax:
-    content: public const string UrlElement = null
-    content.vb: Public Const UrlElement As String = Nothing
+    content: public const string UrlElement = "Url"
+    content.vb: Public Const UrlElement As String = "Url"
     return:
       type: System.String
   modifiers.csharp:
@@ -2224,8 +2230,8 @@ items:
   summary: "\nXML element for blobs.\n"
   example: []
   syntax:
-    content: public const string BlobElement = null
-    content.vb: Public Const BlobElement As String = Nothing
+    content: public const string BlobElement = "Blob"
+    content.vb: Public Const BlobElement As String = "Blob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2259,8 +2265,8 @@ items:
   summary: "\nXML element for copy ID.\n"
   example: []
   syntax:
-    content: public const string CopyIdElement = null
-    content.vb: Public Const CopyIdElement As String = Nothing
+    content: public const string CopyIdElement = "CopyId"
+    content.vb: Public Const CopyIdElement As String = "CopyId"
     return:
       type: System.String
   modifiers.csharp:
@@ -2294,8 +2300,8 @@ items:
   summary: "\nXML element for copy status.\n"
   example: []
   syntax:
-    content: public const string CopyStatusElement = null
-    content.vb: Public Const CopyStatusElement As String = Nothing
+    content: public const string CopyStatusElement = "CopyStatus"
+    content.vb: Public Const CopyStatusElement As String = "CopyStatus"
     return:
       type: System.String
   modifiers.csharp:
@@ -2329,8 +2335,8 @@ items:
   summary: "\nXML element for copy source.\n"
   example: []
   syntax:
-    content: public const string CopySourceElement = null
-    content.vb: Public Const CopySourceElement As String = Nothing
+    content: public const string CopySourceElement = "CopySource"
+    content.vb: Public Const CopySourceElement As String = "CopySource"
     return:
       type: System.String
   modifiers.csharp:
@@ -2364,8 +2370,8 @@ items:
   summary: "\nXML element for copy progress.\n"
   example: []
   syntax:
-    content: public const string CopyProgressElement = null
-    content.vb: Public Const CopyProgressElement As String = Nothing
+    content: public const string CopyProgressElement = "CopyProgress"
+    content.vb: Public Const CopyProgressElement As String = "CopyProgress"
     return:
       type: System.String
   modifiers.csharp:
@@ -2399,8 +2405,8 @@ items:
   summary: "\nXML element for copy completion time.\n"
   example: []
   syntax:
-    content: public const string CopyCompletionTimeElement = null
-    content.vb: Public Const CopyCompletionTimeElement As String = Nothing
+    content: public const string CopyCompletionTimeElement = "CopyCompletionTime"
+    content.vb: Public Const CopyCompletionTimeElement As String = "CopyCompletionTime"
     return:
       type: System.String
   modifiers.csharp:
@@ -2434,8 +2440,8 @@ items:
   summary: "\nXML element for copy status description.\n"
   example: []
   syntax:
-    content: public const string CopyStatusDescriptionElement = null
-    content.vb: Public Const CopyStatusDescriptionElement As String = Nothing
+    content: public const string CopyStatusDescriptionElement = "CopyStatusDescription"
+    content.vb: Public Const CopyStatusDescriptionElement As String = "CopyStatusDescription"
     return:
       type: System.String
   modifiers.csharp:
@@ -2469,8 +2475,8 @@ items:
   summary: "\nConstant signaling a page blob.\n"
   example: []
   syntax:
-    content: public const string PageBlobValue = null
-    content.vb: Public Const PageBlobValue As String = Nothing
+    content: public const string PageBlobValue = "PageBlob"
+    content.vb: Public Const PageBlobValue As String = "PageBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2504,8 +2510,8 @@ items:
   summary: "\nConstant signaling a block blob.\n"
   example: []
   syntax:
-    content: public const string BlockBlobValue = null
-    content.vb: Public Const BlockBlobValue As String = Nothing
+    content: public const string BlockBlobValue = "BlockBlob"
+    content.vb: Public Const BlockBlobValue As String = "BlockBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2539,8 +2545,8 @@ items:
   summary: "\nConstant signaling an append blob.\n"
   example: []
   syntax:
-    content: public const string AppendBlobValue = null
-    content.vb: Public Const AppendBlobValue As String = Nothing
+    content: public const string AppendBlobValue = "AppendBlob"
+    content.vb: Public Const AppendBlobValue As String = "AppendBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2574,8 +2580,8 @@ items:
   summary: "\nConstant signaling the blob is locked.\n"
   example: []
   syntax:
-    content: public const string LockedValue = null
-    content.vb: Public Const LockedValue As String = Nothing
+    content: public const string LockedValue = "locked"
+    content.vb: Public Const LockedValue As String = "locked"
     return:
       type: System.String
   modifiers.csharp:
@@ -2609,8 +2615,8 @@ items:
   summary: "\nConstant signaling the blob is unlocked.\n"
   example: []
   syntax:
-    content: public const string UnlockedValue = null
-    content.vb: Public Const UnlockedValue As String = Nothing
+    content: public const string UnlockedValue = "unlocked"
+    content.vb: Public Const UnlockedValue As String = "unlocked"
     return:
       type: System.String
   modifiers.csharp:
@@ -2644,8 +2650,8 @@ items:
   summary: "\nConstant signaling the resource is available for leasing.\n"
   example: []
   syntax:
-    content: public const string LeaseAvailableValue = null
-    content.vb: Public Const LeaseAvailableValue As String = Nothing
+    content: public const string LeaseAvailableValue = "available"
+    content.vb: Public Const LeaseAvailableValue As String = "available"
     return:
       type: System.String
   modifiers.csharp:
@@ -2679,8 +2685,8 @@ items:
   summary: "\nConstant signaling the resource is leased.\n"
   example: []
   syntax:
-    content: public const string LeasedValue = null
-    content.vb: Public Const LeasedValue As String = Nothing
+    content: public const string LeasedValue = "leased"
+    content.vb: Public Const LeasedValue As String = "leased"
     return:
       type: System.String
   modifiers.csharp:
@@ -2714,8 +2720,8 @@ items:
   summary: "\nConstant signaling the resource's lease has expired.\n"
   example: []
   syntax:
-    content: public const string LeaseExpiredValue = null
-    content.vb: Public Const LeaseExpiredValue As String = Nothing
+    content: public const string LeaseExpiredValue = "expired"
+    content.vb: Public Const LeaseExpiredValue As String = "expired"
     return:
       type: System.String
   modifiers.csharp:
@@ -2749,8 +2755,8 @@ items:
   summary: "\nConstant signaling the resource's lease is breaking.\n"
   example: []
   syntax:
-    content: public const string LeaseBreakingValue = null
-    content.vb: Public Const LeaseBreakingValue As String = Nothing
+    content: public const string LeaseBreakingValue = "breaking"
+    content.vb: Public Const LeaseBreakingValue As String = "breaking"
     return:
       type: System.String
   modifiers.csharp:
@@ -2784,8 +2790,8 @@ items:
   summary: "\nConstant signaling the resource's lease is broken.\n"
   example: []
   syntax:
-    content: public const string LeaseBrokenValue = null
-    content.vb: Public Const LeaseBrokenValue As String = Nothing
+    content: public const string LeaseBrokenValue = "broken"
+    content.vb: Public Const LeaseBrokenValue As String = "broken"
     return:
       type: System.String
   modifiers.csharp:
@@ -2819,8 +2825,8 @@ items:
   summary: "\nConstant signaling the resource's lease is infinite.\n"
   example: []
   syntax:
-    content: public const string LeaseInfiniteValue = null
-    content.vb: Public Const LeaseInfiniteValue As String = Nothing
+    content: public const string LeaseInfiniteValue = "infinite"
+    content.vb: Public Const LeaseInfiniteValue As String = "infinite"
     return:
       type: System.String
   modifiers.csharp:
@@ -2854,8 +2860,8 @@ items:
   summary: "\nConstant signaling the resource's lease is fixed (finite).\n"
   example: []
   syntax:
-    content: public const string LeaseFixedValue = null
-    content.vb: Public Const LeaseFixedValue As String = Nothing
+    content: public const string LeaseFixedValue = "fixed"
+    content.vb: Public Const LeaseFixedValue As String = "fixed"
     return:
       type: System.String
   modifiers.csharp:
@@ -2889,8 +2895,8 @@ items:
   summary: "\nConstant for a pending copy.\n"
   example: []
   syntax:
-    content: public const string CopyPendingValue = null
-    content.vb: Public Const CopyPendingValue As String = Nothing
+    content: public const string CopyPendingValue = "pending"
+    content.vb: Public Const CopyPendingValue As String = "pending"
     return:
       type: System.String
   modifiers.csharp:
@@ -2924,8 +2930,8 @@ items:
   summary: "\nConstant for a successful copy.\n"
   example: []
   syntax:
-    content: public const string CopySuccessValue = null
-    content.vb: Public Const CopySuccessValue As String = Nothing
+    content: public const string CopySuccessValue = "success"
+    content.vb: Public Const CopySuccessValue As String = "success"
     return:
       type: System.String
   modifiers.csharp:
@@ -2959,8 +2965,8 @@ items:
   summary: "\nConstant for an aborted copy.\n"
   example: []
   syntax:
-    content: public const string CopyAbortedValue = null
-    content.vb: Public Const CopyAbortedValue As String = Nothing
+    content: public const string CopyAbortedValue = "aborted"
+    content.vb: Public Const CopyAbortedValue As String = "aborted"
     return:
       type: System.String
   modifiers.csharp:
@@ -2994,8 +3000,8 @@ items:
   summary: "\nConstant for a failed copy.\n"
   example: []
   syntax:
-    content: public const string CopyFailedValue = null
-    content.vb: Public Const CopyFailedValue As String = Nothing
+    content: public const string CopyFailedValue = "failed"
+    content.vb: Public Const CopyFailedValue As String = "failed"
     return:
       type: System.String
   modifiers.csharp:
@@ -3029,8 +3035,8 @@ items:
   summary: "\nConstant for unavailable geo-replication status.\n"
   example: []
   syntax:
-    content: public const string GeoUnavailableValue = null
-    content.vb: Public Const GeoUnavailableValue As String = Nothing
+    content: public const string GeoUnavailableValue = "unavailable"
+    content.vb: Public Const GeoUnavailableValue As String = "unavailable"
     return:
       type: System.String
   modifiers.csharp:
@@ -3064,8 +3070,8 @@ items:
   summary: "\nConstant for live geo-replication status.\n"
   example: []
   syntax:
-    content: public const string GeoLiveValue = null
-    content.vb: Public Const GeoLiveValue As String = Nothing
+    content: public const string GeoLiveValue = "live"
+    content.vb: Public Const GeoLiveValue As String = "live"
     return:
       type: System.String
   modifiers.csharp:
@@ -3099,8 +3105,8 @@ items:
   summary: "\nConstant for bootstrap geo-replication status.\n"
   example: []
   syntax:
-    content: public const string GeoBootstrapValue = null
-    content.vb: Public Const GeoBootstrapValue As String = Nothing
+    content: public const string GeoBootstrapValue = "bootstrap"
+    content.vb: Public Const GeoBootstrapValue As String = "bootstrap"
     return:
       type: System.String
   modifiers.csharp:
@@ -3134,8 +3140,8 @@ items:
   summary: "\nXML element for blob types.\n"
   example: []
   syntax:
-    content: public const string BlobTypeElement = null
-    content.vb: Public Const BlobTypeElement As String = Nothing
+    content: public const string BlobTypeElement = "BlobType"
+    content.vb: Public Const BlobTypeElement As String = "BlobType"
     return:
       type: System.String
   modifiers.csharp:
@@ -3169,8 +3175,8 @@ items:
   summary: "\nXML element for the lease status.\n"
   example: []
   syntax:
-    content: public const string LeaseStatusElement = null
-    content.vb: Public Const LeaseStatusElement As String = Nothing
+    content: public const string LeaseStatusElement = "LeaseStatus"
+    content.vb: Public Const LeaseStatusElement As String = "LeaseStatus"
     return:
       type: System.String
   modifiers.csharp:
@@ -3204,8 +3210,8 @@ items:
   summary: "\nXML element for the lease status.\n"
   example: []
   syntax:
-    content: public const string LeaseStateElement = null
-    content.vb: Public Const LeaseStateElement As String = Nothing
+    content: public const string LeaseStateElement = "LeaseState"
+    content.vb: Public Const LeaseStateElement As String = "LeaseState"
     return:
       type: System.String
   modifiers.csharp:
@@ -3239,8 +3245,8 @@ items:
   summary: "\nXML element for the lease status.\n"
   example: []
   syntax:
-    content: public const string LeaseDurationElement = null
-    content.vb: Public Const LeaseDurationElement As String = Nothing
+    content: public const string LeaseDurationElement = "LeaseDuration"
+    content.vb: Public Const LeaseDurationElement As String = "LeaseDuration"
     return:
       type: System.String
   modifiers.csharp:
@@ -3274,8 +3280,8 @@ items:
   summary: "\nXML element for snapshots.\n"
   example: []
   syntax:
-    content: public const string SnapshotElement = null
-    content.vb: Public Const SnapshotElement As String = Nothing
+    content: public const string SnapshotElement = "Snapshot"
+    content.vb: Public Const SnapshotElement As String = "Snapshot"
     return:
       type: System.String
   modifiers.csharp:
@@ -3309,8 +3315,8 @@ items:
   summary: "\nXML element for containers.\n"
   example: []
   syntax:
-    content: public const string ContainersElement = null
-    content.vb: Public Const ContainersElement As String = Nothing
+    content: public const string ContainersElement = "Containers"
+    content.vb: Public Const ContainersElement As String = "Containers"
     return:
       type: System.String
   modifiers.csharp:
@@ -3344,8 +3350,8 @@ items:
   summary: "\nXML element for a container.\n"
   example: []
   syntax:
-    content: public const string ContainerElement = null
-    content.vb: Public Const ContainerElement As String = Nothing
+    content: public const string ContainerElement = "Container"
+    content.vb: Public Const ContainerElement As String = "Container"
     return:
       type: System.String
   modifiers.csharp:
@@ -3379,8 +3385,8 @@ items:
   summary: "\nXML element for shares.\n"
   example: []
   syntax:
-    content: public const string SharesElement = null
-    content.vb: Public Const SharesElement As String = Nothing
+    content: public const string SharesElement = "Shares"
+    content.vb: Public Const SharesElement As String = "Shares"
     return:
       type: System.String
   modifiers.csharp:
@@ -3414,8 +3420,8 @@ items:
   summary: "\nXML element for a share.\n"
   example: []
   syntax:
-    content: public const string ShareElement = null
-    content.vb: Public Const ShareElement As String = Nothing
+    content: public const string ShareElement = "Share"
+    content.vb: Public Const ShareElement As String = "Share"
     return:
       type: System.String
   modifiers.csharp:
@@ -3449,8 +3455,8 @@ items:
   summary: "\nXML element for Share Quota.\n"
   example: []
   syntax:
-    content: public const string QuotaElement = null
-    content.vb: Public Const QuotaElement As String = Nothing
+    content: public const string QuotaElement = "Quota"
+    content.vb: Public Const QuotaElement As String = "Quota"
     return:
       type: System.String
   modifiers.csharp:
@@ -3484,8 +3490,8 @@ items:
   summary: "\nXML element for file ranges.\n"
   example: []
   syntax:
-    content: public const string FileRangeElement = null
-    content.vb: Public Const FileRangeElement As String = Nothing
+    content: public const string FileRangeElement = "Range"
+    content.vb: Public Const FileRangeElement As String = "Range"
     return:
       type: System.String
   modifiers.csharp:
@@ -3519,8 +3525,8 @@ items:
   summary: "\nXML element for file list elements.\n"
   example: []
   syntax:
-    content: public const string FileRangeListElement = null
-    content.vb: Public Const FileRangeListElement As String = Nothing
+    content: public const string FileRangeListElement = "Ranges"
+    content.vb: Public Const FileRangeListElement As String = "Ranges"
     return:
       type: System.String
   modifiers.csharp:
@@ -3554,8 +3560,8 @@ items:
   summary: "\nXML element for files.\n"
   example: []
   syntax:
-    content: public const string EntriesElement = null
-    content.vb: Public Const EntriesElement As String = Nothing
+    content: public const string EntriesElement = "Entries"
+    content.vb: Public Const EntriesElement As String = "Entries"
     return:
       type: System.String
   modifiers.csharp:
@@ -3589,8 +3595,8 @@ items:
   summary: "\nXML element for files.\n"
   example: []
   syntax:
-    content: public const string FileElement = null
-    content.vb: Public Const FileElement As String = Nothing
+    content: public const string FileElement = "File"
+    content.vb: Public Const FileElement As String = "File"
     return:
       type: System.String
   modifiers.csharp:
@@ -3624,8 +3630,8 @@ items:
   summary: "\nXML element for directory.\n"
   example: []
   syntax:
-    content: public const string FileDirectoryElement = null
-    content.vb: Public Const FileDirectoryElement As String = Nothing
+    content: public const string FileDirectoryElement = "Directory"
+    content.vb: Public Const FileDirectoryElement As String = "Directory"
     return:
       type: System.String
   modifiers.csharp:
@@ -3659,8 +3665,8 @@ items:
   summary: "\nXML element for queues.\n"
   example: []
   syntax:
-    content: public const string QueuesElement = null
-    content.vb: Public Const QueuesElement As String = Nothing
+    content: public const string QueuesElement = "Queues"
+    content.vb: Public Const QueuesElement As String = "Queues"
     return:
       type: System.String
   modifiers.csharp:
@@ -3694,8 +3700,8 @@ items:
   summary: "\nVersion 2 of the XML element for the queue name.\n"
   example: []
   syntax:
-    content: public const string QueueNameElement = null
-    content.vb: Public Const QueueNameElement As String = Nothing
+    content: public const string QueueNameElement = "Name"
+    content.vb: Public Const QueueNameElement As String = "Name"
     return:
       type: System.String
   modifiers.csharp:
@@ -3729,8 +3735,8 @@ items:
   summary: "\nXML element for the queue.\n"
   example: []
   syntax:
-    content: public const string QueueElement = null
-    content.vb: Public Const QueueElement As String = Nothing
+    content: public const string QueueElement = "Queue"
+    content.vb: Public Const QueueElement As String = "Queue"
     return:
       type: System.String
   modifiers.csharp:
@@ -3764,8 +3770,8 @@ items:
   summary: "\nXML element for properties.\n"
   example: []
   syntax:
-    content: public const string PropertiesElement = null
-    content.vb: Public Const PropertiesElement As String = Nothing
+    content: public const string PropertiesElement = "Properties"
+    content.vb: Public Const PropertiesElement As String = "Properties"
     return:
       type: System.String
   modifiers.csharp:
@@ -3799,8 +3805,8 @@ items:
   summary: "\nXML element for the metadata.\n"
   example: []
   syntax:
-    content: public const string MetadataElement = null
-    content.vb: Public Const MetadataElement As String = Nothing
+    content: public const string MetadataElement = "Metadata"
+    content.vb: Public Const MetadataElement As String = "Metadata"
     return:
       type: System.String
   modifiers.csharp:
@@ -3834,8 +3840,8 @@ items:
   summary: "\nXML element for an invalid metadata name.\n"
   example: []
   syntax:
-    content: public const string InvalidMetadataName = null
-    content.vb: Public Const InvalidMetadataName As String = Nothing
+    content: public const string InvalidMetadataName = "x-ms-invalid-name"
+    content.vb: Public Const InvalidMetadataName As String = "x-ms-invalid-name"
     return:
       type: System.String
   modifiers.csharp:
@@ -3869,8 +3875,8 @@ items:
   summary: "\nXML element for maximum results.\n"
   example: []
   syntax:
-    content: public const string MaxResults = null
-    content.vb: Public Const MaxResults As String = Nothing
+    content: public const string MaxResults = "MaxResults"
+    content.vb: Public Const MaxResults As String = "MaxResults"
     return:
       type: System.String
   modifiers.csharp:
@@ -3904,8 +3910,8 @@ items:
   summary: "\nXML element for committed blocks.\n"
   example: []
   syntax:
-    content: public const string CommittedElement = null
-    content.vb: Public Const CommittedElement As String = Nothing
+    content: public const string CommittedElement = "Committed"
+    content.vb: Public Const CommittedElement As String = "Committed"
     return:
       type: System.String
   modifiers.csharp:
@@ -3939,8 +3945,8 @@ items:
   summary: "\nXML element for uncommitted blocks.\n"
   example: []
   syntax:
-    content: public const string UncommittedElement = null
-    content.vb: Public Const UncommittedElement As String = Nothing
+    content: public const string UncommittedElement = "Uncommitted"
+    content.vb: Public Const UncommittedElement As String = "Uncommitted"
     return:
       type: System.String
   modifiers.csharp:
@@ -3974,8 +3980,8 @@ items:
   summary: "\nXML element for the latest.\n"
   example: []
   syntax:
-    content: public const string LatestElement = null
-    content.vb: Public Const LatestElement As String = Nothing
+    content: public const string LatestElement = "Latest"
+    content.vb: Public Const LatestElement As String = "Latest"
     return:
       type: System.String
   modifiers.csharp:
@@ -4009,8 +4015,8 @@ items:
   summary: "\nXML element for signed identifiers.\n"
   example: []
   syntax:
-    content: public const string SignedIdentifiers = null
-    content.vb: Public Const SignedIdentifiers As String = Nothing
+    content: public const string SignedIdentifiers = "SignedIdentifiers"
+    content.vb: Public Const SignedIdentifiers As String = "SignedIdentifiers"
     return:
       type: System.String
   modifiers.csharp:
@@ -4044,8 +4050,8 @@ items:
   summary: "\nXML element for a signed identifier.\n"
   example: []
   syntax:
-    content: public const string SignedIdentifier = null
-    content.vb: Public Const SignedIdentifier As String = Nothing
+    content: public const string SignedIdentifier = "SignedIdentifier"
+    content.vb: Public Const SignedIdentifier As String = "SignedIdentifier"
     return:
       type: System.String
   modifiers.csharp:
@@ -4079,8 +4085,8 @@ items:
   summary: "\nXML element for access policies.\n"
   example: []
   syntax:
-    content: public const string AccessPolicy = null
-    content.vb: Public Const AccessPolicy As String = Nothing
+    content: public const string AccessPolicy = "AccessPolicy"
+    content.vb: Public Const AccessPolicy As String = "AccessPolicy"
     return:
       type: System.String
   modifiers.csharp:
@@ -4114,8 +4120,8 @@ items:
   summary: "\nXML attribute for IDs.\n"
   example: []
   syntax:
-    content: public const string Id = null
-    content.vb: Public Const Id As String = Nothing
+    content: public const string Id = "Id"
+    content.vb: Public Const Id As String = "Id"
     return:
       type: System.String
   modifiers.csharp:
@@ -4149,8 +4155,8 @@ items:
   summary: "\nXML element for the start time of an access policy.\n"
   example: []
   syntax:
-    content: public const string Start = null
-    content.vb: Public Const Start As String = Nothing
+    content: public const string Start = "Start"
+    content.vb: Public Const Start As String = "Start"
     return:
       type: System.String
   modifiers.csharp:
@@ -4184,8 +4190,8 @@ items:
   summary: "\nXML element for the end of an access policy.\n"
   example: []
   syntax:
-    content: public const string Expiry = null
-    content.vb: Public Const Expiry As String = Nothing
+    content: public const string Expiry = "Expiry"
+    content.vb: Public Const Expiry As String = "Expiry"
     return:
       type: System.String
   modifiers.csharp:
@@ -4219,8 +4225,8 @@ items:
   summary: "\nXML element for the permissions of an access policy.\n"
   example: []
   syntax:
-    content: public const string Permission = null
-    content.vb: Public Const Permission As String = Nothing
+    content: public const string Permission = "Permission"
+    content.vb: Public Const Permission As String = "Permission"
     return:
       type: System.String
   modifiers.csharp:
@@ -4254,8 +4260,8 @@ items:
   summary: "\nThe URI path component to access the messages in a queue.\n"
   example: []
   syntax:
-    content: public const string Messages = null
-    content.vb: Public Const Messages As String = Nothing
+    content: public const string Messages = "messages"
+    content.vb: Public Const Messages As String = "messages"
     return:
       type: System.String
   modifiers.csharp:
@@ -4289,8 +4295,8 @@ items:
   summary: "\nXML root element for errors.\n"
   example: []
   syntax:
-    content: public const string ErrorRootElement = null
-    content.vb: Public Const ErrorRootElement As String = Nothing
+    content: public const string ErrorRootElement = "Error"
+    content.vb: Public Const ErrorRootElement As String = "Error"
     return:
       type: System.String
   modifiers.csharp:
@@ -4324,8 +4330,8 @@ items:
   summary: "\nXML element for error codes.\n"
   example: []
   syntax:
-    content: public const string ErrorCode = null
-    content.vb: Public Const ErrorCode As String = Nothing
+    content: public const string ErrorCode = "Code"
+    content.vb: Public Const ErrorCode As String = "Code"
     return:
       type: System.String
   modifiers.csharp:
@@ -4359,8 +4365,8 @@ items:
   summary: "\nXML element for error messages.\n"
   example: []
   syntax:
-    content: public const string ErrorMessage = null
-    content.vb: Public Const ErrorMessage As String = Nothing
+    content: public const string ErrorMessage = "Message"
+    content.vb: Public Const ErrorMessage As String = "Message"
     return:
       type: System.String
   modifiers.csharp:
@@ -4394,8 +4400,8 @@ items:
   summary: "\nXML element for exception messages.\n"
   example: []
   syntax:
-    content: public const string ErrorExceptionMessage = null
-    content.vb: Public Const ErrorExceptionMessage As String = Nothing
+    content: public const string ErrorExceptionMessage = "ExceptionMessage"
+    content.vb: Public Const ErrorExceptionMessage As String = "ExceptionMessage"
     return:
       type: System.String
   modifiers.csharp:
@@ -4429,8 +4435,8 @@ items:
   summary: "\nXML element for stack traces.\n"
   example: []
   syntax:
-    content: public const string ErrorExceptionStackTrace = null
-    content.vb: Public Const ErrorExceptionStackTrace As String = Nothing
+    content: public const string ErrorExceptionStackTrace = "StackTrace"
+    content.vb: Public Const ErrorExceptionStackTrace As String = "StackTrace"
     return:
       type: System.String
   modifiers.csharp:
@@ -4447,26 +4453,321 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
 - uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
-- uid: TimeSpan
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
   isExternal: true
   name: TimeSpan
   nameWithType: TimeSpan
-  fullName: TimeSpan
+  fullName: System.TimeSpan
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

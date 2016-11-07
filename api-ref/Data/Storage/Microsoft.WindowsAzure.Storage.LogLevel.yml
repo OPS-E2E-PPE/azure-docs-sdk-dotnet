@@ -31,8 +31,8 @@ items:
   summary: "\nSpecifies what messages to output to the log.\n"
   example: []
   syntax:
-    content: 'public enum LogLevel : int'
-    content.vb: Public Enum LogLevel As Integer
+    content: public enum LogLevel
+    content.vb: Public Enum LogLevel
   modifiers.csharp:
   - public
   - enum
@@ -64,8 +64,7 @@ items:
   summary: "\nOutput no tracing and debugging messages.\n"
   example: []
   syntax:
-    content: Off = null
-    content.vb: Off = Nothing
+    content: Off = 0
     return:
       type: Microsoft.WindowsAzure.Storage.LogLevel
   modifiers.csharp:
@@ -99,8 +98,7 @@ items:
   summary: "\nOutput error-handling messages.\n"
   example: []
   syntax:
-    content: Error = null
-    content.vb: Error = Nothing
+    content: Error = 1
     return:
       type: Microsoft.WindowsAzure.Storage.LogLevel
   modifiers.csharp:
@@ -134,8 +132,7 @@ items:
   summary: "\nOutput warnings and error-handling messages.\n"
   example: []
   syntax:
-    content: Warning = null
-    content.vb: Warning = Nothing
+    content: Warning = 2
     return:
       type: Microsoft.WindowsAzure.Storage.LogLevel
   modifiers.csharp:
@@ -169,8 +166,7 @@ items:
   summary: "\nOutput informational messages, warnings, and error-handling messages.\n"
   example: []
   syntax:
-    content: Informational = null
-    content.vb: Informational = Nothing
+    content: Informational = 3
     return:
       type: Microsoft.WindowsAzure.Storage.LogLevel
   modifiers.csharp:
@@ -204,8 +200,7 @@ items:
   summary: "\nOutput all debugging and tracing messages.\n"
   example: []
   syntax:
-    content: Verbose = null
-    content.vb: Verbose = Nothing
+    content: Verbose = 4
     return:
       type: Microsoft.WindowsAzure.Storage.LogLevel
   modifiers.csharp:

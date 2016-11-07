@@ -10,10 +10,10 @@ items:
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfExistsCondition
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfMatchCondition(System.String)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfMaxSizeLessThanOrEqualCondition(System.Int64)
-  - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(DateTimeOffset)
+  - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(System.DateTimeOffset)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNoneMatchCondition(System.String)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotExistsCondition
-  - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(DateTimeOffset)
+  - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(System.DateTimeOffset)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfSequenceNumberEqualCondition(System.Int64)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfSequenceNumberLessThanCondition(System.Int64)
   - Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfSequenceNumberLessThanOrEqualCondition(System.Int64)
@@ -49,12 +49,18 @@ items:
   summary: "\nRepresents a set of access conditions to be used for operations against the storage services. \n"
   example: []
   syntax:
-    content: 'public sealed class AccessCondition : object'
-    content.vb: >-
-      Public NotInheritable Class AccessCondition
-          Inherits Object
+    content: public sealed class AccessCondition
+    content.vb: Public NotInheritable Class AccessCondition
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -161,15 +167,15 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage
-  summary: "\nGets or sets a <see cref=\"!:DateTimeOffset\"></see> value for a condition specifying a time since which a resource has been modified.\n"
+  summary: "\nGets or sets a <xref href=\"System.DateTimeOffset\" data-throw-if-not-resolved=\"false\"></xref> value for a condition specifying a time since which a resource has been modified.\n"
   example: []
   syntax:
     content: public DateTimeOffset? IfModifiedSinceTime { get; set; }
     content.vb: Public Property IfModifiedSinceTime As DateTimeOffset?
     parameters: []
     return:
-      type: System.Nullable{DateTimeOffset}
-      description: A <see cref="!:DateTimeOffset"></see> value specified in UTC, or <code>null</code> if no condition exists.
+      type: System.Nullable{System.DateTimeOffset}
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> value specified in UTC, or <code>null</code> if no condition exists.
   overload: Microsoft.WindowsAzure.Storage.AccessCondition.IfModifiedSinceTime*
   modifiers.csharp:
   - public
@@ -199,15 +205,15 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage
-  summary: "\nGets or sets a <see cref=\"!:DateTimeOffset\"></see> value for a condition specifying a time since which a resource has not been modified.\n"
+  summary: "\nGets or sets a <xref href=\"System.DateTimeOffset\" data-throw-if-not-resolved=\"false\"></xref> value for a condition specifying a time since which a resource has not been modified.\n"
   example: []
   syntax:
     content: public DateTimeOffset? IfNotModifiedSinceTime { get; set; }
     content.vb: Public Property IfNotModifiedSinceTime As DateTimeOffset?
     parameters: []
     return:
-      type: System.Nullable{DateTimeOffset}
-      description: A <see cref="!:DateTimeOffset"></see> value specified in UTC, or <code>null</code> if no condition exists.
+      type: System.Nullable{System.DateTimeOffset}
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> value specified in UTC, or <code>null</code> if no condition exists.
   overload: Microsoft.WindowsAzure.Storage.AccessCondition.IfNotModifiedSinceTime*
   modifiers.csharp:
   - public
@@ -602,16 +608,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(DateTimeOffset)
-  commentId: M:Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(DateTimeOffset)
-  id: GenerateIfModifiedSinceCondition(DateTimeOffset)
+- uid: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(System.DateTimeOffset)
+  commentId: M:Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(System.DateTimeOffset)
+  id: GenerateIfModifiedSinceCondition(System.DateTimeOffset)
   parent: Microsoft.WindowsAzure.Storage.AccessCondition
   langs:
   - csharp
   - vb
   name: GenerateIfModifiedSinceCondition(DateTimeOffset)
   nameWithType: AccessCondition.GenerateIfModifiedSinceCondition(DateTimeOffset)
-  fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(DateTimeOffset)
+  fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition(System.DateTimeOffset)
   type: Method
   source:
     remote:
@@ -631,8 +637,8 @@ items:
     content.vb: Public Shared Function GenerateIfModifiedSinceCondition(modifiedTime As DateTimeOffset) As AccessCondition
     parameters:
     - id: modifiedTime
-      type: DateTimeOffset
-      description: A <see cref="!:DateTimeOffset"></see> value specifying the time since which the resource must have been modified.
+      type: System.DateTimeOffset
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> value specifying the time since which the resource must have been modified.
     return:
       type: Microsoft.WindowsAzure.Storage.AccessCondition
       description: An <xref href="Microsoft.WindowsAzure.Storage.AccessCondition" data-throw-if-not-resolved="false"></xref> object that represents the If-Modified-Since condition.
@@ -685,16 +691,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(DateTimeOffset)
-  commentId: M:Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(DateTimeOffset)
-  id: GenerateIfNotModifiedSinceCondition(DateTimeOffset)
+- uid: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(System.DateTimeOffset)
+  commentId: M:Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(System.DateTimeOffset)
+  id: GenerateIfNotModifiedSinceCondition(System.DateTimeOffset)
   parent: Microsoft.WindowsAzure.Storage.AccessCondition
   langs:
   - csharp
   - vb
   name: GenerateIfNotModifiedSinceCondition(DateTimeOffset)
   nameWithType: AccessCondition.GenerateIfNotModifiedSinceCondition(DateTimeOffset)
-  fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(DateTimeOffset)
+  fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNotModifiedSinceCondition(System.DateTimeOffset)
   type: Method
   source:
     remote:
@@ -714,8 +720,8 @@ items:
     content.vb: Public Shared Function GenerateIfNotModifiedSinceCondition(modifiedTime As DateTimeOffset) As AccessCondition
     parameters:
     - id: modifiedTime
-      type: DateTimeOffset
-      description: A <see cref="!:DateTimeOffset"></see> value specifying the time since which the resource must not have been modified.
+      type: System.DateTimeOffset
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> value specifying the time since which the resource must not have been modified.
     return:
       type: Microsoft.WindowsAzure.Storage.AccessCondition
       description: An <xref href="Microsoft.WindowsAzure.Storage.AccessCondition" data-throw-if-not-resolved="false"></xref> object that represents the If-Unmodified-Since condition.
@@ -980,10 +986,297 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage
   fullName: Microsoft.WindowsAzure.Storage
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.AccessCondition.IfMatchETag*
   commentId: Overload:Microsoft.WindowsAzure.Storage.AccessCondition.IfMatchETag
   isExternal: false
@@ -991,6 +1284,8 @@ references:
   nameWithType: AccessCondition.IfMatchETag
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.IfMatchETag
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -1001,20 +1296,28 @@ references:
   name: IfNoneMatchETag
   nameWithType: AccessCondition.IfNoneMatchETag
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.IfNoneMatchETag
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
 - uid: Microsoft.WindowsAzure.Storage.AccessCondition.IfModifiedSinceTime*
   commentId: Overload:Microsoft.WindowsAzure.Storage.AccessCondition.IfModifiedSinceTime
   isExternal: false
   name: IfModifiedSinceTime
   nameWithType: AccessCondition.IfModifiedSinceTime
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.IfModifiedSinceTime
-- uid: System.Nullable{DateTimeOffset}
-  commentId: '!:System.Nullable{DateTimeOffset}'
+- uid: System.Nullable{System.DateTimeOffset}
+  commentId: T:System.Nullable{System.DateTimeOffset}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<DateTimeOffset>
   nameWithType: Nullable<DateTimeOffset>
-  fullName: System.Nullable<DateTimeOffset>
+  fullName: System.Nullable<System.DateTimeOffset>
   nameWithType.vb: Nullable(Of DateTimeOffset)
-  fullname.vb: System.Nullable(Of DateTimeOffset)
+  fullname.vb: System.Nullable(Of System.DateTimeOffset)
   name.vb: Nullable(Of DateTimeOffset)
   spec.csharp:
   - uid: System.Nullable`1
@@ -1025,10 +1328,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: DateTimeOffset
+  - uid: System.DateTimeOffset
     name: DateTimeOffset
     nameWithType: DateTimeOffset
-    fullName: DateTimeOffset
+    fullName: System.DateTimeOffset
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1042,22 +1345,23 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: DateTimeOffset
+  - uid: System.DateTimeOffset
     name: DateTimeOffset
     nameWithType: DateTimeOffset
-    fullName: DateTimeOffset
+    fullName: System.DateTimeOffset
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -1067,9 +1371,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1082,9 +1386,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
@@ -1101,7 +1405,8 @@ references:
   nameWithType: AccessCondition.IfMaxSizeLessThanOrEqual
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.IfMaxSizeLessThanOrEqual
 - uid: System.Nullable{System.Int64}
-  commentId: '!:System.Nullable{System.Int64}'
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Int64>
   nameWithType: Nullable<Int64>
@@ -1210,11 +1515,6 @@ references:
   name: GenerateIfModifiedSinceCondition
   nameWithType: AccessCondition.GenerateIfModifiedSinceCondition
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfModifiedSinceCondition
-- uid: DateTimeOffset
-  isExternal: true
-  name: DateTimeOffset
-  nameWithType: DateTimeOffset
-  fullName: DateTimeOffset
 - uid: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNoneMatchCondition*
   commentId: Overload:Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfNoneMatchCondition
   isExternal: false
@@ -1234,6 +1534,8 @@ references:
   nameWithType: AccessCondition.GenerateIfMaxSizeLessThanOrEqualCondition
   fullName: Microsoft.WindowsAzure.Storage.AccessCondition.GenerateIfMaxSizeLessThanOrEqualCondition
 - uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64

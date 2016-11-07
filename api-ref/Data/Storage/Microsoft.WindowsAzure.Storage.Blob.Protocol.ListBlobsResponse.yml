@@ -5,7 +5,7 @@ items:
   id: ListBlobsResponse
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol
   children:
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(Stream)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(System.IO.Stream)
   - Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Blobs
   - Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Delimiter
   - Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.ListingContext
@@ -35,21 +35,24 @@ items:
   summary: "\nProvides methods for parsing the response from a blob listing operation.\n"
   example: []
   syntax:
-    content: 'public sealed class ListBlobsResponse : ResponseParsingBase<IListBlobEntry>'
+    content: 'public sealed class ListBlobsResponse : ResponseParsingBase<IListBlobEntry>, IDisposable'
     content.vb: >-
       Public NotInheritable Class ListBlobsResponse
           Inherits ResponseParsingBase(Of IListBlobEntry)
+          Implements IDisposable
   inheritance:
   - System.Object
   - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
+  implements:
+  - System.IDisposable
   inheritedMembers:
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.allObjectsParsed
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.outstandingObjectsToParse
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.reader
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.ObjectsToParse
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose(System.Boolean)
-  - Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Variable(System.Boolean@)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -58,16 +61,16 @@ items:
   - Public
   - NotInheritable
   - Class
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(Stream)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(Stream)
-  id: '#ctor(Stream)'
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(System.IO.Stream)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor(System.IO.Stream)
+  id: '#ctor(System.IO.Stream)'
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse
   langs:
   - csharp
   - vb
   name: ListBlobsResponse(Stream)
   nameWithType: ListBlobsResponse.ListBlobsResponse(Stream)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.ListBlobsResponse(Stream)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.ListBlobsResponse(System.IO.Stream)
   type: Constructor
   source:
     remote:
@@ -87,7 +90,7 @@ items:
     content.vb: Public Sub New(stream As Stream)
     parameters:
     - id: stream
-      type: Stream
+      type: System.IO.Stream
       description: The stream to be parsed.
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.#ctor*
   modifiers.csharp:
@@ -161,7 +164,7 @@ items:
     content.vb: Public ReadOnly Property Blobs As IEnumerable(Of IListBlobEntry)
     parameters: []
     return:
-      type: IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
+      type: System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
       description: An enumerable collection of objects that implement <xref href="Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry" data-throw-if-not-resolved="false"></xref>.
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Blobs*
   modifiers.csharp:
@@ -388,7 +391,7 @@ items:
     content: protected override IEnumerable<IListBlobEntry> ParseXml()
     content.vb: Protected Overrides Function ParseXml As IEnumerable(Of IListBlobEntry)
     return:
-      type: IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
+      type: System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
       description: An enumerable collection of objects that implement <xref href="Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry" data-throw-if-not-resolved="false"></xref>.
   overridden: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.ParseXml
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.ParseXml*
@@ -406,6 +409,8 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Blob.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -450,56 +455,26 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.allObjectsParsed
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.allObjectsParsed
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.allObjectsParsed
-  name: allObjectsParsed
-  nameWithType: ResponseParsingBase<IListBlobEntry>.allObjectsParsed
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.allObjectsParsed
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).allObjectsParsed
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).allObjectsParsed
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.outstandingObjectsToParse
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.outstandingObjectsToParse
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.outstandingObjectsToParse
-  name: outstandingObjectsToParse
-  nameWithType: ResponseParsingBase<IListBlobEntry>.outstandingObjectsToParse
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.outstandingObjectsToParse
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).outstandingObjectsToParse
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).outstandingObjectsToParse
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.reader
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.reader
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.reader
-  name: reader
-  nameWithType: ResponseParsingBase<IListBlobEntry>.reader
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.reader
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).reader
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).reader
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.ObjectsToParse
-  commentId: P:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.ObjectsToParse
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.ObjectsToParse
-  name: ObjectsToParse
-  nameWithType: ResponseParsingBase<IListBlobEntry>.ObjectsToParse
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.ObjectsToParse
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).ObjectsToParse
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).ObjectsToParse
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-  name: Dispose()
-  nameWithType: ResponseParsingBase<IListBlobEntry>.Dispose()
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Dispose()
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).Dispose()
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Dispose()
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-    name: Dispose
-    nameWithType: ResponseParsingBase<IListBlobEntry>.Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Dispose
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -507,98 +482,271 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-    name: Dispose
-    nameWithType: ResponseParsingBase(Of IListBlobEntry).Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Dispose
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose(System.Boolean)
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Dispose(System.Boolean)
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  nameWithType: ResponseParsingBase<IListBlobEntry>.Dispose(Boolean)
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Dispose(System.Boolean)
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).Dispose(Boolean)
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Dispose(System.Boolean)
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
   spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-    name: Dispose
-    nameWithType: ResponseParsingBase<IListBlobEntry>.Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Dispose
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-    name: Dispose
-    nameWithType: ResponseParsingBase(Of IListBlobEntry).Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Dispose
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Variable(System.Boolean@)
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}.Variable(System.Boolean@)
-  parent: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  definition: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-  name: Variable(Boolean)
-  nameWithType: ResponseParsingBase<IListBlobEntry>.Variable(Boolean)
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Variable(System.Boolean)
-  nameWithType.vb: ResponseParsingBase(Of IListBlobEntry).Variable(Boolean)
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Variable(System.Boolean)
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-    name: Variable
-    nameWithType: ResponseParsingBase<IListBlobEntry>.Variable
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>.Variable
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-    name: Variable
-    nameWithType: ResponseParsingBase(Of IListBlobEntry).Variable
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry).Variable
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1
   commentId: T:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1
   isExternal: false
@@ -642,148 +790,6 @@ references:
   name: Microsoft.WindowsAzure.Storage.Shared.Protocol
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.allObjectsParsed
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.allObjectsParsed
-  isExternal: false
-  name: allObjectsParsed
-  nameWithType: ResponseParsingBase<T>.allObjectsParsed
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.allObjectsParsed
-  nameWithType.vb: ResponseParsingBase(Of T).allObjectsParsed
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).allObjectsParsed
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.outstandingObjectsToParse
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.outstandingObjectsToParse
-  isExternal: false
-  name: outstandingObjectsToParse
-  nameWithType: ResponseParsingBase<T>.outstandingObjectsToParse
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.outstandingObjectsToParse
-  nameWithType.vb: ResponseParsingBase(Of T).outstandingObjectsToParse
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).outstandingObjectsToParse
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.reader
-  commentId: F:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.reader
-  isExternal: false
-  name: reader
-  nameWithType: ResponseParsingBase<T>.reader
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.reader
-  nameWithType.vb: ResponseParsingBase(Of T).reader
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).reader
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.ObjectsToParse
-  commentId: P:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.ObjectsToParse
-  isExternal: false
-  name: ObjectsToParse
-  nameWithType: ResponseParsingBase<T>.ObjectsToParse
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.ObjectsToParse
-  nameWithType.vb: ResponseParsingBase(Of T).ObjectsToParse
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).ObjectsToParse
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-  isExternal: false
-  name: Dispose()
-  nameWithType: ResponseParsingBase<T>.Dispose()
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Dispose()
-  nameWithType.vb: ResponseParsingBase(Of T).Dispose()
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Dispose()
-  spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-    name: Dispose
-    nameWithType: ResponseParsingBase<T>.Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Dispose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose
-    name: Dispose
-    nameWithType: ResponseParsingBase(Of T).Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Dispose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-  isExternal: true
-  name: Dispose(Boolean)
-  nameWithType: ResponseParsingBase<T>.Dispose(Boolean)
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Dispose(System.Boolean)
-  nameWithType.vb: ResponseParsingBase(Of T).Dispose(Boolean)
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Dispose(System.Boolean)
-  spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-    name: Dispose
-    nameWithType: ResponseParsingBase<T>.Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Dispose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Dispose(System.Boolean)
-    name: Dispose
-    nameWithType: ResponseParsingBase(Of T).Dispose
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Dispose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-  commentId: M:Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-  isExternal: true
-  name: Variable(Boolean)
-  nameWithType: ResponseParsingBase<T>.Variable(Boolean)
-  fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Variable(System.Boolean)
-  nameWithType.vb: ResponseParsingBase(Of T).Variable(Boolean)
-  fullname.vb: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Variable(System.Boolean)
-  spec.csharp:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-    name: Variable
-    nameWithType: ResponseParsingBase<T>.Variable
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase<T>.Variable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1.Variable(System.Boolean@)
-    name: Variable
-    nameWithType: ResponseParsingBase(Of T).Variable
-    fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase(Of T).Variable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse
   commentId: T:Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse
   isExternal: false
@@ -796,11 +802,19 @@ references:
   name: ListBlobsResponse
   nameWithType: ListBlobsResponse.ListBlobsResponse
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.ListBlobsResponse
-- uid: Stream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
   isExternal: true
   name: Stream
   nameWithType: Stream
-  fullName: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobListingContext
   commentId: T:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobListingContext
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol
@@ -827,20 +841,21 @@ references:
   name: Blobs
   nameWithType: ListBlobsResponse.Blobs
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Blobs
-- uid: IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
-  commentId: '!:IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<IListBlobEntry>
   nameWithType: IEnumerable<IListBlobEntry>
-  fullName: IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry>
   nameWithType.vb: IEnumerable(Of IListBlobEntry)
-  fullname.vb: IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.IListBlobEntry)
   name.vb: IEnumerable(Of IListBlobEntry)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -853,10 +868,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -868,44 +883,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullname.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Prefix*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Prefix
   isExternal: false
@@ -913,6 +935,8 @@ references:
   nameWithType: ListBlobsResponse.Prefix
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.Prefix
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -936,6 +960,8 @@ references:
   nameWithType: ListBlobsResponse.MaxResults
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.ListBlobsResponse.MaxResults
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32

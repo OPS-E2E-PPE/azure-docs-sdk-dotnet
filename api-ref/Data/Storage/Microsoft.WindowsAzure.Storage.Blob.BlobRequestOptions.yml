@@ -8,9 +8,11 @@ items:
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.#ctor
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.DisableContentMD5Validation
+  - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.LocationMode
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.MaximumExecutionTime
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ParallelOperationThreadCount
+  - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RetryPolicy
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ServerTimeout
   - Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.SingleBlobUploadThresholdInBytes
@@ -37,15 +39,22 @@ items:
   summary: "\nRepresents a set of timeout and retry policy options that may be specified for a request against the Blob service.\n"
   example: []
   syntax:
-    content: 'public sealed class BlobRequestOptions : object, IRequestOptions'
+    content: 'public sealed class BlobRequestOptions : IRequestOptions'
     content.vb: >-
       Public NotInheritable Class BlobRequestOptions
-          Inherits Object
           Implements IRequestOptions
   inheritance:
   - System.Object
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -120,6 +129,84 @@ items:
   overload: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RetryPolicy*
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.RetryPolicy
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+  commentId: P:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+  id: EncryptionPolicy
+  parent: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: EncryptionPolicy
+  nameWithType: BlobRequestOptions.EncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Blob/BlobRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EncryptionPolicy
+    path: Lib/Common/Blob/BlobRequestOptions.cs
+    startLine: 252
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob
+  summary: "\nGets or sets the encryption policy for the request.\n"
+  example: []
+  syntax:
+    content: public BlobEncryptionPolicy EncryptionPolicy { get; set; }
+    content.vb: Public Property EncryptionPolicy As BlobEncryptionPolicy
+    parameters: []
+    return:
+      type: Microsoft.WindowsAzure.Storage.Blob.BlobEncryptionPolicy
+      description: An object of type <xref href="Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy" data-throw-if-not-resolved="false"></xref>.
+  overload: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
+  commentId: P:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
+  id: RequireEncryption
+  parent: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: RequireEncryption
+  nameWithType: BlobRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Blob/BlobRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: RequireEncryption
+    path: Lib/Common/Blob/BlobRequestOptions.cs
+    startLine: 258
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Blob
+  summary: "\nGets or sets a value to indicate whether data written and read by the client library should be encrypted.\n"
+  example: []
+  syntax:
+    content: public bool ? RequireEncryption { get; set; }
+    content.vb: Public Property RequireEncryption As Boolean?
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+      description: Use <code>true</code> to specify that data should be encrypted/decrypted for all transactions; otherwise, <code>false</code>.
+  overload: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption*
+  implements:
+  - Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
   modifiers.csharp:
   - public
   - get
@@ -233,8 +320,8 @@ items:
     content.vb: Public Property ServerTimeout As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> containing the server timeout interval for the request.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> containing the server timeout interval for the request.
   overload: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ServerTimeout*
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
@@ -273,8 +360,8 @@ items:
     content.vb: Public Property MaximumExecutionTime As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> representing the maximum execution time for retries for the request.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> representing the maximum execution time for retries for the request.
   overload: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.MaximumExecutionTime*
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.MaximumExecutionTime
@@ -486,6 +573,8 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Blob
   fullName: Microsoft.WindowsAzure.Storage.Blob
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -497,6 +586,291 @@ references:
   name: IRequestOptions
   nameWithType: IRequestOptions
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage
   commentId: N:Microsoft.WindowsAzure.Storage
   isExternal: false
@@ -542,21 +916,37 @@ references:
   name: Microsoft.WindowsAzure.Storage.RetryPolicies
   nameWithType: Microsoft.WindowsAzure.Storage.RetryPolicies
   fullName: Microsoft.WindowsAzure.Storage.RetryPolicies
-- uid: Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
-  commentId: T:Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+  commentId: P:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+  isExternal: false
+  name: EncryptionPolicy
+  nameWithType: BlobRequestOptions.EncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.EncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobEncryptionPolicy
+  commentId: T:Microsoft.WindowsAzure.Storage.Blob.BlobEncryptionPolicy
   parent: Microsoft.WindowsAzure.Storage.Blob
   isExternal: false
-  name: CloudAppendBlob
-  nameWithType: CloudAppendBlob
-  fullName: Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
-- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry*
-  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry
+  name: BlobEncryptionPolicy
+  nameWithType: BlobEncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobEncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
   isExternal: false
-  name: AbsorbConditionalErrorsOnRetry
-  nameWithType: BlobRequestOptions.AbsorbConditionalErrorsOnRetry
-  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry
+  name: RequireEncryption
+  nameWithType: BlobRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.RequireEncryption
+- uid: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  commentId: P:Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  parent: Microsoft.WindowsAzure.Storage.IRequestOptions
+  isExternal: false
+  name: RequireEncryption
+  nameWithType: IRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
 - uid: System.Nullable{System.Boolean}
-  commentId: '!:System.Nullable{System.Boolean}'
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Boolean>
   nameWithType: Nullable<Boolean>
@@ -599,13 +989,14 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -615,9 +1006,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -630,12 +1021,25 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
+  commentId: T:Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
+  parent: Microsoft.WindowsAzure.Storage.Blob
+  isExternal: false
+  name: CloudAppendBlob
+  nameWithType: CloudAppendBlob
+  fullName: Microsoft.WindowsAzure.Storage.Blob.CloudAppendBlob
+- uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry
+  isExternal: false
+  name: AbsorbConditionalErrorsOnRetry
+  nameWithType: BlobRequestOptions.AbsorbConditionalErrorsOnRetry
+  fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.AbsorbConditionalErrorsOnRetry
 - uid: Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode
   commentId: T:Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode
   parent: Microsoft.WindowsAzure.Storage.RetryPolicies
@@ -657,7 +1061,8 @@ references:
   nameWithType: IRequestOptions.LocationMode
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.LocationMode
 - uid: System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
-  commentId: '!:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}'
+  commentId: T:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<LocationMode>
   nameWithType: Nullable<LocationMode>
@@ -697,6 +1102,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ServerTimeout*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ServerTimeout
   isExternal: false
@@ -710,14 +1122,15 @@ references:
   name: ServerTimeout
   nameWithType: IRequestOptions.ServerTimeout
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
-- uid: System.Nullable{TimeSpan}
-  commentId: '!:System.Nullable{TimeSpan}'
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<TimeSpan>
   nameWithType: Nullable<TimeSpan>
-  fullName: System.Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
   nameWithType.vb: Nullable(Of TimeSpan)
-  fullname.vb: System.Nullable(Of TimeSpan)
+  fullname.vb: System.Nullable(Of System.TimeSpan)
   name.vb: Nullable(Of TimeSpan)
   spec.csharp:
   - uid: System.Nullable`1
@@ -728,10 +1141,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -745,10 +1158,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
@@ -775,7 +1188,8 @@ references:
   nameWithType: BlobRequestOptions.ParallelOperationThreadCount
   fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.ParallelOperationThreadCount
 - uid: System.Nullable{System.Int32}
-  commentId: '!:System.Nullable{System.Int32}'
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Int32>
   nameWithType: Nullable<Int32>
@@ -824,7 +1238,8 @@ references:
   nameWithType: BlobRequestOptions.SingleBlobUploadThresholdInBytes
   fullName: Microsoft.WindowsAzure.Storage.Blob.BlobRequestOptions.SingleBlobUploadThresholdInBytes
 - uid: System.Nullable{System.Int64}
-  commentId: '!:System.Nullable{System.Int64}'
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Int64>
   nameWithType: Nullable<Int64>

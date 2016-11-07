@@ -31,8 +31,18 @@ items:
   summary: "\nSpecifies the set of possible signed services for a shared access account policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessAccountServices : int'
-    content.vb: Public Enum SharedAccessAccountServices As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessAccountServices
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessAccountServices
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -64,8 +74,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
   modifiers.csharp:
@@ -99,8 +108,7 @@ items:
   summary: "\nPermission to access blob resources granted.\n"
   example: []
   syntax:
-    content: Blob = null
-    content.vb: Blob = Nothing
+    content: Blob = 1
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
   modifiers.csharp:
@@ -134,8 +142,7 @@ items:
   summary: "\nPermission to access file resources granted.\n"
   example: []
   syntax:
-    content: File = null
-    content.vb: File = Nothing
+    content: File = 2
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
   modifiers.csharp:
@@ -169,8 +176,7 @@ items:
   summary: "\nPermission to access queue resources granted.\n"
   example: []
   syntax:
-    content: Queue = null
-    content.vb: Queue = Nothing
+    content: Queue = 4
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
   modifiers.csharp:
@@ -204,8 +210,7 @@ items:
   summary: "\nPermission to access table resources granted.\n"
   example: []
   syntax:
-    content: Table = null
-    content.vb: Table = Nothing
+    content: Table = 8
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
   modifiers.csharp:

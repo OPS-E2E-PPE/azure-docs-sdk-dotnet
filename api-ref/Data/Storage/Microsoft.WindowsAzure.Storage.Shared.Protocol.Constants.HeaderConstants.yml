@@ -113,12 +113,18 @@ items:
   summary: "\nConstants for HTTP headers.\n"
   example: []
   syntax:
-    content: 'public static class HeaderConstants : object'
-    content.vb: >-
-      Public Module HeaderConstants
-          Inherits Object
+    content: public static class HeaderConstants
+    content.vb: Public Module HeaderConstants
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -225,8 +231,8 @@ items:
   summary: "\nSpecifies the value to use for UserAgent header.\n"
   example: []
   syntax:
-    content: public const string UserAgentProductName = null
-    content.vb: Public Const UserAgentProductName As String = Nothing
+    content: public const string UserAgentProductName = "Azure-Storage"
+    content.vb: Public Const UserAgentProductName As String = "Azure-Storage"
     return:
       type: System.String
   modifiers.csharp:
@@ -260,8 +266,8 @@ items:
   summary: "\nSpecifies the value to use for UserAgent header.\n"
   example: []
   syntax:
-    content: public const string UserAgentProductVersion = null
-    content.vb: Public Const UserAgentProductVersion As String = Nothing
+    content: public const string UserAgentProductVersion = "7.2.1"
+    content.vb: Public Const UserAgentProductVersion As String = "7.2.1"
     return:
       type: System.String
   modifiers.csharp:
@@ -295,8 +301,8 @@ items:
   summary: "\nMaster Microsoft Azure Storage header prefix.\n"
   example: []
   syntax:
-    content: public const string PrefixForStorageHeader = null
-    content.vb: Public Const PrefixForStorageHeader As String = Nothing
+    content: public const string PrefixForStorageHeader = "x-ms-"
+    content.vb: Public Const PrefixForStorageHeader As String = "x-ms-"
     return:
       type: System.String
   modifiers.csharp:
@@ -330,8 +336,8 @@ items:
   summary: "\nTrue Header.\n"
   example: []
   syntax:
-    content: public const string TrueHeader = null
-    content.vb: Public Const TrueHeader As String = Nothing
+    content: public const string TrueHeader = "true"
+    content.vb: Public Const TrueHeader As String = "true"
     return:
       type: System.String
   modifiers.csharp:
@@ -365,8 +371,8 @@ items:
   summary: "\nFalse Header.\n"
   example: []
   syntax:
-    content: public const string FalseHeader = null
-    content.vb: Public Const FalseHeader As String = Nothing
+    content: public const string FalseHeader = "false"
+    content.vb: Public Const FalseHeader As String = "false"
     return:
       type: System.String
   modifiers.csharp:
@@ -400,8 +406,8 @@ items:
   summary: "\nHeader prefix for properties.\n"
   example: []
   syntax:
-    content: public const string PrefixForStorageProperties = null
-    content.vb: Public Const PrefixForStorageProperties As String = Nothing
+    content: public const string PrefixForStorageProperties = "x-ms-prop-"
+    content.vb: Public Const PrefixForStorageProperties As String = "x-ms-prop-"
     return:
       type: System.String
   modifiers.csharp:
@@ -435,8 +441,8 @@ items:
   summary: "\nHeader prefix for metadata.\n"
   example: []
   syntax:
-    content: public const string PrefixForStorageMetadata = null
-    content.vb: Public Const PrefixForStorageMetadata As String = Nothing
+    content: public const string PrefixForStorageMetadata = "x-ms-meta-"
+    content.vb: Public Const PrefixForStorageMetadata As String = "x-ms-meta-"
     return:
       type: System.String
   modifiers.csharp:
@@ -470,8 +476,8 @@ items:
   summary: "\nHeader that specifies content disposition.\n"
   example: []
   syntax:
-    content: public const string ContentDispositionResponseHeader = null
-    content.vb: Public Const ContentDispositionResponseHeader As String = Nothing
+    content: public const string ContentDispositionResponseHeader = "Content-Disposition"
+    content.vb: Public Const ContentDispositionResponseHeader As String = "Content-Disposition"
     return:
       type: System.String
   modifiers.csharp:
@@ -505,8 +511,8 @@ items:
   summary: "\nHeader that specifies content length.\n"
   example: []
   syntax:
-    content: public const string ContentLengthHeader = null
-    content.vb: Public Const ContentLengthHeader As String = Nothing
+    content: public const string ContentLengthHeader = "Content-Length"
+    content.vb: Public Const ContentLengthHeader As String = "Content-Length"
     return:
       type: System.String
   modifiers.csharp:
@@ -540,8 +546,8 @@ items:
   summary: "\nHeader that specifies content language.\n"
   example: []
   syntax:
-    content: public const string ContentLanguageHeader = null
-    content.vb: Public Const ContentLanguageHeader As String = Nothing
+    content: public const string ContentLanguageHeader = "Content-Language"
+    content.vb: Public Const ContentLanguageHeader As String = "Content-Language"
     return:
       type: System.String
   modifiers.csharp:
@@ -575,8 +581,8 @@ items:
   summary: "\nHeader that specifies the ETag value for the resource.\n"
   example: []
   syntax:
-    content: public const string EtagHeader = null
-    content.vb: Public Const EtagHeader As String = Nothing
+    content: public const string EtagHeader = "ETag"
+    content.vb: Public Const EtagHeader As String = "ETag"
     return:
       type: System.String
   modifiers.csharp:
@@ -610,8 +616,8 @@ items:
   summary: "\nHeader that specifies if a resourse is fully encrypted server-side.\n"
   example: []
   syntax:
-    content: public const string ServerEncrypted = null
-    content.vb: Public Const ServerEncrypted As String = Nothing
+    content: public const string ServerEncrypted = "x-ms-server-encrypted"
+    content.vb: Public Const ServerEncrypted As String = "x-ms-server-encrypted"
     return:
       type: System.String
   modifiers.csharp:
@@ -645,8 +651,8 @@ items:
   summary: "\nHeader that acknowledges the data used for write operation is encrypted server-side.\n"
   example: []
   syntax:
-    content: public const string ServerRequestEncrypted = null
-    content.vb: Public Const ServerRequestEncrypted As String = Nothing
+    content: public const string ServerRequestEncrypted = "x-ms-request-server-encrypted"
+    content.vb: Public Const ServerRequestEncrypted As String = "x-ms-request-server-encrypted"
     return:
       type: System.String
   modifiers.csharp:
@@ -680,8 +686,8 @@ items:
   summary: "\nHeader for data ranges.\n"
   example: []
   syntax:
-    content: public const string RangeHeader = null
-    content.vb: Public Const RangeHeader As String = Nothing
+    content: public const string RangeHeader = "x-ms-range"
+    content.vb: Public Const RangeHeader As String = "x-ms-range"
     return:
       type: System.String
   modifiers.csharp:
@@ -715,8 +721,8 @@ items:
   summary: "\nHeader for range content MD5.\n"
   example: []
   syntax:
-    content: public const string RangeContentMD5Header = null
-    content.vb: Public Const RangeContentMD5Header As String = Nothing
+    content: public const string RangeContentMD5Header = "x-ms-range-get-content-md5"
+    content.vb: Public Const RangeContentMD5Header As String = "x-ms-range-get-content-md5"
     return:
       type: System.String
   modifiers.csharp:
@@ -750,8 +756,8 @@ items:
   summary: "\nHeader for storage version.\n"
   example: []
   syntax:
-    content: public const string StorageVersionHeader = null
-    content.vb: Public Const StorageVersionHeader As String = Nothing
+    content: public const string StorageVersionHeader = "x-ms-version"
+    content.vb: Public Const StorageVersionHeader As String = "x-ms-version"
     return:
       type: System.String
   modifiers.csharp:
@@ -785,8 +791,8 @@ items:
   summary: "\nHeader for copy source.\n"
   example: []
   syntax:
-    content: public const string CopySourceHeader = null
-    content.vb: Public Const CopySourceHeader As String = Nothing
+    content: public const string CopySourceHeader = "x-ms-copy-source"
+    content.vb: Public Const CopySourceHeader As String = "x-ms-copy-source"
     return:
       type: System.String
   modifiers.csharp:
@@ -820,8 +826,8 @@ items:
   summary: "\nHeader for the If-Match condition.\n"
   example: []
   syntax:
-    content: public const string SourceIfMatchHeader = null
-    content.vb: Public Const SourceIfMatchHeader As String = Nothing
+    content: public const string SourceIfMatchHeader = "x-ms-source-if-match"
+    content.vb: Public Const SourceIfMatchHeader As String = "x-ms-source-if-match"
     return:
       type: System.String
   modifiers.csharp:
@@ -855,8 +861,8 @@ items:
   summary: "\nHeader for the If-Modified-Since condition.\n"
   example: []
   syntax:
-    content: public const string SourceIfModifiedSinceHeader = null
-    content.vb: Public Const SourceIfModifiedSinceHeader As String = Nothing
+    content: public const string SourceIfModifiedSinceHeader = "x-ms-source-if-modified-since"
+    content.vb: Public Const SourceIfModifiedSinceHeader As String = "x-ms-source-if-modified-since"
     return:
       type: System.String
   modifiers.csharp:
@@ -890,8 +896,8 @@ items:
   summary: "\nHeader for the If-None-Match condition.\n"
   example: []
   syntax:
-    content: public const string SourceIfNoneMatchHeader = null
-    content.vb: Public Const SourceIfNoneMatchHeader As String = Nothing
+    content: public const string SourceIfNoneMatchHeader = "x-ms-source-if-none-match"
+    content.vb: Public Const SourceIfNoneMatchHeader As String = "x-ms-source-if-none-match"
     return:
       type: System.String
   modifiers.csharp:
@@ -925,8 +931,8 @@ items:
   summary: "\nHeader for the If-Unmodified-Since condition.\n"
   example: []
   syntax:
-    content: public const string SourceIfUnmodifiedSinceHeader = null
-    content.vb: Public Const SourceIfUnmodifiedSinceHeader As String = Nothing
+    content: public const string SourceIfUnmodifiedSinceHeader = "x-ms-source-if-unmodified-since"
+    content.vb: Public Const SourceIfUnmodifiedSinceHeader As String = "x-ms-source-if-unmodified-since"
     return:
       type: System.String
   modifiers.csharp:
@@ -960,8 +966,8 @@ items:
   summary: "\nHeader for the file type.\n"
   example: []
   syntax:
-    content: public const string FileType = null
-    content.vb: Public Const FileType As String = Nothing
+    content: public const string FileType = "x-ms-type"
+    content.vb: Public Const FileType As String = "x-ms-type"
     return:
       type: System.String
   modifiers.csharp:
@@ -995,8 +1001,8 @@ items:
   summary: "\nHeader that specifies file caching control.\n"
   example: []
   syntax:
-    content: public const string FileCacheControlHeader = null
-    content.vb: Public Const FileCacheControlHeader As String = Nothing
+    content: public const string FileCacheControlHeader = "x-ms-cache-control"
+    content.vb: Public Const FileCacheControlHeader As String = "x-ms-cache-control"
     return:
       type: System.String
   modifiers.csharp:
@@ -1030,8 +1036,8 @@ items:
   summary: "\nRequest header that specifies the file content disposition.\n"
   example: []
   syntax:
-    content: public const string FileContentDispositionRequestHeader = null
-    content.vb: Public Const FileContentDispositionRequestHeader As String = Nothing
+    content: public const string FileContentDispositionRequestHeader = "x-ms-content-disposition"
+    content.vb: Public Const FileContentDispositionRequestHeader As String = "x-ms-content-disposition"
     return:
       type: System.String
   modifiers.csharp:
@@ -1065,8 +1071,8 @@ items:
   summary: "\nHeader that specifies file content encoding.\n"
   example: []
   syntax:
-    content: public const string FileContentEncodingHeader = null
-    content.vb: Public Const FileContentEncodingHeader As String = Nothing
+    content: public const string FileContentEncodingHeader = "x-ms-content-encoding"
+    content.vb: Public Const FileContentEncodingHeader As String = "x-ms-content-encoding"
     return:
       type: System.String
   modifiers.csharp:
@@ -1100,8 +1106,8 @@ items:
   summary: "\nHeader that specifies file content language.\n"
   example: []
   syntax:
-    content: public const string FileContentLanguageHeader = null
-    content.vb: Public Const FileContentLanguageHeader As String = Nothing
+    content: public const string FileContentLanguageHeader = "x-ms-content-language"
+    content.vb: Public Const FileContentLanguageHeader As String = "x-ms-content-language"
     return:
       type: System.String
   modifiers.csharp:
@@ -1135,8 +1141,8 @@ items:
   summary: "\nHeader that specifies file content MD5.\n"
   example: []
   syntax:
-    content: public const string FileContentMD5Header = null
-    content.vb: Public Const FileContentMD5Header As String = Nothing
+    content: public const string FileContentMD5Header = "x-ms-content-md5"
+    content.vb: Public Const FileContentMD5Header As String = "x-ms-content-md5"
     return:
       type: System.String
   modifiers.csharp:
@@ -1170,8 +1176,8 @@ items:
   summary: "\nHeader that specifies file content type.\n"
   example: []
   syntax:
-    content: public const string FileContentTypeHeader = null
-    content.vb: Public Const FileContentTypeHeader As String = Nothing
+    content: public const string FileContentTypeHeader = "x-ms-content-type"
+    content.vb: Public Const FileContentTypeHeader As String = "x-ms-content-type"
     return:
       type: System.String
   modifiers.csharp:
@@ -1205,8 +1211,8 @@ items:
   summary: "\nHeader that specifies file content length.\n"
   example: []
   syntax:
-    content: public const string FileContentLengthHeader = null
-    content.vb: Public Const FileContentLengthHeader As String = Nothing
+    content: public const string FileContentLengthHeader = "x-ms-content-length"
+    content.vb: Public Const FileContentLengthHeader As String = "x-ms-content-length"
     return:
       type: System.String
   modifiers.csharp:
@@ -1240,8 +1246,8 @@ items:
   summary: "\nHeader that specifies the file write mode.\n"
   example: []
   syntax:
-    content: public const string FileRangeWrite = null
-    content.vb: Public Const FileRangeWrite As String = Nothing
+    content: public const string FileRangeWrite = "x-ms-write"
+    content.vb: Public Const FileRangeWrite As String = "x-ms-write"
     return:
       type: System.String
   modifiers.csharp:
@@ -1275,8 +1281,8 @@ items:
   summary: "\nHeader for the blob type.\n"
   example: []
   syntax:
-    content: public const string BlobType = null
-    content.vb: Public Const BlobType As String = Nothing
+    content: public const string BlobType = "x-ms-blob-type"
+    content.vb: Public Const BlobType As String = "x-ms-blob-type"
     return:
       type: System.String
   modifiers.csharp:
@@ -1310,8 +1316,8 @@ items:
   summary: "\nHeader for snapshots.\n"
   example: []
   syntax:
-    content: public const string SnapshotHeader = null
-    content.vb: Public Const SnapshotHeader As String = Nothing
+    content: public const string SnapshotHeader = "x-ms-snapshot"
+    content.vb: Public Const SnapshotHeader As String = "x-ms-snapshot"
     return:
       type: System.String
   modifiers.csharp:
@@ -1345,8 +1351,8 @@ items:
   summary: "\nHeader to delete snapshots.\n"
   example: []
   syntax:
-    content: public const string DeleteSnapshotHeader = null
-    content.vb: Public Const DeleteSnapshotHeader As String = Nothing
+    content: public const string DeleteSnapshotHeader = "x-ms-delete-snapshots"
+    content.vb: Public Const DeleteSnapshotHeader As String = "x-ms-delete-snapshots"
     return:
       type: System.String
   modifiers.csharp:
@@ -1380,8 +1386,8 @@ items:
   summary: "\nHeader that specifies blob caching control.\n"
   example: []
   syntax:
-    content: public const string BlobCacheControlHeader = null
-    content.vb: Public Const BlobCacheControlHeader As String = Nothing
+    content: public const string BlobCacheControlHeader = "x-ms-blob-cache-control"
+    content.vb: Public Const BlobCacheControlHeader As String = "x-ms-blob-cache-control"
     return:
       type: System.String
   modifiers.csharp:
@@ -1415,8 +1421,8 @@ items:
   summary: "\nRequest header that specifies the blob content disposition.\n"
   example: []
   syntax:
-    content: public const string BlobContentDispositionRequestHeader = null
-    content.vb: Public Const BlobContentDispositionRequestHeader As String = Nothing
+    content: public const string BlobContentDispositionRequestHeader = "x-ms-blob-content-disposition"
+    content.vb: Public Const BlobContentDispositionRequestHeader As String = "x-ms-blob-content-disposition"
     return:
       type: System.String
   modifiers.csharp:
@@ -1450,8 +1456,8 @@ items:
   summary: "\nHeader that specifies blob content encoding.\n"
   example: []
   syntax:
-    content: public const string BlobContentEncodingHeader = null
-    content.vb: Public Const BlobContentEncodingHeader As String = Nothing
+    content: public const string BlobContentEncodingHeader = "x-ms-blob-content-encoding"
+    content.vb: Public Const BlobContentEncodingHeader As String = "x-ms-blob-content-encoding"
     return:
       type: System.String
   modifiers.csharp:
@@ -1485,8 +1491,8 @@ items:
   summary: "\nHeader that specifies blob content language.\n"
   example: []
   syntax:
-    content: public const string BlobContentLanguageHeader = null
-    content.vb: Public Const BlobContentLanguageHeader As String = Nothing
+    content: public const string BlobContentLanguageHeader = "x-ms-blob-content-language"
+    content.vb: Public Const BlobContentLanguageHeader As String = "x-ms-blob-content-language"
     return:
       type: System.String
   modifiers.csharp:
@@ -1520,8 +1526,8 @@ items:
   summary: "\nHeader that specifies blob content MD5.\n"
   example: []
   syntax:
-    content: public const string BlobContentMD5Header = null
-    content.vb: Public Const BlobContentMD5Header As String = Nothing
+    content: public const string BlobContentMD5Header = "x-ms-blob-content-md5"
+    content.vb: Public Const BlobContentMD5Header As String = "x-ms-blob-content-md5"
     return:
       type: System.String
   modifiers.csharp:
@@ -1555,8 +1561,8 @@ items:
   summary: "\nHeader that specifies blob content type.\n"
   example: []
   syntax:
-    content: public const string BlobContentTypeHeader = null
-    content.vb: Public Const BlobContentTypeHeader As String = Nothing
+    content: public const string BlobContentTypeHeader = "x-ms-blob-content-type"
+    content.vb: Public Const BlobContentTypeHeader As String = "x-ms-blob-content-type"
     return:
       type: System.String
   modifiers.csharp:
@@ -1590,8 +1596,8 @@ items:
   summary: "\nHeader that specifies blob content length.\n"
   example: []
   syntax:
-    content: public const string BlobContentLengthHeader = null
-    content.vb: Public Const BlobContentLengthHeader As String = Nothing
+    content: public const string BlobContentLengthHeader = "x-ms-blob-content-length"
+    content.vb: Public Const BlobContentLengthHeader As String = "x-ms-blob-content-length"
     return:
       type: System.String
   modifiers.csharp:
@@ -1625,8 +1631,8 @@ items:
   summary: "\nHeader that specifies blob sequence number.\n"
   example: []
   syntax:
-    content: public const string BlobSequenceNumber = null
-    content.vb: Public Const BlobSequenceNumber As String = Nothing
+    content: public const string BlobSequenceNumber = "x-ms-blob-sequence-number"
+    content.vb: Public Const BlobSequenceNumber As String = "x-ms-blob-sequence-number"
     return:
       type: System.String
   modifiers.csharp:
@@ -1660,8 +1666,8 @@ items:
   summary: "\nHeader that specifies sequence number action.\n"
   example: []
   syntax:
-    content: public const string SequenceNumberAction = null
-    content.vb: Public Const SequenceNumberAction As String = Nothing
+    content: public const string SequenceNumberAction = "x-ms-sequence-number-action"
+    content.vb: Public Const SequenceNumberAction As String = "x-ms-sequence-number-action"
     return:
       type: System.String
   modifiers.csharp:
@@ -1695,8 +1701,8 @@ items:
   summary: "\nHeader that specifies committed block count.\n"
   example: []
   syntax:
-    content: public const string BlobCommittedBlockCount = null
-    content.vb: Public Const BlobCommittedBlockCount As String = Nothing
+    content: public const string BlobCommittedBlockCount = "x-ms-blob-committed-block-count"
+    content.vb: Public Const BlobCommittedBlockCount As String = "x-ms-blob-committed-block-count"
     return:
       type: System.String
   modifiers.csharp:
@@ -1730,8 +1736,8 @@ items:
   summary: "\nHeader that specifies the blob append offset.\n"
   example: []
   syntax:
-    content: public const string BlobAppendOffset = null
-    content.vb: Public Const BlobAppendOffset As String = Nothing
+    content: public const string BlobAppendOffset = "x-ms-blob-append-offset"
+    content.vb: Public Const BlobAppendOffset As String = "x-ms-blob-append-offset"
     return:
       type: System.String
   modifiers.csharp:
@@ -1765,8 +1771,8 @@ items:
   summary: "\nHeader for the If-Sequence-Number-LE condition.\n"
   example: []
   syntax:
-    content: public const string IfSequenceNumberLEHeader = null
-    content.vb: Public Const IfSequenceNumberLEHeader As String = Nothing
+    content: public const string IfSequenceNumberLEHeader = "x-ms-if-sequence-number-le"
+    content.vb: Public Const IfSequenceNumberLEHeader As String = "x-ms-if-sequence-number-le"
     return:
       type: System.String
   modifiers.csharp:
@@ -1800,8 +1806,8 @@ items:
   summary: "\nHeader for the If-Sequence-Number-LT condition.\n"
   example: []
   syntax:
-    content: public const string IfSequenceNumberLTHeader = null
-    content.vb: Public Const IfSequenceNumberLTHeader As String = Nothing
+    content: public const string IfSequenceNumberLTHeader = "x-ms-if-sequence-number-lt"
+    content.vb: Public Const IfSequenceNumberLTHeader As String = "x-ms-if-sequence-number-lt"
     return:
       type: System.String
   modifiers.csharp:
@@ -1835,8 +1841,8 @@ items:
   summary: "\nHeader for the If-Sequence-Number-EQ condition.\n"
   example: []
   syntax:
-    content: public const string IfSequenceNumberEqHeader = null
-    content.vb: Public Const IfSequenceNumberEqHeader As String = Nothing
+    content: public const string IfSequenceNumberEqHeader = "x-ms-if-sequence-number-eq"
+    content.vb: Public Const IfSequenceNumberEqHeader As String = "x-ms-if-sequence-number-eq"
     return:
       type: System.String
   modifiers.csharp:
@@ -1870,8 +1876,8 @@ items:
   summary: "\nHeader for the blob-condition-maxsize condition.\n"
   example: []
   syntax:
-    content: public const string IfMaxSizeLessThanOrEqualHeader = null
-    content.vb: Public Const IfMaxSizeLessThanOrEqualHeader As String = Nothing
+    content: public const string IfMaxSizeLessThanOrEqualHeader = "x-ms-blob-condition-maxsize"
+    content.vb: Public Const IfMaxSizeLessThanOrEqualHeader As String = "x-ms-blob-condition-maxsize"
     return:
       type: System.String
   modifiers.csharp:
@@ -1905,8 +1911,8 @@ items:
   summary: "\nHeader for the blob-condition-appendpos condition.\n"
   example: []
   syntax:
-    content: public const string IfAppendPositionEqualHeader = null
-    content.vb: Public Const IfAppendPositionEqualHeader As String = Nothing
+    content: public const string IfAppendPositionEqualHeader = "x-ms-blob-condition-appendpos"
+    content.vb: Public Const IfAppendPositionEqualHeader As String = "x-ms-blob-condition-appendpos"
     return:
       type: System.String
   modifiers.csharp:
@@ -1940,8 +1946,8 @@ items:
   summary: "\nHeader that specifies lease ID.\n"
   example: []
   syntax:
-    content: public const string LeaseIdHeader = null
-    content.vb: Public Const LeaseIdHeader As String = Nothing
+    content: public const string LeaseIdHeader = "x-ms-lease-id"
+    content.vb: Public Const LeaseIdHeader As String = "x-ms-lease-id"
     return:
       type: System.String
   modifiers.csharp:
@@ -1975,8 +1981,8 @@ items:
   summary: "\nHeader that specifies lease status.\n"
   example: []
   syntax:
-    content: public const string LeaseStatus = null
-    content.vb: Public Const LeaseStatus As String = Nothing
+    content: public const string LeaseStatus = "x-ms-lease-status"
+    content.vb: Public Const LeaseStatus As String = "x-ms-lease-status"
     return:
       type: System.String
   modifiers.csharp:
@@ -2010,8 +2016,8 @@ items:
   summary: "\nHeader that specifies lease status.\n"
   example: []
   syntax:
-    content: public const string LeaseState = null
-    content.vb: Public Const LeaseState As String = Nothing
+    content: public const string LeaseState = "x-ms-lease-state"
+    content.vb: Public Const LeaseState As String = "x-ms-lease-state"
     return:
       type: System.String
   modifiers.csharp:
@@ -2045,8 +2051,8 @@ items:
   summary: "\nHeader that specifies page write mode.\n"
   example: []
   syntax:
-    content: public const string PageWrite = null
-    content.vb: Public Const PageWrite As String = Nothing
+    content: public const string PageWrite = "x-ms-page-write"
+    content.vb: Public Const PageWrite As String = "x-ms-page-write"
     return:
       type: System.String
   modifiers.csharp:
@@ -2080,8 +2086,8 @@ items:
   summary: "\nHeader that specifies approximate message count of a queue.\n"
   example: []
   syntax:
-    content: public const string ApproximateMessagesCount = null
-    content.vb: Public Const ApproximateMessagesCount As String = Nothing
+    content: public const string ApproximateMessagesCount = "x-ms-approximate-messages-count"
+    content.vb: Public Const ApproximateMessagesCount As String = "x-ms-approximate-messages-count"
     return:
       type: System.String
   modifiers.csharp:
@@ -2115,8 +2121,8 @@ items:
   summary: "\nHeader that specifies the date.\n"
   example: []
   syntax:
-    content: public const string Date = null
-    content.vb: Public Const Date As String = Nothing
+    content: public const string Date = "x-ms-date"
+    content.vb: Public Const Date As String = "x-ms-date"
     return:
       type: System.String
   modifiers.csharp:
@@ -2150,8 +2156,8 @@ items:
   summary: "\nHeader indicating the request ID.\n"
   example: []
   syntax:
-    content: public const string RequestIdHeader = null
-    content.vb: Public Const RequestIdHeader As String = Nothing
+    content: public const string RequestIdHeader = "x-ms-request-id"
+    content.vb: Public Const RequestIdHeader As String = "x-ms-request-id"
     return:
       type: System.String
   modifiers.csharp:
@@ -2185,8 +2191,8 @@ items:
   summary: "\nHeader indicating the client request ID.\n"
   example: []
   syntax:
-    content: public const string ClientRequestIdHeader = null
-    content.vb: Public Const ClientRequestIdHeader As String = Nothing
+    content: public const string ClientRequestIdHeader = "x-ms-client-request-id"
+    content.vb: Public Const ClientRequestIdHeader As String = "x-ms-client-request-id"
     return:
       type: System.String
   modifiers.csharp:
@@ -2220,8 +2226,8 @@ items:
   summary: "\nHeader that specifies public access to blobs.\n"
   example: []
   syntax:
-    content: public const string BlobPublicAccess = null
-    content.vb: Public Const BlobPublicAccess As String = Nothing
+    content: public const string BlobPublicAccess = "x-ms-blob-public-access"
+    content.vb: Public Const BlobPublicAccess As String = "x-ms-blob-public-access"
     return:
       type: System.String
   modifiers.csharp:
@@ -2255,8 +2261,8 @@ items:
   summary: "\nFormat string for specifying ranges.\n"
   example: []
   syntax:
-    content: public const string RangeHeaderFormat = null
-    content.vb: Public Const RangeHeaderFormat As String = Nothing
+    content: public const string RangeHeaderFormat = "bytes={0}-{1}"
+    content.vb: Public Const RangeHeaderFormat As String = "bytes={0}-{1}"
     return:
       type: System.String
   modifiers.csharp:
@@ -2290,8 +2296,8 @@ items:
   summary: "\nCurrent storage version header value.\nEvery time this version changes, assembly version needs to be updated as well.\n"
   example: []
   syntax:
-    content: public const string TargetStorageVersion = null
-    content.vb: Public Const TargetStorageVersion As String = Nothing
+    content: public const string TargetStorageVersion = "2015-12-11"
+    content.vb: Public Const TargetStorageVersion As String = "2015-12-11"
     return:
       type: System.String
   modifiers.csharp:
@@ -2325,8 +2331,8 @@ items:
   summary: "\nSpecifies the file type.\n"
   example: []
   syntax:
-    content: public const string File = null
-    content.vb: Public Const File As String = Nothing
+    content: public const string File = "File"
+    content.vb: Public Const File As String = "File"
     return:
       type: System.String
   modifiers.csharp:
@@ -2360,8 +2366,8 @@ items:
   summary: "\nSpecifies the page blob type.\n"
   example: []
   syntax:
-    content: public const string PageBlob = null
-    content.vb: Public Const PageBlob As String = Nothing
+    content: public const string PageBlob = "PageBlob"
+    content.vb: Public Const PageBlob As String = "PageBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2395,8 +2401,8 @@ items:
   summary: "\nSpecifies the block blob type.\n"
   example: []
   syntax:
-    content: public const string BlockBlob = null
-    content.vb: Public Const BlockBlob As String = Nothing
+    content: public const string BlockBlob = "BlockBlob"
+    content.vb: Public Const BlockBlob As String = "BlockBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2430,8 +2436,8 @@ items:
   summary: "\nSpecifies the append blob type.\n"
   example: []
   syntax:
-    content: public const string AppendBlob = null
-    content.vb: Public Const AppendBlob As String = Nothing
+    content: public const string AppendBlob = "AppendBlob"
+    content.vb: Public Const AppendBlob As String = "AppendBlob"
     return:
       type: System.String
   modifiers.csharp:
@@ -2465,8 +2471,8 @@ items:
   summary: "\nSpecifies only snapshots are to be included.\n"
   example: []
   syntax:
-    content: public const string SnapshotsOnlyValue = null
-    content.vb: Public Const SnapshotsOnlyValue As String = Nothing
+    content: public const string SnapshotsOnlyValue = "only"
+    content.vb: Public Const SnapshotsOnlyValue As String = "only"
     return:
       type: System.String
   modifiers.csharp:
@@ -2500,8 +2506,8 @@ items:
   summary: "\nSpecifies snapshots are to be included.\n"
   example: []
   syntax:
-    content: public const string IncludeSnapshotsValue = null
-    content.vb: Public Const IncludeSnapshotsValue As String = Nothing
+    content: public const string IncludeSnapshotsValue = "include"
+    content.vb: Public Const IncludeSnapshotsValue As String = "include"
     return:
       type: System.String
   modifiers.csharp:
@@ -2535,8 +2541,8 @@ items:
   summary: "\nHeader that specifies the pop receipt for a message.\n"
   example: []
   syntax:
-    content: public const string PopReceipt = null
-    content.vb: Public Const PopReceipt As String = Nothing
+    content: public const string PopReceipt = "x-ms-popreceipt"
+    content.vb: Public Const PopReceipt As String = "x-ms-popreceipt"
     return:
       type: System.String
   modifiers.csharp:
@@ -2570,8 +2576,8 @@ items:
   summary: "\nHeader that specifies the next visible time for a message.\n"
   example: []
   syntax:
-    content: public const string NextVisibleTime = null
-    content.vb: Public Const NextVisibleTime As String = Nothing
+    content: public const string NextVisibleTime = "x-ms-time-next-visible"
+    content.vb: Public Const NextVisibleTime As String = "x-ms-time-next-visible"
     return:
       type: System.String
   modifiers.csharp:
@@ -2605,8 +2611,8 @@ items:
   summary: "\nHeader that specifies whether to peek-only.\n"
   example: []
   syntax:
-    content: public const string PeekOnly = null
-    content.vb: Public Const PeekOnly As String = Nothing
+    content: public const string PeekOnly = "peekonly"
+    content.vb: Public Const PeekOnly As String = "peekonly"
     return:
       type: System.String
   modifiers.csharp:
@@ -2640,8 +2646,8 @@ items:
   summary: "\nHeader that specifies whether data in the container may be accessed publicly and what level of access is to be allowed.\n"
   example: []
   syntax:
-    content: public const string ContainerPublicAccessType = null
-    content.vb: Public Const ContainerPublicAccessType As String = Nothing
+    content: public const string ContainerPublicAccessType = "x-ms-blob-public-access"
+    content.vb: Public Const ContainerPublicAccessType As String = "x-ms-blob-public-access"
     return:
       type: System.String
   modifiers.csharp:
@@ -2675,8 +2681,8 @@ items:
   summary: "\nHeader that specifies the lease action to perform.\n"
   example: []
   syntax:
-    content: public const string LeaseActionHeader = null
-    content.vb: Public Const LeaseActionHeader As String = Nothing
+    content: public const string LeaseActionHeader = "x-ms-lease-action"
+    content.vb: Public Const LeaseActionHeader As String = "x-ms-lease-action"
     return:
       type: System.String
   modifiers.csharp:
@@ -2710,8 +2716,8 @@ items:
   summary: "\nHeader that specifies the proposed lease ID for a leasing operation.\n"
   example: []
   syntax:
-    content: public const string ProposedLeaseIdHeader = null
-    content.vb: Public Const ProposedLeaseIdHeader As String = Nothing
+    content: public const string ProposedLeaseIdHeader = "x-ms-proposed-lease-id"
+    content.vb: Public Const ProposedLeaseIdHeader As String = "x-ms-proposed-lease-id"
     return:
       type: System.String
   modifiers.csharp:
@@ -2745,8 +2751,8 @@ items:
   summary: "\nHeader that specifies the duration of a lease.\n"
   example: []
   syntax:
-    content: public const string LeaseDurationHeader = null
-    content.vb: Public Const LeaseDurationHeader As String = Nothing
+    content: public const string LeaseDurationHeader = "x-ms-lease-duration"
+    content.vb: Public Const LeaseDurationHeader As String = "x-ms-lease-duration"
     return:
       type: System.String
   modifiers.csharp:
@@ -2780,8 +2786,8 @@ items:
   summary: "\nHeader that specifies the break period of a lease.\n"
   example: []
   syntax:
-    content: public const string LeaseBreakPeriodHeader = null
-    content.vb: Public Const LeaseBreakPeriodHeader As String = Nothing
+    content: public const string LeaseBreakPeriodHeader = "x-ms-lease-break-period"
+    content.vb: Public Const LeaseBreakPeriodHeader As String = "x-ms-lease-break-period"
     return:
       type: System.String
   modifiers.csharp:
@@ -2815,8 +2821,8 @@ items:
   summary: "\nHeader that specifies the remaining lease time.\n"
   example: []
   syntax:
-    content: public const string LeaseTimeHeader = null
-    content.vb: Public Const LeaseTimeHeader As String = Nothing
+    content: public const string LeaseTimeHeader = "x-ms-lease-time"
+    content.vb: Public Const LeaseTimeHeader As String = "x-ms-lease-time"
     return:
       type: System.String
   modifiers.csharp:
@@ -2850,8 +2856,8 @@ items:
   summary: "\nHeader that specifies the key name for explicit keys.\n"
   example: []
   syntax:
-    content: public const string KeyNameHeader = null
-    content.vb: Public Const KeyNameHeader As String = Nothing
+    content: public const string KeyNameHeader = "x-ms-key-name"
+    content.vb: Public Const KeyNameHeader As String = "x-ms-key-name"
     return:
       type: System.String
   modifiers.csharp:
@@ -2885,8 +2891,8 @@ items:
   summary: "\nHeader that specifies the copy ID.\n"
   example: []
   syntax:
-    content: public const string CopyIdHeader = null
-    content.vb: Public Const CopyIdHeader As String = Nothing
+    content: public const string CopyIdHeader = "x-ms-copy-id"
+    content.vb: Public Const CopyIdHeader As String = "x-ms-copy-id"
     return:
       type: System.String
   modifiers.csharp:
@@ -2920,8 +2926,8 @@ items:
   summary: "\nHeader that specifies the conclusion time of the last attempted blob copy operation \nwhere this blob was the destination blob.\n"
   example: []
   syntax:
-    content: public const string CopyCompletionTimeHeader = null
-    content.vb: Public Const CopyCompletionTimeHeader As String = Nothing
+    content: public const string CopyCompletionTimeHeader = "x-ms-copy-completion-time"
+    content.vb: Public Const CopyCompletionTimeHeader As String = "x-ms-copy-completion-time"
     return:
       type: System.String
   modifiers.csharp:
@@ -2955,8 +2961,8 @@ items:
   summary: "\nHeader that specifies the copy status.\n"
   example: []
   syntax:
-    content: public const string CopyStatusHeader = null
-    content.vb: Public Const CopyStatusHeader As String = Nothing
+    content: public const string CopyStatusHeader = "x-ms-copy-status"
+    content.vb: Public Const CopyStatusHeader As String = "x-ms-copy-status"
     return:
       type: System.String
   modifiers.csharp:
@@ -2990,8 +2996,8 @@ items:
   summary: "\nHeader that specifies the copy progress.\n"
   example: []
   syntax:
-    content: public const string CopyProgressHeader = null
-    content.vb: Public Const CopyProgressHeader As String = Nothing
+    content: public const string CopyProgressHeader = "x-ms-copy-progress"
+    content.vb: Public Const CopyProgressHeader As String = "x-ms-copy-progress"
     return:
       type: System.String
   modifiers.csharp:
@@ -3025,8 +3031,8 @@ items:
   summary: "\nHeader that specifies a copy error message.\n"
   example: []
   syntax:
-    content: public const string CopyDescriptionHeader = null
-    content.vb: Public Const CopyDescriptionHeader As String = Nothing
+    content: public const string CopyDescriptionHeader = "x-ms-copy-status-description"
+    content.vb: Public Const CopyDescriptionHeader As String = "x-ms-copy-status-description"
     return:
       type: System.String
   modifiers.csharp:
@@ -3060,8 +3066,8 @@ items:
   summary: "\nHeader that specifies the copy action.\n"
   example: []
   syntax:
-    content: public const string CopyActionHeader = null
-    content.vb: Public Const CopyActionHeader As String = Nothing
+    content: public const string CopyActionHeader = "x-ms-copy-action"
+    content.vb: Public Const CopyActionHeader As String = "x-ms-copy-action"
     return:
       type: System.String
   modifiers.csharp:
@@ -3095,8 +3101,8 @@ items:
   summary: "\nThe value of the copy action header that signifies an abort operation.\n"
   example: []
   syntax:
-    content: public const string CopyActionAbort = null
-    content.vb: Public Const CopyActionAbort As String = Nothing
+    content: public const string CopyActionAbort = "abort"
+    content.vb: Public Const CopyActionAbort As String = "abort"
     return:
       type: System.String
   modifiers.csharp:
@@ -3130,8 +3136,8 @@ items:
   summary: "\nHeader that specifies the share size, in gigabytes.\n"
   example: []
   syntax:
-    content: public const string ShareSize = null
-    content.vb: Public Const ShareSize As String = Nothing
+    content: public const string ShareSize = "x-ms-share-size"
+    content.vb: Public Const ShareSize As String = "x-ms-share-size"
     return:
       type: System.String
   modifiers.csharp:
@@ -3165,8 +3171,8 @@ items:
   summary: "\nHeader that specifies the share quota, in gigabytes.\n"
   example: []
   syntax:
-    content: public const string ShareQuota = null
-    content.vb: Public Const ShareQuota As String = Nothing
+    content: public const string ShareQuota = "x-ms-share-quota"
+    content.vb: Public Const ShareQuota As String = "x-ms-share-quota"
     return:
       type: System.String
   modifiers.csharp:
@@ -3183,11 +3189,300 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

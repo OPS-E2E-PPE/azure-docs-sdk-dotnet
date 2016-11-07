@@ -5,8 +5,8 @@ items:
   id: StorageUri
   parent: Microsoft.WindowsAzure.Storage
   children:
-  - Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri)
-  - Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri,Uri)
+  - Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri)
+  - Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri,System.Uri)
   - Microsoft.WindowsAzure.Storage.StorageUri.Equals(Microsoft.WindowsAzure.Storage.StorageUri)
   - Microsoft.WindowsAzure.Storage.StorageUri.Equals(System.Object)
   - Microsoft.WindowsAzure.Storage.StorageUri.GetHashCode
@@ -40,9 +40,16 @@ items:
     content: 'public sealed class StorageUri : IEquatable<StorageUri>'
     content.vb: >-
       Public NotInheritable Class StorageUri
-          Inherits IEquatable(Of StorageUri)
+          Implements IEquatable(Of StorageUri)
   inheritance:
   - System.Object
+  implements:
+  - System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -80,8 +87,8 @@ items:
     content.vb: Public ReadOnly Property PrimaryUri As Uri
     parameters: []
     return:
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the primary endpoint.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the primary endpoint.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.PrimaryUri*
   modifiers.csharp:
   - public
@@ -118,8 +125,8 @@ items:
     content.vb: Public ReadOnly Property SecondaryUri As Uri
     parameters: []
     return:
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the secondary endpoint.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the secondary endpoint.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.SecondaryUri*
   modifiers.csharp:
   - public
@@ -127,16 +134,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri)
-  commentId: M:Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri)
-  id: '#ctor(Uri)'
+- uid: Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri)
+  commentId: M:Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
   parent: Microsoft.WindowsAzure.Storage.StorageUri
   langs:
   - csharp
   - vb
   name: StorageUri(Uri)
   nameWithType: StorageUri.StorageUri(Uri)
-  fullName: Microsoft.WindowsAzure.Storage.StorageUri.StorageUri(Uri)
+  fullName: Microsoft.WindowsAzure.Storage.StorageUri.StorageUri(System.Uri)
   type: Constructor
   source:
     remote:
@@ -156,23 +163,23 @@ items:
     content.vb: Public Sub New(primaryUri As Uri)
     parameters:
     - id: primaryUri
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the primary endpoint.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the primary endpoint.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri,Uri)
-  commentId: M:Microsoft.WindowsAzure.Storage.StorageUri.#ctor(Uri,Uri)
-  id: '#ctor(Uri,Uri)'
+- uid: Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri,System.Uri)
+  commentId: M:Microsoft.WindowsAzure.Storage.StorageUri.#ctor(System.Uri,System.Uri)
+  id: '#ctor(System.Uri,System.Uri)'
   parent: Microsoft.WindowsAzure.Storage.StorageUri
   langs:
   - csharp
   - vb
   name: StorageUri(Uri, Uri)
   nameWithType: StorageUri.StorageUri(Uri, Uri)
-  fullName: Microsoft.WindowsAzure.Storage.StorageUri.StorageUri(Uri, Uri)
+  fullName: Microsoft.WindowsAzure.Storage.StorageUri.StorageUri(System.Uri, System.Uri)
   type: Constructor
   source:
     remote:
@@ -192,11 +199,11 @@ items:
     content.vb: Public Sub New(primaryUri As Uri, secondaryUri As Uri)
     parameters:
     - id: primaryUri
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the primary endpoint.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the primary endpoint.
     - id: secondaryUri
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the secondary endpoint.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the secondary endpoint.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.#ctor*
   modifiers.csharp:
   - public
@@ -234,8 +241,8 @@ items:
       type: Microsoft.WindowsAzure.Storage.StorageLocation
       description: A <xref href="Microsoft.WindowsAzure.Storage.StorageLocation" data-throw-if-not-resolved="false"></xref> enumeration value.
     return:
-      type: Uri
-      description: The <see cref="!:System.Uri"></see> for the endpoint at the the specified location.
+      type: System.Uri
+      description: The <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> for the endpoint at the the specified location.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.GetUri*
   modifiers.csharp:
   - public
@@ -263,14 +270,15 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage
-  summary: "\nReturns a <see cref=\"!:System.String\"></see> that represents this instance.\n"
+  summary: "\nReturns a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> that represents this instance.\n"
   example: []
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: "\nA <see cref=\"!:System.String\"></see> that represents this instance.\n"
+      description: "\nA <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> that represents this instance.\n"
+  overridden: System.Object.ToString
   overload: Microsoft.WindowsAzure.Storage.StorageUri.ToString*
   modifiers.csharp:
   - public
@@ -308,6 +316,7 @@ items:
     return:
       type: System.Int32
       description: "\nA hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. \n"
+  overridden: System.Object.GetHashCode
   overload: Microsoft.WindowsAzure.Storage.StorageUri.GetHashCode*
   modifiers.csharp:
   - public
@@ -337,7 +346,7 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage
-  summary: "\nDetermines whether the specified <see cref=\"!:System.Object\"></see> is equal to this instance.\n"
+  summary: "\nDetermines whether the specified <xref href=\"System.Object\" data-throw-if-not-resolved=\"false\"></xref> is equal to this instance.\n"
   example: []
   syntax:
     content: public override bool Equals(object obj)
@@ -345,10 +354,11 @@ items:
     parameters:
     - id: obj
       type: System.Object
-      description: The <see cref="!:System.Object"></see> to compare with this instance.
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to compare with this instance.
     return:
       type: System.Boolean
-      description: <code>true</code> if the specified <see cref="!:System.Object"></see> is equal to this instance; otherwise, <code>false</code>.
+      description: <code>true</code> if the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> is equal to this instance; otherwise, <code>false</code>.
+  overridden: System.Object.Equals(System.Object)
   overload: Microsoft.WindowsAzure.Storage.StorageUri.Equals*
   modifiers.csharp:
   - public
@@ -391,6 +401,8 @@ items:
       type: System.Boolean
       description: <code>true</code> if the current object is equal to the <em>other</em> parameter; otherwise, <code>false</code>.
   overload: Microsoft.WindowsAzure.Storage.StorageUri.Equals*
+  implements:
+  - System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}.Equals(Microsoft.WindowsAzure.Storage.StorageUri)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -491,21 +503,288 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage
   fullName: Microsoft.WindowsAzure.Storage
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}
+  commentId: T:System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<StorageUri>
+  nameWithType: IEquatable<StorageUri>
+  fullName: System.IEquatable<Microsoft.WindowsAzure.Storage.StorageUri>
+  nameWithType.vb: IEquatable(Of StorageUri)
+  fullname.vb: System.IEquatable(Of Microsoft.WindowsAzure.Storage.StorageUri)
+  name.vb: IEquatable(Of StorageUri)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.WindowsAzure.Storage.StorageUri
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: Microsoft.WindowsAzure.Storage.StorageUri
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.WindowsAzure.Storage.StorageUri
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: Microsoft.WindowsAzure.Storage.StorageUri
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullname.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.PrimaryUri*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.PrimaryUri
   isExternal: false
   name: PrimaryUri
   nameWithType: StorageUri.PrimaryUri
   fullName: Microsoft.WindowsAzure.Storage.StorageUri.PrimaryUri
-- uid: Uri
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: Uri
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.SecondaryUri*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.SecondaryUri
   isExternal: false
@@ -538,17 +817,81 @@ references:
   name: GetUri
   nameWithType: StorageUri.GetUri
   fullName: Microsoft.WindowsAzure.Storage.StorageUri.GetUri
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.ToString*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.ToString
   isExternal: false
   name: ToString
   nameWithType: StorageUri.ToString
   fullName: Microsoft.WindowsAzure.Storage.StorageUri.ToString
-- uid: System.String
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.GetHashCode*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.GetHashCode
   isExternal: false
@@ -556,10 +899,53 @@ references:
   nameWithType: StorageUri.GetHashCode
   fullName: Microsoft.WindowsAzure.Storage.StorageUri.GetHashCode
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.Equals*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.Equals
   isExternal: false
@@ -567,10 +953,91 @@ references:
   nameWithType: StorageUri.Equals
   fullName: Microsoft.WindowsAzure.Storage.StorageUri.Equals
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}.Equals(Microsoft.WindowsAzure.Storage.StorageUri)
+  commentId: M:System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}.Equals(Microsoft.WindowsAzure.Storage.StorageUri)
+  parent: System.IEquatable{Microsoft.WindowsAzure.Storage.StorageUri}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(StorageUri)
+  nameWithType: IEquatable<StorageUri>.Equals(StorageUri)
+  fullName: System.IEquatable<Microsoft.WindowsAzure.Storage.StorageUri>.Equals(Microsoft.WindowsAzure.Storage.StorageUri)
+  nameWithType.vb: IEquatable(Of StorageUri).Equals(StorageUri)
+  fullname.vb: System.IEquatable(Of Microsoft.WindowsAzure.Storage.StorageUri).Equals(Microsoft.WindowsAzure.Storage.StorageUri)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<StorageUri>.Equals
+    fullName: System.IEquatable<Microsoft.WindowsAzure.Storage.StorageUri>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.WindowsAzure.Storage.StorageUri
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: Microsoft.WindowsAzure.Storage.StorageUri
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of StorageUri).Equals
+    fullName: System.IEquatable(Of Microsoft.WindowsAzure.Storage.StorageUri).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.WindowsAzure.Storage.StorageUri
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: Microsoft.WindowsAzure.Storage.StorageUri
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullname.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.WindowsAzure.Storage.StorageUri.op_Equality*
   commentId: Overload:Microsoft.WindowsAzure.Storage.StorageUri.op_Equality
   isExternal: false

@@ -36,8 +36,18 @@ items:
   summary: "\nHTTP methods that are supported by CORS.\n"
   example: []
   syntax:
-    content: 'public enum CorsHttpMethods : int'
-    content.vb: Public Enum CorsHttpMethods As Integer
+    content: >-
+      [Flags]
+
+      public enum CorsHttpMethods
+    content.vb: >-
+      <Flags>
+
+      Public Enum CorsHttpMethods
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -69,8 +79,7 @@ items:
   summary: "\nRepresents no HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -104,8 +113,7 @@ items:
   summary: "\nRepresents the GET HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Get = null
-    content.vb: Get = Nothing
+    content: Get = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -139,8 +147,7 @@ items:
   summary: "\nRepresents the HEAD HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Head = null
-    content.vb: Head = Nothing
+    content: Head = 2
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -174,8 +181,7 @@ items:
   summary: "\nRepresents the POST HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Post = null
-    content.vb: Post = Nothing
+    content: Post = 4
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -209,8 +215,7 @@ items:
   summary: "\nRepresents the PUT HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Put = null
-    content.vb: Put = Nothing
+    content: Put = 8
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -244,8 +249,7 @@ items:
   summary: "\nRepresents the DELETE HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Delete = null
-    content.vb: Delete = Nothing
+    content: Delete = 16
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -279,8 +283,7 @@ items:
   summary: "\nRepresents the TRACE HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Trace = null
-    content.vb: Trace = Nothing
+    content: Trace = 32
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -314,8 +317,7 @@ items:
   summary: "\nRepresents the OPTIONS HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Options = null
-    content.vb: Options = Nothing
+    content: Options = 64
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -349,8 +351,7 @@ items:
   summary: "\nRepresents the CONNECT HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Connect = null
-    content.vb: Connect = Nothing
+    content: Connect = 128
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:
@@ -384,8 +385,7 @@ items:
   summary: "\nRepresents the MERGE HTTP method in a CORS rule.\n"
   example: []
   syntax:
-    content: Merge = null
-    content.vb: Merge = Nothing
+    content: Merge = 256
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.CorsHttpMethods
   modifiers.csharp:

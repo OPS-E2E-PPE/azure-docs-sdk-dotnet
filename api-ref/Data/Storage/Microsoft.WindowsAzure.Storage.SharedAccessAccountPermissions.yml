@@ -35,8 +35,18 @@ items:
   summary: "\nSpecifies the set of possible permissions for a shared access account policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessAccountPermissions : int'
-    content.vb: Public Enum SharedAccessAccountPermissions As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessAccountPermissions
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessAccountPermissions
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -68,8 +78,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -103,8 +112,7 @@ items:
   summary: "\nPermission to read resources and list queues and tables granted.\n"
   example: []
   syntax:
-    content: Read = null
-    content.vb: Read = Nothing
+    content: Read = 1
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -138,8 +146,7 @@ items:
   summary: "\nPermission to add messages, table entities, blobs, and files granted.\n"
   example: []
   syntax:
-    content: Add = null
-    content.vb: Add = Nothing
+    content: Add = 2
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -173,8 +180,7 @@ items:
   summary: "\nPermission to create containers, blobs, shares, directories, and files granted.\n"
   example: []
   syntax:
-    content: Create = null
-    content.vb: Create = Nothing
+    content: Create = 4
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -208,8 +214,7 @@ items:
   summary: "\nPermissions to update messages and table entities granted.\n"
   example: []
   syntax:
-    content: Update = null
-    content.vb: Update = Nothing
+    content: Update = 8
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -243,8 +248,7 @@ items:
   summary: "\nPermission to get and delete messages granted.\n"
   example: []
   syntax:
-    content: ProcessMessages = null
-    content.vb: ProcessMessages = Nothing
+    content: ProcessMessages = 16
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -278,8 +282,7 @@ items:
   summary: "\nPermission to write resources granted.\n"
   example: []
   syntax:
-    content: Write = null
-    content.vb: Write = Nothing
+    content: Write = 32
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -313,8 +316,7 @@ items:
   summary: "\nPermission to delete resources granted.\n"
   example: []
   syntax:
-    content: Delete = null
-    content.vb: Delete = Nothing
+    content: Delete = 64
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:
@@ -348,8 +350,7 @@ items:
   summary: "\nPermission to list blob containers, blobs, shares, directories, and files granted.\n"
   example: []
   syntax:
-    content: List = null
-    content.vb: List = Nothing
+    content: List = 128
     return:
       type: Microsoft.WindowsAzure.Storage.SharedAccessAccountPermissions
   modifiers.csharp:

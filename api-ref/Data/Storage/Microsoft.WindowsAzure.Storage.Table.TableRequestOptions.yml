@@ -7,11 +7,14 @@ items:
   children:
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.#ctor
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.#ctor(Microsoft.WindowsAzure.Storage.Table.TableRequestOptions)
+  - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.LocationMode
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.MaximumExecutionTime
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.PayloadFormat
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ProjectSystemProperties
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.PropertyResolver
+  - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RetryPolicy
   - Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ServerTimeout
   langs:
@@ -35,15 +38,22 @@ items:
   summary: "\nRepresents a set of timeout and retry policy options that may be specified for a request against the Table service.\n"
   example: []
   syntax:
-    content: 'public sealed class TableRequestOptions : object, IRequestOptions'
+    content: 'public sealed class TableRequestOptions : IRequestOptions'
     content.vb: >-
       Public NotInheritable Class TableRequestOptions
-          Inherits Object
           Implements IRequestOptions
   inheritance:
   - System.Object
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -197,6 +207,84 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  id: EncryptionPolicy
+  parent: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: EncryptionPolicy
+  nameWithType: TableRequestOptions.EncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Table/TableRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EncryptionPolicy
+    path: Lib/Common/Table/TableRequestOptions.cs
+    startLine: 246
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Table
+  summary: "\nGets or sets the encryption policy for the request.\n"
+  example: []
+  syntax:
+    content: public TableEncryptionPolicy EncryptionPolicy { get; set; }
+    content.vb: Public Property EncryptionPolicy As TableEncryptionPolicy
+    parameters: []
+    return:
+      type: Microsoft.WindowsAzure.Storage.Table.TableEncryptionPolicy
+      description: An object of type <xref href="Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy" data-throw-if-not-resolved="false"></xref>.
+  overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
+  id: RequireEncryption
+  parent: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: RequireEncryption
+  nameWithType: TableRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Table/TableRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: RequireEncryption
+    path: Lib/Common/Table/TableRequestOptions.cs
+    startLine: 252
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Table
+  summary: "\nGets or sets a value to indicate whether data written and read by the client library should be encrypted.\n"
+  example: []
+  syntax:
+    content: public bool ? RequireEncryption { get; set; }
+    content.vb: Public Property RequireEncryption As Boolean?
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+      description: Use <code>true</code> to specify that data should be encrypted/decrypted for all transactions; otherwise, <code>false</code>.
+  overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption*
+  implements:
+  - Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.LocationMode
   commentId: P:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.LocationMode
   id: LocationMode
@@ -266,8 +354,8 @@ items:
     content.vb: Public Property ServerTimeout As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> containing the server timeout interval for the request.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> containing the server timeout interval for the request.
   overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ServerTimeout*
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
@@ -306,8 +394,8 @@ items:
     content.vb: Public Property MaximumExecutionTime As TimeSpan?
     parameters: []
     return:
-      type: System.Nullable{TimeSpan}
-      description: A <see cref="!:TimeSpan"></see> representing the maximum execution time for retries for the request.
+      type: System.Nullable{System.TimeSpan}
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> representing the maximum execution time for retries for the request.
   overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.MaximumExecutionTime*
   implements:
   - Microsoft.WindowsAzure.Storage.IRequestOptions.MaximumExecutionTime
@@ -384,8 +472,45 @@ items:
     content.vb: Public Property PropertyResolver As Func(Of String, String, String, String, EdmType)
     parameters: []
     return:
-      type: Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}
+      type: System.Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}
   overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.PropertyResolver*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
+  id: EncryptionResolver
+  parent: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions
+  langs:
+  - csharp
+  - vb
+  name: EncryptionResolver
+  nameWithType: TableRequestOptions.EncryptionResolver
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
+  type: Property
+  source:
+    remote:
+      path: Lib/Common/Table/TableRequestOptions.cs
+      branch: master
+      repo: https://github.com/Azure/azure-storage-net
+    id: EncryptionResolver
+    path: Lib/Common/Table/TableRequestOptions.cs
+    startLine: 319
+  assemblies:
+  - Microsoft.WindowsAzure.Storage
+  namespace: Microsoft.WindowsAzure.Storage.Table
+  summary: "\nGets or sets the delegate to get the value indicating whether or not a property should be encrypted, given the partition key, row key, \nand property name. \n"
+  example: []
+  syntax:
+    content: public Func<string, string, string, bool> EncryptionResolver { get; set; }
+    content.vb: Public Property EncryptionResolver As Func(Of String, String, String, Boolean)
+    parameters: []
+    return:
+      type: System.Func{System.String,System.String,System.String,System.Boolean}
+  overload: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver*
   modifiers.csharp:
   - public
   - get
@@ -400,6 +525,8 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Table
   fullName: Microsoft.WindowsAzure.Storage.Table
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -411,6 +538,291 @@ references:
   name: IRequestOptions
   nameWithType: IRequestOptions
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage
   commentId: N:Microsoft.WindowsAzure.Storage
   isExternal: false
@@ -463,7 +875,8 @@ references:
   nameWithType: TableRequestOptions.ProjectSystemProperties
   fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ProjectSystemProperties
 - uid: System.Nullable{System.Boolean}
-  commentId: '!:System.Nullable{System.Boolean}'
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Boolean>
   nameWithType: Nullable<Boolean>
@@ -506,13 +919,14 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -522,9 +936,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -537,12 +951,40 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  commentId: P:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+  isExternal: false
+  name: EncryptionPolicy
+  nameWithType: TableRequestOptions.EncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Table.TableEncryptionPolicy
+  commentId: T:Microsoft.WindowsAzure.Storage.Table.TableEncryptionPolicy
+  parent: Microsoft.WindowsAzure.Storage.Table
+  isExternal: false
+  name: TableEncryptionPolicy
+  nameWithType: TableEncryptionPolicy
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableEncryptionPolicy
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
+  isExternal: false
+  name: RequireEncryption
+  nameWithType: TableRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.RequireEncryption
+- uid: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  commentId: P:Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
+  parent: Microsoft.WindowsAzure.Storage.IRequestOptions
+  isExternal: false
+  name: RequireEncryption
+  nameWithType: IRequestOptions.RequireEncryption
+  fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.RequireEncryption
 - uid: Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode
   commentId: T:Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode
   parent: Microsoft.WindowsAzure.Storage.RetryPolicies
@@ -564,7 +1006,8 @@ references:
   nameWithType: IRequestOptions.LocationMode
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.LocationMode
 - uid: System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
-  commentId: '!:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}'
+  commentId: T:System.Nullable{Microsoft.WindowsAzure.Storage.RetryPolicies.LocationMode}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<LocationMode>
   nameWithType: Nullable<LocationMode>
@@ -604,6 +1047,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ServerTimeout*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.ServerTimeout
   isExternal: false
@@ -617,14 +1067,15 @@ references:
   name: ServerTimeout
   nameWithType: IRequestOptions.ServerTimeout
   fullName: Microsoft.WindowsAzure.Storage.IRequestOptions.ServerTimeout
-- uid: System.Nullable{TimeSpan}
-  commentId: '!:System.Nullable{TimeSpan}'
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<TimeSpan>
   nameWithType: Nullable<TimeSpan>
-  fullName: System.Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
   nameWithType.vb: Nullable(Of TimeSpan)
-  fullname.vb: System.Nullable(Of TimeSpan)
+  fullname.vb: System.Nullable(Of System.TimeSpan)
   name.vb: Nullable(Of TimeSpan)
   spec.csharp:
   - uid: System.Nullable`1
@@ -635,10 +1086,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -652,10 +1103,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TimeSpan
+  - uid: System.TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: TimeSpan
+    fullName: System.TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
@@ -687,7 +1138,8 @@ references:
   nameWithType: TableRequestOptions.PayloadFormat
   fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.PayloadFormat
 - uid: System.Nullable{Microsoft.WindowsAzure.Storage.Table.TablePayloadFormat}
-  commentId: '!:System.Nullable{Microsoft.WindowsAzure.Storage.Table.TablePayloadFormat}'
+  commentId: T:System.Nullable{Microsoft.WindowsAzure.Storage.Table.TablePayloadFormat}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<TablePayloadFormat>
   nameWithType: Nullable<TablePayloadFormat>
@@ -740,20 +1192,21 @@ references:
   name: PropertyResolver
   nameWithType: TableRequestOptions.PropertyResolver
   fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.PropertyResolver
-- uid: Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}
-  commentId: '!:Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}'
-  definition: Func`5
+- uid: System.Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}
+  commentId: T:System.Func{System.String,System.String,System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EdmType}
+  parent: System
+  definition: System.Func`5
   name: Func<String, String, String, String, EdmType>
   nameWithType: Func<String, String, String, String, EdmType>
-  fullName: Func<System.String, System.String, System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EdmType>
+  fullName: System.Func<System.String, System.String, System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EdmType>
   nameWithType.vb: Func(Of String, String, String, String, EdmType)
-  fullname.vb: Func(Of System.String, System.String, System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EdmType)
+  fullname.vb: System.Func(Of System.String, System.String, System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EdmType)
   name.vb: Func(Of String, String, String, String, EdmType)
   spec.csharp:
-  - uid: Func`5
+  - uid: System.Func`5
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: <
     nameWithType: <
@@ -798,10 +1251,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Func`5
+  - uid: System.Func`5
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -845,90 +1298,263 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Func`5
-  commentId: '!:Func`5'
+- uid: System.Func`5
+  commentId: T:System.Func`5
   isExternal: true
-  name: Func<, , , , >
-  nameWithType: Func<, , , , >
-  fullName: Func<, , , , >
-  nameWithType.vb: Func(Of , , , , )
-  fullname.vb: Func(Of , , , , )
-  name.vb: Func(Of , , , , )
+  name: Func<T1, T2, T3, T4, TResult>
+  nameWithType: Func<T1, T2, T3, T4, TResult>
+  fullName: System.Func<T1, T2, T3, T4, TResult>
+  nameWithType.vb: Func(Of T1, T2, T3, T4, TResult)
+  fullname.vb: System.Func(Of T1, T2, T3, T4, TResult)
+  name.vb: Func(Of T1, T2, T3, T4, TResult)
   spec.csharp:
-  - uid: Func`5
+  - uid: System.Func`5
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T1
+    nameWithType: T1
+    fullName: T1
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T2
+    nameWithType: T2
+    fullName: T2
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T3
+    nameWithType: T3
+    fullName: T3
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T4
+    nameWithType: T4
+    fullName: T4
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Func`5
+  - uid: System.Func`5
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T1
+    nameWithType: T1
+    fullName: T1
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T2
+    nameWithType: T2
+    fullName: T2
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T3
+    nameWithType: T3
+    fullName: T3
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T4
+    nameWithType: T4
+    fullName: T4
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver*
+  commentId: Overload:Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
+  isExternal: false
+  name: EncryptionResolver
+  nameWithType: TableRequestOptions.EncryptionResolver
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableRequestOptions.EncryptionResolver
+- uid: System.Func{System.String,System.String,System.String,System.Boolean}
+  commentId: T:System.Func{System.String,System.String,System.String,System.Boolean}
+  parent: System
+  definition: System.Func`4
+  name: Func<String, String, String, Boolean>
+  nameWithType: Func<String, String, String, Boolean>
+  fullName: System.Func<System.String, System.String, System.String, System.Boolean>
+  nameWithType.vb: Func(Of String, String, String, Boolean)
+  fullname.vb: System.Func(Of System.String, System.String, System.String, System.Boolean)
+  name.vb: Func(Of String, String, String, Boolean)
+  spec.csharp:
+  - uid: System.Func`4
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`4
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`4
+  commentId: T:System.Func`4
+  isExternal: true
+  name: Func<T1, T2, T3, TResult>
+  nameWithType: Func<T1, T2, T3, TResult>
+  fullName: System.Func<T1, T2, T3, TResult>
+  nameWithType.vb: Func(Of T1, T2, T3, TResult)
+  fullname.vb: System.Func(Of T1, T2, T3, TResult)
+  name.vb: Func(Of T1, T2, T3, TResult)
+  spec.csharp:
+  - uid: System.Func`4
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`4
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )

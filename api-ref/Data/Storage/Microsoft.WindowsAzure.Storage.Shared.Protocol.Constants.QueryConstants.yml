@@ -57,12 +57,18 @@ items:
   summary: "\nConstants for query strings.\n"
   example: []
   syntax:
-    content: 'public static class QueryConstants : object'
-    content.vb: >-
-      Public Module QueryConstants
-          Inherits Object
+    content: public static class QueryConstants
+    content.vb: Public Module QueryConstants
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -95,8 +101,8 @@ items:
   summary: "\nQuery component for snapshot time.\n"
   example: []
   syntax:
-    content: public const string Snapshot = null
-    content.vb: Public Const Snapshot As String = Nothing
+    content: public const string Snapshot = "snapshot"
+    content.vb: Public Const Snapshot As String = "snapshot"
     return:
       type: System.String
   modifiers.csharp:
@@ -130,8 +136,8 @@ items:
   summary: "\nQuery component for the signed SAS start time.\n"
   example: []
   syntax:
-    content: public const string SignedStart = null
-    content.vb: Public Const SignedStart As String = Nothing
+    content: public const string SignedStart = "st"
+    content.vb: Public Const SignedStart As String = "st"
     return:
       type: System.String
   modifiers.csharp:
@@ -165,8 +171,8 @@ items:
   summary: "\nQuery component for the signed SAS expiry time.\n"
   example: []
   syntax:
-    content: public const string SignedExpiry = null
-    content.vb: Public Const SignedExpiry As String = Nothing
+    content: public const string SignedExpiry = "se"
+    content.vb: Public Const SignedExpiry As String = "se"
     return:
       type: System.String
   modifiers.csharp:
@@ -200,8 +206,8 @@ items:
   summary: "\nQuery component for the signed SAS resource.\n"
   example: []
   syntax:
-    content: public const string SignedResource = null
-    content.vb: Public Const SignedResource As String = Nothing
+    content: public const string SignedResource = "sr"
+    content.vb: Public Const SignedResource As String = "sr"
     return:
       type: System.String
   modifiers.csharp:
@@ -235,8 +241,8 @@ items:
   summary: "\nQuery component for the signed SAS resource types.\n"
   example: []
   syntax:
-    content: public const string SignedResourceTypes = null
-    content.vb: Public Const SignedResourceTypes As String = Nothing
+    content: public const string SignedResourceTypes = "srt"
+    content.vb: Public Const SignedResourceTypes As String = "srt"
     return:
       type: System.String
   modifiers.csharp:
@@ -270,8 +276,8 @@ items:
   summary: "\nQuery component for the signed SAS service.\n"
   example: []
   syntax:
-    content: public const string SignedServices = null
-    content.vb: Public Const SignedServices As String = Nothing
+    content: public const string SignedServices = "ss"
+    content.vb: Public Const SignedServices As String = "ss"
     return:
       type: System.String
   modifiers.csharp:
@@ -305,8 +311,8 @@ items:
   summary: "\nQuery component for the signed SAS protocol.\n"
   example: []
   syntax:
-    content: public const string SignedProtocols = null
-    content.vb: Public Const SignedProtocols As String = Nothing
+    content: public const string SignedProtocols = "spr"
+    content.vb: Public Const SignedProtocols As String = "spr"
     return:
       type: System.String
   modifiers.csharp:
@@ -340,8 +346,8 @@ items:
   summary: "\nQuery component for the signed SAS IP.\n"
   example: []
   syntax:
-    content: public const string SignedIP = null
-    content.vb: Public Const SignedIP As String = Nothing
+    content: public const string SignedIP = "sip"
+    content.vb: Public Const SignedIP As String = "sip"
     return:
       type: System.String
   modifiers.csharp:
@@ -375,8 +381,8 @@ items:
   summary: "\nQuery component for the SAS table name.\n"
   example: []
   syntax:
-    content: public const string SasTableName = null
-    content.vb: Public Const SasTableName As String = Nothing
+    content: public const string SasTableName = "tn"
+    content.vb: Public Const SasTableName As String = "tn"
     return:
       type: System.String
   modifiers.csharp:
@@ -410,8 +416,8 @@ items:
   summary: "\nQuery component for the signed SAS permissions.\n"
   example: []
   syntax:
-    content: public const string SignedPermissions = null
-    content.vb: Public Const SignedPermissions As String = Nothing
+    content: public const string SignedPermissions = "sp"
+    content.vb: Public Const SignedPermissions As String = "sp"
     return:
       type: System.String
   modifiers.csharp:
@@ -445,8 +451,8 @@ items:
   summary: "\nQuery component for the SAS start partition key.\n"
   example: []
   syntax:
-    content: public const string StartPartitionKey = null
-    content.vb: Public Const StartPartitionKey As String = Nothing
+    content: public const string StartPartitionKey = "spk"
+    content.vb: Public Const StartPartitionKey As String = "spk"
     return:
       type: System.String
   modifiers.csharp:
@@ -480,8 +486,8 @@ items:
   summary: "\nQuery component for the SAS start row key.\n"
   example: []
   syntax:
-    content: public const string StartRowKey = null
-    content.vb: Public Const StartRowKey As String = Nothing
+    content: public const string StartRowKey = "srk"
+    content.vb: Public Const StartRowKey As String = "srk"
     return:
       type: System.String
   modifiers.csharp:
@@ -515,8 +521,8 @@ items:
   summary: "\nQuery component for the SAS end partition key.\n"
   example: []
   syntax:
-    content: public const string EndPartitionKey = null
-    content.vb: Public Const EndPartitionKey As String = Nothing
+    content: public const string EndPartitionKey = "epk"
+    content.vb: Public Const EndPartitionKey As String = "epk"
     return:
       type: System.String
   modifiers.csharp:
@@ -550,8 +556,8 @@ items:
   summary: "\nQuery component for the SAS end row key.\n"
   example: []
   syntax:
-    content: public const string EndRowKey = null
-    content.vb: Public Const EndRowKey As String = Nothing
+    content: public const string EndRowKey = "erk"
+    content.vb: Public Const EndRowKey As String = "erk"
     return:
       type: System.String
   modifiers.csharp:
@@ -585,8 +591,8 @@ items:
   summary: "\nQuery component for the signed SAS identifier.\n"
   example: []
   syntax:
-    content: public const string SignedIdentifier = null
-    content.vb: Public Const SignedIdentifier As String = Nothing
+    content: public const string SignedIdentifier = "si"
+    content.vb: Public Const SignedIdentifier As String = "si"
     return:
       type: System.String
   modifiers.csharp:
@@ -620,8 +626,8 @@ items:
   summary: "\nQuery component for the signing SAS key.\n"
   example: []
   syntax:
-    content: public const string SignedKey = null
-    content.vb: Public Const SignedKey As String = Nothing
+    content: public const string SignedKey = "sk"
+    content.vb: Public Const SignedKey As String = "sk"
     return:
       type: System.String
   modifiers.csharp:
@@ -655,8 +661,8 @@ items:
   summary: "\nQuery component for the signed SAS version.\n"
   example: []
   syntax:
-    content: public const string SignedVersion = null
-    content.vb: Public Const SignedVersion As String = Nothing
+    content: public const string SignedVersion = "sv"
+    content.vb: Public Const SignedVersion As String = "sv"
     return:
       type: System.String
   modifiers.csharp:
@@ -690,8 +696,8 @@ items:
   summary: "\nQuery component for SAS signature.\n"
   example: []
   syntax:
-    content: public const string Signature = null
-    content.vb: Public Const Signature As String = Nothing
+    content: public const string Signature = "sig"
+    content.vb: Public Const Signature As String = "sig"
     return:
       type: System.String
   modifiers.csharp:
@@ -725,8 +731,8 @@ items:
   summary: "\nQuery component for SAS cache control.\n"
   example: []
   syntax:
-    content: public const string CacheControl = null
-    content.vb: Public Const CacheControl As String = Nothing
+    content: public const string CacheControl = "rscc"
+    content.vb: Public Const CacheControl As String = "rscc"
     return:
       type: System.String
   modifiers.csharp:
@@ -760,8 +766,8 @@ items:
   summary: "\nQuery component for SAS content type.\n"
   example: []
   syntax:
-    content: public const string ContentType = null
-    content.vb: Public Const ContentType As String = Nothing
+    content: public const string ContentType = "rsct"
+    content.vb: Public Const ContentType As String = "rsct"
     return:
       type: System.String
   modifiers.csharp:
@@ -795,8 +801,8 @@ items:
   summary: "\nQuery component for SAS content encoding.\n"
   example: []
   syntax:
-    content: public const string ContentEncoding = null
-    content.vb: Public Const ContentEncoding As String = Nothing
+    content: public const string ContentEncoding = "rsce"
+    content.vb: Public Const ContentEncoding As String = "rsce"
     return:
       type: System.String
   modifiers.csharp:
@@ -830,8 +836,8 @@ items:
   summary: "\nQuery component for SAS content language.\n"
   example: []
   syntax:
-    content: public const string ContentLanguage = null
-    content.vb: Public Const ContentLanguage As String = Nothing
+    content: public const string ContentLanguage = "rscl"
+    content.vb: Public Const ContentLanguage As String = "rscl"
     return:
       type: System.String
   modifiers.csharp:
@@ -865,8 +871,8 @@ items:
   summary: "\nQuery component for SAS content disposition.\n"
   example: []
   syntax:
-    content: public const string ContentDisposition = null
-    content.vb: Public Const ContentDisposition As String = Nothing
+    content: public const string ContentDisposition = "rscd"
+    content.vb: Public Const ContentDisposition As String = "rscd"
     return:
       type: System.String
   modifiers.csharp:
@@ -900,8 +906,8 @@ items:
   summary: "\nQuery component for SAS API version.\n"
   example: []
   syntax:
-    content: public const string ApiVersion = null
-    content.vb: Public Const ApiVersion As String = Nothing
+    content: public const string ApiVersion = "api-version"
+    content.vb: Public Const ApiVersion As String = "api-version"
     return:
       type: System.String
   modifiers.csharp:
@@ -935,8 +941,8 @@ items:
   summary: "\nQuery component for message time-to-live.\n"
   example: []
   syntax:
-    content: public const string MessageTimeToLive = null
-    content.vb: Public Const MessageTimeToLive As String = Nothing
+    content: public const string MessageTimeToLive = "messagettl"
+    content.vb: Public Const MessageTimeToLive As String = "messagettl"
     return:
       type: System.String
   modifiers.csharp:
@@ -970,8 +976,8 @@ items:
   summary: "\nQuery component for message visibility timeout.\n"
   example: []
   syntax:
-    content: public const string VisibilityTimeout = null
-    content.vb: Public Const VisibilityTimeout As String = Nothing
+    content: public const string VisibilityTimeout = "visibilitytimeout"
+    content.vb: Public Const VisibilityTimeout As String = "visibilitytimeout"
     return:
       type: System.String
   modifiers.csharp:
@@ -1005,8 +1011,8 @@ items:
   summary: "\nQuery component for the number of messages.\n"
   example: []
   syntax:
-    content: public const string NumOfMessages = null
-    content.vb: Public Const NumOfMessages As String = Nothing
+    content: public const string NumOfMessages = "numofmessages"
+    content.vb: Public Const NumOfMessages As String = "numofmessages"
     return:
       type: System.String
   modifiers.csharp:
@@ -1040,8 +1046,8 @@ items:
   summary: "\nQuery component for message pop receipt.\n"
   example: []
   syntax:
-    content: public const string PopReceipt = null
-    content.vb: Public Const PopReceipt As String = Nothing
+    content: public const string PopReceipt = "popreceipt"
+    content.vb: Public Const PopReceipt As String = "popreceipt"
     return:
       type: System.String
   modifiers.csharp:
@@ -1075,8 +1081,8 @@ items:
   summary: "\nQuery component for resource type.\n"
   example: []
   syntax:
-    content: public const string ResourceType = null
-    content.vb: Public Const ResourceType As String = Nothing
+    content: public const string ResourceType = "restype"
+    content.vb: Public Const ResourceType As String = "restype"
     return:
       type: System.String
   modifiers.csharp:
@@ -1110,8 +1116,8 @@ items:
   summary: "\nQuery component for the operation (component) to access.\n"
   example: []
   syntax:
-    content: public const string Component = null
-    content.vb: Public Const Component As String = Nothing
+    content: public const string Component = "comp"
+    content.vb: Public Const Component As String = "comp"
     return:
       type: System.String
   modifiers.csharp:
@@ -1145,8 +1151,8 @@ items:
   summary: "\nQuery component for the copy ID.\n"
   example: []
   syntax:
-    content: public const string CopyId = null
-    content.vb: Public Const CopyId As String = Nothing
+    content: public const string CopyId = "copyid"
+    content.vb: Public Const CopyId As String = "copyid"
     return:
       type: System.String
   modifiers.csharp:
@@ -1163,11 +1169,300 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Shared.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Shared.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

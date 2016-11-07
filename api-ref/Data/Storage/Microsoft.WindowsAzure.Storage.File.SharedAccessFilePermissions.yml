@@ -32,8 +32,18 @@ items:
   summary: "\nSpecifies the set of possible permissions for a shared access policy.\n"
   example: []
   syntax:
-    content: 'public enum SharedAccessFilePermissions : int'
-    content.vb: Public Enum SharedAccessFilePermissions As Integer
+    content: >-
+      [Flags]
+
+      public enum SharedAccessFilePermissions
+    content.vb: >-
+      <Flags>
+
+      Public Enum SharedAccessFilePermissions
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -65,8 +75,7 @@ items:
   summary: "\nNo shared access granted.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:
@@ -100,8 +109,7 @@ items:
   summary: "\nRead access granted.\n"
   example: []
   syntax:
-    content: Read = null
-    content.vb: Read = Nothing
+    content: Read = 1
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:
@@ -135,8 +143,7 @@ items:
   summary: "\nWrite access granted.\n"
   example: []
   syntax:
-    content: Write = null
-    content.vb: Write = Nothing
+    content: Write = 2
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:
@@ -170,8 +177,7 @@ items:
   summary: "\nDelete access granted for files.\n"
   example: []
   syntax:
-    content: Delete = null
-    content.vb: Delete = Nothing
+    content: Delete = 4
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:
@@ -205,8 +211,7 @@ items:
   summary: "\nList access granted.\n"
   example: []
   syntax:
-    content: List = null
-    content.vb: List = Nothing
+    content: List = 8
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:
@@ -240,8 +245,7 @@ items:
   summary: "\nCreate access granted.\n"
   example: []
   syntax:
-    content: Create = null
-    content.vb: Create = Nothing
+    content: Create = 16
     return:
       type: Microsoft.WindowsAzure.Storage.File.SharedAccessFilePermissions
   modifiers.csharp:

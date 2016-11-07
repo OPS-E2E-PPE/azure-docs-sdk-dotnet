@@ -6,26 +6,26 @@ items:
   parent: Microsoft.Azure.Management.Automation
   children:
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(HttpClient)
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials)
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,HttpClient)
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri)
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri,HttpClient)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Net.Http.HttpClient)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri,System.Net.Http.HttpClient)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(System.Net.Http.HttpClient)
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Activities
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.AgentRegistrationInformation
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.ApiVersion
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationAccounts
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.BaseUri
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Certificates
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.CompilationJobs
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Configurations
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Connections
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.ConnectionTypes
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Credentials
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
-  - Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
+  - Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.HybridRunbookWorkerGroups
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.Jobs
   - Microsoft.Azure.Management.Automation.AutomationManagementClient.JobSchedules
@@ -70,8 +70,29 @@ items:
           Implements IAutomationManagementClient, IDisposable
   inheritance:
   - System.Object
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
   implements:
   - Microsoft.Azure.Management.Automation.IAutomationManagementClient
+  - System.IDisposable
+  inheritedMembers:
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Dispose
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(System.Net.Http.DelegatingHandler)
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.GetHttpPipeline
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient},System.Net.Http.DelegatingHandler)
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpClient
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpMessageHandler
+  - Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.UserAgent
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   extensionMethods:
   - Microsoft.Azure.Management.Automation.IAutomationManagementClient.Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatus(System.String)
   - Microsoft.Azure.Management.Automation.IAutomationManagementClient.Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatusAsync(System.String)
@@ -151,7 +172,7 @@ items:
     content.vb: Public ReadOnly Property BaseUri As Uri
     parameters: []
     return:
-      type: Uri
+      type: System.Uri
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.BaseUri*
   implements:
   - Microsoft.Azure.Management.Automation.IAutomationManagementClient.BaseUri
@@ -190,7 +211,7 @@ items:
     content.vb: Public ReadOnly Property Credentials As SubscriptionCloudCredentials
     parameters: []
     return:
-      type: SubscriptionCloudCredentials
+      type: Microsoft.Azure.SubscriptionCloudCredentials
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.Credentials*
   implements:
   - Microsoft.Azure.Management.Automation.IAutomationManagementClient.Credentials
@@ -1292,16 +1313,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri)
-  id: '#ctor(SubscriptionCloudCredentials,Uri)'
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri)
+  id: '#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri)'
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: AutomationManagementClient(SubscriptionCloudCredentials, Uri)
   nameWithType: AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, Uri)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, Uri)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(Microsoft.Azure.SubscriptionCloudCredentials, System.Uri)
   type: Constructor
   source:
     remote:
@@ -1321,26 +1342,26 @@ items:
     content.vb: Public Sub New(credentials As SubscriptionCloudCredentials, baseUri As Uri)
     parameters:
     - id: credentials
-      type: SubscriptionCloudCredentials
+      type: Microsoft.Azure.SubscriptionCloudCredentials
       description: "\nRequired. Gets subscription credentials which uniquely identify\nMicrosoft Azure subscription. The subscription ID forms part of\nthe URI for every service call.\n"
     - id: baseUri
-      type: Uri
+      type: System.Uri
       description: "\nOptional. Gets the URI used as the base for all cloud service\nrequests.\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials)
-  id: '#ctor(SubscriptionCloudCredentials)'
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials)
+  id: '#ctor(Microsoft.Azure.SubscriptionCloudCredentials)'
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: AutomationManagementClient(SubscriptionCloudCredentials)
   nameWithType: AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(Microsoft.Azure.SubscriptionCloudCredentials)
   type: Constructor
   source:
     remote:
@@ -1360,23 +1381,23 @@ items:
     content.vb: Public Sub New(credentials As SubscriptionCloudCredentials)
     parameters:
     - id: credentials
-      type: SubscriptionCloudCredentials
+      type: Microsoft.Azure.SubscriptionCloudCredentials
       description: "\nRequired. Gets subscription credentials which uniquely identify\nMicrosoft Azure subscription. The subscription ID forms part of\nthe URI for every service call.\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(HttpClient)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(HttpClient)
-  id: '#ctor(HttpClient)'
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(System.Net.Http.HttpClient)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(System.Net.Http.HttpClient)
+  id: '#ctor(System.Net.Http.HttpClient)'
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: AutomationManagementClient(HttpClient)
   nameWithType: AutomationManagementClient.AutomationManagementClient(HttpClient)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(HttpClient)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(System.Net.Http.HttpClient)
   type: Constructor
   source:
     remote:
@@ -1396,23 +1417,23 @@ items:
     content.vb: Public Sub New(httpClient As HttpClient)
     parameters:
     - id: httpClient
-      type: HttpClient
+      type: System.Net.Http.HttpClient
       description: "\nThe Http client\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri,HttpClient)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,Uri,HttpClient)
-  id: '#ctor(SubscriptionCloudCredentials,Uri,HttpClient)'
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri,System.Net.Http.HttpClient)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri,System.Net.Http.HttpClient)
+  id: '#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Uri,System.Net.Http.HttpClient)'
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: AutomationManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)
   nameWithType: AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(Microsoft.Azure.SubscriptionCloudCredentials, System.Uri, System.Net.Http.HttpClient)
   type: Constructor
   source:
     remote:
@@ -1432,29 +1453,29 @@ items:
     content.vb: Public Sub New(credentials As SubscriptionCloudCredentials, baseUri As Uri, httpClient As HttpClient)
     parameters:
     - id: credentials
-      type: SubscriptionCloudCredentials
+      type: Microsoft.Azure.SubscriptionCloudCredentials
       description: "\nRequired. Gets subscription credentials which uniquely identify\nMicrosoft Azure subscription. The subscription ID forms part of\nthe URI for every service call.\n"
     - id: baseUri
-      type: Uri
+      type: System.Uri
       description: "\nOptional. Gets the URI used as the base for all cloud service\nrequests.\n"
     - id: httpClient
-      type: HttpClient
+      type: System.Net.Http.HttpClient
       description: "\nThe Http client\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,HttpClient)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(SubscriptionCloudCredentials,HttpClient)
-  id: '#ctor(SubscriptionCloudCredentials,HttpClient)'
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Net.Http.HttpClient)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Net.Http.HttpClient)
+  id: '#ctor(Microsoft.Azure.SubscriptionCloudCredentials,System.Net.Http.HttpClient)'
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: AutomationManagementClient(SubscriptionCloudCredentials, HttpClient)
   nameWithType: AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, HttpClient)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(SubscriptionCloudCredentials, HttpClient)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient(Microsoft.Azure.SubscriptionCloudCredentials, System.Net.Http.HttpClient)
   type: Constructor
   source:
     remote:
@@ -1474,26 +1495,26 @@ items:
     content.vb: Public Sub New(credentials As SubscriptionCloudCredentials, httpClient As HttpClient)
     parameters:
     - id: credentials
-      type: SubscriptionCloudCredentials
+      type: Microsoft.Azure.SubscriptionCloudCredentials
       description: "\nRequired. Gets subscription credentials which uniquely identify\nMicrosoft Azure subscription. The subscription ID forms part of\nthe URI for every service call.\n"
     - id: httpClient
-      type: HttpClient
+      type: System.Net.Http.HttpClient
       description: "\nThe Http client\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
-  id: Clone(ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+  id: Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: Clone(ServiceClient<AutomationManagementClient>)
   nameWithType: AutomationManagementClient.Clone(ServiceClient<AutomationManagementClient>)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>)
   type: Method
   source:
     remote:
@@ -1513,8 +1534,9 @@ items:
     content.vb: Protected Overrides Sub Clone(client As ServiceClient(Of AutomationManagementClient))
     parameters:
     - id: client
-      type: ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+      type: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
       description: "\nInstance of AutomationManagementClient to clone to\n"
+  overridden: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone*
   nameWithType.vb: AutomationManagementClient.Clone(ServiceClient(Of AutomationManagementClient))
   modifiers.csharp:
@@ -1523,18 +1545,18 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-  fullName.vb: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient))
+  fullName.vb: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone(Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient))
   name.vb: Clone(ServiceClient(Of AutomationManagementClient))
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
-  id: GetOperationResultStatusAsync(System.String,CancellationToken)
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
+  id: GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: GetOperationResultStatusAsync(String, CancellationToken)
   nameWithType: AutomationManagementClient.GetOperationResultStatusAsync(String, CancellationToken)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String, CancellationToken)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync(System.String, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -1557,28 +1579,28 @@ items:
       type: System.String
       description: "\nRequired. Location value returned by the Begin operation.\n"
     - id: cancellationToken
-      type: CancellationToken
+      type: System.Threading.CancellationToken
       description: "\nCancellation token.\n"
     return:
-      type: Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}
+      type: System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}
       description: "\nA standard service response for long running operations.\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync*
   implements:
-  - Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
+  - Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
-  id: GetOperationStatusAsync(System.String,CancellationToken)
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
+  id: GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: GetOperationStatusAsync(String, CancellationToken)
   nameWithType: AutomationManagementClient.GetOperationStatusAsync(String, CancellationToken)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String, CancellationToken)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync(System.String, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -1601,28 +1623,28 @@ items:
       type: System.String
       description: "\nRequired. The request ID for the request you wish to track. The\nrequest ID is returned in the x-ms-request-id response header for\nevery request.\n"
     - id: cancellationToken
-      type: CancellationToken
+      type: System.Threading.CancellationToken
       description: "\nCancellation token.\n"
     return:
-      type: Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}
+      type: System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}
       description: "\nThe response body contains the status of the specified asynchronous\noperation, indicating whether it has succeeded, is inprogress, or\nhas failed. Note that this status is distinct from the HTTP status\ncode returned for the Get Operation Status operation itself.  If\nthe asynchronous operation succeeded, the response body includes\nthe HTTP status code for the successful request.  If the\nasynchronous operation failed, the response body includes the HTTP\nstatus code for the failed request, and also includes error\ninformation regarding the failure.\n"
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync*
   implements:
-  - Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
+  - Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
-  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
-  id: ContinuationTokenHandler``1(Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
+  commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler``1(System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
+  id: ContinuationTokenHandler``1(System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}})
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClient
   langs:
   - csharp
   - vb
   name: ContinuationTokenHandler<T>(Func<String, ResponseWithSkipToken<T>>)
   nameWithType: AutomationManagementClient.ContinuationTokenHandler<T>(Func<String, ResponseWithSkipToken<T>>)
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler<T>(Func<System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken<T>>)
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler<T>(System.Func<System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken<T>>)
   type: Method
   source:
     remote:
@@ -1640,11 +1662,11 @@ items:
     content.vb: Public Shared Function ContinuationTokenHandler(Of T)(listFunc As Func(Of String, ResponseWithSkipToken(Of T))) As List(Of T)
     parameters:
     - id: listFunc
-      type: Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{{T}}}
+      type: System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{{T}}}
     typeParameters:
     - id: T
     return:
-      type: List{{T}}
+      type: System.Collections.Generic.List{{T}}
   overload: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler*
   nameWithType.vb: AutomationManagementClient.ContinuationTokenHandler(Of T)(Func(Of String, ResponseWithSkipToken(Of T)))
   modifiers.csharp:
@@ -1653,7 +1675,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler(Of T)(Func(Of System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken(Of T)))
+  fullName.vb: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler(Of T)(System.Func(Of System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken(Of T)))
   name.vb: ContinuationTokenHandler(Of T)(Func(Of String, ResponseWithSkipToken(Of T)))
 references:
 - uid: Microsoft.Azure.Management.Automation
@@ -1662,6 +1684,55 @@ references:
   name: Microsoft.Azure.Management.Automation
   nameWithType: Microsoft.Azure.Management.Automation
   fullName: Microsoft.Azure.Management.Automation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  commentId: T:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  parent: Hyak.Common
+  definition: Hyak.Common.ServiceClient`1
+  name: ServiceClient<AutomationManagementClient>
+  nameWithType: ServiceClient<AutomationManagementClient>
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient)
+  name.vb: ServiceClient(Of AutomationManagementClient)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient
+    name: AutomationManagementClient
+    nameWithType: AutomationManagementClient
+    fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient
+    name: AutomationManagementClient
+    nameWithType: AutomationManagementClient
+    fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient
   commentId: T:Microsoft.Azure.Management.Automation.IAutomationManagementClient
   parent: Microsoft.Azure.Management.Automation
@@ -1669,6 +1740,703 @@ references:
   name: IAutomationManagementClient
   nameWithType: IAutomationManagementClient
   fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Dispose
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Dispose
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.Dispose
+  name: Dispose()
+  nameWithType: ServiceClient<AutomationManagementClient>.Dispose()
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.Dispose()
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).Dispose()
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).Dispose()
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.Dispose
+    name: Dispose
+    nameWithType: ServiceClient<AutomationManagementClient>.Dispose
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.Dispose
+    name: Dispose
+    nameWithType: ServiceClient(Of AutomationManagementClient).Dispose
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(System.Net.Http.DelegatingHandler)
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+  name: WithHandler(DelegatingHandler)
+  nameWithType: ServiceClient<AutomationManagementClient>.WithHandler(DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandler(System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).WithHandler(DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandler(System.Net.Http.DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient<AutomationManagementClient>.WithHandler
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient(Of AutomationManagementClient).WithHandler
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  name: WithHandlers(IEnumerable<DelegatingHandler>)
+  nameWithType: ServiceClient<AutomationManagementClient>.WithHandlers(IEnumerable<DelegatingHandler>)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandlers(System.Collections.Generic.IEnumerable<System.Net.Http.DelegatingHandler>)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).WithHandlers(IEnumerable(Of DelegatingHandler))
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandlers(System.Collections.Generic.IEnumerable(Of System.Net.Http.DelegatingHandler))
+  name.vb: WithHandlers(IEnumerable(Of DelegatingHandler))
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+    name: WithHandlers
+    nameWithType: ServiceClient<AutomationManagementClient>.WithHandlers
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandlers
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+    name: WithHandlers
+    nameWithType: ServiceClient(Of AutomationManagementClient).WithHandlers
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandlers
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.GetHttpPipeline
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.GetHttpPipeline
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.GetHttpPipeline
+  name: GetHttpPipeline()
+  nameWithType: ServiceClient<AutomationManagementClient>.GetHttpPipeline()
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.GetHttpPipeline()
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).GetHttpPipeline()
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).GetHttpPipeline()
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.GetHttpPipeline
+    name: GetHttpPipeline
+    nameWithType: ServiceClient<AutomationManagementClient>.GetHttpPipeline
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.GetHttpPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.GetHttpPipeline
+    name: GetHttpPipeline
+    nameWithType: ServiceClient(Of AutomationManagementClient).GetHttpPipeline
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).GetHttpPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  name: AddHandlerToPipeline(DelegatingHandler)
+  nameWithType: ServiceClient<AutomationManagementClient>.AddHandlerToPipeline(DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).AddHandlerToPipeline(DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+    name: AddHandlerToPipeline
+    nameWithType: ServiceClient<AutomationManagementClient>.AddHandlerToPipeline
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.AddHandlerToPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+    name: AddHandlerToPipeline
+    nameWithType: ServiceClient(Of AutomationManagementClient).AddHandlerToPipeline
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).AddHandlerToPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  name: SetRetryPolicy(RetryPolicy)
+  nameWithType: ServiceClient<AutomationManagementClient>.SetRetryPolicy(RetryPolicy)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).SetRetryPolicy(RetryPolicy)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+    name: SetRetryPolicy
+    nameWithType: ServiceClient<AutomationManagementClient>.SetRetryPolicy
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.SetRetryPolicy
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.TransientFaultHandling.RetryPolicy
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: Hyak.Common.TransientFaultHandling.RetryPolicy
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+    name: SetRetryPolicy
+    nameWithType: ServiceClient(Of AutomationManagementClient).SetRetryPolicy
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).SetRetryPolicy
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.TransientFaultHandling.RetryPolicy
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: Hyak.Common.TransientFaultHandling.RetryPolicy
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  name: InitializeHttpClient(HttpMessageHandler)
+  nameWithType: ServiceClient<AutomationManagementClient>.InitializeHttpClient(HttpMessageHandler)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).InitializeHttpClient(HttpMessageHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+    name: InitializeHttpClient
+    nameWithType: ServiceClient<AutomationManagementClient>.InitializeHttpClient
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.InitializeHttpClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.HttpMessageHandler
+    name: HttpMessageHandler
+    nameWithType: HttpMessageHandler
+    fullName: System.Net.Http.HttpMessageHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+    name: InitializeHttpClient
+    nameWithType: ServiceClient(Of AutomationManagementClient).InitializeHttpClient
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).InitializeHttpClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.HttpMessageHandler
+    name: HttpMessageHandler
+    nameWithType: HttpMessageHandler
+    fullName: System.Net.Http.HttpMessageHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient},System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.WithHandler(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient},System.Net.Http.DelegatingHandler)
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+  name: WithHandler(ServiceClient<AutomationManagementClient>, DelegatingHandler)
+  nameWithType: ServiceClient<AutomationManagementClient>.WithHandler(ServiceClient<AutomationManagementClient>, DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandler(Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>, System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).WithHandler(ServiceClient(Of AutomationManagementClient), DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandler(Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient), System.Net.Http.DelegatingHandler)
+  name.vb: WithHandler(ServiceClient(Of AutomationManagementClient), DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient<AutomationManagementClient>.WithHandler
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient
+    name: AutomationManagementClient
+    nameWithType: AutomationManagementClient
+    fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient(Of AutomationManagementClient).WithHandler
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient
+    name: AutomationManagementClient
+    nameWithType: AutomationManagementClient
+    fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpClient
+  commentId: P:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpClient
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.HttpClient
+  name: HttpClient
+  nameWithType: ServiceClient<AutomationManagementClient>.HttpClient
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.HttpClient
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).HttpClient
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).HttpClient
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpMessageHandler
+  commentId: P:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.HttpMessageHandler
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.HttpMessageHandler
+  name: HttpMessageHandler
+  nameWithType: ServiceClient<AutomationManagementClient>.HttpMessageHandler
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.HttpMessageHandler
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).HttpMessageHandler
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).HttpMessageHandler
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.UserAgent
+  commentId: P:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.UserAgent
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.UserAgent
+  name: UserAgent
+  nameWithType: ServiceClient<AutomationManagementClient>.UserAgent
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.UserAgent
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).UserAgent
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).UserAgent
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatus(System.String)
   commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatus(Microsoft.Azure.Management.Automation.IAutomationManagementClient,System.String)
   parent: Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions
@@ -1825,6 +2593,455 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Hyak.Common.ServiceClient`1
+  commentId: T:Hyak.Common.ServiceClient`1
+  isExternal: true
+  name: ServiceClient<T>
+  nameWithType: ServiceClient<T>
+  fullName: Hyak.Common.ServiceClient<T>
+  nameWithType.vb: ServiceClient(Of T)
+  fullname.vb: Hyak.Common.ServiceClient(Of T)
+  name.vb: ServiceClient(Of T)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common
+  commentId: N:Hyak.Common
+  isExternal: false
+  name: Hyak.Common
+  nameWithType: Hyak.Common
+  fullName: Hyak.Common
+- uid: Hyak.Common.ServiceClient`1.Dispose
+  commentId: M:Hyak.Common.ServiceClient`1.Dispose
+  isExternal: true
+  name: Dispose()
+  nameWithType: ServiceClient<T>.Dispose()
+  fullName: Hyak.Common.ServiceClient<T>.Dispose()
+  nameWithType.vb: ServiceClient(Of T).Dispose()
+  fullname.vb: Hyak.Common.ServiceClient(Of T).Dispose()
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.Dispose
+    name: Dispose
+    nameWithType: ServiceClient<T>.Dispose
+    fullName: Hyak.Common.ServiceClient<T>.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.Dispose
+    name: Dispose
+    nameWithType: ServiceClient(Of T).Dispose
+    fullName: Hyak.Common.ServiceClient(Of T).Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+  isExternal: true
+  name: WithHandler(DelegatingHandler)
+  nameWithType: ServiceClient<T>.WithHandler(DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<T>.WithHandler(System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of T).WithHandler(DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of T).WithHandler(System.Net.Http.DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient<T>.WithHandler
+    fullName: Hyak.Common.ServiceClient<T>.WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient(Of T).WithHandler
+    fullName: Hyak.Common.ServiceClient(Of T).WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  commentId: M:Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+  isExternal: true
+  name: WithHandlers(IEnumerable<DelegatingHandler>)
+  nameWithType: ServiceClient<T>.WithHandlers(IEnumerable<DelegatingHandler>)
+  fullName: Hyak.Common.ServiceClient<T>.WithHandlers(System.Collections.Generic.IEnumerable<System.Net.Http.DelegatingHandler>)
+  nameWithType.vb: ServiceClient(Of T).WithHandlers(IEnumerable(Of DelegatingHandler))
+  fullname.vb: Hyak.Common.ServiceClient(Of T).WithHandlers(System.Collections.Generic.IEnumerable(Of System.Net.Http.DelegatingHandler))
+  name.vb: WithHandlers(IEnumerable(Of DelegatingHandler))
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+    name: WithHandlers
+    nameWithType: ServiceClient<T>.WithHandlers
+    fullName: Hyak.Common.ServiceClient<T>.WithHandlers
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandlers(System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})
+    name: WithHandlers
+    nameWithType: ServiceClient(Of T).WithHandlers
+    fullName: Hyak.Common.ServiceClient(Of T).WithHandlers
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.GetHttpPipeline
+  commentId: M:Hyak.Common.ServiceClient`1.GetHttpPipeline
+  isExternal: true
+  name: GetHttpPipeline()
+  nameWithType: ServiceClient<T>.GetHttpPipeline()
+  fullName: Hyak.Common.ServiceClient<T>.GetHttpPipeline()
+  nameWithType.vb: ServiceClient(Of T).GetHttpPipeline()
+  fullname.vb: Hyak.Common.ServiceClient(Of T).GetHttpPipeline()
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.GetHttpPipeline
+    name: GetHttpPipeline
+    nameWithType: ServiceClient<T>.GetHttpPipeline
+    fullName: Hyak.Common.ServiceClient<T>.GetHttpPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.GetHttpPipeline
+    name: GetHttpPipeline
+    nameWithType: ServiceClient(Of T).GetHttpPipeline
+    fullName: Hyak.Common.ServiceClient(Of T).GetHttpPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  isExternal: true
+  name: AddHandlerToPipeline(DelegatingHandler)
+  nameWithType: ServiceClient<T>.AddHandlerToPipeline(DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<T>.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of T).AddHandlerToPipeline(DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of T).AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+    name: AddHandlerToPipeline
+    nameWithType: ServiceClient<T>.AddHandlerToPipeline
+    fullName: Hyak.Common.ServiceClient<T>.AddHandlerToPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.AddHandlerToPipeline(System.Net.Http.DelegatingHandler)
+    name: AddHandlerToPipeline
+    nameWithType: ServiceClient(Of T).AddHandlerToPipeline
+    fullName: Hyak.Common.ServiceClient(Of T).AddHandlerToPipeline
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  commentId: M:Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  isExternal: true
+  name: SetRetryPolicy(RetryPolicy)
+  nameWithType: ServiceClient<T>.SetRetryPolicy(RetryPolicy)
+  fullName: Hyak.Common.ServiceClient<T>.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  nameWithType.vb: ServiceClient(Of T).SetRetryPolicy(RetryPolicy)
+  fullname.vb: Hyak.Common.ServiceClient(Of T).SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+    name: SetRetryPolicy
+    nameWithType: ServiceClient<T>.SetRetryPolicy
+    fullName: Hyak.Common.ServiceClient<T>.SetRetryPolicy
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.TransientFaultHandling.RetryPolicy
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: Hyak.Common.TransientFaultHandling.RetryPolicy
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.SetRetryPolicy(Hyak.Common.TransientFaultHandling.RetryPolicy)
+    name: SetRetryPolicy
+    nameWithType: ServiceClient(Of T).SetRetryPolicy
+    fullName: Hyak.Common.ServiceClient(Of T).SetRetryPolicy
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.TransientFaultHandling.RetryPolicy
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: Hyak.Common.TransientFaultHandling.RetryPolicy
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  commentId: M:Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  isExternal: true
+  name: InitializeHttpClient(HttpMessageHandler)
+  nameWithType: ServiceClient<T>.InitializeHttpClient(HttpMessageHandler)
+  fullName: Hyak.Common.ServiceClient<T>.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  nameWithType.vb: ServiceClient(Of T).InitializeHttpClient(HttpMessageHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of T).InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+    name: InitializeHttpClient
+    nameWithType: ServiceClient<T>.InitializeHttpClient
+    fullName: Hyak.Common.ServiceClient<T>.InitializeHttpClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.HttpMessageHandler
+    name: HttpMessageHandler
+    nameWithType: HttpMessageHandler
+    fullName: System.Net.Http.HttpMessageHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.InitializeHttpClient(System.Net.Http.HttpMessageHandler)
+    name: InitializeHttpClient
+    nameWithType: ServiceClient(Of T).InitializeHttpClient
+    fullName: Hyak.Common.ServiceClient(Of T).InitializeHttpClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.Http.HttpMessageHandler
+    name: HttpMessageHandler
+    nameWithType: HttpMessageHandler
+    fullName: System.Net.Http.HttpMessageHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+  commentId: M:Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+  isExternal: true
+  name: WithHandler(ServiceClient<T>, DelegatingHandler)
+  nameWithType: ServiceClient<T>.WithHandler(ServiceClient<T>, DelegatingHandler)
+  fullName: Hyak.Common.ServiceClient<T>.WithHandler(Hyak.Common.ServiceClient<T>, System.Net.Http.DelegatingHandler)
+  nameWithType.vb: ServiceClient(Of T).WithHandler(ServiceClient(Of T), DelegatingHandler)
+  fullname.vb: Hyak.Common.ServiceClient(Of T).WithHandler(Hyak.Common.ServiceClient(Of T), System.Net.Http.DelegatingHandler)
+  name.vb: WithHandler(ServiceClient(Of T), DelegatingHandler)
+  spec.csharp:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient<T>.WithHandler
+    fullName: Hyak.Common.ServiceClient<T>.WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Hyak.Common.ServiceClient`1.WithHandler(Hyak.Common.ServiceClient{`0},System.Net.Http.DelegatingHandler)
+    name: WithHandler
+    nameWithType: ServiceClient(Of T).WithHandler
+    fullName: Hyak.Common.ServiceClient(Of T).WithHandler
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: Hyak.Common.ServiceClient
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Net.Http.DelegatingHandler
+    name: DelegatingHandler
+    nameWithType: DelegatingHandler
+    fullName: System.Net.Http.DelegatingHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Hyak.Common.ServiceClient`1.HttpClient
+  commentId: P:Hyak.Common.ServiceClient`1.HttpClient
+  isExternal: true
+  name: HttpClient
+  nameWithType: ServiceClient<T>.HttpClient
+  fullName: Hyak.Common.ServiceClient<T>.HttpClient
+  nameWithType.vb: ServiceClient(Of T).HttpClient
+  fullname.vb: Hyak.Common.ServiceClient(Of T).HttpClient
+- uid: Hyak.Common.ServiceClient`1.HttpMessageHandler
+  commentId: P:Hyak.Common.ServiceClient`1.HttpMessageHandler
+  isExternal: true
+  name: HttpMessageHandler
+  nameWithType: ServiceClient<T>.HttpMessageHandler
+  fullName: Hyak.Common.ServiceClient<T>.HttpMessageHandler
+  nameWithType.vb: ServiceClient(Of T).HttpMessageHandler
+  fullname.vb: Hyak.Common.ServiceClient(Of T).HttpMessageHandler
+- uid: Hyak.Common.ServiceClient`1.UserAgent
+  commentId: P:Hyak.Common.ServiceClient`1.UserAgent
+  isExternal: true
+  name: UserAgent
+  nameWithType: ServiceClient<T>.UserAgent
+  fullName: Hyak.Common.ServiceClient<T>.UserAgent
+  nameWithType.vb: ServiceClient(Of T).UserAgent
+  fullname.vb: Hyak.Common.ServiceClient(Of T).UserAgent
 - uid: Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatus(Microsoft.Azure.Management.Automation.IAutomationManagementClient,System.String)
   commentId: M:Microsoft.Azure.Management.Automation.AutomationManagementClientExtensions.GetOperationResultStatus(Microsoft.Azure.Management.Automation.IAutomationManagementClient,System.String)
   isExternal: true
@@ -2054,6 +3271,8 @@ references:
   nameWithType: IAutomationManagementClient.ApiVersion
   fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.ApiVersion
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -2071,11 +3290,13 @@ references:
   name: BaseUri
   nameWithType: IAutomationManagementClient.BaseUri
   fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.BaseUri
-- uid: Uri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
   isExternal: true
   name: Uri
   nameWithType: Uri
-  fullName: Uri
+  fullName: System.Uri
 - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.Credentials*
   commentId: Overload:Microsoft.Azure.Management.Automation.AutomationManagementClient.Credentials
   isExternal: false
@@ -2089,11 +3310,19 @@ references:
   name: Credentials
   nameWithType: IAutomationManagementClient.Credentials
   fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.Credentials
-- uid: SubscriptionCloudCredentials
+- uid: Microsoft.Azure.SubscriptionCloudCredentials
+  commentId: T:Microsoft.Azure.SubscriptionCloudCredentials
+  parent: Microsoft.Azure
   isExternal: true
   name: SubscriptionCloudCredentials
   nameWithType: SubscriptionCloudCredentials
-  fullName: SubscriptionCloudCredentials
+  fullName: Microsoft.Azure.SubscriptionCloudCredentials
+- uid: Microsoft.Azure
+  commentId: N:Microsoft.Azure
+  isExternal: false
+  name: Microsoft.Azure
+  nameWithType: Microsoft.Azure
+  fullName: Microsoft.Azure
 - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.LongRunningOperationInitialTimeout*
   commentId: Overload:Microsoft.Azure.Management.Automation.AutomationManagementClient.LongRunningOperationInitialTimeout
   isExternal: false
@@ -2108,6 +3337,8 @@ references:
   nameWithType: IAutomationManagementClient.LongRunningOperationInitialTimeout
   fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.LongRunningOperationInitialTimeout
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -2604,31 +3835,42 @@ references:
   name: AutomationManagementClient
   nameWithType: AutomationManagementClient.AutomationManagementClient
   fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.AutomationManagementClient
-- uid: HttpClient
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
   isExternal: true
   name: HttpClient
   nameWithType: HttpClient
-  fullName: HttpClient
-- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone*
-  commentId: Overload:Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
   isExternal: false
-  name: Clone
-  nameWithType: AutomationManagementClient.Clone
-  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone
-- uid: ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
-  commentId: '!:ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}'
-  definition: ServiceClient`1
-  name: ServiceClient<AutomationManagementClient>
-  nameWithType: ServiceClient<AutomationManagementClient>
-  fullName: ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>
-  nameWithType.vb: ServiceClient(Of AutomationManagementClient)
-  fullname.vb: ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient)
-  name.vb: ServiceClient(Of AutomationManagementClient)
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+  commentId: M:Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}.Clone(Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient})
+  parent: Hyak.Common.ServiceClient{Microsoft.Azure.Management.Automation.AutomationManagementClient}
+  definition: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+  name: Clone(ServiceClient<AutomationManagementClient>)
+  nameWithType: ServiceClient<AutomationManagementClient>.Clone(ServiceClient<AutomationManagementClient>)
+  fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.Clone(Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>)
+  nameWithType.vb: ServiceClient(Of AutomationManagementClient).Clone(ServiceClient(Of AutomationManagementClient))
+  fullname.vb: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).Clone(Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient))
+  name.vb: Clone(ServiceClient(Of AutomationManagementClient))
   spec.csharp:
-  - uid: ServiceClient`1
+  - uid: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+    name: Clone
+    nameWithType: ServiceClient<AutomationManagementClient>.Clone
+    fullName: Hyak.Common.ServiceClient<Microsoft.Azure.Management.Automation.AutomationManagementClient>.Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
     name: ServiceClient
     nameWithType: ServiceClient
-    fullName: ServiceClient
+    fullName: Hyak.Common.ServiceClient
     isExternal: true
   - name: <
     nameWithType: <
@@ -2640,11 +3882,22 @@ references:
   - name: '>'
     nameWithType: '>'
     fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: ServiceClient`1
+  - uid: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+    name: Clone
+    nameWithType: ServiceClient(Of AutomationManagementClient).Clone
+    fullName: Hyak.Common.ServiceClient(Of Microsoft.Azure.Management.Automation.AutomationManagementClient).Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
     name: ServiceClient
     nameWithType: ServiceClient
-    fullName: ServiceClient
+    fullName: Hyak.Common.ServiceClient
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2656,42 +3909,73 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ServiceClient`1
-  commentId: '!:ServiceClient`1'
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone*
+  commentId: Overload:Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone
+  isExternal: false
+  name: Clone
+  nameWithType: AutomationManagementClient.Clone
+  fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.Clone
+- uid: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+  commentId: M:Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
   isExternal: true
-  name: ServiceClient<>
-  nameWithType: ServiceClient<>
-  fullName: ServiceClient<>
-  nameWithType.vb: ServiceClient(Of )
-  fullname.vb: ServiceClient(Of )
-  name.vb: ServiceClient(Of )
+  name: Clone(ServiceClient<T>)
+  nameWithType: ServiceClient<T>.Clone(ServiceClient<T>)
+  fullName: Hyak.Common.ServiceClient<T>.Clone(Hyak.Common.ServiceClient<T>)
+  nameWithType.vb: ServiceClient(Of T).Clone(ServiceClient(Of T))
+  fullname.vb: Hyak.Common.ServiceClient(Of T).Clone(Hyak.Common.ServiceClient(Of T))
+  name.vb: Clone(ServiceClient(Of T))
   spec.csharp:
-  - uid: ServiceClient`1
+  - uid: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+    name: Clone
+    nameWithType: ServiceClient<T>.Clone
+    fullName: Hyak.Common.ServiceClient<T>.Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
     name: ServiceClient
     nameWithType: ServiceClient
-    fullName: ServiceClient
+    fullName: Hyak.Common.ServiceClient
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: ServiceClient`1
+  - uid: Hyak.Common.ServiceClient`1.Clone(Hyak.Common.ServiceClient{`0})
+    name: Clone
+    nameWithType: ServiceClient(Of T).Clone
+    fullName: Hyak.Common.ServiceClient(Of T).Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Hyak.Common.ServiceClient`1
     name: ServiceClient
     nameWithType: ServiceClient
-    fullName: ServiceClient
+    fullName: Hyak.Common.ServiceClient
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: )
     nameWithType: )
     fullName: )
@@ -2701,15 +3985,15 @@ references:
   name: GetOperationResultStatusAsync
   nameWithType: AutomationManagementClient.GetOperationResultStatusAsync
   fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationResultStatusAsync
-- uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
-  commentId: M:Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
+- uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
   parent: Microsoft.Azure.Management.Automation.IAutomationManagementClient
   isExternal: true
   name: GetOperationResultStatusAsync(String, CancellationToken)
   nameWithType: IAutomationManagementClient.GetOperationResultStatusAsync(String, CancellationToken)
-  fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String, CancellationToken)
+  fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
+  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
     name: GetOperationResultStatusAsync
     nameWithType: IAutomationManagementClient.GetOperationResultStatusAsync
     fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync
@@ -2724,16 +4008,16 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: CancellationToken
+  - uid: System.Threading.CancellationToken
     name: CancellationToken
     nameWithType: CancellationToken
-    fullName: CancellationToken
+    fullName: System.Threading.CancellationToken
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,CancellationToken)
+  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync(System.String,System.Threading.CancellationToken)
     name: GetOperationResultStatusAsync
     nameWithType: IAutomationManagementClient.GetOperationResultStatusAsync
     fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationResultStatusAsync
@@ -2748,33 +4032,36 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: CancellationToken
+  - uid: System.Threading.CancellationToken
     name: CancellationToken
     nameWithType: CancellationToken
-    fullName: CancellationToken
+    fullName: System.Threading.CancellationToken
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: CancellationToken
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
   isExternal: true
   name: CancellationToken
   nameWithType: CancellationToken
-  fullName: CancellationToken
-- uid: Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}
-  commentId: '!:Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}'
-  definition: Task`1
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}
+  commentId: T:System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<LongRunningOperationResultResponse>
   nameWithType: Task<LongRunningOperationResultResponse>
-  fullName: Task<Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse>
+  fullName: System.Threading.Tasks.Task<Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse>
   nameWithType.vb: Task(Of LongRunningOperationResultResponse)
-  fullname.vb: Task(Of Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse)
+  fullname.vb: System.Threading.Tasks.Task(Of Microsoft.Azure.Management.Automation.Models.LongRunningOperationResultResponse)
   name.vb: Task(Of LongRunningOperationResultResponse)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -2787,10 +4074,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2802,59 +4089,72 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: false
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullname.vb: Task(Of )
-  name.vb: Task(Of )
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
 - uid: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync*
   commentId: Overload:Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync
   isExternal: false
   name: GetOperationStatusAsync
   nameWithType: AutomationManagementClient.GetOperationStatusAsync
   fullName: Microsoft.Azure.Management.Automation.AutomationManagementClient.GetOperationStatusAsync
-- uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
-  commentId: M:Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
+- uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
   parent: Microsoft.Azure.Management.Automation.IAutomationManagementClient
   isExternal: true
   name: GetOperationStatusAsync(String, CancellationToken)
   nameWithType: IAutomationManagementClient.GetOperationStatusAsync(String, CancellationToken)
-  fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String, CancellationToken)
+  fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
+  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
     name: GetOperationStatusAsync
     nameWithType: IAutomationManagementClient.GetOperationStatusAsync
     fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync
@@ -2869,16 +4169,16 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: CancellationToken
+  - uid: System.Threading.CancellationToken
     name: CancellationToken
     nameWithType: CancellationToken
-    fullName: CancellationToken
+    fullName: System.Threading.CancellationToken
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,CancellationToken)
+  - uid: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)
     name: GetOperationStatusAsync
     nameWithType: IAutomationManagementClient.GetOperationStatusAsync
     fullName: Microsoft.Azure.Management.Automation.IAutomationManagementClient.GetOperationStatusAsync
@@ -2893,28 +4193,29 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: CancellationToken
+  - uid: System.Threading.CancellationToken
     name: CancellationToken
     nameWithType: CancellationToken
-    fullName: CancellationToken
+    fullName: System.Threading.CancellationToken
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}
-  commentId: '!:Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}'
-  definition: Task`1
+- uid: System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}
+  commentId: T:System.Threading.Tasks.Task{Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<LongRunningOperationStatusResponse>
   nameWithType: Task<LongRunningOperationStatusResponse>
-  fullName: Task<Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse>
+  fullName: System.Threading.Tasks.Task<Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse>
   nameWithType.vb: Task(Of LongRunningOperationStatusResponse)
-  fullname.vb: Task(Of Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse)
+  fullname.vb: System.Threading.Tasks.Task(Of Microsoft.Azure.Management.Automation.Models.LongRunningOperationStatusResponse)
   name.vb: Task(Of LongRunningOperationStatusResponse)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -2927,10 +4228,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2951,20 +4252,21 @@ references:
   nameWithType.vb: AutomationManagementClient.ContinuationTokenHandler(Of T)
   fullname.vb: Microsoft.Azure.Management.Automation.AutomationManagementClient.ContinuationTokenHandler(Of T)
   name.vb: ContinuationTokenHandler(Of T)
-- uid: Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{{T}}}
-  commentId: '!:Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}}'
-  definition: Func`2
+- uid: System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{{T}}}
+  commentId: T:System.Func{System.String,Microsoft.Azure.Management.Automation.ResponseWithSkipToken{``0}}
+  parent: System
+  definition: System.Func`2
   name: Func<String, ResponseWithSkipToken<T>>
   nameWithType: Func<String, ResponseWithSkipToken<T>>
-  fullName: Func<System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken<T>>
+  fullName: System.Func<System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken<T>>
   nameWithType.vb: Func(Of String, ResponseWithSkipToken(Of T))
-  fullname.vb: Func(Of System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken(Of T))
+  fullname.vb: System.Func(Of System.String, Microsoft.Azure.Management.Automation.ResponseWithSkipToken(Of T))
   name.vb: Func(Of String, ResponseWithSkipToken(Of T))
   spec.csharp:
-  - uid: Func`2
+  - uid: System.Func`2
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: <
     nameWithType: <
@@ -2994,10 +4296,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Func`2
+  - uid: System.Func`2
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -3026,20 +4328,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: List{{T}}
-  commentId: '!:List{``0}'
-  definition: List`1
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
   name: List<T>
   nameWithType: List<T>
-  fullName: List<T>
+  fullName: System.Collections.Generic.List<T>
   nameWithType.vb: List(Of T)
-  fullname.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
   name.vb: List(Of T)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -3051,10 +4354,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -3065,93 +4368,99 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Func`2
-  commentId: '!:Func`2'
+- uid: System.Func`2
+  commentId: T:System.Func`2
   isExternal: true
-  name: Func<, >
-  nameWithType: Func<, >
-  fullName: Func<, >
-  nameWithType.vb: Func(Of , )
-  fullname.vb: Func(Of , )
-  name.vb: Func(Of , )
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullname.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
   spec.csharp:
-  - uid: Func`2
+  - uid: System.Func`2
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Func`2
+  - uid: System.Func`2
     name: Func
     nameWithType: Func
-    fullName: Func
+    fullName: System.Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
-- uid: List`1
-  commentId: '!:List`1'
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullname.vb: List(Of )
-  name.vb: List(Of )
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

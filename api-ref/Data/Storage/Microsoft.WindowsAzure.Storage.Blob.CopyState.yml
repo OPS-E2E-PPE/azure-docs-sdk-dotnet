@@ -33,12 +33,18 @@ items:
   summary: "\nRepresents the attributes of a copy operation.\n"
   example: []
   syntax:
-    content: 'public sealed class CopyState : object'
-    content.vb: >-
-      Public NotInheritable Class CopyState
-          Inherits Object
+    content: public sealed class CopyState
+    content.vb: Public NotInheritable Class CopyState
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -114,8 +120,8 @@ items:
     content.vb: Public ReadOnly Property CompletionTime As DateTimeOffset?
     parameters: []
     return:
-      type: System.Nullable{DateTimeOffset}
-      description: A <see cref="!:DateTimeOffset"></see> containing the completion time, or <code>null</code> if the operation has not completed.
+      type: System.Nullable{System.DateTimeOffset}
+      description: A <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref> containing the completion time, or <code>null</code> if the operation has not completed.
   overload: Microsoft.WindowsAzure.Storage.Blob.CopyState.CompletionTime*
   modifiers.csharp:
   - public
@@ -190,8 +196,8 @@ items:
     content.vb: Public ReadOnly Property Source As Uri
     parameters: []
     return:
-      type: Uri
-      description: A <see cref="!:System.Uri"></see> indicating the source of a copy operation, or <code>null</code>.
+      type: System.Uri
+      description: A <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> indicating the source of a copy operation, or <code>null</code>.
   overload: Microsoft.WindowsAzure.Storage.Blob.CopyState.Source*
   modifiers.csharp:
   - public
@@ -321,10 +327,297 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Blob
   fullName: Microsoft.WindowsAzure.Storage.Blob
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Blob.CopyState.CopyId*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.CopyState.CopyId
   isExternal: false
@@ -332,24 +625,34 @@ references:
   nameWithType: CopyState.CopyId
   fullName: Microsoft.WindowsAzure.Storage.Blob.CopyState.CopyId
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
 - uid: Microsoft.WindowsAzure.Storage.Blob.CopyState.CompletionTime*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.CopyState.CompletionTime
   isExternal: false
   name: CompletionTime
   nameWithType: CopyState.CompletionTime
   fullName: Microsoft.WindowsAzure.Storage.Blob.CopyState.CompletionTime
-- uid: System.Nullable{DateTimeOffset}
-  commentId: '!:System.Nullable{DateTimeOffset}'
+- uid: System.Nullable{System.DateTimeOffset}
+  commentId: T:System.Nullable{System.DateTimeOffset}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<DateTimeOffset>
   nameWithType: Nullable<DateTimeOffset>
-  fullName: System.Nullable<DateTimeOffset>
+  fullName: System.Nullable<System.DateTimeOffset>
   nameWithType.vb: Nullable(Of DateTimeOffset)
-  fullname.vb: System.Nullable(Of DateTimeOffset)
+  fullname.vb: System.Nullable(Of System.DateTimeOffset)
   name.vb: Nullable(Of DateTimeOffset)
   spec.csharp:
   - uid: System.Nullable`1
@@ -360,10 +663,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: DateTimeOffset
+  - uid: System.DateTimeOffset
     name: DateTimeOffset
     nameWithType: DateTimeOffset
-    fullName: DateTimeOffset
+    fullName: System.DateTimeOffset
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -377,22 +680,23 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: DateTimeOffset
+  - uid: System.DateTimeOffset
     name: DateTimeOffset
     nameWithType: DateTimeOffset
-    fullName: DateTimeOffset
+    fullName: System.DateTimeOffset
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullname.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -402,9 +706,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -417,9 +721,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
@@ -436,17 +740,19 @@ references:
   name: Status
   nameWithType: CopyState.Status
   fullName: Microsoft.WindowsAzure.Storage.Blob.CopyState.Status
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
 - uid: Microsoft.WindowsAzure.Storage.Blob.CopyState.Source*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.CopyState.Source
   isExternal: false
   name: Source
   nameWithType: CopyState.Source
   fullName: Microsoft.WindowsAzure.Storage.Blob.CopyState.Source
-- uid: Uri
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: Uri
 - uid: Microsoft.WindowsAzure.Storage.Blob.CopyState.BytesCopied*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.CopyState.BytesCopied
   isExternal: false
@@ -454,7 +760,8 @@ references:
   nameWithType: CopyState.BytesCopied
   fullName: Microsoft.WindowsAzure.Storage.Blob.CopyState.BytesCopied
 - uid: System.Nullable{System.Int64}
-  commentId: '!:System.Nullable{System.Int64}'
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Int64>
   nameWithType: Nullable<Int64>

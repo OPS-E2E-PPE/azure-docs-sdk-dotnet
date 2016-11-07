@@ -5,8 +5,8 @@ items:
   id: BlobRequest
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol
   children:
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},Stream)
-  - Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,Stream)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},System.IO.Stream)
+  - Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,System.IO.Stream)
   langs:
   - csharp
   - vb
@@ -28,12 +28,18 @@ items:
   summary: "\nProvides a set of helper methods for constructing a request against the Blob service.\n"
   example: []
   syntax:
-    content: 'public static class BlobRequest : object'
-    content.vb: >-
-      Public Module BlobRequest
-          Inherits Object
+    content: public static class BlobRequest
+    content.vb: Public Module BlobRequest
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - static
@@ -41,16 +47,16 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,Stream)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,Stream)
-  id: WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,Stream)
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,System.IO.Stream)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,System.IO.Stream)
+  id: WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies,System.IO.Stream)
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest
   langs:
   - csharp
   - vb
   name: WriteSharedAccessIdentifiers(SharedAccessBlobPolicies, Stream)
   nameWithType: BlobRequest.WriteSharedAccessIdentifiers(SharedAccessBlobPolicies, Stream)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies, Stream)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers(Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies, System.IO.Stream)
   type: Method
   source:
     remote:
@@ -73,7 +79,7 @@ items:
       type: Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies
       description: A collection of shared access policies.
     - id: outputStream
-      type: Stream
+      type: System.IO.Stream
       description: An output stream.
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers*
   modifiers.csharp:
@@ -82,16 +88,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},Stream)
-  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},Stream)
-  id: WriteBlockListBody(IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},Stream)
+- uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},System.IO.Stream)
+  commentId: M:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},System.IO.Stream)
+  id: WriteBlockListBody(System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem},System.IO.Stream)
   parent: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest
   langs:
   - csharp
   - vb
   name: WriteBlockListBody(IEnumerable<PutBlockListItem>, Stream)
   nameWithType: BlobRequest.WriteBlockListBody(IEnumerable<PutBlockListItem>, Stream)
-  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem>, Stream)
+  fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(System.Collections.Generic.IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem>, System.IO.Stream)
   type: Method
   source:
     remote:
@@ -111,10 +117,10 @@ items:
     content.vb: Public Shared Sub WriteBlockListBody(blocks As IEnumerable(Of PutBlockListItem), outputStream As Stream)
     parameters:
     - id: blocks
-      type: IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}
+      type: System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}
       description: An enumerable collection of <xref href="Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem" data-throw-if-not-resolved="false"></xref> objects.
     - id: outputStream
-      type: Stream
+      type: System.IO.Stream
       description: The stream to which the block list is written.
   overload: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody*
   nameWithType.vb: BlobRequest.WriteBlockListBody(IEnumerable(Of PutBlockListItem), Stream)
@@ -124,7 +130,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem), Stream)
+  fullName.vb: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody(System.Collections.Generic.IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem), System.IO.Stream)
   name.vb: WriteBlockListBody(IEnumerable(Of PutBlockListItem), Stream)
 references:
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol
@@ -134,10 +140,297 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Blob.Protocol
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers*
   commentId: Overload:Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteSharedAccessIdentifiers
   isExternal: false
@@ -151,17 +444,25 @@ references:
   name: SharedAccessBlobPolicies
   nameWithType: SharedAccessBlobPolicies
   fullName: Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicies
-- uid: Stream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
   isExternal: true
   name: Stream
   nameWithType: Stream
-  fullName: Stream
+  fullName: System.IO.Stream
 - uid: Microsoft.WindowsAzure.Storage.Blob
   commentId: N:Microsoft.WindowsAzure.Storage.Blob
   isExternal: false
   name: Microsoft.WindowsAzure.Storage.Blob
   nameWithType: Microsoft.WindowsAzure.Storage.Blob
   fullName: Microsoft.WindowsAzure.Storage.Blob
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem
   commentId: T:Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem
   isExternal: false
@@ -174,20 +475,21 @@ references:
   name: WriteBlockListBody
   nameWithType: BlobRequest.WriteBlockListBody
   fullName: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest.WriteBlockListBody
-- uid: IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}
-  commentId: '!:IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<PutBlockListItem>
   nameWithType: IEnumerable<PutBlockListItem>
-  fullName: IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem>
   nameWithType.vb: IEnumerable(Of PutBlockListItem)
-  fullname.vb: IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.Protocol.PutBlockListItem)
   name.vb: IEnumerable(Of PutBlockListItem)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -200,10 +502,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -215,41 +517,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullname.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

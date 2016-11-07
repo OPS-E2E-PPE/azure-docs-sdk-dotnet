@@ -6,7 +6,7 @@ items:
   parent: Microsoft.WindowsAzure.Storage.RetryPolicies
   children:
   - Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.CreateInstance
-  - Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,Exception,TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
+  - Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,System.Exception,System.TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
   langs:
   - csharp
   - vb
@@ -67,16 +67,16 @@ items:
       type: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy
       description: An <xref href="Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy" data-throw-if-not-resolved="false"></xref> object that represents the retry policy for the current request attempt.
   overload: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.CreateInstance*
-- uid: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,Exception,TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
-  commentId: M:Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,Exception,TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
-  id: ShouldRetry(System.Int32,System.Int32,Exception,TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
+- uid: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,System.Exception,System.TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
+  commentId: M:Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32,System.Int32,System.Exception,System.TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
+  id: ShouldRetry(System.Int32,System.Int32,System.Exception,System.TimeSpan@,Microsoft.WindowsAzure.Storage.OperationContext)
   parent: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy
   langs:
   - csharp
   - vb
   name: ShouldRetry(Int32, Int32, Exception, out TimeSpan, OperationContext)
   nameWithType: IRetryPolicy.ShouldRetry(Int32, Int32, Exception, out TimeSpan, OperationContext)
-  fullName: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32, System.Int32, Exception, out TimeSpan, Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32, System.Int32, System.Exception, out System.TimeSpan, Microsoft.WindowsAzure.Storage.OperationContext)
   type: Method
   source:
     remote:
@@ -102,11 +102,11 @@ items:
       type: System.Int32
       description: An integer containing the status code for the last operation.
     - id: lastException
-      type: Exception
-      description: An <see cref="!:Exception"></see> object that represents the last exception encountered.
+      type: System.Exception
+      description: An <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> object that represents the last exception encountered.
     - id: retryInterval
-      type: TimeSpan
-      description: A <see cref="!:TimeSpan"></see> indicating the interval to wait until the next retry.
+      type: System.TimeSpan
+      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> indicating the interval to wait until the next retry.
     - id: operationContext
       type: Microsoft.WindowsAzure.Storage.OperationContext
       description: An <xref href="Microsoft.WindowsAzure.Storage.OperationContext" data-throw-if-not-resolved="false"></xref> object that represents the context for the current operation.
@@ -115,7 +115,7 @@ items:
       description: <code>true</code> if the operation should be retried; otherwise, <code>false</code>.
   overload: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry*
   nameWithType.vb: IRetryPolicy.ShouldRetry(Int32, Int32, Exception, ByRef TimeSpan, OperationContext)
-  fullName.vb: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32, System.Int32, Exception, ByRef TimeSpan, Microsoft.WindowsAzure.Storage.OperationContext)
+  fullName.vb: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry(System.Int32, System.Int32, System.Exception, ByRef System.TimeSpan, Microsoft.WindowsAzure.Storage.OperationContext)
   name.vb: ShouldRetry(Int32, Int32, Exception, ByRef TimeSpan, OperationContext)
 references:
 - uid: Microsoft.WindowsAzure.Storage.RetryPolicies
@@ -137,6 +137,20 @@ references:
   name: CreateInstance
   nameWithType: IRetryPolicy.CreateInstance
   fullName: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.CreateInstance
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: Microsoft.WindowsAzure.Storage.OperationContext
   commentId: T:Microsoft.WindowsAzure.Storage.OperationContext
   parent: Microsoft.WindowsAzure.Storage
@@ -151,25 +165,25 @@ references:
   nameWithType: IRetryPolicy.ShouldRetry
   fullName: Microsoft.WindowsAzure.Storage.RetryPolicies.IRetryPolicy.ShouldRetry
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Exception
-  isExternal: true
-  name: Exception
-  nameWithType: Exception
-  fullName: Exception
-- uid: TimeSpan
-  isExternal: true
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: TimeSpan
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage
   commentId: N:Microsoft.WindowsAzure.Storage
   isExternal: false

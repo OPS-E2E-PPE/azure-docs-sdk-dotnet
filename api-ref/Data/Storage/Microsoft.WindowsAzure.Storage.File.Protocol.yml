@@ -4,8 +4,11 @@ items:
   commentId: N:Microsoft.WindowsAzure.Storage.File.Protocol
   id: Microsoft.WindowsAzure.Storage.File.Protocol
   children:
+  - Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpResponseParsers
+  - Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpWebRequestFactory
   - Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
   - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+  - Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpWebRequestFactory
   - Microsoft.WindowsAzure.Storage.File.Protocol.FileListingContext
   - Microsoft.WindowsAzure.Storage.File.Protocol.FileRangeWrite
   - Microsoft.WindowsAzure.Storage.File.Protocol.FileRequest
@@ -15,7 +18,10 @@ items:
   - Microsoft.WindowsAzure.Storage.File.Protocol.ListFileDirectoryEntry
   - Microsoft.WindowsAzure.Storage.File.Protocol.ListFileEntry
   - Microsoft.WindowsAzure.Storage.File.Protocol.ListFilesAndDirectoriesResponse
+  - Microsoft.WindowsAzure.Storage.File.Protocol.ListRangesResponse
   - Microsoft.WindowsAzure.Storage.File.Protocol.ListSharesResponse
+  - Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpResponseParsers
+  - Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpWebRequestFactory
   - Microsoft.WindowsAzure.Storage.File.Protocol.ShareStats
   langs:
   - csharp
@@ -27,18 +33,48 @@ items:
   assemblies:
   - Microsoft.WindowsAzure.Storage
 references:
-- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
-  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpResponseParsers
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpResponseParsers
   isExternal: false
-  name: FileErrorCodeStrings
-  nameWithType: FileErrorCodeStrings
-  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
+  name: DirectoryHttpResponseParsers
+  nameWithType: DirectoryHttpResponseParsers
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpResponseParsers
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpWebRequestFactory
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpWebRequestFactory
+  isExternal: false
+  name: DirectoryHttpWebRequestFactory
+  nameWithType: DirectoryHttpWebRequestFactory
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpWebRequestFactory
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
   commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
   isExternal: false
   name: FileHttpResponseParsers
   nameWithType: FileHttpResponseParsers
   fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpWebRequestFactory
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpWebRequestFactory
+  isExternal: false
+  name: FileHttpWebRequestFactory
+  nameWithType: FileHttpWebRequestFactory
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpWebRequestFactory
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpResponseParsers
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpResponseParsers
+  isExternal: false
+  name: ShareHttpResponseParsers
+  nameWithType: ShareHttpResponseParsers
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpResponseParsers
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpWebRequestFactory
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpWebRequestFactory
+  isExternal: false
+  name: ShareHttpWebRequestFactory
+  nameWithType: ShareHttpWebRequestFactory
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpWebRequestFactory
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
+  isExternal: false
+  name: FileErrorCodeStrings
+  nameWithType: FileErrorCodeStrings
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileListingContext
   commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.FileListingContext
   parent: Microsoft.WindowsAzure.Storage.File.Protocol
@@ -97,6 +133,12 @@ references:
   name: ListFilesAndDirectoriesResponse
   nameWithType: ListFilesAndDirectoriesResponse
   fullName: Microsoft.WindowsAzure.Storage.File.Protocol.ListFilesAndDirectoriesResponse
+- uid: Microsoft.WindowsAzure.Storage.File.Protocol.ListRangesResponse
+  commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.ListRangesResponse
+  isExternal: false
+  name: ListRangesResponse
+  nameWithType: ListRangesResponse
+  fullName: Microsoft.WindowsAzure.Storage.File.Protocol.ListRangesResponse
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ListSharesResponse
   commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.ListSharesResponse
   isExternal: false
@@ -105,6 +147,7 @@ references:
   fullName: Microsoft.WindowsAzure.Storage.File.Protocol.ListSharesResponse
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareStats
   commentId: T:Microsoft.WindowsAzure.Storage.File.Protocol.ShareStats
+  parent: Microsoft.WindowsAzure.Storage.File.Protocol
   isExternal: false
   name: ShareStats
   nameWithType: ShareStats

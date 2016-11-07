@@ -29,8 +29,18 @@ items:
   summary: "\nSpecifies which details to include when listing the containers in this storage account.\n"
   example: []
   syntax:
-    content: 'public enum ContainerListingDetails : int'
-    content.vb: Public Enum ContainerListingDetails As Integer
+    content: >-
+      [Flags]
+
+      public enum ContainerListingDetails
+    content.vb: >-
+      <Flags>
+
+      Public Enum ContainerListingDetails
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - enum
@@ -62,8 +72,7 @@ items:
   summary: "\nNo additional details.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Blob.ContainerListingDetails
   modifiers.csharp:
@@ -97,8 +106,7 @@ items:
   summary: "\nRetrieve container metadata.\n"
   example: []
   syntax:
-    content: Metadata = null
-    content.vb: Metadata = Nothing
+    content: Metadata = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Blob.ContainerListingDetails
   modifiers.csharp:
@@ -132,8 +140,7 @@ items:
   summary: "\nRetrieve all available details.\n"
   example: []
   syntax:
-    content: All = null
-    content.vb: All = Nothing
+    content: All = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Blob.ContainerListingDetails
   modifiers.csharp:

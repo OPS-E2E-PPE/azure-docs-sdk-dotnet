@@ -6,18 +6,18 @@ items:
   parent: Microsoft.ApplicationInsights.DataContracts
   children:
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor
-  - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,DateTimeOffset,TimeSpan,System.String,System.Boolean,System.String)
+  - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean,System.String)
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Context
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Duration
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Id
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Message
+  - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Microsoft#ApplicationInsights#Channel#ITelemetry#Sanitize
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Name
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Properties
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.RunLocation
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Sequence
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Success
-  - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
   - Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Timestamp
   langs:
   - csharp
@@ -40,16 +40,23 @@ items:
   summary: "\nTelemetry type used for availability test results.\nContains a time and message and optionally some additional metadata.\n"
   example: []
   syntax:
-    content: 'public sealed class AvailabilityTelemetry : object, ITelemetry, ISupportProperties'
+    content: 'public sealed class AvailabilityTelemetry : ITelemetry, ISupportProperties'
     content.vb: >-
       Public NotInheritable Class AvailabilityTelemetry
-          Inherits Object
           Implements ITelemetry, ISupportProperties
   inheritance:
   - System.Object
   implements:
   - Microsoft.ApplicationInsights.Channel.ITelemetry
   - Microsoft.ApplicationInsights.DataContracts.ISupportProperties
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - sealed
@@ -90,16 +97,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,DateTimeOffset,TimeSpan,System.String,System.Boolean,System.String)
-  commentId: M:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,DateTimeOffset,TimeSpan,System.String,System.Boolean,System.String)
-  id: '#ctor(System.String,DateTimeOffset,TimeSpan,System.String,System.Boolean,System.String)'
+- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean,System.String)
+  commentId: M:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.#ctor(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean,System.String)
+  id: '#ctor(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean,System.String)'
   parent: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry
   langs:
   - csharp
   - vb
   name: AvailabilityTelemetry(String, DateTimeOffset, TimeSpan, String, Boolean, String)
   nameWithType: AvailabilityTelemetry.AvailabilityTelemetry(String, DateTimeOffset, TimeSpan, String, Boolean, String)
-  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.AvailabilityTelemetry(System.String, DateTimeOffset, TimeSpan, System.String, System.Boolean, System.String)
+  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.AvailabilityTelemetry(System.String, System.DateTimeOffset, System.TimeSpan, System.String, System.Boolean, System.String)
   type: Constructor
   source:
     remote:
@@ -108,7 +115,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: .ctor
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -121,9 +128,9 @@ items:
     - id: name
       type: System.String
     - id: timeStamp
-      type: DateTimeOffset
+      type: System.DateTimeOffset
     - id: duration
-      type: TimeSpan
+      type: System.TimeSpan
     - id: runLocation
       type: System.String
     - id: success
@@ -153,7 +160,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Id
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 50
+    startLine: 48
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -166,43 +173,6 @@ items:
     return:
       type: System.String
   overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Id*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
-  commentId: P:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
-  id: TestTimeStamp
-  parent: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry
-  langs:
-  - csharp
-  - vb
-  name: TestTimeStamp
-  nameWithType: AvailabilityTelemetry.TestTimeStamp
-  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
-  type: Property
-  source:
-    remote:
-      path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-      branch: master
-      repo: https://github.com/Microsoft/ApplicationInsights-dotnet
-    id: TestTimeStamp
-    path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 59
-  assemblies:
-  - Microsoft.ApplicationInsights
-  namespace: Microsoft.ApplicationInsights.DataContracts
-  summary: "\nGets or sets date and time when the availability test was executed.\n"
-  example: []
-  syntax:
-    content: public DateTimeOffset TestTimeStamp { get; set; }
-    content.vb: Public Property TestTimeStamp As DateTimeOffset
-    parameters: []
-    return:
-      type: DateTimeOffset
-  overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp*
   modifiers.csharp:
   - public
   - get
@@ -227,7 +197,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Name
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 68
+    startLine: 57
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -264,7 +234,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Duration
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 77
+    startLine: 66
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -275,7 +245,7 @@ items:
     content.vb: Public Property Duration As TimeSpan
     parameters: []
     return:
-      type: TimeSpan
+      type: System.TimeSpan
   overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Duration*
   modifiers.csharp:
   - public
@@ -301,7 +271,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Success
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 93
+    startLine: 82
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -338,7 +308,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: RunLocation
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 102
+    startLine: 91
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -375,7 +345,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Message
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 111
+    startLine: 100
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -412,7 +382,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Sequence
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 120
+    startLine: 109
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -451,7 +421,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Context
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 125
+    startLine: 114
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -490,7 +460,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Properties
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 133
+    startLine: 122
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -501,10 +471,47 @@ items:
     content.vb: Public ReadOnly Property Properties As IDictionary(Of String, String)
     parameters: []
     return:
-      type: IDictionary{System.String,System.String}
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
   overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Properties*
   implements:
   - Microsoft.ApplicationInsights.DataContracts.ISupportProperties.Properties
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
+  commentId: P:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
+  id: Metrics
+  parent: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry
+  langs:
+  - csharp
+  - vb
+  name: Metrics
+  nameWithType: AvailabilityTelemetry.Metrics
+  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
+  type: Property
+  source:
+    remote:
+      path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
+      branch: master
+      repo: https://github.com/Microsoft/ApplicationInsights-dotnet
+    id: Metrics
+    path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
+    startLine: 130
+  assemblies:
+  - Microsoft.ApplicationInsights
+  namespace: Microsoft.ApplicationInsights.DataContracts
+  summary: "\nGets a dictionary of application-defined event metrics.\n"
+  example: []
+  syntax:
+    content: public IDictionary<string, double> Metrics { get; }
+    content.vb: Public ReadOnly Property Metrics As IDictionary(Of String, Double)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Double}
+  overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics*
   modifiers.csharp:
   - public
   - get
@@ -529,7 +536,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Timestamp
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 141
+    startLine: 138
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -540,7 +547,7 @@ items:
     content.vb: Public Property Timestamp As DateTimeOffset
     parameters: []
     return:
-      type: DateTimeOffset
+      type: System.DateTimeOffset
   overload: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Timestamp*
   implements:
   - Microsoft.ApplicationInsights.Channel.ITelemetry.Timestamp
@@ -569,7 +576,7 @@ items:
       repo: https://github.com/Microsoft/ApplicationInsights-dotnet
     id: Microsoft.ApplicationInsights.Channel.ITelemetry.Sanitize
     path: src/Core/Managed/Shared/DataContracts/AvailabilityTelemetry.cs
-    startLine: 149
+    startLine: 146
   assemblies:
   - Microsoft.ApplicationInsights
   namespace: Microsoft.ApplicationInsights.DataContracts
@@ -591,6 +598,8 @@ references:
   nameWithType: Microsoft.ApplicationInsights.DataContracts
   fullName: Microsoft.ApplicationInsights.DataContracts
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -609,6 +618,291 @@ references:
   name: ISupportProperties
   nameWithType: ISupportProperties
   fullName: Microsoft.ApplicationInsights.DataContracts.ISupportProperties
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.ApplicationInsights.Channel
   commentId: N:Microsoft.ApplicationInsights.Channel
   isExternal: false
@@ -629,21 +923,29 @@ references:
   nameWithType: AvailabilityTelemetry.AvailabilityTelemetry
   fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.AvailabilityTelemetry
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: DateTimeOffset
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
   isExternal: true
   name: DateTimeOffset
   nameWithType: DateTimeOffset
-  fullName: DateTimeOffset
-- uid: TimeSpan
+  fullName: System.DateTimeOffset
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
   isExternal: true
   name: TimeSpan
   nameWithType: TimeSpan
-  fullName: TimeSpan
+  fullName: System.TimeSpan
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
@@ -654,12 +956,6 @@ references:
   name: Id
   nameWithType: AvailabilityTelemetry.Id
   fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Id
-- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp*
-  commentId: Overload:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
-  isExternal: false
-  name: TestTimeStamp
-  nameWithType: AvailabilityTelemetry.TestTimeStamp
-  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.TestTimeStamp
 - uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Name*
   commentId: Overload:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Name
   isExternal: false
@@ -736,20 +1032,21 @@ references:
   name: Properties
   nameWithType: ISupportProperties.Properties
   fullName: Microsoft.ApplicationInsights.DataContracts.ISupportProperties.Properties
-- uid: IDictionary{System.String,System.String}
-  commentId: '!:IDictionary{System.String,System.String}'
-  definition: IDictionary`2
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
   name: IDictionary<String, String>
   nameWithType: IDictionary<String, String>
-  fullName: IDictionary<System.String, System.String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
   nameWithType.vb: IDictionary(Of String, String)
-  fullname.vb: IDictionary(Of System.String, System.String)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
   name.vb: IDictionary(Of String, String)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -771,10 +1068,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -795,53 +1092,126 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IDictionary`2
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
   isExternal: true
-  name: IDictionary<, >
-  nameWithType: IDictionary<, >
-  fullName: IDictionary<, >
-  nameWithType.vb: IDictionary(Of , )
-  fullname.vb: IDictionary(Of , )
-  name.vb: IDictionary(Of , )
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
   spec.csharp:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IDictionary`2
+  - uid: System.Collections.Generic.IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: IDictionary
+    fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics*
+  commentId: Overload:Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
+  isExternal: false
+  name: Metrics
+  nameWithType: AvailabilityTelemetry.Metrics
+  fullName: Microsoft.ApplicationInsights.DataContracts.AvailabilityTelemetry.Metrics
+- uid: System.Collections.Generic.IDictionary{System.String,System.Double}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, Double>
+  nameWithType: IDictionary<String, Double>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.Double>
+  nameWithType.vb: IDictionary(Of String, Double)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.Double)
+  name.vb: IDictionary(Of String, Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )

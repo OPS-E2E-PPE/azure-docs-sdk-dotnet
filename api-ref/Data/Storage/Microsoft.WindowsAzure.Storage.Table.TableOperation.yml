@@ -12,9 +12,9 @@ items:
   - Microsoft.WindowsAzure.Storage.Table.TableOperation.InsertOrReplace(Microsoft.WindowsAzure.Storage.Table.ITableEntity)
   - Microsoft.WindowsAzure.Storage.Table.TableOperation.Merge(Microsoft.WindowsAzure.Storage.Table.ITableEntity)
   - Microsoft.WindowsAzure.Storage.Table.TableOperation.Replace(Microsoft.WindowsAzure.Storage.Table.ITableEntity)
-  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,List{System.String})
-  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,List{System.String})
-  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},List{System.String})
+  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,System.Collections.Generic.List{System.String})
+  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},System.Collections.Generic.List{System.String})
+  - Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,System.Collections.Generic.List{System.String})
   langs:
   - csharp
   - vb
@@ -24,24 +24,30 @@ items:
   type: Class
   source:
     remote:
-      path: Lib/WindowsRuntime/Table/TableOperation.cs
+      path: Lib/Common/Table/TableOperation.Common.cs
       branch: master
       repo: https://github.com/Azure/azure-storage-net
     id: TableOperation
-    path: Lib/WindowsRuntime/Table/TableOperation.cs
-    startLine: 39
+    path: Lib/Common/Table/TableOperation.Common.cs
+    startLine: 31
   assemblies:
   - Microsoft.WindowsAzure.Storage
   namespace: Microsoft.WindowsAzure.Storage.Table
   summary: "\nRepresents a single table operation.\n"
   example: []
   syntax:
-    content: 'public class TableOperation : object'
-    content.vb: >-
-      Public Class TableOperation
-          Inherits Object
+    content: public class TableOperation
+    content.vb: Public Class TableOperation
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -338,16 +344,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,List{System.String})
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,List{System.String})
-  id: Retrieve``1(System.String,System.String,List{System.String})
+- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,System.Collections.Generic.List{System.String})
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,System.Collections.Generic.List{System.String})
+  id: Retrieve``1(System.String,System.String,System.Collections.Generic.List{System.String})
   parent: Microsoft.WindowsAzure.Storage.Table.TableOperation
   langs:
   - csharp
   - vb
   name: Retrieve<TElement>(String, String, List<String>)
   nameWithType: TableOperation.Retrieve<TElement>(String, String, List<String>)
-  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve<TElement>(System.String, System.String, List<System.String>)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve<TElement>(System.String, System.String, System.Collections.Generic.List<System.String>)
   type: Method
   source:
     remote:
@@ -373,7 +379,7 @@ items:
       type: System.String
       description: A string containing the row key of the entity to retrieve.
     - id: selectColumns
-      type: List{System.String}
+      type: System.Collections.Generic.List{System.String}
       description: List of column names for projection.
     typeParameters:
     - id: TElement
@@ -389,18 +395,18 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(Of TElement)(System.String, System.String, List(Of System.String))
+  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(Of TElement)(System.String, System.String, System.Collections.Generic.List(Of System.String))
   name.vb: Retrieve(Of TElement)(String, String, List(Of String))
-- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},List{System.String})
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},List{System.String})
-  id: Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},List{System.String})
+- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},System.Collections.Generic.List{System.String})
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},System.Collections.Generic.List{System.String})
+  id: Retrieve``1(System.String,System.String,Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0},System.Collections.Generic.List{System.String})
   parent: Microsoft.WindowsAzure.Storage.Table.TableOperation
   langs:
   - csharp
   - vb
   name: Retrieve<TResult>(String, String, EntityResolver<TResult>, List<String>)
   nameWithType: TableOperation.Retrieve<TResult>(String, String, EntityResolver<TResult>, List<String>)
-  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve<TResult>(System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EntityResolver<TResult>, List<System.String>)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve<TResult>(System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EntityResolver<TResult>, System.Collections.Generic.List<System.String>)
   type: Method
   source:
     remote:
@@ -429,7 +435,7 @@ items:
       type: Microsoft.WindowsAzure.Storage.Table.EntityResolver{{TResult}}
       description: The <xref href="Microsoft.WindowsAzure.Storage.Table.EntityResolver%601" data-throw-if-not-resolved="false"></xref> implementation to project the entity to retrieve as a particular type in the result.
     - id: selectedColumns
-      type: List{System.String}
+      type: System.Collections.Generic.List{System.String}
       description: List of column names for projection.
     typeParameters:
     - id: TResult
@@ -445,18 +451,18 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(Of TResult)(System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EntityResolver(Of TResult), List(Of System.String))
+  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(Of TResult)(System.String, System.String, Microsoft.WindowsAzure.Storage.Table.EntityResolver(Of TResult), System.Collections.Generic.List(Of System.String))
   name.vb: Retrieve(Of TResult)(String, String, EntityResolver(Of TResult), List(Of String))
-- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,List{System.String})
-  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,List{System.String})
-  id: Retrieve(System.String,System.String,List{System.String})
+- uid: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,System.Collections.Generic.List{System.String})
+  commentId: M:Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String,System.String,System.Collections.Generic.List{System.String})
+  id: Retrieve(System.String,System.String,System.Collections.Generic.List{System.String})
   parent: Microsoft.WindowsAzure.Storage.Table.TableOperation
   langs:
   - csharp
   - vb
   name: Retrieve(String, String, List<String>)
   nameWithType: TableOperation.Retrieve(String, String, List<String>)
-  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String, System.String, List<System.String>)
+  fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String, System.String, System.Collections.Generic.List<System.String>)
   type: Method
   source:
     remote:
@@ -482,7 +488,7 @@ items:
       type: System.String
       description: A string containing the row key of the entity to be retrieved.
     - id: selectedColumns
-      type: List{System.String}
+      type: System.Collections.Generic.List{System.String}
       description: List of column names for projection.
     return:
       type: Microsoft.WindowsAzure.Storage.Table.TableOperation
@@ -495,7 +501,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String, System.String, List(Of System.String))
+  fullName.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(System.String, System.String, System.Collections.Generic.List(Of System.String))
   name.vb: Retrieve(String, String, List(Of String))
 references:
 - uid: Microsoft.WindowsAzure.Storage.Table
@@ -505,10 +511,297 @@ references:
   nameWithType: Microsoft.WindowsAzure.Storage.Table
   fullName: Microsoft.WindowsAzure.Storage.Table
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Microsoft.WindowsAzure.Storage.Table.ITableEntity
   commentId: T:Microsoft.WindowsAzure.Storage.Table.ITableEntity
   parent: Microsoft.WindowsAzure.Storage.Table
@@ -536,6 +829,8 @@ references:
   nameWithType: TableOperation.Insert
   fullName: Microsoft.WindowsAzure.Storage.Table.TableOperation.Insert
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
@@ -574,24 +869,27 @@ references:
   fullname.vb: Microsoft.WindowsAzure.Storage.Table.TableOperation.Retrieve(Of TElement)
   name.vb: Retrieve(Of TElement)
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: List{System.String}
-  commentId: '!:List{System.String}'
-  definition: List`1
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
   name: List<String>
   nameWithType: List<String>
-  fullName: List<System.String>
+  fullName: System.Collections.Generic.List<System.String>
   nameWithType.vb: List(Of String)
-  fullname.vb: List(Of System.String)
+  fullname.vb: System.Collections.Generic.List(Of System.String)
   name.vb: List(Of String)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -605,10 +903,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -621,44 +919,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: List`1
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullname.vb: List(Of )
-  name.vb: List(Of )
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Microsoft.WindowsAzure.Storage.Table.EntityResolver`1
   commentId: T:Microsoft.WindowsAzure.Storage.Table.EntityResolver`1
   isExternal: false
@@ -697,7 +1002,7 @@ references:
     nameWithType: )
     fullName: )
 - uid: Microsoft.WindowsAzure.Storage.Table.EntityResolver{{TResult}}
-  commentId: T:Microsoft.WindowsAzure.Storage.Table.EntityResolver{``1}
+  commentId: T:Microsoft.WindowsAzure.Storage.Table.EntityResolver{``0}
   parent: Microsoft.WindowsAzure.Storage.Table
   definition: Microsoft.WindowsAzure.Storage.Table.EntityResolver`1
   name: EntityResolver<TResult>

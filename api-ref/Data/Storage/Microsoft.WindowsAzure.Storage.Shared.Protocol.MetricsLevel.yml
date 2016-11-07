@@ -29,8 +29,8 @@ items:
   summary: "\nEnumeration representing the state of metrics collection in a service.\n"
   example: []
   syntax:
-    content: 'public enum MetricsLevel : int'
-    content.vb: Public Enum MetricsLevel As Integer
+    content: public enum MetricsLevel
+    content.vb: Public Enum MetricsLevel
   modifiers.csharp:
   - public
   - enum
@@ -62,8 +62,7 @@ items:
   summary: "\nMetrics collection is disabled.\n"
   example: []
   syntax:
-    content: None = null
-    content.vb: None = Nothing
+    content: None = 0
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.MetricsLevel
   modifiers.csharp:
@@ -97,8 +96,7 @@ items:
   summary: "\nService-level metrics collection is enabled.\n"
   example: []
   syntax:
-    content: Service = null
-    content.vb: Service = Nothing
+    content: Service = 1
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.MetricsLevel
   modifiers.csharp:
@@ -132,8 +130,7 @@ items:
   summary: "\nService-level and API metrics collection are enabled.\n"
   example: []
   syntax:
-    content: ServiceAndApi = null
-    content.vb: ServiceAndApi = Nothing
+    content: ServiceAndApi = 2
     return:
       type: Microsoft.WindowsAzure.Storage.Shared.Protocol.MetricsLevel
   modifiers.csharp:

@@ -10,10 +10,10 @@
     name: CloudStorageAccount
   - uid: Microsoft.WindowsAzure.Storage.DoesServiceRequestAttribute
     name: DoesServiceRequestAttribute
-  - uid: Microsoft.WindowsAzure.Storage.ExceptionInfo
-    name: ExceptionInfo
   - uid: Microsoft.WindowsAzure.Storage.IBufferManager
     name: IBufferManager
+  - uid: Microsoft.WindowsAzure.Storage.ICancellableAsyncResult
+    name: ICancellableAsyncResult
   - uid: Microsoft.WindowsAzure.Storage.IContinuationToken
     name: IContinuationToken
   - uid: Microsoft.WindowsAzure.Storage.IPAddressOrRange
@@ -51,11 +51,33 @@
     name: StorageLocation
   - uid: Microsoft.WindowsAzure.Storage.StorageUri
     name: StorageUri
+- uid: Microsoft.WindowsAzure.Storage.Analytics
+  name: Microsoft.WindowsAzure.Storage.Analytics
+  items:
+  - uid: Microsoft.WindowsAzure.Storage.Analytics.CapacityEntity
+    name: CapacityEntity
+  - uid: Microsoft.WindowsAzure.Storage.Analytics.CloudAnalyticsClient
+    name: CloudAnalyticsClient
+  - uid: Microsoft.WindowsAzure.Storage.Analytics.LogRecord
+    name: LogRecord
+  - uid: Microsoft.WindowsAzure.Storage.Analytics.MetricsEntity
+    name: MetricsEntity
 - uid: Microsoft.WindowsAzure.Storage.Auth
   name: Microsoft.WindowsAzure.Storage.Auth
   items:
   - uid: Microsoft.WindowsAzure.Storage.Auth.StorageCredentials
     name: StorageCredentials
+- uid: Microsoft.WindowsAzure.Storage.Auth.Protocol
+  name: Microsoft.WindowsAzure.Storage.Auth.Protocol
+  items:
+  - uid: Microsoft.WindowsAzure.Storage.Auth.Protocol.IAuthenticationHandler
+    name: IAuthenticationHandler
+  - uid: Microsoft.WindowsAzure.Storage.Auth.Protocol.NoOpAuthenticationHandler
+    name: NoOpAuthenticationHandler
+  - uid: Microsoft.WindowsAzure.Storage.Auth.Protocol.SharedKeyAuthenticationHandler
+    name: SharedKeyAuthenticationHandler
+  - uid: Microsoft.WindowsAzure.Storage.Auth.Protocol.SharedKeyLiteAuthenticationHandler
+    name: SharedKeyLiteAuthenticationHandler
 - uid: Microsoft.WindowsAzure.Storage.Blob
   name: Microsoft.WindowsAzure.Storage.Blob
   items:
@@ -67,6 +89,8 @@
     name: BlobContainerPublicAccessType
   - uid: Microsoft.WindowsAzure.Storage.Blob.BlobContinuationToken
     name: BlobContinuationToken
+  - uid: Microsoft.WindowsAzure.Storage.Blob.BlobEncryptionPolicy
+    name: BlobEncryptionPolicy
   - uid: Microsoft.WindowsAzure.Storage.Blob.BlobListingDetails
     name: BlobListingDetails
   - uid: Microsoft.WindowsAzure.Storage.Blob.BlobProperties
@@ -144,12 +168,16 @@
     name: BlobErrorCodeStrings
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobHttpResponseParsers
     name: BlobHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobHttpWebRequestFactory
+    name: BlobHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobListingContext
     name: BlobListingContext
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.BlobRequest
     name: BlobRequest
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpResponseParsers
     name: ContainerHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.ContainerHttpWebRequestFactory
+    name: ContainerHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.GetBlockListResponse
     name: GetBlockListResponse
   - uid: Microsoft.WindowsAzure.Storage.Blob.Protocol.GetPageDiffRangesResponse
@@ -183,6 +211,19 @@
     name: SyncMemoryStream
   - uid: Microsoft.WindowsAzure.Storage.Core.UriQueryBuilder
     name: UriQueryBuilder
+- uid: Microsoft.WindowsAzure.Storage.Core.Auth
+  name: Microsoft.WindowsAzure.Storage.Core.Auth
+  items:
+  - uid: Microsoft.WindowsAzure.Storage.Core.Auth.ICanonicalizer
+    name: ICanonicalizer
+  - uid: Microsoft.WindowsAzure.Storage.Core.Auth.SharedKeyCanonicalizer
+    name: SharedKeyCanonicalizer
+  - uid: Microsoft.WindowsAzure.Storage.Core.Auth.SharedKeyLiteCanonicalizer
+    name: SharedKeyLiteCanonicalizer
+  - uid: Microsoft.WindowsAzure.Storage.Core.Auth.SharedKeyLiteTableCanonicalizer
+    name: SharedKeyLiteTableCanonicalizer
+  - uid: Microsoft.WindowsAzure.Storage.Core.Auth.SharedKeyTableCanonicalizer
+    name: SharedKeyTableCanonicalizer
 - uid: Microsoft.WindowsAzure.Storage.File
   name: Microsoft.WindowsAzure.Storage.File
   items:
@@ -231,10 +272,16 @@
 - uid: Microsoft.WindowsAzure.Storage.File.Protocol
   name: Microsoft.WindowsAzure.Storage.File.Protocol
   items:
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpResponseParsers
+    name: DirectoryHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.DirectoryHttpWebRequestFactory
+    name: DirectoryHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileErrorCodeStrings
     name: FileErrorCodeStrings
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpResponseParsers
     name: FileHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileHttpWebRequestFactory
+    name: FileHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileListingContext
     name: FileListingContext
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.FileRangeWrite
@@ -253,8 +300,14 @@
     name: ListFileEntry
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ListFilesAndDirectoriesResponse
     name: ListFilesAndDirectoriesResponse
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ListRangesResponse
+    name: ListRangesResponse
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ListSharesResponse
     name: ListSharesResponse
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpResponseParsers
+    name: ShareHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareHttpWebRequestFactory
+    name: ShareHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.File.Protocol.ShareStats
     name: ShareStats
 - uid: Microsoft.WindowsAzure.Storage.Queue
@@ -270,6 +323,8 @@
     name: MessageUpdateFields
   - uid: Microsoft.WindowsAzure.Storage.Queue.QueueContinuationToken
     name: QueueContinuationToken
+  - uid: Microsoft.WindowsAzure.Storage.Queue.QueueEncryptionPolicy
+    name: QueueEncryptionPolicy
   - uid: Microsoft.WindowsAzure.Storage.Queue.QueueRequestOptions
     name: QueueRequestOptions
   - uid: Microsoft.WindowsAzure.Storage.Queue.QueueResultSegment
@@ -293,6 +348,8 @@
     name: QueueErrorCodeStrings
   - uid: Microsoft.WindowsAzure.Storage.Queue.Protocol.QueueHttpResponseParsers
     name: QueueHttpResponseParsers
+  - uid: Microsoft.WindowsAzure.Storage.Queue.Protocol.QueueHttpWebRequestFactory
+    name: QueueHttpWebRequestFactory
   - uid: Microsoft.WindowsAzure.Storage.Queue.Protocol.QueueListingContext
     name: QueueListingContext
   - uid: Microsoft.WindowsAzure.Storage.Queue.Protocol.QueueListingDetails
@@ -359,15 +416,14 @@
     name: MetricsLevel
   - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.MetricsProperties
     name: MetricsProperties
-  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ResponseParsingBase`1
-    name: ResponseParsingBase<T>
-    name.vb: ResponseParsingBase(Of T)
   - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceProperties
     name: ServiceProperties
   - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.ServiceStats
     name: ServiceStats
   - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.StorageErrorCodeStrings
     name: StorageErrorCodeStrings
+  - uid: Microsoft.WindowsAzure.Storage.Shared.Protocol.StorageService
+    name: StorageService
 - uid: Microsoft.WindowsAzure.Storage.Table
   name: Microsoft.WindowsAzure.Storage.Table
   items:
@@ -379,6 +435,8 @@
     name: DynamicTableEntity
   - uid: Microsoft.WindowsAzure.Storage.Table.EdmType
     name: EdmType
+  - uid: Microsoft.WindowsAzure.Storage.Table.EncryptPropertyAttribute
+    name: EncryptPropertyAttribute
   - uid: Microsoft.WindowsAzure.Storage.Table.EntityProperty
     name: EntityProperty
   - uid: Microsoft.WindowsAzure.Storage.Table.EntityResolver`1
@@ -400,6 +458,8 @@
     name: TableBatchOperation
   - uid: Microsoft.WindowsAzure.Storage.Table.TableContinuationToken
     name: TableContinuationToken
+  - uid: Microsoft.WindowsAzure.Storage.Table.TableEncryptionPolicy
+    name: TableEncryptionPolicy
   - uid: Microsoft.WindowsAzure.Storage.Table.TableEntity
     name: TableEntity
   - uid: Microsoft.WindowsAzure.Storage.Table.TableOperation
@@ -417,8 +477,6 @@
   - uid: Microsoft.WindowsAzure.Storage.Table.TableQuery`1
     name: TableQuery<TElement>
     name.vb: TableQuery(Of TElement)
-  - uid: Microsoft.WindowsAzure.Storage.Table.TableQuerySegment
-    name: TableQuerySegment
   - uid: Microsoft.WindowsAzure.Storage.Table.TableQuerySegment`1
     name: TableQuerySegment<TElement>
     name.vb: TableQuerySegment(Of TElement)
@@ -430,10 +488,33 @@
     name: TableResultSegment
   - uid: Microsoft.WindowsAzure.Storage.Table.TableStorageModel
     name: TableStorageModel
+- uid: Microsoft.WindowsAzure.Storage.Table.DataServices
+  name: Microsoft.WindowsAzure.Storage.Table.DataServices
+  items:
+  - uid: Microsoft.WindowsAzure.Storage.Table.DataServices.TableServiceContext
+    name: TableServiceContext
+  - uid: Microsoft.WindowsAzure.Storage.Table.DataServices.TableServiceEntity
+    name: TableServiceEntity
+  - uid: Microsoft.WindowsAzure.Storage.Table.DataServices.TableServiceExtensions
+    name: TableServiceExtensions
+  - uid: Microsoft.WindowsAzure.Storage.Table.DataServices.TableServiceQuery`1
+    name: TableServiceQuery<TElement>
+    name.vb: TableServiceQuery(Of TElement)
 - uid: Microsoft.WindowsAzure.Storage.Table.Protocol
   name: Microsoft.WindowsAzure.Storage.Table.Protocol
   items:
+  - uid: Microsoft.WindowsAzure.Storage.Table.Protocol.TableConstants
+    name: TableConstants
   - uid: Microsoft.WindowsAzure.Storage.Table.Protocol.TableErrorCodeStrings
     name: TableErrorCodeStrings
+  - uid: Microsoft.WindowsAzure.Storage.Table.Protocol.TableHttpWebRequestFactory
+    name: TableHttpWebRequestFactory
+  - uid: Microsoft.WindowsAzure.Storage.Table.Protocol.TableHttpWebResponseParsers
+    name: TableHttpWebResponseParsers
   - uid: Microsoft.WindowsAzure.Storage.Table.Protocol.TableRequest
     name: TableRequest
+- uid: Microsoft.WindowsAzure.Storage.Table.Queryable
+  name: Microsoft.WindowsAzure.Storage.Table.Queryable
+  items:
+  - uid: Microsoft.WindowsAzure.Storage.Table.Queryable.TableQueryableExtensions
+    name: TableQueryableExtensions
