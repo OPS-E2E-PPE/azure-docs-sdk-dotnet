@@ -1,20 +1,27 @@
 - name: Reference
   uid: azure.net.sdk.landingPage.reference
   landingPageType: Root
+  expanded: true
   items:
-  
   - name: Active Directory
     href: ~/api/overview/azure/activedirectory.md
     uid: azure.net.sdk.landingPage.services.ActiveDirectory
-    landingPageType: Service
-    children:
-    - 'Microsoft.Identity*'
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.ActiveDirectory.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Identity*'
   - name: App Service
     uid: azure.net.sdk.landingPage.services.AppService
-    landingPageType: Service
-    children:
-    - 'Microsoft.Azure.Management.AppService*'
-    - 'Microsoft.Azure.Management.WebSites*'
+    href: ~/api/overview/azure/appservice.md
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.AppService.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.AppService*'
+      - 'Microsoft.Azure.Management.WebSites*'
   - name: Automation
     uid: azure.net.sdk.landingPage.services.Automation
     landingPageType: Service
@@ -65,6 +72,15 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Cdn*'
+  - name: Cosmos DB
+    uid: azure.net.sdk.landingPage.services.CosmosDB
+    landingPageType: Service
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.CosmosDB.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Documents*'
   - name: Data Factories
     uid: azure.net.sdk.landingPage.services.DataFactories
     landingPageType: Service
@@ -74,6 +90,15 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.DataFactories*'
+  - name: Data Lake Analytics
+    uid: azure.net.sdk.landingPage.services.DataLakeAnalytics
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.DataLakeAnalytics.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.DataLake.Analytics*'
   - name: Data Lake Store
     uid: azure.net.sdk.landingPage.services.DataLake
     landingPageType: Service
@@ -180,13 +205,22 @@
       landingPageType: Service
       children:
       - 'Microsoft.WindowsAzure.MediaServices*'
+  - name: Mobile Apps
+    uid: azure.net.sdk.landingPage.services.mobileapps
+    landingPageType: Service
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.mobileapps.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Mobile*'
+      - 'Microsoft.WindowsAzure.MobileServices*'
+      - 'System.Web.http*'
   - name: MySQL
     href: ~/api/overview/azure/mysql.md
     uid: azure.net.sdk.landingpage.services.MySQL
-    landingPageType: Service
     items: 
     - name: Client
-      href: ~/api/overview/azure/mysql.md
       uid: azure.net.sdk.landingpage.services.MySQL.Client
       landingPageType: Service
   - name: Network
@@ -215,10 +249,8 @@
   - name: PostgreSQL
     href: ~/api/overview/azure/postgresql.md
     uid: azure.net.sdk.landingpage.services.PostgreSQL
-    landingPageType: Service
     items: 
     - name: Client
-      href: ~/api/overview/azure/postgresql.md
       uid: azure.net.sdk.landingpage.services.PostgreSQL.Client
       landingPageType: Service
   - name: Power BI
@@ -295,6 +327,7 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.ServiceBus*'
+      - 'Microsoft.Azure.Management.Fluent.ServiceBus.*'
     - name: Client
       uid: azure.net.sdk.landingPage.services.ServiceBus.Client
       landingPageType: Service
@@ -314,7 +347,7 @@
       - 'Microsoft.Xml.Serialization.GeneratedAssembly'
   - name: SQL
     uid: azure.net.sdk.landingPage.services.SQL
-    landingPageType: Service
+    href: ~/api/overview/azure/sql.md
     items:
     - name: Management
       uid: azure.net.sdk.landingPage.services.SQL.Management
@@ -329,10 +362,18 @@
       - 'System.Data.Sql*'
   - name: Storage
     uid: azure.net.sdk.landingPage.services.Storage
-    landingPageType: Service
-    children:
-    - 'Microsoft.Azure.Management.Storage*'
-    - 'Microsoft.WindowsAzure.Storage*'
+    href: ~/api/overview/azure/storage.md
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.Storage.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.WindowsAzure.Storage*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Storage.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Storage*'
   - name: Stream Analytics
     uid: azure.net.sdk.landingPage.services.StreamAnalytics
     landingPageType: Service
@@ -353,9 +394,13 @@
       - 'Microsoft.Azure.Management.TrafficManager*'
   - name: Virtual Machines
     uid: azure.net.sdk.landingPage.services.VirtualMachines
-    landingPageType: Service
-    children:
-    - 'Microsoft.Azure.Management.Compute*'
+    href: ~/api/overview/azure/virtualmachines.md
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.VirtualMachines.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Compute*'
   - name: Other
     uid: azure.net.sdk.landingPage.services.Other
     landingPageType: Service
@@ -364,6 +409,8 @@
     - 'Microsoft.Azure.Management.Fluent*'
     - 'Microsoft.Azure.Management.Graph.RBAC.Fluent*'
     - 'Microsoft.IdentityModel.Protocols*'
+    - 'System.Net*'
+    - 'System.Web*'
   - name: Should Not Show
     uid: azure.net.sdk.landingPage.services.ShouldNotShow
     landingPageType: Service
