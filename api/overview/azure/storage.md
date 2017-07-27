@@ -1,11 +1,11 @@
 ---
-title: Azure Storage libraries for .NET
+title: Azure .NET Storage APIs
 description: Reference for Azure Storage libraries for .NET
 keywords: Azure, .NET, SDK, API, storage, blob
 author: camsoper
 ms.author: casoper
 manager: douge
-ms.date: 06/20/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
@@ -13,68 +13,105 @@ ms.devlang: dotnet
 ms.service: multiple
 ---
 
-# Azure Storage libraries
+# Azure Storage APIs for .NET
 
 ## Overview
 
-Use the Azure Storage client libraries to:
+Read and write files, blob (object) data, key-value pairs, and messages from your .NET applications with [Azure Storage](https://review.docs.microsoft.com/en-us/azure/storage/storage-introduction).
 
-- Read and write objects and files from [Azure Blob storage](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-- Send and receive messages between cloud-connected applications with [Azure Queue storage](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-queues)
-- Read and write large structured data with [Azure Table storage](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-tables) 
-- Share storage between apps with [Azure File storage](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)
+To get started with Azure Storage, see [Get started with Azure Blob storage using .NET](/azure/storage/storage-dotnet-how-to-use-blobs).
 
-Create, update, and manage Azure Storage accounts and query and regenerate access keys from your .NET code with the management libraries.
+## Client library
 
-## Import the libraries
+Use [connection strings](/azure/storage/storage-create-storage-account#manage-your-storage-account) to connect to an Azure Storage account, then use the client libraries' classes and methods to work with blob, table, file, or queue storage.
 
-### Visual Studio 
+Install the [NuGet package](https://www.nuget.org/packages/WindowsAzure.Storage) directly from the Visual Studio [Package Manager console][PackageManager] or with the [.NET Core CLI][DotNetCLI].
 
-In the [Package Manager](https://docs.microsoft.com/dotnet/azure/dotnet-sdk-azure-install?view=azure-dotnet) window, use the following cmdlet:
+#### Visual Studio Package Manager
 
 ```powershell
 Install-Package WindowsAzure.Storage
-``` 
+```
 
-### .NET Core command line
-
-Execute the following command in your project directory:
+### .NET Core CLI
 
 ```bash
 dotnet add package WindowsAzure.Storage
 ```
-## Example usage
 
-The following code writes a new file to an existing blob storage container using a provided [storage connection string](https://docs.microsoft.com/azure/storage/storage-configure-connection-string).
+### Code Example
+
+This example creates a new blob to a new container in an existing storage account.
 
 ```csharp
-// Retrieve storage account from connection string.
-CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
-    CloudConfigurationManager.GetSetting("StorageConnectionString"));
+/* Include these "using" directives...
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+*/
 
-// Create the blob client.
-CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+string storageConnectionString = "DefaultEndpointsProtocol=https;"
+    + "AccountName=[Storage Account Name]"
+    + ";AccountKey=[Storage Account Key]"
+    + ";EndpointSuffix=core.windows.net";
 
-// Retrieve reference to a previously created container.
-CloudBlobContainer container = blobClient.GetContainerReference("mycontainer");
+CloudStorageAccount account = CloudStorageAccount.Parse(storageConnectionString);
+CloudBlobClient serviceClient = account.CreateCloudBlobClient();
 
-// Retrieve reference to a blob named "myblob".
-CloudBlockBlob blockBlob = container.GetBlockBlobReference("myblob");
+// Create container. Name must be lower case.
+Console.WriteLine("Creating container...");
+var container = serviceClient.GetContainerReference("mycontainer");
+container.CreateIfNotExistsAsync().Wait();
 
-// Create or overwrite the "myblob" blob with contents from a local file.
-using (var fileStream = System.IO.File.OpenRead(@"path\myfile"))
-{
-    blockBlob.UploadFromStream(fileStream);
-}
+// write a blob to the container
+CloudBlockBlob blob = container.GetBlockBlobReference("helloworld.txt");
+blob.UploadTextAsync("Hello, World!").Wait();
 ```
+
+> [!div class="nextstepactions"]
+> [Explore the client APIs](/dotnet/api/overview/azure/storage/client)
+
+## Management APIs
+
+Create and manage Azure Storage accounts and connection keys with the management API.
+
+Install the [NuGet package](https://www.nuget.org/packages/Microsoft.Azure.Management.Storage.Fluent) directly from the Visual Studio [Package Manager console][PackageManager] or with the [.NET Core CLI][DotNetCLI].
+
+#### Visual Studio package manager
+
+```powershell
+Install-Package Microsoft.Azure.Management.Storage.Fluent
+```
+
+#### .NET Core CLI
+
+````bash
+dotnet add package Microsoft.Azure.Management.Storage.Fluent
+````
+
+### Code Example
+
+This example creates a storage account.
+
+```csharp
+/* Include this "using" directive...
+using Microsoft.Azure.Management.Storage.Fluent
+*/
+
+IStorageAccount storage = azure.StorageAccounts.Define(storageAccountName)
+    .WithRegion(Region.USEast)
+    .WithNewResourceGroup(rgName)
+    .Create();
+```
+
+> [!div class="nextstepactions"]
+> [Explore the management APIs](/dotnet/api/overview/azure/storage/management)
 
 ## Samples
 
+* [Get started with Azure Blob Storage in .NET](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/) 
+* [Get started with Azure Queue Storage in .NET](https://azure.microsoft.com/resources/samples/storage-queue-dotnet-getting-started/)
 
-| | |
-|--|--|
-| [Get started with Azure Blob Storage in .NET](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/) | Create, read, update, restrict access, and delete files and objects in Azure Storage. |
-| [Get started with Azure Queue Storage in .NET](https://azure.microsoft.com/resources/samples/storage-queue-dotnet-getting-started/) | Insert, peek, retrieve and delete messages from Azure Storage queues. | 
+View the [complete list](https://azure.microsoft.com/resources/samples/?platform=dotnet&term=storage) of Azure Storage samples.
 
-
-Explore [more sample .NET code and applications](https://azure.microsoft.com/resources/samples/?platform=dotnet).
+[PackageManager]: https://docs.microsoft.com/nuget/tools/package-manager-console
+[DotNetCLI]: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
