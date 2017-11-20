@@ -15,6 +15,8 @@ ms.assetid: 46ad4ac6-bc51-45c9-b6dd-394ed0af5424
 
 # Azure Libraries for .NET
 
+Test.
+
 Use the libraries in the .NET SDK for Azure to manage and consume Azure services in your applications.
 
 The .NET SDK for Azure libraries all support [.NET Framework](/dotnet/articles/standard/choosing-core-framework-server).  .NET Core support is provided by most packages.  Verify .NET Core support by checking for a *.NETStandard* dependency, as seen with [WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage). Some of these packages are in preview, requiring you to opt into search and installation of preview NuGet packages.
