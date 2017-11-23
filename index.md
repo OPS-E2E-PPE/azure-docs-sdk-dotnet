@@ -15,7 +15,7 @@ ms.assetid: 46ad4ac6-bc51-45c9-b6dd-394ed0af5424
 
 # Azure Libraries for .NET
 
-Test!
+Test!!
 
 Use the libraries in the .NET SDK for Azure to manage and consume Azure services in your applications.
 
