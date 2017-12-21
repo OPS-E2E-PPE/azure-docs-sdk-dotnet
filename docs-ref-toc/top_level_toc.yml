@@ -31,15 +31,15 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Automation*'
-  - name: Backup
-    uid: azure.net.sdk.landingPage.services.Backup
-    href: ~/api/overview/azure/backup.md
+  - name: Authorization
+    uid: azure.net.sdk.landingPage.services.Authorization
+    landingPageType: Service
     items:
     - name: Management
-      uid: azure.net.sdk.landingPage.services.Backup.Management
+      uid: azure.net.sdk.landingPage.services.Authorization.Management
       landingPageType: Service
       children:
-      - 'Microsoft.Azure.Management.BackupServices*'
+      - 'Microsoft.Azure.Management.Authorization*'
   - name: Batch
     uid: azure.net.sdk.landingPage.services.Batch
     href: ~/api/overview/azure/batch.md
@@ -54,6 +54,15 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Batch*'
+  - name: BatchAI
+    uid: azure.net.sdk.landingPage.services.BatchAI
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.BatchAI.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.BatchAI*'
   - name: Billing
     uid: azure.net.sdk.landingPage.services.Billing
     href: ~/api/overview/azure/billing.md
@@ -72,6 +81,33 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Cdn*'
+  - name: Consumption
+    uid: azure.net.sdk.landingPage.services.Consumption
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Consumption.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Consumption*'
+  - name: Container Instances
+    uid: azure.net.sdk.landingPage.services.containerinstance
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.containerinstance.management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.ContainerInstance*'
+  - name: Container Registry
+    uid: azure.net.sdk.landingPage.services.containerregistry
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.containerregistry.management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.ContainerRegistry*'
   - name: Cosmos DB
     uid: azure.net.sdk.landingPage.services.CosmosDB
     href: ~/api/overview/azure/cosmosdb.md
@@ -81,7 +117,9 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Documents*'
-  - name: Data Factories
+      - 'Microsoft.Azure.Graphs*'
+      - 'Microsoft.Azure.CosmosDB*'
+  - name: Data Factory
     uid: azure.net.sdk.landingPage.services.DataFactories
     href: ~/api/overview/azure/data-factory.md
     items:
@@ -90,6 +128,7 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.DataFactories*'
+      - 'Microsoft.Azure.Management.DataFactory*'
   - name: Data Lake Analytics
     uid: azure.net.sdk.landingPage.services.DataLakeAnalytics
     href: ~/api/overview/azure/data-lake-analytics.md
@@ -108,6 +147,11 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.DataLake*'
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.DataLake.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.DataLake*'
   - name: DNS
     uid: azure.net.sdk.landingPage.services.DNS
     href: ~/api/overview/azure/dns.md
@@ -117,6 +161,15 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Dns*'
+  - name: Event Grid
+    landingPageType: Service
+    uid: azure.net.sdk.landingPage.services.EventGrid
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.EventGrid.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.EventGrid*'
   - name: Event Hub
     uid: azure.net.sdk.landingPage.services.EventHub
     href: ~/api/overview/azure/event-hubs.md
@@ -203,6 +256,15 @@
       - 'Microsoft.Azure.Mobile*'
       - 'Microsoft.WindowsAzure.MobileServices*'
       - 'System.Web.http*'
+  - name: Monitor
+    uid: azure.net.sdk.landingPage.services.Monitor
+    href: ~/api/overview/azure/monitor.md
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Monitor.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Monitor*'
   - name: MySQL
     href: ~/api/overview/azure/mysql.md
     uid: azure.net.sdk.landingpage.services.MySQL
@@ -233,6 +295,20 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.NotificationHubs*'
+  - name: Operational Insights
+    landingPageType: Service
+    uid: azure.net.sdk.landingPage.services.OperationalInsights
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.OperationalInsights.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.OperationalInsights*'
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.OperationalInsights.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.OperationalInsights*'
   - name: PostgreSQL
     href: ~/api/overview/azure/postgresql.md
     uid: azure.net.sdk.landingpage.services.PostgreSQL
@@ -254,7 +330,7 @@
       landingPageType: Service
       children:
       - 'Microsoft.PowerBI*'
-  - name: Recovery Services
+  - name: Recovery Services and Backup
     uid: azure.net.sdk.landingPage.services.Recovery
     href: ~/api/overview/azure/recovery-services.md
     items:
@@ -263,6 +339,7 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.RecoveryServices*'
+      - 'Microsoft.Azure.Management.BackupServices*'
   - name: Redis Cache
     uid: azure.net.sdk.landingPage.services.RedisCache
     href: ~/api/overview/azure/redis-cache.md
@@ -329,9 +406,32 @@
       uid: azure.net.sdk.landingPage.services.ServiceFabric.Client
       landingPageType: Service
       children:
-      - 'Microsoft.ServiceFabric*'
-      - 'System.Fabric*'
-      - 'Microsoft.Xml.Serialization.GeneratedAssembly'
+      - 'System.Fabric.BackupRestore*'
+      - 'System.Fabric.Chaos.DataStructures*'
+      - 'System.Fabric.Description*'
+      - 'System.Fabric.Health*'  
+      - 'System.Fabric.Query*'
+      - 'System.Fabric.Repair*'
+      - 'System.Fabric.Result*'
+      - 'System.Fabric.Security*' 
+      - 'System.Fabric.Testability.Scenario*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.ServiceFabric.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.ServiceFabric*'
+      - 'Microsoft.Azure.Management.ServiceFabric.Models*'
+      - 'System.Fabric.Management.ServiceModel'
+    - name: Runtime
+      uid: azure.net.sdk.landingPage.services.ServiceFabric.Runtime
+      landingPageType: Service
+      children:
+      - 'Microsoft.ServiceFabric.*'
+    - name: Common
+      uid: azure.net.sdk.landingPage.services.ServiceFabric.Common
+      landingPageType: Service
+      children:
+      - 'System.Fabric'
   - name: SQL
     uid: azure.net.sdk.landingPage.services.SQL
     href: ~/api/overview/azure/sql.md
@@ -361,6 +461,16 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Storage*'
+  - name: StorSimple
+    uid: azure.net.sdk.landingPage.services.StorSimple
+    href: ~/api/overview/azure/storsimple.md
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.StorSimple.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.StorSimple*'
+      - 'Microsoft.WindowsAzure.Management.StorSimple*'
   - name: Stream Analytics
     uid: azure.net.sdk.landingPage.services.StreamAnalytics
     href: ~/api/overview/azure/stream-analytics.md
@@ -398,6 +508,9 @@
     - 'Microsoft.IdentityModel.Protocols*'
     - 'System.Net*'
     - 'System.Web*'
+    - 'Owin*'
+    - 'System.Security.Principal*'
+    - 'Microsoft.Xml.Serialization.GeneratedAssembly*'
   - name: Should Not Show
     uid: azure.net.sdk.landingPage.services.ShouldNotShow
     landingPageType: Service

@@ -4,20 +4,21 @@ description: Reference for Azure Key Vault libraries for .NET
 keywords: Azure, .NET, SDK, API, Key Vault
 author: camsoper
 ms.author: casoper
-manager: douge
-ms.date: 07/21/2017
+manager: wpickett
+ms.date: 10/19/2017
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: dotnet
-ms.service: multiple
+ms.service: key-vault
+ms.custom: devcenter, svc-overview
 ---
 
 # Azure Key Vault libraries for .NET
 
 ## Overview
 
-Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services. By using Key Vault, you can encrypt keys and secrets. Assets may include authentication keys, storage account keys, data encryption keys, certificates, and passwords. Keys in Azure Key Vault are protected by hardware security modules (HSMs). For added assurance, you can import or generate keys in HSMs. Key Vault also integrates with DevOps to generate certificates and secrets for assets such as virtual machines that may be created as part of your deployment pipeline.
+Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.
 
 Read more about [What is Key Vault?](/azure/key-vault/key-vault-whatis) then [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started) or learn how to [Use Key Vault from a web app](/azure/key-vault/key-vault-use-from-web-application).
 
@@ -102,4 +103,4 @@ using (KeyVaultManagementClient client = new KeyVaultManagementClient(
 Explore more [sample .NET code](https://azure.microsoft.com/resources/samples/?platform=dotnet) you can use in your apps.
 
 [PackageManager]: https://docs.microsoft.com/nuget/tools/package-manager-console
-[DotNetCLI]: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
+[DotNetCLI]: https://docs.microsoft.com/dotnet/core/tools/dotnet-add-package

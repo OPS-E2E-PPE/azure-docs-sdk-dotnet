@@ -2,15 +2,16 @@
 title: Azure Billing libraries for .NET
 description: Reference for Azure Billing libraries for .NET
 keywords: Azure, .NET, SDK, API, Billing
-author: spboyer
+author: camsoper
 ms.author: casoper
-manager: douge
-ms.date: 07/07/2017
+manager: wpickett
+ms.date: 10/19/2017
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: dotnet
 ms.service: multiple
+ms.custom: devcenter, svc-overview
 ---
 # Azure Billing libraries for .NET
 
@@ -57,9 +58,9 @@ billingClient.Invoices.List();
 
 ## Samples
 
-* [Usage API](https://azure.microsoft.com/en-us/resources/samples/billing-dotnet-usage-api/)
-* [RateCard API](https://azure.microsoft.com/en-us/resources/samples/billing-dotnet-ratecard-api/)
-* [Multi-Tenant Web Application](https://azure.microsoft.com/en-us/resources/samples/billing-dotnet-webapp-multitenant/)
+* [Usage API](https://github.com/Azure-Samples/billing-dotnet-usage-api)
+* [RateCard API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)
+* [Multi-Tenant Web Application](https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant)
 
 [PackageManager]: https://docs.microsoft.com/nuget/tools/package-manager-console
-[DotNetCLI]: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
+[DotNetCLI]: https://docs.microsoft.com/dotnet/core/tools/dotnet-add-package

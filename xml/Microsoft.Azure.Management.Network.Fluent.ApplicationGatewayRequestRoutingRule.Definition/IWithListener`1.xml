@@ -2,6 +2,8 @@
   <TypeSignature Language="C#" Value="public interface IWithListener&lt;ParentT&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWithListener`1&lt;ParentT&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithListener`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IWithListener(Of ParentT)" />
+  <TypeSignature Language="F#" Value="type IWithListener&lt;'ParentT&gt; = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network.Fluent</AssemblyName>
     <AssemblyVersion>1.0.0.60</AssemblyVersion>
@@ -11,7 +13,7 @@
   </TypeParameters>
   <Interfaces />
   <Docs>
-    <typeparam name="ParentT">To be added.</typeparam>
+    <typeparam name="ParentT">The stage of the application gateway definition to return to after attaching this definition.</typeparam>
     <summary>
             The stage of an application gateway request routing rule definition allowing to specify an existing listener to
             associate the routing rule with.
@@ -23,10 +25,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithBackendHttpConfiguration&lt;ParentT&gt; FromListener (string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithBackendHttpConfiguration`1&lt;!ParentT&gt; FromListener(string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithListener`1.FromListener(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FromListener (name As String) As IWithBackendHttpConfiguration(Of ParentT)" />
+      <MemberSignature Language="F#" Value="abstract member FromListener : string -&gt; Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithBackendHttpConfiguration&lt;'ParentT&gt;" Usage="iWithListener.FromListener name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.60</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.Network.Fluent</AssemblyName>
+        <AssemblyVersion>1.0.0.60</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Fluent.ApplicationGatewayRequestRoutingRule.Definition.IWithBackendHttpConfiguration&lt;ParentT&gt;</ReturnType>
@@ -39,26 +43,13 @@
         <summary>
             Associates the request routing rule with a frontend listener.
             If the listener with the specified name does not yet exist, it must be defined separately in the optional part
-            of the application gateway definition, using {.
+            of the application gateway definition, using  defineListener(...).
+            This only adds a reference to the listener by its name.
+            Also, note that a given listener can be used by no more than one request routing rule at a time.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <code>
-            DefineListener(...)}.
-            This only adds a reference to the listener by its name.
-            Also, note that a given listener can be used by no more than one request routing rule at a time.
-            </code>
         <return>The next stage of the definition.</return>
-        <code>
-            DefineListener(...)}.
-            This only adds a reference to the listener by its name.
-            Also, note that a given listener can be used by no more than one request routing rule at a time.
-            </code>
-        <code>
-            DefineListener(...)}.
-            This only adds a reference to the listener by its name.
-            Also, note that a given listener can be used by no more than one request routing rule at a time.
-            </code>
       </Docs>
     </Member>
   </Members>

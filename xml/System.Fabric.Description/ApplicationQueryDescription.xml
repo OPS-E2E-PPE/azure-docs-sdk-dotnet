@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public sealed class ApplicationQueryDescription" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationQueryDescription extends System.Object" />
   <TypeSignature Language="DocId" Value="T:System.Fabric.Description.ApplicationQueryDescription" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ApplicationQueryDescription" />
+  <TypeSignature Language="F#" Value="type ApplicationQueryDescription = class" />
   <AssemblyInfo>
     <AssemblyName>System.Fabric</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>255.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +23,11 @@
       <MemberSignature Language="C#" Value="public ApplicationQueryDescription ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.Description.ApplicationQueryDescription.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -36,15 +37,44 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ApplicationDefinitionKindFilter">
+      <MemberSignature Language="C#" Value="public System.Fabric.Description.ApplicationDefinitionKindFilter ApplicationDefinitionKindFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Fabric.Description.ApplicationDefinitionKindFilter ApplicationDefinitionKindFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Fabric.Description.ApplicationQueryDescription.ApplicationDefinitionKindFilter" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationDefinitionKindFilter As ApplicationDefinitionKindFilter" />
+      <MemberSignature Language="F#" Value="member this.ApplicationDefinitionKindFilter : System.Fabric.Description.ApplicationDefinitionKindFilter with get, set" Usage="System.Fabric.Description.ApplicationQueryDescription.ApplicationDefinitionKindFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Fabric.Description.ApplicationDefinitionKindFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Gets or sets the definition kind used to filter the applications that will be returned.
+            </para>
+        </summary>
+        <value>
+          <para>The definition kind used to filter the applications.</para>
+        </value>
+        <remarks>
+          <para>At most one of ApplicationNameFilter, ApplicationTypeNameFilter, or ApplicationDefinitionKindFilter can be specified.</para>
+          <para>If no filters are specified, all applications are returned which fits a page.</para>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ApplicationNameFilter">
       <MemberSignature Language="C#" Value="public Uri ApplicationNameFilter { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ApplicationNameFilter" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.Description.ApplicationQueryDescription.ApplicationNameFilter" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationNameFilter As Uri" />
+      <MemberSignature Language="F#" Value="member this.ApplicationNameFilter : Uri with get, set" Usage="System.Fabric.Description.ApplicationQueryDescription.ApplicationNameFilter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -57,8 +87,8 @@
           <para>The URI name of application to query for.</para>
         </value>
         <remarks>
-          <para>ApplicationNameFilter and ApplicationTypeNameFilter can not be specified together.</para>
-          <para>If neither ApplicationNameFilter nor ApplicationTypeNameFilter is specified, all applications are returned.</para>
+          <para>At most one of ApplicationNameFilter, ApplicationTypeNameFilter, or ApplicationDefinitionKindFilter can be specified.</para>
+          <para>If no filters are specified, all applications which fit a page are returned.</para>
         </remarks>
       </Docs>
     </Member>
@@ -66,11 +96,12 @@
       <MemberSignature Language="C#" Value="public string ApplicationTypeNameFilter { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationTypeNameFilter" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.Description.ApplicationQueryDescription.ApplicationTypeNameFilter" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationTypeNameFilter As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationTypeNameFilter : string with get, set" Usage="System.Fabric.Description.ApplicationQueryDescription.ApplicationTypeNameFilter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -84,8 +115,8 @@
           <para>The application type name used to filter the applications to query for.</para>
         </value>
         <remarks>
-          <para>ApplicationNameFilter and ApplicationTypeNameFilter can not be specified together.</para>
-          <para>If neither ApplicationNameFilter nor ApplicationTypeNameFilter is specified, all applications are returned.</para>
+          <para>At most one of ApplicationNameFilter, ApplicationTypeNameFilter, or ApplicationDefinitionKindFilter can be specified.</para>
+          <para>If no filters are specified, all applications which fit a page are returned.</para>
           <para>This filter is case sensitive.</para>
         </remarks>
       </Docs>
@@ -94,11 +125,12 @@
       <MemberSignature Language="C#" Value="public string ContinuationToken { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ContinuationToken" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.Description.ApplicationQueryDescription.ContinuationToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContinuationToken As String" />
+      <MemberSignature Language="F#" Value="member this.ContinuationToken : string with get, set" Usage="System.Fabric.Description.ApplicationQueryDescription.ContinuationToken" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -119,11 +151,12 @@
       <MemberSignature Language="C#" Value="public bool ExcludeApplicationParameters { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool ExcludeApplicationParameters" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.Description.ApplicationQueryDescription.ExcludeApplicationParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExcludeApplicationParameters As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ExcludeApplicationParameters : bool with get, set" Usage="System.Fabric.Description.ApplicationQueryDescription.ExcludeApplicationParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

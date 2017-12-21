@@ -2,9 +2,11 @@
   <TypeSignature Language="C#" Value="public class MabContainerExtendedInfo" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MabContainerExtendedInfo extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class MabContainerExtendedInfo" />
+  <TypeSignature Language="F#" Value="type MabContainerExtendedInfo = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,10 +23,11 @@
       <MemberSignature Language="C#" Value="public MabContainerExtendedInfo ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -35,17 +38,19 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public MabContainerExtendedInfo (Nullable&lt;DateTime&gt; lastRefreshedAt = null, Nullable&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt; backupItemType = null, System.Collections.Generic.IList&lt;string&gt; backupItems = null, string policyName = null, string lastBackupStatus = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; lastRefreshedAt, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt; backupItemType, class System.Collections.Generic.IList`1&lt;string&gt; backupItems, string policyName, string lastBackupStatus) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.#ctor(System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType},System.Collections.Generic.IList{System.String},System.String,System.String)" />
+      <MemberSignature Language="C#" Value="public MabContainerExtendedInfo (Nullable&lt;DateTime&gt; lastRefreshedAt = null, string backupItemType = null, System.Collections.Generic.IList&lt;string&gt; backupItems = null, string policyName = null, string lastBackupStatus = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; lastRefreshedAt, string backupItemType, class System.Collections.Generic.IList`1&lt;string&gt; backupItems, string policyName, string lastBackupStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.#ctor(System.Nullable{System.DateTime},System.String,System.Collections.Generic.IList{System.String},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional lastRefreshedAt As Nullable(Of DateTime) = null, Optional backupItemType As String = null, Optional backupItems As IList(Of String) = null, Optional policyName As String = null, Optional lastBackupStatus As String = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo : Nullable&lt;DateTime&gt; * string * System.Collections.Generic.IList&lt;string&gt; * string * string -&gt; Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo" Usage="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo (lastRefreshedAt, backupItemType, backupItems, policyName, lastBackupStatus)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="lastRefreshedAt" Type="System.Nullable&lt;System.DateTime&gt;" />
-        <Parameter Name="backupItemType" Type="System.Nullable&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt;" />
+        <Parameter Name="backupItemType" Type="System.String" />
         <Parameter Name="backupItems" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
         <Parameter Name="policyName" Type="System.String" />
         <Parameter Name="lastBackupStatus" Type="System.String" />
@@ -56,9 +61,9 @@
         <param name="backupItemType">Type of backup items associated with
             this container. Possible values include: 'Invalid', 'VM',
             'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint',
-            'DPMUnknown'</param>
-        <param name="backupItems">List of backup items associated with
-            this container.</param>
+            'VMwareVM', 'SystemState', 'Client', 'GenericDataSource'</param>
+        <param name="backupItems">List of backup items associated with this
+            container.</param>
         <param name="policyName">Backup policy associated with this
             container.</param>
         <param name="lastBackupStatus">Latest backup status of this
@@ -73,10 +78,12 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; BackupItems { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; BackupItems" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.BackupItems" />
+      <MemberSignature Language="VB.NET" Value="Public Property BackupItems As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.BackupItems : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.BackupItems" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -95,13 +102,15 @@
       </Docs>
     </Member>
     <Member MemberName="BackupItemType">
-      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt; BackupItemType { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt; BackupItemType" />
+      <MemberSignature Language="C#" Value="public string BackupItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackupItemType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.BackupItemType" />
+      <MemberSignature Language="VB.NET" Value="Public Property BackupItemType As String" />
+      <MemberSignature Language="F#" Value="member this.BackupItemType : string with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.BackupItemType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -109,13 +118,14 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Nullable&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupItemType&gt;</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets type of backup items associated with this container.
             Possible values include: 'Invalid', 'VM', 'FileFolder',
-            'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'DPMUnknown'
+            'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+            'SystemState', 'Client', 'GenericDataSource'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -125,10 +135,12 @@
       <MemberSignature Language="C#" Value="public string LastBackupStatus { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string LastBackupStatus" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.LastBackupStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastBackupStatus As String" />
+      <MemberSignature Language="F#" Value="member this.LastBackupStatus : string with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.LastBackupStatus" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -150,10 +162,12 @@
       <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; LastRefreshedAt { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; LastRefreshedAt" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.LastRefreshedAt" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastRefreshedAt As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.LastRefreshedAt : Nullable&lt;DateTime&gt; with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.LastRefreshedAt" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -175,10 +189,12 @@
       <MemberSignature Language="C#" Value="public string PolicyName { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string PolicyName" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.PolicyName" />
+      <MemberSignature Language="VB.NET" Value="Public Property PolicyName As String" />
+      <MemberSignature Language="F#" Value="member this.PolicyName : string with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.MabContainerExtendedInfo.PolicyName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

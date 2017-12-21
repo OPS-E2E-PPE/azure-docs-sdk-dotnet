@@ -2,16 +2,20 @@
   <TypeSignature Language="C#" Value="public abstract class EventHubClient : Microsoft.Azure.EventHubs.ClientEntity" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EventHubClient extends Microsoft.Azure.EventHubs.ClientEntity" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.EventHubs.EventHubClient" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class EventHubClient&#xA;Inherits ClientEntity" />
+  <TypeSignature Language="F#" Value="type EventHubClient = class&#xA;    inherit ClientEntity" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.EventHubs.ClientEntity</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            Anchor class - all EventHub client operations start here.
+            See <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.CreateFromConnectionString(System.String)" /></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -19,10 +23,12 @@
       <MemberSignature Language="C#" Value="public override sealed System.Threading.Tasks.Task CloseAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CloseAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CloseAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function CloseAsync () As Task" />
+      <MemberSignature Language="F#" Value="override this.CloseAsync : unit -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.CloseAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -34,8 +40,31 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Closes and releases resources associated with <see cref="T:Microsoft.Azure.EventHubs.EventHubClient" />.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBatch">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.EventDataBatch CreateBatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.EventDataBatch CreateBatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateBatch" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateBatch () As EventDataBatch" />
+      <MemberSignature Language="F#" Value="member this.CreateBatch : unit -&gt; Microsoft.Azure.EventHubs.EventDataBatch" Usage="eventHubClient.CreateBatch " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.EventHubs.EventDataBatch</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Creates a batch where event data objects can be added for later SendAsync call.</summary>
+        <returns>Returns <see cref="T:Microsoft.Azure.EventHubs.EventDataBatch" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -43,10 +72,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver (string consumerGroupName, string partitionId, DateTime startTime, long epoch);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver(string consumerGroupName, string partitionId, valuetype System.DateTime startTime, int64 epoch) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateEpochReceiver(System.String,System.String,System.DateTime,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateEpochReceiver (consumerGroupName As String, partitionId As String, startTime As DateTime, epoch As Long) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateEpochReceiver : string * string * DateTime * int64 -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateEpochReceiver (consumerGroupName, partitionId, startTime, epoch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -58,23 +89,33 @@
         <Parameter Name="epoch" Type="System.Int64" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startTime">To be added.</param>
-        <param name="epoch">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startTime">the date time instant that receive operations will start receive events from. Events received will have <see cref="P:Microsoft.Azure.EventHubs.EventData.SystemPropertiesCollection.EnqueuedTimeUtc" /> later than this instant.</param>
+        <param name="epoch">a unique identifier (epoch value) that the service uses, to enforce partition/lease ownership.</param>
+        <summary>
+            Create a Epoch based EventHub receiver with given partition id and start receiving from the beginning of the partition stream.
+            The receiver is created for a specific EventHub Partition from the specific consumer group.
+            <para />It is important to pay attention to the following when creating epoch based receiver:
+            <para />- Ownership enforcement: Once you created an epoch based receiver, you cannot create a non-epoch receiver to the same consumerGroup-Partition combo until all receivers to the combo are closed.
+            <para />- Ownership stealing: If a receiver with higher epoch value is created for a consumerGroup-Partition combo, any older epoch receiver to that combo will be force closed.
+            <para />- Any receiver closed due to lost of ownership to a consumerGroup-Partition combo will get ReceiverDisconnectedException for all operations from that receiver.
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="CreateEpochReceiver">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver (string consumerGroupName, string partitionId, string startingOffset, long epoch);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver(string consumerGroupName, string partitionId, string startingOffset, int64 epoch) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateEpochReceiver(System.String,System.String,System.String,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateEpochReceiver (consumerGroupName As String, partitionId As String, startingOffset As String, epoch As Long) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateEpochReceiver : string * string * string * int64 -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateEpochReceiver (consumerGroupName, partitionId, startingOffset, epoch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -86,23 +127,34 @@
         <Parameter Name="epoch" Type="System.Int64" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startingOffset">To be added.</param>
-        <param name="epoch">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startingOffset">the offset to start receiving the events from. To receive from start of the stream use <see cref="F:Microsoft.Azure.EventHubs.PartitionReceiver.StartOfStream" /></param>
+        <param name="epoch">an unique identifier (epoch value) that the service uses, to enforce partition/lease ownership.</param>
+        <summary>
+            Create a Epoch based EventHub receiver with given partition id and start receiving from the beginning of the partition stream.
+            The receiver is created for a specific EventHub Partition from the specific consumer group.
+            <para />
+            It is important to pay attention to the following when creating epoch based receiver:
+            <para />- Ownership enforcement: Once you created an epoch based receiver, you cannot create a non-epoch receiver to the same consumerGroup-Partition combo until all receivers to the combo are closed.
+            <para />- Ownership stealing: If a receiver with higher epoch value is created for a consumerGroup-Partition combo, any older epoch receiver to that combo will be force closed.
+            <para />- Any receiver closed due to lost of ownership to a consumerGroup-Partition combo will get ReceiverDisconnectedException for all operations from that receiver.
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="CreateEpochReceiver">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver (string consumerGroupName, string partitionId, string startingOffset, bool offsetInclusive, long epoch);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateEpochReceiver(string consumerGroupName, string partitionId, string startingOffset, bool offsetInclusive, int64 epoch) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateEpochReceiver(System.String,System.String,System.String,System.Boolean,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateEpochReceiver (consumerGroupName As String, partitionId As String, startingOffset As String, offsetInclusive As Boolean, epoch As Long) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateEpochReceiver : string * string * string * bool * int64 -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateEpochReceiver (consumerGroupName, partitionId, startingOffset, offsetInclusive, epoch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -115,24 +167,35 @@
         <Parameter Name="epoch" Type="System.Int64" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startingOffset">To be added.</param>
-        <param name="offsetInclusive">To be added.</param>
-        <param name="epoch">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startingOffset">the offset to start receiving the events from. To receive from start of the stream use <see cref="F:Microsoft.Azure.EventHubs.PartitionReceiver.StartOfStream" /></param>
+        <param name="offsetInclusive">if set to true, the startingOffset is treated as an inclusive offset - meaning the first event returned is the one that has the starting offset. Normally first event returned is the event after the starting offset.</param>
+        <param name="epoch">an unique identifier (epoch value) that the service uses, to enforce partition/lease ownership. </param>
+        <summary>
+             Create a Epoch based EventHub receiver with given partition id and start receiving from the beginning of the partition stream.
+             The receiver is created for a specific EventHub Partition from the specific consumer group.
+             <para /> 
+             It is important to pay attention to the following when creating epoch based receiver:
+             <para />- Ownership enforcement: Once you created an epoch based receiver, you cannot create a non-epoch receiver to the same consumerGroup-Partition combo until all receivers to the combo are closed.
+             <para />- Ownership stealing: If a receiver with higher epoch value is created for a consumerGroup-Partition combo, any older epoch receiver to that combo will be force closed.
+             <para />- Any receiver closed due to lost of ownership to a consumerGroup-Partition combo will get ReceiverDisconnectedException for all operations from that receiver.
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="CreateFromConnectionString">
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.EventHubClient CreateFromConnectionString (string connectionString);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.EventHubClient CreateFromConnectionString(string connectionString) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateFromConnectionString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String) As EventHubClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string -&gt; Microsoft.Azure.EventHubs.EventHubClient" Usage="Microsoft.Azure.EventHubs.EventHubClient.CreateFromConnectionString connectionString" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.EventHubClient</ReturnType>
@@ -141,9 +204,11 @@
         <Parameter Name="connectionString" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="connectionString">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="connectionString"></param>
+        <summary>
+            Creates a new instance of the Event Hubs client using the specified connection string. You can populate the EntityPath property with the name of the Event Hub.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,10 +216,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionSender CreatePartitionSender (string partitionId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionSender CreatePartitionSender(string partitionId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreatePartitionSender(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePartitionSender (partitionId As String) As PartitionSender" />
+      <MemberSignature Language="F#" Value="member this.CreatePartitionSender : string -&gt; Microsoft.Azure.EventHubs.PartitionSender" Usage="eventHubClient.CreatePartitionSender partitionId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionSender</ReturnType>
@@ -163,20 +230,27 @@
         <Parameter Name="partitionId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="partitionId">partitionId of EventHub to send the <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s to.</param>
+        <summary>
+            Create a <see cref="T:Microsoft.Azure.EventHubs.PartitionSender" /> which can publish <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s directly to a specific EventHub partition (sender type iii. in the below list).
+            <para />
+            There are 3 patterns/ways to send to EventHubs:
+            <para>i.   <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para><para>ii.  <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData},System.String)" /></para><para>iii. <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para></summary>
+        <returns>The created PartitionSender</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionSender" />
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver (string consumerGroupName, string partitionId, DateTime startTime);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver(string consumerGroupName, string partitionId, valuetype System.DateTime startTime) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateReceiver(System.String,System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateReceiver (consumerGroupName As String, partitionId As String, startTime As DateTime) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateReceiver : string * string * DateTime -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateReceiver (consumerGroupName, partitionId, startTime)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -187,22 +261,28 @@
         <Parameter Name="startTime" Type="System.DateTime" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startTime">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startTime">the DateTime instant that receive operations will start receive events from. Events received will have <see cref="P:Microsoft.Azure.EventHubs.EventData.SystemPropertiesCollection.EnqueuedTimeUtc" /> later than this Instant.</param>
+        <summary>
+            Create the EventHub receiver with given partition id and start receiving from the specified starting offset.
+            The receiver is created for a specific EventHub Partition from the specific consumer group.
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver (string consumerGroupName, string partitionId, string startingOffset);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver(string consumerGroupName, string partitionId, string startingOffset) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateReceiver(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateReceiver (consumerGroupName As String, partitionId As String, startingOffset As String) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateReceiver : string * string * string -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateReceiver (consumerGroupName, partitionId, startingOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -213,22 +293,31 @@
         <Parameter Name="startingOffset" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startingOffset">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startingOffset">the offset to start receiving the events from. To receive from start of the stream use <see cref="F:Microsoft.Azure.EventHubs.PartitionReceiver.StartOfStream" /></param>
+        <summary>
+            Create a receiver for a specific EventHub partition from the specific consumer group.
+            <para />
+            NOTE: There can be a maximum number of receivers that can run in parallel per ConsumerGroup per Partition. 
+            The limit is enforced by the Event Hub service - current limit is 5 receivers in parallel. Having multiple receivers 
+            reading from offsets that are far apart on the same consumer group / partition combo will have significant performance Impact. 
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver (string consumerGroupName, string partitionId, string startOffset, bool offsetInclusive);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Azure.EventHubs.PartitionReceiver CreateReceiver(string consumerGroupName, string partitionId, string startOffset, bool offsetInclusive) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.CreateReceiver(System.String,System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateReceiver (consumerGroupName As String, partitionId As String, startOffset As String, offsetInclusive As Boolean) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="member this.CreateReceiver : string * string * string * bool -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.CreateReceiver (consumerGroupName, partitionId, startOffset, offsetInclusive)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -240,29 +329,38 @@
         <Parameter Name="offsetInclusive" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startOffset">To be added.</param>
-        <param name="offsetInclusive">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName">the consumer group name that this receiver should be grouped under.</param>
+        <param name="partitionId">the partition Id that the receiver belongs to. All data received will be from this partition only.</param>
+        <param name="startOffset">the offset to start receiving the events from. To receive from start of the stream use: <see cref="F:Microsoft.Azure.EventHubs.PartitionReceiver.StartOfStream" /></param>
+        <param name="offsetInclusive">if set to true, the startingOffset is treated as an inclusive offset - meaning the first event returned is the
+            one that has the starting offset. Normally first event returned is the event after the starting offset.</param>
+        <summary>
+            Create the EventHub receiver with given partition id and start receiving from the specified starting offset.
+            The receiver is created for a specific EventHub Partition from the specific consumer group.
+            </summary>
+        <returns>The created PartitionReceiver</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Azure.EventHubs.PartitionReceiver" />
       </Docs>
     </Member>
     <Member MemberName="EventHubName">
       <MemberSignature Language="C#" Value="public string EventHubName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string EventHubName" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.EventHubs.EventHubClient.EventHubName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EventHubName As String" />
+      <MemberSignature Language="F#" Value="member this.EventHubName : string" Usage="Microsoft.Azure.EventHubs.EventHubClient.EventHubName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets the name of the EventHub.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,10 +369,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt; GetPartitionRuntimeInformationAsync (string partitionId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt; GetPartitionRuntimeInformationAsync(string partitionId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.GetPartitionRuntimeInformationAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPartitionRuntimeInformationAsync (partitionId As String) As Task(Of EventHubPartitionRuntimeInformation)" />
+      <MemberSignature Language="F#" Value="member this.GetPartitionRuntimeInformationAsync : string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt;" Usage="eventHubClient.GetPartitionRuntimeInformationAsync partitionId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -288,9 +388,9 @@
         <Parameter Name="partitionId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="partitionId">The partition ID.</param>
+        <summary>Retrieves runtime information for the specified partition of the Event Hub.</summary>
+        <returns>Returns <see cref="T:Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -298,10 +398,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt; GetRuntimeInformationAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt; GetRuntimeInformationAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.GetRuntimeInformationAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRuntimeInformationAsync () As Task(Of EventHubRuntimeInformation)" />
+      <MemberSignature Language="F#" Value="member this.GetRuntimeInformationAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt;" Usage="eventHubClient.GetRuntimeInformationAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -313,7 +415,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Retrieves EventHub runtime information
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -322,18 +426,20 @@
       <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task OnCloseAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnCloseAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.OnCloseAsync" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OnCloseAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnCloseAsync : unit -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.OnCloseAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,10 +447,12 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.Azure.EventHubs.PartitionReceiver OnCreateReceiver (string consumerGroupName, string partitionId, string startOffset, bool offsetInclusive, Nullable&lt;DateTime&gt; startTime, Nullable&lt;long&gt; epoch);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Azure.EventHubs.PartitionReceiver OnCreateReceiver(string consumerGroupName, string partitionId, string startOffset, bool offsetInclusive, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; startTime, valuetype System.Nullable`1&lt;int64&gt; epoch) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.OnCreateReceiver(System.String,System.String,System.String,System.Boolean,System.Nullable{System.DateTime},System.Nullable{System.Int64})" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OnCreateReceiver (consumerGroupName As String, partitionId As String, startOffset As String, offsetInclusive As Boolean, startTime As Nullable(Of DateTime), epoch As Nullable(Of Long)) As PartitionReceiver" />
+      <MemberSignature Language="F#" Value="abstract member OnCreateReceiver : string * string * string * bool * Nullable&lt;DateTime&gt; * Nullable&lt;int64&gt; -&gt; Microsoft.Azure.EventHubs.PartitionReceiver" Usage="eventHubClient.OnCreateReceiver (consumerGroupName, partitionId, startOffset, offsetInclusive, startTime, epoch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.PartitionReceiver</ReturnType>
@@ -358,14 +466,14 @@
         <Parameter Name="epoch" Type="System.Nullable&lt;System.Int64&gt;" />
       </Parameters>
       <Docs>
-        <param name="consumerGroupName">To be added.</param>
-        <param name="partitionId">To be added.</param>
-        <param name="startOffset">To be added.</param>
-        <param name="offsetInclusive">To be added.</param>
-        <param name="startTime">To be added.</param>
-        <param name="epoch">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="consumerGroupName"></param>
+        <param name="partitionId"></param>
+        <param name="startOffset"></param>
+        <param name="offsetInclusive"></param>
+        <param name="startTime"></param>
+        <param name="epoch"></param>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -373,10 +481,12 @@
       <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt; OnGetPartitionRuntimeInformationAsync (string partitionId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt; OnGetPartitionRuntimeInformationAsync(string partitionId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.OnGetPartitionRuntimeInformationAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OnGetPartitionRuntimeInformationAsync (partitionId As String) As Task(Of EventHubPartitionRuntimeInformation)" />
+      <MemberSignature Language="F#" Value="abstract member OnGetPartitionRuntimeInformationAsync : string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt;" Usage="eventHubClient.OnGetPartitionRuntimeInformationAsync partitionId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubPartitionRuntimeInformation&gt;</ReturnType>
@@ -385,9 +495,9 @@
         <Parameter Name="partitionId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="partitionId"></param>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -395,18 +505,20 @@
       <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt; OnGetRuntimeInformationAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt; OnGetRuntimeInformationAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.OnGetRuntimeInformationAsync" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OnGetRuntimeInformationAsync () As Task(Of EventHubRuntimeInformation)" />
+      <MemberSignature Language="F#" Value="abstract member OnGetRuntimeInformationAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt;" Usage="eventHubClient.OnGetRuntimeInformationAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.EventHubRuntimeInformation&gt;</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -414,10 +526,11 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAsync (Microsoft.Azure.EventHubs.EventData eventData);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SendAsync(class Microsoft.Azure.EventHubs.EventData eventData) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
+      <MemberSignature Language="F#" Value="member this.SendAsync : Microsoft.Azure.EventHubs.EventData -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.SendAsync eventData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -426,20 +539,30 @@
         <Parameter Name="eventData" Type="Microsoft.Azure.EventHubs.EventData" />
       </Parameters>
       <Docs>
-        <param name="eventData">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="eventData">the <see cref="T:Microsoft.Azure.EventHubs.EventData" /> to be sent.</param>
+        <summary>
+            Send <see cref="T:Microsoft.Azure.EventHubs.EventData" /> to EventHub. The sent EventData will land on any arbitrarily chosen EventHubs partition.
+            <para>There are 3 ways to send to EventHubs, each exposed as a method (along with its sendBatch overload):</para><para>i.    <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para><para>ii.   <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData},System.String)" /></para><para>iii.  <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para>
+            Use this method to send if:
+            <para>a) the <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> operation should be highly available and</para><para>b) the data needs to be evenly distributed among all partitions; exception being, when a subset of partitions are unavailable</para><see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> sends the <see cref="T:Microsoft.Azure.EventHubs.EventData" /> to a Service Gateway, which in-turn will forward the EventData to one of the EventHub's partitions.
+            Here's the message forwarding algorithm:
+            <para>i.  Forward the EventDatas to EventHub partitions, by equally distributing the data among all partitions (ex: Round-robin the EventDatas to all EventHub partitions) </para><para>ii. If one of the EventHub partitions is unavailable for a moment, the Service Gateway will automatically detect it and forward the message to another available partition - making the send operation highly-available.</para></summary>
+        <returns>A Task that completes when the send operations is done.</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" />
+        <altmember cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
       </Docs>
     </Member>
     <Member MemberName="SendAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.EventHubs.EventData&gt; eventDatas);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SendAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Azure.EventHubs.EventData&gt; eventDatas) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAsync (eventDatas As IEnumerable(Of EventData)) As Task" />
+      <MemberSignature Language="F#" Value="member this.SendAsync : seq&lt;Microsoft.Azure.EventHubs.EventData&gt; -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.SendAsync eventDatas" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -448,20 +571,339 @@
         <Parameter Name="eventDatas" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.EventHubs.EventData&gt;" />
       </Parameters>
       <Docs>
-        <param name="eventDatas">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="eventDatas">A batch of events to send to EventHub</param>
+        <summary>
+            Send a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" /> to EventHub. The sent EventData will land on any arbitrarily chosen EventHub partition.
+            This is the most recommended way to send to EventHub.
+            
+            <para>There are 3 ways to send to EventHubs, to understand this particular type of send refer to the overload <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" />, which is used to send single <see cref="T:Microsoft.Azure.EventHubs.EventData" />.
+            Use this overload if you need to send a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" />.</para>
+            
+            Sending a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s is useful in the following cases:
+            <para>i.    Efficient send - sending a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" /> maximizes the overall throughput by optimally using the number of sessions created to EventHub's service.</para><para>ii.   Send multiple <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s in a Transaction. To acheieve ACID properties, the Gateway Service will forward all <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s in the batch to a single EventHub partition.</para></summary>
+        <returns>A Task that completes when the send operations is done.</returns>
         <remarks>To be added.</remarks>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <altmember cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" />
+        <altmember cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
+        <example>
+            Sample code:
+            <code>
+            var client = EventHubClient.Create("__connectionString__");
+            while (true)
+            {
+                var events = new List&lt;EventData&gt;();
+                for (int count = 1; count &lt; 11; count++)
+                {
+                    var payload = new PayloadEvent(count);
+                    byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
+                    var sendEvent = new EventData(payloadBytes);
+                    var applicationProperties = new Dictionary&lt;string, string&gt;();
+                    applicationProperties["from"] = "csharpClient";
+                    sendEvent.Properties = applicationProperties;
+                    events.Add(sendEvent);
+                }
+                    
+                await client.SendAsync(events);
+                Console.WriteLine("Sent Batch... Size: {0}", events.Count);
+            }
+            </code></example>
       </Docs>
     </Member>
     <Member MemberName="SendAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAsync (Microsoft.Azure.EventHubs.EventData eventData, string partitionKey);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SendAsync(class Microsoft.Azure.EventHubs.EventData eventData, string partitionKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" />
+      <MemberSignature Language="F#" Value="member this.SendAsync : Microsoft.Azure.EventHubs.EventData * string -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.SendAsync (eventData, partitionKey)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -471,21 +913,33 @@
         <Parameter Name="partitionKey" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="eventData">To be added.</param>
-        <param name="partitionKey">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="eventData">the <see cref="T:Microsoft.Azure.EventHubs.EventData" /> to be sent.</param>
+        <param name="partitionKey">the partitionKey will be hashed to determine the partitionId to send the EventData to. On the Received message this can be accessed at <see cref="P:Microsoft.Azure.EventHubs.EventData.SystemPropertiesCollection.PartitionKey" />.</param>
+        <summary>
+             Sends an '<see cref="T:Microsoft.Azure.EventHubs.EventData" /> with a partitionKey to EventHub. All <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s with a partitionKey are guaranteed to land on the same partition.
+             This send pattern emphasize data correlation over general availability and latency.
+             <para>There are 3 ways to send to EventHubs, each exposed as a method (along with its batched overload):</para><para>i.   <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para><para>ii.  <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" /> or <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData},System.String)" /></para><para>iii. <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" /> or <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData})" /></para>
+             Use this type of send if:
+             <para>a)  There is a need for correlation of events based on Sender instance; The sender can generate a UniqueId and set it as partitionKey - which on the received Message can be used for correlation</para><para>b) The client wants to take control of distribution of data across partitions.</para>
+             Multiple PartitionKeys could be mapped to one Partition. EventHubs service uses a proprietary Hash algorithm to map the PartitionKey to a PartitionId.
+             Using this type of send (Sending using a specific partitionKey) could sometimes result in partitions which are not evenly distributed. 
+            </summary>
+        <returns>A Task that completes when the send operation is done.</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
+        <altmember cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
       </Docs>
     </Member>
     <Member MemberName="SendAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.EventHubs.EventData&gt; eventDatas, string partitionKey);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SendAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Azure.EventHubs.EventData&gt; eventDatas, string partitionKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(System.Collections.Generic.IEnumerable{Microsoft.Azure.EventHubs.EventData},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAsync (eventDatas As IEnumerable(Of EventData), partitionKey As String) As Task" />
+      <MemberSignature Language="F#" Value="member this.SendAsync : seq&lt;Microsoft.Azure.EventHubs.EventData&gt; * string -&gt; System.Threading.Tasks.Task" Usage="eventHubClient.SendAsync (eventDatas, partitionKey)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -500,27 +954,39 @@
         <Parameter Name="partitionKey" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="eventDatas">To be added.</param>
-        <param name="partitionKey">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="eventDatas">the batch of events to send to EventHub</param>
+        <param name="partitionKey">the partitionKey will be hashed to determine the partitionId to send the EventData to. On the Received message this can be accessed at <see cref="P:Microsoft.Azure.EventHubs.EventData.SystemPropertiesCollection.PartitionKey" />.</param>
+        <summary>
+            Send a 'batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" /> with the same partitionKey' to EventHub. All <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s with a partitionKey are guaranteed to land on the same partition.
+            Multiple PartitionKey's will be mapped to one Partition.
+            <para>
+            There are 3 ways to send to EventHubs, to understand this particular type of send refer to the overload <see cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData,System.String)" />,
+            which is the same type of send and is used to send single <see cref="T:Microsoft.Azure.EventHubs.EventData" />.
+            </para>
+            Sending a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" />'s is useful in the following cases:
+            <para>i.    Efficient send - sending a batch of <see cref="T:Microsoft.Azure.EventHubs.EventData" /> maximizes the overall throughput by optimally using the number of sessions created to EventHubs service.</para><para>ii.   Sending multiple events in One Transaction. This is the reason why all events sent in a batch needs to have same partitionKey (so that they are sent to one partition only).</para></summary>
+        <returns>A Task that completes when the send operation is done.</returns>
         <remarks>To be added.</remarks>
+        <altmember cref="M:Microsoft.Azure.EventHubs.EventHubClient.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
+        <see cref="M:Microsoft.Azure.EventHubs.PartitionSender.SendAsync(Microsoft.Azure.EventHubs.EventData)" />
       </Docs>
     </Member>
     <Member MemberName="ThisLock">
       <MemberSignature Language="C#" Value="protected object ThisLock { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance object ThisLock" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.EventHubs.EventHubClient.ThisLock" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property ThisLock As Object" />
+      <MemberSignature Language="F#" Value="member this.ThisLock : obj" Usage="Microsoft.Azure.EventHubs.EventHubClient.ThisLock" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

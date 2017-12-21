@@ -2,6 +2,8 @@
   <TypeSignature Language="C#" Value="public sealed class RequestTelemetry : Microsoft.ApplicationInsights.Extensibility.Implementation.OperationTelemetry, Microsoft.ApplicationInsights.DataContracts.ISupportSampling" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RequestTelemetry extends Microsoft.ApplicationInsights.Extensibility.Implementation.OperationTelemetry implements class Microsoft.ApplicationInsights.Channel.ITelemetry, class Microsoft.ApplicationInsights.DataContracts.ISupportMetrics, class Microsoft.ApplicationInsights.DataContracts.ISupportProperties, class Microsoft.ApplicationInsights.DataContracts.ISupportSampling" />
   <TypeSignature Language="DocId" Value="T:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RequestTelemetry&#xA;Inherits OperationTelemetry&#xA;Implements ISupportSampling" />
+  <TypeSignature Language="F#" Value="type RequestTelemetry = class&#xA;    inherit OperationTelemetry&#xA;    interface ITelemetry&#xA;    interface ISupportProperties&#xA;    interface ISupportMetrics&#xA;    interface ISupportSampling" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
     <AssemblyVersion>2.3.0.0</AssemblyVersion>
@@ -29,10 +31,11 @@
       <MemberSignature Language="C#" Value="public RequestTelemetry ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,10 +49,12 @@
       <MemberSignature Language="C#" Value="public RequestTelemetry (string name, DateTimeOffset startTime, TimeSpan duration, string responseCode, bool success);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.DateTimeOffset startTime, valuetype System.TimeSpan duration, string responseCode, bool success) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.#ctor(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, startTime As DateTimeOffset, duration As TimeSpan, responseCode As String, success As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ApplicationInsights.DataContracts.RequestTelemetry : string * DateTimeOffset * TimeSpan * string * bool -&gt; Microsoft.ApplicationInsights.DataContracts.RequestTelemetry" Usage="new Microsoft.ApplicationInsights.DataContracts.RequestTelemetry (name, startTime, duration, responseCode, success)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -75,10 +80,15 @@
       <MemberSignature Language="C#" Value="public override Microsoft.ApplicationInsights.DataContracts.TelemetryContext Context { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ApplicationInsights.DataContracts.TelemetryContext Context" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Context" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Context As TelemetryContext" />
+      <MemberSignature Language="F#" Value="member this.Context : Microsoft.ApplicationInsights.DataContracts.TelemetryContext" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Context" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.Channel.ITelemetry.Context</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.DataContracts.TelemetryContext</ReturnType>
@@ -95,10 +105,12 @@
       <MemberSignature Language="C#" Value="public override TimeSpan Duration { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Duration" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Duration" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Duration As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.Duration : TimeSpan with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Duration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -115,10 +127,12 @@
       <MemberSignature Language="C#" Value="public string HttpMethod { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.HttpMethod" />
+      <MemberSignature Language="VB.NET" Value="Public Property HttpMethod As String" />
+      <MemberSignature Language="F#" Value="member this.HttpMethod : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.HttpMethod" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -140,10 +154,12 @@
       <MemberSignature Language="C#" Value="public override string Id { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Id" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Id As String" />
+      <MemberSignature Language="F#" Value="member this.Id : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -160,10 +176,15 @@
       <MemberSignature Language="C#" Value="public override System.Collections.Generic.IDictionary&lt;string,double&gt; Metrics { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, float64&gt; Metrics" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Metrics" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Metrics As IDictionary(Of String, Double)" />
+      <MemberSignature Language="F#" Value="member this.Metrics : System.Collections.Generic.IDictionary&lt;string, double&gt;" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Metrics" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.DataContracts.ISupportMetrics.Metrics</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Double&gt;</ReturnType>
@@ -180,10 +201,14 @@
       <MemberSignature Language="C#" Value="void ITelemetry.Sanitize ();" />
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.ApplicationInsights.Channel.ITelemetry.Sanitize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Microsoft#ApplicationInsights#Channel#ITelemetry#Sanitize" />
+      <MemberSignature Language="VB.NET" Value="Sub Sanitize () Implements ITelemetry.Sanitize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.ApplicationInsights.Channel.ITelemetry.Sanitize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -200,10 +225,14 @@
       <MemberSignature Language="C#" Value="Nullable&lt;double&gt; Microsoft.ApplicationInsights.DataContracts.ISupportSampling.SamplingPercentage { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Microsoft.ApplicationInsights.DataContracts.ISupportSampling.SamplingPercentage" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Microsoft#ApplicationInsights#DataContracts#ISupportSampling#SamplingPercentage" />
+      <MemberSignature Language="VB.NET" Value=" Property SamplingPercentage As Nullable(Of Double) Implements ISupportSampling.SamplingPercentage" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.DataContracts.ISupportSampling.SamplingPercentage</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
@@ -220,10 +249,12 @@
       <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -240,10 +271,15 @@
       <MemberSignature Language="C#" Value="public override System.Collections.Generic.IDictionary&lt;string,string&gt; Properties { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Properties" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Properties As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Properties" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.DataContracts.ISupportProperties.Properties</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -260,10 +296,12 @@
       <MemberSignature Language="C#" Value="public string ResponseCode { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ResponseCode" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.ResponseCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseCode As String" />
+      <MemberSignature Language="F#" Value="member this.ResponseCode : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.ResponseCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -280,10 +318,15 @@
       <MemberSignature Language="C#" Value="public override string Sequence { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Sequence" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Sequence" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Sequence As String" />
+      <MemberSignature Language="F#" Value="member this.Sequence : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Sequence" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.Channel.ITelemetry.Sequence</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -300,10 +343,12 @@
       <MemberSignature Language="C#" Value="public string Source { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Source" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Source" />
+      <MemberSignature Language="VB.NET" Value="Public Property Source As String" />
+      <MemberSignature Language="F#" Value="member this.Source : string with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Source" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -320,10 +365,12 @@
       <MemberSignature Language="C#" Value="public override Nullable&lt;bool&gt; Success { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Success" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Success" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Success As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Success : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Success" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -340,10 +387,15 @@
       <MemberSignature Language="C#" Value="public override DateTimeOffset Timestamp { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset Timestamp" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Timestamp" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Timestamp As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.Timestamp : DateTimeOffset with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Timestamp" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.ApplicationInsights.Channel.ITelemetry.Timestamp</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -360,10 +412,12 @@
       <MemberSignature Language="C#" Value="public Uri Url { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Url" />
+      <MemberSignature Language="VB.NET" Value="Public Property Url As Uri" />
+      <MemberSignature Language="F#" Value="member this.Url : Uri with get, set" Usage="Microsoft.ApplicationInsights.DataContracts.RequestTelemetry.Url" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>2.3.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

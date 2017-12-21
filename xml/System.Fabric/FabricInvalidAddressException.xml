@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public sealed class FabricInvalidAddressException : System.Fabric.FabricException" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FabricInvalidAddressException extends System.Fabric.FabricException" />
   <TypeSignature Language="DocId" Value="T:System.Fabric.FabricInvalidAddressException" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FabricInvalidAddressException&#xA;Inherits FabricException" />
+  <TypeSignature Language="F#" Value="type FabricInvalidAddressException = class&#xA;    inherit FabricException" />
   <AssemblyInfo>
     <AssemblyName>System.Fabric</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>255.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Fabric.FabricException</BaseTypeName>
@@ -18,9 +19,7 @@
   </Attributes>
   <Docs>
     <summary>
-      <para>
-            The exception that is thrown when an address is not recognized by Service fabric.
-            </para>
+      <para>The exception that is thrown when an address is not recognized by Service Fabric.</para>
     </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -29,17 +28,17 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class.
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with error code <see cref="F:System.Fabric.FabricErrorCode.Unknown" />.
             </para>
         </summary>
         <remarks>To be added.</remarks>
@@ -49,22 +48,23 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException (System.Fabric.FabricErrorCode errorCode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Fabric.FabricErrorCode errorCode) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor(System.Fabric.FabricErrorCode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (errorCode As FabricErrorCode)" />
+      <MemberSignature Language="F#" Value="new System.Fabric.FabricInvalidAddressException : System.Fabric.FabricErrorCode -&gt; System.Fabric.FabricInvalidAddressException" Usage="new System.Fabric.FabricInvalidAddressException errorCode" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.Fabric.FabricErrorCode" />
       </Parameters>
       <Docs>
         <param name="errorCode">
-          <para>Error code associated with the exception.</para>
+          <para>The error code associated with the exception.</para>
         </param>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with the specified error code.
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with a specified error code.
             </para>
         </summary>
         <remarks>To be added.</remarks>
@@ -74,22 +74,23 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException (string message);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new System.Fabric.FabricInvalidAddressException : string -&gt; System.Fabric.FabricInvalidAddressException" Usage="new System.Fabric.FabricInvalidAddressException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="message">
-          <para>Error message that explains the reason for the exception.</para>
+          <para>The error message that explains the reason for the exception.</para>
         </param>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with the specified error message.
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with error code <see cref="F:System.Fabric.FabricErrorCode.Unknown" /> and a specified error message.
             </para>
         </summary>
         <remarks>To be added.</remarks>
@@ -99,11 +100,12 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException (string message, Exception inner);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, inner As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Fabric.FabricInvalidAddressException : string * Exception -&gt; System.Fabric.FabricInvalidAddressException" Usage="new System.Fabric.FabricInvalidAddressException (message, inner)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -111,14 +113,14 @@
       </Parameters>
       <Docs>
         <param name="message">
-          <para>Error message that explains the reason for the exception.</para>
+          <para>The error message that explains the reason for the exception.</para>
         </param>
         <param name="inner">
-          <para>Exception that is the cause of the current exception, or a null reference if no inner exception is specified.</para>
+          <para>The exception that is the cause of the current exception or null if no inner exception is specified. The <see cref="T:System.Exception" /> class provides more details about the inner exception.</para>
         </param>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </para>
         </summary>
@@ -129,11 +131,12 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException (string message, System.Fabric.FabricErrorCode errorCode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Fabric.FabricErrorCode errorCode) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor(System.String,System.Fabric.FabricErrorCode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, errorCode As FabricErrorCode)" />
+      <MemberSignature Language="F#" Value="new System.Fabric.FabricInvalidAddressException : string * System.Fabric.FabricErrorCode -&gt; System.Fabric.FabricInvalidAddressException" Usage="new System.Fabric.FabricInvalidAddressException (message, errorCode)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -141,14 +144,14 @@
       </Parameters>
       <Docs>
         <param name="message">
-          <para>Error message that explains the reason for the exception.</para>
+          <para>The error message that explains the reason for the exception.</para>
         </param>
         <param name="errorCode">
-          <para>Error code associated with the exception.</para>
+          <para>The error code associated with the exception.</para>
         </param>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with the specified error code and message.
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with specified error message and error code.
             </para>
         </summary>
         <remarks>To be added.</remarks>
@@ -158,11 +161,12 @@
       <MemberSignature Language="C#" Value="public FabricInvalidAddressException (string message, Exception inner, System.Fabric.FabricErrorCode errorCode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, valuetype System.Fabric.FabricErrorCode errorCode) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricInvalidAddressException.#ctor(System.String,System.Exception,System.Fabric.FabricErrorCode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, inner As Exception, errorCode As FabricErrorCode)" />
+      <MemberSignature Language="F#" Value="new System.Fabric.FabricInvalidAddressException : string * Exception * System.Fabric.FabricErrorCode -&gt; System.Fabric.FabricInvalidAddressException" Usage="new System.Fabric.FabricInvalidAddressException (message, inner, errorCode)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -171,18 +175,18 @@
       </Parameters>
       <Docs>
         <param name="message">
-          <para>Error message that explains the reason for the exception.</para>
+          <para>The error message that explains the reason for the exception.</para>
         </param>
         <param name="inner">
-          <para>Exception that is the cause of the current exception, or a null reference if no inner exception is specified.</para>
+          <para>The exception that is the cause of the current exception or null if no inner exception is specified. The <see cref="T:System.Exception" /> class provides more details about the inner exception.</para>
         </param>
         <param name="errorCode">
-          <para>Error code associated with the exception.</para>
+          <para>The error code associated with the exception.</para>
         </param>
         <summary>
           <para>
-            Initializes a new instance of the <see cref="T:System.Fabric.FabricInvalidAddressException" /> class with the specified error message,
-            a reference to the inner exception that is the cause of this exception and specified error code.
+            Initializes a new instance of <see cref="T:System.Fabric.FabricInvalidAddressException" /> class
+            with a specified error message, a reference to the inner exception that is the cause of this exception, and a specified error code.
             </para>
         </summary>
         <remarks>To be added.</remarks>

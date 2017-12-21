@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public sealed class OperationContext" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OperationContext extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.WindowsAzure.Storage.OperationContext" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OperationContext" />
+  <TypeSignature Language="F#" Value="type OperationContext = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
-    <AssemblyVersion>8.1.1.0</AssemblyVersion>
-    <AssemblyVersion>8.1.3.0</AssemblyVersion>
+    <AssemblyVersion>8.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +23,11 @@
       <MemberSignature Language="C#" Value="public OperationContext ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.WindowsAzure.Storage.OperationContext.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -40,11 +41,12 @@
       <MemberSignature Language="C#" Value="public string ClientRequestID { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ClientRequestID" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.ClientRequestID" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientRequestID As String" />
+      <MemberSignature Language="F#" Value="member this.ClientRequestID : string with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.ClientRequestID" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -57,15 +59,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CustomUserAgent">
+      <MemberSignature Language="C#" Value="public string CustomUserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomUserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.CustomUserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public Property CustomUserAgent As String" />
+      <MemberSignature Language="F#" Value="member this.CustomUserAgent : string with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.CustomUserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>This value will be overridden if the UserAgent value is modified via SendingRequestEvent (per instance or global).</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DefaultLogLevel">
       <MemberSignature Language="C#" Value="public static Microsoft.WindowsAzure.Storage.LogLevel DefaultLogLevel { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property valuetype Microsoft.WindowsAzure.Storage.LogLevel DefaultLogLevel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.DefaultLogLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property DefaultLogLevel As LogLevel" />
+      <MemberSignature Language="F#" Value="member this.DefaultLogLevel : Microsoft.WindowsAzure.Storage.LogLevel with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.DefaultLogLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.WindowsAzure.Storage.LogLevel</ReturnType>
@@ -82,11 +105,12 @@
       <MemberSignature Language="C#" Value="public DateTime EndTime { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EndTime" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.EndTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndTime As DateTime" />
+      <MemberSignature Language="F#" Value="member this.EndTime : DateTime with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.EndTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -103,11 +127,12 @@
       <MemberSignature Language="C#" Value="public static event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalRequestCompleted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalRequestCompleted" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.GlobalRequestCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Custom Event GlobalRequestCompleted As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.GlobalRequestCompleted : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.GlobalRequestCompleted : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -123,11 +148,12 @@
       <MemberSignature Language="C#" Value="public static event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalResponseReceived;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalResponseReceived" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.GlobalResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Custom Event GlobalResponseReceived As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.GlobalResponseReceived : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.GlobalResponseReceived : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -143,11 +169,12 @@
       <MemberSignature Language="C#" Value="public static event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalRetrying;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalRetrying" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.GlobalRetrying" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Custom Event GlobalRetrying As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.GlobalRetrying : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.GlobalRetrying : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -163,11 +190,12 @@
       <MemberSignature Language="C#" Value="public static event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalSendingRequest;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; GlobalSendingRequest" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.GlobalSendingRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Custom Event GlobalSendingRequest As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.GlobalSendingRequest : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.GlobalSendingRequest : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -183,11 +211,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.WindowsAzure.Storage.RequestResult LastResult { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.WindowsAzure.Storage.RequestResult LastResult" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.LastResult" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastResult As RequestResult" />
+      <MemberSignature Language="F#" Value="member this.LastResult : Microsoft.WindowsAzure.Storage.RequestResult" Usage="Microsoft.WindowsAzure.Storage.OperationContext.LastResult" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.WindowsAzure.Storage.RequestResult</ReturnType>
@@ -204,11 +233,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.WindowsAzure.Storage.LogLevel LogLevel { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.WindowsAzure.Storage.LogLevel LogLevel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.LogLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogLevel As LogLevel" />
+      <MemberSignature Language="F#" Value="member this.LogLevel : Microsoft.WindowsAzure.Storage.LogLevel with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.LogLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.WindowsAzure.Storage.LogLevel</ReturnType>
@@ -225,11 +255,12 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; RequestCompleted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; RequestCompleted" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.RequestCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RequestCompleted As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.RequestCompleted : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.RequestCompleted : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -245,11 +276,12 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.WindowsAzure.Storage.RequestResult&gt; RequestResults { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.WindowsAzure.Storage.RequestResult&gt; RequestResults" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.RequestResults" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestResults As IList(Of RequestResult)" />
+      <MemberSignature Language="F#" Value="member this.RequestResults : System.Collections.Generic.IList&lt;Microsoft.WindowsAzure.Storage.RequestResult&gt;" Usage="Microsoft.WindowsAzure.Storage.OperationContext.RequestResults" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.WindowsAzure.Storage.RequestResult&gt;</ReturnType>
@@ -266,11 +298,12 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; ResponseReceived;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; ResponseReceived" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.ResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ResponseReceived As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ResponseReceived : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.ResponseReceived : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -286,11 +319,12 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; Retrying;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; Retrying" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.Retrying" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Retrying As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.Retrying : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.Retrying : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -306,11 +340,12 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; SendingRequest;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; SendingRequest" />
       <MemberSignature Language="DocId" Value="E:Microsoft.WindowsAzure.Storage.OperationContext.SendingRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SendingRequest As EventHandler(Of RequestEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.SendingRequest : EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " Usage="member this.SendingRequest : System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.WindowsAzure.Storage.RequestEventArgs&gt;</ReturnType>
@@ -326,11 +361,12 @@
       <MemberSignature Language="C#" Value="public DateTime StartTime { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime StartTime" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.StartTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartTime As DateTime" />
+      <MemberSignature Language="F#" Value="member this.StartTime : DateTime with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.StartTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -347,11 +383,12 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; UserHeaders { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; UserHeaders" />
       <MemberSignature Language="DocId" Value="P:Microsoft.WindowsAzure.Storage.OperationContext.UserHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserHeaders As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.UserHeaders : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.WindowsAzure.Storage.OperationContext.UserHeaders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.3.0</AssemblyVersion>
         <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>

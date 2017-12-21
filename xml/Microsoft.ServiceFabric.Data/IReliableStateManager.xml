@@ -2,6 +2,8 @@
   <TypeSignature Language="C#" Value="public interface IReliableStateManager : Microsoft.ServiceFabric.Data.IAsyncEnumerable&lt;Microsoft.ServiceFabric.Data.IReliableState&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReliableStateManager implements class Microsoft.ServiceFabric.Data.IAsyncEnumerable`1&lt;class Microsoft.ServiceFabric.Data.IReliableState&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.ServiceFabric.Data.IReliableStateManager" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IReliableStateManager&#xA;Implements IAsyncEnumerable(Of IReliableState)" />
+  <TypeSignature Language="F#" Value="type IReliableStateManager = interface&#xA;    interface IAsyncEnumerable&lt;IReliableState&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
@@ -23,10 +25,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.ServiceFabric.Data.ITransaction CreateTransaction ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.ServiceFabric.Data.ITransaction CreateTransaction() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.CreateTransaction" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTransaction () As ITransaction" />
+      <MemberSignature Language="F#" Value="abstract member CreateTransaction : unit -&gt; Microsoft.ServiceFabric.Data.ITransaction" Usage="iReliableStateManager.CreateTransaction " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ServiceFabric.Data.ITransaction</ReturnType>
@@ -46,10 +50,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (string name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (name As String) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : string -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -96,16 +102,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="GetOrAddAsync&lt;T&gt;">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Uri name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class System.Uri name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (name As Uri) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Uri -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -152,16 +161,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="GetOrAddAsync&lt;T&gt;">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Microsoft.ServiceFabric.Data.ITransaction tx, string name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class Microsoft.ServiceFabric.Data.ITransaction tx, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(Microsoft.ServiceFabric.Data.ITransaction,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (tx As ITransaction, name As String) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Microsoft.ServiceFabric.Data.ITransaction * string -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (tx, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -209,9 +221,11 @@
         <exception cref="T:System.ArgumentException">An instance of the type <typeparamref name="T" /> cannot be created, or the existing <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> instance is not of type <typeparamref name="T" />.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -220,10 +234,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Microsoft.ServiceFabric.Data.ITransaction tx, Uri name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class Microsoft.ServiceFabric.Data.ITransaction tx, class System.Uri name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(Microsoft.ServiceFabric.Data.ITransaction,System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (tx As ITransaction, name As Uri) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Microsoft.ServiceFabric.Data.ITransaction * Uri -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (tx, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -271,9 +287,11 @@
         <exception cref="T:System.ArgumentException">An instance of the type <typeparamref name="T" /> cannot be created, or the existing <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> instance is not of type <typeparamref name="T" />.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -282,10 +300,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (string name, TimeSpan timeout) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(string name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (name As String, timeout As TimeSpan) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : string * TimeSpan -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -334,16 +354,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="GetOrAddAsync&lt;T&gt;">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Uri name, TimeSpan timeout) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class System.Uri name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(System.Uri,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (name As Uri, timeout As TimeSpan) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Uri * TimeSpan -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -392,16 +415,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="GetOrAddAsync&lt;T&gt;">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Microsoft.ServiceFabric.Data.ITransaction tx, string name, TimeSpan timeout) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class Microsoft.ServiceFabric.Data.ITransaction tx, string name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(Microsoft.ServiceFabric.Data.ITransaction,System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (tx As ITransaction, name As String, timeout As TimeSpan) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Microsoft.ServiceFabric.Data.ITransaction * string * TimeSpan -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (tx, name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -451,9 +477,11 @@
         <exception cref="T:System.ArgumentException">An instance of the type <typeparamref name="T" /> cannot be created, or the existing <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> instance is not of type <typeparamref name="T" />, or <paramref name="timeout" /> is negative.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -462,10 +490,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; GetOrAddAsync&lt;T&gt; (Microsoft.ServiceFabric.Data.ITransaction tx, Uri name, TimeSpan timeout) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetOrAddAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class Microsoft.ServiceFabric.Data.ITransaction tx, class System.Uri name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync``1(Microsoft.ServiceFabric.Data.ITransaction,System.Uri,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOrAddAsync(Of T As IReliableState) (tx As ITransaction, name As Uri, timeout As TimeSpan) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetOrAddAsync : Microsoft.ServiceFabric.Data.ITransaction * Uri * TimeSpan -&gt; System.Threading.Tasks.Task&lt;'T (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.GetOrAddAsync (tx, name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -515,9 +545,11 @@
         <exception cref="T:System.ArgumentException">An instance of the type <typeparamref name="T" /> cannot be created, or the existing <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> instance is not of type <typeparamref name="T" />, or <paramref name="timeout" /> is negative.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -526,10 +558,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (name As String) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : string -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -554,16 +588,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Uri name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class System.Uri name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (name As Uri) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Uri -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -588,16 +625,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Microsoft.ServiceFabric.Data.ITransaction tx, string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class Microsoft.ServiceFabric.Data.ITransaction tx, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Microsoft.ServiceFabric.Data.ITransaction,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (tx As ITransaction, name As String) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Microsoft.ServiceFabric.Data.ITransaction * string -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (tx, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -623,9 +663,11 @@
         <exception cref="T:System.ArgumentException">An <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> with the given name does not exist.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -634,10 +676,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Microsoft.ServiceFabric.Data.ITransaction tx, Uri name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class Microsoft.ServiceFabric.Data.ITransaction tx, class System.Uri name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Microsoft.ServiceFabric.Data.ITransaction,System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (tx As ITransaction, name As Uri) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Microsoft.ServiceFabric.Data.ITransaction * Uri -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (tx, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -663,9 +707,11 @@
         <exception cref="T:System.ArgumentException">An <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> with the given name does not exist.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the default timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -674,10 +720,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (string name, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(string name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (name As String, timeout As TimeSpan) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : string * TimeSpan -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -704,16 +752,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Uri name, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class System.Uri name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(System.Uri,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (name As Uri, timeout As TimeSpan) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Uri * TimeSpan -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -740,16 +791,19 @@
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Microsoft.ServiceFabric.Data.ITransaction tx, string name, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class Microsoft.ServiceFabric.Data.ITransaction tx, string name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Microsoft.ServiceFabric.Data.ITransaction,System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (tx As ITransaction, name As String, timeout As TimeSpan) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Microsoft.ServiceFabric.Data.ITransaction * string * TimeSpan -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (tx, name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -777,9 +831,11 @@
         <exception cref="T:System.ArgumentException">An <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> with the given name does not exist, or <paramref name="timeout" /> is negative.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
@@ -788,10 +844,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RemoveAsync (Microsoft.ServiceFabric.Data.ITransaction tx, Uri name, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task RemoveAsync(class Microsoft.ServiceFabric.Data.ITransaction tx, class System.Uri name, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Microsoft.ServiceFabric.Data.ITransaction,System.Uri,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAsync (tx As ITransaction, name As Uri, timeout As TimeSpan) As Task" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAsync : Microsoft.ServiceFabric.Data.ITransaction * Uri * TimeSpan -&gt; System.Threading.Tasks.Task" Usage="iReliableStateManager.RemoveAsync (tx, name, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -819,21 +877,25 @@
         <exception cref="T:System.ArgumentException">An <see cref="T:Microsoft.ServiceFabric.Data.IReliableState" /> with the given name does not exist, or <paramref name="timeout" /> is negative.</exception>
         <exception cref="T:System.TimeoutException">The operation failed to complete within the given timeout.</exception>
         <exception cref="T:System.Fabric.FabricNotPrimaryException">Thrown when the <see cref="T:Microsoft.ServiceFabric.Data.IReliableStateManager" /> is not in  <see cref="F:System.Fabric.ReplicaRole.Primary" />.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The transaction has been internally faulted by the system. Retry the operation on a new transaction</exception>
         <exception cref="T:System.InvalidOperationException">
             Thrown when a method call is invalid for the object's current state.
-            Example, transaction used is already terminated: committed or aborted.
+            Example, transaction used is already terminated: committed or aborted by the user.
+            If this exception is thrown, it is highly likely that there is a bug in the service code of the use of transactions.
             </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
       </Docs>
     </Member>
     <Member MemberName="StateManagerChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt; StateManagerChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt; StateManagerChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt; StateManagerChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.ServiceFabric.Data.IReliableStateManager.StateManagerChanged" />
+      <MemberSignature Language="VB.NET" Value="Event StateManagerChanged As EventHandler(Of NotifyStateManagerChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StateManagerChanged : EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt; " Usage="member this.StateManagerChanged : System.EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyStateManagerChangedEventArgs&gt;</ReturnType>
@@ -847,13 +909,15 @@
       </Docs>
     </Member>
     <Member MemberName="TransactionChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt; TransactionChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt; TransactionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt; TransactionChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.ServiceFabric.Data.IReliableStateManager.TransactionChanged" />
+      <MemberSignature Language="VB.NET" Value="Event TransactionChanged As EventHandler(Of NotifyTransactionChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.TransactionChanged : EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt; " Usage="member this.TransactionChanged : System.EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.ServiceFabric.Data.Notifications.NotifyTransactionChangedEventArgs&gt;</ReturnType>
@@ -870,10 +934,12 @@
       <MemberSignature Language="C#" Value="public bool TryAddStateSerializer&lt;T&gt; (Microsoft.ServiceFabric.Data.IStateSerializer&lt;T&gt; stateSerializer);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryAddStateSerializer&lt;T&gt;(class Microsoft.ServiceFabric.Data.IStateSerializer`1&lt;!!T&gt; stateSerializer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.TryAddStateSerializer``1(Microsoft.ServiceFabric.Data.IStateSerializer{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryAddStateSerializer(Of T) (stateSerializer As IStateSerializer(Of T)) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryAddStateSerializer : Microsoft.ServiceFabric.Data.IStateSerializer&lt;'T&gt; -&gt; bool" Usage="iReliableStateManager.TryAddStateSerializer stateSerializer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -919,10 +985,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;T&gt;&gt; TryGetAsync&lt;T&gt; (string name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.ServiceFabric.Data.ConditionalValue`1&lt;!!T&gt;&gt; TryGetAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync``1(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetAsync(Of T As IReliableState) (name As String) As Task(Of ConditionalValue(Of T))" />
+      <MemberSignature Language="F#" Value="abstract member TryGetAsync : string -&gt; System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;'T&gt;&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.TryGetAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;T&gt;&gt;</ReturnType>
@@ -959,16 +1027,19 @@
             <see cref="T:System.Fabric.FabricNotReadableException" /> can be thrown in all <see cref="T:System.Fabric.ReplicaRole" />s.
             For example, when a <see cref="F:System.Fabric.ReplicaRole.Primary" /> or <see cref="F:System.Fabric.ReplicaRole.ActiveSecondary" /> looses <see cref="P:System.Fabric.IStatefulServicePartition.ReadStatus" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
     <Member MemberName="TryGetAsync&lt;T&gt;">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;T&gt;&gt; TryGetAsync&lt;T&gt; (Uri name) where T : Microsoft.ServiceFabric.Data.IReliableState;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.ServiceFabric.Data.ConditionalValue`1&lt;!!T&gt;&gt; TryGetAsync&lt;(class Microsoft.ServiceFabric.Data.IReliableState) T&gt;(class System.Uri name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync``1(System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetAsync(Of T As IReliableState) (name As Uri) As Task(Of ConditionalValue(Of T))" />
+      <MemberSignature Language="F#" Value="abstract member TryGetAsync : Uri -&gt; System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;'T&gt;&gt; (requires 'T :&gt; Microsoft.ServiceFabric.Data.IReliableState)" Usage="iReliableStateManager.TryGetAsync name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Data.Interfaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Data.ConditionalValue&lt;T&gt;&gt;</ReturnType>
@@ -1005,6 +1076,7 @@
             <see cref="T:System.Fabric.FabricNotReadableException" /> can be thrown in all <see cref="T:System.Fabric.ReplicaRole" />s.
             For example, when a <see cref="F:System.Fabric.ReplicaRole.Primary" /> or <see cref="F:System.Fabric.ReplicaRole.ActiveSecondary" /> looses <see cref="P:System.Fabric.IStatefulServicePartition.ReadStatus" />.</exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">Indicates that the Reliable State Manager is closed.</exception>
+        <exception cref="T:System.Fabric.TransactionFaultedException">The operation has been internally faulted by the system. Retry the operation</exception>
       </Docs>
     </Member>
   </Members>

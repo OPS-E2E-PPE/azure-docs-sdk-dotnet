@@ -2,9 +2,11 @@
   <TypeSignature Language="C#" Value="public class Sku" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Sku extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.EventHub.Models.Sku" />
+  <TypeSignature Language="VB.NET" Value="Public Class Sku" />
+  <TypeSignature Language="F#" Value="type Sku = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -12,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Sku of the Namespace.
+            SKU parameters supplied to the create namespace operation
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -21,10 +23,11 @@
       <MemberSignature Language="C#" Value="public Sku ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.Models.Sku.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -35,23 +38,28 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Sku (string tier, string name = null, Nullable&lt;int&gt; capacity = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tier, string name, valuetype System.Nullable`1&lt;int32&gt; capacity) cil managed" />
+      <MemberSignature Language="C#" Value="public Sku (string name, string tier = null, Nullable&lt;int&gt; capacity = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string tier, valuetype System.Nullable`1&lt;int32&gt; capacity) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.Models.Sku.#ctor(System.String,System.String,System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, Optional tier As String = null, Optional capacity As Nullable(Of Integer) = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventHub.Models.Sku : string * string * Nullable&lt;int&gt; -&gt; Microsoft.Azure.Management.EventHub.Models.Sku" Usage="new Microsoft.Azure.Management.EventHub.Models.Sku (name, tier, capacity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="tier" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
+        <Parameter Name="tier" Type="System.String" />
         <Parameter Name="capacity" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
-        <param name="tier">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="capacity">To be added.</param>
+        <param name="name">Name of this SKU. Possible values include:
+            'Basic', 'Standard'</param>
+        <param name="tier">The billing tier of this particular SKU.
+            Possible values include: 'Basic', 'Standard'</param>
+        <param name="capacity">The Event Hubs throughput units, vaule
+            should be 0 to 20 throughput units.</param>
         <summary>
             Initializes a new instance of the Sku class.
             </summary>
@@ -62,10 +70,12 @@
       <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; Capacity { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; Capacity" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.EventHub.Models.Sku.Capacity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Capacity As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.Capacity : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.Management.EventHub.Models.Sku.Capacity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -77,7 +87,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The eventhub throughput units
+            Gets or sets the Event Hubs throughput units, vaule should be 0 to
+            20 throughput units.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -87,10 +98,12 @@
       <MemberSignature Language="C#" Value="public string Name { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.EventHub.Models.Sku.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Azure.Management.EventHub.Models.Sku.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -102,8 +115,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Name of this Sku. Possible values include: 'Basic', 'Standard',
-            'Premium'
+            Gets or sets name of this SKU. Possible values include: 'Basic',
+            'Standard'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -113,10 +126,12 @@
       <MemberSignature Language="C#" Value="public string Tier { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Tier" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.EventHub.Models.Sku.Tier" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tier As String" />
+      <MemberSignature Language="F#" Value="member this.Tier : string with get, set" Usage="Microsoft.Azure.Management.EventHub.Models.Sku.Tier" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -128,8 +143,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The tier of this particular SKU. Possible values include: 'Basic',
-            'Standard', 'Premium'
+            Gets or sets the billing tier of this particular SKU. Possible
+            values include: 'Basic', 'Standard'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -139,10 +154,12 @@
       <MemberSignature Language="C#" Value="public virtual void Validate ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.Models.Sku.Validate" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Validate ()" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit&#xA;override this.Validate : unit -&gt; unit" Usage="sku.Validate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -150,9 +167,12 @@
       <Parameters />
       <Docs>
         <summary>
-            Validate the object. Throws ValidationException if validation fails.
+            Validate the object.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
       </Docs>
     </Member>
   </Members>

@@ -2,16 +2,20 @@
   <TypeSignature Language="C#" Value="public abstract class TokenProvider" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TokenProvider extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.EventHubs.TokenProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TokenProvider" />
+  <TypeSignature Language="F#" Value="type TokenProvider = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            This abstract base class can be extended to implement additional token providers.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -19,14 +23,15 @@
       <MemberSignature Language="C#" Value="protected TokenProvider ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -34,17 +39,18 @@
       <MemberSignature Language="C#" Value="protected TokenProvider (Microsoft.Azure.EventHubs.TokenScope tokenScope);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Azure.EventHubs.TokenScope tokenScope) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.#ctor(Microsoft.Azure.EventHubs.TokenScope)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.EventHubs.TokenProvider : Microsoft.Azure.EventHubs.TokenScope -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="new Microsoft.Azure.EventHubs.TokenProvider tokenScope" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenScope" Type="Microsoft.Azure.EventHubs.TokenScope" />
       </Parameters>
       <Docs>
-        <param name="tokenScope">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="tokenScope"></param>
+        <summary />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -52,10 +58,12 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider (string sharedAccessSignature);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider(string sharedAccessSignature) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateSharedAccessSignatureTokenProvider (sharedAccessSignature As String) As TokenProvider" />
+      <MemberSignature Language="F#" Value="static member CreateSharedAccessSignatureTokenProvider : string -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider sharedAccessSignature" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenProvider</ReturnType>
@@ -64,9 +72,11 @@
         <Parameter Name="sharedAccessSignature" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="sharedAccessSignature">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="sharedAccessSignature">The shared access signature</param>
+        <summary>
+            Construct a TokenProvider based on a sharedAccessSignature.
+            </summary>
+        <returns>A TokenProvider initialized with the shared access signature</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -74,10 +84,12 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider (string keyName, string sharedAccessKey);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider(string keyName, string sharedAccessKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateSharedAccessSignatureTokenProvider (keyName As String, sharedAccessKey As String) As TokenProvider" />
+      <MemberSignature Language="F#" Value="static member CreateSharedAccessSignatureTokenProvider : string * string -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider (keyName, sharedAccessKey)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenProvider</ReturnType>
@@ -87,10 +99,12 @@
         <Parameter Name="sharedAccessKey" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="keyName">To be added.</param>
-        <param name="sharedAccessKey">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="keyName">The key name of the corresponding SharedAccessKeyAuthorizationRule.</param>
+        <param name="sharedAccessKey">The key associated with the SharedAccessKeyAuthorizationRule</param>
+        <summary>
+            Construct a TokenProvider based on the provided Key Name and Shared Access Key.
+            </summary>
+        <returns>A TokenProvider initialized with the provided RuleId and Password</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,10 +112,11 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider (string keyName, string sharedAccessKey, Microsoft.Azure.EventHubs.TokenScope tokenScope);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider(string keyName, string sharedAccessKey, valuetype Microsoft.Azure.EventHubs.TokenScope tokenScope) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String,System.String,Microsoft.Azure.EventHubs.TokenScope)" />
+      <MemberSignature Language="F#" Value="static member CreateSharedAccessSignatureTokenProvider : string * string * Microsoft.Azure.EventHubs.TokenScope -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider (keyName, sharedAccessKey, tokenScope)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenProvider</ReturnType>
@@ -112,11 +127,13 @@
         <Parameter Name="tokenScope" Type="Microsoft.Azure.EventHubs.TokenScope" />
       </Parameters>
       <Docs>
-        <param name="keyName">To be added.</param>
-        <param name="sharedAccessKey">To be added.</param>
-        <param name="tokenScope">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="keyName">The key name of the corresponding SharedAccessKeyAuthorizationRule.</param>
+        <param name="sharedAccessKey">The key associated with the SharedAccessKeyAuthorizationRule</param>
+        <param name="tokenScope">The tokenScope of tokens to request.</param>
+        <summary>
+            Construct a TokenProvider based on the provided Key Name and Shared Access Key.
+            </summary>
+        <returns>A TokenProvider initialized with the provided RuleId and Password</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -124,10 +141,12 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider (string keyName, string sharedAccessKey, TimeSpan tokenTimeToLive);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider(string keyName, string sharedAccessKey, valuetype System.TimeSpan tokenTimeToLive) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String,System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateSharedAccessSignatureTokenProvider (keyName As String, sharedAccessKey As String, tokenTimeToLive As TimeSpan) As TokenProvider" />
+      <MemberSignature Language="F#" Value="static member CreateSharedAccessSignatureTokenProvider : string * string * TimeSpan -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider (keyName, sharedAccessKey, tokenTimeToLive)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenProvider</ReturnType>
@@ -138,11 +157,13 @@
         <Parameter Name="tokenTimeToLive" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
-        <param name="keyName">To be added.</param>
-        <param name="sharedAccessKey">To be added.</param>
-        <param name="tokenTimeToLive">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="keyName">The key name of the corresponding SharedAccessKeyAuthorizationRule.</param>
+        <param name="sharedAccessKey">The key associated with the SharedAccessKeyAuthorizationRule</param>
+        <param name="tokenTimeToLive">The token time to live</param>
+        <summary>
+            Construct a TokenProvider based on the provided Key Name and Shared Access Key.
+            </summary>
+        <returns>A TokenProvider initialized with the provided RuleId and Password</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -150,10 +171,11 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider (string keyName, string sharedAccessKey, TimeSpan tokenTimeToLive, Microsoft.Azure.EventHubs.TokenScope tokenScope);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.EventHubs.TokenProvider CreateSharedAccessSignatureTokenProvider(string keyName, string sharedAccessKey, valuetype System.TimeSpan tokenTimeToLive, valuetype Microsoft.Azure.EventHubs.TokenScope tokenScope) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String,System.String,System.TimeSpan,Microsoft.Azure.EventHubs.TokenScope)" />
+      <MemberSignature Language="F#" Value="static member CreateSharedAccessSignatureTokenProvider : string * string * TimeSpan * Microsoft.Azure.EventHubs.TokenScope -&gt; Microsoft.Azure.EventHubs.TokenProvider" Usage="Microsoft.Azure.EventHubs.TokenProvider.CreateSharedAccessSignatureTokenProvider (keyName, sharedAccessKey, tokenTimeToLive, tokenScope)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenProvider</ReturnType>
@@ -165,12 +187,14 @@
         <Parameter Name="tokenScope" Type="Microsoft.Azure.EventHubs.TokenScope" />
       </Parameters>
       <Docs>
-        <param name="keyName">To be added.</param>
-        <param name="sharedAccessKey">To be added.</param>
-        <param name="tokenTimeToLive">To be added.</param>
-        <param name="tokenScope">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="keyName">The key name of the corresponding SharedAccessKeyAuthorizationRule.</param>
+        <param name="sharedAccessKey">The key associated with the SharedAccessKeyAuthorizationRule</param>
+        <param name="tokenTimeToLive">The token time to live</param>
+        <param name="tokenScope">The tokenScope of tokens to request.</param>
+        <summary>
+            Construct a TokenProvider based on the provided Key Name and Shared Access Key.
+            </summary>
+        <returns>A TokenProvider initialized with the provided RuleId and Password</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -178,10 +202,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt; GetTokenAsync (string appliesTo, string action, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.SecurityToken&gt; GetTokenAsync(string appliesTo, string action, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.GetTokenAsync(System.String,System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTokenAsync (appliesTo As String, action As String, timeout As TimeSpan) As Task(Of SecurityToken)" />
+      <MemberSignature Language="F#" Value="member this.GetTokenAsync : string * string * TimeSpan -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt;" Usage="tokenProvider.GetTokenAsync (appliesTo, action, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt;</ReturnType>
@@ -192,11 +218,13 @@
         <Parameter Name="timeout" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
-        <param name="appliesTo">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="timeout">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="appliesTo">The URI which the access token applies to</param>
+        <param name="action">The request action</param>
+        <param name="timeout">The time span that specifies the timeout value for the message that gets the security token</param>
+        <summary>
+            Gets a <see cref="T:Microsoft.Azure.EventHubs.SecurityToken" /> for the given audience and duration.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -204,10 +232,12 @@
       <MemberSignature Language="C#" Value="protected virtual string NormalizeAppliesTo (string appliesTo);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string NormalizeAppliesTo(string appliesTo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.NormalizeAppliesTo(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function NormalizeAppliesTo (appliesTo As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member NormalizeAppliesTo : string -&gt; string&#xA;override this.NormalizeAppliesTo : string -&gt; string" Usage="tokenProvider.NormalizeAppliesTo appliesTo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -216,9 +246,9 @@
         <Parameter Name="appliesTo" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="appliesTo">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="appliesTo"></param>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -226,10 +256,12 @@
       <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt; OnGetTokenAsync (string appliesTo, string action, TimeSpan timeout);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.EventHubs.SecurityToken&gt; OnGetTokenAsync(string appliesTo, string action, valuetype System.TimeSpan timeout) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.EventHubs.TokenProvider.OnGetTokenAsync(System.String,System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OnGetTokenAsync (appliesTo As String, action As String, timeout As TimeSpan) As Task(Of SecurityToken)" />
+      <MemberSignature Language="F#" Value="abstract member OnGetTokenAsync : string * string * TimeSpan -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt;" Usage="tokenProvider.OnGetTokenAsync (appliesTo, action, timeout)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.EventHubs.SecurityToken&gt;</ReturnType>
@@ -240,11 +272,11 @@
         <Parameter Name="timeout" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
-        <param name="appliesTo">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="timeout">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="appliesTo"></param>
+        <param name="action"></param>
+        <param name="timeout"></param>
+        <summary />
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -252,16 +284,18 @@
       <MemberSignature Language="C#" Value="protected object ThisLock { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance object ThisLock" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.EventHubs.TokenProvider.ThisLock" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property ThisLock As Object" />
+      <MemberSignature Language="F#" Value="member this.ThisLock : obj" Usage="Microsoft.Azure.EventHubs.TokenProvider.ThisLock" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -270,16 +304,20 @@
       <MemberSignature Language="C#" Value="public Microsoft.Azure.EventHubs.TokenScope TokenScope { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Azure.EventHubs.TokenScope TokenScope" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.EventHubs.TokenProvider.TokenScope" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TokenScope As TokenScope" />
+      <MemberSignature Language="F#" Value="member this.TokenScope : Microsoft.Azure.EventHubs.TokenScope" Usage="Microsoft.Azure.EventHubs.TokenProvider.TokenScope" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.1.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.EventHubs</AssemblyName>
+        <AssemblyVersion>1.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.EventHubs.TokenScope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets the scope or permissions associated with the token.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

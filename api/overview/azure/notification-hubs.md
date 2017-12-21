@@ -4,13 +4,14 @@ description: Reference for Azure Notification Hubs libraries for .NET
 keywords: Azure, .NET, SDK, API, Notification Hubs
 author: camsoper
 ms.author: casoper
-manager: douge
-ms.date: 08/07/2017
+manager: wpickett
+ms.date: 10/19/2017
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: dotnet
-ms.service: multiple
+ms.service: notification-hubs
+ms.custom: devcenter, svc-overview
 ---
 
 # Azure Notification Hubs libraries for .NET
@@ -20,6 +21,9 @@ Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push 
 ## Client library
 
 Install the [NuGet package](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs) directly from the Visual Studio [Package Manager console][PackageManager] or with the [.NET Core CLI][DotNetCLI].
+
+> [!NOTE]
+> A [new preview version of the NuGet package](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/2.0.0-preview1) now supports .NET Standard, which allows using .NET core for backend use of Notifications Hubs
 
 #### Visual Studio Package Manager
 
@@ -68,4 +72,4 @@ dotnet add package Microsoft.Azure.Management.NotificationHubs
 - [Getting Started with Windows Universal](https://github.com/Azure/azure-notificationhubs-samples/tree/master/dotnet/GetStartedWindowsUniversal)
 
 [PackageManager]: https://docs.microsoft.com/nuget/tools/package-manager-console
-[DotNetCLI]: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
+[DotNetCLI]: https://docs.microsoft.com/dotnet/core/tools/dotnet-add-package

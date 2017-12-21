@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public sealed class FabricClientSettings" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FabricClientSettings extends System.Object" />
   <TypeSignature Language="DocId" Value="T:System.Fabric.FabricClientSettings" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FabricClientSettings" />
+  <TypeSignature Language="F#" Value="type FabricClientSettings = class" />
   <AssemblyInfo>
     <AssemblyName>System.Fabric</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>255.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +23,11 @@
       <MemberSignature Language="C#" Value="public FabricClientSettings ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.FabricClientSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -40,11 +41,12 @@
       <MemberSignature Language="C#" Value="public long AuthTokenBufferSize { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int64 AuthTokenBufferSize" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.AuthTokenBufferSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthTokenBufferSize As Long" />
+      <MemberSignature Language="F#" Value="member this.AuthTokenBufferSize : int64 with get, set" Usage="System.Fabric.FabricClientSettings.AuthTokenBufferSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -63,11 +65,12 @@
       <MemberSignature Language="C#" Value="public string ClientFriendlyName { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ClientFriendlyName" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.ClientFriendlyName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientFriendlyName As String" />
+      <MemberSignature Language="F#" Value="member this.ClientFriendlyName : string with get, set" Usage="System.Fabric.FabricClientSettings.ClientFriendlyName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -81,6 +84,10 @@
         </value>
         <remarks>
           <para>The default value is null and the client friendly name will automatically be generated as a GUID internally.</para>
+          <para>If multiple clients can be created from the same process or on the same node, it is recommended to append a unique identifier to the name.
+            For example, MyProcessIdentifier-{guid}.
+            This ensures that traces can track different actions to the clients that generated them.
+            </para>
         </remarks>
       </Docs>
     </Member>
@@ -88,11 +95,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan ConnectionIdleTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ConnectionIdleTimeout" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.ConnectionIdleTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionIdleTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ConnectionIdleTimeout : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.ConnectionIdleTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -109,11 +117,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan ConnectionInitializationTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ConnectionInitializationTimeout" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.ConnectionInitializationTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionInitializationTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ConnectionInitializationTimeout : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.ConnectionInitializationTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -135,11 +144,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan HealthOperationTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HealthOperationTimeout" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.HealthOperationTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property HealthOperationTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.HealthOperationTimeout : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.HealthOperationTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -160,11 +170,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan HealthReportRetrySendInterval { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HealthReportRetrySendInterval" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.HealthReportRetrySendInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property HealthReportRetrySendInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.HealthReportRetrySendInterval : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.HealthReportRetrySendInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -185,11 +196,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan HealthReportSendInterval { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HealthReportSendInterval" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.HealthReportSendInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property HealthReportSendInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.HealthReportSendInterval : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.HealthReportSendInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -210,11 +222,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan KeepAliveInterval { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan KeepAliveInterval" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.KeepAliveInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property KeepAliveInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.KeepAliveInterval : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.KeepAliveInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -239,11 +252,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan NotificationCacheUpdateTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan NotificationCacheUpdateTimeout" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.NotificationCacheUpdateTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotificationCacheUpdateTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.NotificationCacheUpdateTimeout : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.NotificationCacheUpdateTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -262,11 +276,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan NotificationGatewayConnectionTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan NotificationGatewayConnectionTimeout" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.NotificationGatewayConnectionTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotificationGatewayConnectionTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.NotificationGatewayConnectionTimeout : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.NotificationGatewayConnectionTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -285,11 +300,12 @@
       <MemberSignature Language="C#" Value="public long PartitionLocationCacheBucketCount { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int64 PartitionLocationCacheBucketCount" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.PartitionLocationCacheBucketCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionLocationCacheBucketCount As Long" />
+      <MemberSignature Language="F#" Value="member this.PartitionLocationCacheBucketCount : int64 with get, set" Usage="System.Fabric.FabricClientSettings.PartitionLocationCacheBucketCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -310,11 +326,12 @@
       <MemberSignature Language="C#" Value="public long PartitionLocationCacheLimit { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int64 PartitionLocationCacheLimit" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.PartitionLocationCacheLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionLocationCacheLimit As Long" />
+      <MemberSignature Language="F#" Value="member this.PartitionLocationCacheLimit : int64 with get, set" Usage="System.Fabric.FabricClientSettings.PartitionLocationCacheLimit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -337,11 +354,12 @@
       <MemberSignature Language="C#" Value="public TimeSpan ServiceChangePollInterval { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ServiceChangePollInterval" />
       <MemberSignature Language="DocId" Value="P:System.Fabric.FabricClientSettings.ServiceChangePollInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property ServiceChangePollInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ServiceChangePollInterval : TimeSpan with get, set" Usage="System.Fabric.FabricClientSettings.ServiceChangePollInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>System.Fabric</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>

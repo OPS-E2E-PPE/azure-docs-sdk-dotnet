@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public abstract class ActorBase" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ActorBase extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.ServiceFabric.Actors.Runtime.ActorBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ActorBase" />
+  <TypeSignature Language="F#" Value="type ActorBase = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>255.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -13,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The base class for actors.
+            Represents the base class for actors.
             </summary>
     <remarks>
             The base type for actors, that provides the common functionality
@@ -29,11 +30,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.ServiceFabric.Actors.Runtime.ActorService ActorService { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ServiceFabric.Actors.Runtime.ActorService ActorService" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ActorService" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActorService As ActorService" />
+      <MemberSignature Language="F#" Value="member this.ActorService : Microsoft.ServiceFabric.Actors.Runtime.ActorService" Usage="Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ActorService" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ServiceFabric.Actors.Runtime.ActorService</ReturnType>
@@ -43,7 +45,7 @@
             Gets the stateful service replica that is hosting the actor.
             </summary>
         <value>
-            The <see cref="T:Microsoft.ServiceFabric.Actors.Runtime.ActorService" /> that represents the stateful service replica hosting the actor.
+            The <see cref="P:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ActorService" /> that represents the stateful service replica hosting the actor.
             </value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -52,11 +54,12 @@
       <MemberSignature Language="C#" Value="public string ApplicationName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ApplicationName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationName As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string" Usage="Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ApplicationName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -73,11 +76,12 @@
       <MemberSignature Language="C#" Value="protected TEvent GetEvent&lt;TEvent&gt; ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance !!TEvent GetEvent&lt;TEvent&gt;() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.GetEvent``1" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetEvent(Of TEvent) () As TEvent" />
+      <MemberSignature Language="F#" Value="member this.GetEvent : unit -&gt; 'Event" Usage="actorBase.GetEvent " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TEvent</ReturnType>
@@ -87,11 +91,11 @@
       </TypeParameters>
       <Parameters />
       <Docs>
-        <typeparam name="TEvent">Event interface type.</typeparam>
+        <typeparam name="TEvent">The Event interface type.</typeparam>
         <summary>
             Gets the event for the specified event interface.
             </summary>
-        <returns>Returns Event that represents the specified interface.</returns>
+        <returns>Returns an Event that represents the specified interface.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,11 +103,12 @@
       <MemberSignature Language="C#" Value="protected Microsoft.ServiceFabric.Actors.Runtime.IActorReminder GetReminder (string reminderName);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.ServiceFabric.Actors.Runtime.IActorReminder GetReminder(string reminderName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.GetReminder(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetReminder (reminderName As String) As IActorReminder" />
+      <MemberSignature Language="F#" Value="member this.GetReminder : string -&gt; Microsoft.ServiceFabric.Actors.Runtime.IActorReminder" Usage="actorBase.GetReminder reminderName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ServiceFabric.Actors.Runtime.IActorReminder</ReturnType>
@@ -112,7 +117,7 @@
         <Parameter Name="reminderName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="reminderName">Name of the reminder to get.</param>
+        <param name="reminderName">The Name of the reminder to get.</param>
         <summary>
             Gets the actor reminder with specified reminder name.
             </summary>
@@ -127,11 +132,12 @@
       <MemberSignature Language="C#" Value="public Microsoft.ServiceFabric.Actors.ActorId Id { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ServiceFabric.Actors.ActorId Id" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As ActorId" />
+      <MemberSignature Language="F#" Value="member this.Id : Microsoft.ServiceFabric.Actors.ActorId" Usage="Microsoft.ServiceFabric.Actors.Runtime.ActorBase.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ServiceFabric.Actors.ActorId</ReturnType>
@@ -148,11 +154,12 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnActivateAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnActivateAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.OnActivateAsync" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnActivateAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnActivateAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.OnActivateAsync : unit -&gt; System.Threading.Tasks.Task" Usage="actorBase.OnActivateAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -171,11 +178,12 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnDeactivateAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnDeactivateAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.OnDeactivateAsync" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnDeactivateAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnDeactivateAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.OnDeactivateAsync : unit -&gt; System.Threading.Tasks.Task" Usage="actorBase.OnDeactivateAsync " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -194,11 +202,11 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnPostActorMethodAsync (Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext actorMethodContext);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnPostActorMethodAsync(valuetype Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext actorMethodContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.OnPostActorMethodAsync(Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext)" />
+      <MemberSignature Language="F#" Value="abstract member OnPostActorMethodAsync : Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext -&gt; System.Threading.Tasks.Task&#xA;override this.OnPostActorMethodAsync : Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext -&gt; System.Threading.Tasks.Task" Usage="actorBase.OnPostActorMethodAsync actorMethodContext" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -211,11 +219,11 @@
             An <see cref="T:Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext" /> describing the method that was invoked by actor runtime prior to this method.
             </param>
         <summary>
-            This method is invoked by actor runtime an actor method has finished execution. Override this method
-            for performing any actions after an actor method has finished execution. 
+            Override this method for performing any actions after an actor method has finished execution.
+            This method is invoked by actor runtime an actor method has finished execution.
             </summary>
         <returns>
-            A <see cref="T:System.Threading.Tasks.Task">Task</see> representing post-actor-method operation.
+            Returns a <see cref="T:System.Threading.Tasks.Task">Task</see> representing post-actor-method operation.
             </returns>
         <remarks>
             This method is invoked by actor runtime prior to:
@@ -226,11 +234,11 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnPreActorMethodAsync (Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext actorMethodContext);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnPreActorMethodAsync(valuetype Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext actorMethodContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.OnPreActorMethodAsync(Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext)" />
+      <MemberSignature Language="F#" Value="abstract member OnPreActorMethodAsync : Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext -&gt; System.Threading.Tasks.Task&#xA;override this.OnPreActorMethodAsync : Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext -&gt; System.Threading.Tasks.Task" Usage="actorBase.OnPreActorMethodAsync actorMethodContext" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -243,11 +251,11 @@
             An <see cref="T:Microsoft.ServiceFabric.Actors.Runtime.ActorMethodContext" /> describing the method that will be invoked by actor runtime after this method finishes.
             </param>
         <summary>
-            This method is invoked by actor runtime just before invoking an actor method. Override this method
-            for performing any actions prior to an actor method is invoked.
+            Override this method for performing any actions prior to an actor method is invoked.
+            This method is invoked by actor runtime just before invoking an actor method.
             </summary>
         <returns>
-            A <see cref="T:System.Threading.Tasks.Task">Task</see> representing pre-actor-method operation.
+            Returns a <see cref="T:System.Threading.Tasks.Task">Task</see> representing pre-actor-method operation.
             </returns>
         <remarks>
             This method is invoked by actor runtime prior to:
@@ -258,11 +266,12 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Actors.Runtime.IActorReminder&gt; RegisterReminderAsync (string reminderName, byte[] state, TimeSpan dueTime, TimeSpan period);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.ServiceFabric.Actors.Runtime.IActorReminder&gt; RegisterReminderAsync(string reminderName, unsigned int8[] state, valuetype System.TimeSpan dueTime, valuetype System.TimeSpan period) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.RegisterReminderAsync(System.String,System.Byte[],System.TimeSpan,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function RegisterReminderAsync (reminderName As String, state As Byte(), dueTime As TimeSpan, period As TimeSpan) As Task(Of IActorReminder)" />
+      <MemberSignature Language="F#" Value="member this.RegisterReminderAsync : string * byte[] * TimeSpan * TimeSpan -&gt; System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Actors.Runtime.IActorReminder&gt;" Usage="actorBase.RegisterReminderAsync (reminderName, state, dueTime, period)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -279,7 +288,7 @@
         <Parameter Name="period" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
-        <param name="reminderName">Name of the reminder to register. The name must be unique per actor.</param>
+        <param name="reminderName">The name of the reminder to register. The name must be unique per actor.</param>
         <param name="state">User state passed to the reminder invocation.</param>
         <param name="dueTime">The amount of time to delay before invoking the reminder for the first time. Specify negative one (-1) milliseconds to disable invocation. Specify zero (0) to invoke the reminder immediately after registration.
             </param>
@@ -303,11 +312,12 @@
       <MemberSignature Language="C#" Value="protected Microsoft.ServiceFabric.Actors.Runtime.IActorTimer RegisterTimer (Func&lt;object,System.Threading.Tasks.Task&gt; asyncCallback, object state, TimeSpan dueTime, TimeSpan period);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.ServiceFabric.Actors.Runtime.IActorTimer RegisterTimer(class System.Func`2&lt;object, class System.Threading.Tasks.Task&gt; asyncCallback, object state, valuetype System.TimeSpan dueTime, valuetype System.TimeSpan period) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.RegisterTimer(System.Func{System.Object,System.Threading.Tasks.Task},System.Object,System.TimeSpan,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function RegisterTimer (asyncCallback As Func(Of Object, Task), state As Object, dueTime As TimeSpan, period As TimeSpan) As IActorTimer" />
+      <MemberSignature Language="F#" Value="member this.RegisterTimer : Func&lt;obj, System.Threading.Tasks.Task&gt; * obj * TimeSpan * TimeSpan -&gt; Microsoft.ServiceFabric.Actors.Runtime.IActorTimer" Usage="actorBase.RegisterTimer (asyncCallback, state, dueTime, period)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ServiceFabric.Actors.Runtime.IActorTimer</ReturnType>
@@ -343,11 +353,12 @@
       <MemberSignature Language="C#" Value="public Uri ServiceUri { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ServiceUri" />
       <MemberSignature Language="DocId" Value="P:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ServiceUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServiceUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.ServiceUri : Uri" Usage="Microsoft.ServiceFabric.Actors.Runtime.ActorBase.ServiceUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -364,11 +375,12 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task UnregisterReminderAsync (Microsoft.ServiceFabric.Actors.Runtime.IActorReminder reminder);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task UnregisterReminderAsync(class Microsoft.ServiceFabric.Actors.Runtime.IActorReminder reminder) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.UnregisterReminderAsync(Microsoft.ServiceFabric.Actors.Runtime.IActorReminder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function UnregisterReminderAsync (reminder As IActorReminder) As Task" />
+      <MemberSignature Language="F#" Value="member this.UnregisterReminderAsync : Microsoft.ServiceFabric.Actors.Runtime.IActorReminder -&gt; System.Threading.Tasks.Task" Usage="actorBase.UnregisterReminderAsync reminder" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -387,7 +399,7 @@
             Unregisters a reminder previously registered using <see cref="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.RegisterReminderAsync(System.String,System.Byte[],System.TimeSpan,System.TimeSpan)" />.
             </summary>
         <returns>
-            A task that represents the asynchronous unregistration operation.
+            Returns a task that represents the asynchronous unregistration operation.
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.Fabric.FabricException">
@@ -399,11 +411,12 @@
       <MemberSignature Language="C#" Value="protected void UnregisterTimer (Microsoft.ServiceFabric.Actors.Runtime.IActorTimer timer);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnregisterTimer(class Microsoft.ServiceFabric.Actors.Runtime.IActorTimer timer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.ActorBase.UnregisterTimer(Microsoft.ServiceFabric.Actors.Runtime.IActorTimer)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub UnregisterTimer (timer As IActorTimer)" />
+      <MemberSignature Language="F#" Value="member this.UnregisterTimer : Microsoft.ServiceFabric.Actors.Runtime.IActorTimer -&gt; unit" Usage="actorBase.UnregisterTimer timer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -412,7 +425,7 @@
         <Parameter Name="timer" Type="Microsoft.ServiceFabric.Actors.Runtime.IActorTimer" />
       </Parameters>
       <Docs>
-        <param name="timer">IActorTimer representing timer that needs to be unregistered..</param>
+        <param name="timer">An IActorTimer representing timer that needs to be unregistered.</param>
         <summary>
             Unregisters a Timer previously set on this actor.
             </summary>

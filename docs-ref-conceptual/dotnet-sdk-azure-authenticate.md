@@ -4,14 +4,14 @@ description: Authenticate into the Azure libraries for .NET
 keywords: Azure, .NET, SDK, API, authentication, active directory, service principal
 author: camsoper
 ms.author: casoper
-manager: douge
-ms.date: 06/20/2017
-ms.topic: article
+manager: wpickett
+ms.date: 10/19/2017
+ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: dotnet
 ms.service: multiple
-ms.assetid: 
+ms.custom: devcenter
 ---
 
 # Authenticate with the Azure Libraries for .NET
@@ -49,7 +49,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Service connection strings are used in other Azure services like [CosmosDB](https://docs.microsoft.com/en-us/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db), [Redis Cache](https://docs.microsoft.com/en-us/azure/redis-cache/cache-dotnet-how-to-use-azure-redis-cache), and [Service Bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) and you can get those strings using the Azure portal, CLI, or PowerShell.  You can also use the Azure management libraries for .NET to query resources to build connection strings in your code. 
+Service connection strings are used in other Azure services like [CosmosDB](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db), [Redis Cache](/azure/redis-cache/cache-dotnet-how-to-use-azure-redis-cache), and [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) and you can get those strings using the Azure portal, CLI, or PowerShell.  You can also use the Azure management libraries for .NET to query resources to build connection strings in your code. 
 
 This snippet uses the management libraries to create a storage account connection string:
 
@@ -80,6 +80,13 @@ Other libraries require your application to run with a [service principal](https
 
 Now that the service principal is created, two options are available to authenticate to the service principal to create and manage resources.
 
+For both options you will need to add the following nuget packages to your project.
+
+```
+Install-Package Microsoft.Azure.Management.Fluent
+Install-Package Microsoft.Azure.Management.ResourceManager.Fluent
+```
+
 ### Authenticate with token credentials
 
 The first method is to build the token credential object in code.  You should store the credentials securely in a configuration file, the registry, or Azure KeyVault.
@@ -99,7 +106,7 @@ var credentials = SdkContext.AzureCredentialsFactory
 Then create the entry point `Azure` object to start working with the API:
 
 ```csharp
-var azure = Azure
+var azure = Microsoft.Azure.Management.Fluent.Azure
     .Configure()
     .Authenticate(credentials)
     .WithDefaultSubscription();
@@ -118,7 +125,7 @@ Read the contents of the file and create the entry point `Azure` object to start
 var credentials = SdkContext.AzureCredentialsFactory
     .FromFile(Environment.GetEnvironmentVariable("AZURE_AUTH_LOCATION"));
 
-var azure = Azure
+var azure = Microsoft.Azure.Management.Fluent.Azure
     .Configure()
     .Authenticate(credentials)
     .WithDefaultSubscription();

@@ -2,12 +2,12 @@
   <TypeSignature Language="C#" Value="public class MultiInstanceSettings" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultiInstanceSettings extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class MultiInstanceSettings" />
+  <TypeSignature Language="F#" Value="type MultiInstanceSettings = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-    <AssemblyVersion>6.1.0.0</AssemblyVersion>
-    <AssemblyVersion>7.0.0.0</AssemblyVersion>
-    <AssemblyVersion>7.0.1.0</AssemblyVersion>
     <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,13 +26,12 @@
       <MemberSignature Language="C#" Value="public MultiInstanceSettings ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
         <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,28 +42,27 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public MultiInstanceSettings (int numberOfInstances, string coordinationCommandLine = null, System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; commonResourceFiles = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 numberOfInstances, string coordinationCommandLine, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; commonResourceFiles) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.#ctor(System.Int32,System.String,System.Collections.Generic.IList{Microsoft.Azure.Batch.Protocol.Models.ResourceFile})" />
+      <MemberSignature Language="C#" Value="public MultiInstanceSettings (string coordinationCommandLine, Nullable&lt;int&gt; numberOfInstances = null, System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; commonResourceFiles = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string coordinationCommandLine, valuetype System.Nullable`1&lt;int32&gt; numberOfInstances, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; commonResourceFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.#ctor(System.String,System.Nullable{System.Int32},System.Collections.Generic.IList{Microsoft.Azure.Batch.Protocol.Models.ResourceFile})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (coordinationCommandLine As String, Optional numberOfInstances As Nullable(Of Integer) = null, Optional commonResourceFiles As IList(Of ResourceFile) = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings : string * Nullable&lt;int&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; -&gt; Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings" Usage="new Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings (coordinationCommandLine, numberOfInstances, commonResourceFiles)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
-        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="numberOfInstances" Type="System.Int32" />
         <Parameter Name="coordinationCommandLine" Type="System.String" />
+        <Parameter Name="numberOfInstances" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="commonResourceFiles" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt;" />
       </Parameters>
       <Docs>
-        <param name="numberOfInstances">The number of compute nodes
-            required by the task.</param>
         <param name="coordinationCommandLine">The command line to run on
             all the compute nodes to enable them to coordinate when the primary
             runs the main task command.</param>
+        <param name="numberOfInstances">The number of compute nodes
+            required by the task.</param>
         <param name="commonResourceFiles">A list of files that the Batch
             service will download before running the coordination command
             line.</param>
@@ -78,13 +76,13 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; CommonResourceFiles { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; CommonResourceFiles" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.CommonResourceFiles" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommonResourceFiles As IList(Of ResourceFile)" />
+      <MemberSignature Language="F#" Value="member this.CommonResourceFiles : System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.ResourceFile&gt; with get, set" Usage="Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.CommonResourceFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
         <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -104,7 +102,10 @@
             The difference between common resource files and task resource
             files is that common resource files are downloaded for all subtasks
             including the primary, whereas task resource files are downloaded
-            only for the primary.
+            only for the primary. Also note that these resource files are not
+            downloaded to the task working directory, but instead are
+            downloaded to the task root directory (one directory above the
+            working directory).
             </remarks>
       </Docs>
     </Member>
@@ -112,13 +113,13 @@
       <MemberSignature Language="C#" Value="public string CoordinationCommandLine { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string CoordinationCommandLine" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.CoordinationCommandLine" />
+      <MemberSignature Language="VB.NET" Value="Public Property CoordinationCommandLine As String" />
+      <MemberSignature Language="F#" Value="member this.CoordinationCommandLine : string with get, set" Usage="Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.CoordinationCommandLine" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
         <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -143,16 +144,16 @@
       </Docs>
     </Member>
     <Member MemberName="NumberOfInstances">
-      <MemberSignature Language="C#" Value="public int NumberOfInstances { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfInstances" />
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; NumberOfInstances { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; NumberOfInstances" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.NumberOfInstances" />
+      <MemberSignature Language="VB.NET" Value="Public Property NumberOfInstances As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.NumberOfInstances : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.NumberOfInstances" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
         <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -160,27 +161,29 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets the number of compute nodes required by the task.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            If omitted, the default is 1.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Validate">
       <MemberSignature Language="C#" Value="public virtual void Validate ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Batch.Protocol.Models.MultiInstanceSettings.Validate" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Validate ()" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit&#xA;override this.Validate : unit -&gt; unit" Usage="multiInstanceSettings.Validate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>6.1.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-        <AssemblyVersion>7.0.1.0</AssemblyVersion>
         <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -2,10 +2,11 @@
   <TypeSignature Language="C#" Value="public interface IRemindable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemindable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.ServiceFabric.Actors.Runtime.IRemindable" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IRemindable" />
+  <TypeSignature Language="F#" Value="type IRemindable = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>255.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -19,11 +20,12 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ReceiveReminderAsync (string reminderName, byte[] state, TimeSpan dueTime, TimeSpan period);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task ReceiveReminderAsync(string reminderName, unsigned int8[] state, valuetype System.TimeSpan dueTime, valuetype System.TimeSpan period) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ServiceFabric.Actors.Runtime.IRemindable.ReceiveReminderAsync(System.String,System.Byte[],System.TimeSpan,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReceiveReminderAsync (reminderName As String, state As Byte(), dueTime As TimeSpan, period As TimeSpan) As Task" />
+      <MemberSignature Language="F#" Value="abstract member ReceiveReminderAsync : string * byte[] * TimeSpan * TimeSpan -&gt; System.Threading.Tasks.Task" Usage="iRemindable.ReceiveReminderAsync (reminderName, state, dueTime, period)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>255.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.ServiceFabric.Actors</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -35,12 +37,12 @@
         <Parameter Name="period" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
-        <param name="reminderName">Name of reminder provided during registration</param>
-        <param name="state">User state provided during registration.</param>
-        <param name="dueTime">Invocation due time provided during registration.</param>
-        <param name="period">Invocation period provided during registration.</param>
+        <param name="reminderName">The name of reminder provided during registration</param>
+        <param name="state">The user state provided during registration.</param>
+        <param name="dueTime">The invocation due time provided during registration.</param>
+        <param name="period">The invocation period provided during registration.</param>
         <summary>
-            Reminder call back invoked when an actor reminder is triggered.
+            The reminder call back invoked when an actor reminder is triggered.
             </summary>
         <returns>A task that represents the asynchronous operation performed by this callback.</returns>
         <remarks>

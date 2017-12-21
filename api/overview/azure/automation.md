@@ -4,24 +4,23 @@ description: Reference for Azure Automation libraries for .NET
 keywords: Azure, .NET, SDK, API, Automation
 author: camsoper
 ms.author: casoper
-manager: douge
-ms.date: 07/21/2017
+manager: wpickett
+ms.date: 10/19/2017
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: dotnet
-ms.service: multiple
+ms.service: automation
+ms.custom: devcenter, svc-overview
 ---
 
 # Azure Automation libraries for .NET
 
 ## Overview
 
-Microsoft Azure Automation provides a way for users to automate the tasks that are commonly performed in a cloud and enterprise environment. It saves time and increases the reliability of regular administrative tasks. Tasks can be scheduled to automatically run at regular intervals. You can automate processes using runbooks or automate configuration management using [Desired State Configuration](/azure/automation/automation-dsc-overview). Azure Automation uses runbooks. A runbook is a set of tasks that perform some automated process.
+Microsoft Azure Automation provides a way for users to automate the tasks that are commonly performed in a cloud and enterprise environment. 
 
 Learn more by reading the [Azure Automation Overview](/azure/automation/automation-intro).
-
-To view an architecture overview and build your first runbook, visit [Getting Started with Azure Automation](/azure/automation/automation-offering-get-started).
 
 ## Management library
 

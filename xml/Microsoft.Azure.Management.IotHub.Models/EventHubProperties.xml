@@ -2,6 +2,8 @@
   <TypeSignature Language="C#" Value="public class EventHubProperties" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventHubProperties extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.IotHub.Models.EventHubProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class EventHubProperties" />
+  <TypeSignature Language="F#" Value="type EventHubProperties = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -12,7 +14,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            The properties of the provisioned event hub used by the Iot Hub.
+            The properties of the provisioned Event Hub-compatible endpoint used
+            by the IoT hub.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -21,10 +24,11 @@
       <MemberSignature Language="C#" Value="public EventHubProperties ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -35,13 +39,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public EventHubProperties (Nullable&lt;long&gt; retentionTimeInDays = null, Nullable&lt;int&gt; partitionCount = null, System.Collections.Generic.IList&lt;string&gt; partitionIds = null, string path = null, string endpoint = null, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; internalAuthorizationPolicies = null, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; authorizationPolicies = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int64&gt; retentionTimeInDays, valuetype System.Nullable`1&lt;int32&gt; partitionCount, class System.Collections.Generic.IList`1&lt;string&gt; partitionIds, string path, string endpoint, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; internalAuthorizationPolicies, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; authorizationPolicies) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int32},System.Collections.Generic.IList{System.String},System.String,System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule},System.Collections.Generic.IList{Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule})" />
+      <MemberSignature Language="C#" Value="public EventHubProperties (Nullable&lt;long&gt; retentionTimeInDays = null, Nullable&lt;int&gt; partitionCount = null, System.Collections.Generic.IList&lt;string&gt; partitionIds = null, string path = null, string endpoint = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int64&gt; retentionTimeInDays, valuetype System.Nullable`1&lt;int32&gt; partitionCount, class System.Collections.Generic.IList`1&lt;string&gt; partitionIds, string path, string endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int32},System.Collections.Generic.IList{System.String},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional retentionTimeInDays As Nullable(Of Long) = null, Optional partitionCount As Nullable(Of Integer) = null, Optional partitionIds As IList(Of String) = null, Optional path As String = null, Optional endpoint As String = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.IotHub.Models.EventHubProperties : Nullable&lt;int64&gt; * Nullable&lt;int&gt; * System.Collections.Generic.IList&lt;string&gt; * string * string -&gt; Microsoft.Azure.Management.IotHub.Models.EventHubProperties" Usage="new Microsoft.Azure.Management.IotHub.Models.EventHubProperties (retentionTimeInDays, partitionCount, partitionIds, path, endpoint)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="retentionTimeInDays" Type="System.Nullable&lt;System.Int64&gt;" />
@@ -49,56 +55,29 @@
         <Parameter Name="partitionIds" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
         <Parameter Name="path" Type="System.String" />
         <Parameter Name="endpoint" Type="System.String" />
-        <Parameter Name="internalAuthorizationPolicies" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt;" />
-        <Parameter Name="authorizationPolicies" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt;" />
       </Parameters>
       <Docs>
-        <param name="retentionTimeInDays">To be added.</param>
-        <param name="partitionCount">To be added.</param>
-        <param name="partitionIds">To be added.</param>
-        <param name="path">To be added.</param>
-        <param name="endpoint">To be added.</param>
-        <param name="internalAuthorizationPolicies">To be added.</param>
-        <param name="authorizationPolicies">To be added.</param>
+        <param name="retentionTimeInDays">The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages</param>
+        <param name="partitionCount">The number of paritions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.</param>
+        <param name="partitionIds">The partition ids in the Event Hub-compatible endpoint.</param>
+        <param name="path">The Event Hub-compatible name.</param>
+        <param name="endpoint">The Event Hub-compatible endpoint.</param>
         <summary>
             Initializes a new instance of the EventHubProperties class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="AuthorizationPolicies">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; AuthorizationPolicies { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; AuthorizationPolicies" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.AuthorizationPolicies" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="authorizationPolicies")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The authorization rules.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Endpoint">
-      <MemberSignature Language="C#" Value="public string Endpoint { get; set; }" />
+      <MemberSignature Language="C#" Value="public string Endpoint { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string" Usage="Microsoft.Azure.Management.IotHub.Models.EventHubProperties.Endpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -110,32 +89,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The endpoint.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="InternalAuthorizationPolicies">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; InternalAuthorizationPolicies { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt; InternalAuthorizationPolicies" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.InternalAuthorizationPolicies" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="internalAuthorizationPolicies")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.IotHub.Models.SharedAccessAuthorizationRule&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The internal authorization rules.
+            Gets the Event Hub-compatible endpoint.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -145,10 +99,12 @@
       <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; PartitionCount { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; PartitionCount" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.PartitionCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionCount As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.PartitionCount : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.Management.IotHub.Models.EventHubProperties.PartitionCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -160,21 +116,24 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The partition count. Range of values [For F1: 2-2, S1: 2-128, S2:
-            2-128, S3: 2-128].
+            Gets or sets the number of paritions for receiving device-to-cloud
+            messages in the Event Hub-compatible endpoint. See:
+            https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="PartitionIds">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; PartitionIds { get; set; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; PartitionIds { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; PartitionIds" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.PartitionIds" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PartitionIds As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.PartitionIds : System.Collections.Generic.IList&lt;string&gt;" Usage="Microsoft.Azure.Management.IotHub.Models.EventHubProperties.PartitionIds" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -186,20 +145,22 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The partition ids.
+            Gets the partition ids in the Event Hub-compatible endpoint.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Path">
-      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Path" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.Azure.Management.IotHub.Models.EventHubProperties.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -211,7 +172,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The eventhub path.
+            Gets the Event Hub-compatible name.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -221,10 +182,12 @@
       <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; RetentionTimeInDays { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; RetentionTimeInDays" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.IotHub.Models.EventHubProperties.RetentionTimeInDays" />
+      <MemberSignature Language="VB.NET" Value="Public Property RetentionTimeInDays As Nullable(Of Long)" />
+      <MemberSignature Language="F#" Value="member this.RetentionTimeInDays : Nullable&lt;int64&gt; with get, set" Usage="Microsoft.Azure.Management.IotHub.Models.EventHubProperties.RetentionTimeInDays" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.IotHub</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -236,8 +199,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The retention time in days. Range of values [For F1: 1-1, S1: 1-7,
-            S2: 1-7, S3: 1-7].
+            Gets or sets the retention time for device-to-cloud messages in
+            days. See:
+            https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

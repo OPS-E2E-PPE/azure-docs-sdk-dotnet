@@ -2,10 +2,12 @@
   <TypeSignature Language="C#" Value="public sealed class Message.SystemPropertiesCollection" />
   <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit Message/SystemPropertiesCollection extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Message.SystemPropertiesCollection" />
+  <TypeSignature Language="F#" Value="type Message.SystemPropertiesCollection = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-    <AssemblyVersion>0.0.2.0</AssemblyVersion>
     <AssemblyVersion>0.0.6.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +24,12 @@
       <MemberSignature Language="C#" Value="public SystemPropertiesCollection ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -34,15 +37,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DeadLetterSource">
+      <MemberSignature Language="C#" Value="public string DeadLetterSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeadLetterSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.DeadLetterSource" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeadLetterSource As String" />
+      <MemberSignature Language="F#" Value="member this.DeadLetterSource : string" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.DeadLetterSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the queue or subscription that this message was enqueued on, before it was deadlettered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DeliveryCount">
       <MemberSignature Language="C#" Value="public int DeliveryCount { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 DeliveryCount" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.DeliveryCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeliveryCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.DeliveryCount : int" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.DeliveryCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -59,11 +86,13 @@
       <MemberSignature Language="C#" Value="public long EnqueuedSequenceNumber { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int64 EnqueuedSequenceNumber" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.EnqueuedSequenceNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EnqueuedSequenceNumber As Long" />
+      <MemberSignature Language="F#" Value="member this.EnqueuedSequenceNumber : int64" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.EnqueuedSequenceNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -71,18 +100,21 @@
       <Docs>
         <summary>Gets or sets the enqueued sequence number of the message.</summary>
         <value>The enqueued sequence number of the message.</value>
-        <remarks>To be added.</remarks>
+        <remarks>In scenarios of Topic-Subscription or ForwardTo, the message is initially enqueued on a different entity as compared to the
+            entity from where the message is received. This returns the sequence number of the message in the initial entity.</remarks>
       </Docs>
     </Member>
     <Member MemberName="EnqueuedTimeUtc">
       <MemberSignature Language="C#" Value="public DateTime EnqueuedTimeUtc { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EnqueuedTimeUtc" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.EnqueuedTimeUtc" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EnqueuedTimeUtc As DateTime" />
+      <MemberSignature Language="F#" Value="member this.EnqueuedTimeUtc : DateTime" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.EnqueuedTimeUtc" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -97,11 +129,13 @@
       <MemberSignature Language="C#" Value="public bool IsLockTokenSet { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsLockTokenSet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.IsLockTokenSet" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsLockTokenSet As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLockTokenSet : bool" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.IsLockTokenSet" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -118,11 +152,13 @@
       <MemberSignature Language="C#" Value="public bool IsReceived { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsReceived" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.IsReceived" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReceived As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsReceived : bool" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.IsReceived" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -137,11 +173,13 @@
       <MemberSignature Language="C#" Value="public DateTime LockedUntilUtc { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LockedUntilUtc" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.LockedUntilUtc" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LockedUntilUtc As DateTime" />
+      <MemberSignature Language="F#" Value="member this.LockedUntilUtc : DateTime" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.LockedUntilUtc" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -156,11 +194,13 @@
       <MemberSignature Language="C#" Value="public string LockToken { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string LockToken" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.LockToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LockToken As String" />
+      <MemberSignature Language="F#" Value="member this.LockToken : string" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.LockToken" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -173,33 +213,17 @@
         <remarks>A lock token will only be specified if the message was received using <see cref="F:Microsoft.Azure.ServiceBus.ReceiveMode.PeekLock" /></remarks>
       </Docs>
     </Member>
-    <Member MemberName="PartitionId">
-      <MemberSignature Language="C#" Value="public short PartitionId { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int16 PartitionId" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.PartitionId" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
-        <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int16</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="SequenceNumber">
       <MemberSignature Language="C#" Value="public long SequenceNumber { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int64 SequenceNumber" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.SequenceNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SequenceNumber As Long" />
+      <MemberSignature Language="F#" Value="member this.SequenceNumber : int64" Usage="Microsoft.Azure.ServiceBus.Message.SystemPropertiesCollection.SequenceNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
-        <AssemblyVersion>0.0.2.0</AssemblyVersion>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>

@@ -2,9 +2,11 @@
   <TypeSignature Language="C#" Value="public static class ConsumerGroupsOperationsExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConsumerGroupsOperationsExtensions extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ConsumerGroupsOperationsExtensions" />
+  <TypeSignature Language="F#" Value="type ConsumerGroupsOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,16 +20,18 @@
   </Docs>
   <Members>
     <Member MemberName="CreateOrUpdate">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource CreateOrUpdate (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters parameters);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource CreateOrUpdate(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters parameters) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.EventHub.Models.ConsumerGroup CreateOrUpdate (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, Microsoft.Azure.Management.EventHub.Models.ConsumerGroup parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup CreateOrUpdate(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventHub.Models.ConsumerGroup)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdate (operations As IConsumerGroupsOperations, resourceGroupName As String, namespaceName As String, eventHubName As String, consumerGroupName As String, parameters As ConsumerGroup) As ConsumerGroup" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdate : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string * Microsoft.Azure.Management.EventHub.Models.ConsumerGroup -&gt; Microsoft.Azure.Management.EventHub.Models.ConsumerGroup" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdate (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName, parameters)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource</ReturnType>
+        <ReturnType>Microsoft.Azure.Management.EventHub.Models.ConsumerGroup</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -35,42 +39,44 @@
         <Parameter Name="namespaceName" Type="System.String" />
         <Parameter Name="eventHubName" Type="System.String" />
         <Parameter Name="consumerGroupName" Type="System.String" />
-        <Parameter Name="parameters" Type="Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.EventHub.Models.ConsumerGroup" />
       </Parameters>
       <Docs>
         <param name="operations">
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <param name="parameters">
-            Parameters supplied to create a Consumer Group Resource.
+            Parameters supplied to create or update a consumer group resource.
             </param>
         <summary>
-            Creates/Updates a consumer group as a nested resource within a namespace.
+            Creates or updates an Event Hubs consumer group as a nested resource within
+            a Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters parameters, System.Threading.CancellationToken cancellationToken = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, Microsoft.Azure.Management.EventHub.Models.ConsumerGroup parameters, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventHub.Models.ConsumerGroup,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdateAsync : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string * Microsoft.Azure.Management.EventHub.Models.ConsumerGroup * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.CreateOrUpdateAsync (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -78,7 +84,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -86,7 +92,7 @@
         <Parameter Name="namespaceName" Type="System.String" />
         <Parameter Name="eventHubName" Type="System.String" />
         <Parameter Name="consumerGroupName" Type="System.String" />
-        <Parameter Name="parameters" Type="Microsoft.Azure.Management.EventHub.Models.ConsumerGroupCreateOrUpdateParameters" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.EventHub.Models.ConsumerGroup" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -94,25 +100,26 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <param name="parameters">
-            Parameters supplied to create a Consumer Group Resource.
+            Parameters supplied to create or update a consumer group resource.
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            Creates/Updates a consumer group as a nested resource within a namespace.
+            Creates or updates an Event Hubs consumer group as a nested resource within
+            a Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -122,10 +129,12 @@
       <MemberSignature Language="C#" Value="public static void Delete (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.Delete(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub Delete (operations As IConsumerGroupsOperations, resourceGroupName As String, namespaceName As String, eventHubName As String, consumerGroupName As String)" />
+      <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.Delete (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -142,19 +151,19 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <summary>
-            Deletes an ConsumerGroup from the specified EventHub and resource group.
+            Deletes a consumer group from the specified Event Hub and resource group.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -163,10 +172,11 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.DeleteAsync (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -189,38 +199,40 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            Deletes an ConsumerGroup from the specified EventHub and resource group.
+            Deletes a consumer group from the specified Event Hub and resource group.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Get">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource Get (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource Get(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName) cil managed" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.EventHub.Models.ConsumerGroup Get (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup Get(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.Get(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IConsumerGroupsOperations, resourceGroupName As String, namespaceName As String, eventHubName As String, consumerGroupName As String) As ConsumerGroup" />
+      <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string -&gt; Microsoft.Azure.Management.EventHub.Models.ConsumerGroup" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.Get (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource</ReturnType>
+        <ReturnType>Microsoft.Azure.Management.EventHub.Models.ConsumerGroup</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -234,32 +246,33 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <summary>
-            Returns an Consumer Group description for the specified Consumer Group.
+            Gets a description for the specified consumer group.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; GetAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, System.Threading.CancellationToken cancellationToken = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; GetAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; GetAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; GetAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, string consumerGroupName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.GetAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.GetAsync (operations, resourceGroupName, namespaceName, eventHubName, consumerGroupName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -267,7 +280,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -282,38 +295,40 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="consumerGroupName">
-            The Consumer Group name.
+            The consumer group name
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            Returns an Consumer Group description for the specified Consumer Group.
+            Gets a description for the specified consumer group.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ListAll">
-      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; ListAll (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; ListAll(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListAll(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String)" />
+    <Member MemberName="ListByEventHub">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; ListByEventHub (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; ListByEventHub(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHub(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByEventHub (operations As IConsumerGroupsOperations, resourceGroupName As String, namespaceName As String, eventHubName As String) As IPage(Of ConsumerGroup)" />
+      <MemberSignature Language="F#" Value="static member ListByEventHub : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string -&gt; Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHub (operations, resourceGroupName, namespaceName, eventHubName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;</ReturnType>
+        <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -326,38 +341,39 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <summary>
-            Enumerates the consumer groups in a namespace. An empty feed is returned
-            if no consumer group exists in the namespace.
+            Gets all the consumer groups in a Namespace. An empty feed is returned if
+            no consumer group exists in the Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ListAllAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt; ListAllAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, System.Threading.CancellationToken cancellationToken = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt; ListAllAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListAllAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+    <Member MemberName="ListByEventHubAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt; ListByEventHubAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt; ListByEventHubAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string resourceGroupName, string namespaceName, string eventHubName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ListByEventHubAsync : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubAsync (operations, resourceGroupName, namespaceName, eventHubName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions/&lt;ListAllAsync&gt;d__7))</AttributeName>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions/&lt;ListByEventHubAsync&gt;d__7))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -371,36 +387,38 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            Name of the resource group within the azure subscription.
             </param>
         <param name="namespaceName">
-            The namespace name.
+            The Namespace name
             </param>
         <param name="eventHubName">
-            The EventHub name.
+            The Event Hub name
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            Enumerates the consumer groups in a namespace. An empty feed is returned
-            if no consumer group exists in the namespace.
+            Gets all the consumer groups in a Namespace. An empty feed is returned if
+            no consumer group exists in the Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ListAllNext">
-      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; ListAllNext (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt; ListAllNext(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListAllNext(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String)" />
+    <Member MemberName="ListByEventHubNext">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; ListByEventHubNext (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt; ListByEventHubNext(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubNext(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByEventHubNext (operations As IConsumerGroupsOperations, nextPageLink As String) As IPage(Of ConsumerGroup)" />
+      <MemberSignature Language="F#" Value="static member ListByEventHubNext : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string -&gt; Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubNext (operations, nextPageLink)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;</ReturnType>
+        <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -414,29 +432,30 @@
             The NextLink from the previous successful call to List operation.
             </param>
         <summary>
-            Enumerates the consumer groups in a namespace. An empty feed is returned
-            if no consumer group exists in the namespace.
+            Gets all the consumer groups in a Namespace. An empty feed is returned if
+            no consumer group exists in the Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ListAllNextAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt; ListAllNextAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt; ListAllNextAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListAllNextAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.Threading.CancellationToken)" />
+    <Member MemberName="ListByEventHubNextAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt; ListByEventHubNextAsync (this Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt; ListByEventHubNextAsync(class Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubNextAsync(Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ListByEventHubNextAsync : Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt;" Usage="Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions.ListByEventHubNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.EventHub</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions/&lt;ListAllNextAsync&gt;d__9))</AttributeName>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.Azure.Management.EventHub.ConsumerGroupsOperationsExtensions/&lt;ListByEventHubNextAsync&gt;d__9))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroupResource&gt;&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.EventHub.Models.ConsumerGroup&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="operations" Type="Microsoft.Azure.Management.EventHub.IConsumerGroupsOperations" RefType="this" />
@@ -454,8 +473,8 @@
             The cancellation token.
             </param>
         <summary>
-            Enumerates the consumer groups in a namespace. An empty feed is returned
-            if no consumer group exists in the namespace.
+            Gets all the consumer groups in a Namespace. An empty feed is returned if
+            no consumer group exists in the Namespace.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

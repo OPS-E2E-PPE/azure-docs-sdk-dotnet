@@ -2,9 +2,11 @@
   <TypeSignature Language="C#" Value="public static class ExportJobsOperationResultsOperationsExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ExportJobsOperationResultsOperationsExtensions extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.RecoveryServices.Backup.ExportJobsOperationResultsOperationsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ExportJobsOperationResultsOperationsExtensions" />
+  <TypeSignature Language="F#" Value="type ExportJobsOperationResultsOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,10 +23,12 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource Get (this Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations operations, string vaultName, string resourceGroupName, string operationId);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource Get(class Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations operations, string vaultName, string resourceGroupName, string operationId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ExportJobsOperationResultsOperationsExtensions.Get(Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IExportJobsOperationResultsOperations, vaultName As String, resourceGroupName As String, operationId As String) As OperationResultInfoBaseResource" />
+      <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations * string * string * string -&gt; Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ExportJobsOperationResultsOperationsExtensions.Get (operations, vaultName, resourceGroupName, operationId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource</ReturnType>
@@ -50,7 +54,10 @@
             OperationID which represents the export job.
             </param>
         <summary>
-            Fetches the result of the operation triggered by the Export Job API.
+            Gets the operation result of operation triggered by Export Jobs API. If the
+            operation is successful, then it also contains URL of a Blob and a SAS key
+            to access the same. The blob contains exported jobs in JSON serialized
+            format.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -60,10 +67,11 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource&gt; GetAsync (this Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations operations, string vaultName, string resourceGroupName, string operationId, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource&gt; GetAsync(class Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations operations, string vaultName, string resourceGroupName, string operationId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ExportJobsOperationResultsOperationsExtensions.GetAsync(Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.RecoveryServices.Backup.IExportJobsOperationResultsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.OperationResultInfoBaseResource&gt;" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ExportJobsOperationResultsOperationsExtensions.GetAsync (operations, vaultName, resourceGroupName, operationId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -98,7 +106,10 @@
             The cancellation token.
             </param>
         <summary>
-            Fetches the result of the operation triggered by the Export Job API.
+            Gets the operation result of operation triggered by Export Jobs API. If the
+            operation is successful, then it also contains URL of a Blob and a SAS key
+            to access the same. The blob contains exported jobs in JSON serialized
+            format.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
