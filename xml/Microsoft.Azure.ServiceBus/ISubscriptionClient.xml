@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
     <AssemblyVersion>0.0.6.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -19,126 +20,6 @@
              SubscriptionClient can be used for all basic interactions with a Service Bus Subscription.
              </summary>
     <remarks>Use <see cref="T:Microsoft.Azure.ServiceBus.Core.MessageReceiver" /> for advanced set of functionality.</remarks>
-    <example>
-             Create a new SubscriptionClient
-             <code>
-             ISubscriptionClient subscriptionClient = new SubscriptionClient(
-                 namespaceConnectionString,
-                 topicName,
-                 subscriptionName,
-                 ReceiveMode.PeekLock,
-                 RetryExponential);
-             </code>
-            
-             Register a message handler which will be invoked every time a message is received.
-             <code>
-             subscriptionClient.RegisterMessageHandler(
-                    async (message, token) =&gt;
-                    {
-                        // Process the message
-                        Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
-            
-                        // Complete the message so that it is not received again.
-                        // This can be done only if the subscriptionClient is opened in ReceiveMode.PeekLock mode.
-                        await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
-                    },
-                    async (exceptionEvent) =&gt;
-                    {
-                        // Process the exception
-                        Console.WriteLine("Exception = " + exceptionEvent.Exception);
-                        return Task.CompletedTask;
-                    });
-             </code></example>
-    <example>
-             Create a new SubscriptionClient
-             <code>
-             ISubscriptionClient subscriptionClient = new SubscriptionClient(
-                 namespaceConnectionString,
-                 topicName,
-                 subscriptionName,
-                 ReceiveMode.PeekLock,
-                 RetryExponential);
-             </code>
-            
-             Register a message handler which will be invoked every time a message is received.
-             <code>
-             subscriptionClient.RegisterMessageHandler(
-                    async (message, token) =&gt;
-                    {
-                        // Process the message
-                        Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
-            
-                        // Complete the message so that it is not received again.
-                        // This can be done only if the subscriptionClient is opened in ReceiveMode.PeekLock mode.
-                        await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
-                    },
-                    async (exceptionEvent) =&gt;
-                    {
-                        // Process the exception
-                        Console.WriteLine("Exception = " + exceptionEvent.Exception);
-                        return Task.CompletedTask;
-                    });
-             </code></example>
-    <example>
-             Create a new SubscriptionClient
-             <code>
-             ISubscriptionClient subscriptionClient = new SubscriptionClient(
-                 namespaceConnectionString,
-                 topicName,
-                 subscriptionName,
-                 ReceiveMode.PeekLock,
-                 RetryExponential);
-             </code>
-            
-             Register a message handler which will be invoked every time a message is received.
-             <code>
-             subscriptionClient.RegisterMessageHandler(
-                    async (message, token) =&gt;
-                    {
-                        // Process the message
-                        Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
-            
-                        // Complete the message so that it is not received again.
-                        // This can be done only if the subscriptionClient is opened in ReceiveMode.PeekLock mode.
-                        await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
-                    },
-                    async (exceptionEvent) =&gt;
-                    {
-                        // Process the exception
-                        Console.WriteLine("Exception = " + exceptionEvent.Exception);
-                        return Task.CompletedTask;
-                    });
-             </code></example>
-    <example>
-             Create a new SubscriptionClient
-             <code>
-             ISubscriptionClient subscriptionClient = new SubscriptionClient(
-                 namespaceConnectionString,
-                 topicName,
-                 subscriptionName,
-                 ReceiveMode.PeekLock,
-                 RetryExponential);
-             </code>
-            
-             Register a message handler which will be invoked every time a message is received.
-             <code>
-             subscriptionClient.RegisterMessageHandler(
-                    async (message, token) =&gt;
-                    {
-                        // Process the message
-                        Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
-            
-                        // Complete the message so that it is not received again.
-                        // This can be done only if the subscriptionClient is opened in ReceiveMode.PeekLock mode.
-                        await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
-                    },
-                    async (exceptionEvent) =&gt;
-                    {
-                        // Process the exception
-                        Console.WriteLine("Exception = " + exceptionEvent.Exception);
-                        return Task.CompletedTask;
-                    });
-             </code></example>
     <example>
              Create a new SubscriptionClient
              <code>
@@ -181,6 +62,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -211,6 +93,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -244,6 +127,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.ServiceBus.RuleDescription&gt;&gt;</ReturnType>
@@ -266,6 +150,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -295,6 +180,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -327,6 +213,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -354,6 +241,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -377,6 +265,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

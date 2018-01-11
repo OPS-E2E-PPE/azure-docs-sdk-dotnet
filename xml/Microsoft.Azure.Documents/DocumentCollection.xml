@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
     <AssemblyVersion>1.6.0.0</AssemblyVersion>
     <AssemblyVersion>1.7.0.0</AssemblyVersion>
+    <AssemblyVersion>1.7.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -28,599 +29,11 @@
             they can be authorized using either the master key or resource keys.
             Refer to <see>http://azure.microsoft.com/documentation/articles/documentdb-resources/#collections</see> for more details on collections.
             </remarks>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
     <altmember cref="T:Microsoft.Azure.Documents.IndexingPolicy" />
     <altmember cref="T:Microsoft.Azure.Documents.PartitionKeyDefinition" />
     <altmember cref="T:Microsoft.Azure.Documents.Document" />
     <altmember cref="T:Microsoft.Azure.Documents.Database" />
     <altmember cref="T:Microsoft.Azure.Documents.Offer" />
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
-    <example>
-            The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this collection.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection 
-                { 
-                    Id = "MyCollection",
-                    PartitionKey = new PartitionKeyDefinition
-                    {
-                        Paths = new Collection<string> { "/country" }
-                    }
-                }, 
-                new RequestOptions { OfferThroughput = 50000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with OfferThroughput set to 10000.
-            <code language="c#"><![CDATA[
-            DocumentCollection collection = await client.CreateDocumentCollectionAsync(
-                databaseLink,
-                new DocumentCollection { Id = "MyCollection" }, 
-                new RequestOptions { OfferThroughput = 10000} ).Result;
-            ]]></code></example>
-    <example>
-            The example below creates a new collection with a custom indexing policy.
-            <code language="c#"><![CDATA[
-            DocumentCollection collectionSpec = new DocumentCollection { Id ="MyCollection" };
-            collectionSpec.IndexingPolicy.Automatic = true;
-            collectionSpec.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-            collection = await client.CreateDocumentCollectionAsync(database.SelfLink, collectionSpec);
-            ]]></code></example>
-    <example>
-            The example below creates a document of type Book inside this collection.
-            <code language="c#"><![CDATA[
-            Document doc = await client.CreateDocumentAsync(collection.SelfLink, new Book { Title = "War and Peace" });
-            ]]></code></example>
-    <example>
-            The example below queries for a Database by Id to retrieve the SelfLink.
-            <code language="c#"><![CDATA[
-            using Microsoft.Azure.Documents.Linq;
-            DocumentCollection collection = client.CreateDocumentCollectionQuery(databaseLink).Where(c => c.Id == "myColl").AsEnumerable().FirstOrDefault();
-            string collectionLink = collection.SelfLink;
-            ]]></code></example>
-    <example>
-            The example below deletes this collection.
-            <code language="c#"><![CDATA[
-            await client.DeleteDocumentCollectionAsync(collection.SelfLink);
-            ]]></code></example>
     <example>
             The example below creates a new partitioned collection with 50000 Request-per-Unit throughput.
             The partition key is the first level 'country' property in all the documents within this collection.
@@ -682,6 +95,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -707,6 +121,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -737,6 +152,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -784,199 +200,7 @@
             Please refer to the <see cref="P:Microsoft.Azure.Documents.Document.TimeToLive" /> for more details about evaluating the final time-to-live policy of a document.
             </para>
         </remarks>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
         <altmember cref="T:Microsoft.Azure.Documents.Document" />
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
-        <example>
-            The example below disables time-to-live on a collection.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = null;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, all the documents never expire.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = -1;
-            ]]></code></example>
-        <example>
-            The example below enables time-to-live on a collection. By default, the document will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                collection.DefaultTimeToLive = 1000;
-            ]]></code></example>
         <example>
             The example below disables time-to-live on a collection.
             <code language="c#"><![CDATA[
@@ -1006,6 +230,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -1041,6 +266,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -1071,6 +297,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -1106,6 +333,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -1141,6 +369,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
@@ -1171,6 +400,10 @@
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>
         <AssemblyVersion>1.19.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="uniqueKeyPolicy")</AttributeName>
@@ -1198,6 +431,7 @@
         <AssemblyName>Microsoft.Azure.DocumentDB.Core</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
         <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Documents.Client</AssemblyName>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
     <AssemblyVersion>0.0.6.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -24,65 +25,9 @@
              <see cref="M:Microsoft.Azure.ServiceBus.Core.IMessageReceiver.ReceiveAsync" />, which allows you to receive messages on demand, but also requires
              you to manually renew locks using <see cref="M:Microsoft.Azure.ServiceBus.Core.IMessageReceiver.RenewLockAsync(Microsoft.Azure.ServiceBus.Message)" />.
              </remarks>
-    <example>
-             Create a new MessageReceiver to receive a message from a Subscription
-             <code>
-             IMessageReceiver messageReceiver = new MessageReceiver(
-                 namespaceConnectionString,
-                 EntityNameHelper.FormatSubscriptionPath(topicName, subscriptionName),
-                 ReceiveMode.PeekLock);
-             </code>
-            
-             Receive a message from the Subscription.
-             <code>
-             var message = await messageReceiver.ReceiveAsync();
-             await messageReceiver.CompleteAsync(message.SystemProperties.LockToken);
-             </code></example>
     <altmember cref="T:Microsoft.Azure.ServiceBus.Core.MessageReceiver" />
     <altmember cref="T:Microsoft.Azure.ServiceBus.QueueClient" />
     <altmember cref="T:Microsoft.Azure.ServiceBus.SubscriptionClient" />
-    <example>
-             Create a new MessageReceiver to receive a message from a Subscription
-             <code>
-             IMessageReceiver messageReceiver = new MessageReceiver(
-                 namespaceConnectionString,
-                 EntityNameHelper.FormatSubscriptionPath(topicName, subscriptionName),
-                 ReceiveMode.PeekLock);
-             </code>
-            
-             Receive a message from the Subscription.
-             <code>
-             var message = await messageReceiver.ReceiveAsync();
-             await messageReceiver.CompleteAsync(message.SystemProperties.LockToken);
-             </code></example>
-    <example>
-             Create a new MessageReceiver to receive a message from a Subscription
-             <code>
-             IMessageReceiver messageReceiver = new MessageReceiver(
-                 namespaceConnectionString,
-                 EntityNameHelper.FormatSubscriptionPath(topicName, subscriptionName),
-                 ReceiveMode.PeekLock);
-             </code>
-            
-             Receive a message from the Subscription.
-             <code>
-             var message = await messageReceiver.ReceiveAsync();
-             await messageReceiver.CompleteAsync(message.SystemProperties.LockToken);
-             </code></example>
-    <example>
-             Create a new MessageReceiver to receive a message from a Subscription
-             <code>
-             IMessageReceiver messageReceiver = new MessageReceiver(
-                 namespaceConnectionString,
-                 EntityNameHelper.FormatSubscriptionPath(topicName, subscriptionName),
-                 ReceiveMode.PeekLock);
-             </code>
-            
-             Receive a message from the Subscription.
-             <code>
-             var message = await messageReceiver.ReceiveAsync();
-             await messageReceiver.CompleteAsync(message.SystemProperties.LockToken);
-             </code></example>
     <example>
              Create a new MessageReceiver to receive a message from a Subscription
              <code>
@@ -110,6 +55,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -139,6 +85,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -173,6 +120,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -195,6 +143,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.ServiceBus.Message&gt;</ReturnType>
@@ -224,6 +173,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.ServiceBus.Message&gt;&gt;</ReturnType>
@@ -256,6 +206,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.ServiceBus.Message&gt;</ReturnType>
@@ -283,6 +234,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.ServiceBus.Message&gt;&gt;</ReturnType>
@@ -310,6 +262,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.ServiceBus.Message&gt;</ReturnType>
@@ -334,6 +287,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.ServiceBus.Message&gt;&gt;</ReturnType>
@@ -361,6 +315,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.ServiceBus.Message&gt;</ReturnType>
@@ -392,6 +347,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.ServiceBus.Message&gt;&gt;</ReturnType>
@@ -403,7 +359,6 @@
       <Docs>
         <param name="maxMessageCount">The maximum number of messages that will be received.</param>
         <param name="operationTimeout">The time span the client waits for receiving a message before it times out.</param>
-        <param name="serverWaitTime">The time span the server waits for receiving a message before it times out.</param>
         <summary>
             Receives a maximum of <paramref name="maxMessageCount" /> messages from the entity defined by <see cref="P:Microsoft.Azure.ServiceBus.Core.IReceiverClient.Path" /> using <see cref="T:Microsoft.Azure.ServiceBus.ReceiveMode" /> mode.
             </summary>
@@ -425,6 +380,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.ServiceBus.Message&gt;&gt;</ReturnType>
@@ -453,6 +409,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.ServiceBus.Message&gt;</ReturnType>
@@ -480,6 +437,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -512,6 +470,7 @@
         <AssemblyName>Microsoft.Azure.ServiceBus</AssemblyName>
         <AssemblyVersion>0.0.6.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.DateTime&gt;</ReturnType>
