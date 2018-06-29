@@ -4,17 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.DataFactory.Models.Resource" />
   <TypeSignature Language="VB.NET" Value="Public Class Resource&#xA;Implements IResource" />
   <TypeSignature Language="F#" Value="type Resource = class&#xA;    interface IResource" />
-  <TypeSignature Language="C++ CLI" Value="public ref class Resource : Microsoft::Rest::Azure::IResource" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class Resource : Microsoft::Rest::Azure::IResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-    <AssemblyVersion>0.2.0.0</AssemblyVersion>
-    <AssemblyVersion>0.3.0.0</AssemblyVersion>
-    <AssemblyVersion>0.4.0.0</AssemblyVersion>
-    <AssemblyVersion>0.5.0.0</AssemblyVersion>
-    <AssemblyVersion>0.6.0.0</AssemblyVersion>
-    <AssemblyVersion>0.7.0.0</AssemblyVersion>
     <AssemblyVersion>0.8.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,21 +29,12 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataFactory.Models.Resource.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Resource();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Resource();" />
-      <MemberSignature Language="C++ WINRT" Value=" Resource();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
       <Docs>
         <summary>
             Initializes a new instance of the Resource class.
@@ -59,21 +43,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Resource (string id = null, string name = null, string type = null, string location = null, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = null);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string location, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataFactory.Models.Resource.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional location As String = null, Optional tags As IDictionary(Of String, String) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataFactory.Models.Resource : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Azure.Management.DataFactory.Models.Resource" Usage="new Microsoft.Azure.Management.DataFactory.Models.Resource (id, name, type, location, tags)" />
+      <MemberSignature Language="C#" Value="public Resource (string id = null, string name = null, string type = null, string location = null, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = null, string eTag = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string location, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, string eTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataFactory.Models.Resource.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional location As String = null, Optional tags As IDictionary(Of String, String) = null, Optional eTag As String = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataFactory.Models.Resource : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Azure.Management.DataFactory.Models.Resource" Usage="new Microsoft.Azure.Management.DataFactory.Models.Resource (id, name, type, location, tags, eTag)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
-        <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -81,6 +59,7 @@
         <Parameter Name="type" Type="System.String" />
         <Parameter Name="location" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="eTag" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id">The resource identifier.</param>
@@ -88,9 +67,37 @@
         <param name="type">The resource type.</param>
         <param name="location">The resource location.</param>
         <param name="tags">The resource tags.</param>
+        <param name="eTag">Etag identifies change in the resource.</param>
         <summary>
             Initializes a new instance of the Resource class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ETag">
+      <MemberSignature Language="C#" Value="public string ETag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ETag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.ETag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ETag As String" />
+      <MemberSignature Language="F#" Value="member this.ETag : string" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.ETag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="eTag")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets etag identifies change in the resource.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -100,18 +107,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
       <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.Id" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Id { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -135,18 +135,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.Location" />
       <MemberSignature Language="VB.NET" Value="Public Property Location As String" />
       <MemberSignature Language="F#" Value="member this.Location : string with get, set" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.Location" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Location { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Location { Platform::String ^ get(); void set(Platform::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -170,18 +163,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.Name" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Name { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -205,17 +191,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.Tags" />
       <MemberSignature Language="VB.NET" Value="Public Property Tags As IDictionary(Of String, String)" />
       <MemberSignature Language="F#" Value="member this.Tags : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.Tags" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ Tags { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -239,18 +219,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataFactory.Models.Resource.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As String" />
       <MemberSignature Language="F#" Value="member this.Type : string" Usage="Microsoft.Azure.Management.DataFactory.Models.Resource.Type" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Type { System::String ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Type { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataFactory</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-        <AssemblyVersion>0.3.0.0</AssemblyVersion>
-        <AssemblyVersion>0.4.0.0</AssemblyVersion>
-        <AssemblyVersion>0.5.0.0</AssemblyVersion>
-        <AssemblyVersion>0.6.0.0</AssemblyVersion>
-        <AssemblyVersion>0.7.0.0</AssemblyVersion>
         <AssemblyVersion>0.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
