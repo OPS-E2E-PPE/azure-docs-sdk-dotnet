@@ -1,9 +1,9 @@
 {
-  "need_generate_pdf": false,
-  "need_preview_pull_request": true,
-  "branches_to_filter": [],
-  "enable_incremental_build": true,
-  "SplitTOC": "api/toc.yml",
+  "need_generate_pdf": false, 
+  "need_preview_pull_request": true, 
+  "branches_to_filter": ["prtest","prtest-nometavalidation","master-sync-work","live-sync-work","repo_sync_novalidation_prtest_branch","repo_sync_novalidation_live_branch","repo_sync_novalidation_master_branch"], 
+  "enable_incremental_build": true, 
+  "SplitTOC": "api/toc.yml", 
   "JoinTOCPlugin": [
     {
       "ReferenceTOC": "api/toc.yml",
@@ -36,7 +36,8 @@
       },
       "build_output_subfolder": ".",
       "locale": "en-us",
-      "docset_name": "azuredotnet",
+      "xref_query_tags": ["/dotnet"],
+      "docset_name": "e2eppe-azuredotnet", 
       "open_to_public_contributors": false,
       "monikers": [
         "azure-dotnet"
@@ -63,9 +64,9 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "dependent_repositories": [
     {
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch_mapping": {},
-      "branch": "master",
+      "url": "https://github.com/Microsoft/templates.docs.msft", 
+      "branch_mapping": {}, 
+      "branch": "master", 
       "path_to_root": "_themes"
     },
     {
@@ -82,6 +83,7 @@
     }
   ],
   "notification_subscribers": [],
+  "xref_endpoint": "https://xref.docs.microsoft.com",
   "need_generate_intellisense": false,
   "ECMA2Yaml": {
     "OutputYamlFolder": "api",
@@ -95,18 +97,18 @@
   ],
   "dependent_packages": [
     {
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest",
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
-    },
-    {
       "id": "Microsoft.DocAsCode.ECMA2Yaml",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/ECMA2Yaml",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "latest-prerelease"
+    },
+    {
+      "path_to_root": "_dependentPackages/memberpage.plugins", 
+      "target_framework": "net45", 
+      "version": "latest-prerelease", 
+      "id": "memberpage.plugins", 
+      "nuget_feed": "https://www.myget.org/F/docfx-dev/api/v2"
     }
   ],
   "need_generate_pdf_url_template": false
