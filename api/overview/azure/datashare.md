@@ -8,7 +8,7 @@ ms.topic: reference
 ms.service: data-share
 ---
 
-# Azure Data Share libraries for .NET
+## Azure Data Share libraries for .NET
 
 ## Overview
 
