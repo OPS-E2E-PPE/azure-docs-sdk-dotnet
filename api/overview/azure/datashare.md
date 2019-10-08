@@ -8,11 +8,11 @@ ms.topic: reference
 ms.service: data-share
 ---
 
-## Azure Data Share libraries for .NET
-
-## Overview
-
-[Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/) is a cloud-based service that helps customers share data with other organizations. Azure Data Share provides centralized management, monitoring, and governance for sharing data from multiple Azure data sources. Using this service, you can quickly create shares that consist of multiple datasets from a variety of Azure data stores. You can invite your customers and external partners to access these shares through incremental snapshots of your data and revoke access as needed.
+# Azure Data Share libraries for .NET [Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/11)
+[Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/12)
+## Overview [Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/13)
+[Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/14)
+[Azure Data Share](https://azure.microsoft.com/en-us/services/data-share/15) is a cloud-based service that helps customers share data with other organizations. Azure Data Share provides centralized management, monitoring, and governance for sharing data from multiple Azure data sources. Using this service, you can quickly create shares that consist of multiple datasets from a variety of Azure data stores. You can invite your customers and external partners to access these shares through incremental snapshots of your data and revoke access as needed.
 
 ## Management library
 
