@@ -53,3 +53,5 @@ client.Accounts.Create(resourceGroupName, accountName, account);
 
 > [!div class="nextstepaction"]
 > [Explore the management APIs](/dotnet/api/overview/azure/datashare/management)
+
+test1
