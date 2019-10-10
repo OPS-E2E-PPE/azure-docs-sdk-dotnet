@@ -1,5 +1,5 @@
 ---
-title: [Test] Azure Data Share libraries for .NET
+title: test Azure Data Share libraries for .NET
 ---
 
 # Azure Data Share libraries for .NET
