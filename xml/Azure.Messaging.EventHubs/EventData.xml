@@ -11,6 +11,8 @@
     <AssemblyVersion>5.1.0.0</AssemblyVersion>
     <AssemblyVersion>5.2.0.0</AssemblyVersion>
     <AssemblyVersion>5.3.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.1.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,9 +36,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="eventBody" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventBody" Type="System.BinaryData" />
       </Parameters>
       <Docs>
         <param name="eventBody">The raw data as binary to use as the body of the event.</param>
@@ -60,6 +64,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="eventBody" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" />
@@ -82,15 +88,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="eventBody" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="properties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="systemProperties" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Object&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="sequenceNumber" Type="System.Int64" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="offset" Type="System.Int64" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="enqueuedTime" Type="System.DateTimeOffset" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="partitionKey" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventBody" Type="System.BinaryData" />
+        <Parameter Name="properties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="systemProperties" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="sequenceNumber" Type="System.Int64" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="enqueuedTime" Type="System.DateTimeOffset" />
+        <Parameter Name="partitionKey" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="eventBody">The raw data to use as the body of the event.</param>
@@ -99,7 +107,7 @@
         <param name="sequenceNumber">The sequence number assigned to the event when it was enqueued in the associated Event Hub partition.</param>
         <param name="offset">The offset of the event when it was received from the associated Event Hub partition.</param>
         <param name="enqueuedTime">The date and time, in UTC, of when the event was enqueued in the Event Hub partition.</param>
-        <param name="partitionKey">The partition hashing key applied to the batch that the associated <see cref="T:Azure.Messaging.EventHubs.EventData" />, was sent with.</param>
+        <param name="partitionKey">The partition hashing key associated with the event when it was published.</param>
         <summary>
                Initializes a new instance of the <see cref="T:Azure.Messaging.EventHubs.EventData" /> class.
              </summary>
@@ -119,9 +127,11 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet-preview">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -142,7 +152,7 @@
         <param name="sequenceNumber">The sequence number assigned to the event when it was enqueued in the associated Event Hub partition.</param>
         <param name="offset">The offset of the event when it was received from the associated Event Hub partition.</param>
         <param name="enqueuedTime">The date and time, in UTC, of when the event was enqueued in the Event Hub partition.</param>
-        <param name="partitionKey">The partition hashing key applied to the batch that the associated <see cref="T:Azure.Messaging.EventHubs.EventData" />, was sent with.</param>
+        <param name="partitionKey">The partition hashing key associated with the event when it was published.</param>
         <summary>
                Initializes a new instance of the <see cref="T:Azure.Messaging.EventHubs.EventData" /> class.
              </summary>
@@ -163,9 +173,11 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet-preview">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -183,7 +195,6 @@
                prefer the <see cref="P:Azure.Messaging.EventHubs.EventData.EventBody" /> where possible in order to take advantage of
                additional functionality and improved usability for common scenarios.
              </remarks>
-        <altmember cref="P:Azure.Messaging.EventHubs.EventData.Properties" />
         <altmember cref="P:Azure.Messaging.EventHubs.EventData.EventBody" />
       </Docs>
     </Member>
@@ -201,9 +212,11 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet-preview">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -225,7 +238,6 @@
                prefer the <see cref="P:Azure.Messaging.EventHubs.EventData.EventBody" /> where possible in order to take advantage of
                additional functionality and improved usability for common scenarios.
              </remarks>
-        <altmember cref="P:Azure.Messaging.EventHubs.EventData.Properties" />
         <altmember cref="M:System.BinaryData.ToStream" />
         <altmember cref="P:Azure.Messaging.EventHubs.EventData.EventBody" />
       </Docs>
@@ -244,6 +256,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -273,6 +287,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -306,6 +322,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -321,8 +339,8 @@
                common technique is to make use of <see cref="P:Azure.Messaging.EventHubs.EventData.Properties" /> to associate serialization hints
                as an aid to consumers who wish to deserialize the binary data.</para>
         </remarks>
-        <altmember cref="T:System.BinaryData" />
         <altmember cref="P:Azure.Messaging.EventHubs.EventData.Properties" />
+        <altmember cref="T:System.BinaryData" />
       </Docs>
     </Member>
     <Member MemberName="GetHashCode">
@@ -339,6 +357,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -372,6 +392,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -401,6 +423,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -429,6 +453,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
@@ -460,7 +486,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -495,6 +521,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -524,6 +552,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Object&gt;</ReturnType>
@@ -554,6 +584,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

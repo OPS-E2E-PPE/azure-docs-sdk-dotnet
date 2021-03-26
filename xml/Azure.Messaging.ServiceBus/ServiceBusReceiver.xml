@@ -7,6 +7,10 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.1.0</AssemblyVersion>
+    <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>7.1.1.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,6 +38,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,6 +61,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -73,30 +85,37 @@
         <remarks>
              Abandoning a message will increase the delivery count on the message.
              This operation can only be performed on messages that were received by this receiver
-             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CloseAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CloseAsync (Azure.Messaging.ServiceBus.LinkCloseMode closeMode = Azure.Messaging.ServiceBus.LinkCloseMode.Detach, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype Azure.Messaging.ServiceBus.LinkCloseMode closeMode, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.CloseAsync(Azure.Messaging.ServiceBus.LinkCloseMode,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional closeMode As LinkCloseMode = Azure.Messaging.ServiceBus.LinkCloseMode.Detach, Optional cancellationToken As CancellationToken = Nothing) As Task" />
-      <MemberSignature Language="F#" Value="abstract member CloseAsync : Azure.Messaging.ServiceBus.LinkCloseMode * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CloseAsync : Azure.Messaging.ServiceBus.LinkCloseMode * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="serviceBusReceiver.CloseAsync (closeMode, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CloseAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.CloseAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="serviceBusReceiver.CloseAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="closeMode" Type="Azure.Messaging.ServiceBus.LinkCloseMode" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="closeMode">The mode indicating what should happen to the link when closing.</param>
         <param name="cancellationToken"> An optional<see cref="T:System.Threading.CancellationToken" /> instance to signal the
             request to cancel the operation.</param>
         <summary>
@@ -116,6 +135,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -133,8 +156,13 @@
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>
              This operation can only be performed on a message that was received by this receiver
-             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeadLetterMessageAsync">
@@ -147,6 +175,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -157,21 +189,26 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to deadletter.</param>
-        <param name="propertiesToModify">The properties of the message to modify while moving to sub-queue.</param>
+        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to dead-letter.</param>
+        <param name="propertiesToModify">The properties of the message to modify while moving to subqueue.</param>
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
-             Moves a message to the deadletter sub-queue.
+             Moves a message to the dead-letter subqueue.
              </summary>
         <returns>To be added.</returns>
         <remarks>
-             In order to receive a message from the deadletter queue or transfer deadletter queue,
+             In order to receive a message from the dead-letter queue or transfer dead-letter queue,
              set the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions.SubQueue" /> property to <see cref="F:Azure.Messaging.ServiceBus.SubQueue.DeadLetter" />
              or <see cref="F:Azure.Messaging.ServiceBus.SubQueue.TransferDeadLetter" /> when calling
              <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" /> or
              <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />.
-             This operation can only be performed when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             This operation can only be performed when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeadLetterMessageAsync">
@@ -184,6 +221,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -195,21 +236,26 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to deadletter.</param>
-        <param name="deadLetterReason">The reason for deadlettering the message.</param>
-        <param name="deadLetterErrorDescription">The error description for deadlettering the message.</param>
+        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to dead-letter.</param>
+        <param name="deadLetterReason">The reason for dead-lettering the message.</param>
+        <param name="deadLetterErrorDescription">The error description for dead-lettering the message.</param>
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
-             Moves a message to the deadletter sub-queue.
+             Moves a message to the dead-letter subqueue.
              </summary>
         <returns>To be added.</returns>
         <remarks>
              A lock token can be found in <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.LockToken" />,
-             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
-             In order to receive a message from the deadletter queue, you will need a new <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />, with the corresponding path.
+             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
+             In order to receive a message from the dead-letter queue, you will need a new <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />, with the corresponding path.
              You can use EntityNameHelper.FormatDeadLetterPath(string) to help with this.
              This operation can only be performed on messages that were received by this receiver.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeferMessageAsync">
@@ -222,6 +268,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -239,13 +289,18 @@
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>
              A lock token can be found in <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.LockToken" />,
-             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              In order to receive this message again in the future, you will need to save the
              <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.SequenceNumber" />
              and receive it using <see cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveDeferredMessageAsync(System.Int64,System.Threading.CancellationToken)" />.
              Deferring messages does not impact message's expiration, meaning that deferred messages can still expire.
              This operation can only be performed on messages that were received by this receiver.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DisposeAsync">
@@ -261,6 +316,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -269,22 +328,26 @@
       <Docs>
         <summary>
              Performs the task needed to clean up resources used by the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />.
-             This is equivalent to calling <see cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.CloseAsync(Azure.Messaging.ServiceBus.LinkCloseMode,System.Threading.CancellationToken)" /> with the default <see cref="T:Azure.Messaging.ServiceBus.LinkCloseMode" />.
+             This is equivalent to calling <see cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.CloseAsync(System.Threading.CancellationToken)" /> with the default <see cref="T:Azure.Messaging.ServiceBus.LinkCloseMode" />.
              </summary>
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="EntityPath">
-      <MemberSignature Language="C#" Value="public string EntityPath { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string EntityPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string EntityPath" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.EntityPath" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EntityPath As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EntityPath As String" />
       <MemberSignature Language="F#" Value="member this.EntityPath : string" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.EntityPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -308,6 +371,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -332,15 +399,19 @@
       </Docs>
     </Member>
     <Member MemberName="FullyQualifiedNamespace">
-      <MemberSignature Language="C#" Value="public string FullyQualifiedNamespace { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string FullyQualifiedNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FullyQualifiedNamespace" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.FullyQualifiedNamespace" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullyQualifiedNamespace As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property FullyQualifiedNamespace As String" />
       <MemberSignature Language="F#" Value="member this.FullyQualifiedNamespace : string" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.FullyQualifiedNamespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -364,6 +435,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -393,6 +468,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -417,6 +496,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;</ReturnType>
@@ -451,6 +534,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;&gt;</ReturnType>
@@ -476,15 +563,19 @@
       </Docs>
     </Member>
     <Member MemberName="PrefetchCount">
-      <MemberSignature Language="C#" Value="public int PrefetchCount { get; }" />
+      <MemberSignature Language="C#" Value="public virtual int PrefetchCount { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 PrefetchCount" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.PrefetchCount" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrefetchCount As Integer" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property PrefetchCount As Integer" />
       <MemberSignature Language="F#" Value="member this.PrefetchCount : int" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.PrefetchCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -509,6 +600,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;</ReturnType>
@@ -527,8 +622,8 @@
         <returns>The deferred message identified by the specified sequence number. Returns null if no message is found.
              Throws if the message has not been deferred.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
         <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="ReceiveDeferredMessagesAsync">
@@ -541,6 +636,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;&gt;</ReturnType>
@@ -558,8 +657,12 @@
         <returns>Messages identified by sequence number are returned. Returns null if no messages are found.
              Throws if the messages have not been deferred.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
         <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <altmember cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The specified sequence number does not correspond to a message that has been deferred.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.MessageNotFound" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="ReceiveMessageAsync">
@@ -572,6 +675,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;</ReturnType>
@@ -604,11 +711,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.ServiceBus.ServiceBusReceiver/&lt;ReceiveMessagesAsync&gt;d__38))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.ServiceBus.ServiceBusReceiver/&lt;ReceiveMessagesAsync&gt;d__38))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.ServiceBus.ServiceBusReceiver/&lt;ReceiveMessagesAsync&gt;d__41))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.ServiceBus.ServiceBusReceiver/&lt;ReceiveMessagesAsync&gt;d__41))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -617,7 +732,7 @@
       <Parameters>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken">
           <Attributes>
-            <Attribute>
+            <Attribute FrameworkAlternate="azure-dotnet">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.EnumeratorCancellation]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.EnumeratorCancellation&gt;]</AttributeName>
             </Attribute>
@@ -647,6 +762,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Azure.Messaging.ServiceBus.ServiceBusReceivedMessage&gt;&gt;</ReturnType>
@@ -672,18 +791,22 @@
       </Docs>
     </Member>
     <Member MemberName="ReceiveMode">
-      <MemberSignature Language="C#" Value="public Azure.Messaging.ServiceBus.ReceiveMode ReceiveMode { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.Messaging.ServiceBus.ReceiveMode ReceiveMode" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Messaging.ServiceBus.ServiceBusReceiveMode ReceiveMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.Messaging.ServiceBus.ServiceBusReceiveMode ReceiveMode" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveMode As ReceiveMode" />
-      <MemberSignature Language="F#" Value="member this.ReceiveMode : Azure.Messaging.ServiceBus.ReceiveMode" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ReceiveMode As ServiceBusReceiveMode" />
+      <MemberSignature Language="F#" Value="member this.ReceiveMode : Azure.Messaging.ServiceBus.ServiceBusReceiveMode" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.Messaging.ServiceBus.ReceiveMode</ReturnType>
+        <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiveMode</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -703,6 +826,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -719,11 +846,15 @@
              </summary>
         <returns>To be added.</returns>
         <remarks>
-             When a message is received in <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" /> mode, the message is locked on the server for this
+             When a message is received in <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" /> mode, the message is locked on the server for this
              receiver instance for a duration as specified during the Queue/Subscription creation (LockDuration).
              If processing of the message requires longer than this duration, the lock needs to be renewed.
              For each renewal, it resets the time the message is locked by the LockDuration set on the Entity.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the message has expired or the message has already been completed.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.MessageLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="ToString">
@@ -736,6 +867,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -752,6 +887,30 @@
              Converts the instance to string representation.
              </summary>
         <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionGroup">
+      <MemberSignature Language="C#" Value="public virtual string TransactionGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionGroup" />
+      <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.TransactionGroup" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property TransactionGroup As String" />
+      <MemberSignature Language="F#" Value="member this.TransactionGroup : string" Usage="Azure.Messaging.ServiceBus.ServiceBusReceiver.TransactionGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the transaction group associated with the receiver. This is an
+            arbitrary string that is used to all senders, receivers, and processors that you
+            wish to use in a transaction that spans multiple different queues, topics, or subscriptions.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -7,6 +7,10 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.1.0</AssemblyVersion>
+    <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>7.1.1.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.EventArgs</BaseTypeName>
@@ -31,6 +35,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" />
@@ -58,6 +66,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -70,17 +82,22 @@
       <Docs>
         <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to abandon.</param>
         <param name="propertiesToModify">The properties of the message to modify while abandoning the message.</param>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
-             Abandons a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" />. This will make the message available again for immediate processing as the lock on the message held by the processor will be released.
+             Abandons a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" />.This will make the message available again for immediate processing as the lock on the message held by the receiver will be released.
              </summary>
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>
              Abandoning a message will increase the delivery count on the message.
              This operation can only be performed on messages that were received by this receiver
-             when <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.AbandonMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CancellationToken">
@@ -93,6 +110,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -117,6 +138,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -127,16 +152,21 @@
       </Parameters>
       <Docs>
         <param name="message">The message to complete.</param>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Completes a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" />. This will delete the message from the service.
              </summary>
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>
              This operation can only be performed on a message that was received by this receiver
-             when <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.CompleteMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeadLetterMessageAsync">
@@ -149,6 +179,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -159,21 +193,27 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to deadletter.</param>
-        <param name="propertiesToModify">The properties of the message to modify while moving to sub-queue.</param>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to dead-letter.</param>
+        <param name="propertiesToModify">The properties of the message to modify while moving to subqueue.</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
-             Moves a message to the deadletter sub-queue.
+             Moves a message to the dead-letter subqueue.
              </summary>
         <returns>To be added.</returns>
         <remarks>
-             In order to receive a message from the deadletter queue, you can call
-             <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateDeadLetterReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />
-             or <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateDeadLetterReceiver(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />
-             to create a receiver for the queue or subscription.
-             This operation can only be performed when <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             In order to receive a message from the dead-letter queue or transfer dead-letter queue,
+             set the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions.SubQueue" /> property to <see cref="F:Azure.Messaging.ServiceBus.SubQueue.DeadLetter" />
+             or <see cref="F:Azure.Messaging.ServiceBus.SubQueue.TransferDeadLetter" /> when calling
+             <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" /> or
+             <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />.
+             This operation can only be performed when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
              </remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeadLetterMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeadLetterMessageAsync">
@@ -186,6 +226,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -197,22 +241,27 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to deadletter.</param>
-        <param name="deadLetterReason">The reason for deadlettering the message.</param>
-        <param name="deadLetterErrorDescription">The error description for deadlettering the message.</param>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to dead-letter.</param>
+        <param name="deadLetterReason">The reason for dead-lettering the message.</param>
+        <param name="deadLetterErrorDescription">The error description for dead-lettering the message.</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
-             Moves a message to the deadletter sub-queue.
+             Moves a message to the dead-letter subqueue.
              </summary>
         <returns>To be added.</returns>
         <remarks>
-             In order to receive a message from the deadletter queue, you can call
-             <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateDeadLetterReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />
-             or <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateDeadLetterReceiver(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" />
-             to create a receiver for the queue or subscription.
-             This operation can only be performed when <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
+             A lock token can be found in <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.LockToken" />,
+             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
+             In order to receive a message from the dead-letter queue, you will need a new <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />, with the corresponding path.
+             You can use EntityNameHelper.FormatDeadLetterPath(string) to help with this.
+             This operation can only be performed on messages that were received by this receiver.
              </remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeadLetterMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.String,System.String,System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="DeferMessageAsync">
@@ -225,6 +274,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -237,18 +290,24 @@
       <Docs>
         <param name="message">The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage" /> to defer.</param>
         <param name="propertiesToModify">The properties of the message to modify while deferring the message.</param>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
-        <summary> Defers the processing for a message.</summary>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <summary> Indicates that the receiver wants to defer the processing for the message.</summary>
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>
              A lock token can be found in <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.LockToken" />,
-             only when <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ReceiveMode.PeekLock" />.
-             In order to receive this message again in the future, you will need to save the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.SequenceNumber" />
-             and receive it using <see cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveDeferredMessagesAsync(System.Collections.Generic.IEnumerable{System.Int64},System.Threading.CancellationToken)" />.
+             only when <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveMode" /> is set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusReceiveMode.PeekLock" />.
+             In order to receive this message again in the future, you will need to save the
+             <see cref="P:Azure.Messaging.ServiceBus.ServiceBusReceivedMessage.SequenceNumber" />
+             and receive it using <see cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.ReceiveDeferredMessageAsync(System.Int64,System.Threading.CancellationToken)" />.
              Deferring messages does not impact message's expiration, meaning that deferred messages can still expire.
              This operation can only be performed on messages that were received by this receiver.
              </remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusReceiver.DeferMessageAsync(Azure.Messaging.ServiceBus.ServiceBusReceivedMessage,System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired or the message has already been completed. This only applies for session-enabled
+               entities.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="GetSessionStateAsync">
@@ -261,6 +320,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.BinaryData&gt;</ReturnType>
@@ -269,13 +332,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">An optional <see cref="P:Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Gets the session state.
              </summary>
-        <returns>The session state as byte array.</returns>
+        <returns>The session state as <see cref="T:System.BinaryData" />.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.GetSessionStateAsync(System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="Message">
@@ -288,6 +355,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceivedMessage</ReturnType>
@@ -310,6 +381,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -332,6 +407,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -355,6 +434,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -364,12 +447,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="sessionState">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="sessionState">A <see cref="T:System.BinaryData" /> of session state</param>
+        <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
+        <summary>
+             Set a custom state on the session which can be later retrieved using <see cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.GetSessionStateAsync(System.Threading.CancellationToken)" /></summary>
+        <returns>A task to be resolved on when the operation has completed.</returns>
+        <remarks>This state is stored on Service Bus forever unless you set an empty state on it.</remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.SetSessionStateAsync(System.BinaryData,System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
   </Members>

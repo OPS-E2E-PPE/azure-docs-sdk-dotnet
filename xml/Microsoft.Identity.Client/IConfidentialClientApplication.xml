@@ -29,15 +29,29 @@
     <AssemblyVersion>4.21.0.0</AssemblyVersion>
     <AssemblyVersion>4.21.1.0</AssemblyVersion>
     <AssemblyVersion>4.22.0.0</AssemblyVersion>
+    <AssemblyVersion>4.23.0.0</AssemblyVersion>
+    <AssemblyVersion>4.24.0.0</AssemblyVersion>
+    <AssemblyVersion>4.25.0.0</AssemblyVersion>
+    <AssemblyVersion>4.26.0.0</AssemblyVersion>
+    <AssemblyVersion>4.26.1.0</AssemblyVersion>
+    <AssemblyVersion>4.27.0.0</AssemblyVersion>
+    <AssemblyVersion>4.28.0.0</AssemblyVersion>
+    <AssemblyVersion>4.28.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Identity.Client.IClientApplicationBase</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Component to be used with confidential client applications like Web Apps/API.
+            Component to be used with confidential client applications like web apps/API.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -74,6 +88,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -89,7 +111,7 @@
             [V3 API] Acquires a security token from the authority configured in the app using the authorization code
             previously received from the STS.
             It uses the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
-            It's usually used in Web Apps (for instance ASP.NET / ASP.NET Core Web apps) which sign-in users,
+            It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users,
             and can request an authorization code.
             This method does not lookup the token cache, but stores the result in it, so it can be looked up
             using other methods such as <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />.
@@ -133,19 +155,31 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="authorizationCode" Type="System.String" />
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="authorizationCode" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="authorizationCode">The authorization code received from service authorization endpoint.</param>
@@ -190,6 +224,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -243,18 +285,30 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>
@@ -297,19 +351,31 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="forceRefresh" Type="System.Boolean" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="forceRefresh" Type="System.Boolean" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>
@@ -353,6 +419,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -409,19 +483,31 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="userAssertion" Type="Microsoft.Identity.Client.UserAssertion" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userAssertion" Type="Microsoft.Identity.Client.UserAssertion" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>
@@ -465,20 +551,32 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="userAssertion" Type="Microsoft.Identity.Client.UserAssertion" />
-        <Parameter Name="authority" Type="System.String" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userAssertion" Type="Microsoft.Identity.Client.UserAssertion" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authority" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>
@@ -523,6 +621,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -536,6 +642,38 @@
         <Summary>
             Application token cache. This case holds access tokens and refresh tokens for the application. It's maintained
             and updated silently if needed when calling <see cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})" /></Summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccountsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt; GetAccountsAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Client.IAccount&gt;&gt; GetAccountsAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAccountsAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccountsAsync () As Task(Of IEnumerable(Of IAccount))" />
+      <MemberSignature Language="F#" Value="abstract member GetAccountsAsync : unit -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.Identity.Client.IAccount&gt;&gt;" Usage="iConfidentialClientApplication.GetAccountsAsync " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAccountAsync in web apps and web APIs, and use a token cache serializer for better security and performance. See https://aka.ms/msal-net-cca-token-cache-serialization.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAccountAsync in web apps and web APIs, and use a token cache serializer for better security and performance. See https://aka.ms/msal-net-cca-token-cache-serialization.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="GetAuthorizationRequestUrl">
@@ -570,6 +708,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -622,20 +768,32 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Uri&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="loginHint" Type="System.String" />
-        <Parameter Name="extraQueryParameters" Type="System.String" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="loginHint" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="extraQueryParameters" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>
@@ -680,23 +838,35 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Uri&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="redirectUri" Type="System.String" />
-        <Parameter Name="loginHint" Type="System.String" />
-        <Parameter Name="extraQueryParameters" Type="System.String" />
-        <Parameter Name="extraScopesToConsent" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="authority" Type="System.String" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="redirectUri" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="loginHint" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="extraQueryParameters" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="extraScopesToConsent" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authority" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="scopes">Array of scopes requested for resource</param>

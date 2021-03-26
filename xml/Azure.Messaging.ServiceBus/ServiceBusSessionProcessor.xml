@@ -7,6 +7,10 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.1.0</AssemblyVersion>
+    <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>7.1.1.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,6 +41,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,49 +54,59 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="AutoComplete">
-      <MemberSignature Language="C#" Value="public bool AutoComplete { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool AutoComplete" />
-      <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.AutoComplete" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutoComplete As Boolean" />
-      <MemberSignature Language="F#" Value="member this.AutoComplete : bool" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.AutoComplete" />
+    <Member MemberName="AutoCompleteMessages">
+      <MemberSignature Language="C#" Value="public virtual bool AutoCompleteMessages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoCompleteMessages" />
+      <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.AutoCompleteMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property AutoCompleteMessages As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AutoCompleteMessages : bool" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.AutoCompleteMessages" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value that indicates whether the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> should automatically
-             complete messages after the event handler has completed processing. If the event handler
-             triggers an exception, the message will not be automatically completed.</summary>
-        <value>true if the message will be completed automatically on successful execution of the operation; otherwise, false.</value>
+        <summary>
+             Gets a value that indicates whether the processor should automatically
+             complete messages after the message handler has completed processing. If the
+             message handler triggers an exception, the message will not be automatically
+             completed.
+             </summary>
+        <value>true to complete the message processing automatically on
+             successful execution of the operation; otherwise, false.</value>
         <remarks>To be added.</remarks>
-        <inheritdoc cref="P:Azure.Messaging.ServiceBus.ServiceBusProcessor.AutoComplete" />
+        <inheritdoc cref="P:Azure.Messaging.ServiceBus.ServiceBusProcessor.AutoCompleteMessages" />
       </Docs>
     </Member>
     <Member MemberName="CloseAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CloseAsync (Azure.Messaging.ServiceBus.LinkCloseMode closeMode = Azure.Messaging.ServiceBus.LinkCloseMode.Detach, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype Azure.Messaging.ServiceBus.LinkCloseMode closeMode, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.CloseAsync(Azure.Messaging.ServiceBus.LinkCloseMode,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional closeMode As LinkCloseMode = Azure.Messaging.ServiceBus.LinkCloseMode.Detach, Optional cancellationToken As CancellationToken = Nothing) As Task" />
-      <MemberSignature Language="F#" Value="abstract member CloseAsync : Azure.Messaging.ServiceBus.LinkCloseMode * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CloseAsync : Azure.Messaging.ServiceBus.LinkCloseMode * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="serviceBusSessionProcessor.CloseAsync (closeMode, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CloseAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.CloseAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="serviceBusSessionProcessor.CloseAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="closeMode" Type="Azure.Messaging.ServiceBus.LinkCloseMode" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="closeMode">The mode indicating what should happen to the link when closing.</param>
         <param name="cancellationToken"> An optional<see cref="T:System.Threading.CancellationToken" /> instance to signal the
             request to cancel the operation.</param>
         <summary>
@@ -111,6 +129,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -119,29 +141,33 @@
       <Docs>
         <summary>
               Performs the task needed to clean up resources used by the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" />.
-              This is equivalent to calling <see cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.CloseAsync(Azure.Messaging.ServiceBus.LinkCloseMode,System.Threading.CancellationToken)" /> with the default <see cref="T:Azure.Messaging.ServiceBus.LinkCloseMode" />.
+              This is equivalent to calling <see cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.CloseAsync(System.Threading.CancellationToken)" /> with the default <see cref="T:Azure.Messaging.ServiceBus.LinkCloseMode" />.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="EntityPath">
-      <MemberSignature Language="C#" Value="public string EntityPath { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string EntityPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string EntityPath" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.EntityPath" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EntityPath As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EntityPath As String" />
       <MemberSignature Language="F#" Value="member this.EntityPath : string" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.EntityPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The path of the Service Bus entity that the processor is connected to, specific to the
+            Gets the path of the Service Bus entity that the processor is connected to, specific to the
             Service Bus namespace that contains it.
             </summary>
         <value>To be added.</value>
@@ -159,6 +185,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -183,22 +213,26 @@
       </Docs>
     </Member>
     <Member MemberName="FullyQualifiedNamespace">
-      <MemberSignature Language="C#" Value="public string FullyQualifiedNamespace { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string FullyQualifiedNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FullyQualifiedNamespace" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.FullyQualifiedNamespace" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullyQualifiedNamespace As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property FullyQualifiedNamespace As String" />
       <MemberSignature Language="F#" Value="member this.FullyQualifiedNamespace : string" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.FullyQualifiedNamespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The fully qualified Service Bus namespace that the receiver is associated with.  This is likely
+            Gets the fully qualified Service Bus namespace that the receiver is associated with. This is likely
             to be similar to <c>{yournamespace}.servicebus.windows.net</c>.
             </summary>
         <value>To be added.</value>
@@ -216,6 +250,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -236,15 +274,19 @@
       </Docs>
     </Member>
     <Member MemberName="IsClosed">
-      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="C#" Value="public virtual bool IsClosed { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.IsClosed" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsClosed As Boolean" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsClosed As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsClosed : bool" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.IsClosed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -260,40 +302,48 @@
       </Docs>
     </Member>
     <Member MemberName="IsProcessing">
-      <MemberSignature Language="C#" Value="public bool IsProcessing { get; }" />
+      <MemberSignature Language="C#" Value="public virtual bool IsProcessing { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsProcessing" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.IsProcessing" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsProcessing As Boolean" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsProcessing As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsProcessing : bool" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.IsProcessing" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-             Indicates whether or not this <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> is currently processing messages.
+             Gets whether or not this processor is currently processing messages.
              </summary>
         <value>
-          <c>true</c> if the client is processing messages; otherwise, <c>false</c>.
+          <c>true</c> if the processor is processing messages; otherwise, <c>false</c>.
              </value>
         <remarks>To be added.</remarks>
         <inheritdoc cref="P:Azure.Messaging.ServiceBus.ServiceBusProcessor.IsProcessing" />
       </Docs>
     </Member>
     <Member MemberName="MaxAutoLockRenewalDuration">
-      <MemberSignature Language="C#" Value="public TimeSpan MaxAutoLockRenewalDuration { get; }" />
+      <MemberSignature Language="C#" Value="public virtual TimeSpan MaxAutoLockRenewalDuration { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxAutoLockRenewalDuration" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxAutoLockRenewalDuration" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxAutoLockRenewalDuration As TimeSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MaxAutoLockRenewalDuration As TimeSpan" />
       <MemberSignature Language="F#" Value="member this.MaxAutoLockRenewalDuration : TimeSpan" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxAutoLockRenewalDuration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -310,15 +360,19 @@
       </Docs>
     </Member>
     <Member MemberName="MaxConcurrentCallsPerSession">
-      <MemberSignature Language="C#" Value="public int MaxConcurrentCallsPerSession { get; }" />
+      <MemberSignature Language="C#" Value="public virtual int MaxConcurrentCallsPerSession { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentCallsPerSession" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxConcurrentCallsPerSession" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxConcurrentCallsPerSession As Integer" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MaxConcurrentCallsPerSession As Integer" />
       <MemberSignature Language="F#" Value="member this.MaxConcurrentCallsPerSession : int" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxConcurrentCallsPerSession" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -334,15 +388,19 @@
       </Docs>
     </Member>
     <Member MemberName="MaxConcurrentSessions">
-      <MemberSignature Language="C#" Value="public int MaxConcurrentSessions { get; }" />
+      <MemberSignature Language="C#" Value="public virtual int MaxConcurrentSessions { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentSessions" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxConcurrentSessions" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxConcurrentSessions As Integer" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MaxConcurrentSessions As Integer" />
       <MemberSignature Language="F#" Value="member this.MaxConcurrentSessions : int" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.MaxConcurrentSessions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -355,24 +413,28 @@
       </Docs>
     </Member>
     <Member MemberName="PrefetchCount">
-      <MemberSignature Language="C#" Value="public int PrefetchCount { get; }" />
+      <MemberSignature Language="C#" Value="public virtual int PrefetchCount { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 PrefetchCount" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.PrefetchCount" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrefetchCount As Integer" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property PrefetchCount As Integer" />
       <MemberSignature Language="F#" Value="member this.PrefetchCount : int" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.PrefetchCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the number of messages that will be eagerly requested from Queues or Subscriptions and queued locally without regard to
-            whether a processing is currently active, intended to help maximize throughput by allowing the receiver to receive
-            from a local cache rather than waiting on a service request.
+            Gets the number of messages that will be eagerly requested from Queues or Subscriptions
+            during processing. This is intended to help maximize throughput by allowing the
+            processor to receive from a local cache rather than waiting on a service request.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -389,6 +451,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;Azure.Messaging.ServiceBus.ProcessErrorEventArgs,System.Threading.Tasks.Task&gt;</ReturnType>
@@ -411,6 +477,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;Azure.Messaging.ServiceBus.ProcessSessionMessageEventArgs,System.Threading.Tasks.Task&gt;</ReturnType>
@@ -423,22 +493,26 @@
       </Docs>
     </Member>
     <Member MemberName="ReceiveMode">
-      <MemberSignature Language="C#" Value="public Azure.Messaging.ServiceBus.ReceiveMode ReceiveMode { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.Messaging.ServiceBus.ReceiveMode ReceiveMode" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Messaging.ServiceBus.ServiceBusReceiveMode ReceiveMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.Messaging.ServiceBus.ServiceBusReceiveMode ReceiveMode" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.ReceiveMode" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveMode As ReceiveMode" />
-      <MemberSignature Language="F#" Value="member this.ReceiveMode : Azure.Messaging.ServiceBus.ReceiveMode" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.ReceiveMode" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ReceiveMode As ServiceBusReceiveMode" />
+      <MemberSignature Language="F#" Value="member this.ReceiveMode : Azure.Messaging.ServiceBus.ServiceBusReceiveMode" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.ReceiveMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.Messaging.ServiceBus.ReceiveMode</ReturnType>
+        <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiveMode</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.ReceiveMode" /> used to specify how messages are received. Defaults to PeekLock mode.
+            Gets the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusProcessor.ReceiveMode" /> used to specify how messages are received. Defaults to PeekLock mode.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -455,6 +529,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;Azure.Messaging.ServiceBus.ProcessSessionEventArgs,System.Threading.Tasks.Task&gt;</ReturnType>
@@ -468,6 +546,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SessionIdleTimeout">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan? SessionIdleTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; SessionIdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.SessionIdleTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SessionIdleTimeout As Nullable(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.SessionIdleTimeout : Nullable&lt;TimeSpan&gt;" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.SessionIdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the maximum amount of time to wait for a message to be received for the
+            currently active session. After this time has elapsed, the processor will close the session
+            and attempt to process another session.
+            If not specified, the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusRetryOptions.TryTimeout" /> will be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SessionInitializingAsync">
       <MemberSignature Language="C#" Value="public event Func&lt;Azure.Messaging.ServiceBus.ProcessSessionEventArgs,System.Threading.Tasks.Task&gt; SessionInitializingAsync;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Func`2&lt;class Azure.Messaging.ServiceBus.ProcessSessionEventArgs, class System.Threading.Tasks.Task&gt; SessionInitializingAsync" />
@@ -478,6 +581,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;Azure.Messaging.ServiceBus.ProcessSessionEventArgs,System.Threading.Tasks.Task&gt;</ReturnType>
@@ -499,6 +606,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -507,14 +618,23 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the start operation.  This won't affect the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> once it starts running.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> instance to
+             signal the request to cancel the start operation.  This won't affect the
+             processor once it starts running.
+             </param>
         <summary>
-             Signals the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> to begin processing messages. Should this method be called while the processor
-             is running, no action is taken.
+             Signals the processor to begin processing messages. Should this method be
+             called while the processor is already running, an
+             <see cref="T:System.InvalidOperationException" /> is thrown.
              </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc cref="M:Azure.Messaging.ServiceBus.ServiceBusProcessor.StartProcessingAsync(System.Threading.CancellationToken)" />
+        <exception cref="T:System.InvalidOperationException">
+               This can occur if the processor is already running. This can be checked via the <see cref="P:Azure.Messaging.ServiceBus.ServiceBusProcessor.IsProcessing" /> property.
+               This can also occur if event handlers have not been specified for the <see cref="E:Azure.Messaging.ServiceBus.ServiceBusProcessor.ProcessMessageAsync" /> or
+               the <see cref="E:Azure.Messaging.ServiceBus.ServiceBusProcessor.ProcessErrorAsync" /> events.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="StopProcessingAsync">
@@ -527,6 +647,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -535,10 +659,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the stop operation.  If the operation is successfully canceled, the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> will keep running.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> instance to
+             signal the request to cancel the stop operation. If the operation is successfully
+             canceled, the processor will keep running.</param>
         <summary>
-             Signals the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> to stop processing events. Should this method be called while the processor
-             is not running, no action is taken.
+             Signals the processor to stop processing messaging. Should this method be
+             called while the processor is not running, no action is taken. This method
+             will not close the underlying receivers, but will cause the receivers to stop
+             receiving. To close the underlying receivers, <see cref="M:Azure.Messaging.ServiceBus.ServiceBusProcessor.CloseAsync(System.Threading.CancellationToken)" /> should be called.
              </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -555,6 +683,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -571,6 +703,30 @@
              Converts the instance to string representation.
              </summary>
         <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionGroup">
+      <MemberSignature Language="C#" Value="public virtual string TransactionGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionGroup" />
+      <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.TransactionGroup" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property TransactionGroup As String" />
+      <MemberSignature Language="F#" Value="member this.TransactionGroup : string" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionProcessor.TransactionGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the transaction group associated with the processor. This is an
+            arbitrary string that is used to all senders, receivers, and processors that you
+            wish to use in a transaction that spans multiple different queues, topics, or subscriptions.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

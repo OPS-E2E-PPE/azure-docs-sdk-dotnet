@@ -29,6 +29,14 @@
     <AssemblyVersion>4.21.0.0</AssemblyVersion>
     <AssemblyVersion>4.21.1.0</AssemblyVersion>
     <AssemblyVersion>4.22.0.0</AssemblyVersion>
+    <AssemblyVersion>4.23.0.0</AssemblyVersion>
+    <AssemblyVersion>4.24.0.0</AssemblyVersion>
+    <AssemblyVersion>4.25.0.0</AssemblyVersion>
+    <AssemblyVersion>4.26.0.0</AssemblyVersion>
+    <AssemblyVersion>4.26.1.0</AssemblyVersion>
+    <AssemblyVersion>4.27.0.0</AssemblyVersion>
+    <AssemblyVersion>4.28.0.0</AssemblyVersion>
+    <AssemblyVersion>4.28.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
@@ -47,12 +55,18 @@
       <InterfaceName>Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Class to be used for confidential client applications (Web Apps, Web APIs, and daemon applications).
+            Class to be used for confidential client applications (web apps, web APIs, and daemon applications).
             </summary>
     <remarks>
-            Confidential client applications are typically applications which run on servers (Web Apps, Web API, or even service/daemon applications).
+            Confidential client applications are typically applications which run on servers (web apps, web API, or even service/daemon applications).
             They are considered difficult to access, and therefore capable of keeping an application secret (hold configuration
             time secrets as these values would be difficult for end users to extract).
             A web app is the most common confidential client. The clientId is exposed through the web browser, but the secret is passed only in the back channel
@@ -92,19 +106,31 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="clientId" Type="System.String" />
-        <Parameter Name="redirectUri" Type="System.String" />
-        <Parameter Name="clientCredential" Type="Microsoft.Identity.Client.ClientCredential" />
-        <Parameter Name="userTokenCache" Type="Microsoft.Identity.Client.TokenCache" />
-        <Parameter Name="appTokenCache" Type="Microsoft.Identity.Client.TokenCache" />
+        <Parameter Name="clientId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="redirectUri" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clientCredential" Type="Microsoft.Identity.Client.ClientCredential" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userTokenCache" Type="Microsoft.Identity.Client.TokenCache" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appTokenCache" Type="Microsoft.Identity.Client.TokenCache" Index="4" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="clientId">Client ID (also known as App ID) of the application as registered in the
@@ -162,20 +188,32 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use ConfidentialClientApplicationBuilder instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="clientId" Type="System.String" />
-        <Parameter Name="authority" Type="System.String" />
-        <Parameter Name="redirectUri" Type="System.String" />
-        <Parameter Name="clientCredential" Type="Microsoft.Identity.Client.ClientCredential" />
-        <Parameter Name="userTokenCache" Type="Microsoft.Identity.Client.TokenCache" />
-        <Parameter Name="appTokenCache" Type="Microsoft.Identity.Client.TokenCache" />
+        <Parameter Name="clientId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authority" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="redirectUri" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clientCredential" Type="Microsoft.Identity.Client.ClientCredential" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userTokenCache" Type="Microsoft.Identity.Client.TokenCache" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appTokenCache" Type="Microsoft.Identity.Client.TokenCache" Index="5" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="clientId">Client ID (also named Application ID) of the application as registered in the
@@ -242,6 +280,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -257,7 +303,7 @@
             Acquires a security token from the authority configured in the app using the authorization code
             previously received from the STS.
             It uses the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
-            It's usually used in Web Apps (for instance ASP.NET / ASP.NET Core Web apps) which sign-in users,
+            It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users,
             and can request an authorization code.
             This method does not lookup the token cache, but stores the result in it, so it can be looked up
             using other methods such as <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />.
@@ -271,13 +317,15 @@
     </Member>
     <Member MemberName="AcquireTokenByAuthorizationCodeAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenByAuthorizationCodeAsync (string authorizationCode, System.Collections.Generic.IEnumerable&lt;string&gt; scopes);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenByAuthorizationCodeAsync(string authorizationCode, class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenByAuthorizationCodeAsync(string authorizationCode, class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenByAuthorizationCodeAsync (authorizationCode As String, scopes As IEnumerable(Of String)) As Task(Of AuthenticationResult)" />
-      <MemberSignature Language="F#" Value="abstract member AcquireTokenByAuthorizationCodeAsync : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenByAuthorizationCodeAsync : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenByAuthorizationCodeAsync (authorizationCode, scopes)" />
+      <MemberSignature Language="F#" Value="member this.AcquireTokenByAuthorizationCodeAsync : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenByAuthorizationCodeAsync (authorizationCode, scopes)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenByAuthorizationCodeAsync(string authorizationCode, class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenByAuthorizationCodeAsync : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenByAuthorizationCodeAsync : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenByAuthorizationCodeAsync (authorizationCode, scopes)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -304,11 +352,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -324,7 +384,7 @@
         <summary>
             [V2 API] Acquires a security token from the authority configured in the app using the authorization code previously received from the STS. It uses
             the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
-            It's usually used in Web Apps (for instance ASP.NET / ASP.NET Core Web apps) which sign-in users, and therefore receive an authorization code.
+            It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users, and therefore receive an authorization code.
             This method does not lookup the token cache, but stores the result in it, so it can be looked up using other methods
             such as <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />.
             </summary>
@@ -368,6 +428,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -391,13 +459,15 @@
     </Member>
     <Member MemberName="AcquireTokenForClientAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenForClientAsync (scopes As IEnumerable(Of String)) As Task(Of AuthenticationResult)" />
-      <MemberSignature Language="F#" Value="abstract member AcquireTokenForClientAsync : seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenForClientAsync : seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync scopes" />
+      <MemberSignature Language="F#" Value="member this.AcquireTokenForClientAsync : seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync scopes" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenForClientAsync : seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenForClientAsync : seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync scopes" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String})</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String})</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -424,11 +494,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -441,7 +523,7 @@
         <param name="scopes">scopes requested to access a protected API. For this flow (client credentials), the scopes
             should be of the form "{ResourceIdUri/.default}" for instance <c>https://management.azure.net/.default</c> or, for Microsoft
             Graph, <c>https://graph.microsoft.com/.default</c> as the requested scopes are really defined statically at application registration
-            in the portal, and cannot be overriden in the application. See also </param>
+            in the portal, and cannot be overridden in the application. See also </param>
         <summary>
             [V3 API] Acquires a token from the authority configured in the app, for the confidential client itself (in the name of no user)
             using the client credentials flow. (See https://aka.ms/msal-net-client-credentials)
@@ -452,13 +534,15 @@
     </Member>
     <Member MemberName="AcquireTokenForClientAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, bool forceRefresh);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, bool forceRefresh) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, bool forceRefresh) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenForClientAsync (scopes As IEnumerable(Of String), forceRefresh As Boolean) As Task(Of AuthenticationResult)" />
-      <MemberSignature Language="F#" Value="abstract member AcquireTokenForClientAsync : seq&lt;string&gt; * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenForClientAsync : seq&lt;string&gt; * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync (scopes, forceRefresh)" />
+      <MemberSignature Language="F#" Value="member this.AcquireTokenForClientAsync : seq&lt;string&gt; * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync (scopes, forceRefresh)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenForClientAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, bool forceRefresh) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenForClientAsync : seq&lt;string&gt; * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenForClientAsync : seq&lt;string&gt; * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenForClientAsync (scopes, forceRefresh)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -485,11 +569,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -503,7 +599,7 @@
         <param name="scopes">Scopes requested to access a protected API. For this flow (client credentials), the scopes
             should be of the form "{ResourceIdUri/.default}" for instance <c>https://management.azure.net/.default</c> or, for Microsoft
             Graph, <c>https://graph.microsoft.com/.default</c> as the requested scopes are really defined statically at application registration
-            in the portal, and cannot be overriden in the application</param>
+            in the portal, and cannot be overridden in the application</param>
         <param name="forceRefresh">If <c>true</c>, API will ignore the access token in the cache and attempt to acquire new access token using client credentials.
             This override can be used in case the application knows that conditional access policies changed</param>
         <summary>
@@ -550,6 +646,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -564,7 +668,7 @@
             the user on behalf of whom to get a token.</param>
         <summary>
             Acquires an access token for this application (usually a Web API) from the authority configured in the application,
-            in order to access another downstream protected Web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow.
+            in order to access another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow.
             See https://aka.ms/msal-net-on-behalf-of.
             This confidential client application was itself called with a token which will be provided in the
             <paramref name="userAssertion">userAssertion</paramref> parameter.
@@ -576,13 +680,15 @@
     </Member>
     <Member MemberName="AcquireTokenOnBehalfOfAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Client.UserAssertion userAssertion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenOnBehalfOfAsync (scopes As IEnumerable(Of String), userAssertion As UserAssertion) As Task(Of AuthenticationResult)" />
-      <MemberSignature Language="F#" Value="abstract member AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion)" />
+      <MemberSignature Language="F#" Value="member this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -609,11 +715,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -628,26 +746,28 @@
         <param name="userAssertion">Instance of <see cref="T:Microsoft.Identity.Client.UserAssertion" /> containing credential information about
             the user on behalf of whom to get a token.</param>
         <summary>
-            [V2 API] Acquires an access token for this application (usually a Web API) from the authority configured in the application, in order to access
-            another downstream protected Web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow. (See https://aka.ms/msal-net-on-behalf-of).
+            [V2 API] Acquires an access token for this application (usually a web API) from the authority configured in the application, in order to access
+            another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow. (See https://aka.ms/msal-net-on-behalf-of).
             This confidential client application was itself called with a token which will be provided in the
             <paramref name="userAssertion">userAssertion</paramref> parameter.
             </summary>
         <returns>Authentication result containing a token for the requested scopes and account</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
         <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
+        <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="AcquireTokenOnBehalfOfAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Client.UserAssertion userAssertion, string authority);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion, string authority) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion, string authority) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenOnBehalfOfAsync (scopes As IEnumerable(Of String), userAssertion As UserAssertion, authority As String) As Task(Of AuthenticationResult)" />
-      <MemberSignature Language="F#" Value="abstract member AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion, authority)" />
+      <MemberSignature Language="F#" Value="member this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion, authority)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; AcquireTokenOnBehalfOfAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.UserAssertion userAssertion, string authority) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.AcquireTokenOnBehalfOfAsync : seq&lt;string&gt; * Microsoft.Identity.Client.UserAssertion * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="confidentialClientApplication.AcquireTokenOnBehalfOfAsync (scopes, userAssertion, authority)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -674,11 +794,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -695,15 +827,15 @@
             the user on behalf of whom to get a token.</param>
         <param name="authority">Specific authority for which the token is requested. Passing a different value than configured does not change the configured value</param>
         <summary>
-            [V2 API] Acquires an access token for this application (usually a Web API) from a specific authority, in order to access
-            another downstream protected Web API on behalf of a user (See https://aka.ms/msal-net-on-behalf-of).
+            [V2 API] Acquires an access token for this application (usually a web API) from a specific authority, in order to access
+            another downstream protected web API on behalf of a user (See https://aka.ms/msal-net-on-behalf-of).
             This confidential client application was itself called with a token which will be provided in the
             <paramref name="userAssertion">userAssertion</paramref> parameter.
             </summary>
         <returns>Authentication result containing a token for the requested scopes and account</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
         <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
+        <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
       </Docs>
     </Member>
     <Member MemberName="AppTokenCache">
@@ -741,6 +873,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -770,6 +910,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -817,6 +965,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -839,13 +995,15 @@
     </Member>
     <Member MemberName="GetAuthorizationRequestUrlAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Uri&gt; GetAuthorizationRequestUrlAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string loginHint, string extraQueryParameters);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string loginHint, string extraQueryParameters) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string loginHint, string extraQueryParameters) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAuthorizationRequestUrlAsync (scopes As IEnumerable(Of String), loginHint As String, extraQueryParameters As String) As Task(Of Uri)" />
-      <MemberSignature Language="F#" Value="abstract member GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;&#xA;override this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, loginHint, extraQueryParameters)" />
+      <MemberSignature Language="F#" Value="member this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, loginHint, extraQueryParameters)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string loginHint, string extraQueryParameters) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;&#xA;override this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, loginHint, extraQueryParameters)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -872,11 +1030,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -905,13 +1075,15 @@
     </Member>
     <Member MemberName="GetAuthorizationRequestUrlAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Uri&gt; GetAuthorizationRequestUrlAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string redirectUri, string loginHint, string extraQueryParameters, System.Collections.Generic.IEnumerable&lt;string&gt; extraScopesToConsent, string authority);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string redirectUri, string loginHint, string extraQueryParameters, class System.Collections.Generic.IEnumerable`1&lt;string&gt; extraScopesToConsent, string authority) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string redirectUri, string loginHint, string extraQueryParameters, class System.Collections.Generic.IEnumerable`1&lt;string&gt; extraScopesToConsent, string authority) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAuthorizationRequestUrlAsync (scopes As IEnumerable(Of String), redirectUri As String, loginHint As String, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String) As Task(Of Uri)" />
-      <MemberSignature Language="F#" Value="abstract member GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;&#xA;override this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, redirectUri, loginHint, extraQueryParameters, extraScopesToConsent, authority)" />
+      <MemberSignature Language="F#" Value="member this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, redirectUri, loginHint, extraQueryParameters, extraScopesToConsent, authority)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Uri&gt; GetAuthorizationRequestUrlAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string redirectUri, string loginHint, string extraQueryParameters, class System.Collections.Generic.IEnumerable`1&lt;string&gt; extraScopesToConsent, string authority) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;&#xA;override this.GetAuthorizationRequestUrlAsync : seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string -&gt; System.Threading.Tasks.Task&lt;Uri&gt;" Usage="confidentialClientApplication.GetAuthorizationRequestUrlAsync (scopes, redirectUri, loginHint, extraQueryParameters, extraScopesToConsent, authority)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="azure-dotnet-preview">M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
@@ -938,11 +1110,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1012,6 +1196,14 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -1063,11 +1255,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1127,11 +1331,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1148,7 +1364,7 @@
             in Azure AD: this method will send the public certificate to Azure AD
             along with the token request, so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
             This saves the application admin from the need to explicitly manage the certificate rollover
-            (either via portal or powershell/CLI operation)
+            (either via portal or PowerShell/CLI operation)
             </summary>
         <returns>Authentication result containing application token for the requested scopes</returns>
         <remarks>To be added.</remarks>
@@ -1190,11 +1406,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1214,7 +1442,7 @@
             in Azure AD: this method will send the public certificate to Azure AD
             along with the token request, so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
             This saves the application admin from the need to explicitly manage the certificate rollover
-            (either via portal or powershell/CLI operation)
+            (either via portal or PowerShell/CLI operation)
             </summary>
         <returns>Authentication result containing application token for the requested scopes</returns>
         <remarks>To be added.</remarks>
@@ -1256,11 +1484,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1275,8 +1515,8 @@
         <param name="userAssertion">Instance of <see cref="T:Microsoft.Identity.Client.UserAssertion" /> containing credential information about
             the user on behalf of whom to get a token.</param>
         <summary>
-            [V2 API] Acquires an access token for this application (usually a Web API) from the authority configured in the application, in order to access
-            another downstream protected Web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow. (See https://aka.ms/msal-net-on-behalf-of).
+            [V2 API] Acquires an access token for this application (usually a web API) from the authority configured in the application, in order to access
+            another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow. (See https://aka.ms/msal-net-on-behalf-of).
             This confidential client application was itself called with a token which will be provided in the
             <paramref name="userAssertion">userAssertion</paramref> parameter.
             This override sends the certificate, which helps certificate rotation in Azure AD
@@ -1321,11 +1561,23 @@
         <AssemblyVersion>4.21.0.0</AssemblyVersion>
         <AssemblyVersion>4.21.1.0</AssemblyVersion>
         <AssemblyVersion>4.22.0.0</AssemblyVersion>
+        <AssemblyVersion>4.23.0.0</AssemblyVersion>
+        <AssemblyVersion>4.24.0.0</AssemblyVersion>
+        <AssemblyVersion>4.25.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.0.0</AssemblyVersion>
+        <AssemblyVersion>4.26.1.0</AssemblyVersion>
+        <AssemblyVersion>4.27.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.0.0</AssemblyVersion>
+        <AssemblyVersion>4.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1342,8 +1594,8 @@
             the user on behalf of whom to get a token.</param>
         <param name="authority">Specific authority for which the token is requested. Passing a different value than configured does not change the configured value</param>
         <summary>
-            [V2 API] Acquires an access token for this application (usually a Web API) from a specific authority, in order to access
-            another downstream protected Web API on behalf of a user (See https://aka.ms/msal-net-on-behalf-of).
+            [V2 API] Acquires an access token for this application (usually a web API) from a specific authority, in order to access
+            another downstream protected web API on behalf of a user (See https://aka.ms/msal-net-on-behalf-of).
             This confidential client application was itself called with a token which will be provided in the
             This override sends the certificate, which helps certificate rotation in Azure AD
             <paramref name="userAssertion">userAssertion</paramref> parameter.

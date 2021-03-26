@@ -7,6 +7,10 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.1.0</AssemblyVersion>
+    <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>7.1.1.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.Messaging.ServiceBus.ServiceBusReceiver</BaseTypeName>
@@ -30,6 +34,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -49,6 +57,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.BinaryData&gt;</ReturnType>
@@ -63,6 +75,10 @@
              </summary>
         <returns>The session state as <see cref="T:System.BinaryData" />.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="RenewSessionLockAsync">
@@ -75,6 +91,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -90,7 +110,7 @@
         <returns>To be added.</returns>
         <remarks>
           <para>
-             When you get session receiver, the session is locked for this receiver by the service for a duration as specified during the Queue/Subscription creation.
+             When you accept a session, the session is locked for this receiver by the service for a duration as specified during the Queue/Subscription creation.
              If processing of the session requires longer than this duration, the session-lock needs to be renewed.
              For each renewal, it resets the time the session is locked by the LockDuration set on the Entity.
              </para>
@@ -98,18 +118,26 @@
              Renewal of session renews all the messages in the session as well. Each individual message need not be renewed.
              </para>
         </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="SessionId">
-      <MemberSignature Language="C#" Value="public string SessionId { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string SessionId { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string SessionId" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.SessionId" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionId As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SessionId As String" />
       <MemberSignature Language="F#" Value="member this.SessionId : string" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.SessionId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -123,15 +151,19 @@
       </Docs>
     </Member>
     <Member MemberName="SessionLockedUntil">
-      <MemberSignature Language="C#" Value="public DateTimeOffset SessionLockedUntil { get; }" />
+      <MemberSignature Language="C#" Value="public virtual DateTimeOffset SessionLockedUntil { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset SessionLockedUntil" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.SessionLockedUntil" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionLockedUntil As DateTimeOffset" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SessionLockedUntil As DateTimeOffset" />
       <MemberSignature Language="F#" Value="member this.SessionLockedUntil : DateTimeOffset" Usage="Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.SessionLockedUntil" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -154,6 +186,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -169,6 +205,10 @@
              Set a custom state on the session which can be later retrieved using <see cref="M:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver.GetSessionStateAsync(System.Threading.CancellationToken)" /></summary>
         <returns>A task to be resolved on when the operation has completed.</returns>
         <remarks>This state is stored on Service Bus forever unless you set an empty state on it.</remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The lock for the session has expired.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionLockLost" /> in this case.
+             </exception>
       </Docs>
     </Member>
   </Members>

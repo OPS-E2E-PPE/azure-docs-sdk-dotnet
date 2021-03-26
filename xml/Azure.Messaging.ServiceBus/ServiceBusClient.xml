@@ -7,6 +7,10 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.1.0</AssemblyVersion>
+    <AssemblyVersion>7.1.0.0</AssemblyVersion>
+    <AssemblyVersion>7.1.1.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,6 +40,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -55,6 +63,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
@@ -82,6 +94,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fullyQualifiedNamespace" Type="System.String" />
@@ -107,6 +123,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
@@ -137,6 +157,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fullyQualifiedNamespace" Type="System.String" />
@@ -164,6 +188,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusSessionReceiver&gt;</ReturnType>
@@ -180,13 +208,18 @@
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> instance that can be used for receiving
-             and settling messages from a specific session-enabled queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             and settling messages from a specific session-enabled queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> scoped to the specified queue and a specific session.</returns>
         <remarks>Because this is establishing a session lock, this method performs a service call. If there are no available messages in the queue,
              this will throw a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusException" /> with <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> of <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               There are no unlocked sessions in the entity. This can occur if the entity has no messages, or if all of the messages
+               belong to sessions that are locked by other receivers.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="AcceptNextSessionAsync">
@@ -199,6 +232,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusSessionReceiver&gt;</ReturnType>
@@ -217,13 +254,18 @@
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> instance that can be used for receiving
-             and settling messages from a specific session-enabled subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             and settling messages from a specific session-enabled subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> scoped to the specified queue and a specific session.</returns>
         <remarks>Because this is establishing a session lock, this method performs a service call. If there are no available messages in the queue,
              this will throw a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusException" /> with <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> of <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               There are no unlocked sessions in the entity. This can occur if the entity has no messages, or if all of the messages
+               belong to sessions that are locked by other receivers.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="AcceptSessionAsync">
@@ -236,6 +278,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusSessionReceiver&gt;</ReturnType>
@@ -254,14 +300,18 @@
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> instance that can be used for receiving
-             and settling messages from a specific session-enabled queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             and settling messages from a specific session-enabled queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> scoped to the specified queue and a specific session.</returns>
         <remarks>Because this is establishing a session lock, this method performs a service call. If the
              sessionId parameter is null, and there are no available messages in the queue, this will
              throw a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusException" /> with <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> of <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The <paramref name="sessionId" /> corresponds to a session that is currently locked by another receiver.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionCannotBeLocked" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="AcceptSessionAsync">
@@ -274,6 +324,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.ServiceBus.ServiceBusSessionReceiver&gt;</ReturnType>
@@ -294,14 +348,18 @@
         <param name="cancellationToken">An optional <see cref="T:System.Threading.CancellationToken" /> instance to signal the request to cancel the operation.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> instance that can be used for receiving
-             and settling messages from a specific session-enabled subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             and settling messages from a specific session-enabled subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionReceiver" /> scoped to the specified queue and a specific session.</returns>
         <remarks>Because this is establishing a session lock, this method performs a service call. If the
              sessionId parameter is null, and there are no available messages in the queue, this will
              throw a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusException" /> with <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> of <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.ServiceTimeout" />.
              </remarks>
+        <exception cref="T:Azure.Messaging.ServiceBus.ServiceBusException">
+               The <paramref name="sessionId" /> corresponds to a session that is currently locked by another receiver.
+               The <see cref="P:Azure.Messaging.ServiceBus.ServiceBusException.Reason" /> will be set to <see cref="F:Azure.Messaging.ServiceBus.ServiceBusFailureReason.SessionCannotBeLocked" /> in this case.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateProcessor">
@@ -314,6 +372,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusProcessor</ReturnType>
@@ -325,13 +387,17 @@
         <param name="queueName">The queue to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> instance that can be used to process messages using
-             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" />,
+             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" />,
              use <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateProcessor(System.String,Azure.Messaging.ServiceBus.ServiceBusProcessorOptions)" /> method.
-             The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> scoped to the specified queue.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="queueName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateProcessor">
@@ -344,6 +410,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusProcessor</ReturnType>
@@ -358,11 +428,15 @@
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> instance that can be used to process messages using
-             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> scoped to the specified queue.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="queueName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateProcessor">
@@ -375,6 +449,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusProcessor</ReturnType>
@@ -385,16 +463,20 @@
       </Parameters>
       <Docs>
         <param name="topicName">The topic to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
-        <param name="subscriptionName">The subcription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
+        <param name="subscriptionName">The subscription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> instance that can be used to process messages using
-             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" />,
+             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" />,
              use <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateProcessor(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusProcessorOptions)" /> method.
-             The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> scoped to the specified topic and subscription.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="topicName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateProcessor">
@@ -407,6 +489,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusProcessor</ReturnType>
@@ -418,13 +504,13 @@
       </Parameters>
       <Docs>
         <param name="topicName">The topic to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
-        <param name="subscriptionName">The subcription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
+        <param name="subscriptionName">The subscription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> for.</param>
         <param name="options">The set of <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> to use for configuring the
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> instance that can be used to process messages using
-             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> scoped to the specified topic and subscription.</returns>
         <remarks>To be added.</remarks>
@@ -440,6 +526,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiver</ReturnType>
@@ -451,12 +541,16 @@
         <param name="queueName">The queue to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> for.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> instance that can be used for receiving and settling messages
-             from a specific queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify how messages are received. Defaults to PeekLock mode.
-             If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" />, use <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" /> method.
-             The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             from a specific queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify how messages are received. Defaults to PeekLock mode.
+             If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" />, use <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" /> method.
+             The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> scoped to the specified queue.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="queueName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
@@ -469,6 +563,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiver</ReturnType>
@@ -483,11 +581,15 @@
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> instance that can be used for receiving and settling messages
-             from a specific queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify how messages are received. Defaults to PeekLock mode.
-             The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             from a specific queue. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify how messages are received. Defaults to PeekLock mode.
+             The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> scoped to the specified queue.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="queueName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
@@ -500,6 +602,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiver</ReturnType>
@@ -514,13 +620,17 @@
              a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> for.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> instance that can be used for receiving and
-             settling messages from a specific subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" />,
+             settling messages from a specific subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. If you want to change the <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" />,
              use <see cref="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateReceiver(System.String,System.String,Azure.Messaging.ServiceBus.ServiceBusReceiverOptions)" /> method.
-             The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> scoped to the specified subscription and topic.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="topicName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateReceiver">
@@ -533,6 +643,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusReceiver</ReturnType>
@@ -550,11 +664,15 @@
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> instance that can be used for
-             receiving and settling messages from a specific subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
+             receiving and settling messages from a specific subscription. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiverOptions" />.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiver" /> scoped to the specified subscription and topic.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="topicName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateSender">
@@ -567,6 +685,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusSender</ReturnType>
@@ -583,36 +705,10 @@
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSender" /> scoped to the specified queue or topic.</returns>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CreateSender">
-      <MemberSignature Language="C#" Value="public virtual Azure.Messaging.ServiceBus.ServiceBusSender CreateSender (string queueOrTopicName, Azure.Messaging.ServiceBus.ServiceBusSenderOptions options);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Messaging.ServiceBus.ServiceBusSender CreateSender(string queueOrTopicName, class Azure.Messaging.ServiceBus.ServiceBusSenderOptions options) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Messaging.ServiceBus.ServiceBusClient.CreateSender(System.String,Azure.Messaging.ServiceBus.ServiceBusSenderOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateSender (queueOrTopicName As String, options As ServiceBusSenderOptions) As ServiceBusSender" />
-      <MemberSignature Language="F#" Value="abstract member CreateSender : string * Azure.Messaging.ServiceBus.ServiceBusSenderOptions -&gt; Azure.Messaging.ServiceBus.ServiceBusSender&#xA;override this.CreateSender : string * Azure.Messaging.ServiceBus.ServiceBusSenderOptions -&gt; Azure.Messaging.ServiceBus.ServiceBusSender" Usage="serviceBusClient.CreateSender (queueOrTopicName, options)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Messaging.ServiceBus.ServiceBusSender</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="queueOrTopicName" Type="System.String" />
-        <Parameter Name="options" Type="Azure.Messaging.ServiceBus.ServiceBusSenderOptions" />
-      </Parameters>
-      <Docs>
-        <param name="queueOrTopicName">The queue or topic to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSender" /> for.</param>
-        <param name="options">The set of <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSenderOptions" /> to use for configuring
-             this <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSender" />.</param>
-        <summary>
-             Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSender" /> instance that can be used for sending messages to a specific
-             queue or topic.
-             </summary>
-        <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSender" /> scoped to the specified queue or topic.</returns>
-        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+               The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusClient" /> was constructed with a connection string containing the "EntityPath" token
+               that has a different value than the <paramref name="queueOrTopicName" /> value specified here.
+             </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateSessionProcessor">
@@ -625,6 +721,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusSessionProcessor</ReturnType>
@@ -639,8 +739,8 @@
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> instance that can be used to process session messages using
-             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> scoped to the specified queue.</returns>
         <remarks>To be added.</remarks>
@@ -656,6 +756,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusSessionProcessor</ReturnType>
@@ -667,13 +771,13 @@
       </Parameters>
       <Docs>
         <param name="topicName">The topic to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> for.</param>
-        <param name="subscriptionName">The subcription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> for.</param>
+        <param name="subscriptionName">The subscription to create a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> for.</param>
         <param name="options">The set of <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> to use for configuring the
              <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" />.</param>
         <summary>
              Creates a <see cref="T:Azure.Messaging.ServiceBus.ServiceBusSessionProcessor" /> instance that can be used to process
-             messages using event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> to specify
-             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
+             messages using event handlers that are set on the processor. It uses <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> to specify
+             how messages are received. Defaults to PeekLock mode. The <see cref="T:Azure.Messaging.ServiceBus.ServiceBusReceiveMode" /> is set in <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessorOptions" /> type.
              </summary>
         <returns>A <see cref="T:Azure.Messaging.ServiceBus.ServiceBusProcessor" /> scoped to the specified topic and subscription.</returns>
         <remarks>To be added.</remarks>
@@ -692,6 +796,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -707,15 +815,19 @@
       </Docs>
     </Member>
     <Member MemberName="FullyQualifiedNamespace">
-      <MemberSignature Language="C#" Value="public string FullyQualifiedNamespace { get; }" />
+      <MemberSignature Language="C#" Value="public virtual string FullyQualifiedNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FullyQualifiedNamespace" />
       <MemberSignature Language="DocId" Value="P:Azure.Messaging.ServiceBus.ServiceBusClient.FullyQualifiedNamespace" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullyQualifiedNamespace As String" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property FullyQualifiedNamespace As String" />
       <MemberSignature Language="F#" Value="member this.FullyQualifiedNamespace : string" Usage="Azure.Messaging.ServiceBus.ServiceBusClient.FullyQualifiedNamespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -739,6 +851,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -763,6 +879,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.ServiceBus</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.1.0</AssemblyVersion>
+        <AssemblyVersion>7.1.0.0</AssemblyVersion>
+        <AssemblyVersion>7.1.1.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.ServiceBus.ServiceBusTransportType</ReturnType>

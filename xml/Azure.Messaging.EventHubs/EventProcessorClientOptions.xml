@@ -10,6 +10,8 @@
     <AssemblyVersion>5.1.0.0</AssemblyVersion>
     <AssemblyVersion>5.2.0.0</AssemblyVersion>
     <AssemblyVersion>5.3.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.1.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,6 +37,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,6 +57,8 @@
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -96,6 +102,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.EventHubs.EventHubConnectionOptions</ReturnType>
@@ -121,6 +129,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -157,6 +167,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -189,6 +201,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -213,6 +227,8 @@
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.EventHubs.Processor.LoadBalancingStrategy</ReturnType>
@@ -238,6 +254,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -267,6 +285,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
@@ -298,6 +318,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -309,7 +331,12 @@
                requested by another event processor that wishes to assume responsibility for processing it.
              </summary>
         <value>If not specified, an ownership interval of 30 seconds will be assumed.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+               As a general guideline, it is advised that this value be greater than the configured
+               <see cref="P:Azure.Messaging.EventHubs.EventProcessorClientOptions.LoadBalancingUpdateInterval" /> by at least a factor of two. It is recommended that
+               this be a factor of three or more, unless there are application scenarios that require more
+               aggressive ownership expiration.
+             </remarks>
       </Docs>
     </Member>
     <Member MemberName="PrefetchCount">
@@ -323,6 +350,8 @@
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -364,6 +393,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs.Processor</AssemblyName>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
@@ -400,6 +431,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.EventHubs.EventHubsRetryOptions</ReturnType>
@@ -427,6 +460,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -459,6 +494,8 @@
         <AssemblyVersion>5.1.0.0</AssemblyVersion>
         <AssemblyVersion>5.2.0.0</AssemblyVersion>
         <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

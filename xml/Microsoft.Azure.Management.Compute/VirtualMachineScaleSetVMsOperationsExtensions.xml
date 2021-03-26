@@ -18,6 +18,10 @@
     <AssemblyVersion>38.0.0.0</AssemblyVersion>
     <AssemblyVersion>38.1.0.0</AssemblyVersion>
     <AssemblyVersion>39.0.0.0</AssemblyVersion>
+    <AssemblyVersion>41.0.0.0</AssemblyVersion>
+    <AssemblyVersion>42.0.0.0</AssemblyVersion>
+    <AssemblyVersion>43.0.0.1</AssemblyVersion>
+    <AssemblyVersion>44.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -51,6 +55,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -104,6 +112,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -142,26 +154,15 @@
       </Docs>
     </Member>
     <Member MemberName="BeginDelete">
-      <MemberSignature Language="C#" Value="public static void BeginDelete (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BeginDelete(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDelete(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub BeginDelete (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String)" />
-      <MemberSignature Language="F#" Value="static member BeginDelete : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDelete (operations, resourceGroupName, vmScaleSetName, instanceId)" />
+      <MemberSignature Language="C#" Value="public static void BeginDelete (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, bool? forceDeletion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BeginDelete(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Nullable`1&lt;bool&gt; forceDeletion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDelete(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub BeginDelete (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional forceDeletion As Nullable(Of Boolean) = Nothing)" />
+      <MemberSignature Language="F#" Value="static member BeginDelete : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * Nullable&lt;bool&gt; -&gt; unit" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDelete (operations, resourceGroupName, vmScaleSetName, instanceId, forceDeletion)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
-        <AssemblyVersion>34.0.0.0</AssemblyVersion>
-        <AssemblyVersion>35.0.0.0</AssemblyVersion>
-        <AssemblyVersion>35.2.0.0</AssemblyVersion>
-        <AssemblyVersion>36.0.0.0</AssemblyVersion>
-        <AssemblyVersion>37.0.0.0</AssemblyVersion>
-        <AssemblyVersion>38.0.0.0</AssemblyVersion>
-        <AssemblyVersion>38.1.0.0</AssemblyVersion>
-        <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -171,6 +172,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="vmScaleSetName" Type="System.String" />
         <Parameter Name="instanceId" Type="System.String" />
+        <Parameter Name="forceDeletion" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -185,6 +187,10 @@
         <param name="instanceId">
             The instance ID of the virtual machine.
             </param>
+        <param name="forceDeletion">
+            Optional parameter to force delete a virtual machine from a VM scale set.
+            (Feature in Preview)
+            </param>
         <summary>
             Deletes a virtual machine from a VM scale set.
             </summary>
@@ -192,10 +198,10 @@
       </Docs>
     </Member>
     <Member MemberName="BeginDeleteAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginDeleteAsync(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, cancellationToken As CancellationToken) As Task" />
       <MemberSignature Language="F#" Value="static member BeginDeleteAsync : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDeleteAsync (operations, resourceGroupName, vmScaleSetName, instanceId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -212,6 +218,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -246,6 +256,55 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="BeginDeleteAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, bool? forceDeletion = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginDeleteAsync(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Nullable`1&lt;bool&gt; forceDeletion, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional forceDeletion As Nullable(Of Boolean) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member BeginDeleteAsync : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.BeginDeleteAsync (operations, resourceGroupName, vmScaleSetName, instanceId, forceDeletion, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="vmScaleSetName" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.String" />
+        <Parameter Name="forceDeletion" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="vmScaleSetName">
+            The name of the VM scale set.
+            </param>
+        <param name="instanceId">
+            The instance ID of the virtual machine.
+            </param>
+        <param name="forceDeletion">
+            Optional parameter to force delete a virtual machine from a VM scale set.
+            (Feature in Preview)
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            Deletes a virtual machine from a VM scale set.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BeginPerformMaintenance">
       <MemberSignature Language="C#" Value="public static void BeginPerformMaintenance (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BeginPerformMaintenance(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId) cil managed" />
@@ -267,6 +326,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -317,6 +380,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -372,6 +439,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -430,6 +501,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -493,6 +568,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -544,6 +623,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -600,6 +683,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -657,6 +744,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -708,6 +799,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -764,6 +859,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -826,6 +925,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -876,6 +979,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -931,6 +1038,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.RunCommandResult</ReturnType>
@@ -986,6 +1097,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.RunCommandResult&gt;</ReturnType>
@@ -1045,6 +1160,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1095,6 +1214,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1150,6 +1273,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM</ReturnType>
@@ -1206,6 +1333,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;</ReturnType>
@@ -1266,6 +1397,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1319,6 +1454,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1357,26 +1496,15 @@
       </Docs>
     </Member>
     <Member MemberName="Delete">
-      <MemberSignature Language="C#" Value="public static void Delete (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.Delete(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub Delete (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String)" />
-      <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.Delete (operations, resourceGroupName, vmScaleSetName, instanceId)" />
+      <MemberSignature Language="C#" Value="public static void Delete (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, bool? forceDeletion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Nullable`1&lt;bool&gt; forceDeletion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.Delete(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub Delete (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional forceDeletion As Nullable(Of Boolean) = Nothing)" />
+      <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * Nullable&lt;bool&gt; -&gt; unit" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.Delete (operations, resourceGroupName, vmScaleSetName, instanceId, forceDeletion)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
-        <AssemblyVersion>34.0.0.0</AssemblyVersion>
-        <AssemblyVersion>35.0.0.0</AssemblyVersion>
-        <AssemblyVersion>35.2.0.0</AssemblyVersion>
-        <AssemblyVersion>36.0.0.0</AssemblyVersion>
-        <AssemblyVersion>37.0.0.0</AssemblyVersion>
-        <AssemblyVersion>38.0.0.0</AssemblyVersion>
-        <AssemblyVersion>38.1.0.0</AssemblyVersion>
-        <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1386,6 +1514,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="vmScaleSetName" Type="System.String" />
         <Parameter Name="instanceId" Type="System.String" />
+        <Parameter Name="forceDeletion" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -1400,6 +1529,10 @@
         <param name="instanceId">
             The instance ID of the virtual machine.
             </param>
+        <param name="forceDeletion">
+            Optional parameter to force delete a virtual machine from a VM scale set.
+            (Feature in Preview)
+            </param>
         <summary>
             Deletes a virtual machine from a VM scale set.
             </summary>
@@ -1407,10 +1540,10 @@
       </Docs>
     </Member>
     <Member MemberName="DeleteAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, cancellationToken As CancellationToken) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.DeleteAsync (operations, resourceGroupName, vmScaleSetName, instanceId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1427,6 +1560,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1461,6 +1598,55 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DeleteAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, bool? forceDeletion = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Nullable`1&lt;bool&gt; forceDeletion, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IVirtualMachineScaleSetVMsOperations, resourceGroupName As String, vmScaleSetName As String, instanceId As String, Optional forceDeletion As Nullable(Of Boolean) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations * string * string * string * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Compute.VirtualMachineScaleSetVMsOperationsExtensions.DeleteAsync (operations, resourceGroupName, vmScaleSetName, instanceId, forceDeletion, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="vmScaleSetName" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.String" />
+        <Parameter Name="forceDeletion" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="vmScaleSetName">
+            The name of the VM scale set.
+            </param>
+        <param name="instanceId">
+            The instance ID of the virtual machine.
+            </param>
+        <param name="forceDeletion">
+            Optional parameter to force delete a virtual machine from a VM scale set.
+            (Feature in Preview)
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            Deletes a virtual machine from a VM scale set.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Get">
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM Get (this Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, Microsoft.Azure.Management.Compute.Models.InstanceViewTypes? expand = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM Get(class Microsoft.Azure.Management.Compute.IVirtualMachineScaleSetVMsOperations operations, string resourceGroupName, string vmScaleSetName, string instanceId, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Compute.Models.InstanceViewTypes&gt; expand) cil managed" />
@@ -1482,6 +1668,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM</ReturnType>
@@ -1538,6 +1728,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;</ReturnType>
@@ -1598,6 +1792,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVMInstanceView</ReturnType>
@@ -1649,6 +1847,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVMInstanceView&gt;</ReturnType>
@@ -1704,6 +1906,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;</ReturnType>
@@ -1760,6 +1966,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;&gt;</ReturnType>
@@ -1820,6 +2030,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;</ReturnType>
@@ -1863,6 +2077,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;&gt;</ReturnType>
@@ -1910,6 +2128,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1960,6 +2182,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2015,6 +2241,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2073,6 +2303,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2136,6 +2370,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2187,6 +2425,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2243,6 +2485,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2300,6 +2546,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2351,6 +2601,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2407,6 +2661,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2469,6 +2727,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2519,6 +2781,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2565,6 +2831,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.RetrieveBootDiagnosticsDataResult</ReturnType>
@@ -2614,6 +2884,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.RetrieveBootDiagnosticsDataResult&gt;</ReturnType>
@@ -2676,6 +2950,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.RunCommandResult</ReturnType>
@@ -2731,6 +3009,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.RunCommandResult&gt;</ReturnType>
@@ -2783,6 +3065,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2827,6 +3113,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2883,6 +3173,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2933,6 +3227,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2988,6 +3286,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM</ReturnType>
@@ -3044,6 +3346,10 @@
         <AssemblyVersion>38.0.0.0</AssemblyVersion>
         <AssemblyVersion>38.1.0.0</AssemblyVersion>
         <AssemblyVersion>39.0.0.0</AssemblyVersion>
+        <AssemblyVersion>41.0.0.0</AssemblyVersion>
+        <AssemblyVersion>42.0.0.0</AssemblyVersion>
+        <AssemblyVersion>43.0.0.1</AssemblyVersion>
+        <AssemblyVersion>44.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetVM&gt;</ReturnType>

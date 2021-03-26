@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
     <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -26,6 +27,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.IntegrationRuntimeNodeIpAddress&gt;&gt;</ReturnType>
@@ -43,7 +45,7 @@
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="integrationRuntimeName">
             Integration runtime name
@@ -65,6 +67,9 @@
             Get the IP address of an integration runtime node
             </remarks>
         <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">

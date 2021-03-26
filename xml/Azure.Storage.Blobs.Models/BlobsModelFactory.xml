@@ -6,19 +6,8 @@
   <TypeSignature Language="F#" Value="type BlobsModelFactory = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
-    <AssemblyVersion>12.1.0.0</AssemblyVersion>
-    <AssemblyVersion>12.2.0.0</AssemblyVersion>
-    <AssemblyVersion>12.3.0.0</AssemblyVersion>
-    <AssemblyVersion>12.4.0.0</AssemblyVersion>
-    <AssemblyVersion>12.4.1.0</AssemblyVersion>
-    <AssemblyVersion>12.4.2.0</AssemblyVersion>
-    <AssemblyVersion>12.4.3.0</AssemblyVersion>
-    <AssemblyVersion>12.4.4.0</AssemblyVersion>
-    <AssemblyVersion>12.5.0.0</AssemblyVersion>
-    <AssemblyVersion>12.5.1.0</AssemblyVersion>
-    <AssemblyVersion>12.6.0.0</AssemblyVersion>
-    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
+    <AssemblyVersion>12.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,7 +15,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            BlobsModelFactory provides utilities for mocking.
+            This class holds BlobModelFactory overloads we need for backwards compatibility.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -40,20 +29,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.AccountInfo</ReturnType>
       </ReturnValue>
@@ -71,6 +55,37 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AccountInfo">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.AccountInfo AccountInfo (Azure.Storage.Blobs.Models.SkuName skuName, Azure.Storage.Blobs.Models.AccountKind accountKind, bool isHierarchicalNamespaceEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.AccountInfo AccountInfo(valuetype Azure.Storage.Blobs.Models.SkuName skuName, valuetype Azure.Storage.Blobs.Models.AccountKind accountKind, bool isHierarchicalNamespaceEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.AccountInfo(Azure.Storage.Blobs.Models.SkuName,Azure.Storage.Blobs.Models.AccountKind,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AccountInfo (skuName As SkuName, accountKind As AccountKind, isHierarchicalNamespaceEnabled As Boolean) As AccountInfo" />
+      <MemberSignature Language="F#" Value="static member AccountInfo : Azure.Storage.Blobs.Models.SkuName * Azure.Storage.Blobs.Models.AccountKind * bool -&gt; Azure.Storage.Blobs.Models.AccountInfo" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.AccountInfo (skuName, accountKind, isHierarchicalNamespaceEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.AccountInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skuName" Type="Azure.Storage.Blobs.Models.SkuName" />
+        <Parameter Name="accountKind" Type="Azure.Storage.Blobs.Models.AccountKind" />
+        <Parameter Name="isHierarchicalNamespaceEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="skuName">To be added.</param>
+        <param name="accountKind">To be added.</param>
+        <param name="isHierarchicalNamespaceEnabled">To be added.</param>
+        <summary>
+            Creates a new AccountInfo instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BlobAppendInfo">
       <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobAppendInfo BlobAppendInfo (Azure.ETag eTag, DateTimeOffset lastModified, byte[] contentHash, byte[] contentCrc64, string blobAppendOffset, int blobCommittedBlockCount, bool isServerEncrypted, string encryptionKeySha256);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobAppendInfo BlobAppendInfo(valuetype Azure.ETag eTag, valuetype System.DateTimeOffset lastModified, unsigned int8[] contentHash, unsigned int8[] contentCrc64, string blobAppendOffset, int32 blobCommittedBlockCount, bool isServerEncrypted, string encryptionKeySha256) cil managed" />
@@ -80,19 +95,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -138,16 +142,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobAppendInfo</ReturnType>
@@ -189,26 +185,49 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobBlock</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="size">To be added.</param>
+        <summary>
+            Creates a new BlobBlock instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlobBlock">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobBlock BlobBlock (string name, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Azure.Storage.Blobs.Models.BlobBlock BlobBlock(string name, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.BlobBlock(System.String,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlobBlock (name As String, size As Long) As BlobBlock" />
+      <MemberSignature Language="F#" Value="static member BlobBlock : string * int64 -&gt; Azure.Storage.Blobs.Models.BlobBlock" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.BlobBlock (name, size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.BlobBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="size" Type="System.Int64" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="name">To be added.</param>
@@ -229,19 +248,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobContainerAccessPolicy</ReturnType>
@@ -273,19 +281,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobContainerInfo</ReturnType>
@@ -313,19 +310,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -359,10 +345,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobContainerItem</ReturnType>
@@ -394,19 +378,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -454,16 +427,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -515,10 +480,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -570,10 +533,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobContainerProperties</ReturnType>
@@ -623,19 +584,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -675,16 +625,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -726,10 +668,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobContentInfo</ReturnType>
@@ -767,19 +707,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -817,10 +746,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobCopyInfo</ReturnType>
@@ -854,11 +781,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobDownloadDetails</ReturnType>
       </ReturnValue>
@@ -928,6 +859,94 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="BlobDownloadDetails">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobDownloadDetails BlobDownloadDetails (Azure.Storage.Blobs.Models.BlobType blobType, long contentLength, string contentType, byte[] contentHash, DateTimeOffset lastModified, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata, string contentRange, string contentEncoding, string cacheControl, string contentDisposition, string contentLanguage, long blobSequenceNumber, DateTimeOffset copyCompletedOn, string copyStatusDescription, string copyId, string copyProgress, Uri copySource, Azure.Storage.Blobs.Models.CopyStatus copyStatus, Azure.Storage.Blobs.Models.LeaseDurationType leaseDuration, Azure.Storage.Blobs.Models.LeaseState leaseState, Azure.Storage.Blobs.Models.LeaseStatus leaseStatus, string acceptRanges, int blobCommittedBlockCount, bool isServerEncrypted, string encryptionKeySha256, string encryptionScope, byte[] blobContentHash, long tagCount, string versionId, bool isSealed, System.Collections.Generic.IList&lt;Azure.Storage.Blobs.Models.ObjectReplicationPolicy&gt; objectReplicationSourceProperties, string objectReplicationDestinationPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobDownloadDetails BlobDownloadDetails(valuetype Azure.Storage.Blobs.Models.BlobType blobType, int64 contentLength, string contentType, unsigned int8[] contentHash, valuetype System.DateTimeOffset lastModified, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, string contentRange, string contentEncoding, string cacheControl, string contentDisposition, string contentLanguage, int64 blobSequenceNumber, valuetype System.DateTimeOffset copyCompletedOn, string copyStatusDescription, string copyId, string copyProgress, class System.Uri copySource, valuetype Azure.Storage.Blobs.Models.CopyStatus copyStatus, valuetype Azure.Storage.Blobs.Models.LeaseDurationType leaseDuration, valuetype Azure.Storage.Blobs.Models.LeaseState leaseState, valuetype Azure.Storage.Blobs.Models.LeaseStatus leaseStatus, string acceptRanges, int32 blobCommittedBlockCount, bool isServerEncrypted, string encryptionKeySha256, string encryptionScope, unsigned int8[] blobContentHash, int64 tagCount, string versionId, bool isSealed, class System.Collections.Generic.IList`1&lt;class Azure.Storage.Blobs.Models.ObjectReplicationPolicy&gt; objectReplicationSourceProperties, string objectReplicationDestinationPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadDetails(Azure.Storage.Blobs.Models.BlobType,System.Int64,System.String,System.Byte[],System.DateTimeOffset,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String,System.String,System.Int64,System.DateTimeOffset,System.String,System.String,System.String,System.Uri,Azure.Storage.Blobs.Models.CopyStatus,Azure.Storage.Blobs.Models.LeaseDurationType,Azure.Storage.Blobs.Models.LeaseState,Azure.Storage.Blobs.Models.LeaseStatus,System.String,System.Int32,System.Boolean,System.String,System.String,System.Byte[],System.Int64,System.String,System.Boolean,System.Collections.Generic.IList{Azure.Storage.Blobs.Models.ObjectReplicationPolicy},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlobDownloadDetails (blobType As BlobType, contentLength As Long, contentType As String, contentHash As Byte(), lastModified As DateTimeOffset, metadata As IDictionary(Of String, String), contentRange As String, contentEncoding As String, cacheControl As String, contentDisposition As String, contentLanguage As String, blobSequenceNumber As Long, copyCompletedOn As DateTimeOffset, copyStatusDescription As String, copyId As String, copyProgress As String, copySource As Uri, copyStatus As CopyStatus, leaseDuration As LeaseDurationType, leaseState As LeaseState, leaseStatus As LeaseStatus, acceptRanges As String, blobCommittedBlockCount As Integer, isServerEncrypted As Boolean, encryptionKeySha256 As String, encryptionScope As String, blobContentHash As Byte(), tagCount As Long, versionId As String, isSealed As Boolean, objectReplicationSourceProperties As IList(Of ObjectReplicationPolicy), objectReplicationDestinationPolicy As String) As BlobDownloadDetails" />
+      <MemberSignature Language="F#" Value="static member BlobDownloadDetails : Azure.Storage.Blobs.Models.BlobType * int64 * string * byte[] * DateTimeOffset * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * string * string * string * int64 * DateTimeOffset * string * string * string * Uri * Azure.Storage.Blobs.Models.CopyStatus * Azure.Storage.Blobs.Models.LeaseDurationType * Azure.Storage.Blobs.Models.LeaseState * Azure.Storage.Blobs.Models.LeaseStatus * string * int * bool * string * string * byte[] * int64 * string * bool * System.Collections.Generic.IList&lt;Azure.Storage.Blobs.Models.ObjectReplicationPolicy&gt; * string -&gt; Azure.Storage.Blobs.Models.BlobDownloadDetails" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadDetails (blobType, contentLength, contentType, contentHash, lastModified, metadata, contentRange, contentEncoding, cacheControl, contentDisposition, contentLanguage, blobSequenceNumber, copyCompletedOn, copyStatusDescription, copyId, copyProgress, copySource, copyStatus, leaseDuration, leaseState, leaseStatus, acceptRanges, blobCommittedBlockCount, isServerEncrypted, encryptionKeySha256, encryptionScope, blobContentHash, tagCount, versionId, isSealed, objectReplicationSourceProperties, objectReplicationDestinationPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.BlobDownloadDetails</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blobType" Type="Azure.Storage.Blobs.Models.BlobType" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentLength" Type="System.Int64" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentType" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentHash" Type="System.Byte[]" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="lastModified" Type="System.DateTimeOffset" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentRange" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentEncoding" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cacheControl" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentDisposition" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="contentLanguage" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="blobSequenceNumber" Type="System.Int64" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copyCompletedOn" Type="System.DateTimeOffset" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copyStatusDescription" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copyId" Type="System.String" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copyProgress" Type="System.String" Index="15" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copySource" Type="System.Uri" Index="16" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="copyStatus" Type="Azure.Storage.Blobs.Models.CopyStatus" Index="17" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="leaseDuration" Type="Azure.Storage.Blobs.Models.LeaseDurationType" Index="18" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="leaseState" Type="Azure.Storage.Blobs.Models.LeaseState" Index="19" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="leaseStatus" Type="Azure.Storage.Blobs.Models.LeaseStatus" Index="20" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acceptRanges" Type="System.String" Index="21" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="blobCommittedBlockCount" Type="System.Int32" Index="22" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isServerEncrypted" Type="System.Boolean" Index="23" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="encryptionKeySha256" Type="System.String" Index="24" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="encryptionScope" Type="System.String" Index="25" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="blobContentHash" Type="System.Byte[]" Index="26" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tagCount" Type="System.Int64" Index="27" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="versionId" Type="System.String" Index="28" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isSealed" Type="System.Boolean" Index="29" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="objectReplicationSourceProperties" Type="System.Collections.Generic.IList&lt;Azure.Storage.Blobs.Models.ObjectReplicationPolicy&gt;" Index="30" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="objectReplicationDestinationPolicy" Type="System.String" Index="31" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="blobType">To be added.</param>
+        <param name="contentLength">To be added.</param>
+        <param name="contentType">To be added.</param>
+        <param name="contentHash">To be added.</param>
+        <param name="lastModified">To be added.</param>
+        <param name="metadata">To be added.</param>
+        <param name="contentRange">To be added.</param>
+        <param name="contentEncoding">To be added.</param>
+        <param name="cacheControl">To be added.</param>
+        <param name="contentDisposition">To be added.</param>
+        <param name="contentLanguage">To be added.</param>
+        <param name="blobSequenceNumber">To be added.</param>
+        <param name="copyCompletedOn">To be added.</param>
+        <param name="copyStatusDescription">To be added.</param>
+        <param name="copyId">To be added.</param>
+        <param name="copyProgress">To be added.</param>
+        <param name="copySource">To be added.</param>
+        <param name="copyStatus">To be added.</param>
+        <param name="leaseDuration">To be added.</param>
+        <param name="leaseState">To be added.</param>
+        <param name="leaseStatus">To be added.</param>
+        <param name="acceptRanges">To be added.</param>
+        <param name="blobCommittedBlockCount">To be added.</param>
+        <param name="isServerEncrypted">To be added.</param>
+        <param name="encryptionKeySha256">To be added.</param>
+        <param name="encryptionScope">To be added.</param>
+        <param name="blobContentHash">To be added.</param>
+        <param name="tagCount">To be added.</param>
+        <param name="versionId">To be added.</param>
+        <param name="isSealed">To be added.</param>
+        <param name="objectReplicationSourceProperties">To be added.</param>
+        <param name="objectReplicationDestinationPolicy">To be added.</param>
+        <summary>
+            Creates a new BlobDownloadDetails instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BlobDownloadInfo">
       <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobDownloadInfo BlobDownloadInfo (DateTimeOffset lastModified, long blobSequenceNumber, Azure.Storage.Blobs.Models.BlobType blobType, byte[] contentCrc64, string contentLanguage, string copyStatusDescription, string copyId, string copyProgress, Uri copySource, Azure.Storage.Blobs.Models.CopyStatus copyStatus, string contentDisposition, Azure.Storage.Blobs.Models.LeaseDurationType leaseDuration, string cacheControl, Azure.Storage.Blobs.Models.LeaseState leaseState, string contentEncoding, Azure.Storage.Blobs.Models.LeaseStatus leaseStatus, byte[] contentHash, string acceptRanges, Azure.ETag eTag, int blobCommittedBlockCount, string contentRange, bool isServerEncrypted, string contentType, string encryptionKeySha256, long contentLength, byte[] blobContentHash, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata, System.IO.Stream content, DateTimeOffset copyCompletionTime);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobDownloadInfo BlobDownloadInfo(valuetype System.DateTimeOffset lastModified, int64 blobSequenceNumber, valuetype Azure.Storage.Blobs.Models.BlobType blobType, unsigned int8[] contentCrc64, string contentLanguage, string copyStatusDescription, string copyId, string copyProgress, class System.Uri copySource, valuetype Azure.Storage.Blobs.Models.CopyStatus copyStatus, string contentDisposition, valuetype Azure.Storage.Blobs.Models.LeaseDurationType leaseDuration, string cacheControl, valuetype Azure.Storage.Blobs.Models.LeaseState leaseState, string contentEncoding, valuetype Azure.Storage.Blobs.Models.LeaseStatus leaseStatus, unsigned int8[] contentHash, string acceptRanges, valuetype Azure.ETag eTag, int32 blobCommittedBlockCount, string contentRange, bool isServerEncrypted, string contentType, string encryptionKeySha256, int64 contentLength, unsigned int8[] blobContentHash, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, class System.IO.Stream content, valuetype System.DateTimeOffset copyCompletionTime) cil managed" />
@@ -937,19 +956,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1037,16 +1045,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1136,10 +1136,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1233,7 +1231,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobDownloadInfo</ReturnType>
@@ -1314,6 +1313,62 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="BlobDownloadResult">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobDownloadResult BlobDownloadResult (BinaryData content = default, Azure.Storage.Blobs.Models.BlobDownloadDetails details = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobDownloadResult BlobDownloadResult(class System.BinaryData content, class Azure.Storage.Blobs.Models.BlobDownloadDetails details) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadResult(System.BinaryData,Azure.Storage.Blobs.Models.BlobDownloadDetails)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlobDownloadResult (Optional content As BinaryData = Nothing, Optional details As BlobDownloadDetails = Nothing) As BlobDownloadResult" />
+      <MemberSignature Language="F#" Value="static member BlobDownloadResult : BinaryData * Azure.Storage.Blobs.Models.BlobDownloadDetails -&gt; Azure.Storage.Blobs.Models.BlobDownloadResult" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadResult (content, details)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.BlobDownloadResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="details" Type="Azure.Storage.Blobs.Models.BlobDownloadDetails" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="content">To be added.</param>
+        <param name="details">To be added.</param>
+        <summary>
+            Creates a new BlobDownloadDataResult instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlobDownloadStreamingResult">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobDownloadStreamingResult BlobDownloadStreamingResult (System.IO.Stream content = default, Azure.Storage.Blobs.Models.BlobDownloadDetails details = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobDownloadStreamingResult BlobDownloadStreamingResult(class System.IO.Stream content, class Azure.Storage.Blobs.Models.BlobDownloadDetails details) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadStreamingResult(System.IO.Stream,Azure.Storage.Blobs.Models.BlobDownloadDetails)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlobDownloadStreamingResult (Optional content As Stream = Nothing, Optional details As BlobDownloadDetails = Nothing) As BlobDownloadStreamingResult" />
+      <MemberSignature Language="F#" Value="static member BlobDownloadStreamingResult : System.IO.Stream * Azure.Storage.Blobs.Models.BlobDownloadDetails -&gt; Azure.Storage.Blobs.Models.BlobDownloadStreamingResult" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.BlobDownloadStreamingResult (content, details)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.BlobDownloadStreamingResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.IO.Stream" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="details" Type="Azure.Storage.Blobs.Models.BlobDownloadDetails" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="content">To be added.</param>
+        <param name="details">To be added.</param>
+        <summary>
+            Creates a new BlobDownloadStreamingResult instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BlobGeoReplication">
       <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.BlobGeoReplication BlobGeoReplication (Azure.Storage.Blobs.Models.BlobGeoReplicationStatus status, DateTimeOffset? lastSyncedOn = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.BlobGeoReplication BlobGeoReplication(valuetype Azure.Storage.Blobs.Models.BlobGeoReplicationStatus status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastSyncedOn) cil managed" />
@@ -1323,19 +1378,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobGeoReplication</ReturnType>
@@ -1363,19 +1407,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobHierarchyItem</ReturnType>
@@ -1403,10 +1436,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobInfo</ReturnType>
@@ -1438,19 +1469,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobInfo</ReturnType>
@@ -1478,19 +1498,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1530,10 +1539,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobItem</ReturnType>
@@ -1575,19 +1582,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1679,16 +1675,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1782,10 +1770,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1887,7 +1873,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobItemProperties</ReturnType>
@@ -1985,19 +1972,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobLease</ReturnType>
@@ -2027,19 +2003,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2133,16 +2098,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2238,10 +2195,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2353,7 +2308,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobProperties</ReturnType>
@@ -2461,10 +2417,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobQueryError</ReturnType>
@@ -2496,19 +2450,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobServiceStatistics</ReturnType>
@@ -2534,19 +2477,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2584,10 +2516,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlobSnapshotInfo</ReturnType>
@@ -2621,19 +2551,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2669,16 +2588,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlockInfo</ReturnType>
@@ -2710,19 +2621,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.BlockList</ReturnType>
@@ -2750,10 +2650,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.GetBlobTagResult</ReturnType>
@@ -2779,10 +2677,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.ObjectReplicationPolicy</ReturnType>
@@ -2810,10 +2706,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.ObjectReplicationRule</ReturnType>
@@ -2841,19 +2735,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.PageBlobInfo</ReturnType>
@@ -2883,19 +2766,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2937,16 +2809,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.PageInfo</ReturnType>
@@ -2984,19 +2848,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.PageRangesInfo</ReturnType>
@@ -3030,11 +2883,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.TaggedBlobItem</ReturnType>
       </ReturnValue>
@@ -3052,6 +2909,37 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TaggedBlobItem">
+      <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.TaggedBlobItem TaggedBlobItem (string blobName = default, string blobContainerName = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.TaggedBlobItem TaggedBlobItem(string blobName, string blobContainerName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Blobs.Models.BlobsModelFactory.TaggedBlobItem(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TaggedBlobItem (Optional blobName As String = Nothing, Optional blobContainerName As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing) As TaggedBlobItem" />
+      <MemberSignature Language="F#" Value="static member TaggedBlobItem : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.Storage.Blobs.Models.TaggedBlobItem" Usage="Azure.Storage.Blobs.Models.BlobsModelFactory.TaggedBlobItem (blobName, blobContainerName, tags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Blobs</AssemblyName>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Blobs.Models.TaggedBlobItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blobName" Type="System.String" />
+        <Parameter Name="blobContainerName" Type="System.String" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="blobName">To be added.</param>
+        <param name="blobContainerName">To be added.</param>
+        <param name="tags">To be added.</param>
+        <summary>
+            Creates a new BlobTagItem instance for mocking.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UserDelegationKey">
       <MemberSignature Language="C#" Value="public static Azure.Storage.Blobs.Models.UserDelegationKey UserDelegationKey (string signedObjectId, string signedTenantId, string signedService, string signedVersion, string value, DateTimeOffset signedExpiresOn, DateTimeOffset signedStartsOn);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Storage.Blobs.Models.UserDelegationKey UserDelegationKey(string signedObjectId, string signedTenantId, string signedService, string signedVersion, string value, valuetype System.DateTimeOffset signedExpiresOn, valuetype System.DateTimeOffset signedStartsOn) cil managed" />
@@ -3061,19 +2949,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Blobs</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
-        <AssemblyVersion>12.4.1.0</AssemblyVersion>
-        <AssemblyVersion>12.4.2.0</AssemblyVersion>
-        <AssemblyVersion>12.4.3.0</AssemblyVersion>
-        <AssemblyVersion>12.4.4.0</AssemblyVersion>
-        <AssemblyVersion>12.5.0.0</AssemblyVersion>
-        <AssemblyVersion>12.5.1.0</AssemblyVersion>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
-        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Blobs.Models.UserDelegationKey</ReturnType>

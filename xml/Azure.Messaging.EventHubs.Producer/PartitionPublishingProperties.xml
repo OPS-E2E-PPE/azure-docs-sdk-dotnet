@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type PartitionPublishingProperties = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-    <AssemblyVersion>5.3.0.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +28,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="isIdempotentPublishingEnabled" Type="System.Boolean" />
@@ -56,7 +56,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -89,7 +89,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -118,7 +118,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -141,7 +141,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -151,7 +151,12 @@
                The sequence number assigned to the event that was most recently published to the associated partition
                successfully.
              </summary>
-        <value>To be added.</value>
+        <value>
+          <para>The sequence number will be in the range of <c>-1</c> - <see cref="F:System.Int32.MaxValue" /> (inclusive) and will
+               increase as events are published. When more than <see cref="F:System.Int32.MaxValue" /> events have been published,
+               the sequence number will roll over to <c>0</c>.</para>
+          <para>A value of <c>-1</c> indicates that no events are known to have been published.</para>
+        </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,7 +169,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int16&gt;</ReturnType>
@@ -186,7 +191,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
@@ -208,7 +213,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

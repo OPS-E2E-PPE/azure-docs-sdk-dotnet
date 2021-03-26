@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type PartitionPublishingOptions = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-    <AssemblyVersion>5.3.0.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,7 +31,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +48,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -81,7 +81,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -110,7 +110,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int16&gt;</ReturnType>
@@ -134,9 +134,9 @@
                <para>An <see cref="T:Azure.Messaging.EventHubs.EventHubsException" /> will occur if an <see cref="T:Azure.Messaging.EventHubs.Producer.EventHubProducerClient" /> is unable to read events from the
                requested Event Hub partition for the given consumer group.  In this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" />
                will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ProducerDisconnected" />.</para></remarks>
+        <altmember cref="P:Azure.Messaging.EventHubs.Producer.EventHubProducerClientOptions.EnableIdempotentPartitions" />
         <altmember cref="T:Azure.Messaging.EventHubs.EventHubsException" />
         <altmember cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ProducerDisconnected" />
-        <altmember cref="P:Azure.Messaging.EventHubs.Producer.EventHubProducerClientOptions.EnableIdempotentPartitions" />
       </Docs>
     </Member>
     <Member MemberName="ProducerGroupId">
@@ -148,7 +148,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
@@ -175,7 +175,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -184,7 +184,11 @@
         <summary>
                The starting number that should be used for the automatic sequencing of events for the associated partition, when published by this producer.
              </summary>
-        <value>The starting sequence number to associate with the partition; if <c>null</c>, the Event Hubs service will control the value.</value>
+        <value>
+          <para>The starting sequence number to associate with the partition; if <c>null</c>, the Event Hubs service will control the value.</para>
+          <para>The sequence number will be in the range of <c>0</c> - <see cref="F:System.Int32.MaxValue" /> (inclusive) and will increase as events are published.
+                 When more than <see cref="F:System.Int32.MaxValue" /> events have been published, the sequence number will roll over to <c>0</c>.</para>
+        </value>
         <remarks>
                The starting sequence number is only recognized and relevant when certain features of the producer are enabled.  For example, it is used by
                idempotent publishing.
@@ -201,7 +205,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

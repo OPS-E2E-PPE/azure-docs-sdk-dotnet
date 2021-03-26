@@ -17,6 +17,8 @@
     <AssemblyVersion>12.4.1.0</AssemblyVersion>
     <AssemblyVersion>12.4.2.0</AssemblyVersion>
     <AssemblyVersion>12.5.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.0.0</AssemblyVersion>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -48,6 +50,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -78,6 +82,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
@@ -119,6 +125,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
@@ -166,6 +174,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serviceUri" Type="System.Uri" />
@@ -173,8 +183,9 @@
       </Parameters>
       <Docs>
         <param name="serviceUri">
-            A <see cref="P:Azure.Storage.Queues.QueueServiceClient.Uri" /> referencing the queue service.
-            This is likely to be similar to "https://{account_name}.queue.core.windows.net".
+            A <see cref="P:Azure.Storage.Queues.QueueServiceClient.Uri" /> referencing the queue that includes the
+            name of the account, the name of the queue, and a SAS token.
+            This is likely to be similar to "https://{account_name}.queue.core.windows.net/{queue_name}?{sas_token}".
             </param>
         <param name="options">
             Optional client options that define the transport pipeline
@@ -186,6 +197,46 @@
             class.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueueServiceClient (Uri serviceUri, Azure.AzureSasCredential credential, Azure.Storage.Queues.QueueClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri serviceUri, class Azure.AzureSasCredential credential, class Azure.Storage.Queues.QueueClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Queues.QueueServiceClient.#ctor(System.Uri,Azure.AzureSasCredential,Azure.Storage.Queues.QueueClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (serviceUri As Uri, credential As AzureSasCredential, Optional options As QueueClientOptions = Nothing)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Queues.QueueServiceClient : Uri * Azure.AzureSasCredential * Azure.Storage.Queues.QueueClientOptions -&gt; Azure.Storage.Queues.QueueServiceClient" Usage="new Azure.Storage.Queues.QueueServiceClient (serviceUri, credential, options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Queues</AssemblyName>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceUri" Type="System.Uri" />
+        <Parameter Name="credential" Type="Azure.AzureSasCredential" />
+        <Parameter Name="options" Type="Azure.Storage.Queues.QueueClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="serviceUri">
+            A <see cref="P:Azure.Storage.Queues.QueueServiceClient.Uri" /> referencing the queue service.
+            This is likely to be similar to "https://{account_name}.queue.core.windows.net".
+            Must not contain shared access signature, which should be passed in the second parameter.
+            </param>
+        <param name="credential">
+            The shared access signature credential used to sign requests.
+            </param>
+        <param name="options">
+            Optional client options that define the transport pipeline
+            policies for authentication, retries, etc., that are applied to
+            every request.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Queues.QueueServiceClient" />
+            class.
+            </summary>
+        <remarks>
+            This constructor should only be used when shared access signature needs to be updated during lifespan of this client.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -208,6 +259,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serviceUri" Type="System.Uri" />
@@ -254,6 +307,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serviceUri" Type="System.Uri" />
@@ -300,6 +355,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -313,15 +370,19 @@
       </Docs>
     </Member>
     <Member MemberName="CanGenerateAccountSasUri">
-      <MemberSignature Language="C#" Value="public bool CanGenerateAccountSasUri { get; }" />
+      <MemberSignature Language="C#" Value="public bool CanGenerateAccountSasUri { get; }" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance bool CanGenerateAccountSasUri" />
       <MemberSignature Language="DocId" Value="P:Azure.Storage.Queues.QueueServiceClient.CanGenerateAccountSasUri" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGenerateAccountSasUri As Boolean" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGenerateAccountSasUri As Boolean" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="member this.CanGenerateAccountSasUri : bool" Usage="Azure.Storage.Queues.QueueServiceClient.CanGenerateAccountSasUri" />
+      <MemberSignature Language="C#" Value="public virtual bool CanGenerateAccountSasUri { get; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CanGenerateAccountSasUri As Boolean" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -355,6 +416,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Queues.QueueClient&gt;</ReturnType>
@@ -407,6 +470,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Queues.QueueClient&gt;&gt;</ReturnType>
@@ -459,6 +524,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -507,6 +574,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -545,6 +614,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -582,6 +653,8 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -643,6 +716,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Queues.Models.QueueServiceProperties&gt;</ReturnType>
@@ -687,6 +762,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Queues.Models.QueueServiceProperties&gt;&gt;</ReturnType>
@@ -731,6 +808,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Queues.QueueClient</ReturnType>
@@ -774,6 +853,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Storage.Queues.Models.QueueItem&gt;</ReturnType>
@@ -830,6 +911,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Storage.Queues.Models.QueueItem&gt;</ReturnType>
@@ -889,6 +972,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Queues.Models.QueueServiceStatistics&gt;</ReturnType>
@@ -935,6 +1020,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Queues.Models.QueueServiceStatistics&gt;&gt;</ReturnType>
@@ -981,6 +1068,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -1029,6 +1118,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -1076,6 +1167,8 @@
         <AssemblyVersion>12.4.1.0</AssemblyVersion>
         <AssemblyVersion>12.4.2.0</AssemblyVersion>
         <AssemblyVersion>12.5.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

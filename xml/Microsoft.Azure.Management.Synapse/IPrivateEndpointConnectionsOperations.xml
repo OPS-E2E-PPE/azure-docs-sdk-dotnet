@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
     <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -17,20 +18,22 @@
   </Docs>
   <Members>
     <Member MemberName="BeginCreateWithHttpMessagesAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; BeginCreateWithHttpMessagesAsync (string resourceGroupName, string workspaceName, string privateEndpointConnectionName, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; BeginCreateWithHttpMessagesAsync(string resourceGroupName, string workspaceName, string privateEndpointConnectionName, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Synapse.IPrivateEndpointConnectionsOperations.BeginCreateWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function BeginCreateWithHttpMessagesAsync (resourceGroupName As String, workspaceName As String, privateEndpointConnectionName As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of PrivateEndpointConnection))" />
-      <MemberSignature Language="F#" Value="abstract member BeginCreateWithHttpMessagesAsync : string * string * string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;" Usage="iPrivateEndpointConnectionsOperations.BeginCreateWithHttpMessagesAsync (resourceGroupName, workspaceName, privateEndpointConnectionName, customHeaders, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; BeginCreateWithHttpMessagesAsync (Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection request, string resourceGroupName, string workspaceName, string privateEndpointConnectionName, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; BeginCreateWithHttpMessagesAsync(class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection request, string resourceGroupName, string workspaceName, string privateEndpointConnectionName, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Synapse.IPrivateEndpointConnectionsOperations.BeginCreateWithHttpMessagesAsync(Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginCreateWithHttpMessagesAsync (request As PrivateEndpointConnection, resourceGroupName As String, workspaceName As String, privateEndpointConnectionName As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of PrivateEndpointConnection))" />
+      <MemberSignature Language="F#" Value="abstract member BeginCreateWithHttpMessagesAsync : Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection * string * string * string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;" Usage="iPrivateEndpointConnectionsOperations.BeginCreateWithHttpMessagesAsync (request, resourceGroupName, workspaceName, privateEndpointConnectionName, customHeaders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection" />
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="workspaceName" Type="System.String" />
         <Parameter Name="privateEndpointConnectionName" Type="System.String" />
@@ -38,11 +41,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="request">
+            Request body of private endpoint connection to create.
+            </param>
         <param name="resourceGroupName">
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="privateEndpointConnectionName">
             The name of the private endpoint connection.
@@ -59,6 +65,9 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
@@ -79,6 +88,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.OperationResource&gt;&gt;</ReturnType>
@@ -95,7 +105,7 @@
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="privateEndpointConnectionName">
             The name of the private endpoint connection.
@@ -114,6 +124,9 @@
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
             Thrown when the operation returned an invalid status code
             </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
             Thrown when unable to deserialize the response
             </exception>
@@ -123,20 +136,22 @@
       </Docs>
     </Member>
     <Member MemberName="CreateWithHttpMessagesAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; CreateWithHttpMessagesAsync (string resourceGroupName, string workspaceName, string privateEndpointConnectionName, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; CreateWithHttpMessagesAsync(string resourceGroupName, string workspaceName, string privateEndpointConnectionName, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Synapse.IPrivateEndpointConnectionsOperations.CreateWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CreateWithHttpMessagesAsync (resourceGroupName As String, workspaceName As String, privateEndpointConnectionName As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of PrivateEndpointConnection))" />
-      <MemberSignature Language="F#" Value="abstract member CreateWithHttpMessagesAsync : string * string * string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;" Usage="iPrivateEndpointConnectionsOperations.CreateWithHttpMessagesAsync (resourceGroupName, workspaceName, privateEndpointConnectionName, customHeaders, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; CreateWithHttpMessagesAsync (Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection request, string resourceGroupName, string workspaceName, string privateEndpointConnectionName, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt; CreateWithHttpMessagesAsync(class Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection request, string resourceGroupName, string workspaceName, string privateEndpointConnectionName, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Synapse.IPrivateEndpointConnectionsOperations.CreateWithHttpMessagesAsync(Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateWithHttpMessagesAsync (request As PrivateEndpointConnection, resourceGroupName As String, workspaceName As String, privateEndpointConnectionName As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of PrivateEndpointConnection))" />
+      <MemberSignature Language="F#" Value="abstract member CreateWithHttpMessagesAsync : Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection * string * string * string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;" Usage="iPrivateEndpointConnectionsOperations.CreateWithHttpMessagesAsync (request, resourceGroupName, workspaceName, privateEndpointConnectionName, customHeaders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection" />
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="workspaceName" Type="System.String" />
         <Parameter Name="privateEndpointConnectionName" Type="System.String" />
@@ -144,11 +159,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="request">
+            Request body of private endpoint connection to create.
+            </param>
         <param name="resourceGroupName">
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="privateEndpointConnectionName">
             The name of the private endpoint connection.
@@ -165,6 +183,9 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
@@ -185,6 +206,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.OperationResource&gt;&gt;</ReturnType>
@@ -201,7 +223,7 @@
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="privateEndpointConnectionName">
             The name of the private endpoint connection.
@@ -218,6 +240,9 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
@@ -238,6 +263,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;</ReturnType>
@@ -254,7 +280,7 @@
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="privateEndpointConnectionName">
             The name of the private endpoint connection.
@@ -271,6 +297,9 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
@@ -291,6 +320,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;&gt;</ReturnType>
@@ -318,6 +348,9 @@
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
             Thrown when the operation returned an invalid status code
             </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
             Thrown when unable to deserialize the response
             </exception>
@@ -336,6 +369,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
         <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Synapse.Models.PrivateEndpointConnection&gt;&gt;&gt;</ReturnType>
@@ -351,7 +385,7 @@
             The name of the resource group. The name is case insensitive.
             </param>
         <param name="workspaceName">
-            The name of the workspace
+            The name of the workspace.
             </param>
         <param name="customHeaders">
             The headers that will be added to request.
@@ -365,6 +399,9 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorContractException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+        <exception cref="T:Microsoft.Azure.Management.Synapse.Models.ErrorResponseException">
             Thrown when the operation returned an invalid status code
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">

@@ -14,6 +14,12 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.1.0</AssemblyVersion>
     <AssemblyVersion>1.6.0.0</AssemblyVersion>
+    <AssemblyVersion>1.7.0.0</AssemblyVersion>
+    <AssemblyVersion>1.8.0.0</AssemblyVersion>
+    <AssemblyVersion>1.8.1.0</AssemblyVersion>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+    <AssemblyVersion>1.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.Core.Pipeline.HttpPipelinePolicy</BaseTypeName>
@@ -42,10 +48,17 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.1.0</AssemblyVersion>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.1.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+        <AssemblyVersion>1.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Initializes a new instance of <see cref="T:Azure.Core.Pipeline.HttpPipelineSynchronousPolicy" /></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -66,6 +79,12 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.1.0</AssemblyVersion>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.1.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+        <AssemblyVersion>1.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -98,6 +117,12 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.1.0</AssemblyVersion>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.1.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+        <AssemblyVersion>1.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -114,7 +139,7 @@
       </Docs>
     </Member>
     <Member MemberName="Process">
-      <MemberSignature Language="C#" Value="public override void Process (Azure.Core.HttpMessage message, ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt;? pipeline);" />
+      <MemberSignature Language="C#" Value="public override void Process (Azure.Core.HttpMessage message, ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt; pipeline);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Process(class Azure.Core.HttpMessage message, valuetype System.ReadOnlyMemory`1&lt;class Azure.Core.Pipeline.HttpPipelinePolicy&gt; pipeline) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Core.Pipeline.HttpPipelineSynchronousPolicy.Process(Azure.Core.HttpMessage,System.ReadOnlyMemory{Azure.Core.Pipeline.HttpPipelinePolicy})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Process (message As HttpMessage, pipeline As ReadOnlyMemory(Of HttpPipelinePolicy))" />
@@ -130,6 +155,12 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.1.0</AssemblyVersion>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.1.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+        <AssemblyVersion>1.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -139,15 +170,17 @@
         <Parameter Name="pipeline" Type="System.ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="pipeline">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="message">The <see cref="T:Azure.Core.HttpMessage" /> this policy would be applied to.</param>
+        <param name="pipeline">The set of <see cref="T:Azure.Core.Pipeline.HttpPipelinePolicy" /> to execute after current one.</param>
+        <summary>
+            Applies the policy to the <paramref name="message" />. Implementers are expected to mutate <see cref="P:Azure.Core.HttpMessage.Request" /> before calling <see cref="M:Azure.Core.Pipeline.HttpPipelinePolicy.ProcessNextAsync(Azure.Core.HttpMessage,System.ReadOnlyMemory{Azure.Core.Pipeline.HttpPipelinePolicy})" /> and observe the <see cref="P:Azure.Core.HttpMessage.Response" /> changes after.
+            </summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="ProcessAsync">
-      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.ValueTask ProcessAsync (Azure.Core.HttpMessage message, ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt;? pipeline);" />
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.ValueTask ProcessAsync (Azure.Core.HttpMessage message, ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt; pipeline);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Threading.Tasks.ValueTask ProcessAsync(class Azure.Core.HttpMessage message, valuetype System.ReadOnlyMemory`1&lt;class Azure.Core.Pipeline.HttpPipelinePolicy&gt; pipeline) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Core.Pipeline.HttpPipelineSynchronousPolicy.ProcessAsync(Azure.Core.HttpMessage,System.ReadOnlyMemory{Azure.Core.Pipeline.HttpPipelinePolicy})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ProcessAsync (message As HttpMessage, pipeline As ReadOnlyMemory(Of HttpPipelinePolicy)) As ValueTask" />
@@ -163,6 +196,12 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.1.0</AssemblyVersion>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.0.0</AssemblyVersion>
+        <AssemblyVersion>1.8.1.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+        <AssemblyVersion>1.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -172,10 +211,12 @@
         <Parameter Name="pipeline" Type="System.ReadOnlyMemory&lt;Azure.Core.Pipeline.HttpPipelinePolicy&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="pipeline">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="message">The <see cref="T:Azure.Core.HttpMessage" /> this policy would be applied to.</param>
+        <param name="pipeline">The set of <see cref="T:Azure.Core.Pipeline.HttpPipelinePolicy" /> to execute after current one.</param>
+        <summary>
+            Applies the policy to the <paramref name="message" />. Implementers are expected to mutate <see cref="P:Azure.Core.HttpMessage.Request" /> before calling <see cref="M:Azure.Core.Pipeline.HttpPipelinePolicy.ProcessNextAsync(Azure.Core.HttpMessage,System.ReadOnlyMemory{Azure.Core.Pipeline.HttpPipelinePolicy})" /> and observe the <see cref="P:Azure.Core.HttpMessage.Response" /> changes after.
+            </summary>
+        <returns>The <see cref="T:System.Threading.Tasks.ValueTask" /> representing the asynchronous operation.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
