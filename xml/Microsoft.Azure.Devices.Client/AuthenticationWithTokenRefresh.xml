@@ -1,15 +1,21 @@
 <Type Name="AuthenticationWithTokenRefresh" FullName="Microsoft.Azure.Devices.Client.AuthenticationWithTokenRefresh">
-  <TypeSignature Language="C#" Value="public abstract class AuthenticationWithTokenRefresh : IDisposable, Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthenticationWithTokenRefresh extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod, class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public abstract class AuthenticationWithTokenRefresh : IDisposable, Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthenticationWithTokenRefresh extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod, class System.IDisposable" FrameworkAlternate="azure-dotnet" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Devices.Client.AuthenticationWithTokenRefresh" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AuthenticationWithTokenRefresh&#xA;Implements IAuthenticationMethod, IDisposable" />
-  <TypeSignature Language="F#" Value="type AuthenticationWithTokenRefresh = class&#xA;    interface IAuthenticationMethod&#xA;    interface IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AuthenticationWithTokenRefresh&#xA;Implements IAuthenticationMethod, IDisposable" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="F#" Value="type AuthenticationWithTokenRefresh = class&#xA;    interface IAuthenticationMethod&#xA;    interface IDisposable" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="C#" Value="public abstract class AuthenticationWithTokenRefresh : Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthenticationWithTokenRefresh extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AuthenticationWithTokenRefresh&#xA;Implements IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="F#" Value="type AuthenticationWithTokenRefresh = class&#xA;    interface IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
     <AssemblyVersion>1.36.0.0</AssemblyVersion>
     <AssemblyVersion>1.37.0.0</AssemblyVersion>
     <AssemblyVersion>1.37.1.0</AssemblyVersion>
     <AssemblyVersion>1.37.2.0</AssemblyVersion>
+    <AssemblyVersion>1.38.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,7 +24,7 @@
     <Interface>
       <InterfaceName>Microsoft.Azure.Devices.Client.IAuthenticationMethod</InterfaceName>
     </Interface>
-    <Interface>
+    <Interface FrameworkAlternate="azure-dotnet">
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
@@ -38,10 +44,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="suggestedTimeToLiveSeconds" Type="System.Int32" />
@@ -55,7 +63,11 @@
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.Azure.Devices.Client.AuthenticationWithTokenRefresh" /> class.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This constructor will create an authentication method instance that will be disposed when its
+            associated device/ module client instance is disposed. To reuse the authentication method instance across multiple client instance lifetimes,
+            use <see cref="M:Microsoft.Azure.Devices.Client.AuthenticationWithTokenRefresh.#ctor(System.Int32,System.Int32,System.Boolean)" /> constructor and set <c>disposeWithClient</c> to <c>false</c>.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -74,6 +86,7 @@
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -99,12 +112,13 @@
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="disposing" Type="System.Boolean" />
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
@@ -123,10 +137,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -148,10 +164,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -177,10 +195,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -205,10 +225,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.IotHubConnectionStringBuilder</ReturnType>
@@ -235,10 +257,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -260,10 +284,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
         <AssemblyVersion>1.36.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.0.0</AssemblyVersion>
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
