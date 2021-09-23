@@ -1,26 +1,4 @@
 {
-  "need_generate_pdf": false,
-  "need_preview_pull_request": true,
-  "branches_to_filter": [],
-  "xref_endpoint": "https://xref.docs.microsoft.com",
-  "enable_incremental_build": true,
-  "SplitTOC": "api/toc.yml",
-  "JoinTOCPlugin": [
-    {
-      "ReferenceTOC": "api/toc.yml",
-      "ReferenceTOCUrl": "/dotnet/api/azure_ref_toc/toc.json",
-      "TopLevelTOC": "docs-ref-toc/top_level_toc.yml",
-      "ConceptualTOCUrl": "/dotnet/azure/toc.json",
-      "ConceptualTOC": "docs-ref-conceptual/toc.yml",
-      "ContainerPageMetadata": {
-        "langs": [
-          "csharp"
-        ]
-      },
-      "OutputFolder": "api/overview/azure",
-      "HideEmptyNode": true
-    }
-  ],
   "docsets_to_publish": [
     {
       "customized_tasks": {
@@ -36,7 +14,9 @@
       },
       "build_output_subfolder": ".",
       "locale": "en-us",
-      "xref_query_tags": ["/dotnet"],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "docset_name": "e2eppe-azuredotnet",
       "open_to_public_contributors": false,
       "monikers": [
@@ -62,13 +42,20 @@
       }
     }
   ],
-  "git_repository_branch_open_to_public_contributors": "master",
+  "notification_subscribers": [],
+  "sync_notification_subscribers": null,
+  "branches_to_filter": [],
+  "git_repository_branch_open_to_public_contributors": "main",
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
+  "enable_incremental_build": true,
+  "contribution_branch_mappings": null,
   "dependent_repositories": [
     {
+      "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch_mapping": {},
-      "branch": "master",
-      "path_to_root": "_themes"
+      "branch": "main",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "azure-storage-net",
@@ -83,7 +70,26 @@
       "branch_mapping": {}
     }
   ],
-  "notification_subscribers": [],
+  "branch_target_mapping": null,
+  "need_generate_pdf": false,
+  "xref_endpoint": "https://xref.docs.microsoft.com",
+  "SplitTOC": "api/toc.yml",
+  "JoinTOCPlugin": [
+    {
+      "ReferenceTOC": "api/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/azure_ref_toc/toc.json",
+      "TopLevelTOC": "docs-ref-toc/top_level_toc.yml",
+      "ConceptualTOCUrl": "/dotnet/azure/toc.json",
+      "ConceptualTOC": "docs-ref-conceptual/toc.yml",
+      "ContainerPageMetadata": {
+        "langs": [
+          "csharp"
+        ]
+      },
+      "OutputFolder": "api/overview/azure",
+      "HideEmptyNode": true
+    }
+  ],
   "need_generate_intellisense": false,
   "ECMA2Yaml": {
     "OutputYamlFolder": "api",
@@ -91,7 +97,6 @@
     "Flatten": true,
     "SDPMode": true
   },
-  "skip_source_output_uploading": false,
   "DiffFolder": [
     "api"
   ],
