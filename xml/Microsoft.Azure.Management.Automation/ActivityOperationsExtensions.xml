@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,27 +21,35 @@
   </Docs>
   <Members>
     <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.ActivityGetResponse Get (this Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccount, string moduleName, string activityName);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.ActivityGetResponse Get(class Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccount, string moduleName, string activityName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.Get(Microsoft.Azure.Management.Automation.IActivityOperations,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IActivityOperations, resourceGroupName As String, automationAccount As String, moduleName As String, activityName As String) As ActivityGetResponse" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.IActivityOperations * string * string * string * string -&gt; Microsoft.Azure.Management.Automation.Models.ActivityGetResponse" Usage="Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.Get (operations, resourceGroupName, automationAccount, moduleName, activityName)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.Activity Get (this Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, string activityName);" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.Activity Get(class Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, string activityName) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.Get(Microsoft.Azure.Management.Automation.IActivityOperations,System.String,System.String,System.String,System.String)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IActivityOperations, resourceGroupName As String, automationAccountName As String, moduleName As String, activityName As String) As Activity" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.IActivityOperations * string * string * string * string -&gt; Microsoft.Azure.Management.Automation.Models.Activity" Usage="Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.Get (operations, resourceGroupName, automationAccountName, moduleName, activityName)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.Automation.Models.Activity</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Management.Automation.Models.ActivityGetResponse</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Management.Automation.Models.Activity</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IActivityOperations" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IActivityOperations" RefType="this" Index="0" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" />
+        <Parameter Name="automationAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="automationAccountName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="moduleName" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="activityName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="moduleName" Type="System.String" Index="3" />
+        <Parameter Name="activityName" Type="System.String" Index="4" />
       </Parameters>
       <Docs>
+        <param name="automationAccount">To be added.</param>
         <param name="operations">
             The operations group for this extension method.
             </param>
@@ -101,12 +109,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt; GetAsync (this Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, string activityName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.Activity&gt; GetAsync(class Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, string activityName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.GetAsync(Microsoft.Azure.Management.Automation.IActivityOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IActivityOperations, resourceGroupName As String, automationAccountName As String, moduleName As String, activityName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Activity)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IActivityOperations, resourceGroupName As String, automationAccountName As String, moduleName As String, activityName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Activity)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Automation.IActivityOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;" Usage="Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.GetAsync (operations, resourceGroupName, automationAccountName, moduleName, activityName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;</ReturnType>
@@ -215,7 +223,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;</ReturnType>
@@ -250,12 +258,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt; ListByModuleAsync (this Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt; ListByModuleAsync(class Microsoft.Azure.Management.Automation.IActivityOperations operations, string resourceGroupName, string automationAccountName, string moduleName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.ListByModuleAsync(Microsoft.Azure.Management.Automation.IActivityOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByModuleAsync (operations As IActivityOperations, resourceGroupName As String, automationAccountName As String, moduleName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of Activity))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByModuleAsync (operations As IActivityOperations, resourceGroupName As String, automationAccountName As String, moduleName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of Activity))" />
       <MemberSignature Language="F#" Value="static member ListByModuleAsync : Microsoft.Azure.Management.Automation.IActivityOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.ListByModuleAsync (operations, resourceGroupName, automationAccountName, moduleName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt;</ReturnType>
@@ -299,7 +307,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;</ReturnType>
@@ -326,12 +334,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt; ListByModuleNextAsync (this Microsoft.Azure.Management.Automation.IActivityOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt; ListByModuleNextAsync(class Microsoft.Azure.Management.Automation.IActivityOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.ListByModuleNextAsync(Microsoft.Azure.Management.Automation.IActivityOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByModuleNextAsync (operations As IActivityOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of Activity))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByModuleNextAsync (operations As IActivityOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of Activity))" />
       <MemberSignature Language="F#" Value="static member ListByModuleNextAsync : Microsoft.Azure.Management.Automation.IActivityOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.ActivityOperationsExtensions.ListByModuleNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Activity&gt;&gt;</ReturnType>

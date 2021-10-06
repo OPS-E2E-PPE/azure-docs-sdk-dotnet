@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type Policy = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Billing.Models.Resource</BaseTypeName>
@@ -14,12 +14,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            The Policy.
+            A policy.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +47,12 @@
       <MemberSignature Language="C#" Value="public Policy (string id = default, string name = default, string type = default, string marketplacePurchases = default, string reservationPurchases = default, string viewCharges = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string marketplacePurchases, string reservationPurchases, string viewCharges) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.Policy.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional marketplacePurchases As String = null, Optional reservationPurchases As String = null, Optional viewCharges As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional marketplacePurchases As String = Nothing, Optional reservationPurchases As String = Nothing, Optional viewCharges As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.Policy : string * string * string * string * string * string -&gt; Microsoft.Azure.Management.Billing.Models.Policy" Usage="new Microsoft.Azure.Management.Billing.Models.Policy (id, name, type, marketplacePurchases, reservationPurchases, viewCharges)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -65,14 +66,16 @@
         <param name="id">Resource Id.</param>
         <param name="name">Resource name.</param>
         <param name="type">Resource type.</param>
-        <param name="marketplacePurchases">The marketplace purchases are
-            free, allowed or not allowed. Possible values include:
-            'AllAllowed', 'OnlyFreeAllowed', 'NotAllowed'</param>
-        <param name="reservationPurchases">The reservation purchases
-            allowed or not. Possible values include: 'Allowed',
+        <param name="marketplacePurchases">The policy that controls whether
+            Azure marketplace purchases are allowed for a billing profile.
+            Possible values include: 'AllAllowed', 'OnlyFreeAllowed',
             'NotAllowed'</param>
-        <param name="viewCharges">Who can view charges. Possible values
-            include: 'Allowed', 'NotAllowed'</param>
+        <param name="reservationPurchases">The policy that controls whether
+            Azure reservation purchases are allowed for a billing profile.
+            Possible values include: 'Allowed', 'NotAllowed'</param>
+        <param name="viewCharges">The policy that controls whether users
+            with Azure RBAC access to a subscription can view its charges.
+            Possible values include: 'Allowed', 'NotAllowed'</param>
         <summary>
             Initializes a new instance of the Policy class.
             </summary>
@@ -88,11 +91,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.marketplacePurchases")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.marketplacePurchases")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.marketplacePurchases")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -100,9 +104,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the marketplace purchases are free, allowed or not
-            allowed. Possible values include: 'AllAllowed', 'OnlyFreeAllowed',
-            'NotAllowed'
+            Gets or sets the policy that controls whether Azure marketplace
+            purchases are allowed for a billing profile. Possible values
+            include: 'AllAllowed', 'OnlyFreeAllowed', 'NotAllowed'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -117,11 +121,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.reservationPurchases")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.reservationPurchases")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.reservationPurchases")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -129,8 +134,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the reservation purchases allowed or not. Possible
-            values include: 'Allowed', 'NotAllowed'
+            Gets or sets the policy that controls whether Azure reservation
+            purchases are allowed for a billing profile. Possible values
+            include: 'Allowed', 'NotAllowed'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -145,11 +151,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.viewCharges")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.viewCharges")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.viewCharges")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -157,8 +164,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets who can view charges. Possible values include:
-            'Allowed', 'NotAllowed'
+            Gets or sets the policy that controls whether users with Azure RBAC
+            access to a subscription can view its charges. Possible values
+            include: 'Allowed', 'NotAllowed'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

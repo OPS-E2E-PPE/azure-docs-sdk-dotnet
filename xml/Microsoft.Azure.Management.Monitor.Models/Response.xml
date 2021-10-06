@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type Response = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-    <AssemblyVersion>0.24.1.0</AssemblyVersion>
+    <AssemblyVersion>0.25.2.0</AssemblyVersion>
+    <AssemblyVersion>0.25.4.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +43,13 @@
       <MemberSignature Language="C#" Value="public Response (string timespan, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Monitor.Models.Metric&gt; value, double? cost = default, TimeSpan? interval = default, string namespaceProperty = default, string resourceregion = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string timespan, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Monitor.Models.Metric&gt; value, valuetype System.Nullable`1&lt;float64&gt; cost, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; interval, string namespaceProperty, string resourceregion) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Monitor.Models.Response.#ctor(System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Monitor.Models.Metric},System.Nullable{System.Double},System.Nullable{System.TimeSpan},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (timespan As String, value As IList(Of Metric), Optional cost As Nullable(Of Double) = null, Optional interval As Nullable(Of TimeSpan) = null, Optional namespaceProperty As String = null, Optional resourceregion As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (timespan As String, value As IList(Of Metric), Optional cost As Nullable(Of Double) = Nothing, Optional interval As Nullable(Of TimeSpan) = Nothing, Optional namespaceProperty As String = Nothing, Optional resourceregion As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Monitor.Models.Response : string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Monitor.Models.Metric&gt; * Nullable&lt;double&gt; * Nullable&lt;TimeSpan&gt; * string * string -&gt; Microsoft.Azure.Management.Monitor.Models.Response" Usage="new Microsoft.Azure.Management.Monitor.Models.Response (timespan, value, cost, interval, namespaceProperty, resourceregion)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="timespan" Type="System.String" />
@@ -62,15 +65,15 @@
             separated by '/'.  This may be adjusted in the future and returned
             back from what was originally requested.</param>
         <param name="value">the value of the collection.</param>
-        <param name="cost">The integer value representing the cost of the
-            query, for data case.</param>
+        <param name="cost">The integer value representing the relative cost
+            of the query.</param>
         <param name="interval">The interval (window size) for which the
             metric data was returned in.  This may be adjusted in the future
             and returned back from what was originally requested.  This is not
             present if a metadata request was made.</param>
-        <param name="namespaceProperty">The namespace of the metrics been
+        <param name="namespaceProperty">The namespace of the metrics being
             queried</param>
-        <param name="resourceregion">The region of the resource been
+        <param name="resourceregion">The region of the resource being
             queried for metrics.</param>
         <summary>
             Initializes a new instance of the Response class.
@@ -87,11 +90,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="cost")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="cost")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="cost")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -99,8 +104,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the integer value representing the cost of the query,
-            for data case.
+            Gets or sets the integer value representing the relative cost of
+            the query.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,11 +120,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="interval")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="interval")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="interval")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -145,11 +152,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="namespace")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="namespace")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="namespace")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -157,7 +166,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the namespace of the metrics been queried
+            Gets or sets the namespace of the metrics being queried
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -172,11 +181,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resourceregion")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resourceregion")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resourceregion")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -184,7 +195,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the region of the resource been queried for metrics.
+            Gets or sets the region of the resource being queried for metrics.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -199,11 +210,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="timespan")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="timespan")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="timespan")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -229,7 +242,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -254,11 +268,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="value")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="value")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="value")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

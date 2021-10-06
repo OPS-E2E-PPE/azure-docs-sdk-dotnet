@@ -1,20 +1,24 @@
 <Type Name="Workspace" FullName="Microsoft.Azure.Management.OperationalInsights.Models.Workspace">
-  <TypeSignature Language="C#" Value="public class Workspace : Microsoft.Azure.Management.OperationalInsights.Models.Resource" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Workspace extends Microsoft.Azure.Management.OperationalInsights.Models.Resource" />
+  <TypeSignature Language="C#" Value="public class Workspace : Microsoft.Azure.Management.OperationalInsights.Models.TrackedResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Workspace extends Microsoft.Azure.Management.OperationalInsights.Models.TrackedResource" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Management.OperationalInsights.Models.Workspace" />
-  <TypeSignature Language="VB.NET" Value="Public Class Workspace&#xA;Inherits Resource" />
-  <TypeSignature Language="F#" Value="type Workspace = class&#xA;    inherit Resource" />
+  <TypeSignature Language="VB.NET" Value="Public Class Workspace&#xA;Inherits TrackedResource" />
+  <TypeSignature Language="F#" Value="type Workspace = class&#xA;    inherit TrackedResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-    <AssemblyVersion>0.19.0.0</AssemblyVersion>
+    <AssemblyVersion>0.21.0.0</AssemblyVersion>
+    <AssemblyVersion>0.22.0.0</AssemblyVersion>
+    <AssemblyVersion>0.23.0.0</AssemblyVersion>
+    <AssemblyVersion>0.24.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.Azure.Management.OperationalInsights.Models.Resource</BaseTypeName>
+    <BaseTypeName>Microsoft.Azure.Management.OperationalInsights.Models.TrackedResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +36,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +50,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Workspace (string location, string id = default, string name = default, string type = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, string provisioningState = default, string source = default, string customerId = default, string portalUrl = default, Microsoft.Azure.Management.OperationalInsights.Models.Sku sku = default, int? retentionInDays = default, string eTag = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, string id, string name, string type, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, string provisioningState, string source, string customerId, string portalUrl, class Microsoft.Azure.Management.OperationalInsights.Models.Sku sku, valuetype System.Nullable`1&lt;int32&gt; retentionInDays, string eTag) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String,Microsoft.Azure.Management.OperationalInsights.Models.Sku,System.Nullable{System.Int32},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional tags As IDictionary(Of String, String) = null, Optional provisioningState As String = null, Optional source As String = null, Optional customerId As String = null, Optional portalUrl As String = null, Optional sku As Sku = null, Optional retentionInDays As Nullable(Of Integer) = null, Optional eTag As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.OperationalInsights.Models.Workspace : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * string * string * Microsoft.Azure.Management.OperationalInsights.Models.Sku * Nullable&lt;int&gt; * string -&gt; Microsoft.Azure.Management.OperationalInsights.Models.Workspace" Usage="new Microsoft.Azure.Management.OperationalInsights.Models.Workspace (location, id, name, type, tags, provisioningState, source, customerId, portalUrl, sku, retentionInDays, eTag)" />
+      <MemberSignature Language="C#" Value="public Workspace (string location, string id = default, string name = default, string type = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, string provisioningState = default, string customerId = default, Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku sku = default, int? retentionInDays = default, Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping workspaceCapping = default, string createdDate = default, string modifiedDate = default, string publicNetworkAccessForIngestion = default, string publicNetworkAccessForQuery = default, bool? forceCmkForQuery = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt; privateLinkScopedResources = default, Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures features = default, string eTag = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, string id, string name, string type, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, string provisioningState, string customerId, class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku sku, valuetype System.Nullable`1&lt;int32&gt; retentionInDays, class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping workspaceCapping, string createdDate, string modifiedDate, string publicNetworkAccessForIngestion, string publicNetworkAccessForQuery, valuetype System.Nullable`1&lt;bool&gt; forceCmkForQuery, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt; privateLinkScopedResources, class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures features, string eTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku,System.Nullable{System.Int32},Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Collections.Generic.IList{Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource},Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional provisioningState As String = Nothing, Optional customerId As String = Nothing, Optional sku As WorkspaceSku = Nothing, Optional retentionInDays As Nullable(Of Integer) = Nothing, Optional workspaceCapping As WorkspaceCapping = Nothing, Optional createdDate As String = Nothing, Optional modifiedDate As String = Nothing, Optional publicNetworkAccessForIngestion As String = Nothing, Optional publicNetworkAccessForQuery As String = Nothing, Optional forceCmkForQuery As Nullable(Of Boolean) = Nothing, Optional privateLinkScopedResources As IList(Of PrivateLinkScopedResource) = Nothing, Optional features As WorkspaceFeatures = Nothing, Optional eTag As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.OperationalInsights.Models.Workspace : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku * Nullable&lt;int&gt; * Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping * string * string * string * string * Nullable&lt;bool&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt; * Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures * string -&gt; Microsoft.Azure.Management.OperationalInsights.Models.Workspace" Usage="new Microsoft.Azure.Management.OperationalInsights.Models.Workspace (location, id, name, type, tags, provisioningState, customerId, sku, retentionInDays, workspaceCapping, createdDate, modifiedDate, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, forceCmkForQuery, privateLinkScopedResources, features, eTag)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="location" Type="System.String" />
@@ -60,37 +67,54 @@
         <Parameter Name="type" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="provisioningState" Type="System.String" />
-        <Parameter Name="source" Type="System.String" />
         <Parameter Name="customerId" Type="System.String" />
-        <Parameter Name="portalUrl" Type="System.String" />
-        <Parameter Name="sku" Type="Microsoft.Azure.Management.OperationalInsights.Models.Sku" />
+        <Parameter Name="sku" Type="Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku" />
         <Parameter Name="retentionInDays" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="workspaceCapping" Type="Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping" />
+        <Parameter Name="createdDate" Type="System.String" />
+        <Parameter Name="modifiedDate" Type="System.String" />
+        <Parameter Name="publicNetworkAccessForIngestion" Type="System.String" />
+        <Parameter Name="publicNetworkAccessForQuery" Type="System.String" />
+        <Parameter Name="forceCmkForQuery" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="privateLinkScopedResources" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt;" />
+        <Parameter Name="features" Type="Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures" />
         <Parameter Name="eTag" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="location">Resource location</param>
-        <param name="id">Resource Id</param>
-        <param name="name">Resource name</param>
-        <param name="type">Resource type</param>
-        <param name="tags">Resource tags</param>
+        <param name="location">The geo-location where the resource
+            lives</param>
+        <param name="id">Fully qualified resource ID for the resource. Ex -
+            /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
+        <param name="name">The name of the resource</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
+        <param name="tags">Resource tags.</param>
         <param name="provisioningState">The provisioning state of the
             workspace. Possible values include: 'Creating', 'Succeeded',
-            'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount'</param>
-        <param name="source">The source of the workspace.  Source defines
-            where the workspace was created. 'Azure' implies it was created in
-            Azure.  'External' implies it was created via the Operational
-            Insights Portal. This value is set on the service side and
-            read-only on the client side.</param>
-        <param name="customerId">The ID associated with the workspace. 
-            Setting this value at creation time allows the workspace being
-            created to be linked to an existing workspace.</param>
-        <param name="portalUrl">The URL of the Operational Insights portal
-            for this workspace.  This value is set on the service side and
-            read-only on the client side.</param>
+            'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount',
+            'Updating'</param>
+        <param name="customerId">This is a read-only property. Represents
+            the ID associated with the workspace.</param>
         <param name="sku">The SKU of the workspace.</param>
         <param name="retentionInDays">The workspace data retention in days.
-            -1 means Unlimited retention for the Unlimited Sku. 730 days is the
-            maximum allowed for all other Skus. </param>
+            Allowed values are per pricing plan. See pricing tiers
+            documentation for details.</param>
+        <param name="workspaceCapping">The daily volume cap for
+            ingestion.</param>
+        <param name="createdDate">Workspace creation date.</param>
+        <param name="modifiedDate">Workspace modification date.</param>
+        <param name="publicNetworkAccessForIngestion">The network access
+            type for accessing Log Analytics ingestion. Possible values
+            include: 'Enabled', 'Disabled'</param>
+        <param name="publicNetworkAccessForQuery">The network access type
+            for accessing Log Analytics query. Possible values include:
+            'Enabled', 'Disabled'</param>
+        <param name="forceCmkForQuery">Indicates whether customer managed
+            storage is mandatory for query management.</param>
+        <param name="privateLinkScopedResources">List of linked private
+            link scope resources.</param>
+        <param name="features">Workspace features.</param>
         <param name="eTag">The ETag of the workspace.</param>
         <summary>
             Initializes a new instance of the Workspace class.
@@ -98,20 +122,23 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="CustomerId">
-      <MemberSignature Language="C#" Value="public string CustomerId { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CustomerId" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CustomerId" />
-      <MemberSignature Language="VB.NET" Value="Public Property CustomerId As String" />
-      <MemberSignature Language="F#" Value="member this.CustomerId : string with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CustomerId" />
+    <Member MemberName="CreatedDate">
+      <MemberSignature Language="C#" Value="public string CreatedDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreatedDate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CreatedDate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CreatedDate As String" />
+      <MemberSignature Language="F#" Value="member this.CreatedDate : string" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CreatedDate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.customerId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.createdDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.createdDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -119,9 +146,39 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the ID associated with the workspace.  Setting this
-            value at creation time allows the workspace being created to be
-            linked to an existing workspace.
+            Gets workspace creation date.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomerId">
+      <MemberSignature Language="C#" Value="public string CustomerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CustomerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CustomerId As String" />
+      <MemberSignature Language="F#" Value="member this.CustomerId : string" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.CustomerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.customerId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.customerId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets this is a read-only property. Represents the ID associated
+            with the workspace.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -136,11 +193,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="eTag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="eTag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="eTag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -154,20 +215,84 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="PortalUrl">
-      <MemberSignature Language="C#" Value="public string PortalUrl { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string PortalUrl" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PortalUrl" />
-      <MemberSignature Language="VB.NET" Value="Public Property PortalUrl As String" />
-      <MemberSignature Language="F#" Value="member this.PortalUrl : string with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PortalUrl" />
+    <Member MemberName="Features">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures Features { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures Features" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Features" />
+      <MemberSignature Language="VB.NET" Value="Public Property Features As WorkspaceFeatures" />
+      <MemberSignature Language="F#" Value="member this.Features : Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Features" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.portalUrl")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.features")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.features")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceFeatures</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets workspace features.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceCmkForQuery">
+      <MemberSignature Language="C#" Value="public bool? ForceCmkForQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; ForceCmkForQuery" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.ForceCmkForQuery" />
+      <MemberSignature Language="VB.NET" Value="Public Property ForceCmkForQuery As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ForceCmkForQuery : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.ForceCmkForQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.forceCmkForQuery")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.forceCmkForQuery")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets indicates whether customer managed storage is
+            mandatory for query management.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedDate">
+      <MemberSignature Language="C#" Value="public string ModifiedDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModifiedDate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.ModifiedDate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModifiedDate As String" />
+      <MemberSignature Language="F#" Value="member this.ModifiedDate : string" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.ModifiedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.modifiedDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.modifiedDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -175,9 +300,38 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the URL of the Operational Insights portal for this
-            workspace.  This value is set on the service side and read-only on
-            the client side.
+            Gets workspace modification date.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateLinkScopedResources">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt; PrivateLinkScopedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt; PrivateLinkScopedResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PrivateLinkScopedResources" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrivateLinkScopedResources As IList(Of PrivateLinkScopedResource)" />
+      <MemberSignature Language="F#" Value="member this.PrivateLinkScopedResources : System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt;" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PrivateLinkScopedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateLinkScopedResources")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateLinkScopedResources")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.OperationalInsights.Models.PrivateLinkScopedResource&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets list of linked private link scope resources.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -192,11 +346,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -206,7 +364,71 @@
         <summary>
             Gets or sets the provisioning state of the workspace. Possible
             values include: 'Creating', 'Succeeded', 'Failed', 'Canceled',
-            'Deleting', 'ProvisioningAccount'
+            'Deleting', 'ProvisioningAccount', 'Updating'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicNetworkAccessForIngestion">
+      <MemberSignature Language="C#" Value="public string PublicNetworkAccessForIngestion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicNetworkAccessForIngestion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PublicNetworkAccessForIngestion" />
+      <MemberSignature Language="VB.NET" Value="Public Property PublicNetworkAccessForIngestion As String" />
+      <MemberSignature Language="F#" Value="member this.PublicNetworkAccessForIngestion : string with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PublicNetworkAccessForIngestion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccessForIngestion")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccessForIngestion")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the network access type for accessing Log Analytics
+            ingestion. Possible values include: 'Enabled', 'Disabled'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicNetworkAccessForQuery">
+      <MemberSignature Language="C#" Value="public string PublicNetworkAccessForQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicNetworkAccessForQuery" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PublicNetworkAccessForQuery" />
+      <MemberSignature Language="VB.NET" Value="Public Property PublicNetworkAccessForQuery As String" />
+      <MemberSignature Language="F#" Value="member this.PublicNetworkAccessForQuery : string with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.PublicNetworkAccessForQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccessForQuery")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccessForQuery")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the network access type for accessing Log Analytics
+            query. Possible values include: 'Enabled', 'Disabled'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -221,11 +443,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.retentionInDays")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.retentionInDays")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.retentionInDays")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -233,67 +459,39 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the workspace data retention in days. -1 means
-            Unlimited retention for the Unlimited Sku. 730 days is the maximum
-            allowed for all other Skus.
+            Gets or sets the workspace data retention in days. Allowed values
+            are per pricing plan. See pricing tiers documentation for details.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Sku">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.OperationalInsights.Models.Sku Sku { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.OperationalInsights.Models.Sku Sku" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku Sku { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku Sku" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Sku" />
-      <MemberSignature Language="VB.NET" Value="Public Property Sku As Sku" />
-      <MemberSignature Language="F#" Value="member this.Sku : Microsoft.Azure.Management.OperationalInsights.Models.Sku with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Sku" />
+      <MemberSignature Language="VB.NET" Value="Public Property Sku As WorkspaceSku" />
+      <MemberSignature Language="F#" Value="member this.Sku : Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Sku" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.sku")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.sku")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.sku")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.OperationalInsights.Models.Sku</ReturnType>
+        <ReturnType>Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceSku</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets the SKU of the workspace.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Source">
-      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Source" />
-      <MemberSignature Language="VB.NET" Value="Public Property Source As String" />
-      <MemberSignature Language="F#" Value="member this.Source : string with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.Source" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.source")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets or sets the source of the workspace.  Source defines where the
-            workspace was created. 'Azure' implies it was created in Azure. 
-            'External' implies it was created via the Operational Insights
-            Portal. This value is set on the service side and read-only on the
-            client side.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -308,7 +506,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
-        <AssemblyVersion>0.19.0.0</AssemblyVersion>
+        <AssemblyVersion>0.21.0.0</AssemblyVersion>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -322,6 +523,36 @@
         <exception cref="T:Microsoft.Rest.ValidationException">
             Thrown if validation fails
             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkspaceCapping">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping WorkspaceCapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping WorkspaceCapping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.OperationalInsights.Models.Workspace.WorkspaceCapping" />
+      <MemberSignature Language="VB.NET" Value="Public Property WorkspaceCapping As WorkspaceCapping" />
+      <MemberSignature Language="F#" Value="member this.WorkspaceCapping : Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping with get, set" Usage="Microsoft.Azure.Management.OperationalInsights.Models.Workspace.WorkspaceCapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.OperationalInsights</AssemblyName>
+        <AssemblyVersion>0.22.0.0</AssemblyVersion>
+        <AssemblyVersion>0.23.0.0</AssemblyVersion>
+        <AssemblyVersion>0.24.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.workspaceCapping")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.workspaceCapping")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.OperationalInsights.Models.WorkspaceCapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the daily volume cap for ingestion.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

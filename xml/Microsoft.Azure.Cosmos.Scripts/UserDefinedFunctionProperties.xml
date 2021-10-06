@@ -6,10 +6,12 @@
   <TypeSignature Language="F#" Value="type UserDefinedFunctionProperties = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-    <AssemblyVersion>3.4.1.0</AssemblyVersion>
-    <AssemblyVersion>3.5.0.0</AssemblyVersion>
-    <AssemblyVersion>3.5.1.0</AssemblyVersion>
-    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.17.1.0</AssemblyVersion>
+    <AssemblyVersion>3.18.0.0</AssemblyVersion>
+    <AssemblyVersion>3.19.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.1.0</AssemblyVersion>
+    <AssemblyVersion>3.21.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,15 +41,16 @@
                  .WithParameter("@expensive", 9000)
                  .WithParameter("@status", "Done");
             
-             FeedIterator<double> feedIterator = this.container.Items.GetItemsQueryIterator<double>(
+             using (FeedIterator<double> feedIterator = this.container.Items.GetItemsQueryIterator<double>(
                  sqlQueryDefinition: sqlQuery,
-                 partitionKey: "Done");
-            
-             while (feedIterator.HasMoreResults)
+                 partitionKey: "Done"))
              {
-                 foreach (var tax in await feedIterator.ReadNextAsync())
+                 while (feedIterator.HasMoreResults)
                  {
-                     Console.WriteLine(tax);
+                     foreach (var tax in await feedIterator.ReadNextAsync())
+                     {
+                         Console.WriteLine(tax);
+                     }
                  }
              }
              ]]></code></example>
@@ -61,10 +64,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -81,14 +86,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="body")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="body")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="body")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -111,14 +119,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -145,14 +156,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="id")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="id")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -191,13 +205,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

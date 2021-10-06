@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type BlobContainersOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>21.0.0.0</AssemblyVersion>
+    <AssemblyVersion>22.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,16 +20,119 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="ClearLegalHold">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.LegalHold ClearLegalHold (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.LegalHold ClearLegalHold(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHold(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ClearLegalHold (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String)) As LegalHold" />
-      <MemberSignature Language="F#" Value="static member ClearLegalHold : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; -&gt; Microsoft.Azure.Management.Storage.Models.LegalHold" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHold (operations, resourceGroupName, accountName, containerName, tags)" />
+    <Member MemberName="BeginObjectLevelWorm">
+      <MemberSignature Language="C#" Value="public static void BeginObjectLevelWorm (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BeginObjectLevelWorm(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.BeginObjectLevelWorm(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub BeginObjectLevelWorm (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String)" />
+      <MemberSignature Language="F#" Value="static member BeginObjectLevelWorm : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.BeginObjectLevelWorm (operations, resourceGroupName, accountName, containerName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Storage.IBlobContainersOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="accountName" Type="System.String" />
+        <Parameter Name="containerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group within the user's subscription. The name is
+            case insensitive.
+            </param>
+        <param name="accountName">
+            The name of the storage account within the specified resource group.
+            Storage account names must be between 3 and 24 characters in length and use
+            numbers and lower-case letters only.
+            </param>
+        <param name="containerName">
+            The name of the blob container within the specified storage account. Blob
+            container names must be between 3 and 63 characters in length and use
+            numbers, lower-case letters and dash (-) only. Every dash (-) character
+            must be immediately preceded and followed by a letter or number.
+            </param>
+        <summary>
+            This operation migrates a blob container from container level WORM to
+            object level immutability enabled container. Prerequisites require a
+            container level immutability policy either in locked or unlocked state,
+            Account level versioning must be enabled and there should be no Legal hold
+            on the container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginObjectLevelWormAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginObjectLevelWormAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginObjectLevelWormAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.BeginObjectLevelWormAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginObjectLevelWormAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member BeginObjectLevelWormAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.BeginObjectLevelWormAsync (operations, resourceGroupName, accountName, containerName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Storage.IBlobContainersOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="accountName" Type="System.String" />
+        <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group within the user's subscription. The name is
+            case insensitive.
+            </param>
+        <param name="accountName">
+            The name of the storage account within the specified resource group.
+            Storage account names must be between 3 and 24 characters in length and use
+            numbers and lower-case letters only.
+            </param>
+        <param name="containerName">
+            The name of the blob container within the specified storage account. Blob
+            container names must be between 3 and 63 characters in length and use
+            numbers, lower-case letters and dash (-) only. Every dash (-) character
+            must be immediately preceded and followed by a letter or number.
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            This operation migrates a blob container from container level WORM to
+            object level immutability enabled container. Prerequisites require a
+            container level immutability policy either in locked or unlocked state,
+            Account level versioning must be enabled and there should be no Legal hold
+            on the container.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearLegalHold">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.LegalHold ClearLegalHold (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, bool? allowProtectedAppendWritesAll = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.LegalHold ClearLegalHold(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWritesAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHold(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ClearLegalHold (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional allowProtectedAppendWritesAll As Nullable(Of Boolean) = Nothing) As LegalHold" />
+      <MemberSignature Language="F#" Value="static member ClearLegalHold : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Storage.Models.LegalHold" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHold (operations, resourceGroupName, accountName, containerName, tags, allowProtectedAppendWritesAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.LegalHold</ReturnType>
@@ -39,6 +143,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="allowProtectedAppendWritesAll" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -63,6 +168,11 @@
             Each tag should be 3 to 23 alphanumeric characters and is normalized to
             lower case at SRP.
             </param>
+        <param name="allowProtectedAppendWritesAll">
+            When enabled, new blocks can be written to both 'Append and Bock Blobs'
+            while maintaining legal hold protection and compliance. Only new blocks can
+            be added and any existing blocks cannot be modified or deleted.
+            </param>
         <summary>
             Clears legal hold tags. Clearing the same or non-existent tag results in an
             idempotent operation. ClearLegalHold clears out only the specified tags in
@@ -73,21 +183,16 @@
       </Docs>
     </Member>
     <Member MemberName="ClearLegalHoldAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt; ClearLegalHoldAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.LegalHold&gt; ClearLegalHoldAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHoldAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ClearLegalHoldAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional cancellationToken As CancellationToken = null) As Task(Of LegalHold)" />
-      <MemberSignature Language="F#" Value="static member ClearLegalHoldAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHoldAsync (operations, resourceGroupName, accountName, containerName, tags, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt; ClearLegalHoldAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, bool? allowProtectedAppendWritesAll = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.LegalHold&gt; ClearLegalHoldAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWritesAll, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHoldAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ClearLegalHoldAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional allowProtectedAppendWritesAll As Nullable(Of Boolean) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LegalHold)" />
+      <MemberSignature Language="F#" Value="static member ClearLegalHoldAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ClearLegalHoldAsync (operations, resourceGroupName, accountName, containerName, tags, allowProtectedAppendWritesAll, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;</ReturnType>
       </ReturnValue>
@@ -97,6 +202,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="allowProtectedAppendWritesAll" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -121,6 +227,11 @@
         <param name="tags">
             Each tag should be 3 to 23 alphanumeric characters and is normalized to
             lower case at SRP.
+            </param>
+        <param name="allowProtectedAppendWritesAll">
+            When enabled, new blocks can be written to both 'Append and Bock Blobs'
+            while maintaining legal hold protection and compliance. Only new blocks can
+            be added and any existing blocks cannot be modified or deleted.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -135,15 +246,16 @@
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.BlobContainer Create (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.PublicAccess? publicAccess = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.BlobContainer Create(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; publicAccess, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Create(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.PublicAccess},System.Collections.Generic.IDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Create (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional publicAccess As Nullable(Of PublicAccess) = null, Optional metadata As IDictionary(Of String, String) = null) As BlobContainer" />
-      <MemberSignature Language="F#" Value="static member Create : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Azure.Management.Storage.Models.BlobContainer" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Create (operations, resourceGroupName, accountName, containerName, publicAccess, metadata)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.BlobContainer Create (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.BlobContainer Create(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Create(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.BlobContainer)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Create (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, blobContainer As BlobContainer) As BlobContainer" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.BlobContainer -&gt; Microsoft.Azure.Management.Storage.Models.BlobContainer" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Create (operations, resourceGroupName, accountName, containerName, blobContainer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.BlobContainer</ReturnType>
@@ -153,8 +265,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
-        <Parameter Name="publicAccess" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt;" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="blobContainer" Type="Microsoft.Azure.Management.Storage.Models.BlobContainer" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -175,12 +286,8 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
-        <param name="publicAccess">
-            Specifies whether data in the container may be accessed publicly and the
-            level of access. Possible values include: 'Container', 'Blob', 'None'
-            </param>
-        <param name="metadata">
-            A name-value pair to associate with the container as metadata.
+        <param name="blobContainer">
+            Properties of the blob container to create.
             </param>
         <summary>
             Creates a new container under the specified account as described by request
@@ -193,21 +300,17 @@
       </Docs>
     </Member>
     <Member MemberName="CreateAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; CreateAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.PublicAccess? publicAccess = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; CreateAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; publicAccess, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.PublicAccess},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional publicAccess As Nullable(Of PublicAccess) = null, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Task(Of BlobContainer)" />
-      <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateAsync (operations, resourceGroupName, accountName, containerName, publicAccess, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; CreateAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; CreateAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.BlobContainer,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, blobContainer As BlobContainer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of BlobContainer)" />
+      <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.BlobContainer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateAsync (operations, resourceGroupName, accountName, containerName, blobContainer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;</ReturnType>
       </ReturnValue>
@@ -216,8 +319,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
-        <Parameter Name="publicAccess" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt;" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="blobContainer" Type="Microsoft.Azure.Management.Storage.Models.BlobContainer" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -239,12 +341,8 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
-        <param name="publicAccess">
-            Specifies whether data in the container may be accessed publicly and the
-            level of access. Possible values include: 'Container', 'Blob', 'None'
-            </param>
-        <param name="metadata">
-            A name-value pair to associate with the container as metadata.
+        <param name="blobContainer">
+            Properties of the blob container to create.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -260,15 +358,15 @@
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateImmutabilityPolicy">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy CreateOrUpdateImmutabilityPolicy (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch = default, int? immutabilityPeriodSinceCreationInDays = default, bool? allowProtectedAppendWrites = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy CreateOrUpdateImmutabilityPolicy(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Nullable`1&lt;int32&gt; immutabilityPeriodSinceCreationInDays, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWrites) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicy(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = null, Optional immutabilityPeriodSinceCreationInDays As Nullable(Of Integer) = null, Optional allowProtectedAppendWrites As Nullable(Of Boolean) = null) As ImmutabilityPolicy" />
-      <MemberSignature Language="F#" Value="static member CreateOrUpdateImmutabilityPolicy : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Nullable&lt;int&gt; * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicy (operations, resourceGroupName, accountName, containerName, ifMatch, immutabilityPeriodSinceCreationInDays, allowProtectedAppendWrites)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy CreateOrUpdateImmutabilityPolicy (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters = default, string ifMatch = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy CreateOrUpdateImmutabilityPolicy(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters, string ifMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicy(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As ImmutabilityPolicy = Nothing, Optional ifMatch As String = Nothing) As ImmutabilityPolicy" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdateImmutabilityPolicy : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy * string -&gt; Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicy (operations, resourceGroupName, accountName, containerName, parameters, ifMatch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy</ReturnType>
@@ -278,9 +376,8 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" />
         <Parameter Name="ifMatch" Type="System.String" />
-        <Parameter Name="immutabilityPeriodSinceCreationInDays" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="allowProtectedAppendWrites" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -301,21 +398,14 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
+        <param name="parameters">
+            The ImmutabilityPolicy Properties that will be created or updated to a blob
+            container.
+            </param>
         <param name="ifMatch">
             The entity state (ETag) version of the immutability policy to update. A
             value of "*" can be used to apply the operation only if the immutability
             policy already exists. If omitted, this operation will always be applied.
-            </param>
-        <param name="immutabilityPeriodSinceCreationInDays">
-            The immutability period for the blobs in the container since the policy
-            creation, in days.
-            </param>
-        <param name="allowProtectedAppendWrites">
-            This property can only be changed for unlocked time-based retention
-            policies. When enabled, new blocks can be written to an append blob while
-            maintaining immutability protection and compliance. Only new blocks can be
-            added and any existing blocks cannot be modified or deleted. This property
-            cannot be changed with ExtendImmutabilityPolicy API
             </param>
         <summary>
             Creates or updates an unlocked immutability policy. ETag in If-Match is
@@ -326,21 +416,16 @@
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateImmutabilityPolicyAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; CreateOrUpdateImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch = default, int? immutabilityPeriodSinceCreationInDays = default, bool? allowProtectedAppendWrites = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; CreateOrUpdateImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Nullable`1&lt;int32&gt; immutabilityPeriodSinceCreationInDays, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWrites, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = null, Optional immutabilityPeriodSinceCreationInDays As Nullable(Of Integer) = null, Optional allowProtectedAppendWrites As Nullable(Of Boolean) = null, Optional cancellationToken As CancellationToken = null) As Task(Of ImmutabilityPolicy)" />
-      <MemberSignature Language="F#" Value="static member CreateOrUpdateImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Nullable&lt;int&gt; * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, immutabilityPeriodSinceCreationInDays, allowProtectedAppendWrites, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; CreateOrUpdateImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters = default, string ifMatch = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; CreateOrUpdateImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters, string ifMatch, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As ImmutabilityPolicy = Nothing, Optional ifMatch As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ImmutabilityPolicy)" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdateImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.CreateOrUpdateImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, parameters, ifMatch, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -349,9 +434,8 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" />
         <Parameter Name="ifMatch" Type="System.String" />
-        <Parameter Name="immutabilityPeriodSinceCreationInDays" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="allowProtectedAppendWrites" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -373,21 +457,14 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
+        <param name="parameters">
+            The ImmutabilityPolicy Properties that will be created or updated to a blob
+            container.
+            </param>
         <param name="ifMatch">
             The entity state (ETag) version of the immutability policy to update. A
             value of "*" can be used to apply the operation only if the immutability
             policy already exists. If omitted, this operation will always be applied.
-            </param>
-        <param name="immutabilityPeriodSinceCreationInDays">
-            The immutability period for the blobs in the container since the policy
-            creation, in days.
-            </param>
-        <param name="allowProtectedAppendWrites">
-            This property can only be changed for unlocked time-based retention
-            policies. When enabled, new blocks can be written to an append blob while
-            maintaining immutability protection and compliance. Only new blocks can be
-            added and any existing blocks cannot be modified or deleted. This property
-            cannot be changed with ExtendImmutabilityPolicy API
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -409,7 +486,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -449,18 +527,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.DeleteAsync (operations, resourceGroupName, accountName, containerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -509,7 +583,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy</ReturnType>
@@ -549,8 +624,8 @@
             Aborts an unlocked immutability policy. The response of delete has
             immutabilityPeriodSinceCreationInDays set to 0. ETag in If-Match is
             required for this operation. Deleting a locked immutability policy is not
-            allowed, only way is to delete the container after deleting all blobs
-            inside the container.
+            allowed, the only way is to delete the container after deleting all expired
+            blobs inside the policy locked container.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -560,18 +635,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; DeleteImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; DeleteImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.DeleteImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional cancellationToken As CancellationToken = null) As Task(Of ImmutabilityPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ImmutabilityPolicy)" />
       <MemberSignature Language="F#" Value="static member DeleteImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.DeleteImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -614,23 +685,23 @@
             Aborts an unlocked immutability policy. The response of delete has
             immutabilityPeriodSinceCreationInDays set to 0. ETag in If-Match is
             required for this operation. Deleting a locked immutability policy is not
-            allowed, only way is to delete the container after deleting all blobs
-            inside the container.
+            allowed, the only way is to delete the container after deleting all expired
+            blobs inside the policy locked container.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ExtendImmutabilityPolicy">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy ExtendImmutabilityPolicy (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, int? immutabilityPeriodSinceCreationInDays = default, bool? allowProtectedAppendWrites = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy ExtendImmutabilityPolicy(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Nullable`1&lt;int32&gt; immutabilityPeriodSinceCreationInDays, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWrites) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicy(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ExtendImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional immutabilityPeriodSinceCreationInDays As Nullable(Of Integer) = null, Optional allowProtectedAppendWrites As Nullable(Of Boolean) = null) As ImmutabilityPolicy" />
-      <MemberSignature Language="F#" Value="static member ExtendImmutabilityPolicy : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Nullable&lt;int&gt; * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicy (operations, resourceGroupName, accountName, containerName, ifMatch, immutabilityPeriodSinceCreationInDays, allowProtectedAppendWrites)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy ExtendImmutabilityPolicy (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy ExtendImmutabilityPolicy(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicy(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ExtendImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional parameters As ImmutabilityPolicy = Nothing) As ImmutabilityPolicy" />
+      <MemberSignature Language="F#" Value="static member ExtendImmutabilityPolicy : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy -&gt; Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicy (operations, resourceGroupName, accountName, containerName, ifMatch, parameters)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy</ReturnType>
@@ -641,8 +712,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="ifMatch" Type="System.String" />
-        <Parameter Name="immutabilityPeriodSinceCreationInDays" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="allowProtectedAppendWrites" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -668,16 +738,9 @@
             value of "*" can be used to apply the operation only if the immutability
             policy already exists. If omitted, this operation will always be applied.
             </param>
-        <param name="immutabilityPeriodSinceCreationInDays">
-            The immutability period for the blobs in the container since the policy
-            creation, in days.
-            </param>
-        <param name="allowProtectedAppendWrites">
-            This property can only be changed for unlocked time-based retention
-            policies. When enabled, new blocks can be written to an append blob while
-            maintaining immutability protection and compliance. Only new blocks can be
-            added and any existing blocks cannot be modified or deleted. This property
-            cannot be changed with ExtendImmutabilityPolicy API
+        <param name="parameters">
+            The ImmutabilityPolicy Properties that will be extended for a blob
+            container.
             </param>
         <summary>
             Extends the immutabilityPeriodSinceCreationInDays of a locked
@@ -689,21 +752,16 @@
       </Docs>
     </Member>
     <Member MemberName="ExtendImmutabilityPolicyAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; ExtendImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, int? immutabilityPeriodSinceCreationInDays = default, bool? allowProtectedAppendWrites = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; ExtendImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Nullable`1&lt;int32&gt; immutabilityPeriodSinceCreationInDays, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWrites, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ExtendImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional immutabilityPeriodSinceCreationInDays As Nullable(Of Integer) = null, Optional allowProtectedAppendWrites As Nullable(Of Boolean) = null, Optional cancellationToken As CancellationToken = null) As Task(Of ImmutabilityPolicy)" />
-      <MemberSignature Language="F#" Value="static member ExtendImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Nullable&lt;int&gt; * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, immutabilityPeriodSinceCreationInDays, allowProtectedAppendWrites, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; ExtendImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; ExtendImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ExtendImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional parameters As ImmutabilityPolicy = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ImmutabilityPolicy)" />
+      <MemberSignature Language="F#" Value="static member ExtendImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ExtendImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -713,8 +771,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="ifMatch" Type="System.String" />
-        <Parameter Name="immutabilityPeriodSinceCreationInDays" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="allowProtectedAppendWrites" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -741,16 +798,9 @@
             value of "*" can be used to apply the operation only if the immutability
             policy already exists. If omitted, this operation will always be applied.
             </param>
-        <param name="immutabilityPeriodSinceCreationInDays">
-            The immutability period for the blobs in the container since the policy
-            creation, in days.
-            </param>
-        <param name="allowProtectedAppendWrites">
-            This property can only be changed for unlocked time-based retention
-            policies. When enabled, new blocks can be written to an append blob while
-            maintaining immutability protection and compliance. Only new blocks can be
-            added and any existing blocks cannot be modified or deleted. This property
-            cannot be changed with ExtendImmutabilityPolicy API
+        <param name="parameters">
+            The ImmutabilityPolicy Properties that will be extended for a blob
+            container.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -773,7 +823,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.BlobContainer</ReturnType>
@@ -814,18 +865,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; GetAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; GetAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = null) As Task(Of BlobContainer)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of BlobContainer)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetAsync (operations, resourceGroupName, accountName, containerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;</ReturnType>
       </ReturnValue>
@@ -869,12 +916,13 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy GetImmutabilityPolicy (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy GetImmutabilityPolicy(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetImmutabilityPolicy(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = null) As ImmutabilityPolicy" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetImmutabilityPolicy (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = Nothing) As ImmutabilityPolicy" />
       <MemberSignature Language="F#" Value="static member GetImmutabilityPolicy : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string -&gt; Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetImmutabilityPolicy (operations, resourceGroupName, accountName, containerName, ifMatch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy</ReturnType>
@@ -922,18 +970,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; GetImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; GetImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = null, Optional cancellationToken As CancellationToken = null) As Task(Of ImmutabilityPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional ifMatch As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ImmutabilityPolicy)" />
       <MemberSignature Language="F#" Value="static member GetImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.GetImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -984,12 +1028,13 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse Lease (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest parameters = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse Lease(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest parameters) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Lease(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Lease (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As LeaseContainerRequest = null) As LeaseContainerResponse" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Lease (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As LeaseContainerRequest = Nothing) As LeaseContainerResponse" />
       <MemberSignature Language="F#" Value="static member Lease : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest -&gt; Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Lease (operations, resourceGroupName, accountName, containerName, parameters)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse</ReturnType>
@@ -1036,18 +1081,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse&gt; LeaseAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest parameters = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse&gt; LeaseAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.LeaseAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function LeaseAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As LeaseContainerRequest = null, Optional cancellationToken As CancellationToken = null) As Task(Of LeaseContainerResponse)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function LeaseAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional parameters As LeaseContainerRequest = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LeaseContainerResponse)" />
       <MemberSignature Language="F#" Value="static member LeaseAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.LeaseContainerRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.LeaseAsync (operations, resourceGroupName, accountName, containerName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LeaseContainerResponse&gt;</ReturnType>
       </ReturnValue>
@@ -1094,15 +1135,16 @@
       </Docs>
     </Member>
     <Member MemberName="List">
-      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt; List (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize = default, string filter = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt; List(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize, string filter) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.List(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function List (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, Optional maxpagesize As String = null, Optional filter As String = null) As IPage(Of ListContainerItem)" />
-      <MemberSignature Language="F#" Value="static member List : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string -&gt; Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.List (operations, resourceGroupName, accountName, maxpagesize, filter)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt; List (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize = default, string filter = default, string include = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt; List(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize, string filter, string include) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.List(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function List (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, Optional maxpagesize As String = Nothing, Optional filter As String = Nothing, Optional include As String = Nothing) As IPage(Of ListContainerItem)" />
+      <MemberSignature Language="F#" Value="static member List : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * string -&gt; Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.List (operations, resourceGroupName, accountName, maxpagesize, filter, include)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;</ReturnType>
@@ -1113,6 +1155,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="maxpagesize" Type="System.String" />
         <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="include" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -1135,6 +1178,10 @@
             Optional. When specified, only container names starting with the filter
             will be listed.
             </param>
+        <param name="include">
+            Optional, used to include the properties for soft deleted blob containers.
+            Possible values include: 'deleted'
+            </param>
         <summary>
             Lists all containers and does not support a prefix like data plane. Also
             SRP today does not return continuation token.
@@ -1144,21 +1191,17 @@
       </Docs>
     </Member>
     <Member MemberName="ListAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize = default, string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize, string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, Optional maxpagesize As String = null, Optional filter As String = null, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of ListContainerItem))" />
-      <MemberSignature Language="F#" Value="static member ListAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListAsync (operations, resourceGroupName, accountName, maxpagesize, filter, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize = default, string filter = default, string include = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string maxpagesize, string filter, string include, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, Optional maxpagesize As String = Nothing, Optional filter As String = Nothing, Optional include As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of ListContainerItem))" />
+      <MemberSignature Language="F#" Value="static member ListAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListAsync (operations, resourceGroupName, accountName, maxpagesize, filter, include, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -1168,6 +1211,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="maxpagesize" Type="System.String" />
         <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="include" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -1191,6 +1235,10 @@
             Optional. When specified, only container names starting with the filter
             will be listed.
             </param>
+        <param name="include">
+            Optional, used to include the properties for soft deleted blob containers.
+            Possible values include: 'deleted'
+            </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
@@ -1211,7 +1259,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;</ReturnType>
@@ -1239,18 +1288,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListNextAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt; ListNextAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListNextAsync (operations As IBlobContainersOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of ListContainerItem))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListNextAsync (operations As IBlobContainersOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of ListContainerItem))" />
       <MemberSignature Language="F#" Value="static member ListNextAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ListNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Storage.Models.ListContainerItem&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -1286,7 +1331,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy</ReturnType>
@@ -1335,18 +1381,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; LockImmutabilityPolicyAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt; LockImmutabilityPolicyAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, string ifMatch, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.LockImmutabilityPolicyAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function LockImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional cancellationToken As CancellationToken = null) As Task(Of ImmutabilityPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function LockImmutabilityPolicyAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, ifMatch As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ImmutabilityPolicy)" />
       <MemberSignature Language="F#" Value="static member LockImmutabilityPolicyAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.LockImmutabilityPolicyAsync (operations, resourceGroupName, accountName, containerName, ifMatch, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.ImmutabilityPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -1394,16 +1436,119 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SetLegalHold">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.LegalHold SetLegalHold (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.LegalHold SetLegalHold(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHold(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SetLegalHold (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String)) As LegalHold" />
-      <MemberSignature Language="F#" Value="static member SetLegalHold : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; -&gt; Microsoft.Azure.Management.Storage.Models.LegalHold" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHold (operations, resourceGroupName, accountName, containerName, tags)" />
+    <Member MemberName="ObjectLevelWorm">
+      <MemberSignature Language="C#" Value="public static void ObjectLevelWorm (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ObjectLevelWorm(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ObjectLevelWorm(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ObjectLevelWorm (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String)" />
+      <MemberSignature Language="F#" Value="static member ObjectLevelWorm : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ObjectLevelWorm (operations, resourceGroupName, accountName, containerName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Storage.IBlobContainersOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="accountName" Type="System.String" />
+        <Parameter Name="containerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group within the user's subscription. The name is
+            case insensitive.
+            </param>
+        <param name="accountName">
+            The name of the storage account within the specified resource group.
+            Storage account names must be between 3 and 24 characters in length and use
+            numbers and lower-case letters only.
+            </param>
+        <param name="containerName">
+            The name of the blob container within the specified storage account. Blob
+            container names must be between 3 and 63 characters in length and use
+            numbers, lower-case letters and dash (-) only. Every dash (-) character
+            must be immediately preceded and followed by a letter or number.
+            </param>
+        <summary>
+            This operation migrates a blob container from container level WORM to
+            object level immutability enabled container. Prerequisites require a
+            container level immutability policy either in locked or unlocked state,
+            Account level versioning must be enabled and there should be no Legal hold
+            on the container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectLevelWormAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task ObjectLevelWormAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task ObjectLevelWormAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ObjectLevelWormAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ObjectLevelWormAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member ObjectLevelWormAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.ObjectLevelWormAsync (operations, resourceGroupName, accountName, containerName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Storage.IBlobContainersOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="accountName" Type="System.String" />
+        <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group within the user's subscription. The name is
+            case insensitive.
+            </param>
+        <param name="accountName">
+            The name of the storage account within the specified resource group.
+            Storage account names must be between 3 and 24 characters in length and use
+            numbers and lower-case letters only.
+            </param>
+        <param name="containerName">
+            The name of the blob container within the specified storage account. Blob
+            container names must be between 3 and 63 characters in length and use
+            numbers, lower-case letters and dash (-) only. Every dash (-) character
+            must be immediately preceded and followed by a letter or number.
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            This operation migrates a blob container from container level WORM to
+            object level immutability enabled container. Prerequisites require a
+            container level immutability policy either in locked or unlocked state,
+            Account level versioning must be enabled and there should be no Legal hold
+            on the container.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLegalHold">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.LegalHold SetLegalHold (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, bool? allowProtectedAppendWritesAll = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.LegalHold SetLegalHold(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWritesAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHold(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SetLegalHold (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional allowProtectedAppendWritesAll As Nullable(Of Boolean) = Nothing) As LegalHold" />
+      <MemberSignature Language="F#" Value="static member SetLegalHold : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Storage.Models.LegalHold" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHold (operations, resourceGroupName, accountName, containerName, tags, allowProtectedAppendWritesAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.LegalHold</ReturnType>
@@ -1414,6 +1559,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="allowProtectedAppendWritesAll" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -1438,6 +1584,11 @@
             Each tag should be 3 to 23 alphanumeric characters and is normalized to
             lower case at SRP.
             </param>
+        <param name="allowProtectedAppendWritesAll">
+            When enabled, new blocks can be written to both 'Append and Bock Blobs'
+            while maintaining legal hold protection and compliance. Only new blocks can
+            be added and any existing blocks cannot be modified or deleted.
+            </param>
         <summary>
             Sets legal hold tags. Setting the same tag results in an idempotent
             operation. SetLegalHold follows an append pattern and does not clear out
@@ -1448,21 +1599,16 @@
       </Docs>
     </Member>
     <Member MemberName="SetLegalHoldAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt; SetLegalHoldAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.LegalHold&gt; SetLegalHoldAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHoldAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SetLegalHoldAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional cancellationToken As CancellationToken = null) As Task(Of LegalHold)" />
-      <MemberSignature Language="F#" Value="static member SetLegalHoldAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHoldAsync (operations, resourceGroupName, accountName, containerName, tags, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt; SetLegalHoldAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, System.Collections.Generic.IList&lt;string&gt; tags, bool? allowProtectedAppendWritesAll = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.LegalHold&gt; SetLegalHoldAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class System.Collections.Generic.IList`1&lt;string&gt; tags, valuetype System.Nullable`1&lt;bool&gt; allowProtectedAppendWritesAll, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHoldAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SetLegalHoldAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, tags As IList(Of String), Optional allowProtectedAppendWritesAll As Nullable(Of Boolean) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LegalHold)" />
+      <MemberSignature Language="F#" Value="static member SetLegalHoldAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.SetLegalHoldAsync (operations, resourceGroupName, accountName, containerName, tags, allowProtectedAppendWritesAll, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.LegalHold&gt;</ReturnType>
       </ReturnValue>
@@ -1472,6 +1618,7 @@
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
         <Parameter Name="tags" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="allowProtectedAppendWritesAll" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -1496,6 +1643,11 @@
         <param name="tags">
             Each tag should be 3 to 23 alphanumeric characters and is normalized to
             lower case at SRP.
+            </param>
+        <param name="allowProtectedAppendWritesAll">
+            When enabled, new blocks can be written to both 'Append and Bock Blobs'
+            while maintaining legal hold protection and compliance. Only new blocks can
+            be added and any existing blocks cannot be modified or deleted.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -1510,15 +1662,16 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.BlobContainer Update (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.PublicAccess? publicAccess = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.BlobContainer Update(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; publicAccess, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Update(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.PublicAccess},System.Collections.Generic.IDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Update (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional publicAccess As Nullable(Of PublicAccess) = null, Optional metadata As IDictionary(Of String, String) = null) As BlobContainer" />
-      <MemberSignature Language="F#" Value="static member Update : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Azure.Management.Storage.Models.BlobContainer" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Update (operations, resourceGroupName, accountName, containerName, publicAccess, metadata)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Storage.Models.BlobContainer Update (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Storage.Models.BlobContainer Update(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Update(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.BlobContainer)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Update (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, blobContainer As BlobContainer) As BlobContainer" />
+      <MemberSignature Language="F#" Value="static member Update : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.BlobContainer -&gt; Microsoft.Azure.Management.Storage.Models.BlobContainer" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.Update (operations, resourceGroupName, accountName, containerName, blobContainer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Storage.Models.BlobContainer</ReturnType>
@@ -1528,8 +1681,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
-        <Parameter Name="publicAccess" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt;" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="blobContainer" Type="Microsoft.Azure.Management.Storage.Models.BlobContainer" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -1550,12 +1702,8 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
-        <param name="publicAccess">
-            Specifies whether data in the container may be accessed publicly and the
-            level of access. Possible values include: 'Container', 'Blob', 'None'
-            </param>
-        <param name="metadata">
-            A name-value pair to associate with the container as metadata.
+        <param name="blobContainer">
+            Properties to update for the blob container.
             </param>
         <summary>
             Updates container properties as specified in request body. Properties not
@@ -1567,21 +1715,17 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; UpdateAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.PublicAccess? publicAccess = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; UpdateAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; publicAccess, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.PublicAccess},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, Optional publicAccess As Nullable(Of PublicAccess) = null, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Task(Of BlobContainer)" />
-      <MemberSignature Language="F#" Value="static member UpdateAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.UpdateAsync (operations, resourceGroupName, accountName, containerName, publicAccess, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; UpdateAsync (this Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Storage.Models.BlobContainer&gt; UpdateAsync(class Microsoft.Azure.Management.Storage.IBlobContainersOperations operations, string resourceGroupName, string accountName, string containerName, class Microsoft.Azure.Management.Storage.Models.BlobContainer blobContainer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Storage.IBlobContainersOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.BlobContainer,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IBlobContainersOperations, resourceGroupName As String, accountName As String, containerName As String, blobContainer As BlobContainer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of BlobContainer)" />
+      <MemberSignature Language="F#" Value="static member UpdateAsync : Microsoft.Azure.Management.Storage.IBlobContainersOperations * string * string * string * Microsoft.Azure.Management.Storage.Models.BlobContainer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;" Usage="Microsoft.Azure.Management.Storage.BlobContainersOperationsExtensions.UpdateAsync (operations, resourceGroupName, accountName, containerName, blobContainer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Storage.Models.BlobContainer&gt;</ReturnType>
       </ReturnValue>
@@ -1590,8 +1734,7 @@
         <Parameter Name="resourceGroupName" Type="System.String" />
         <Parameter Name="accountName" Type="System.String" />
         <Parameter Name="containerName" Type="System.String" />
-        <Parameter Name="publicAccess" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.PublicAccess&gt;" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="blobContainer" Type="Microsoft.Azure.Management.Storage.Models.BlobContainer" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -1613,12 +1756,8 @@
             numbers, lower-case letters and dash (-) only. Every dash (-) character
             must be immediately preceded and followed by a letter or number.
             </param>
-        <param name="publicAccess">
-            Specifies whether data in the container may be accessed publicly and the
-            level of access. Possible values include: 'Container', 'Blob', 'None'
-            </param>
-        <param name="metadata">
-            A name-value pair to associate with the container as metadata.
+        <param name="blobContainer">
+            Properties to update for the blob container.
             </param>
         <param name="cancellationToken">
             The cancellation token.

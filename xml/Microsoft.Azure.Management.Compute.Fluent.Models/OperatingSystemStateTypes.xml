@@ -6,17 +6,16 @@
   <TypeSignature Language="F#" Value="type OperatingSystemStateTypes = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-    <AssemblyVersion>1.0.0.61</AssemblyVersion>
-    <AssemblyVersion>1.0.0.62</AssemblyVersion>
-    <AssemblyVersion>1.0.0.63</AssemblyVersion>
-    <AssemblyVersion>1.0.0.64</AssemblyVersion>
+    <AssemblyVersion>1.0.0.69</AssemblyVersion>
+    <AssemblyVersion>1.0.0.70</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Attributes>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -35,14 +34,13 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.EnumMember(Value="Generalized")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.EnumMember(Value="Generalized")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.EnumMember(Value="Generalized")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -50,7 +48,9 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Generalized image. Needs to be provisioned during deployment time.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="Specialized">
@@ -62,14 +62,13 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.EnumMember(Value="Specialized")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.EnumMember(Value="Specialized")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.EnumMember(Value="Specialized")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -77,7 +76,9 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Specialized image. Contains already provisioned OS Disk.
+            </summary>
       </Docs>
     </Member>
   </Members>

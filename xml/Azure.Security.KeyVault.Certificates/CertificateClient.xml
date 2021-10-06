@@ -6,9 +6,10 @@
   <TypeSignature Language="F#" Value="type CertificateClient = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <AssemblyVersion>4.0.1.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -32,9 +33,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,16 +55,20 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="vaultUri" Type="System.Uri" />
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="vaultUri">A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.</param>
+        <param name="vaultUri">
+            A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.
+            If you have a certificate <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Certificates.KeyVaultCertificateIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificateIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, such as DefaultAzureCredential.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Certificates.CertificateClient" /> class for the specified vault.
@@ -81,9 +87,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="vaultUri" Type="System.Uri" />
@@ -91,7 +98,10 @@
         <Parameter Name="options" Type="Azure.Security.KeyVault.Certificates.CertificateClientOptions" />
       </Parameters>
       <Docs>
-        <param name="vaultUri">A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.</param>
+        <param name="vaultUri">
+            A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.
+            If you have a certificate <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Certificates.KeyVaultCertificateIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificateIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, such as DefaultAzureCredential.</param>
         <param name="options">
           <see cref="T:Azure.Security.KeyVault.Certificates.CertificateClientOptions" /> that allow to configure the management of the request sent to Key Vault.</param>
@@ -107,14 +117,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;byte[]&gt; BackupCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;unsigned int8[]&gt; BackupCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.BackupCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As Response(Of Byte())" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of Byte())" />
       <MemberSignature Language="F#" Value="abstract member BackupCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;byte[]&gt;&#xA;override this.BackupCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;byte[]&gt;" Usage="certificateClient.BackupCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Byte[]&gt;</ReturnType>
@@ -142,14 +153,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt; BackupCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;unsigned int8[]&gt;&gt; BackupCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.BackupCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of Byte()))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of Byte()))" />
       <MemberSignature Language="F#" Value="abstract member BackupCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt;&#xA;override this.BackupCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt;" Usage="certificateClient.BackupCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Byte[]&gt;&gt;</ReturnType>
@@ -177,14 +189,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; CreateIssuer (Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; CreateIssuer(class Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.CreateIssuer(Azure.Security.KeyVault.Certificates.CertificateIssuer,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIssuer (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = null) As Response(Of CertificateIssuer)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIssuer (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificateIssuer)" />
       <MemberSignature Language="F#" Value="abstract member CreateIssuer : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&#xA;override this.CreateIssuer : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;" Usage="certificateClient.CreateIssuer (issuer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;</ReturnType>
@@ -211,14 +224,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; CreateIssuerAsync (Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; CreateIssuerAsync(class Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.CreateIssuerAsync(Azure.Security.KeyVault.Certificates.CertificateIssuer,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIssuerAsync (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificateIssuer))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIssuerAsync (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificateIssuer))" />
       <MemberSignature Language="F#" Value="abstract member CreateIssuerAsync : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;&#xA;override this.CreateIssuerAsync : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;" Usage="certificateClient.CreateIssuerAsync (issuer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;</ReturnType>
@@ -245,14 +259,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; DeleteContacts (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; DeleteContacts(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DeleteContacts(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteContacts (Optional cancellationToken As CancellationToken = null) As Response(Of IList(Of CertificateContact))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteContacts (Optional cancellationToken As CancellationToken = Nothing) As Response(Of IList(Of CertificateContact))" />
       <MemberSignature Language="F#" Value="abstract member DeleteContacts : System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&#xA;override this.DeleteContacts : System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;" Usage="certificateClient.DeleteContacts cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;</ReturnType>
@@ -273,14 +288,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; DeleteContactsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; DeleteContactsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DeleteContactsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteContactsAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of IList(Of CertificateContact)))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteContactsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of IList(Of CertificateContact)))" />
       <MemberSignature Language="F#" Value="abstract member DeleteContactsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;&#xA;override this.DeleteContactsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;" Usage="certificateClient.DeleteContactsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;</ReturnType>
@@ -301,14 +317,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; DeleteIssuer (string issuerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; DeleteIssuer(string issuerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DeleteIssuer(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIssuer (issuerName As String, Optional cancellationToken As CancellationToken = null) As Response(Of CertificateIssuer)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIssuer (issuerName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificateIssuer)" />
       <MemberSignature Language="F#" Value="abstract member DeleteIssuer : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&#xA;override this.DeleteIssuer : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;" Usage="certificateClient.DeleteIssuer (issuerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;</ReturnType>
@@ -335,14 +352,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; DeleteIssuerAsync (string issuerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; DeleteIssuerAsync(string issuerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DeleteIssuerAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIssuerAsync (issuerName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificateIssuer))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIssuerAsync (issuerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificateIssuer))" />
       <MemberSignature Language="F#" Value="abstract member DeleteIssuerAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;&#xA;override this.DeleteIssuerAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;" Usage="certificateClient.DeleteIssuerAsync (issuerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;</ReturnType>
@@ -365,18 +383,111 @@
           <paramref name="issuerName" /> is null.</exception>
       </Docs>
     </Member>
+    <Member MemberName="DownloadCertificate">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt; DownloadCertificate (string certificateName, string version = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt; DownloadCertificate(string certificateName, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DownloadCertificate(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadCertificate (certificateName As String, Optional version As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of X509Certificate2)" />
+      <MemberSignature Language="F#" Value="abstract member DownloadCertificate : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&#xA;override this.DownloadCertificate : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;" Usage="certificateClient.DownloadCertificate (certificateName, version, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateName" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="certificateName">The name of the certificate to download.</param>
+        <param name="version">Optional version of a certificate to download.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Creates an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> from the specified certificate.
+            </summary>
+        <returns>An <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> from the specified certificate.</returns>
+        <remarks>
+            Because <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificate.Cer" /> contains only the public key, this method attempts to download the managed secret
+            that contains the full certificate. If you do not have permissions to get the secret,
+            <see cref="T:Azure.RequestFailedException" /> will be thrown with an appropriate error response.
+            If you want an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> with only the public key, instantiate it passing only the
+            <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificate.Cer" /> property.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">The managed secret did not contain a certificate.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificateName" /> is empty.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificateName" /> is null.</exception>
+        <exception cref="T:System.IO.InvalidDataException">The managed secret did not contain a certificate.</exception>
+        <exception cref="T:System.NotSupportedException">The <see cref="T:Azure.Security.KeyVault.Certificates.CertificateContentType" /> is not supported.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cannot create an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> on this platform.</exception>
+        <exception cref="T:Azure.RequestFailedException">The request failed. See <see cref="P:Azure.RequestFailedException.ErrorCode" /> and the exception message for details.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadCertificateAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; DownloadCertificateAsync (string certificateName, string version = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; DownloadCertificateAsync(string certificateName, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.DownloadCertificateAsync(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadCertificateAsync (certificateName As String, Optional version As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of X509Certificate2))" />
+      <MemberSignature Language="F#" Value="abstract member DownloadCertificateAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt;&#xA;override this.DownloadCertificateAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt;" Usage="certificateClient.DownloadCertificateAsync (certificateName, version, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateName" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="certificateName">The name of the certificate to download.</param>
+        <param name="version">Optional version of a certificate to download.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Creates an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> from the specified certificate.
+            </summary>
+        <returns>An <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> from the specified certificate.</returns>
+        <remarks>
+            Because <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificate.Cer" /> contains only the public key, this method attempts to download the managed secret
+            that contains the full certificate. If you do not have permissions to get the secret,
+            <see cref="T:Azure.RequestFailedException" /> will be thrown with an appropriate error response.
+            If you want an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> with only the public key, instantiate it passing only the
+            <see cref="P:Azure.Security.KeyVault.Certificates.KeyVaultCertificate.Cer" /> property.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">The managed secret did not contain a certificate.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificateName" /> is empty.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificateName" /> is null.</exception>
+        <exception cref="T:System.IO.InvalidDataException">The managed secret did not contain a certificate.</exception>
+        <exception cref="T:System.NotSupportedException">The <see cref="T:Azure.Security.KeyVault.Certificates.CertificateContentType" /> is not supported.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cannot create an <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> on this platform.</exception>
+        <exception cref="T:Azure.RequestFailedException">The request failed. See <see cref="P:Azure.RequestFailedException.ErrorCode" /> and the exception message for details.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="GetCertificate">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; GetCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; GetCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificateWithPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificateWithPolicy)" />
       <MemberSignature Language="F#" Value="abstract member GetCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&#xA;override this.GetCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;" Usage="certificateClient.GetCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;</ReturnType>
@@ -403,14 +514,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; GetCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; GetCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
       <MemberSignature Language="F#" Value="abstract member GetCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;&#xA;override this.GetCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;" Usage="certificateClient.GetCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;</ReturnType>
@@ -437,14 +549,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Certificates.CertificateOperation GetCertificateOperation (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Certificates.CertificateOperation GetCertificateOperation(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificateOperation(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateOperation (certificateName As String, Optional cancellationToken As CancellationToken = null) As CertificateOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateOperation (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As CertificateOperation" />
       <MemberSignature Language="F#" Value="abstract member GetCertificateOperation : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.CertificateOperation&#xA;override this.GetCertificateOperation : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.CertificateOperation" Usage="certificateClient.GetCertificateOperation (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Certificates.CertificateOperation</ReturnType>
@@ -471,14 +584,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt; GetCertificateOperationAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Certificates.CertificateOperation&gt; GetCertificateOperationAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificateOperationAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateOperationAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of CertificateOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateOperationAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of CertificateOperation)" />
       <MemberSignature Language="F#" Value="abstract member GetCertificateOperationAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;&#xA;override this.GetCertificateOperationAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;" Usage="certificateClient.GetCertificateOperationAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;</ReturnType>
@@ -505,14 +619,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt; GetCertificatePolicy (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificatePolicy&gt; GetCertificatePolicy(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificatePolicy(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificatePolicy (certificateName As String, Optional cancellationToken As CancellationToken = null) As Response(Of CertificatePolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificatePolicy (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificatePolicy)" />
       <MemberSignature Language="F#" Value="abstract member GetCertificatePolicy : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&#xA;override this.GetCertificatePolicy : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;" Usage="certificateClient.GetCertificatePolicy (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;</ReturnType>
@@ -539,14 +654,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt; GetCertificatePolicyAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt; GetCertificatePolicyAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificatePolicyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificatePolicyAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificatePolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificatePolicyAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificatePolicy))" />
       <MemberSignature Language="F#" Value="abstract member GetCertificatePolicyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;&#xA;override this.GetCertificatePolicyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;" Usage="certificateClient.GetCertificatePolicyAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;</ReturnType>
@@ -573,14 +689,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt; GetCertificateVersion (string certificateName, string version, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt; GetCertificateVersion(string certificateName, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificateVersion(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateVersion (certificateName As String, version As String, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateVersion (certificateName As String, version As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificate)" />
       <MemberSignature Language="F#" Value="abstract member GetCertificateVersion : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&#xA;override this.GetCertificateVersion : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;" Usage="certificateClient.GetCertificateVersion (certificateName, version, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;</ReturnType>
@@ -609,14 +726,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt; GetCertificateVersionAsync (string certificateName, string version, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt; GetCertificateVersionAsync(string certificateName, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetCertificateVersionAsync(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateVersionAsync (certificateName As String, version As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificate))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCertificateVersionAsync (certificateName As String, version As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificate))" />
       <MemberSignature Language="F#" Value="abstract member GetCertificateVersionAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;&#xA;override this.GetCertificateVersionAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;" Usage="certificateClient.GetCertificateVersionAsync (certificateName, version, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;</ReturnType>
@@ -645,14 +763,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; GetContacts (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; GetContacts(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetContacts(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetContacts (Optional cancellationToken As CancellationToken = null) As Response(Of IList(Of CertificateContact))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetContacts (Optional cancellationToken As CancellationToken = Nothing) As Response(Of IList(Of CertificateContact))" />
       <MemberSignature Language="F#" Value="abstract member GetContacts : System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&#xA;override this.GetContacts : System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;" Usage="certificateClient.GetContacts cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;</ReturnType>
@@ -673,14 +792,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; GetContactsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; GetContactsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetContactsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetContactsAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of IList(Of CertificateContact)))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetContactsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of IList(Of CertificateContact)))" />
       <MemberSignature Language="F#" Value="abstract member GetContactsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;&#xA;override this.GetContactsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;" Usage="certificateClient.GetContactsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;</ReturnType>
@@ -701,14 +821,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetDeletedCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As Response(Of DeletedCertificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DeletedCertificate)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&#xA;override this.GetDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;" Usage="certificateClient.GetDeletedCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;</ReturnType>
@@ -736,14 +857,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&gt; GetDeletedCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&gt; GetDeletedCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetDeletedCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of DeletedCertificate))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DeletedCertificate))" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&gt;&#xA;override this.GetDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&gt;" Usage="certificateClient.GetDeletedCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&gt;</ReturnType>
@@ -771,14 +893,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificates (bool includePending = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificates(bool includePending, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetDeletedCertificates(System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificates (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = null) As Pageable(Of DeletedCertificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificates (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of DeletedCertificate)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedCertificates : bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&#xA;override this.GetDeletedCertificates : bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;" Usage="certificateClient.GetDeletedCertificates (includePending, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;</ReturnType>
@@ -801,14 +924,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificatesAsync (bool includePending = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Certificates.DeletedCertificate&gt; GetDeletedCertificatesAsync(bool includePending, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetDeletedCertificatesAsync(System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificatesAsync (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of DeletedCertificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedCertificatesAsync (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of DeletedCertificate)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedCertificatesAsync : bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;&#xA;override this.GetDeletedCertificatesAsync : bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;" Usage="certificateClient.GetDeletedCertificatesAsync (includePending, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.DeletedCertificate&gt;</ReturnType>
@@ -831,14 +955,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; GetIssuer (string issuerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; GetIssuer(string issuerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetIssuer(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetIssuer (issuerName As String, Optional cancellationToken As CancellationToken = null) As Response(Of CertificateIssuer)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetIssuer (issuerName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificateIssuer)" />
       <MemberSignature Language="F#" Value="abstract member GetIssuer : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&#xA;override this.GetIssuer : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;" Usage="certificateClient.GetIssuer (issuerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;</ReturnType>
@@ -865,14 +990,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; GetIssuerAsync (string issuerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; GetIssuerAsync(string issuerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetIssuerAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetIssuerAsync (issuerName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificateIssuer))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetIssuerAsync (issuerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificateIssuer))" />
       <MemberSignature Language="F#" Value="abstract member GetIssuerAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;&#xA;override this.GetIssuerAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;" Usage="certificateClient.GetIssuerAsync (issuerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;</ReturnType>
@@ -899,14 +1025,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificates (bool includePending = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificates(bool includePending, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfCertificates(System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificates (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = null) As Pageable(Of CertificateProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificates (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of CertificateProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfCertificates : bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;&#xA;override this.GetPropertiesOfCertificates : bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;" Usage="certificateClient.GetPropertiesOfCertificates (includePending, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;</ReturnType>
@@ -930,14 +1057,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificatesAsync (bool includePending = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificatesAsync(bool includePending, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfCertificatesAsync(System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificatesAsync (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of CertificateProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificatesAsync (Optional includePending As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of CertificateProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfCertificatesAsync : bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;&#xA;override this.GetPropertiesOfCertificatesAsync : bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;" Usage="certificateClient.GetPropertiesOfCertificatesAsync (includePending, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;</ReturnType>
@@ -961,14 +1089,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificateVersions (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificateVersions(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfCertificateVersions(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificateVersions (certificateName As String, Optional cancellationToken As CancellationToken = null) As Pageable(Of CertificateProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificateVersions (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of CertificateProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfCertificateVersions : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;&#xA;override this.GetPropertiesOfCertificateVersions : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;" Usage="certificateClient.GetPropertiesOfCertificateVersions (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;</ReturnType>
@@ -996,14 +1125,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificateVersionsAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateProperties&gt; GetPropertiesOfCertificateVersionsAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfCertificateVersionsAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificateVersionsAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of CertificateProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfCertificateVersionsAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of CertificateProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfCertificateVersionsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;&#xA;override this.GetPropertiesOfCertificateVersionsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;" Usage="certificateClient.GetPropertiesOfCertificateVersionsAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.CertificateProperties&gt;</ReturnType>
@@ -1031,14 +1161,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt; GetPropertiesOfIssuers (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Certificates.IssuerProperties&gt; GetPropertiesOfIssuers(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfIssuers(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfIssuers (Optional cancellationToken As CancellationToken = null) As Pageable(Of IssuerProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfIssuers (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of IssuerProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfIssuers : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;&#xA;override this.GetPropertiesOfIssuers : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;" Usage="certificateClient.GetPropertiesOfIssuers cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;</ReturnType>
@@ -1060,14 +1191,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt; GetPropertiesOfIssuersAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Certificates.IssuerProperties&gt; GetPropertiesOfIssuersAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.GetPropertiesOfIssuersAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfIssuersAsync (Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of IssuerProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfIssuersAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of IssuerProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfIssuersAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;&#xA;override this.GetPropertiesOfIssuersAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;" Usage="certificateClient.GetPropertiesOfIssuersAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Certificates.IssuerProperties&gt;</ReturnType>
@@ -1089,14 +1221,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; ImportCertificate (Azure.Security.KeyVault.Certificates.ImportCertificateOptions importCertificateOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; ImportCertificate(class Azure.Security.KeyVault.Certificates.ImportCertificateOptions importCertificateOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.ImportCertificate(Azure.Security.KeyVault.Certificates.ImportCertificateOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportCertificate (importCertificateOptions As ImportCertificateOptions, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificateWithPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportCertificate (importCertificateOptions As ImportCertificateOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificateWithPolicy)" />
       <MemberSignature Language="F#" Value="abstract member ImportCertificate : Azure.Security.KeyVault.Certificates.ImportCertificateOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&#xA;override this.ImportCertificate : Azure.Security.KeyVault.Certificates.ImportCertificateOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;" Usage="certificateClient.ImportCertificate (importCertificateOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;</ReturnType>
@@ -1109,7 +1242,7 @@
         <param name="importCertificateOptions">The details of the certificate to import to the key vault.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
-            Imports a pre-existing certificate to the key vault. The specified certificate must be in PFX or ASCII PEM format, and must contain the private key as well as the X.509 certificates. This operation requires the
+            Imports a pre-existing certificate to the key vault. The specified certificate must be in PFX or ASCII PEM-format, and must contain the private key as well as the X.509 certificates. This operation requires the
             certificates/import permission.
             </summary>
         <returns>The imported certificate and policy.</returns>
@@ -1124,14 +1257,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; ImportCertificateAsync (Azure.Security.KeyVault.Certificates.ImportCertificateOptions importCertificateOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; ImportCertificateAsync(class Azure.Security.KeyVault.Certificates.ImportCertificateOptions importCertificateOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.ImportCertificateAsync(Azure.Security.KeyVault.Certificates.ImportCertificateOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportCertificateAsync (importCertificateOptions As ImportCertificateOptions, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportCertificateAsync (importCertificateOptions As ImportCertificateOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
       <MemberSignature Language="F#" Value="abstract member ImportCertificateAsync : Azure.Security.KeyVault.Certificates.ImportCertificateOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;&#xA;override this.ImportCertificateAsync : Azure.Security.KeyVault.Certificates.ImportCertificateOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;" Usage="certificateClient.ImportCertificateAsync (importCertificateOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;</ReturnType>
@@ -1144,7 +1278,7 @@
         <param name="importCertificateOptions">The details of the certificate to import to the key vault.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
-            Imports a pre-existing certificate to the key vault. The specified certificate must be in PFX or ASCII PEM format, and must contain the private key as well as the X.509 certificates. This operation requires the
+            Imports a pre-existing certificate to the key vault. The specified certificate must be in PFX or ASCII PEM-format, and must contain the private key as well as the X.509 certificates. This operation requires the
             certificates/import permission.
             </summary>
         <returns>The imported certificate and policy.</returns>
@@ -1159,14 +1293,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; MergeCertificate (Azure.Security.KeyVault.Certificates.MergeCertificateOptions mergeCertificateOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; MergeCertificate(class Azure.Security.KeyVault.Certificates.MergeCertificateOptions mergeCertificateOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.MergeCertificate(Azure.Security.KeyVault.Certificates.MergeCertificateOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function MergeCertificate (mergeCertificateOptions As MergeCertificateOptions, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificateWithPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function MergeCertificate (mergeCertificateOptions As MergeCertificateOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificateWithPolicy)" />
       <MemberSignature Language="F#" Value="abstract member MergeCertificate : Azure.Security.KeyVault.Certificates.MergeCertificateOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&#xA;override this.MergeCertificate : Azure.Security.KeyVault.Certificates.MergeCertificateOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;" Usage="certificateClient.MergeCertificate (mergeCertificateOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;</ReturnType>
@@ -1191,14 +1326,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; MergeCertificateAsync (Azure.Security.KeyVault.Certificates.MergeCertificateOptions mergeCertificateOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; MergeCertificateAsync(class Azure.Security.KeyVault.Certificates.MergeCertificateOptions mergeCertificateOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.MergeCertificateAsync(Azure.Security.KeyVault.Certificates.MergeCertificateOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function MergeCertificateAsync (mergeCertificateOptions As MergeCertificateOptions, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function MergeCertificateAsync (mergeCertificateOptions As MergeCertificateOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
       <MemberSignature Language="F#" Value="abstract member MergeCertificateAsync : Azure.Security.KeyVault.Certificates.MergeCertificateOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;&#xA;override this.MergeCertificateAsync : Azure.Security.KeyVault.Certificates.MergeCertificateOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;" Usage="certificateClient.MergeCertificateAsync (mergeCertificateOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;</ReturnType>
@@ -1223,14 +1359,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response PurgeDeletedCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response PurgeDeletedCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.PurgeDeletedCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Response" />
       <MemberSignature Language="F#" Value="abstract member PurgeDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.PurgeDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Response" Usage="certificateClient.PurgeDeletedCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -1258,14 +1395,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; PurgeDeletedCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; PurgeDeletedCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.PurgeDeletedCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member PurgeDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.PurgeDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="certificateClient.PurgeDeletedCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -1293,14 +1431,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; RestoreCertificateBackup (byte[] backup, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt; RestoreCertificateBackup(unsigned int8[] backup, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.RestoreCertificateBackup(System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreCertificateBackup (backup As Byte(), Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificateWithPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreCertificateBackup (backup As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificateWithPolicy)" />
       <MemberSignature Language="F#" Value="abstract member RestoreCertificateBackup : byte[] * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&#xA;override this.RestoreCertificateBackup : byte[] * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;" Usage="certificateClient.RestoreCertificateBackup (backup, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;</ReturnType>
@@ -1326,14 +1465,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; RestoreCertificateBackupAsync (byte[] backup, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt; RestoreCertificateBackupAsync(unsigned int8[] backup, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.RestoreCertificateBackupAsync(System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreCertificateBackupAsync (backup As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreCertificateBackupAsync (backup As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificateWithPolicy))" />
       <MemberSignature Language="F#" Value="abstract member RestoreCertificateBackupAsync : byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;&#xA;override this.RestoreCertificateBackupAsync : byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;" Usage="certificateClient.RestoreCertificateBackupAsync (backup, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy&gt;&gt;</ReturnType>
@@ -1359,14 +1499,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; SetContacts (System.Collections.Generic.IEnumerable&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; contacts, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt; SetContacts(class System.Collections.Generic.IEnumerable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt; contacts, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.SetContacts(System.Collections.Generic.IEnumerable{Azure.Security.KeyVault.Certificates.CertificateContact},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetContacts (contacts As IEnumerable(Of CertificateContact), Optional cancellationToken As CancellationToken = null) As Response(Of IList(Of CertificateContact))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetContacts (contacts As IEnumerable(Of CertificateContact), Optional cancellationToken As CancellationToken = Nothing) As Response(Of IList(Of CertificateContact))" />
       <MemberSignature Language="F#" Value="abstract member SetContacts : seq&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&#xA;override this.SetContacts : seq&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;" Usage="certificateClient.SetContacts (contacts, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;</ReturnType>
@@ -1391,14 +1532,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; SetContactsAsync (System.Collections.Generic.IEnumerable&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; contacts, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class System.Collections.Generic.IList`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt; SetContactsAsync(class System.Collections.Generic.IEnumerable`1&lt;class Azure.Security.KeyVault.Certificates.CertificateContact&gt; contacts, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.SetContactsAsync(System.Collections.Generic.IEnumerable{Azure.Security.KeyVault.Certificates.CertificateContact},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetContactsAsync (contacts As IEnumerable(Of CertificateContact), Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of IList(Of CertificateContact)))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetContactsAsync (contacts As IEnumerable(Of CertificateContact), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of IList(Of CertificateContact)))" />
       <MemberSignature Language="F#" Value="abstract member SetContactsAsync : seq&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;&#xA;override this.SetContactsAsync : seq&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;" Usage="certificateClient.SetContactsAsync (contacts, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Collections.Generic.IList&lt;Azure.Security.KeyVault.Certificates.CertificateContact&gt;&gt;&gt;</ReturnType>
@@ -1423,14 +1565,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Certificates.CertificateOperation StartCreateCertificate (string certificateName, Azure.Security.KeyVault.Certificates.CertificatePolicy policy, bool? enabled = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Certificates.CertificateOperation StartCreateCertificate(string certificateName, class Azure.Security.KeyVault.Certificates.CertificatePolicy policy, valuetype System.Nullable`1&lt;bool&gt; enabled, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartCreateCertificate(System.String,Azure.Security.KeyVault.Certificates.CertificatePolicy,System.Nullable{System.Boolean},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartCreateCertificate (certificateName As String, policy As CertificatePolicy, Optional enabled As Nullable(Of Boolean) = null, Optional tags As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As CertificateOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartCreateCertificate (certificateName As String, policy As CertificatePolicy, Optional enabled As Nullable(Of Boolean) = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As CertificateOperation" />
       <MemberSignature Language="F#" Value="abstract member StartCreateCertificate : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * Nullable&lt;bool&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.CertificateOperation&#xA;override this.StartCreateCertificate : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * Nullable&lt;bool&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.CertificateOperation" Usage="certificateClient.StartCreateCertificate (certificateName, policy, enabled, tags, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Certificates.CertificateOperation</ReturnType>
@@ -1466,14 +1609,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt; StartCreateCertificateAsync (string certificateName, Azure.Security.KeyVault.Certificates.CertificatePolicy policy, bool? enabled = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Certificates.CertificateOperation&gt; StartCreateCertificateAsync(string certificateName, class Azure.Security.KeyVault.Certificates.CertificatePolicy policy, valuetype System.Nullable`1&lt;bool&gt; enabled, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartCreateCertificateAsync(System.String,Azure.Security.KeyVault.Certificates.CertificatePolicy,System.Nullable{System.Boolean},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartCreateCertificateAsync (certificateName As String, policy As CertificatePolicy, Optional enabled As Nullable(Of Boolean) = null, Optional tags As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Task(Of CertificateOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartCreateCertificateAsync (certificateName As String, policy As CertificatePolicy, Optional enabled As Nullable(Of Boolean) = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of CertificateOperation)" />
       <MemberSignature Language="F#" Value="abstract member StartCreateCertificateAsync : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * Nullable&lt;bool&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;&#xA;override this.StartCreateCertificateAsync : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * Nullable&lt;bool&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;" Usage="certificateClient.StartCreateCertificateAsync (certificateName, policy, enabled, tags, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.CertificateOperation&gt;</ReturnType>
@@ -1509,14 +1653,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Certificates.DeleteCertificateOperation StartDeleteCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Certificates.DeleteCertificateOperation StartDeleteCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartDeleteCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As DeleteCertificateOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As DeleteCertificateOperation" />
       <MemberSignature Language="F#" Value="abstract member StartDeleteCertificate : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&#xA;override this.StartDeleteCertificate : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.DeleteCertificateOperation" Usage="certificateClient.StartDeleteCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Certificates.DeleteCertificateOperation</ReturnType>
@@ -1548,14 +1693,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&gt; StartDeleteCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&gt; StartDeleteCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartDeleteCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of DeleteCertificateOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of DeleteCertificateOperation)" />
       <MemberSignature Language="F#" Value="abstract member StartDeleteCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&gt;&#xA;override this.StartDeleteCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&gt;" Usage="certificateClient.StartDeleteCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.DeleteCertificateOperation&gt;</ReturnType>
@@ -1587,14 +1733,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation StartRecoverDeletedCertificate (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation StartRecoverDeletedCertificate(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartRecoverDeletedCertificate(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = null) As RecoverDeletedCertificateOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedCertificate (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As RecoverDeletedCertificateOperation" />
       <MemberSignature Language="F#" Value="abstract member StartRecoverDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&#xA;override this.StartRecoverDeletedCertificate : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation" Usage="certificateClient.StartRecoverDeletedCertificate (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation</ReturnType>
@@ -1622,14 +1769,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&gt; StartRecoverDeletedCertificateAsync (string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&gt; StartRecoverDeletedCertificateAsync(string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.StartRecoverDeletedCertificateAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of RecoverDeletedCertificateOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedCertificateAsync (certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RecoverDeletedCertificateOperation)" />
       <MemberSignature Language="F#" Value="abstract member StartRecoverDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&gt;&#xA;override this.StartRecoverDeletedCertificateAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&gt;" Usage="certificateClient.StartRecoverDeletedCertificateAsync (certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Certificates.RecoverDeletedCertificateOperation&gt;</ReturnType>
@@ -1657,14 +1805,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt; UpdateCertificatePolicy (string certificateName, Azure.Security.KeyVault.Certificates.CertificatePolicy policy, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificatePolicy&gt; UpdateCertificatePolicy(string certificateName, class Azure.Security.KeyVault.Certificates.CertificatePolicy policy, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateCertificatePolicy(System.String,Azure.Security.KeyVault.Certificates.CertificatePolicy,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePolicy (certificateName As String, policy As CertificatePolicy, Optional cancellationToken As CancellationToken = null) As Response(Of CertificatePolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePolicy (certificateName As String, policy As CertificatePolicy, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificatePolicy)" />
       <MemberSignature Language="F#" Value="abstract member UpdateCertificatePolicy : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&#xA;override this.UpdateCertificatePolicy : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;" Usage="certificateClient.UpdateCertificatePolicy (certificateName, policy, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;</ReturnType>
@@ -1693,14 +1842,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt; UpdateCertificatePolicyAsync (string certificateName, Azure.Security.KeyVault.Certificates.CertificatePolicy policy, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt; UpdateCertificatePolicyAsync(string certificateName, class Azure.Security.KeyVault.Certificates.CertificatePolicy policy, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateCertificatePolicyAsync(System.String,Azure.Security.KeyVault.Certificates.CertificatePolicy,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePolicyAsync (certificateName As String, policy As CertificatePolicy, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificatePolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePolicyAsync (certificateName As String, policy As CertificatePolicy, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificatePolicy))" />
       <MemberSignature Language="F#" Value="abstract member UpdateCertificatePolicyAsync : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;&#xA;override this.UpdateCertificatePolicyAsync : string * Azure.Security.KeyVault.Certificates.CertificatePolicy * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;" Usage="certificateClient.UpdateCertificatePolicyAsync (certificateName, policy, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificatePolicy&gt;&gt;</ReturnType>
@@ -1729,14 +1879,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt; UpdateCertificateProperties (Azure.Security.KeyVault.Certificates.CertificateProperties properties, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt; UpdateCertificateProperties(class Azure.Security.KeyVault.Certificates.CertificateProperties properties, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateCertificateProperties(Azure.Security.KeyVault.Certificates.CertificateProperties,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificateProperties (properties As CertificateProperties, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultCertificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificateProperties (properties As CertificateProperties, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultCertificate)" />
       <MemberSignature Language="F#" Value="abstract member UpdateCertificateProperties : Azure.Security.KeyVault.Certificates.CertificateProperties * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&#xA;override this.UpdateCertificateProperties : Azure.Security.KeyVault.Certificates.CertificateProperties * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;" Usage="certificateClient.UpdateCertificateProperties (properties, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;</ReturnType>
@@ -1761,14 +1912,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt; UpdateCertificatePropertiesAsync (Azure.Security.KeyVault.Certificates.CertificateProperties properties, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt; UpdateCertificatePropertiesAsync(class Azure.Security.KeyVault.Certificates.CertificateProperties properties, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateCertificatePropertiesAsync(Azure.Security.KeyVault.Certificates.CertificateProperties,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePropertiesAsync (properties As CertificateProperties, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultCertificate))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateCertificatePropertiesAsync (properties As CertificateProperties, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultCertificate))" />
       <MemberSignature Language="F#" Value="abstract member UpdateCertificatePropertiesAsync : Azure.Security.KeyVault.Certificates.CertificateProperties * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;&#xA;override this.UpdateCertificatePropertiesAsync : Azure.Security.KeyVault.Certificates.CertificateProperties * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;" Usage="certificateClient.UpdateCertificatePropertiesAsync (properties, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.KeyVaultCertificate&gt;&gt;</ReturnType>
@@ -1793,14 +1945,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; UpdateIssuer (Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt; UpdateIssuer(class Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateIssuer(Azure.Security.KeyVault.Certificates.CertificateIssuer,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateIssuer (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = null) As Response(Of CertificateIssuer)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateIssuer (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = Nothing) As Response(Of CertificateIssuer)" />
       <MemberSignature Language="F#" Value="abstract member UpdateIssuer : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&#xA;override this.UpdateIssuer : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;" Usage="certificateClient.UpdateIssuer (issuer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;</ReturnType>
@@ -1827,14 +1980,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; UpdateIssuerAsync (Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt; UpdateIssuerAsync(class Azure.Security.KeyVault.Certificates.CertificateIssuer issuer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Certificates.CertificateClient.UpdateIssuerAsync(Azure.Security.KeyVault.Certificates.CertificateIssuer,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateIssuerAsync (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of CertificateIssuer))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateIssuerAsync (issuer As CertificateIssuer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of CertificateIssuer))" />
       <MemberSignature Language="F#" Value="abstract member UpdateIssuerAsync : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;&#xA;override this.UpdateIssuerAsync : Azure.Security.KeyVault.Certificates.CertificateIssuer * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;" Usage="certificateClient.UpdateIssuerAsync (issuer, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Certificates.CertificateIssuer&gt;&gt;</ReturnType>
@@ -1866,9 +2020,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Certificates</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

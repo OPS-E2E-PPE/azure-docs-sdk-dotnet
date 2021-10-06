@@ -6,10 +6,10 @@
   <TypeSignature Language="F#" Value="type CryptographyClient = class&#xA;    interface IKeyEncryptionKey" />
   <AssemblyInfo>
     <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <AssemblyVersion>4.0.1.0</AssemblyVersion>
-    <AssemblyVersion>4.0.2.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,10 +34,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,6 +45,63 @@
             Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> class for mocking.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographyClient (Azure.Security.KeyVault.Keys.JsonWebKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Security.KeyVault.Keys.JsonWebKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.#ctor(Azure.Security.KeyVault.Keys.JsonWebKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (key As JsonWebKey)" />
+      <MemberSignature Language="F#" Value="new Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient : Azure.Security.KeyVault.Keys.JsonWebKey -&gt; Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" Usage="new Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient key" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="Azure.Security.KeyVault.Keys.JsonWebKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A <see cref="T:Azure.Security.KeyVault.Keys.JsonWebKey" /> used for local cryptographic operations.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> class.
+            Cryptographic operations will be performed only on the local machine.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> is null.</exception>
+        <exception cref="T:System.NotSupportedException">The <see cref="P:Azure.Security.KeyVault.Keys.JsonWebKey.KeyType" /> of <paramref name="key" /> is not supported.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographyClient (Azure.Security.KeyVault.Keys.JsonWebKey key, Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Security.KeyVault.Keys.JsonWebKey key, class Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.#ctor(Azure.Security.KeyVault.Keys.JsonWebKey,Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (key As JsonWebKey, options As LocalCryptographyClientOptions)" />
+      <MemberSignature Language="F#" Value="new Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient : Azure.Security.KeyVault.Keys.JsonWebKey * Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions -&gt; Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" Usage="new Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient (key, options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="Azure.Security.KeyVault.Keys.JsonWebKey" />
+        <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="key">A <see cref="T:Azure.Security.KeyVault.Keys.JsonWebKey" /> used for local cryptographic operations.</param>
+        <param name="options">
+          <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.LocalCryptographyClientOptions" /> to configure the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> for local-only operations.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> class.
+            Cryptographic operations will be performed only on the local machine.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> is null.</exception>
+        <exception cref="T:System.NotSupportedException">The <see cref="P:Azure.Security.KeyVault.Keys.JsonWebKey.KeyType" /> of <paramref name="key" /> is not supported.</exception>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -56,17 +113,20 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="keyId" Type="System.Uri" />
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="keyId">The <see cref="P:Azure.Security.KeyVault.Keys.KeyProperties.Id" /> of the <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> which will be used for cryptographic operations.</param>
+        <param name="keyId">
+            The key identifier of the <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> which will be used for cryptographic operations.
+            If you have a key <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, like DefaultAzureCredential.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> class.
@@ -85,10 +145,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="keyId" Type="System.Uri" />
@@ -96,10 +156,13 @@
         <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.Cryptography.CryptographyClientOptions" />
       </Parameters>
       <Docs>
-        <param name="keyId">The <see cref="P:Azure.Security.KeyVault.Keys.KeyProperties.Id" /> of the <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> which will be used for cryptographic operations.</param>
+        <param name="keyId">
+            The key identifier of the <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> which will be used for cryptographic operations.
+            If you have a key <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, like DefaultAzureCredential.</param>
         <param name="options">
-          <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClientOptions" /> that allow to configure the management of the request sent to Key Vault.</param>
+          <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClientOptions" /> the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> for local or remote operations on Key Vault.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient" /> class.
             </summary>
@@ -121,10 +184,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -135,11 +198,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="algorithm">To be added.</param>
-        <param name="encryptedKey">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="algorithm">The key wrap algorithm which was used to encrypt the specified encrypted key.</param>
+        <param name="encryptedKey">The encrypted key to be decrypted.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Decrypts the specified encrypted key using the specified algorithm.
+            </summary>
+        <returns>The decrypted key bytes.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
@@ -156,10 +221,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Byte[]&gt;</ReturnType>
@@ -170,11 +235,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="algorithm">To be added.</param>
-        <param name="encryptedKey">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="algorithm">The key wrap algorithm which was used to encrypt the specified encrypted key.</param>
+        <param name="encryptedKey">The encrypted key to be decrypted.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Decrypts the specified encrypted key using the specified algorithm.
+            </summary>
+        <returns>The decrypted key bytes.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
@@ -191,10 +258,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -205,11 +272,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="algorithm">To be added.</param>
-        <param name="key">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="algorithm">The key wrap algorithm used to encrypt the specified key.</param>
+        <param name="key">The key to be encrypted.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Encrypts the specified key using the specified algorithm.
+            </summary>
+        <returns>The encrypted key bytes.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
@@ -226,10 +295,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Byte[]&gt;</ReturnType>
@@ -240,28 +309,68 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="algorithm">To be added.</param>
-        <param name="key">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="algorithm">The key wrap algorithm used to encrypt the specified key.</param>
+        <param name="key">The key to be encrypted.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Encrypts the specified key using the specified algorithm.
+            </summary>
+        <returns>The encrypted key bytes.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.DecryptResult Decrypt (Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters decryptParameters, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.DecryptResult Decrypt(class Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters decryptParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Decrypt(Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Decrypt (decryptParameters As DecryptParameters, Optional cancellationToken As CancellationToken = Nothing) As DecryptResult" />
+      <MemberSignature Language="F#" Value="abstract member Decrypt : Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&#xA;override this.Decrypt : Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" Usage="cryptographyClient.Decrypt (decryptParameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.DecryptResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="decryptParameters" Type="Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="decryptParameters">A <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters" /> containing the data to decrypt and other parameters for algorithm-dependent decryption.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
+        <summary>
+            Decrypts the specified ciphertext.
+            </summary>
+        <returns>
+            The result of the decrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" /> contains the encrypted data
+            along with information regarding the algorithm and key used to decrypt it.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The specified algorithm does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="decryptParameters" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
       </Docs>
     </Member>
     <Member MemberName="Decrypt">
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.DecryptResult Decrypt (Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, byte[] ciphertext, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.DecryptResult Decrypt(valuetype Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, unsigned int8[] ciphertext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Decrypt(Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Decrypt (algorithm As EncryptionAlgorithm, ciphertext As Byte(), Optional cancellationToken As CancellationToken = null) As DecryptResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Decrypt (algorithm As EncryptionAlgorithm, ciphertext As Byte(), Optional cancellationToken As CancellationToken = Nothing) As DecryptResult" />
       <MemberSignature Language="F#" Value="abstract member Decrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&#xA;override this.Decrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" Usage="cryptographyClient.Decrypt (algorithm, ciphertext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.DecryptResult</ReturnType>
@@ -276,31 +385,71 @@
         <param name="ciphertext">The encrypted data to decrypt.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
         <summary>
-            Decrypts the specified cipher text.
+            Decrypts ciphertext.
             </summary>
         <returns>
             The result of the decrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" /> contains the encrypted data
             along with information regarding the algorithm and key used to decrypt it.
             </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
-        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt; DecryptAsync (Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters decryptParameters, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt; DecryptAsync(class Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters decryptParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.DecryptAsync(Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DecryptAsync (decryptParameters As DecryptParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of DecryptResult)" />
+      <MemberSignature Language="F#" Value="abstract member DecryptAsync : Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;&#xA;override this.DecryptAsync : Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;" Usage="cryptographyClient.DecryptAsync (decryptParameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="decryptParameters" Type="Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="decryptParameters">A <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptParameters" /> containing the data to decrypt and other parameters for algorithm-dependent decryption.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
+        <summary>
+            Decrypts ciphertext.
+            </summary>
+        <returns>
+            The result of the decrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" /> contains the encrypted data
+            along with information regarding the algorithm and key used to decrypt it.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The specified algorithm does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="decryptParameters" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
       </Docs>
     </Member>
     <Member MemberName="DecryptAsync">
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt; DecryptAsync (Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, byte[] ciphertext, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt; DecryptAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, unsigned int8[] ciphertext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.DecryptAsync(Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DecryptAsync (algorithm As EncryptionAlgorithm, ciphertext As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of DecryptResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DecryptAsync (algorithm As EncryptionAlgorithm, ciphertext As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of DecryptResult)" />
       <MemberSignature Language="F#" Value="abstract member DecryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;&#xA;override this.DecryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;" Usage="cryptographyClient.DecryptAsync (algorithm, ciphertext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.DecryptResult&gt;</ReturnType>
@@ -315,31 +464,71 @@
         <param name="ciphertext">The encrypted data to decrypt.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
         <summary>
-            Decrypts the specified cipher text.
+            Decrypts the specified ciphertext.
             </summary>
         <returns>
             The result of the decrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.DecryptResult" /> contains the encrypted data
             along with information regarding the algorithm and key used to decrypt it.
             </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
-        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.EncryptResult Encrypt (Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters encryptParameters, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.EncryptResult Encrypt(class Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters encryptParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Encrypt(Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Encrypt (encryptParameters As EncryptParameters, Optional cancellationToken As CancellationToken = Nothing) As EncryptResult" />
+      <MemberSignature Language="F#" Value="abstract member Encrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&#xA;override this.Encrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" Usage="cryptographyClient.Encrypt (encryptParameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.EncryptResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptParameters" Type="Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="encryptParameters">An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters" /> containing the data to encrypt and other parameters for algorithm-dependent encryption.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
+        <summary>
+            Encrypts plaintext.
+            </summary>
+        <returns>
+            An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> containing the encrypted data
+            along with all other information needed to decrypt it. This information should be stored with the encrypted data.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The specified algorithm does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encryptParameters" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
       </Docs>
     </Member>
     <Member MemberName="Encrypt">
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.EncryptResult Encrypt (Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, byte[] plaintext, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.EncryptResult Encrypt(valuetype Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, unsigned int8[] plaintext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Encrypt(Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Encrypt (algorithm As EncryptionAlgorithm, plaintext As Byte(), Optional cancellationToken As CancellationToken = null) As EncryptResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Encrypt (algorithm As EncryptionAlgorithm, plaintext As Byte(), Optional cancellationToken As CancellationToken = Nothing) As EncryptResult" />
       <MemberSignature Language="F#" Value="abstract member Encrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&#xA;override this.Encrypt : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" Usage="cryptographyClient.Encrypt (algorithm, plaintext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.EncryptResult</ReturnType>
@@ -354,31 +543,71 @@
         <param name="plaintext">The data to encrypt.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
         <summary>
-            Encrypts the specified plain text.
+            Encrypts the specified plaintext.
             </summary>
         <returns>
-            The result of the encrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> contains the encrypted data
+            An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> containing the encrypted data
             along with all other information needed to decrypt it. This information should be stored with the encrypted data.
             </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
-        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt; EncryptAsync (Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters encryptParameters, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt; EncryptAsync(class Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters encryptParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.EncryptAsync(Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EncryptAsync (encryptParameters As EncryptParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of EncryptResult)" />
+      <MemberSignature Language="F#" Value="abstract member EncryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;&#xA;override this.EncryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;" Usage="cryptographyClient.EncryptAsync (encryptParameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptParameters" Type="Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="encryptParameters">An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptParameters" /> containing the data to encrypt and other parameters for algorithm-dependent encryption.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
+        <summary>
+            Encrypts plaintext.
+            </summary>
+        <returns>
+            An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> containing the encrypted data
+            along with all other information needed to decrypt it. This information should be stored with the encrypted data.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The specified algorithm does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encryptParameters" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
       </Docs>
     </Member>
     <Member MemberName="EncryptAsync">
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt; EncryptAsync (Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, byte[] plaintext, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt; EncryptAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm algorithm, unsigned int8[] plaintext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.EncryptAsync(Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function EncryptAsync (algorithm As EncryptionAlgorithm, plaintext As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of EncryptResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EncryptAsync (algorithm As EncryptionAlgorithm, plaintext As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of EncryptResult)" />
       <MemberSignature Language="F#" Value="abstract member EncryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;&#xA;override this.EncryptAsync : Azure.Security.KeyVault.Keys.Cryptography.EncryptionAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;" Usage="cryptographyClient.EncryptAsync (algorithm, plaintext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.EncryptResult&gt;</ReturnType>
@@ -393,16 +622,18 @@
         <param name="plaintext">The data to encrypt.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to cancel the operation.</param>
         <summary>
-            Encrypts the specified plain text.
+            Encrypts the specified plaintext.
             </summary>
         <returns>
-            The result of the encrypt operation. The returned <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> contains the encrypted data
+            An <see cref="T:Azure.Security.KeyVault.Keys.Cryptography.EncryptResult" /> containing the encrypted data
             along with all other information needed to decrypt it. This information should be stored with the encrypted data.
             </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
-        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+        <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
+        <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
       </Docs>
     </Member>
     <Member MemberName="KeyId">
@@ -417,10 +648,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -437,15 +668,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.SignResult Sign (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] digest, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.SignResult Sign(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] digest, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Sign(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Sign (algorithm As SignatureAlgorithm, digest As Byte(), Optional cancellationToken As CancellationToken = null) As SignResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Sign (algorithm As SignatureAlgorithm, digest As Byte(), Optional cancellationToken As CancellationToken = Nothing) As SignResult" />
       <MemberSignature Language="F#" Value="abstract member Sign : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult&#xA;override this.Sign : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult" Usage="cryptographyClient.Sign (algorithm, digest, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.SignResult</ReturnType>
@@ -468,6 +699,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -476,15 +709,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] digest, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] digest, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.SignAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignAsync (algorithm As SignatureAlgorithm, digest As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of SignResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignAsync (algorithm As SignatureAlgorithm, digest As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of SignResult)" />
       <MemberSignature Language="F#" Value="abstract member SignAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;&#xA;override this.SignAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;" Usage="cryptographyClient.SignAsync (algorithm, digest, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;</ReturnType>
@@ -507,6 +740,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -515,15 +750,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.SignResult SignData (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] data, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.SignResult SignData(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] data, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.SignData(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignData (algorithm As SignatureAlgorithm, data As Byte(), Optional cancellationToken As CancellationToken = null) As SignResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignData (algorithm As SignatureAlgorithm, data As Byte(), Optional cancellationToken As CancellationToken = Nothing) As SignResult" />
       <MemberSignature Language="F#" Value="abstract member SignData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult&#xA;override this.SignData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult" Usage="cryptographyClient.SignData (algorithm, data, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.SignResult</ReturnType>
@@ -546,6 +781,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -554,15 +791,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.SignResult SignData (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, System.IO.Stream data, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.SignResult SignData(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, class System.IO.Stream data, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.SignData(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.IO.Stream,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignData (algorithm As SignatureAlgorithm, data As Stream, Optional cancellationToken As CancellationToken = null) As SignResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignData (algorithm As SignatureAlgorithm, data As Stream, Optional cancellationToken As CancellationToken = Nothing) As SignResult" />
       <MemberSignature Language="F#" Value="abstract member SignData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult&#xA;override this.SignData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.SignResult" Usage="cryptographyClient.SignData (algorithm, data, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.SignResult</ReturnType>
@@ -587,6 +824,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -595,15 +834,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignDataAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] data, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignDataAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] data, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.SignDataAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignDataAsync (algorithm As SignatureAlgorithm, data As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of SignResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignDataAsync (algorithm As SignatureAlgorithm, data As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of SignResult)" />
       <MemberSignature Language="F#" Value="abstract member SignDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;&#xA;override this.SignDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;" Usage="cryptographyClient.SignDataAsync (algorithm, data, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;</ReturnType>
@@ -626,6 +865,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -634,15 +875,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignDataAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, System.IO.Stream data, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt; SignDataAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, class System.IO.Stream data, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.SignDataAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.IO.Stream,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignDataAsync (algorithm As SignatureAlgorithm, data As Stream, Optional cancellationToken As CancellationToken = null) As Task(Of SignResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SignDataAsync (algorithm As SignatureAlgorithm, data As Stream, Optional cancellationToken As CancellationToken = Nothing) As Task(Of SignResult)" />
       <MemberSignature Language="F#" Value="abstract member SignDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;&#xA;override this.SignDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;" Usage="cryptographyClient.SignDataAsync (algorithm, data, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.SignResult&gt;</ReturnType>
@@ -667,6 +908,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -675,15 +918,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult UnwrapKey (Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, byte[] encryptedKey, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult UnwrapKey(valuetype Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, unsigned int8[] encryptedKey, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.UnwrapKey(Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UnwrapKey (algorithm As KeyWrapAlgorithm, encryptedKey As Byte(), Optional cancellationToken As CancellationToken = null) As UnwrapResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UnwrapKey (algorithm As KeyWrapAlgorithm, encryptedKey As Byte(), Optional cancellationToken As CancellationToken = Nothing) As UnwrapResult" />
       <MemberSignature Language="F#" Value="abstract member UnwrapKey : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&#xA;override this.UnwrapKey : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult" Usage="cryptographyClient.UnwrapKey (algorithm, encryptedKey, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult</ReturnType>
@@ -706,6 +949,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -714,15 +959,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&gt; UnwrapKeyAsync (Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, byte[] encryptedKey, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&gt; UnwrapKeyAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, unsigned int8[] encryptedKey, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.UnwrapKeyAsync(Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UnwrapKeyAsync (algorithm As KeyWrapAlgorithm, encryptedKey As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of UnwrapResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UnwrapKeyAsync (algorithm As KeyWrapAlgorithm, encryptedKey As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of UnwrapResult)" />
       <MemberSignature Language="F#" Value="abstract member UnwrapKeyAsync : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&gt;&#xA;override this.UnwrapKeyAsync : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&gt;" Usage="cryptographyClient.UnwrapKeyAsync (algorithm, encryptedKey, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.UnwrapResult&gt;</ReturnType>
@@ -745,6 +990,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -753,15 +1000,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.VerifyResult Verify (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] digest, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult Verify(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] digest, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.Verify(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Verify (algorithm As SignatureAlgorithm, digest As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = null) As VerifyResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Verify (algorithm As SignatureAlgorithm, digest As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As VerifyResult" />
       <MemberSignature Language="F#" Value="abstract member Verify : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&#xA;override this.Verify : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult" Usage="cryptographyClient.Verify (algorithm, digest, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.VerifyResult</ReturnType>
@@ -785,6 +1032,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -793,15 +1042,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] digest, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] digest, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.VerifyAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyAsync (algorithm As SignatureAlgorithm, digest As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of VerifyResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyAsync (algorithm As SignatureAlgorithm, digest As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of VerifyResult)" />
       <MemberSignature Language="F#" Value="abstract member VerifyAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;&#xA;override this.VerifyAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;" Usage="cryptographyClient.VerifyAsync (algorithm, digest, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;</ReturnType>
@@ -825,6 +1074,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -833,15 +1084,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.VerifyResult VerifyData (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] data, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult VerifyData(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] data, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.VerifyData(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyData (algorithm As SignatureAlgorithm, data As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = null) As VerifyResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyData (algorithm As SignatureAlgorithm, data As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As VerifyResult" />
       <MemberSignature Language="F#" Value="abstract member VerifyData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&#xA;override this.VerifyData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult" Usage="cryptographyClient.VerifyData (algorithm, data, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.VerifyResult</ReturnType>
@@ -867,6 +1118,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -875,15 +1128,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.VerifyResult VerifyData (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, System.IO.Stream data, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult VerifyData(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, class System.IO.Stream data, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.VerifyData(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.IO.Stream,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyData (algorithm As SignatureAlgorithm, data As Stream, signature As Byte(), Optional cancellationToken As CancellationToken = null) As VerifyResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyData (algorithm As SignatureAlgorithm, data As Stream, signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As VerifyResult" />
       <MemberSignature Language="F#" Value="abstract member VerifyData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&#xA;override this.VerifyData : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.VerifyResult" Usage="cryptographyClient.VerifyData (algorithm, data, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.VerifyResult</ReturnType>
@@ -909,6 +1162,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -917,15 +1172,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyDataAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, byte[] data, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyDataAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, unsigned int8[] data, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.VerifyDataAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.Byte[],System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyDataAsync (algorithm As SignatureAlgorithm, data As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of VerifyResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyDataAsync (algorithm As SignatureAlgorithm, data As Byte(), signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of VerifyResult)" />
       <MemberSignature Language="F#" Value="abstract member VerifyDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;&#xA;override this.VerifyDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * byte[] * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;" Usage="cryptographyClient.VerifyDataAsync (algorithm, data, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;</ReturnType>
@@ -951,6 +1206,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -959,15 +1216,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyDataAsync (Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, System.IO.Stream data, byte[] signature, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt; VerifyDataAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm algorithm, class System.IO.Stream data, unsigned int8[] signature, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.VerifyDataAsync(Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm,System.IO.Stream,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyDataAsync (algorithm As SignatureAlgorithm, data As Stream, signature As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of VerifyResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VerifyDataAsync (algorithm As SignatureAlgorithm, data As Stream, signature As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of VerifyResult)" />
       <MemberSignature Language="F#" Value="abstract member VerifyDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;&#xA;override this.VerifyDataAsync : Azure.Security.KeyVault.Keys.Cryptography.SignatureAlgorithm * System.IO.Stream * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;" Usage="cryptographyClient.VerifyDataAsync (algorithm, data, signature, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.VerifyResult&gt;</ReturnType>
@@ -993,6 +1250,8 @@
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="data" /> is null.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -1001,15 +1260,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.Cryptography.WrapResult WrapKey (Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, byte[] key, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.Cryptography.WrapResult WrapKey(valuetype Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, unsigned int8[] key, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.WrapKey(Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function WrapKey (algorithm As KeyWrapAlgorithm, key As Byte(), Optional cancellationToken As CancellationToken = null) As WrapResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function WrapKey (algorithm As KeyWrapAlgorithm, key As Byte(), Optional cancellationToken As CancellationToken = Nothing) As WrapResult" />
       <MemberSignature Language="F#" Value="abstract member WrapKey : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.WrapResult&#xA;override this.WrapKey : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.Cryptography.WrapResult" Usage="cryptographyClient.WrapKey (algorithm, key, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.Cryptography.WrapResult</ReturnType>
@@ -1032,6 +1291,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
@@ -1040,15 +1301,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.WrapResult&gt; WrapKeyAsync (Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, byte[] key, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.Cryptography.WrapResult&gt; WrapKeyAsync(valuetype Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm algorithm, unsigned int8[] key, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient.WrapKeyAsync(Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm,System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function WrapKeyAsync (algorithm As KeyWrapAlgorithm, key As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of WrapResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function WrapKeyAsync (algorithm As KeyWrapAlgorithm, key As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of WrapResult)" />
       <MemberSignature Language="F#" Value="abstract member WrapKeyAsync : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.WrapResult&gt;&#xA;override this.WrapKeyAsync : Azure.Security.KeyVault.Keys.Cryptography.KeyWrapAlgorithm * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.WrapResult&gt;" Usage="cryptographyClient.WrapKeyAsync (algorithm, key, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.Cryptography.WrapResult&gt;</ReturnType>
@@ -1071,6 +1332,8 @@
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">The specified <paramref name="algorithm" /> does not match the key corresponding to the key identifier.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">The local cryptographic provider threw an exception.</exception>
+        <exception cref="T:System.InvalidOperationException">The key is invalid for the current operation.</exception>
         <exception cref="T:System.NotSupportedException">The operation is not supported with the specified key.</exception>
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>

@@ -6,10 +6,12 @@
   <TypeSignature Language="F#" Value="type ContainerProperties = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-    <AssemblyVersion>3.4.1.0</AssemblyVersion>
-    <AssemblyVersion>3.5.0.0</AssemblyVersion>
-    <AssemblyVersion>3.5.1.0</AssemblyVersion>
-    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.17.1.0</AssemblyVersion>
+    <AssemblyVersion>3.18.0.0</AssemblyVersion>
+    <AssemblyVersion>3.19.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.1.0</AssemblyVersion>
+    <AssemblyVersion>3.21.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -17,39 +19,38 @@
   <Interfaces />
   <Docs>
     <summary>
-            Represents a document container in the Azure Cosmos DB service. A container is a named logical container for documents. 
-            </summary>
+             Represents a document container in the Azure Cosmos DB service. A container is a named logical container for documents.
+             </summary>
     <remarks>
-            A database may contain zero or more named containers and each container consists of zero or more JSON documents. 
-            Being schema-free, the documents in a container do not need to share the same structure or fields. Since containers are application resources, 
-            they can be authorized using either the master key or resource keys.
-            Refer to <see>http://azure.microsoft.com/documentation/articles/documentdb-resources/#collections</see> for more details on containers.
-            </remarks>
+             A database may contain zero or more named containers and each container consists of zero or more JSON documents.
+             Being schema-free, the documents in a container do not need to share the same structure or fields. Since containers are application resources,
+             they can be authorized using either the master key or resource keys.
+             </remarks>
     <altmember cref="T:Microsoft.Azure.Cosmos.IndexingPolicy" />
+    <example>
+             The example below creates a new partitioned container with 50000 Request-per-Unit throughput.
+             The partition key is the first level 'country' property in all the documents within this container.
+             <code language="c#"><![CDATA[
+                 Container container = await client.GetDatabase("dbName").Containers.CreateAsync("MyCollection", "/country", 50000);
+                 ContainerProperties containerProperties = container.Resource;
+             ]]></code></example>
+    <example>
+             The example below creates a new container with a custom indexing policy.
+             <code language="c#"><![CDATA[
+                 ContainerProperties containerProperties = new ContainerProperties("MyCollection", "/country");
+                 containerProperties.IndexingPolicy.Automatic = true;
+                 containerProperties.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
+            
+                 CosmosContainerResponse containerCreateResponse = await client.GetDatabase("dbName").CreateContainerAsync(containerProperties, 50000);
+                 ContainerProperties createdContainerProperties = containerCreateResponse.Container;
+             ]]></code></example>
+    <example>
+             The example below deletes this container.
+             <code language="c#"><![CDATA[
+                 Container container = client.GetDatabase("dbName").Containers["MyCollection"];
+                 await container.DeleteAsync();
+             ]]></code></example>
     <altmember cref="T:Microsoft.Azure.Cosmos.UniqueKeyPolicy" />
-    <example>
-            The example below creates a new partitioned container with 50000 Request-per-Unit throughput.
-            The partition key is the first level 'country' property in all the documents within this container.
-            <code language="c#"><![CDATA[
-                Container container = await client.GetDatabase("dbName"].Containers.CreateAsync("MyCollection", "/country", 50000} );
-                ContainerProperties containerProperties = container.Resource;
-            ]]></code></example>
-    <example>
-            The example below creates a new container with a custom indexing policy.
-            <code language="c#"><![CDATA[
-                ContainerProperties containerProperties = new ContainerProperties("MyCollection", "/country");
-                containerProperties.IndexingPolicy.Automatic = true;
-                containerProperties.IndexingPolicy.IndexingMode = IndexingMode.Consistent;
-                
-                CosmosContainerResponse containerCreateResponse = await client.GetDatabase("dbName"].CreateContainerAsync(containerProperties, 50000);
-                ContainerProperties createdContainerProperties = containerCreateResponse.Container;
-            ]]></code></example>
-    <example>
-            The example below deletes this container.
-            <code language="c#"><![CDATA[
-                Container container = client.GetDatabase("dbName"].Containers["MyCollection"];
-                await container.DeleteAsync();
-            ]]></code></example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -60,10 +61,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -82,10 +85,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -100,6 +105,81 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AnalyticalStoreTimeToLiveInSeconds">
+      <MemberSignature Language="C#" Value="public int? AnalyticalStoreTimeToLiveInSeconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; AnalyticalStoreTimeToLiveInSeconds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" />
+      <MemberSignature Language="VB.NET" Value="Public Property AnalyticalStoreTimeToLiveInSeconds As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.AnalyticalStoreTimeToLiveInSeconds : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="analyticalStorageTtl")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="analyticalStorageTtl")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the time to live for analytical store in seconds at container scope for the Azure Cosmos service.
+            
+             Analytical store when enabled captures all the item changes in the container. AnalyticalStoreTimeToLiveInSeconds
+             defines the time to live for the changes in analytical store.
+             </summary>
+        <value>
+             It is an optional property.
+            
+             The unit of measurement is seconds. The maximum allowed value is 2147483647.
+             A valid value must be either a nonzero positive integer, '-1' or <c>null</c>.
+            
+             By default, AnalyticalStoreTimeToLiveInSeconds is set to null meaning analytical store is turned-off.
+             </value>
+        <remarks>
+          <para>
+             The <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" /> is applicable to all the item changes in the container.
+             It cannot be overriden or customizable per item.
+             </para>
+          <para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" /> is <c>null</c> analytical store is turned-off.
+             It means all the item changes in the container are disregarded.
+             </para>
+          <para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" /> is '-1', all the items changes will be captured
+             by analytical store and will never expire.
+             </para>
+          <para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.AnalyticalStoreTimeToLiveInSeconds" /> is a nonzero positive integer, all the items
+             changes will be captured by analytical store and expired after the specified time to live.
+             </para>
+        </remarks>
+        <example>
+             The example below disables analytical store on a container.
+             <code language="c#"><![CDATA[
+                 container.AnalyticalStoreTimeToLiveInSeconds = null;
+             ]]></code></example>
+        <example>
+             The example below enables analytical store on container capturing all changes and never expire.
+             <code language="c#"><![CDATA[
+                 container.AnalyticalStoreTimeToLiveInSeconds = -1;
+             ]]></code></example>
+        <example>
+             The example below enables analytical store on container capturing all changes and expire after 180days.
+             <code language="c#"><![CDATA[
+                 container.AnalyticalStoreTimeToLiveInSeconds = (int)TimeSpan.FromDays(6 * 30).TotalSeconds;
+             ]]></code></example>
+      </Docs>
+    </Member>
     <Member MemberName="ConflictResolutionPolicy">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Cosmos.ConflictResolutionPolicy ConflictResolutionPolicy { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Cosmos.ConflictResolutionPolicy ConflictResolutionPolicy" />
@@ -109,14 +189,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -138,14 +221,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="defaultTtl")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="defaultTtl")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="defaultTtl")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -153,51 +239,53 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the default time to live in seconds for item in a container from the Azure Cosmos service.
-            </summary>
+             Gets or sets the default time to live in seconds for item in a container from the Azure Cosmos service.
+             </summary>
         <value>
-            It is an optional property.
-            A valid value must be either a nonzero positive timespan or <c>null</c>.
-            By default, DefaultTimeToLive is set to null meaning the time to live is turned off for the container.
-            The unit of measurement is seconds. The maximum allowed value is 2147483647.
-            </value>
+             It is an optional property.
+            
+             The unit of measurement is seconds. The maximum allowed value is 2147483647.
+             A valid value must be either a nonzero positive integer, '-1' or <c>null</c>.
+            
+             By default, DefaultTimeToLive is set to null meaning the time to live is turned off for the container.
+             </value>
         <remarks>
           <para>
-            The <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> will be applied to all the items in the container as the default time-to-live policy.
-            The individual item could override the default time-to-live policy by setting its time to live.
-            </para>
+             The <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> will be applied to all the items in the container as the default time-to-live policy.
+             The individual item could override the default time-to-live policy by setting its time to live.
+             </para>
           <para>
-            When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is <c>null</c>, the time-to-live will be turned off for the container.
-            It means all the items will never expire. The individual item's  time to live will be disregarded.
-            </para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is <c>null</c>, the time-to-live will be turned off for the container.
+             It means all the items will never expire. The individual item's  time to live will be disregarded.
+             </para>
           <para>
-            When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is '-1', the time-to-live will be turned on for the container.
-            By default, all the items will never expire. The individual item could be given a specific time-to-live value by setting its
-            time to live. The item's time to live will be honored, and the expired items
-            will be deleted in background.
-            </para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is '-1', the time-to-live will be turned on for the container.
+             By default, all the items will never expire. The individual item could be given a specific time-to-live value by setting its
+             time to live. The item's time to live will be honored, and the expired items
+             will be deleted in background.
+             </para>
           <para>
-            When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is a nonzero positive integer, the time-to-live will be turned on for the container.
-            And a default time-to-live in seconds will be applied to all the items. A item will be expired after the
-            specified <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> value in seconds since its last write time.
-            </para>
+             When the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> is a nonzero positive integer, the time-to-live will be turned on for the container.
+             And a default time-to-live in seconds will be applied to all the items. A item will be expired after the
+             specified <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.DefaultTimeToLive" /> value in seconds since its last write time.
+             </para>
         </remarks>
         <example>
-            The example below disables time-to-live on a container.
-            <code language="c#"><![CDATA[
-                container.DefaultTimeToLive = null;
-            ]]></code></example>
+             The example below disables time-to-live on a container.
+             <code language="c#"><![CDATA[
+                 container.DefaultTimeToLive = null;
+             ]]></code></example>
         <example>
-            The example below enables time-to-live on a container. By default, all the items never expire.
-            <code language="c#"><![CDATA[
-                container.DefaultTimeToLive = TimeSpan.FromDays(2);
-            ]]></code></example>
+             The example below enables time-to-live on a container. By default, all the items never expire.
+             <code language="c#"><![CDATA[
+                 container.DefaultTimeToLive = -1;
+             ]]></code></example>
         <example>
-            The example below enables time-to-live on a container. By default, the item will expire after 1000 seconds
-            since its last write time.
-            <code language="c#"><![CDATA[
-                container.DefaultTimeToLive = TimeSpan.FromSeconds(1000);
-            ]]></code></example>
+             The example below enables time-to-live on a container. By default, the item will expire after 1000 seconds
+             since its last write time.
+             <code language="c#"><![CDATA[
+                 container.DefaultTimeToLive = 1000;
+             ]]></code></example>
       </Docs>
     </Member>
     <Member MemberName="ETag">
@@ -209,14 +297,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_etag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -230,7 +321,7 @@
             The entity tag associated with the resource.
             </value>
         <remarks>
-            ETags are used for concurrency checking when updating resources. 
+            ETags are used for concurrency checking when updating resources.
             </remarks>
       </Docs>
     </Member>
@@ -243,11 +334,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -255,10 +352,10 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.GeospatialConfig" /> associated with the collection from the Azure Cosmos DB service. 
+            Gets the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.GeospatialConfig" /> associated with the collection from the Azure Cosmos DB service.
             </summary>
         <value>
-            Geospatial type of collection i.e. geography or geometry 
+            Geospatial type of collection i.e. geography or geometry
             </value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,14 +369,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="id")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="id")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -292,15 +392,15 @@
         <value>The Id associated with the resource.</value>
         <remarks>
           <para>
-            Every resource within an Azure Cosmos DB database account needs to have a unique identifier. 
+            Every resource within an Azure Cosmos DB database account needs to have a unique identifier.
             Unlike <see cref="P:Microsoft.Azure.Documents.Resource.ResourceId" />, which is set internally, this Id is settable by the user and is not immutable.
             </para>
           <para>
-            When working with document resources, they too have this settable Id property. 
+            When working with document resources, they too have this settable Id property.
             If an Id is not supplied by the user the SDK will automatically generate a new GUID and assign its value to this property before
-            persisting the document in the database. 
+            persisting the document in the database.
             You can override this auto Id generation by setting the disableAutomaticIdGeneration parameter on the <see cref="T:Microsoft.Azure.Cosmos.DocumentClient" /> instance to true.
-            This will prevent the SDK from generating new Ids. 
+            This will prevent the SDK from generating new Ids.
             </para>
           <para>
             The following characters are restricted and cannot be used in the Id property:
@@ -318,14 +418,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -333,7 +436,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.IndexingPolicy" /> associated with the container from the Azure Cosmos DB service. 
+            Gets the <see cref="P:Microsoft.Azure.Cosmos.ContainerProperties.IndexingPolicy" /> associated with the container from the Azure Cosmos DB service.
             </summary>
         <value>
             The indexing policy associated with the container.
@@ -350,17 +453,21 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Documents.UnixDateTimeConverter))</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Documents.UnixDateTimeConverter))]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Documents.UnixDateTimeConverter))&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_ts")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_ts")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_ts")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -383,14 +490,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -403,7 +513,7 @@
              The partition key definition version 1 uses a hash function that computes
              hash based on the first 100 bytes of the partition key. This can cause
              conflicts for documents with partition keys greater than 100 bytes.
-             
+            
              The partition key definition version 2 uses a hash function that computes
              hash based on the first 2 KB of the partition key.
              </summary>
@@ -420,14 +530,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -450,13 +563,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="_self")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -482,17 +599,21 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="ttlPropertyPath")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="ttlPropertyPath")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="ttlPropertyPath")&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Obsolete</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -520,14 +641,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

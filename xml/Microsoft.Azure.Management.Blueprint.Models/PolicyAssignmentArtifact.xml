@@ -7,7 +7,6 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
     <AssemblyVersion>0.10.0.0</AssemblyVersion>
-    <AssemblyVersion>0.14.0.0</AssemblyVersion>
     <AssemblyVersion>0.20.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -16,10 +15,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("policyAssignment")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("policyAssignment")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("policyAssignment")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -38,7 +39,6 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -53,7 +53,7 @@
       <MemberSignature Language="C#" Value="public PolicyAssignmentArtifact (string policyDefinitionId, System.Collections.Generic.IDictionary&lt;string,Microsoft.Azure.Management.Blueprint.Models.ParameterValue&gt; parameters, string id = default, string type = default, string name = default, string displayName = default, string description = default, System.Collections.Generic.IList&lt;string&gt; dependsOn = default, string resourceGroup = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string policyDefinitionId, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Azure.Management.Blueprint.Models.ParameterValue&gt; parameters, string id, string type, string name, string displayName, string description, class System.Collections.Generic.IList`1&lt;string&gt; dependsOn, string resourceGroup) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Blueprint.Models.ParameterValue},System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (policyDefinitionId As String, parameters As IDictionary(Of String, ParameterValue), Optional id As String = null, Optional type As String = null, Optional name As String = null, Optional displayName As String = null, Optional description As String = null, Optional dependsOn As IList(Of String) = null, Optional resourceGroup As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (policyDefinitionId As String, parameters As IDictionary(Of String, ParameterValue), Optional id As String = Nothing, Optional type As String = Nothing, Optional name As String = Nothing, Optional displayName As String = Nothing, Optional description As String = Nothing, Optional dependsOn As IList(Of String) = Nothing, Optional resourceGroup As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact : string * System.Collections.Generic.IDictionary&lt;string, Microsoft.Azure.Management.Blueprint.Models.ParameterValue&gt; * string * string * string * string * string * System.Collections.Generic.IList&lt;string&gt; * string -&gt; Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact" Usage="new Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact (policyDefinitionId, parameters, id, type, name, displayName, description, dependsOn, resourceGroup)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
@@ -97,13 +97,12 @@
       <MemberSignature Language="C#" Value="public PolicyAssignmentArtifact (string policyDefinitionId, System.Collections.Generic.IDictionary&lt;string,Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase&gt; parameters, string id = default, string type = default, string name = default, string displayName = default, string description = default, System.Collections.Generic.IList&lt;string&gt; dependsOn = default, string resourceGroup = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string policyDefinitionId, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase&gt; parameters, string id, string type, string name, string displayName, string description, class System.Collections.Generic.IList`1&lt;string&gt; dependsOn, string resourceGroup) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase},System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (policyDefinitionId As String, parameters As IDictionary(Of String, ParameterValueBase), Optional id As String = null, Optional type As String = null, Optional name As String = null, Optional displayName As String = null, Optional description As String = null, Optional dependsOn As IList(Of String) = null, Optional resourceGroup As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (policyDefinitionId As String, parameters As IDictionary(Of String, ParameterValueBase), Optional id As String = Nothing, Optional type As String = Nothing, Optional name As String = Nothing, Optional displayName As String = Nothing, Optional description As String = Nothing, Optional dependsOn As IList(Of String) = Nothing, Optional resourceGroup As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact : string * System.Collections.Generic.IDictionary&lt;string, Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase&gt; * string * string * string * string * string * System.Collections.Generic.IList&lt;string&gt; * string -&gt; Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact" Usage="new Microsoft.Azure.Management.Blueprint.Models.PolicyAssignmentArtifact (policyDefinitionId, parameters, id, type, name, displayName, description, dependsOn, resourceGroup)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="policyDefinitionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
@@ -148,12 +147,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.dependsOn")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.dependsOn")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.dependsOn")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -178,12 +177,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.description")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.description")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.description")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -207,12 +206,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -240,16 +239,17 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.parameters")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.parameters")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.parameters")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Azure.Management.Blueprint.Models.ParameterValue&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Azure.Management.Blueprint.Models.ParameterValueBase&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -269,12 +269,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.policyDefinitionId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.policyDefinitionId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.policyDefinitionId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -298,12 +298,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceGroup")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceGroup")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceGroup")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -328,7 +328,6 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

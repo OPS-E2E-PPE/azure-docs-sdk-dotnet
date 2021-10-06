@@ -38,28 +38,32 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ResourceIdentity (Guid? principalId = default, string type = default, Guid? tenantId = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; principalId, string type, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; tenantId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Sql.Models.ResourceIdentity.#ctor(System.Nullable{System.Guid},System.String,System.Nullable{System.Guid})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional principalId As Nullable(Of Guid) = null, Optional type As String = null, Optional tenantId As Nullable(Of Guid) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Sql.Models.ResourceIdentity : Nullable&lt;Guid&gt; * string * Nullable&lt;Guid&gt; -&gt; Microsoft.Azure.Management.Sql.Models.ResourceIdentity" Usage="new Microsoft.Azure.Management.Sql.Models.ResourceIdentity (principalId, type, tenantId)" />
+      <MemberSignature Language="C#" Value="public ResourceIdentity (System.Collections.Generic.IDictionary&lt;string,Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; userAssignedIdentities = default, Guid? principalId = default, string type = default, Guid? tenantId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; userAssignedIdentities, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; principalId, string type, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; tenantId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Sql.Models.ResourceIdentity.#ctor(System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Sql.Models.UserIdentity},System.Nullable{System.Guid},System.String,System.Nullable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional userAssignedIdentities As IDictionary(Of String, UserIdentity) = Nothing, Optional principalId As Nullable(Of Guid) = Nothing, Optional type As String = Nothing, Optional tenantId As Nullable(Of Guid) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Sql.Models.ResourceIdentity : System.Collections.Generic.IDictionary&lt;string, Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; * Nullable&lt;Guid&gt; * string * Nullable&lt;Guid&gt; -&gt; Microsoft.Azure.Management.Sql.Models.ResourceIdentity" Usage="new Microsoft.Azure.Management.Sql.Models.ResourceIdentity (userAssignedIdentities, principalId, type, tenantId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Sql</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
+        <Parameter Name="userAssignedIdentities" Type="System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Azure.Management.Sql.Models.UserIdentity&gt;" />
         <Parameter Name="principalId" Type="System.Nullable&lt;System.Guid&gt;" />
         <Parameter Name="type" Type="System.String" />
         <Parameter Name="tenantId" Type="System.Nullable&lt;System.Guid&gt;" />
       </Parameters>
       <Docs>
+        <param name="userAssignedIdentities">The resource ids of the user
+            assigned identities to use</param>
         <param name="principalId">The Azure Active Directory principal
             id.</param>
         <param name="type">The identity type. Set this to 'SystemAssigned'
             in order to automatically create and assign an Azure Active
             Directory principal for the resource. Possible values include:
-            'SystemAssigned'</param>
+            'None', 'SystemAssigned', 'UserAssigned',
+            'SystemAssigned,UserAssigned'</param>
         <param name="tenantId">The Azure Active Directory tenant
             id.</param>
         <summary>
@@ -81,7 +85,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="principalId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="principalId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="principalId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -108,7 +113,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tenantId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tenantId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tenantId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -135,7 +141,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="type")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="type")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -145,8 +152,37 @@
         <summary>
             Gets or sets the identity type. Set this to 'SystemAssigned' in
             order to automatically create and assign an Azure Active Directory
-            principal for the resource. Possible values include:
-            'SystemAssigned'
+            principal for the resource. Possible values include: 'None',
+            'SystemAssigned', 'UserAssigned', 'SystemAssigned,UserAssigned'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAssignedIdentities">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; UserAssignedIdentities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; UserAssignedIdentities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Sql.Models.ResourceIdentity.UserAssignedIdentities" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserAssignedIdentities As IDictionary(Of String, UserIdentity)" />
+      <MemberSignature Language="F#" Value="member this.UserAssignedIdentities : System.Collections.Generic.IDictionary&lt;string, Microsoft.Azure.Management.Sql.Models.UserIdentity&gt; with get, set" Usage="Microsoft.Azure.Management.Sql.Models.ResourceIdentity.UserAssignedIdentities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Sql</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="userAssignedIdentities")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="userAssignedIdentities")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Azure.Management.Sql.Models.UserIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the resource ids of the user assigned identities to
+            use
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

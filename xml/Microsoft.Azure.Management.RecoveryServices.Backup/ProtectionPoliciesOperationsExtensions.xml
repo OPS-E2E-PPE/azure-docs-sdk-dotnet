@@ -19,6 +19,95 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="BeginDelete">
+      <MemberSignature Language="C#" Value="public static void BeginDelete (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BeginDelete(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.BeginDelete(Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub BeginDelete (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String)" />
+      <MemberSignature Language="F#" Value="static member BeginDelete : Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.BeginDelete (operations, vaultName, resourceGroupName, policyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations" RefType="this" />
+        <Parameter Name="vaultName" Type="System.String" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="policyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="vaultName">
+            The name of the recovery services vault.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group where the recovery services vault is
+            present.
+            </param>
+        <param name="policyName">
+            Backup policy to be deleted.
+            </param>
+        <summary>
+            Deletes specified backup policy from your Recovery Services Vault. This is
+            an asynchronous operation. Status of the
+            operation can be fetched using GetProtectionPolicyOperationResult API.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDeleteAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginDeleteAsync(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member BeginDeleteAsync : Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.BeginDeleteAsync (operations, vaultName, resourceGroupName, policyName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations" RefType="this" />
+        <Parameter Name="vaultName" Type="System.String" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="policyName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="vaultName">
+            The name of the recovery services vault.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group where the recovery services vault is
+            present.
+            </param>
+        <param name="policyName">
+            Backup policy to be deleted.
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            Deletes specified backup policy from your Recovery Services Vault. This is
+            an asynchronous operation. Status of the
+            operation can be fetched using GetProtectionPolicyOperationResult API.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreateOrUpdate">
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource CreateOrUpdate (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource parameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource CreateOrUpdate(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, class Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource parameters) cil managed" />
@@ -70,18 +159,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, class Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations,System.String,System.String,System.String,Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, parameters As ProtectionPolicyResource, Optional cancellationToken As CancellationToken = null) As Task(Of ProtectionPolicyResource)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, parameters As ProtectionPolicyResource, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ProtectionPolicyResource)" />
       <MemberSignature Language="F#" Value="static member CreateOrUpdateAsync : Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations * string * string * string * Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt;" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.CreateOrUpdateAsync (operations, vaultName, resourceGroupName, policyName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt;</ReturnType>
       </ReturnValue>
@@ -159,7 +243,7 @@
         <summary>
             Deletes specified backup policy from your Recovery Services Vault. This is
             an asynchronous operation. Status of the
-            operation can be fetched using GetPolicyOperationResult API.
+            operation can be fetched using GetProtectionPolicyOperationResult API.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -168,18 +252,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.DeleteAsync (operations, vaultName, resourceGroupName, policyName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -210,7 +289,7 @@
         <summary>
             Deletes specified backup policy from your Recovery Services Vault. This is
             an asynchronous operation. Status of the
-            operation can be fetched using GetPolicyOperationResult API.
+            operation can be fetched using GetProtectionPolicyOperationResult API.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -264,18 +343,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt; GetAsync (this Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt; GetAsync(class Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations operations, string vaultName, string resourceGroupName, string policyName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.GetAsync(Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, Optional cancellationToken As CancellationToken = null) As Task(Of ProtectionPolicyResource)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IProtectionPoliciesOperations, vaultName As String, resourceGroupName As String, policyName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ProtectionPolicyResource)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.RecoveryServices.Backup.IProtectionPoliciesOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt;" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.ProtectionPoliciesOperationsExtensions.GetAsync (operations, vaultName, resourceGroupName, policyName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.RecoveryServices.Backup.Models.ProtectionPolicyResource&gt;</ReturnType>
       </ReturnValue>

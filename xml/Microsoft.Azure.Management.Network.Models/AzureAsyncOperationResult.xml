@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type AzureAsyncOperationResult = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,7 +34,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,22 +48,22 @@
       <MemberSignature Language="C#" Value="public AzureAsyncOperationResult (string status = default, Microsoft.Azure.Management.Network.Models.Error error = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string status, class Microsoft.Azure.Management.Network.Models.Error error) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.AzureAsyncOperationResult.#ctor(System.String,Microsoft.Azure.Management.Network.Models.Error)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional status As String = null, Optional error As Error = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional status As String = Nothing, Optional error As Error = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.AzureAsyncOperationResult : string * Microsoft.Azure.Management.Network.Models.Error -&gt; Microsoft.Azure.Management.Network.Models.AzureAsyncOperationResult" Usage="new Microsoft.Azure.Management.Network.Models.AzureAsyncOperationResult (status, error)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="status" Type="System.String" />
         <Parameter Name="error" Type="Microsoft.Azure.Management.Network.Models.Error" />
       </Parameters>
       <Docs>
-        <param name="error">To be added.</param>
         <param name="status">Status of the Azure async operation. Possible
-            values are: 'InProgress', 'Succeeded', and 'Failed'. Possible
             values include: 'InProgress', 'Succeeded', 'Failed'</param>
+        <param name="error">Details of the error occurred during specified
+            asynchronous operation.</param>
         <summary>
             Initializes a new instance of the AzureAsyncOperationResult class.
             </summary>
@@ -79,18 +79,22 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="error")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="error")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="error")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.Error</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary />
+        <summary>
+            Gets or sets details of the error occurred during specified
+            asynchronous operation.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -104,11 +108,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -117,7 +122,6 @@
       <Docs>
         <summary>
             Gets or sets status of the Azure async operation. Possible values
-            are: 'InProgress', 'Succeeded', and 'Failed'. Possible values
             include: 'InProgress', 'Succeeded', 'Failed'
             </summary>
         <value>To be added.</value>

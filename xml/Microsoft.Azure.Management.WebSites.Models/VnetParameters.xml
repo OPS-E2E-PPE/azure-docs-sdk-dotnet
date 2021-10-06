@@ -6,7 +6,9 @@
   <TypeSignature Language="F#" Value="type VnetParameters = class&#xA;    inherit ProxyOnlyResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.1.0</AssemblyVersion>
+    <AssemblyVersion>3.1.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.WebSites.Models.ProxyOnlyResource</BaseTypeName>
@@ -14,7 +16,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +35,9 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +48,16 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public VnetParameters (string id = default, string name = default, string kind = default, string type = default, string vnetResourceGroup = default, string vnetName = default, string vnetSubnetName = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string kind, string type, string vnetResourceGroup, string vnetName, string vnetSubnetName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.WebSites.Models.VnetParameters.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional kind As String = null, Optional type As String = null, Optional vnetResourceGroup As String = null, Optional vnetName As String = null, Optional vnetSubnetName As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.WebSites.Models.VnetParameters : string * string * string * string * string * string * string -&gt; Microsoft.Azure.Management.WebSites.Models.VnetParameters" Usage="new Microsoft.Azure.Management.WebSites.Models.VnetParameters (id, name, kind, type, vnetResourceGroup, vnetName, vnetSubnetName)" />
+      <MemberSignature Language="C#" Value="public VnetParameters (string id = default, string name = default, string kind = default, string type = default, string vnetResourceGroup = default, string vnetName = default, string vnetSubnetName = default, string subnetResourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string kind, string type, string vnetResourceGroup, string vnetName, string vnetSubnetName, string subnetResourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.WebSites.Models.VnetParameters.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional kind As String = Nothing, Optional type As String = Nothing, Optional vnetResourceGroup As String = Nothing, Optional vnetName As String = Nothing, Optional vnetSubnetName As String = Nothing, Optional subnetResourceId As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.WebSites.Models.VnetParameters : string * string * string * string * string * string * string * string -&gt; Microsoft.Azure.Management.WebSites.Models.VnetParameters" Usage="new Microsoft.Azure.Management.WebSites.Models.VnetParameters (id, name, kind, type, vnetResourceGroup, vnetName, vnetSubnetName, subnetResourceId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -61,6 +67,7 @@
         <Parameter Name="vnetResourceGroup" Type="System.String" />
         <Parameter Name="vnetName" Type="System.String" />
         <Parameter Name="vnetSubnetName" Type="System.String" />
+        <Parameter Name="subnetResourceId" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id">Resource Id.</param>
@@ -72,9 +79,40 @@
         <param name="vnetName">The name of the VNET to be validated</param>
         <param name="vnetSubnetName">The subnet name to be
             validated</param>
+        <param name="subnetResourceId">The ARM Resource ID of the subnet to
+            validate</param>
         <summary>
             Initializes a new instance of the VnetParameters class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubnetResourceId">
+      <MemberSignature Language="C#" Value="public string SubnetResourceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubnetResourceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.WebSites.Models.VnetParameters.SubnetResourceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubnetResourceId As String" />
+      <MemberSignature Language="F#" Value="member this.SubnetResourceId : string with get, set" Usage="Microsoft.Azure.Management.WebSites.Models.VnetParameters.SubnetResourceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.subnetResourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.subnetResourceId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the ARM Resource ID of the subnet to validate
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,11 +125,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -114,11 +155,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetResourceGroup")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetResourceGroup")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetResourceGroup")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -141,11 +185,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Websites</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.1.0</AssemblyVersion>
+        <AssemblyVersion>3.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetSubnetName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetSubnetName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.vnetSubnetName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

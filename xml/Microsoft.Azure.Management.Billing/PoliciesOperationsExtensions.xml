@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type PoliciesOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +28,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Billing.Models.Policy</ReturnType>
@@ -43,13 +43,14 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="billingProfileName">
-            Billing Profile Id.
+            The ID that uniquely identifies a billing profile.
             </param>
         <summary>
-            The policy for a given billing account name and billing profile name.
+            Lists the policies for a billing profile. This operation is supported only
+            for billing accounts with agreement type Microsoft Customer Agreement.
             <see href="https://docs.microsoft.com/en-us/rest/api/billing/" /></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -59,18 +60,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt; GetByBillingProfileAsync (this Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string billingProfileName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Billing.Models.Policy&gt; GetByBillingProfileAsync(class Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string billingProfileName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.GetByBillingProfileAsync(Microsoft.Azure.Management.Billing.IPoliciesOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetByBillingProfileAsync (operations As IPoliciesOperations, billingAccountName As String, billingProfileName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Policy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetByBillingProfileAsync (operations As IPoliciesOperations, billingAccountName As String, billingProfileName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Policy)" />
       <MemberSignature Language="F#" Value="static member GetByBillingProfileAsync : Microsoft.Azure.Management.Billing.IPoliciesOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt;" Usage="Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.GetByBillingProfileAsync (operations, billingAccountName, billingProfileName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt;</ReturnType>
       </ReturnValue>
@@ -85,16 +81,17 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="billingProfileName">
-            Billing Profile Id.
+            The ID that uniquely identifies a billing profile.
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            The policy for a given billing account name and billing profile name.
+            Lists the policies for a billing profile. This operation is supported only
+            for billing accounts with agreement type Microsoft Customer Agreement.
             <see href="https://docs.microsoft.com/en-us/rest/api/billing/" /></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -109,7 +106,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Billing.Models.CustomerPolicy</ReturnType>
@@ -124,13 +121,14 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="customerName">
-            Customer name.
+            The ID that uniquely identifies a customer.
             </param>
         <summary>
-            The policy for a given billing account name and customer name.
+            Lists the policies for a customer. This operation is supported only for
+            billing accounts with agreement type Microsoft Partner Agreement.
             <see href="https://docs.microsoft.com/en-us/rest/api/billing/" /></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -140,18 +138,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt; GetByCustomerAsync (this Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string customerName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt; GetByCustomerAsync(class Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string customerName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.GetByCustomerAsync(Microsoft.Azure.Management.Billing.IPoliciesOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetByCustomerAsync (operations As IPoliciesOperations, billingAccountName As String, customerName As String, Optional cancellationToken As CancellationToken = null) As Task(Of CustomerPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetByCustomerAsync (operations As IPoliciesOperations, billingAccountName As String, customerName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of CustomerPolicy)" />
       <MemberSignature Language="F#" Value="static member GetByCustomerAsync : Microsoft.Azure.Management.Billing.IPoliciesOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt;" Usage="Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.GetByCustomerAsync (operations, billingAccountName, customerName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -166,16 +159,17 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="customerName">
-            Customer name.
+            The ID that uniquely identifies a customer.
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            The policy for a given billing account name and customer name.
+            Lists the policies for a customer. This operation is supported only for
+            billing accounts with agreement type Microsoft Partner Agreement.
             <see href="https://docs.microsoft.com/en-us/rest/api/billing/" /></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -190,7 +184,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Billing.Models.Policy</ReturnType>
@@ -206,16 +200,17 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="billingProfileName">
-            Billing Profile Id.
+            The ID that uniquely identifies a billing profile.
             </param>
         <param name="parameters">
-            Parameters supplied to the update policy operation.
+            Request parameters that are provided to the update policies operation.
             </param>
         <summary>
-            The operation to update a policy.
+            Updates the policies for a billing profile. This operation is supported
+            only for billing accounts with agreement type Microsoft Customer Agreement.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -225,18 +220,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt; UpdateAsync (this Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string billingProfileName, Microsoft.Azure.Management.Billing.Models.Policy parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Billing.Models.Policy&gt; UpdateAsync(class Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string billingProfileName, class Microsoft.Azure.Management.Billing.Models.Policy parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Billing.IPoliciesOperations,System.String,System.String,Microsoft.Azure.Management.Billing.Models.Policy,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IPoliciesOperations, billingAccountName As String, billingProfileName As String, parameters As Policy, Optional cancellationToken As CancellationToken = null) As Task(Of Policy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IPoliciesOperations, billingAccountName As String, billingProfileName As String, parameters As Policy, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Policy)" />
       <MemberSignature Language="F#" Value="static member UpdateAsync : Microsoft.Azure.Management.Billing.IPoliciesOperations * string * string * Microsoft.Azure.Management.Billing.Models.Policy * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt;" Usage="Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.UpdateAsync (operations, billingAccountName, billingProfileName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.Policy&gt;</ReturnType>
       </ReturnValue>
@@ -252,19 +242,20 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="billingProfileName">
-            Billing Profile Id.
+            The ID that uniquely identifies a billing profile.
             </param>
         <param name="parameters">
-            Parameters supplied to the update policy operation.
+            Request parameters that are provided to the update policies operation.
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            The operation to update a policy.
+            Updates the policies for a billing profile. This operation is supported
+            only for billing accounts with agreement type Microsoft Customer Agreement.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -279,7 +270,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Billing.Models.CustomerPolicy</ReturnType>
@@ -295,16 +286,17 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="customerName">
-            Customer name.
+            The ID that uniquely identifies a customer.
             </param>
         <param name="parameters">
-            Parameters supplied to the update customer policy operation.
+            Request parameters that are provided to the update policies operation.
             </param>
         <summary>
-            The operation to update a Customer policy.
+            Updates the policies for a customer. This operation is supported only for
+            billing accounts with agreement type Microsoft Partner Agreement.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -314,18 +306,13 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt; UpdateCustomerAsync (this Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string customerName, Microsoft.Azure.Management.Billing.Models.CustomerPolicy parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt; UpdateCustomerAsync(class Microsoft.Azure.Management.Billing.IPoliciesOperations operations, string billingAccountName, string customerName, class Microsoft.Azure.Management.Billing.Models.CustomerPolicy parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.UpdateCustomerAsync(Microsoft.Azure.Management.Billing.IPoliciesOperations,System.String,System.String,Microsoft.Azure.Management.Billing.Models.CustomerPolicy,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateCustomerAsync (operations As IPoliciesOperations, billingAccountName As String, customerName As String, parameters As CustomerPolicy, Optional cancellationToken As CancellationToken = null) As Task(Of CustomerPolicy)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateCustomerAsync (operations As IPoliciesOperations, billingAccountName As String, customerName As String, parameters As CustomerPolicy, Optional cancellationToken As CancellationToken = Nothing) As Task(Of CustomerPolicy)" />
       <MemberSignature Language="F#" Value="static member UpdateCustomerAsync : Microsoft.Azure.Management.Billing.IPoliciesOperations * string * string * Microsoft.Azure.Management.Billing.Models.CustomerPolicy * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt;" Usage="Microsoft.Azure.Management.Billing.PoliciesOperationsExtensions.UpdateCustomerAsync (operations, billingAccountName, customerName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Billing.Models.CustomerPolicy&gt;</ReturnType>
       </ReturnValue>
@@ -341,19 +328,20 @@
             The operations group for this extension method.
             </param>
         <param name="billingAccountName">
-            billing Account Id.
+            The ID that uniquely identifies a billing account.
             </param>
         <param name="customerName">
-            Customer name.
+            The ID that uniquely identifies a customer.
             </param>
         <param name="parameters">
-            Parameters supplied to the update customer policy operation.
+            Request parameters that are provided to the update policies operation.
             </param>
         <param name="cancellationToken">
             The cancellation token.
             </param>
         <summary>
-            The operation to update a Customer policy.
+            Updates the policies for a customer. This operation is supported only for
+            billing accounts with agreement type Microsoft Partner Agreement.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

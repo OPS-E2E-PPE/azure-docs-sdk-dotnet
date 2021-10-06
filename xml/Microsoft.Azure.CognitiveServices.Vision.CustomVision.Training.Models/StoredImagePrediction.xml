@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
     <AssemblyVersion>0.13.0.0</AssemblyVersion>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,7 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,13 +43,13 @@
       <MemberSignature Language="C#" Value="public StoredImagePrediction (string resizedImageUri = default, string thumbnailUri = default, string originalImageUri = default, Guid domain = default, Guid id = default, Guid project = default, Guid iteration = default, DateTime created = default, System.Collections.Generic.IList&lt;Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction&gt; predictions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resizedImageUri, string thumbnailUri, string originalImageUri, valuetype System.Guid domain, valuetype System.Guid id, valuetype System.Guid project, valuetype System.Guid iteration, valuetype System.DateTime created, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction&gt; predictions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.StoredImagePrediction.#ctor(System.String,System.String,System.String,System.Guid,System.Guid,System.Guid,System.Guid,System.DateTime,System.Collections.Generic.IList{Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resizedImageUri As String = null, Optional thumbnailUri As String = null, Optional originalImageUri As String = null, Optional domain As Guid = null, Optional id As Guid = null, Optional project As Guid = null, Optional iteration As Guid = null, Optional created As DateTime = null, Optional predictions As IList(Of Prediction) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resizedImageUri As String = Nothing, Optional thumbnailUri As String = Nothing, Optional originalImageUri As String = Nothing, Optional domain As Guid = Nothing, Optional id As Guid = Nothing, Optional project As Guid = Nothing, Optional iteration As Guid = Nothing, Optional created As DateTime = Nothing, Optional predictions As IList(Of Prediction) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.StoredImagePrediction : string * string * string * Guid * Guid * Guid * Guid * DateTime * System.Collections.Generic.IList&lt;Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction&gt; -&gt; Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.StoredImagePrediction" Usage="new Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.StoredImagePrediction (resizedImageUri, thumbnailUri, originalImageUri, domain, id, project, iteration, created, predictions)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="resizedImageUri" Type="System.String" />
@@ -63,6 +63,11 @@
         <Parameter Name="predictions" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction&gt;" />
       </Parameters>
       <Docs>
+        <param name="id">Prediction Id.</param>
+        <param name="project">Project Id.</param>
+        <param name="iteration">Iteration Id.</param>
+        <param name="created">Date this prediction was created.</param>
+        <param name="predictions">List of predictions.</param>
         <param name="resizedImageUri">The URI to the (resized) prediction
             image.</param>
         <param name="thumbnailUri">The URI to the thumbnail of the original
@@ -70,11 +75,6 @@
         <param name="originalImageUri">The URI to the original prediction
             image.</param>
         <param name="domain">Domain used for the prediction.</param>
-        <param name="id">Prediction Id.</param>
-        <param name="project">Project Id.</param>
-        <param name="iteration">Iteration Id.</param>
-        <param name="created">Date this prediction was created.</param>
-        <param name="predictions">List of predictions.</param>
         <summary>
             Initializes a new instance of the StoredImagePrediction class.
             </summary>
@@ -91,20 +91,19 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="created")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="created")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="created")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets date this prediction was created.
-            </summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,11 +118,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="domain")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="domain")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="domain")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -147,20 +147,19 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="id")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="id")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets prediction Id.
-            </summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,20 +174,19 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="iteration")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="iteration")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="iteration")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets iteration Id.
-            </summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -203,11 +201,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="originalImageUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="originalImageUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="originalImageUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -231,20 +230,19 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="predictions")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="predictions")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="predictions")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training.Models.Prediction&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets list of predictions.
-            </summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -259,20 +257,19 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="project")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="project")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="project")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets project Id.
-            </summary>
+        <summary />
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,11 +284,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resizedImageUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resizedImageUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resizedImageUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -315,11 +313,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training</AssemblyName>
         <AssemblyVersion>0.13.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="thumbnailUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="thumbnailUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="thumbnailUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

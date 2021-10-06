@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type QueryOptions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,15 +38,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public QueryOptions (int? top = default, string filter = default, string orderBy = default, string select = default, DateTime? fromProperty = default, DateTime? to = default, string apply = default, string expand = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int32&gt; top, string filter, string orderBy, string select, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; fromProperty, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; to, string apply, string expand) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions.#ctor(System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional top As Nullable(Of Integer) = null, Optional filter As String = null, Optional orderBy As String = null, Optional select As String = null, Optional fromProperty As Nullable(Of DateTime) = null, Optional to As Nullable(Of DateTime) = null, Optional apply As String = null, Optional expand As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions : Nullable&lt;int&gt; * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string -&gt; Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions" Usage="new Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions (top, filter, orderBy, select, fromProperty, to, apply, expand)" />
+      <MemberSignature Language="C#" Value="public QueryOptions (int? top = default, string filter = default, string orderBy = default, string select = default, DateTime? fromProperty = default, DateTime? to = default, string apply = default, string skipToken = default, string expand = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int32&gt; top, string filter, string orderBy, string select, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; fromProperty, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; to, string apply, string skipToken, string expand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions.#ctor(System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional top As Nullable(Of Integer) = Nothing, Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional select As String = Nothing, Optional fromProperty As Nullable(Of DateTime) = Nothing, Optional to As Nullable(Of DateTime) = Nothing, Optional apply As String = Nothing, Optional skipToken As String = Nothing, Optional expand As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions : Nullable&lt;int&gt; * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string * string -&gt; Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions" Usage="new Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions (top, filter, orderBy, select, fromProperty, to, apply, skipToken, expand)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
@@ -56,6 +56,7 @@
         <Parameter Name="fromProperty" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="to" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="apply" Type="System.String" />
+        <Parameter Name="skipToken" Type="System.String" />
         <Parameter Name="expand" Type="System.String" />
       </Parameters>
       <Docs>
@@ -76,9 +77,11 @@
             request time.</param>
         <param name="apply">OData apply expression for
             aggregations.</param>
+        <param name="skipToken">Skiptoken is only provided if a previous
+            response returned a partial result as a part of nextLink
+            element.</param>
         <param name="expand">The $expand query parameter. For example, to
-            expand policyEvaluationDetails, use
-            $expand=policyEvaluationDetails</param>
+            expand components use $expand=components</param>
         <summary>
             Initializes a new instance of the QueryOptions class.
             </summary>
@@ -94,11 +97,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -121,11 +125,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -134,7 +139,7 @@
       <Docs>
         <summary>
             Gets or sets the $expand query parameter. For example, to expand
-            policyEvaluationDetails, use $expand=policyEvaluationDetails
+            components use $expand=components
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -149,11 +154,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -176,11 +182,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -205,11 +212,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -234,11 +242,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -254,6 +263,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SkipToken">
+      <MemberSignature Language="C#" Value="public string SkipToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkipToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions.SkipToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipToken As String" />
+      <MemberSignature Language="F#" Value="member this.SkipToken : string with get, set" Usage="Microsoft.Azure.Management.PolicyInsights.Models.QueryOptions.SkipToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets skiptoken is only provided if a previous response
+            returned a partial result as a part of nextLink element.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="To">
       <MemberSignature Language="C#" Value="public DateTime? To { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; To" />
@@ -263,11 +301,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -292,11 +331,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.PolicyInsights</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonIgnore</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonIgnore&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

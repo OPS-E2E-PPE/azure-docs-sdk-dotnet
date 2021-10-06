@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type UserCreateParameters = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +46,16 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public UserCreateParameters (string email, string firstName, string lastName, string state = default, string note = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; identities = default, string password = default, string confirmation = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string email, string firstName, string lastName, string state, string note, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; identities, string password, string confirmation) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters.#ctor(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (email As String, firstName As String, lastName As String, Optional state As String = null, Optional note As String = null, Optional identities As IList(Of UserIdentityContract) = null, Optional password As String = null, Optional confirmation As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters : string * string * string * string * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; * string * string -&gt; Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters" Usage="new Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters (email, firstName, lastName, state, note, identities, password, confirmation)" />
+      <MemberSignature Language="C#" Value="public UserCreateParameters (string email, string firstName, string lastName, string state = default, string note = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; identities = default, string password = default, string appType = default, string confirmation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string email, string firstName, string lastName, string state, string note, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; identities, string password, string appType, string confirmation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters.#ctor(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract},System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (email As String, firstName As String, lastName As String, Optional state As String = Nothing, Optional note As String = Nothing, Optional identities As IList(Of UserIdentityContract) = Nothing, Optional password As String = Nothing, Optional appType As String = Nothing, Optional confirmation As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters : string * string * string * string * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt; * string * string * string -&gt; Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters" Usage="new Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters (email, firstName, lastName, state, note, identities, password, appType, confirmation)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="email" Type="System.String" />
@@ -61,6 +65,7 @@
         <Parameter Name="note" Type="System.String" />
         <Parameter Name="identities" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.UserIdentityContract&gt;" />
         <Parameter Name="password" Type="System.String" />
+        <Parameter Name="appType" Type="System.String" />
         <Parameter Name="confirmation" Type="System.String" />
       </Parameters>
       <Docs>
@@ -78,12 +83,46 @@
         <param name="identities">Collection of user identities.</param>
         <param name="password">User Password. If no value is provided, a
             default password is generated.</param>
+        <param name="appType">Determines the type of application which send
+            the create user request. Default is legacy portal. Possible values
+            include: 'portal', 'developerPortal'</param>
         <param name="confirmation">Determines the type of confirmation
             e-mail that will be sent to the newly created user. Possible values
             include: 'signup', 'invite'</param>
         <summary>
             Initializes a new instance of the UserCreateParameters class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppType">
+      <MemberSignature Language="C#" Value="public string AppType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters.AppType" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppType As String" />
+      <MemberSignature Language="F#" Value="member this.AppType : string with get, set" Usage="Microsoft.Azure.Management.ApiManagement.Models.UserCreateParameters.AppType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.appType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.appType")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets determines the type of application which send the
+            create user request. Default is legacy portal. Possible values
+            include: 'portal', 'developerPortal'
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -96,11 +135,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.confirmation")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.confirmation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.confirmation")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -125,11 +166,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.email")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.email")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.email")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -153,11 +196,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.firstName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.firstName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.firstName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -180,11 +225,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.identities")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.identities")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.identities")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -207,11 +254,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.lastName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.lastName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.lastName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -234,11 +283,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.note")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.note")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.note")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -261,11 +312,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.password")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.password")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.password")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -289,11 +342,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.state")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.state")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.state")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -319,7 +374,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

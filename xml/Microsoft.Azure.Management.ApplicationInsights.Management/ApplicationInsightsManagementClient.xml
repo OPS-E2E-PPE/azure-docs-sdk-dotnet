@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ApplicationInsightsManagementClient = class&#xA;    inherit ServiceClient&lt;ApplicationInsightsManagementClient&gt;&#xA;    interface IApplicationInsightsManagementClient&#xA;    interface IDisposable&#xA;    interface IAzureClient" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <AssemblyVersion>0.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Rest.ServiceClient&lt;Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient&gt;</BaseTypeName>
@@ -41,13 +41,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -71,14 +72,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -100,6 +102,33 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationInsightsManagementClient (System.Net.Http.HttpClient httpClient, bool disposeHttpClient);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpClient httpClient, bool disposeHttpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.#ctor(System.Net.Http.HttpClient,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (httpClient As HttpClient, disposeHttpClient As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient : System.Net.Http.HttpClient * bool -&gt; Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient" Usage="new Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient (httpClient, disposeHttpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+        <Parameter Name="disposeHttpClient" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="httpClient">
+            HttpClient to be used
+            </param>
+        <param name="disposeHttpClient">
+            True: will dispose the provided httpClient on calling ApplicationInsightsManagementClient.Dispose(). False: will not dispose provided httpClient</param>
+        <summary>
+            Initializes a new instance of the ApplicationInsightsManagementClient class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected ApplicationInsightsManagementClient (System.Net.Http.HttpClientHandler rootHandler, params System.Net.Http.DelegatingHandler[] handlers);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpClientHandler rootHandler, class System.Net.Http.DelegatingHandler[] handlers) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])" />
@@ -108,14 +137,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rootHandler" Type="System.Net.Http.HttpClientHandler" />
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -142,14 +172,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -171,6 +202,40 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationInsightsManagementClient (Microsoft.Rest.ServiceClientCredentials credentials, System.Net.Http.HttpClient httpClient, bool disposeHttpClient);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rest.ServiceClientCredentials credentials, class System.Net.Http.HttpClient httpClient, bool disposeHttpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClient,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (credentials As ServiceClientCredentials, httpClient As HttpClient, disposeHttpClient As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient : Microsoft.Rest.ServiceClientCredentials * System.Net.Http.HttpClient * bool -&gt; Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient" Usage="new Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient (credentials, httpClient, disposeHttpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+        <Parameter Name="disposeHttpClient" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="credentials">
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+        <param name="httpClient">
+            HttpClient to be used
+            </param>
+        <param name="disposeHttpClient">
+            True: will dispose the provided httpClient on calling ApplicationInsightsManagementClient.Dispose(). False: will not dispose provided httpClient</param>
+        <summary>
+            Initializes a new instance of the ApplicationInsightsManagementClient class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ApplicationInsightsManagementClient (Microsoft.Rest.ServiceClientCredentials credentials, System.Net.Http.HttpClientHandler rootHandler, params System.Net.Http.DelegatingHandler[] handlers);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rest.ServiceClientCredentials credentials, class System.Net.Http.HttpClientHandler rootHandler, class System.Net.Http.DelegatingHandler[] handlers) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])" />
@@ -179,7 +244,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -187,7 +252,8 @@
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -220,7 +286,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -228,7 +294,8 @@
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -261,7 +328,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -269,7 +336,8 @@
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -302,7 +370,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -311,7 +379,8 @@
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -350,14 +419,58 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the preferred language for the response.
+            The preferred language for the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyticsItems">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IAnalyticsItemsOperations AnalyticsItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IAnalyticsItemsOperations AnalyticsItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.AnalyticsItems" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AnalyticsItems As IAnalyticsItemsOperations" />
+      <MemberSignature Language="F#" Value="member this.AnalyticsItems : Microsoft.Azure.Management.ApplicationInsights.Management.IAnalyticsItemsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.AnalyticsItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IAnalyticsItemsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IAnalyticsItemsOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IAnnotationsOperations Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IAnnotationsOperations Annotations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Annotations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Annotations As IAnnotationsOperations" />
+      <MemberSignature Language="F#" Value="member this.Annotations : Microsoft.Azure.Management.ApplicationInsights.Management.IAnnotationsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IAnnotationsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IAnnotationsOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -372,7 +485,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IAPIKeysOperations</ReturnType>
@@ -380,28 +493,6 @@
       <Docs>
         <summary>
             Gets the IAPIKeysOperations.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ApiVersion">
-      <MemberSignature Language="C#" Value="public string ApiVersion { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string ApiVersion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ApiVersion" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApiVersion As String" />
-      <MemberSignature Language="F#" Value="member this.ApiVersion : string" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ApiVersion" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Client Api Version.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -419,7 +510,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -427,6 +518,28 @@
       <Docs>
         <summary>
             The base URI of the service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentAvailableFeatures">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IComponentAvailableFeaturesOperations ComponentAvailableFeatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IComponentAvailableFeaturesOperations ComponentAvailableFeatures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentAvailableFeatures" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComponentAvailableFeatures As IComponentAvailableFeaturesOperations" />
+      <MemberSignature Language="F#" Value="member this.ComponentAvailableFeatures : Microsoft.Azure.Management.ApplicationInsights.Management.IComponentAvailableFeaturesOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentAvailableFeatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentAvailableFeaturesOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IComponentAvailableFeaturesOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -441,7 +554,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentCurrentBillingFeaturesOperations</ReturnType>
@@ -449,6 +562,50 @@
       <Docs>
         <summary>
             Gets the IComponentCurrentBillingFeaturesOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentFeatureCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IComponentFeatureCapabilitiesOperations ComponentFeatureCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IComponentFeatureCapabilitiesOperations ComponentFeatureCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentFeatureCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComponentFeatureCapabilities As IComponentFeatureCapabilitiesOperations" />
+      <MemberSignature Language="F#" Value="member this.ComponentFeatureCapabilities : Microsoft.Azure.Management.ApplicationInsights.Management.IComponentFeatureCapabilitiesOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentFeatureCapabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentFeatureCapabilitiesOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IComponentFeatureCapabilitiesOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentLinkedStorageAccounts">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IComponentLinkedStorageAccountsOperations ComponentLinkedStorageAccounts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IComponentLinkedStorageAccountsOperations ComponentLinkedStorageAccounts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentLinkedStorageAccounts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComponentLinkedStorageAccounts As IComponentLinkedStorageAccountsOperations" />
+      <MemberSignature Language="F#" Value="member this.ComponentLinkedStorageAccounts : Microsoft.Azure.Management.ApplicationInsights.Management.IComponentLinkedStorageAccountsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ComponentLinkedStorageAccounts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentLinkedStorageAccountsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IComponentLinkedStorageAccountsOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -463,7 +620,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentQuotaStatusOperations</ReturnType>
@@ -485,7 +642,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IComponentsOperations</ReturnType>
@@ -507,7 +664,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
@@ -529,7 +686,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
@@ -551,7 +708,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations</ReturnType>
@@ -559,6 +716,28 @@
       <Docs>
         <summary>
             Gets the IExportConfigurationsOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Favorites">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IFavoritesOperations Favorites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IFavoritesOperations Favorites" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Favorites" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Favorites As IFavoritesOperations" />
+      <MemberSignature Language="F#" Value="member this.Favorites : Microsoft.Azure.Management.ApplicationInsights.Management.IFavoritesOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Favorites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IFavoritesOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IFavoritesOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -577,15 +756,16 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            When set to true a unique x-ms-client-request-id value is generated and
-            included in each request. Default is true.
+            Whether a unique x-ms-client-request-id should be generated. When set to
+            true a unique x-ms-client-request-id value is generated and included in
+            each request. Default is true.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -604,15 +784,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the retry timeout in seconds for Long Running Operations.
-            Default value is 30.
+            The retry timeout in seconds for Long Running Operations. Default value is
+            30.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -627,7 +807,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IOperations</ReturnType>
@@ -635,6 +815,28 @@
       <Docs>
         <summary>
             Gets the IOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProactiveDetectionConfigurations">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IProactiveDetectionConfigurationsOperations ProactiveDetectionConfigurations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IProactiveDetectionConfigurationsOperations ProactiveDetectionConfigurations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ProactiveDetectionConfigurations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProactiveDetectionConfigurations As IProactiveDetectionConfigurationsOperations" />
+      <MemberSignature Language="F#" Value="member this.ProactiveDetectionConfigurations : Microsoft.Azure.Management.ApplicationInsights.Management.IProactiveDetectionConfigurationsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.ProactiveDetectionConfigurations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IProactiveDetectionConfigurationsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IProactiveDetectionConfigurationsOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -649,7 +851,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
@@ -674,14 +876,36 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The Azure subscription ID.
+            The ID of the target subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebTestLocations">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IWebTestLocationsOperations WebTestLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IWebTestLocationsOperations WebTestLocations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.WebTestLocations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WebTestLocations As IWebTestLocationsOperations" />
+      <MemberSignature Language="F#" Value="member this.WebTestLocations : Microsoft.Azure.Management.ApplicationInsights.Management.IWebTestLocationsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.WebTestLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IWebTestLocationsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IWebTestLocationsOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -696,7 +920,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IWebTestsOperations</ReturnType>
@@ -704,6 +928,50 @@
       <Docs>
         <summary>
             Gets the IWebTestsOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Workbooks">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IWorkbooksOperations Workbooks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IWorkbooksOperations Workbooks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Workbooks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Workbooks As IWorkbooksOperations" />
+      <MemberSignature Language="F#" Value="member this.Workbooks : Microsoft.Azure.Management.ApplicationInsights.Management.IWorkbooksOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.Workbooks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IWorkbooksOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IWorkbooksOperations.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkItemConfigurations">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ApplicationInsights.Management.IWorkItemConfigurationsOperations WorkItemConfigurations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ApplicationInsights.Management.IWorkItemConfigurationsOperations WorkItemConfigurations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.WorkItemConfigurations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WorkItemConfigurations As IWorkItemConfigurationsOperations" />
+      <MemberSignature Language="F#" Value="member this.WorkItemConfigurations : Microsoft.Azure.Management.ApplicationInsights.Management.IWorkItemConfigurationsOperations" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ApplicationInsightsManagementClient.WorkItemConfigurations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.IWorkItemConfigurationsOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IWorkItemConfigurationsOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type MultiBitrateFormat = class&#xA;    inherit Format" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Media.Models.Format</BaseTypeName>
@@ -14,7 +17,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("#Microsoft.Media.MultiBitrateFormat")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("#Microsoft.Media.MultiBitrateFormat")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("#Microsoft.Media.MultiBitrateFormat")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -36,7 +40,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -50,12 +57,15 @@
       <MemberSignature Language="C#" Value="public MultiBitrateFormat (string filenamePattern, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.OutputFile&gt; outputFiles = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filenamePattern, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Media.Models.OutputFile&gt; outputFiles) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.Models.MultiBitrateFormat.#ctor(System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Media.Models.OutputFile})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (filenamePattern As String, Optional outputFiles As IList(Of OutputFile) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (filenamePattern As String, Optional outputFiles As IList(Of OutputFile) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Media.Models.MultiBitrateFormat : string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.OutputFile&gt; -&gt; Microsoft.Azure.Management.Media.Models.MultiBitrateFormat" Usage="new Microsoft.Azure.Management.Media.Models.MultiBitrateFormat (filenamePattern, outputFiles)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="filenamePattern" Type="System.String" />
@@ -64,13 +74,19 @@
       <Docs>
         <param name="filenamePattern">The pattern of the file names for the
             generated output files. The following macros are supported in the
-            file name: {Basename} - The base name of the input video
+            file name: {Basename} - An expansion macro that will use the name
+            of the input video file. If the base name(the file suffix is not
+            included) of the input video file is less than 32 characters long,
+            the base name of input video files will be used. If the length of
+            base name of the input video file exceeds 32 characters, the base
+            name is truncated to the first 32 characters in total length.
             {Extension} - The appropriate extension for this format. {Label} -
             The label assigned to the codec/layer. {Index} - A unique index for
             thumbnails. Only applicable to thumbnails. {Bitrate} - The
             audio/video bitrate. Not applicable to thumbnails. {Codec} - The
-            type of the audio/video codec. Any unsubstituted macros will be
-            collapsed and removed from the filename.</param>
+            type of the audio/video codec. {Resolution} - The video resolution.
+            Any unsubstituted macros will be collapsed and removed from the
+            filename.</param>
         <param name="outputFiles">The list of output files to produce.
             Each entry in the list is a set of audio and video layer labels to
             be muxed together .</param>
@@ -89,11 +105,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="outputFiles")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="outputFiles")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="outputFiles")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -118,7 +138,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

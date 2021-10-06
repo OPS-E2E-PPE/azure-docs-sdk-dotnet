@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type EnrollmentAccount = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Billing.Models.Resource</BaseTypeName>
@@ -15,12 +14,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            An account resource.
+            An enrollment account.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -33,8 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,12 +47,12 @@
       <MemberSignature Language="C#" Value="public EnrollmentAccount (string id = default, string name = default, string type = default, string accountName = default, string costCenter = default, string accountOwner = default, string status = default, DateTime? startDate = default, DateTime? endDate = default, Microsoft.Azure.Management.Billing.Models.Department department = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string accountName, string costCenter, string accountOwner, string status, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; startDate, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; endDate, class Microsoft.Azure.Management.Billing.Models.Department department) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.EnrollmentAccount.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.Azure.Management.Billing.Models.Department)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional accountName As String = null, Optional costCenter As String = null, Optional accountOwner As String = null, Optional status As String = null, Optional startDate As Nullable(Of DateTime) = null, Optional endDate As Nullable(Of DateTime) = null, Optional department As Department = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional accountName As String = Nothing, Optional costCenter As String = Nothing, Optional accountOwner As String = Nothing, Optional status As String = Nothing, Optional startDate As Nullable(Of DateTime) = Nothing, Optional endDate As Nullable(Of DateTime) = Nothing, Optional department As Department = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.EnrollmentAccount : string * string * string * string * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * Microsoft.Azure.Management.Billing.Models.Department -&gt; Microsoft.Azure.Management.Billing.Models.EnrollmentAccount" Usage="new Microsoft.Azure.Management.Billing.Models.EnrollmentAccount (id, name, type, accountName, costCenter, accountOwner, status, startDate, endDate, department)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -71,12 +70,17 @@
         <param name="id">Resource Id.</param>
         <param name="name">Resource name.</param>
         <param name="type">Resource type.</param>
-        <param name="accountName">The account name.</param>
-        <param name="costCenter">The cost center name.</param>
-        <param name="accountOwner">The account owner</param>
-        <param name="status">The status for account.</param>
-        <param name="startDate">Account Start Date</param>
-        <param name="endDate">Account End Date</param>
+        <param name="accountName">The name of the enrollment
+            account.</param>
+        <param name="costCenter">The cost center associated with the
+            enrollment account.</param>
+        <param name="accountOwner">The owner of the enrollment
+            account.</param>
+        <param name="status">The status of the enrollment account.</param>
+        <param name="startDate">The start date of the enrollment
+            account.</param>
+        <param name="endDate">The end date of the enrollment
+            account.</param>
         <param name="department">Associated department. By default this is
             not populated, unless it's specified in $expand.</param>
         <summary>
@@ -94,11 +98,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.accountName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.accountName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.accountName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -106,7 +111,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the account name.
+            Gets or sets the name of the enrollment account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -121,11 +126,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.accountOwner")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.accountOwner")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.accountOwner")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -133,7 +139,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the account owner
+            Gets or sets the owner of the enrollment account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -148,11 +154,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -160,7 +167,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the cost center name.
+            Gets or sets the cost center associated with the enrollment
+            account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -175,11 +183,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.department")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.department")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.department")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -203,11 +212,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.endDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.endDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.endDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -215,7 +225,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets account End Date
+            Gets or sets the end date of the enrollment account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -230,11 +240,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.startDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.startDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.startDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -242,7 +253,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets account Start Date
+            Gets or sets the start date of the enrollment account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -257,11 +268,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -269,7 +281,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the status for account.
+            Gets or sets the status of the enrollment account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

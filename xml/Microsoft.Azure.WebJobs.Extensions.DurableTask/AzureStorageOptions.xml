@@ -269,12 +269,36 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="UseLegacyPartitionManagement">
+      <MemberSignature Language="C#" Value="public bool UseLegacyPartitionManagement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseLegacyPartitionManagement" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.AzureStorageOptions.UseLegacyPartitionManagement" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseLegacyPartitionManagement As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseLegacyPartitionManagement : bool with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.AzureStorageOptions.UseLegacyPartitionManagement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether or not to use the old partition management strategy, or the new
+            strategy that is more resilient to split brain problems, at the potential expense
+            of scale out performance.
+            </summary>
+        <value>A boolean indicating whether we use the legacy partition strategy. Defaults to false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Validate">
-      <MemberSignature Language="C#" Value="public void Validate ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Validate() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.WebJobs.Extensions.DurableTask.AzureStorageOptions.Validate" />
-      <MemberSignature Language="VB.NET" Value="Public Sub Validate ()" />
-      <MemberSignature Language="F#" Value="member this.Validate : unit -&gt; unit" Usage="azureStorageOptions.Validate " />
+      <MemberSignature Language="C#" Value="public void Validate (Microsoft.Extensions.Logging.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Validate(class Microsoft.Extensions.Logging.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.WebJobs.Extensions.DurableTask.AzureStorageOptions.Validate(Microsoft.Extensions.Logging.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Validate (logger As ILogger)" />
+      <MemberSignature Language="F#" Value="member this.Validate : Microsoft.Extensions.Logging.ILogger -&gt; unit" Usage="azureStorageOptions.Validate logger" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
@@ -283,8 +307,11 @@
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
+      </Parameters>
       <Docs>
+        <param name="logger">To be added.</param>
         <summary>
             Throws an exception if any of the settings of the storage provider are invalid.
             </summary>

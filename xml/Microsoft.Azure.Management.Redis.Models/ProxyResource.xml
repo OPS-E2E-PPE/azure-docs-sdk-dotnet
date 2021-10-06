@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Redis</AssemblyName>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Redis.Models.Resource</BaseTypeName>
@@ -14,10 +15,12 @@
   <Interfaces />
   <Docs>
     <summary>
-            The resource model definition for a ARM proxy resource. It will have
-            everything other than required location and tags
+            Proxy Resource
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            The resource model definition for a Azure Resource Manager proxy
+            resource. It will not have tags and a location
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -29,6 +32,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Redis</AssemblyName>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -42,12 +46,13 @@
       <MemberSignature Language="C#" Value="public ProxyResource (string id = default, string name = default, string type = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Redis.Models.ProxyResource.#ctor(System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Redis.Models.ProxyResource : string * string * string -&gt; Microsoft.Azure.Management.Redis.Models.ProxyResource" Usage="new Microsoft.Azure.Management.Redis.Models.ProxyResource (id, name, type)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Redis</AssemblyName>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -55,9 +60,12 @@
         <Parameter Name="type" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id">Resource ID.</param>
-        <param name="name">Resource name.</param>
-        <param name="type">Resource type.</param>
+        <param name="id">Fully qualified resource ID for the resource. Ex -
+            /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
+        <param name="name">The name of the resource</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
         <summary>
             Initializes a new instance of the ProxyResource class.
             </summary>

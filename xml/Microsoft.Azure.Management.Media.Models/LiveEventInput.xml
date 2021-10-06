@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type LiveEventInput = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +17,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The Live Event input.
+            The live event input.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +30,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +47,15 @@
       <MemberSignature Language="C#" Value="public LiveEventInput (Microsoft.Azure.Management.Media.Models.LiveEventInputProtocol streamingProtocol, Microsoft.Azure.Management.Media.Models.LiveEventInputAccessControl accessControl = default, string keyFrameIntervalDuration = default, string accessToken = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; endpoints = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Azure.Management.Media.Models.LiveEventInputProtocol streamingProtocol, class Microsoft.Azure.Management.Media.Models.LiveEventInputAccessControl accessControl, string keyFrameIntervalDuration, string accessToken, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; endpoints) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.Models.LiveEventInput.#ctor(Microsoft.Azure.Management.Media.Models.LiveEventInputProtocol,Microsoft.Azure.Management.Media.Models.LiveEventInputAccessControl,System.String,System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Media.Models.LiveEventEndpoint})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (streamingProtocol As LiveEventInputProtocol, Optional accessControl As LiveEventInputAccessControl = null, Optional keyFrameIntervalDuration As String = null, Optional accessToken As String = null, Optional endpoints As IList(Of LiveEventEndpoint) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (streamingProtocol As LiveEventInputProtocol, Optional accessControl As LiveEventInputAccessControl = Nothing, Optional keyFrameIntervalDuration As String = Nothing, Optional accessToken As String = Nothing, Optional endpoints As IList(Of LiveEventEndpoint) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Media.Models.LiveEventInput : Microsoft.Azure.Management.Media.Models.LiveEventInputProtocol * Microsoft.Azure.Management.Media.Models.LiveEventInputAccessControl * string * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; -&gt; Microsoft.Azure.Management.Media.Models.LiveEventInput" Usage="new Microsoft.Azure.Management.Media.Models.LiveEventInput (streamingProtocol, accessControl, keyFrameIntervalDuration, accessToken, endpoints)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="streamingProtocol" Type="Microsoft.Azure.Management.Media.Models.LiveEventInputProtocol" />
@@ -56,18 +65,22 @@
         <Parameter Name="endpoints" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt;" />
       </Parameters>
       <Docs>
-        <param name="streamingProtocol">The streaming protocol for the Live
-            Event.  This is specified at creation time and cannot be updated.
+        <param name="streamingProtocol">The input protocol for the live
+            event. This is specified at creation time and cannot be updated.
             Possible values include: 'FragmentedMP4', 'RTMP'</param>
-        <param name="accessControl">The access control for LiveEvent
-            Input.</param>
-        <param name="keyFrameIntervalDuration">ISO 8601 timespan duration
-            of the key frame interval duration.</param>
-        <param name="accessToken">A unique identifier for a stream.  This
-            can be specified at creation time but cannot be updated.  If
-            omitted, the service will generate a unique value.</param>
-        <param name="endpoints">The input endpoints for the Live
-            Event.</param>
+        <param name="accessControl">Access control for live event
+            input.</param>
+        <param name="keyFrameIntervalDuration">ISO 8601 time duration of
+            the key frame interval duration of the input. This value sets the
+            EXT-X-TARGETDURATION property in the HLS output. For example, use
+            PT2S to indicate 2 seconds. Leave the value empty for encoding live
+            events.</param>
+        <param name="accessToken">A UUID in string form to uniquely
+            identify the stream. This can be specified at creation time but
+            cannot be updated. If omitted, the service will generate a unique
+            value.</param>
+        <param name="endpoints">The input endpoints for the live
+            event.</param>
         <summary>
             Initializes a new instance of the LiveEventInput class.
             </summary>
@@ -83,11 +96,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="accessControl")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="accessControl")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="accessControl")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -95,7 +112,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the access control for LiveEvent Input.
+            Gets or sets access control for live event input.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -110,11 +127,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="accessToken")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="accessToken")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="accessToken")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -122,9 +143,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a unique identifier for a stream.  This can be
-            specified at creation time but cannot be updated.  If omitted, the
-            service will generate a unique value.
+            Gets or sets a UUID in string form to uniquely identify the stream.
+            This can be specified at creation time but cannot be updated. If
+            omitted, the service will generate a unique value.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -139,11 +160,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="endpoints")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="endpoints")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="endpoints")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -151,7 +176,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the input endpoints for the Live Event.
+            Gets or sets the input endpoints for the live event.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -166,11 +191,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="keyFrameIntervalDuration")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="keyFrameIntervalDuration")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="keyFrameIntervalDuration")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -178,8 +207,10 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets ISO 8601 timespan duration of the key frame interval
-            duration.
+            Gets or sets ISO 8601 time duration of the key frame interval
+            duration of the input. This value sets the EXT-X-TARGETDURATION
+            property in the HLS output. For example, use PT2S to indicate 2
+            seconds. Leave the value empty for encoding live events.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -194,11 +225,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="streamingProtocol")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="streamingProtocol")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="streamingProtocol")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -206,7 +241,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the streaming protocol for the Live Event.  This is
+            Gets or sets the input protocol for the live event. This is
             specified at creation time and cannot be updated. Possible values
             include: 'FragmentedMP4', 'RTMP'
             </summary>
@@ -223,7 +258,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -6,9 +6,9 @@
   <TypeSignature Language="F#" Value="type AudioStreamFormat = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-    <AssemblyVersion>1.8.0.28</AssemblyVersion>
-    <AssemblyVersion>1.9.0.28</AssemblyVersion>
-    <AssemblyVersion>1.10.0.28</AssemblyVersion>
+    <AssemblyVersion>1.16.0.28</AssemblyVersion>
+    <AssemblyVersion>1.17.0.28</AssemblyVersion>
+    <AssemblyVersion>1.18.0.28</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,7 +21,7 @@
   <Docs>
     <summary>
             Represents audio stream format used for custom audio input configurations.
-            Updated in version 1.5.0.
+            Updated in 1.5.0
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -38,9 +38,9 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -62,9 +62,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Audio.AudioStreamFormat</ReturnType>
@@ -75,11 +75,13 @@
       <Docs>
         <param name="compressedFormat">Formats are defined in AudioStreamContainerFormat enum</param>
         <summary>
-            Creates an audio stream format object with the specified compressed audio container format, to be used as input format.
-            Support added in 1.4.0.
+            Creates an audio stream format object that specifies which compressed audio container format the input uses.
+            Added in 1.4.0
             </summary>
         <returns>The audio stream format being created.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            See also: [Example code using codec compressed audio input](/azure/cognitive-services/speech-service/how-to-use-codec-compressed-audio-input-streams#example-code-using-codec-compressed-audio-input)
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetDefaultInputFormat">
@@ -91,9 +93,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Audio.AudioStreamFormat</ReturnType>
@@ -101,7 +103,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates an audio stream format object representing the default microphone input format (16 kHz, 16 bit, mono PCM).
+            Creates an audio stream format object that represents the default microphone input format (16 kHz, 16 bit, mono PCM).
             </summary>
         <returns>The audio stream format being created.</returns>
         <remarks>To be added.</remarks>
@@ -116,9 +118,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Audio.AudioStreamFormat</ReturnType>
@@ -126,8 +128,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates an audio stream format object representing the default speaker output format (16 kHz, 16 bit, mono PCM).
-            Added in version 1.4.0
+            Creates an audio stream format object that represents the default speaker output format (16 kHz, 16 bit, mono PCM).
+            Added in 1.4.0
             </summary>
         <returns>The audio stream format being created.</returns>
         <remarks>To be added.</remarks>
@@ -142,9 +144,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Audio.AudioStreamFormat</ReturnType>
@@ -160,10 +162,13 @@
         <param name="channels">Number of channels in the waveform-audio data.</param>
         <summary>
             Creates an audio stream format object with the specified PCM waveformat characteristics.
-            Currently, only WAV / PCM with 16-bit samples, 16 kHz sample rate, and a single channel (Mono) is supported. When used with Conversation Transcription, eight channels are supported.
             </summary>
         <returns>The audio stream format being created.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            See also: 
+            * [Recognize from in-memory stream](/azure/cognitive-services/speech-service/get-started-speech-to-text#recognize-from-in-memory-stream)
+            * [About the Speech SDK audio input stream API](/azure/cognitive-services/speech-service/how-to-use-audio-input-streams)
+            </remarks>
       </Docs>
     </Member>
   </Members>

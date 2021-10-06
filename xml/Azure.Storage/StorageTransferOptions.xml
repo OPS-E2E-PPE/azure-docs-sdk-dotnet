@@ -6,11 +6,10 @@
   <TypeSignature Language="F#" Value="type StorageTransferOptions = struct" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Common</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
-    <AssemblyVersion>12.1.0.0</AssemblyVersion>
-    <AssemblyVersion>12.1.1.0</AssemblyVersion>
-    <AssemblyVersion>12.2.0.0</AssemblyVersion>
-    <AssemblyVersion>12.3.0.0</AssemblyVersion>
+    <AssemblyVersion>12.7.2.0</AssemblyVersion>
+    <AssemblyVersion>12.7.3.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
+    <AssemblyVersion>12.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -39,15 +38,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -74,15 +73,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -109,15 +108,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -141,8 +140,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
@@ -150,7 +158,36 @@
         <summary>
             The size of the first range request in bytes. Blobs smaller than this limit will
             be downloaded in a single request. Blobs larger than this limit will continue being
-            downloaded in chunks of size MaximumTransferLength.
+            downloaded in chunks of size <see cref="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" />. This property is a
+            backwards-compatible facade for <see cref="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" />, which supports
+            long values. Use <see cref="P:Azure.Storage.StorageTransferOptions.InitialTransferSize" /> for full access of supported values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialTransferSize">
+      <MemberSignature Language="C#" Value="public long? InitialTransferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; InitialTransferSize" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.StorageTransferOptions.InitialTransferSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property InitialTransferSize As Nullable(Of Long)" />
+      <MemberSignature Language="F#" Value="member this.InitialTransferSize : Nullable&lt;int64&gt; with get, set" Usage="Azure.Storage.StorageTransferOptions.InitialTransferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Common</AssemblyName>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The size of the first range request in bytes. Blobs smaller than this limit will
+            be downloaded in a single request. Blobs larger than this limit will continue being
+            downloaded in chunks of size <see cref="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -165,11 +202,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -191,14 +227,46 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The maximum length of an transfer in bytes. This property is a backwards-compatible
+            facade for <see cref="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" />, which supports long values. Use
+            <see cref="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" /> for full access of supported values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumTransferSize">
+      <MemberSignature Language="C#" Value="public long? MaximumTransferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; MaximumTransferSize" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.StorageTransferOptions.MaximumTransferSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumTransferSize As Nullable(Of Long)" />
+      <MemberSignature Language="F#" Value="member this.MaximumTransferSize : Nullable&lt;int64&gt; with get, set" Usage="Azure.Storage.StorageTransferOptions.MaximumTransferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Common</AssemblyName>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -217,15 +285,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -254,15 +322,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Common</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.7.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.3.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+        <AssemblyVersion>12.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

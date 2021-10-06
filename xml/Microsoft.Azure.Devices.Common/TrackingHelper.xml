@@ -6,19 +6,29 @@
   <TypeSignature Language="F#" Value="type TrackingHelper = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-    <AssemblyVersion>1.18.2.0</AssemblyVersion>
-    <AssemblyVersion>1.18.3.0</AssemblyVersion>
-    <AssemblyVersion>1.18.4.0</AssemblyVersion>
-    <AssemblyVersion>1.19.0.0</AssemblyVersion>
-    <AssemblyVersion>1.20.0.0</AssemblyVersion>
+    <AssemblyVersion>1.31.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.33.0.0</AssemblyVersion>
+    <AssemblyVersion>1.34.0.0</AssemblyVersion>
+    <AssemblyVersion>1.35.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("This is for internal use only. SDK will not support this for external usage.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This is for internal use only. SDK will not support this for external usage.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+            Generates tracking Id with gateway, backend, partition and timestamp data.
+            </summary>
+    <remarks>
+            Tracking Id format is [GUID][-G:GatewayId][-B:BackendId][-P:PartitionId][-TimeStamp:Timestamp]
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="CheckAndAddGatewayIdToTrackingId">
@@ -30,11 +40,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -43,9 +53,11 @@
         <Parameter Name="trackingId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="trackingId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="trackingId">Tracking Id.</param>
+        <summary>
+            Generates a tracking Id with gateway details if not already there in the tracking Id.
+            </summary>
+        <returns>A tracking Id with gateway details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -58,17 +70,19 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gateway Id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,19 +95,21 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,11 +122,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -120,8 +136,10 @@
       </Parameters>
       <Docs>
         <param name="exception">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,11 +152,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -150,8 +168,10 @@
       <Docs>
         <param name="backendId">To be added.</param>
         <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,11 +184,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -182,8 +202,10 @@
         <param name="exception">To be added.</param>
         <param name="backendId">To be added.</param>
         <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -196,11 +218,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -214,9 +236,13 @@
         <param name="gatewayId">To be added.</param>
         <param name="backendId">To be added.</param>
         <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>
+            Generates a unique tracking Id with gateway, backend, partition and timestamp information.
+            </summary>
+        <returns>A tracking Id.</returns>
+        <remarks>
+            Tracking Id format is [GUID][-G:GatewayId][-B:BackendId][-P:PartitionId][-TimeStamp:Timestamp]
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="GenerateTrackingId">
@@ -228,11 +254,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -248,8 +274,10 @@
         <param name="gatewayId">To be added.</param>
         <param name="backendId">To be added.</param>
         <param name="partitionId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,11 +290,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Common.Exceptions.ErrorCode</ReturnType>
@@ -276,8 +304,10 @@
       </Parameters>
       <Docs>
         <param name="ex">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Gets AMQP error code. Not used.
+            </summary>
+        <returns>Error code.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -290,11 +320,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -304,8 +334,10 @@
       </Parameters>
       <Docs>
         <param name="link">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -318,11 +350,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -332,8 +364,10 @@
       </Parameters>
       <Docs>
         <param name="amqpException">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Generates a tracking Id. Not used.
+            </summary>
+        <returns>A tracking Id.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -346,11 +380,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -360,7 +394,9 @@
       </Parameters>
       <Docs>
         <param name="exception">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+            Sets error code from AMQP exception. Not used.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

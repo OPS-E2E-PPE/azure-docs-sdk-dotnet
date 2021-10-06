@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type ManagementPolicyBaseBlob = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>21.0.0.0</AssemblyVersion>
+    <AssemblyVersion>22.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,20 +40,22 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ManagementPolicyBaseBlob (Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToCool = default, Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToArchive = default, Microsoft.Azure.Management.Storage.Models.DateAfterModification delete = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToCool, class Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToArchive, class Microsoft.Azure.Management.Storage.Models.DateAfterModification delete) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob.#ctor(Microsoft.Azure.Management.Storage.Models.DateAfterModification,Microsoft.Azure.Management.Storage.Models.DateAfterModification,Microsoft.Azure.Management.Storage.Models.DateAfterModification)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional tierToCool As DateAfterModification = null, Optional tierToArchive As DateAfterModification = null, Optional delete As DateAfterModification = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob : Microsoft.Azure.Management.Storage.Models.DateAfterModification * Microsoft.Azure.Management.Storage.Models.DateAfterModification * Microsoft.Azure.Management.Storage.Models.DateAfterModification -&gt; Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob" Usage="new Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob (tierToCool, tierToArchive, delete)" />
+      <MemberSignature Language="C#" Value="public ManagementPolicyBaseBlob (Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToCool = default, Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToArchive = default, Microsoft.Azure.Management.Storage.Models.DateAfterModification delete = default, bool? enableAutoTierToHotFromCool = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToCool, class Microsoft.Azure.Management.Storage.Models.DateAfterModification tierToArchive, class Microsoft.Azure.Management.Storage.Models.DateAfterModification delete, valuetype System.Nullable`1&lt;bool&gt; enableAutoTierToHotFromCool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob.#ctor(Microsoft.Azure.Management.Storage.Models.DateAfterModification,Microsoft.Azure.Management.Storage.Models.DateAfterModification,Microsoft.Azure.Management.Storage.Models.DateAfterModification,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional tierToCool As DateAfterModification = Nothing, Optional tierToArchive As DateAfterModification = Nothing, Optional delete As DateAfterModification = Nothing, Optional enableAutoTierToHotFromCool As Nullable(Of Boolean) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob : Microsoft.Azure.Management.Storage.Models.DateAfterModification * Microsoft.Azure.Management.Storage.Models.DateAfterModification * Microsoft.Azure.Management.Storage.Models.DateAfterModification * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob" Usage="new Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob (tierToCool, tierToArchive, delete, enableAutoTierToHotFromCool)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tierToCool" Type="Microsoft.Azure.Management.Storage.Models.DateAfterModification" />
         <Parameter Name="tierToArchive" Type="Microsoft.Azure.Management.Storage.Models.DateAfterModification" />
         <Parameter Name="delete" Type="Microsoft.Azure.Management.Storage.Models.DateAfterModification" />
+        <Parameter Name="enableAutoTierToHotFromCool" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="tierToCool">The function to tier blobs to cool
@@ -59,6 +63,10 @@
         <param name="tierToArchive">The function to tier blobs to archive
             storage. Support blobs currently at Hot or Cool tier</param>
         <param name="delete">The function to delete the blob</param>
+        <param name="enableAutoTierToHotFromCool">This property enables
+            auto tiering of a blob from cool to hot on a blob access. This
+            property requires
+            tierToCool.daysAfterLastAccessTimeGreaterThan.</param>
         <summary>
             Initializes a new instance of the ManagementPolicyBaseBlob class.
             </summary>
@@ -74,11 +82,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="delete")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="delete")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="delete")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -87,6 +97,37 @@
       <Docs>
         <summary>
             Gets or sets the function to delete the blob
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAutoTierToHotFromCool">
+      <MemberSignature Language="C#" Value="public bool? EnableAutoTierToHotFromCool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableAutoTierToHotFromCool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob.EnableAutoTierToHotFromCool" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableAutoTierToHotFromCool As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableAutoTierToHotFromCool : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.ManagementPolicyBaseBlob.EnableAutoTierToHotFromCool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="enableAutoTierToHotFromCool")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="enableAutoTierToHotFromCool")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets this property enables auto tiering of a blob from cool
+            to hot on a blob access. This property requires
+            tierToCool.daysAfterLastAccessTimeGreaterThan.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -101,11 +142,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tierToArchive")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tierToArchive")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tierToArchive")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -129,11 +172,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tierToCool")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tierToCool")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tierToCool")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -157,7 +202,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

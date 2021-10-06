@@ -6,11 +6,11 @@
   <TypeSignature Language="F#" Value="type ExportImportDevice = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-    <AssemblyVersion>1.18.2.0</AssemblyVersion>
-    <AssemblyVersion>1.18.3.0</AssemblyVersion>
-    <AssemblyVersion>1.18.4.0</AssemblyVersion>
-    <AssemblyVersion>1.19.0.0</AssemblyVersion>
-    <AssemblyVersion>1.20.0.0</AssemblyVersion>
+    <AssemblyVersion>1.31.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.33.0.0</AssemblyVersion>
+    <AssemblyVersion>1.34.0.0</AssemblyVersion>
+    <AssemblyVersion>1.35.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,7 +18,7 @@
   <Interfaces />
   <Docs>
     <summary>
-             contains device properties specified during export/import operation
+            Contains device properties specified during export/import job operation.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -31,16 +31,16 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            making default ctor public
+            Create an ExportImportDevice.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -54,21 +54,21 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="device" Type="Microsoft.Azure.Devices.Device" />
         <Parameter Name="importmode" Type="Microsoft.Azure.Devices.ImportMode" />
       </Parameters>
       <Docs>
-        <param name="device" />
-        <param name="importmode" />
+        <param name="device">Device properties</param>
+        <param name="importmode">Identifies the behavior when merging a device to the registry during import actions.</param>
         <summary>
-            ctor which takes a Device object along with import mode
+            Create an ExportImportDevice.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -82,15 +82,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="authentication")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="authentication")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="authentication")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -98,7 +99,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            AuthenticationMechanism of the device
+            Authentication mechanism of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -113,24 +114,60 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="capabilities")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="capabilities")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="capabilities")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Shared.DeviceCapabilities</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Status of capabilities enabled on the device
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceScope">
+      <MemberSignature Language="C#" Value="public string DeviceScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceScope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.DeviceScope" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeviceScope As String" />
+      <MemberSignature Language="F#" Value="member this.DeviceScope : string with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.DeviceScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Include, PropertyName="deviceScope")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Include, PropertyName="deviceScope")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The scope of the device. For edge devices, this is auto-generated and immutable. For leaf devices, set this to create child/parent
+             relationship.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             For leaf devices, the value to set a parent edge device can be retrieved from the parent edge device's device scope property.
+            
+             For more information, see <see href="https://docs.microsoft.com/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11#parent-and-child-relationships" />.
+             </remarks>
       </Docs>
     </Member>
     <Member MemberName="ETag">
@@ -142,15 +179,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="eTag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="eTag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="eTag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -158,7 +196,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            ETag of the device
+            A string representing an ETag for the entity as per RFC7232.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -173,15 +211,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="id", Required=Newtonsoft.Json.Required.Always)</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="id", Required=Newtonsoft.Json.Required.Always)]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="id", Required=Newtonsoft.Json.Required.Always)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -189,7 +228,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Id of the device
+            Id of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -204,15 +243,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(DefaultValueHandling=Newtonsoft.Json.DefaultValueHandling.IgnoreAndPopulate, PropertyName="importMode")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(DefaultValueHandling=Newtonsoft.Json.DefaultValueHandling.IgnoreAndPopulate, PropertyName="importMode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(DefaultValueHandling=Newtonsoft.Json.DefaultValueHandling.IgnoreAndPopulate, PropertyName="importMode")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -220,7 +260,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            ImportMode of the device
+            Import mode of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -235,15 +275,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="moduleId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="moduleId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="moduleId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -251,7 +292,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Module Id for the object
+            Module Id for the object.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -266,22 +307,25 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="properties")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="properties")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="properties")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.ExportImportDevice+PropertyContainer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Desired and reported property bags
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -295,15 +339,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status", Required=Newtonsoft.Json.Required.Always)</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status", Required=Newtonsoft.Json.Required.Always)]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status", Required=Newtonsoft.Json.Required.Always)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -311,7 +356,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Status of the device
+            Status of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -326,15 +371,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="statusReason")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="statusReason")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="statusReason")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -342,7 +388,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            StatusReason of the device
+            Status reason of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -357,22 +403,25 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="tags")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="tags")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="tags")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Shared.TwinCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Tags representing a collection of properties.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -386,22 +435,25 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="twinETag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="twinETag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="twinETag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            String representing a Twin ETag for the entity, as per RFC7232.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

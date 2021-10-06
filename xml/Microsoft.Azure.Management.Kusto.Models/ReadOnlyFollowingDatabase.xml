@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Kusto.Models.Database</BaseTypeName>
@@ -15,10 +15,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("ReadOnlyFollowing")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("ReadOnlyFollowing")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("ReadOnlyFollowing")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +39,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,13 +53,13 @@
       <MemberSignature Language="C#" Value="public ReadOnlyFollowingDatabase (string id = default, string name = default, string type = default, string location = default, string provisioningState = default, TimeSpan? softDeletePeriod = default, TimeSpan? hotCachePeriod = default, Microsoft.Azure.Management.Kusto.Models.DatabaseStatistics statistics = default, string leaderClusterResourceId = default, string attachedDatabaseConfigurationName = default, string principalsModificationKind = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string location, string provisioningState, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; softDeletePeriod, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; hotCachePeriod, class Microsoft.Azure.Management.Kusto.Models.DatabaseStatistics statistics, string leaderClusterResourceId, string attachedDatabaseConfigurationName, string principalsModificationKind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},Microsoft.Azure.Management.Kusto.Models.DatabaseStatistics,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional location As String = null, Optional provisioningState As String = null, Optional softDeletePeriod As Nullable(Of TimeSpan) = null, Optional hotCachePeriod As Nullable(Of TimeSpan) = null, Optional statistics As DatabaseStatistics = null, Optional leaderClusterResourceId As String = null, Optional attachedDatabaseConfigurationName As String = null, Optional principalsModificationKind As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional location As String = Nothing, Optional provisioningState As String = Nothing, Optional softDeletePeriod As Nullable(Of TimeSpan) = Nothing, Optional hotCachePeriod As Nullable(Of TimeSpan) = Nothing, Optional statistics As DatabaseStatistics = Nothing, Optional leaderClusterResourceId As String = Nothing, Optional attachedDatabaseConfigurationName As String = Nothing, Optional principalsModificationKind As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase : string * string * string * string * string * Nullable&lt;TimeSpan&gt; * Nullable&lt;TimeSpan&gt; * Microsoft.Azure.Management.Kusto.Models.DatabaseStatistics * string * string * string -&gt; Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase" Usage="new Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase (id, name, type, location, provisioningState, softDeletePeriod, hotCachePeriod, statistics, leaderClusterResourceId, attachedDatabaseConfigurationName, principalsModificationKind)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -73,12 +75,12 @@
         <Parameter Name="principalsModificationKind" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id">Fully qualified resource Id for the resource. Ex -
+        <param name="id">Fully qualified resource ID for the resource. Ex -
             /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
         <param name="name">The name of the resource</param>
-        <param name="type">The type of the resource. Ex-
-            Microsoft.Compute/virtualMachines or
-            Microsoft.Storage/storageAccounts.</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
         <param name="location">Resource location.</param>
         <param name="provisioningState">The provisioned state of the
             resource. Possible values include: 'Running', 'Creating',
@@ -111,11 +113,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.attachedDatabaseConfigurationName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.attachedDatabaseConfigurationName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.attachedDatabaseConfigurationName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -139,11 +142,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.hotCachePeriod")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.hotCachePeriod")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.hotCachePeriod")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -168,11 +172,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.leaderClusterResourceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.leaderClusterResourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.leaderClusterResourceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -196,11 +201,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.principalsModificationKind")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.principalsModificationKind")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.principalsModificationKind")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -216,20 +222,24 @@
       </Docs>
     </Member>
     <Member MemberName="ProvisioningState">
-      <MemberSignature Language="C#" Value="public string ProvisioningState { get; }" />
+      <MemberSignature Language="C#" Value="public string ProvisioningState { get; set; }" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance string ProvisioningState" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase.ProvisioningState" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProvisioningState As String" />
-      <MemberSignature Language="F#" Value="member this.ProvisioningState : string" Usage="Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase.ProvisioningState" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProvisioningState As String" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.ProvisioningState : string with get, set" Usage="Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase.ProvisioningState" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public string ProvisioningState { get; }" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProvisioningState As String" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="F#" Value="member this.ProvisioningState : string" Usage="Microsoft.Azure.Management.Kusto.Models.ReadOnlyFollowingDatabase.ProvisioningState" FrameworkAlternate="azure-dotnet-legacy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -237,7 +247,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the provisioned state of the resource. Possible values
+            Gets or sets the provisioned state of the resource. Possible values
             include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed',
             'Moving'
             </summary>
@@ -255,11 +265,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.softDeletePeriod")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.softDeletePeriod")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.softDeletePeriod")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -284,11 +295,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Kusto</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.statistics")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.statistics")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.statistics")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

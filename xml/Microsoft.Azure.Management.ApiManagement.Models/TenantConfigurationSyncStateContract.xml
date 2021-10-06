@@ -6,15 +6,22 @@
   <TypeSignature Language="F#" Value="type TenantConfigurationSyncStateContract = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Tenant Configuration Synchronization State.
+            Result of Tenant Configuration Sync State.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -39,15 +47,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public TenantConfigurationSyncStateContract (string branch = default, string commitId = default, bool? isExport = default, bool? isSynced = default, bool? isGitEnabled = default, DateTime? syncDate = default, DateTime? configurationChangeDate = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string branch, string commitId, valuetype System.Nullable`1&lt;bool&gt; isExport, valuetype System.Nullable`1&lt;bool&gt; isSynced, valuetype System.Nullable`1&lt;bool&gt; isGitEnabled, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; syncDate, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; configurationChangeDate) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract.#ctor(System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional branch As String = null, Optional commitId As String = null, Optional isExport As Nullable(Of Boolean) = null, Optional isSynced As Nullable(Of Boolean) = null, Optional isGitEnabled As Nullable(Of Boolean) = null, Optional syncDate As Nullable(Of DateTime) = null, Optional configurationChangeDate As Nullable(Of DateTime) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract : string * string * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; -&gt; Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract" Usage="new Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract (branch, commitId, isExport, isSynced, isGitEnabled, syncDate, configurationChangeDate)" />
+      <MemberSignature Language="C#" Value="public TenantConfigurationSyncStateContract (string branch = default, string commitId = default, bool? isExport = default, bool? isSynced = default, bool? isGitEnabled = default, DateTime? syncDate = default, DateTime? configurationChangeDate = default, string lastOperationId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string branch, string commitId, valuetype System.Nullable`1&lt;bool&gt; isExport, valuetype System.Nullable`1&lt;bool&gt; isSynced, valuetype System.Nullable`1&lt;bool&gt; isGitEnabled, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; syncDate, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; configurationChangeDate, string lastOperationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract.#ctor(System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional branch As String = Nothing, Optional commitId As String = Nothing, Optional isExport As Nullable(Of Boolean) = Nothing, Optional isSynced As Nullable(Of Boolean) = Nothing, Optional isGitEnabled As Nullable(Of Boolean) = Nothing, Optional syncDate As Nullable(Of DateTime) = Nothing, Optional configurationChangeDate As Nullable(Of DateTime) = Nothing, Optional lastOperationId As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract : string * string * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string -&gt; Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract" Usage="new Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract (branch, commitId, isExport, isSynced, isGitEnabled, syncDate, configurationChangeDate, lastOperationId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="branch" Type="System.String" />
@@ -57,6 +65,7 @@
         <Parameter Name="isGitEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="syncDate" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="configurationChangeDate" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="lastOperationId" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="branch">The name of Git branch.</param>
@@ -75,6 +84,8 @@
             configuration change. The date conforms to the following format:
             `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
             </param>
+        <param name="lastOperationId">Most recent tenant configuration
+            operation identifier</param>
         <summary>
             Initializes a new instance of the
             TenantConfigurationSyncStateContract class.
@@ -91,11 +102,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="branch")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.branch")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.branch")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -118,11 +131,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="commitId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.commitId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.commitId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -145,11 +160,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="configurationChangeDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.configurationChangeDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.configurationChangeDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -175,11 +192,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="isExport")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.isExport")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.isExport")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -203,11 +222,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="isGitEnabled")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.isGitEnabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.isGitEnabled")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -231,11 +252,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="isSynced")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.isSynced")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.isSynced")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -250,6 +273,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LastOperationId">
+      <MemberSignature Language="C#" Value="public string LastOperationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastOperationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract.LastOperationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastOperationId As String" />
+      <MemberSignature Language="F#" Value="member this.LastOperationId : string with get, set" Usage="Microsoft.Azure.Management.ApiManagement.Models.TenantConfigurationSyncStateContract.LastOperationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.lastOperationId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.lastOperationId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets most recent tenant configuration operation identifier
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SyncDate">
       <MemberSignature Language="C#" Value="public DateTime? SyncDate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SyncDate" />
@@ -259,11 +310,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="syncDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.syncDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.syncDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

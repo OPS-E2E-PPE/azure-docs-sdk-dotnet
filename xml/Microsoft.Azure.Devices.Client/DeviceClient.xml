@@ -1,19 +1,21 @@
 <Type Name="DeviceClient" FullName="Microsoft.Azure.Devices.Client.DeviceClient">
-  <TypeSignature Language="C#" Value="public sealed class DeviceClient : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeviceClient extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public class DeviceClient : IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeviceClient extends System.Object implements class System.IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Devices.Client.DeviceClient" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeviceClient&#xA;Implements IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Class DeviceClient&#xA;Implements IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
   <TypeSignature Language="F#" Value="type DeviceClient = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="C#" Value="public sealed class DeviceClient : IDisposable" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeviceClient extends System.Object implements class System.IDisposable" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeviceClient&#xA;Implements IDisposable" FrameworkAlternate="azure-dotnet-preview" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-    <AssemblyVersion>1.21.2.0</AssemblyVersion>
-    <AssemblyVersion>1.21.3.0</AssemblyVersion>
-    <AssemblyVersion>1.21.4.0</AssemblyVersion>
-    <AssemblyVersion>1.22.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.1.0</AssemblyVersion>
-    <AssemblyVersion>1.23.2.0</AssemblyVersion>
-    <AssemblyVersion>1.24.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.0.0</AssemblyVersion>
+    <AssemblyVersion>1.37.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.2.0</AssemblyVersion>
+    <AssemblyVersion>1.38.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -23,12 +25,16 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface FrameworkAlternate="azure-dotnet-legacy;azure-dotnet-preview">
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <summary>
             Contains methods that a device can use to send messages to and receive from the service.
             </summary>
     <remarks>To be added.</remarks>
+    <threadsafety static="true" instance="true" />
   </Docs>
   <Members>
     <Member MemberName="AbandonAsync">
@@ -40,14 +46,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -65,7 +70,10 @@
             Puts a received message back onto the device queue
             </summary>
         <returns>The lock identifier for the previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Abandon a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AbandonAsync">
@@ -77,14 +85,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -102,7 +109,10 @@
             Puts a received message back onto the device queue
             </summary>
         <returns>The previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Abandon a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AbandonAsync">
@@ -114,14 +124,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -137,7 +146,10 @@
             Puts a received message back onto the device queue
             </summary>
         <returns>The lock identifier for the previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Abandon a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
     </Member>
@@ -150,14 +162,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -173,8 +184,61 @@
             Puts a received message back onto the device queue
             </summary>
         <returns>The previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Abandon a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AcceptDeviceStreamRequestAsync (Microsoft.Azure.Devices.Client.DeviceStreamRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task AcceptDeviceStreamRequestAsync(class Microsoft.Azure.Devices.Client.DeviceStreamRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.AcceptDeviceStreamRequestAsync(Microsoft.Azure.Devices.Client.DeviceStreamRequest)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AcceptDeviceStreamRequestAsync (request As DeviceStreamRequest) As Task" />
+      <MemberSignature Language="F#" Value="member this.AcceptDeviceStreamRequestAsync : Microsoft.Azure.Devices.Client.DeviceStreamRequest -&gt; System.Threading.Tasks.Task" Usage="deviceClient.AcceptDeviceStreamRequestAsync request" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Devices.Client.DeviceStreamRequest" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AcceptDeviceStreamRequestAsync (Microsoft.Azure.Devices.Client.DeviceStreamRequest request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task AcceptDeviceStreamRequestAsync(class Microsoft.Azure.Devices.Client.DeviceStreamRequest request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.AcceptDeviceStreamRequestAsync(Microsoft.Azure.Devices.Client.DeviceStreamRequest,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AcceptDeviceStreamRequestAsync (request As DeviceStreamRequest, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="member this.AcceptDeviceStreamRequestAsync : Microsoft.Azure.Devices.Client.DeviceStreamRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="deviceClient.AcceptDeviceStreamRequestAsync (request, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Devices.Client.DeviceStreamRequest" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CloseAsync">
@@ -186,14 +250,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -220,14 +283,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -254,14 +316,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -291,14 +352,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -328,14 +388,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -364,14 +423,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -391,6 +449,39 @@
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
     </Member>
+    <Member MemberName="CompleteFileUploadAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task CompleteFileUploadAsync (Microsoft.Azure.Devices.Client.Transport.FileUploadCompletionNotification notification, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task CompleteFileUploadAsync(class Microsoft.Azure.Devices.Client.Transport.FileUploadCompletionNotification notification, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CompleteFileUploadAsync(Microsoft.Azure.Devices.Client.Transport.FileUploadCompletionNotification,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompleteFileUploadAsync (notification As FileUploadCompletionNotification, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="member this.CompleteFileUploadAsync : Microsoft.Azure.Devices.Client.Transport.FileUploadCompletionNotification * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="deviceClient.CompleteFileUploadAsync (notification, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notification" Type="Microsoft.Azure.Devices.Client.Transport.FileUploadCompletionNotification" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="notification">The notification details, including if the file upload succeeded.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Notify IoT Hub that a device's file upload has finished. See <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload#notify-iot-hub-of-a-completed-file-upload">this documentation for more details</see></summary>
+        <returns>The task to await.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod) cil managed" />
@@ -399,17 +490,6 @@
       <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -417,36 +497,35 @@
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="hostname" Type="System.String" />
-        <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
+        <Parameter Name="hostname" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" Index="1" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
         <param name="authenticationMethod">The authentication method that is used</param>
         <summary>
-            Create an Amqp DeviceClient from individual parameters
+            Creates a disposable, Amqp DeviceClient from the specified parameters
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ITransportSettings[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, authenticationMethod As IAuthenticationMethod, transportSettings As ITransportSettings()) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ITransportSettings[] -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod, transportSettings)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, authenticationMethod As IAuthenticationMethod, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -454,16 +533,16 @@
       <Parameters>
         <Parameter Name="hostname" Type="System.String" />
         <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
-        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
         <param name="authenticationMethod">The authentication method that is used</param>
-        <param name="transportSettings">Prioritized list of transportTypes and their settings</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create a DeviceClient from individual parameters
+            Creates a disposable DeviceClient from the specified parameters, that uses AMQP transport protocol.
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -475,19 +554,82 @@
       <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.TransportType -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod, transportType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostname" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" Index="2" FrameworkAlternate="azure-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
+        <param name="authenticationMethod">The authentication method that is used</param>
+        <param name="transportType">The transportType used (Http1 or Amqp)</param>
+        <summary>
+            Creates a disposable DeviceClient from the specified parameters
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ITransportSettings[],Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, authenticationMethod As IAuthenticationMethod, transportSettings As ITransportSettings(), Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ITransportSettings[] * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod, transportSettings, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostname" Type="System.String" />
+        <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
+        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
+        <param name="authenticationMethod">The authentication method that is used</param>
+        <param name="transportSettings">Prioritized list of transportTypes and their settings</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
+        <summary>
+            Creates a disposable DeviceClient from the specified parameters
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.TransportType transportType, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, valuetype Microsoft.Azure.Devices.Client.TransportType transportType, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.TransportType,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, authenticationMethod As IAuthenticationMethod, transportType As TransportType, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.TransportType * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, authenticationMethod, transportType, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -496,35 +638,36 @@
         <Parameter Name="hostname" Type="System.String" />
         <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
         <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
         <param name="authenticationMethod">The authentication method that is used</param>
-        <param name="transportType">The transportType used (Http1 or Amqp)</param>
+        <param name="transportType">The transportType used (HTTP1, AMQP or MQTT), <see cref="T:Microsoft.Azure.Devices.Client.TransportType" /></param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create a DeviceClient from individual parameters
+            Creates a disposable DeviceClient from the specified parameters
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -533,35 +676,36 @@
         <Parameter Name="hostname" Type="System.String" />
         <Parameter Name="gatewayHostname" Type="System.String" />
         <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
+        <param name="gatewayHostname">The fully-qualified DNS host name of Gateway</param>
         <param name="authenticationMethod">The authentication method that is used</param>
-        <param name="gatewayHostname">The fully-qualified DNS hostname of Gateway</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create an Amqp DeviceClient from individual parameters
+            Create a disposable, AMQP DeviceClient from the specified parameters
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ITransportSettings[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod, transportSettings As ITransportSettings()) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ITransportSettings[] -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod, transportSettings)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.ITransportSettings[],Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod, transportSettings As ITransportSettings(), Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.ITransportSettings[] * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod, transportSettings, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -571,36 +715,37 @@
         <Parameter Name="gatewayHostname" Type="System.String" />
         <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
         <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
-        <param name="gatewayHostname">The fully-qualified DNS hostname of Gateway</param>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
+        <param name="gatewayHostname">The fully-qualified DNS host name of Gateway</param>
         <param name="authenticationMethod">The authentication method that is used</param>
         <param name="transportSettings">Prioritized list of transportTypes and their settings</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create a DeviceClient from individual parameters
+            Creates a disposable DeviceClient from the specified parameters
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.TransportType transportType);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, valuetype Microsoft.Azure.Devices.Client.TransportType transportType) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.TransportType)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod, transportType As TransportType) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.TransportType -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod, transportType)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient Create (string hostname, string gatewayHostname, Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, Microsoft.Azure.Devices.Client.TransportType transportType, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient Create(string hostname, string gatewayHostname, class Microsoft.Azure.Devices.Client.IAuthenticationMethod authenticationMethod, valuetype Microsoft.Azure.Devices.Client.TransportType transportType, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Create(System.String,System.String,Microsoft.Azure.Devices.Client.IAuthenticationMethod,Microsoft.Azure.Devices.Client.TransportType,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (hostname As String, gatewayHostname As String, authenticationMethod As IAuthenticationMethod, transportType As TransportType, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.Azure.Devices.Client.IAuthenticationMethod * Microsoft.Azure.Devices.Client.TransportType * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.Create (hostname, gatewayHostname, authenticationMethod, transportType, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -610,16 +755,18 @@
         <Parameter Name="gatewayHostname" Type="System.String" />
         <Parameter Name="authenticationMethod" Type="Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
         <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="hostname">The fully-qualified DNS hostname of IoT Hub</param>
-        <param name="gatewayHostname">The fully-qualified DNS hostname of Gateway</param>
+        <param name="hostname">The fully-qualified DNS host name of IoT Hub</param>
+        <param name="gatewayHostname">The fully-qualified DNS host name of Gateway</param>
         <param name="authenticationMethod">The authentication method that is used</param>
-        <param name="transportType">The transportType used (Http1 or Amqp)</param>
+        <param name="transportType">The transportType used (Http1, AMQP or MQTT), <see cref="T:Microsoft.Azure.Devices.Client.TransportType" /></param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create a DeviceClient from individual parameters
+            Create a disposable DeviceClient from the specified parameters
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -631,17 +778,6 @@
       <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString connectionString" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -649,49 +785,48 @@
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="connectionString" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="connectionString">Connection string for the IoT hub (including DeviceId)</param>
         <summary>
-            Create a DeviceClient using Amqp transport from the specified connection string
+            Creates a disposable DeviceClient using Amqp transport from the specified connection string
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateFromConnectionString">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,Microsoft.Azure.Devices.Client.ITransportSettings[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, transportSettings As ITransportSettings()) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * Microsoft.Azure.Devices.Client.ITransportSettings[] -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, transportSettings)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
-        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="connectionString">Connection string for the IoT hub (with DeviceId)</param>
-        <param name="transportSettings">Prioritized list of transports and their settings</param>
+        <param name="connectionString">Connection string for the IoT hub (including DeviceId)</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create DeviceClient from the specified connection string using a prioritized list of transports
+            Creates a disposable DeviceClient using AMQP transport from the specified connection string
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -703,17 +838,6 @@
       <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * Microsoft.Azure.Devices.Client.TransportType -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, transportType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -721,16 +845,16 @@
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionString" Type="System.String" />
-        <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" />
+        <Parameter Name="connectionString" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" Index="1" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="connectionString">Connection string for the IoT hub (including DeviceId)</param>
         <param name="transportType">Specifies whether Amqp or Http transport is used</param>
         <summary>
-            Create DeviceClient from the specified connection string using the specified transport type
+            Creates a disposable DeviceClient from the specified connection string using the specified transport type
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -742,17 +866,6 @@
       <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -760,36 +873,107 @@
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionString" Type="System.String" />
-        <Parameter Name="deviceId" Type="System.String" />
+        <Parameter Name="connectionString" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="deviceId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="connectionString">IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</param>
         <param name="deviceId">Id of the Device</param>
         <summary>
-            Create a DeviceClient using Amqp transport from the specified connection string
+            Creates a disposable DeviceClient using Amqp transport from the specified connection string
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateFromConnectionString">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, string deviceId, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, string deviceId, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,System.String,Microsoft.Azure.Devices.Client.ITransportSettings[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, deviceId As String, transportSettings As ITransportSettings()) As DeviceClient" />
-      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string * Microsoft.Azure.Devices.Client.ITransportSettings[] -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId, transportSettings)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,Microsoft.Azure.Devices.Client.ITransportSettings[],Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, transportSettings As ITransportSettings(), Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * Microsoft.Azure.Devices.Client.ITransportSettings[] * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, transportSettings, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Connection string for the IoT hub (with DeviceId)</param>
+        <param name="transportSettings">Prioritized list of transports and their settings</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
+        <summary>
+            Create a disposable DeviceClient from the specified connection string using a prioritized list of transports
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromConnectionString">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, Microsoft.Azure.Devices.Client.TransportType transportType, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, valuetype Microsoft.Azure.Devices.Client.TransportType transportType, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,Microsoft.Azure.Devices.Client.TransportType,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, transportType As TransportType, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * Microsoft.Azure.Devices.Client.TransportType * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, transportType, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Connection string for the IoT hub (including DeviceId)</param>
+        <param name="transportType">Specifies whether Http1, AMQP or MQTT transport is used, <see cref="T:Microsoft.Azure.Devices.Client.TransportType" /></param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
+        <summary>
+            Creates a disposable DeviceClient from the specified connection string using the specified transport type
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromConnectionString">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, string deviceId, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, string deviceId, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,System.String,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, deviceId As String, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -797,16 +981,16 @@
       <Parameters>
         <Parameter Name="connectionString" Type="System.String" />
         <Parameter Name="deviceId" Type="System.String" />
-        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
-        <param name="connectionString">Connection string for the IoT hub (without DeviceId)</param>
-        <param name="deviceId">Id of the device</param>
-        <param name="transportSettings">Prioritized list of transportTypes and their settings</param>
+        <param name="connectionString">IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</param>
+        <param name="deviceId">Id of the Device</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create DeviceClient from the specified connection string using the prioritized list of transports
+            Creates a disposable DeviceClient using AMQP transport from the specified connection string
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -818,19 +1002,82 @@
       <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string * Microsoft.Azure.Devices.Client.TransportType -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId, transportType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="deviceId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" Index="2" FrameworkAlternate="azure-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</param>
+        <param name="deviceId">Id of the device</param>
+        <param name="transportType">The transportType used (Http1 or Amqp)</param>
+        <summary>
+            Creates a disposable DeviceClient from the specified connection string using the specified transport type
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromConnectionString">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, string deviceId, Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, string deviceId, class Microsoft.Azure.Devices.Client.ITransportSettings[] transportSettings, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,System.String,Microsoft.Azure.Devices.Client.ITransportSettings[],Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, deviceId As String, transportSettings As ITransportSettings(), Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string * Microsoft.Azure.Devices.Client.ITransportSettings[] * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId, transportSettings, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="deviceId" Type="System.String" />
+        <Parameter Name="transportSettings" Type="Microsoft.Azure.Devices.Client.ITransportSettings[]" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Connection string for the IoT hub (without DeviceId)</param>
+        <param name="deviceId">Id of the device</param>
+        <param name="transportSettings">Prioritized list of transportTypes and their settings</param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
+        <summary>
+            Creates a disposable DeviceClient from the specified connection string using the prioritized list of transports
+            </summary>
+        <returns>A disposable DeviceClient instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromConnectionString">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString (string connectionString, string deviceId, Microsoft.Azure.Devices.Client.TransportType transportType, Microsoft.Azure.Devices.Client.ClientOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Devices.Client.DeviceClient CreateFromConnectionString(string connectionString, string deviceId, valuetype Microsoft.Azure.Devices.Client.TransportType transportType, class Microsoft.Azure.Devices.Client.ClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(System.String,System.String,Microsoft.Azure.Devices.Client.TransportType,Microsoft.Azure.Devices.Client.ClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromConnectionString (connectionString As String, deviceId As String, transportType As TransportType, Optional options As ClientOptions = Nothing) As DeviceClient" />
+      <MemberSignature Language="F#" Value="static member CreateFromConnectionString : string * string * Microsoft.Azure.Devices.Client.TransportType * Microsoft.Azure.Devices.Client.ClientOptions -&gt; Microsoft.Azure.Devices.Client.DeviceClient" Usage="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString (connectionString, deviceId, transportType, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.DeviceClient</ReturnType>
@@ -839,15 +1086,17 @@
         <Parameter Name="connectionString" Type="System.String" />
         <Parameter Name="deviceId" Type="System.String" />
         <Parameter Name="transportType" Type="Microsoft.Azure.Devices.Client.TransportType" />
+        <Parameter Name="options" Type="Microsoft.Azure.Devices.Client.ClientOptions" />
       </Parameters>
       <Docs>
         <param name="connectionString">IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</param>
         <param name="deviceId">Id of the device</param>
-        <param name="transportType">The transportType used (Http1 or Amqp)</param>
+        <param name="transportType">The transportType used (Http1, AMQP or MQTT), <see cref="T:Microsoft.Azure.Devices.Client.TransportType" /></param>
+        <param name="options">The options that allow configuration of the device client instance during initialization.</param>
         <summary>
-            Create DeviceClient from the specified connection string using the specified transport type
+            Creates a disposable DeviceClient from the specified connection string using the specified transport type
             </summary>
-        <returns>DeviceClient</returns>
+        <returns>A disposable DeviceClient instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -860,14 +1109,13 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -889,14 +1137,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -904,7 +1151,7 @@
       <Docs>
         <summary>
             Diagnostic sampling percentage value, [0-100];
-            0 means no message will carry on diag info
+            0 means no message will carry on diagnostics info
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -922,14 +1169,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -943,6 +1189,73 @@
         <summary>
             Releases the unmanaged resources used by the DeviceClient and optionally disposes of the managed resources.
             </summary>
+        <remarks>
+            The method <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.CloseAsync" /> should be called before disposing.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="deviceClient.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Setting to true will release both managed and unmanaged resources. Setting to
+            false will only release the unmanaged resources.</param>
+        <summary>
+            Releases the unmanaged resources used by the DeviceClient and allows for any derived class to override and
+            provide custom implementation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileUploadSasUriAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriResponse&gt; GetFileUploadSasUriAsync (Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriRequest request, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriResponse&gt; GetFileUploadSasUriAsync(class Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriRequest request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.GetFileUploadSasUriAsync(Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriRequest,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFileUploadSasUriAsync (request As FileUploadSasUriRequest, Optional cancellationToken As CancellationToken = Nothing) As Task(Of FileUploadSasUriResponse)" />
+      <MemberSignature Language="F#" Value="member this.GetFileUploadSasUriAsync : Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriResponse&gt;" Usage="deviceClient.GetFileUploadSasUriAsync (request, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Devices.Client.Transport.FileUploadSasUriRequest" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">The request details for getting the SAS URI, including the destination blob name.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Get a file upload SAS URI which the Azure Storage SDK can use to upload a file to blob for this device. See <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload#initialize-a-file-upload">this documentation for more details</see></summary>
+        <returns>The file upload details to be used with the Azure Storage SDK in order to upload a file from this device.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -955,14 +1268,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Shared.Twin&gt;</ReturnType>
@@ -970,7 +1282,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Retrieve a device twin object for the current device.
+            Retrieve the device twin properties for the current device.
+            For the complete device twin object, use Microsoft.Azure.Devices.RegistryManager.GetTwinAsync(string deviceId).
             </summary>
         <returns>The device twin object for the current device</returns>
         <remarks>To be added.</remarks>
@@ -985,14 +1298,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Shared.Twin&gt;</ReturnType>
@@ -1003,7 +1315,8 @@
       <Docs>
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
-            Retrieve a device twin object for the current device.
+            Retrieve the device twin properties for the current device.
+            For the complete device twin object, use Microsoft.Azure.Devices.RegistryManager.GetTwinAsync(string deviceId).
             </summary>
         <returns>The device twin object for the current device</returns>
         <remarks>To be added.</remarks>
@@ -1019,14 +1332,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1053,14 +1365,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1086,14 +1397,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -1101,8 +1411,8 @@
       <Docs>
         <summary>
             Stores the timeout used in the operation retries. Note that this value is ignored for operations
-            where a cancellation token is provided. For example, SendEventAsync(Message) will use this timeout, but
-            SendEventAsync(Message, CancellationToken) will not. The latter operation will only be canceled by the
+            where a cancellation token is provided. For example, <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.SendEventAsync(Microsoft.Azure.Devices.Client.Message)" /> will use this timeout, but
+            <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.SendEventAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" /> will not. The latter operation will only be canceled by the
             provided cancellation token.
             </summary>
         <value>To be added.</value>
@@ -1118,14 +1428,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1147,14 +1456,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1167,9 +1475,14 @@
       <Docs>
         <summary>
             Receive a message from the device queue using the default timeout.
+            After handling a received message, a client should call <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.CompleteAsync(Microsoft.Azure.Devices.Client.Message)" />,
+            <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.AbandonAsync(Microsoft.Azure.Devices.Client.Message)" />, or <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectAsync(Microsoft.Azure.Devices.Client.Message)" />, and then dispose the message.
             </summary>
         <returns>The receive message or null if there was no message until the default timeout</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject or Abandon messages over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="ReceiveAsync">
@@ -1181,14 +1494,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.Message&gt;</ReturnType>
@@ -1200,9 +1512,14 @@
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
             Receive a message from the device queue using the cancellation token.
+            After handling a received message, a client should call <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.CompleteAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />,
+            <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.AbandonAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, or <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, and then dispose the message.
             </summary>
         <returns>The receive message or null if there was no message until CancellationToken Expired</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject or Abandon messages over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
     </Member>
@@ -1215,14 +1532,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1237,10 +1553,15 @@
       <Docs>
         <param name="timeout">To be added.</param>
         <summary>
-            Receive a message from the device queue with the specified timeout
+            Receive a message from the device queue using the cancellation token.
+            After handling a received message, a client should call <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.CompleteAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />,
+            <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.AbandonAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, or <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, and then dispose the message.
             </summary>
         <returns>The receive message or null if there was no message until the specified time has elapsed</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject or Abandon messages over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="RejectAsync">
@@ -1252,14 +1573,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1277,7 +1597,10 @@
             Deletes a received message from the device queue and indicates to the server that the message could not be processed.
             </summary>
         <returns>The lock identifier for the previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="RejectAsync">
@@ -1289,14 +1612,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1314,7 +1636,10 @@
             Deletes a received message from the device queue and indicates to the server that the message could not be processed.
             </summary>
         <returns>The previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="RejectAsync">
@@ -1326,14 +1651,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1349,7 +1673,10 @@
             Deletes a received message from the device queue and indicates to the server that the message could not be processed.
             </summary>
         <returns>The lock identifier for the previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
     </Member>
@@ -1362,14 +1689,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1379,14 +1705,67 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <param name="lockToken">The message lockToken.</param>
+        <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
             Deletes a received message from the device queue and indicates to the server that the message could not be processed.
             </summary>
         <returns>The previously received message</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            You cannot Reject a message over MQTT protocol.
+            For more details, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RejectDeviceStreamRequestAsync (Microsoft.Azure.Devices.Client.DeviceStreamRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task RejectDeviceStreamRequestAsync(class Microsoft.Azure.Devices.Client.DeviceStreamRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectDeviceStreamRequestAsync(Microsoft.Azure.Devices.Client.DeviceStreamRequest)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RejectDeviceStreamRequestAsync (request As DeviceStreamRequest) As Task" />
+      <MemberSignature Language="F#" Value="member this.RejectDeviceStreamRequestAsync : Microsoft.Azure.Devices.Client.DeviceStreamRequest -&gt; System.Threading.Tasks.Task" Usage="deviceClient.RejectDeviceStreamRequestAsync request" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Devices.Client.DeviceStreamRequest" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RejectDeviceStreamRequestAsync (Microsoft.Azure.Devices.Client.DeviceStreamRequest request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task RejectDeviceStreamRequestAsync(class Microsoft.Azure.Devices.Client.DeviceStreamRequest request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectDeviceStreamRequestAsync(Microsoft.Azure.Devices.Client.DeviceStreamRequest,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RejectDeviceStreamRequestAsync (request As DeviceStreamRequest, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="member this.RejectDeviceStreamRequestAsync : Microsoft.Azure.Devices.Client.DeviceStreamRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="deviceClient.RejectDeviceStreamRequestAsync (request, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Azure.Devices.Client.DeviceStreamRequest" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="RetryPolicy">
@@ -1398,18 +1777,18 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("This method has been deprecated.  Please use Microsoft.Azure.Devices.Client.SetRetryPolicy(IRetryPolicy retryPolicy) instead.")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("This method has been deprecated.  Please use Microsoft.Azure.Devices.Client.SetRetryPolicy(IRetryPolicy retryPolicy) instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method has been deprecated.  Please use Microsoft.Azure.Devices.Client.SetRetryPolicy(IRetryPolicy retryPolicy) instead.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1432,14 +1811,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1452,11 +1830,11 @@
         <Parameter Name="message" Type="Microsoft.Azure.Devices.Client.Message" />
       </Parameters>
       <Docs>
-        <param name="message">The message.</param>
+        <param name="message">The message to send. Should be disposed after sending.</param>
         <summary>
-            Sends an event to device hub
+            Sends an event to a hub
             </summary>
-        <returns>The message containing the event</returns>
+        <returns>The task to await</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1469,14 +1847,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1486,12 +1863,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="message">The message.</param>
+        <param name="message">The message to send. Should be disposed after sending.</param>
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
-            Sends an event to device hub
+            Sends an event to a hub
             </summary>
-        <returns>The message containing the event</returns>
+        <returns>The task to await</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
@@ -1505,14 +1882,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client.PCL</AssemblyName>
@@ -1525,11 +1901,11 @@
         <Parameter Name="messages" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.Devices.Client.Message&gt;" />
       </Parameters>
       <Docs>
-        <param name="messages">A list of one or more messages to send</param>
+        <param name="messages">A list of one or more messages to send. The messages should be disposed after sending.</param>
         <summary>
-            Sends a batch of events to device hub. Requires AMQP or AMQP over WebSockets.
+            Sends a batch of events to IoT hub. Use AMQP or HTTPs for a true batch operation. MQTT will just send the messages one after the other.
             </summary>
-        <returns>The task containing the event</returns>
+        <returns>The task to await</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1542,14 +1918,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1562,9 +1937,9 @@
         <param name="messages">An IEnumerable set of Message objects.</param>
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
-            Sends a batch of events to device hub. Requires AMQP or AMQP over WebSockets.
+            Sends a batch of events to IoT hub. Use AMQP or HTTPs for a true batch operation. MQTT will just send the messages one after the other.
             </summary>
-        <returns>The task containing the event</returns>
+        <returns>The task to await</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
@@ -1578,14 +1953,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1596,8 +1970,8 @@
       <Docs>
         <param name="statusChangesHandler">To be added.</param>
         <summary>
-            Registers a new delegate for the connection status changed callback. If a delegate is already associated,
-            it will be replaced with the new delegate. Note that this callback will never be called if the client is configured to use HTTP as that protocol is stateless
+            Sets a new delegate for the connection status changed callback. If a delegate is already associated,
+            it will be replaced with the new delegate. Note that this callback will never be called if the client is configured to use HTTP, as that protocol is stateless.
             <param name="statusChangesHandler">The name of the method to associate with the delegate.</param></summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1611,18 +1985,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Please use SetDesiredPropertyUpdateCallbackAsync.")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("Please use SetDesiredPropertyUpdateCallbackAsync.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Please use SetDesiredPropertyUpdateCallbackAsync.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1653,14 +2027,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1674,11 +2047,13 @@
         <param name="userContext">Context object that will be passed into callback</param>
         <summary>
             Set a callback that will be called whenever the client receives a state update
-            (desired or reported) from the service.  This has the side-effect of subscribing
-            to the PATCH topic on the service.
+            (desired or reported) from the service.
+            Set callback value to null to clear.
             </summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This has the side-effect of subscribing to the PATCH topic on the service.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetDesiredPropertyUpdateCallbackAsync">
@@ -1690,14 +2065,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1713,11 +2087,13 @@
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
             Set a callback that will be called whenever the client receives a state update
-            (desired or reported) from the service.  This has the side-effect of subscribing
-            to the PATCH topic on the service.
+            (desired or reported) from the service.
+            Set callback value to null to clear.
             </summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This has the side-effect of subscribing to the PATCH topic on the service.
+            </remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
       </Docs>
     </Member>
@@ -1730,14 +2106,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1750,8 +2125,9 @@
         <param name="methodHandler">The delegate to be used when a method is called by the cloud service and there is no delegate registered for that method name.</param>
         <param name="userContext">Generic parameter to be interpreted by the client code.</param>
         <summary>
-            Registers a new delegate that is called for a method that doesn't have a delegate registered for its name.
+            Sets a new delegate that is called for a method that doesn't have a delegate registered for its name.
             If a default delegate is already registered it will replace with the new delegate.
+            A method handler can be unset by passing a null MethodCallback.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1766,14 +2142,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1788,8 +2163,9 @@
         <param name="userContext">Generic parameter to be interpreted by the client code.</param>
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
-            Registers a new delegate that is called for a method that doesn't have a delegate registered for its name.
+            Sets a new delegate that is called for a method that doesn't have a delegate registered for its name.
             If a default delegate is already registered it will replace with the new delegate.
+            A method handler can be unset by passing a null MethodCallback.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1805,18 +2181,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Please use SetMethodHandlerAsync.")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("Please use SetMethodHandlerAsync.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Please use SetMethodHandlerAsync.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1832,7 +2208,7 @@
         <param name="methodHandler">To be added.</param>
         <param name="userContext">To be added.</param>
         <summary>
-            Registers a new delegate for the named method. If a delegate is already associated with
+            Sets a new delegate for the named method. If a delegate is already associated with
             the named method, it will be replaced with the new delegate.
             <param name="methodName">The name of the method to associate with the delegate.</param><param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.</param><param name="userContext">generic parameter to be interpreted by the client code.</param></summary>
         <remarks>To be added.</remarks>
@@ -1847,14 +2223,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1869,8 +2244,9 @@
         <param name="methodHandler">To be added.</param>
         <param name="userContext">To be added.</param>
         <summary>
-            Registers a new delegate for the named method. If a delegate is already associated with
+            Sets a new delegate for the named method. If a delegate is already associated with
             the named method, it will be replaced with the new delegate.
+            A method handler can be unset by passing a null MethodCallback.
             <param name="methodName">The name of the method to associate with the delegate.</param><param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.</param><param name="userContext">generic parameter to be interpreted by the client code.</param></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1885,14 +2261,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1909,9 +2284,48 @@
         <param name="userContext">To be added.</param>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Registers a new delegate for the named method. If a delegate is already associated with
+            Sets a new delegate for the named method. If a delegate is already associated with
             the named method, it will be replaced with the new delegate.
+            A method handler can be unset by passing a null MethodCallback.
             <param name="methodName">The name of the method to associate with the delegate.</param><param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.</param><param name="userContext">generic parameter to be interpreted by the client code.</param><param name="cancellationToken">A cancellation token to cancel the operation.</param><exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReceiveMessageHandlerAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SetReceiveMessageHandlerAsync (Microsoft.Azure.Devices.Client.ReceiveMessageCallback messageHandler, object userContext, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SetReceiveMessageHandlerAsync(class Microsoft.Azure.Devices.Client.ReceiveMessageCallback messageHandler, object userContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.SetReceiveMessageHandlerAsync(Microsoft.Azure.Devices.Client.ReceiveMessageCallback,System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetReceiveMessageHandlerAsync (messageHandler As ReceiveMessageCallback, userContext As Object, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="member this.SetReceiveMessageHandlerAsync : Microsoft.Azure.Devices.Client.ReceiveMessageCallback * obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="deviceClient.SetReceiveMessageHandlerAsync (messageHandler, userContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHandler" Type="Microsoft.Azure.Devices.Client.ReceiveMessageCallback" Index="0" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+        <Parameter Name="userContext" Type="System.Object" Index="1" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+      </Parameters>
+      <Docs>
+        <param name="messageHandler">To be added.</param>
+        <param name="userContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Sets a new delegate for receiving a message from the device queue using the default timeout.
+            After handling a received message, a client should call <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.CompleteAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />,
+            <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.AbandonAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, or <see cref="M:Microsoft.Azure.Devices.Client.DeviceClient.RejectAsync(Microsoft.Azure.Devices.Client.Message,System.Threading.CancellationToken)" />, and then dispose the message.
+            If a null delegate is passed, it will disable the callback triggered on receiving messages from the service.
+            <param name="messageHandler">The delegate to be used when a could to device message is received by the client.</param><param name="userContext">Generic parameter to be interpreted by the client code.</param><param name="cancellationToken">A cancellation token to cancel the operation.</param></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1925,14 +2339,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1941,7 +2354,8 @@
         <Parameter Name="retryPolicy" Type="Microsoft.Azure.Devices.Client.IRetryPolicy" />
       </Parameters>
       <Docs>
-        <param name="retryPolicy">The retry policy. The default is new ExponentialBackoff(int.MaxValue, TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(10), TimeSpan.FromMilliseconds(100));</param>
+        <param name="retryPolicy">The retry policy. The default is
+            <c>new ExponentialBackoff(int.MaxValue, TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(10), TimeSpan.FromMilliseconds(100));</c></param>
         <summary>
             Sets the retry policy used in the operation retries.
             The change will take effect after any in-progress operations.
@@ -1958,14 +2372,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1991,14 +2404,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -2027,15 +2439,20 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This API has been split into three APIs: GetFileUploadSasUri, uploading to blob directly using the Azure Storage SDK, and CompleteFileUploadAsync")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API has been split into three APIs: GetFileUploadSasUri, uploading to blob directly using the Azure Storage SDK, and CompleteFileUploadAsync")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -2044,8 +2461,8 @@
         <Parameter Name="source" Type="System.IO.Stream" />
       </Parameters>
       <Docs>
-        <param name="blobName" />
-        <param name="source" />
+        <param name="blobName">The name of the blob to upload.</param>
+        <param name="source">A stream with blob contents. Should be disposed after upload completes.</param>
         <summary>
             Uploads a stream to a block blob in a storage account associated with the IoTHub for that device.
             If the blob already exists, it will be overwritten.
@@ -2063,15 +2480,20 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This API has been split into three APIs: GetFileUploadSasUri, uploading to blob directly using the Azure Storage SDK, and CompleteFileUploadAsync")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API has been split into three APIs: GetFileUploadSasUri, uploading to blob directly using the Azure Storage SDK, and CompleteFileUploadAsync")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -2081,16 +2503,61 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="blobName" />
-        <param name="source" />
+        <param name="blobName">The name of the blob to upload</param>
+        <param name="source">A stream with blob contents.. Should be disposed after upload completes.</param>
         <param name="cancellationToken">A cancellation token to cancel the operation.</param>
         <summary>
             Uploads a stream to a block blob in a storage account associated with the IoTHub for that device.
             If the blob already exists, it will be overwritten.
             </summary>
-        <returns>AsncTask</returns>
+        <returns>The task to await</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.OperationCanceledException">Thrown when the operation has been canceled.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt; WaitForDeviceStreamRequestAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt; WaitForDeviceStreamRequestAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.WaitForDeviceStreamRequestAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForDeviceStreamRequestAsync () As Task(Of DeviceStreamRequest)" />
+      <MemberSignature Language="F#" Value="member this.WaitForDeviceStreamRequestAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt;" Usage="deviceClient.WaitForDeviceStreamRequestAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForDeviceStreamRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt; WaitForDeviceStreamRequestAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt; WaitForDeviceStreamRequestAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceClient.WaitForDeviceStreamRequestAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForDeviceStreamRequestAsync (cancellationToken As CancellationToken) As Task(Of DeviceStreamRequest)" />
+      <MemberSignature Language="F#" Value="member this.WaitForDeviceStreamRequestAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt;" Usage="deviceClient.WaitForDeviceStreamRequestAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Devices.Client.DeviceStreamRequest&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

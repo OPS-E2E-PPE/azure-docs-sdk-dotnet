@@ -6,8 +6,9 @@
   <TypeSignature Language="F#" Value="type NodeRemoveParameter = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
-    <AssemblyVersion>13.0.0.0</AssemblyVersion>
+    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +29,9 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,13 +45,14 @@
       <MemberSignature Language="C#" Value="public NodeRemoveParameter (System.Collections.Generic.IList&lt;string&gt; nodeList, TimeSpan? resizeTimeout = default, Microsoft.Azure.Batch.Protocol.Models.ComputeNodeDeallocationOption? nodeDeallocationOption = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;string&gt; nodeList, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; resizeTimeout, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Batch.Protocol.Models.ComputeNodeDeallocationOption&gt; nodeDeallocationOption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Batch.Protocol.Models.NodeRemoveParameter.#ctor(System.Collections.Generic.IList{System.String},System.Nullable{System.TimeSpan},System.Nullable{Microsoft.Azure.Batch.Protocol.Models.ComputeNodeDeallocationOption})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (nodeList As IList(Of String), Optional resizeTimeout As Nullable(Of TimeSpan) = null, Optional nodeDeallocationOption As Nullable(Of ComputeNodeDeallocationOption) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (nodeList As IList(Of String), Optional resizeTimeout As Nullable(Of TimeSpan) = Nothing, Optional nodeDeallocationOption As Nullable(Of ComputeNodeDeallocationOption) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Batch.Protocol.Models.NodeRemoveParameter : System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;TimeSpan&gt; * Nullable&lt;Microsoft.Azure.Batch.Protocol.Models.ComputeNodeDeallocationOption&gt; -&gt; Microsoft.Azure.Batch.Protocol.Models.NodeRemoveParameter" Usage="new Microsoft.Azure.Batch.Protocol.Models.NodeRemoveParameter (nodeList, resizeTimeout, nodeDeallocationOption)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="nodeList" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
@@ -79,12 +82,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="nodeDeallocationOption")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="nodeDeallocationOption")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="nodeDeallocationOption")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -111,12 +116,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="nodeList")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="nodeList")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="nodeList")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -128,7 +135,9 @@
             removed from the specified Pool.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            A maximum of 100 nodes may be removed per request.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="ResizeTimeout">
@@ -140,12 +149,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resizeTimeout")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resizeTimeout")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resizeTimeout")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

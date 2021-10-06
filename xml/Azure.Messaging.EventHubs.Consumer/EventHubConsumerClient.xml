@@ -6,7 +6,11 @@
   <TypeSignature Language="F#" Value="type EventHubConsumerClient = class&#xA;    interface IAsyncDisposable" />
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
+    <AssemblyVersion>5.4.1.0</AssemblyVersion>
+    <AssemblyVersion>5.5.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,18 +22,21 @@
   </Interfaces>
   <Docs>
     <summary>
-               A client responsible for reading <see cref="T:Azure.Messaging.EventHubs.EventData" /> from a specific Event Hub
-               as a member of a specific consumer group.
-            
-               A consumer may be exclusive, which asserts ownership over associated partitions for the consumer
+      <para>A client responsible for reading <see cref="T:Azure.Messaging.EventHubs.EventData" /> from a specific Event Hub
+               as a member of a specific consumer group.</para>
+      <para>A consumer may be exclusive, which asserts ownership over associated partitions for the consumer
                group to ensure that only one consumer from that group is reading the from the partition.
-               These exclusive consumers are sometimes referred to as "Epoch Consumers."
-            
-               A consumer may also be non-exclusive, allowing multiple consumers from the same consumer
+               These exclusive consumers are sometimes referred to as "Epoch Consumers."</para>
+      <para>A consumer may also be non-exclusive, allowing multiple consumers from the same consumer
                group to be actively reading events from a given partition.  These non-exclusive consumers are
-               sometimes referred to as "Non-Epoch Consumers."
-             </summary>
-    <remarks>To be added.</remarks>
+               sometimes referred to as "Non-Epoch Consumers."</para>
+    </summary>
+    <remarks>
+               The <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is safe to cache and use for the lifetime of an application, and that is best practice when the application
+               reads events regularly or semi-regularly.  The consumer holds responsibility for efficient resource management, working to keep resource usage low during
+               periods of inactivity and manage health during periods of higher use.  Calling either the <see cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.CloseAsync(System.Threading.CancellationToken)" /> or <see cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.DisposeAsync" />
+               method as the application is shutting down will ensure that network resources and other unmanaged objects are properly cleaned up.
+             </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -40,7 +47,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -59,7 +70,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -85,12 +100,16 @@
       <MemberSignature Language="C#" Value="public EventHubConsumerClient (string consumerGroup, Azure.Messaging.EventHubs.EventHubConnection connection, Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string consumerGroup, class Azure.Messaging.EventHubs.EventHubConnection connection, class Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.#ctor(System.String,Azure.Messaging.EventHubs.EventHubConnection,Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, connection As EventHubConnection, Optional clientOptions As EventHubConsumerClientOptions = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, connection As EventHubConnection, Optional clientOptions As EventHubConsumerClientOptions = Nothing)" />
       <MemberSignature Language="F#" Value="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient : string * Azure.Messaging.EventHubs.EventHubConnection * Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions -&gt; Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" Usage="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient (consumerGroup, connection, clientOptions)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -116,7 +135,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -149,7 +172,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -179,7 +206,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -203,15 +234,87 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHubConsumerClient (string consumerGroup, string fullyQualifiedNamespace, string eventHubName, Azure.AzureNamedKeyCredential credential, Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string consumerGroup, string fullyQualifiedNamespace, string eventHubName, class Azure.AzureNamedKeyCredential credential, class Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.#ctor(System.String,System.String,System.String,Azure.AzureNamedKeyCredential,Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, fullyQualifiedNamespace As String, eventHubName As String, credential As AzureNamedKeyCredential, Optional clientOptions As EventHubConsumerClientOptions = Nothing)" />
+      <MemberSignature Language="F#" Value="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient : string * string * string * Azure.AzureNamedKeyCredential * Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions -&gt; Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" Usage="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient (consumerGroup, fullyQualifiedNamespace, eventHubName, credential, clientOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="consumerGroup" Type="System.String" />
+        <Parameter Name="fullyQualifiedNamespace" Type="System.String" />
+        <Parameter Name="eventHubName" Type="System.String" />
+        <Parameter Name="credential" Type="Azure.AzureNamedKeyCredential" />
+        <Parameter Name="clientOptions" Type="Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="consumerGroup">The name of the consumer group this consumer is associated with.  Events are read in the context of this group.</param>
+        <param name="fullyQualifiedNamespace">The fully qualified Event Hubs namespace to connect to.  This is likely to be similar to <c>{yournamespace}.servicebus.windows.net</c>.</param>
+        <param name="eventHubName">The name of the specific Event Hub to associate the consumer with.</param>
+        <param name="credential">The shared access key credential to use for authorization.  Access controls may be specified by the Event Hubs namespace or the requested Event Hub, depending on Azure configuration.</param>
+        <param name="clientOptions">A set of options to apply when configuring the consumer.</param>
+        <summary>
+               Initializes a new instance of the <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> class.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHubConsumerClient (string consumerGroup, string fullyQualifiedNamespace, string eventHubName, Azure.AzureSasCredential credential, Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string consumerGroup, string fullyQualifiedNamespace, string eventHubName, class Azure.AzureSasCredential credential, class Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.#ctor(System.String,System.String,System.String,Azure.AzureSasCredential,Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, fullyQualifiedNamespace As String, eventHubName As String, credential As AzureSasCredential, Optional clientOptions As EventHubConsumerClientOptions = Nothing)" />
+      <MemberSignature Language="F#" Value="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient : string * string * string * Azure.AzureSasCredential * Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions -&gt; Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" Usage="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient (consumerGroup, fullyQualifiedNamespace, eventHubName, credential, clientOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="consumerGroup" Type="System.String" />
+        <Parameter Name="fullyQualifiedNamespace" Type="System.String" />
+        <Parameter Name="eventHubName" Type="System.String" />
+        <Parameter Name="credential" Type="Azure.AzureSasCredential" />
+        <Parameter Name="clientOptions" Type="Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="consumerGroup">The name of the consumer group this consumer is associated with.  Events are read in the context of this group.</param>
+        <param name="fullyQualifiedNamespace">The fully qualified Event Hubs namespace to connect to.  This is likely to be similar to <c>{yournamespace}.servicebus.windows.net</c>.</param>
+        <param name="eventHubName">The name of the specific Event Hub to associate the consumer with.</param>
+        <param name="credential">The shared access signature credential to use for authorization.  Access controls may be specified by the Event Hubs namespace or the requested Event Hub, depending on Azure configuration.</param>
+        <param name="clientOptions">A set of options to apply when configuring the consumer.</param>
+        <summary>
+               Initializes a new instance of the <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> class.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public EventHubConsumerClient (string consumerGroup, string fullyQualifiedNamespace, string eventHubName, Azure.Core.TokenCredential credential, Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string consumerGroup, string fullyQualifiedNamespace, string eventHubName, class Azure.Core.TokenCredential credential, class Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions clientOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.#ctor(System.String,System.String,System.String,Azure.Core.TokenCredential,Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, fullyQualifiedNamespace As String, eventHubName As String, credential As TokenCredential, Optional clientOptions As EventHubConsumerClientOptions = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (consumerGroup As String, fullyQualifiedNamespace As String, eventHubName As String, credential As TokenCredential, Optional clientOptions As EventHubConsumerClientOptions = Nothing)" />
       <MemberSignature Language="F#" Value="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient : string * string * string * Azure.Core.TokenCredential * Azure.Messaging.EventHubs.Consumer.EventHubConsumerClientOptions -&gt; Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" Usage="new Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient (consumerGroup, fullyQualifiedNamespace, eventHubName, credential, clientOptions)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consumerGroup" Type="System.String" />
@@ -236,12 +339,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CloseAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.CloseAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CloseAsync (Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="abstract member CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CloseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="eventHubConsumerClient.CloseAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -267,7 +374,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -290,7 +401,11 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -312,7 +427,11 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -336,11 +455,16 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -368,7 +492,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -391,7 +519,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -409,12 +541,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.EventHubProperties&gt; GetEventHubPropertiesAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Messaging.EventHubs.EventHubProperties&gt; GetEventHubPropertiesAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.GetEventHubPropertiesAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEventHubPropertiesAsync (Optional cancellationToken As CancellationToken = null) As Task(Of EventHubProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEventHubPropertiesAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of EventHubProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetEventHubPropertiesAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.EventHubProperties&gt;&#xA;override this.GetEventHubPropertiesAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.EventHubProperties&gt;" Usage="eventHubConsumerClient.GetEventHubPropertiesAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.EventHubProperties&gt;</ReturnType>
@@ -441,11 +577,16 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -464,12 +605,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;string[]&gt; GetPartitionIdsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string[]&gt; GetPartitionIdsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.GetPartitionIdsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPartitionIdsAsync (Optional cancellationToken As CancellationToken = null) As Task(Of String())" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPartitionIdsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of String())" />
       <MemberSignature Language="F#" Value="abstract member GetPartitionIdsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string[]&gt;&#xA;override this.GetPartitionIdsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string[]&gt;" Usage="eventHubConsumerClient.GetPartitionIdsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String[]&gt;</ReturnType>
@@ -494,12 +639,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.PartitionProperties&gt; GetPartitionPropertiesAsync (string partitionId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Messaging.EventHubs.PartitionProperties&gt; GetPartitionPropertiesAsync(string partitionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.GetPartitionPropertiesAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPartitionPropertiesAsync (partitionId As String, Optional cancellationToken As CancellationToken = null) As Task(Of PartitionProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPartitionPropertiesAsync (partitionId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PartitionProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPartitionPropertiesAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.PartitionProperties&gt;&#xA;override this.GetPartitionPropertiesAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.PartitionProperties&gt;" Usage="eventHubConsumerClient.GetPartitionPropertiesAsync (partitionId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Messaging.EventHubs.PartitionProperties&gt;</ReturnType>
@@ -519,6 +668,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Identifier">
+      <MemberSignature Language="C#" Value="public string Identifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Identifier" />
+      <MemberSignature Language="DocId" Value="P:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.Identifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Identifier As String" />
+      <MemberSignature Language="F#" Value="member this.Identifier : string" Usage="Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.Identifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+               A unique name used to identify this consumer.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="IsClosed">
       <MemberSignature Language="C#" Value="public bool IsClosed { get; protected set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
@@ -528,7 +700,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -547,12 +723,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IAsyncEnumerable`1&lt;valuetype Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (Optional cancellationToken As CancellationToken = null) As IAsyncEnumerable(Of PartitionEvent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (Optional cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of PartitionEvent)" />
       <MemberSignature Language="F#" Value="abstract member ReadEventsAsync : System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;&#xA;override this.ReadEventsAsync : System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;" Usage="eventHubConsumerClient.ReadEventsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;</ReturnType>
@@ -575,13 +755,17 @@
                This method is not recommended for production use; the <c>EventProcessorClient</c> should be used for reading events from all partitions in a
                production scenario, as it offers a much more robust experience with higher throughput.
             
-               It is important to note that this method does not guarantee fairness amongst the partitions during iteration; each of the partitions competes to publish
+               It is important to note that this method does not guarantee fairness amongst the partitions during iteration; each of the partitions compete to publish
                events to be read by the enumerator.  Depending on service communication, there may be a clustering of events per partition and/or there may be a noticeable
                bias for a given partition or subset of partitions.
             
                Each reader of events is presented with an independent iterator; if there are multiple readers, each receive their own copy of an event to
                process, rather than competing for them.
              </remarks>
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">
+               Occurs when an <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is unable to read from the Event Hub due to another reader having asserted exclusive ownership. In
+               this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" /> will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ConsumerDisconnected" />.
+             </exception>
         <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
@@ -589,12 +773,16 @@
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync (Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IAsyncEnumerable`1&lt;valuetype Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync(class Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (readOptions As ReadEventOptions, Optional cancellationToken As CancellationToken = null) As IAsyncEnumerable(Of PartitionEvent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (readOptions As ReadEventOptions, Optional cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of PartitionEvent)" />
       <MemberSignature Language="F#" Value="abstract member ReadEventsAsync : Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;&#xA;override this.ReadEventsAsync : Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;" Usage="eventHubConsumerClient.ReadEventsAsync (readOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;</ReturnType>
@@ -619,13 +807,17 @@
                This method is not recommended for production use; the <c>EventProcessorClient</c> should be used for reading events from all partitions in a
                production scenario, as it offers a much more robust experience with higher throughput.
             
-               It is important to note that this method does not guarantee fairness amongst the partitions during iteration; each of the partitions competes to publish
+               It is important to note that this method does not guarantee fairness amongst the partitions during iteration; each of the partitions compete to publish
                events to be read by the enumerator.  Depending on service communication, there may be a clustering of events per partition and/or there may be a noticeable
                bias for a given partition or subset of partitions.
             
                Each reader of events is presented with an independent iterator; if there are multiple readers, each receive their own copy of an event to
                process, rather than competing for them.
              </remarks>
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">
+               Occurs when an <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is unable to read from the Event Hub due to another reader having asserted exclusive ownership. In
+               this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" /> will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ConsumerDisconnected" />.
+             </exception>
         <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(System.Threading.CancellationToken)" />
       </Docs>
     </Member>
@@ -633,16 +825,21 @@
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync (bool startReadingAtEarliestEvent, Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IAsyncEnumerable`1&lt;valuetype Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsAsync(bool startReadingAtEarliestEvent, class Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(System.Boolean,Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (startReadingAtEarliestEvent As Boolean, Optional readOptions As ReadEventOptions = null, Optional cancellationToken As CancellationToken = null) As IAsyncEnumerable(Of PartitionEvent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsAsync (startReadingAtEarliestEvent As Boolean, Optional readOptions As ReadEventOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of PartitionEvent)" />
       <MemberSignature Language="F#" Value="abstract member ReadEventsAsync : bool * Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;&#xA;override this.ReadEventsAsync : bool * Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;" Usage="eventHubConsumerClient.ReadEventsAsync (startReadingAtEarliestEvent, readOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient/&lt;ReadEventsAsync&gt;d__40))</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient+&lt;ReadEventsAsync&gt;d__46))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient+&lt;ReadEventsAsync&gt;d__46))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -654,7 +851,8 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken">
           <Attributes>
             <Attribute>
-              <AttributeName>System.Runtime.CompilerServices.EnumeratorCancellation</AttributeName>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.EnumeratorCancellation]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.EnumeratorCancellation&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -684,20 +882,28 @@
                Each reader of events is presented with an independent iterator; if there are multiple readers, each receive their own copy of an event to
                process, rather than competing for them.
              </remarks>
-        <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(System.Threading.CancellationToken)" />
         <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">
+               Occurs when an <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is unable to read from the Event Hub due to another reader having asserted exclusive ownership. In
+               this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" /> will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ConsumerDisconnected" />.
+             </exception>
+        <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsAsync(System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="ReadEventsFromPartitionAsync">
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsFromPartitionAsync (string partitionId, Azure.Messaging.EventHubs.Consumer.EventPosition startingPosition, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IAsyncEnumerable`1&lt;valuetype Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsFromPartitionAsync(string partitionId, valuetype Azure.Messaging.EventHubs.Consumer.EventPosition startingPosition, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsFromPartitionAsync(System.String,Azure.Messaging.EventHubs.Consumer.EventPosition,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsFromPartitionAsync (partitionId As String, startingPosition As EventPosition, Optional cancellationToken As CancellationToken = null) As IAsyncEnumerable(Of PartitionEvent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsFromPartitionAsync (partitionId As String, startingPosition As EventPosition, Optional cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of PartitionEvent)" />
       <MemberSignature Language="F#" Value="abstract member ReadEventsFromPartitionAsync : string * Azure.Messaging.EventHubs.Consumer.EventPosition * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;&#xA;override this.ReadEventsFromPartitionAsync : string * Azure.Messaging.EventHubs.Consumer.EventPosition * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;" Usage="eventHubConsumerClient.ReadEventsFromPartitionAsync (partitionId, startingPosition, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;</ReturnType>
@@ -724,6 +930,10 @@
                Each reader of events is presented with an independent iterator; if there are multiple readers, each receive their own copy of an event to
                process, rather than competing for them.
              </remarks>
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">
+               Occurs when an <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is unable to read from the requested Event Hub partition due to another reader having
+               asserted exclusive ownership.  In this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" /> will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ConsumerDisconnected" />.
+             </exception>
         <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsFromPartitionAsync(System.String,Azure.Messaging.EventHubs.Consumer.EventPosition,Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
@@ -731,16 +941,21 @@
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsFromPartitionAsync (string partitionId, Azure.Messaging.EventHubs.Consumer.EventPosition startingPosition, Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IAsyncEnumerable`1&lt;valuetype Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt; ReadEventsFromPartitionAsync(string partitionId, valuetype Azure.Messaging.EventHubs.Consumer.EventPosition startingPosition, class Azure.Messaging.EventHubs.Consumer.ReadEventOptions readOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsFromPartitionAsync(System.String,Azure.Messaging.EventHubs.Consumer.EventPosition,Azure.Messaging.EventHubs.Consumer.ReadEventOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsFromPartitionAsync (partitionId As String, startingPosition As EventPosition, readOptions As ReadEventOptions, Optional cancellationToken As CancellationToken = null) As IAsyncEnumerable(Of PartitionEvent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadEventsFromPartitionAsync (partitionId As String, startingPosition As EventPosition, readOptions As ReadEventOptions, Optional cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of PartitionEvent)" />
       <MemberSignature Language="F#" Value="abstract member ReadEventsFromPartitionAsync : string * Azure.Messaging.EventHubs.Consumer.EventPosition * Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;&#xA;override this.ReadEventsFromPartitionAsync : string * Azure.Messaging.EventHubs.Consumer.EventPosition * Azure.Messaging.EventHubs.Consumer.ReadEventOptions * System.Threading.CancellationToken -&gt; System.Collections.Generic.IAsyncEnumerable&lt;Azure.Messaging.EventHubs.Consumer.PartitionEvent&gt;" Usage="eventHubConsumerClient.ReadEventsFromPartitionAsync (partitionId, startingPosition, readOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient/&lt;ReadEventsFromPartitionAsync&gt;d__37))</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient+&lt;ReadEventsFromPartitionAsync&gt;d__43))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.AsyncIteratorStateMachine(typeof(Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient+&lt;ReadEventsFromPartitionAsync&gt;d__43))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -753,7 +968,8 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken">
           <Attributes>
             <Attribute>
-              <AttributeName>System.Runtime.CompilerServices.EnumeratorCancellation</AttributeName>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.EnumeratorCancellation]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.EnumeratorCancellation&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -776,6 +992,10 @@
                Each reader of events is presented with an independent iterator; if there are multiple readers, each receive their own copy of an event to
                process, rather than competing for them.
              </remarks>
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">
+               Occurs when an <see cref="T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient" /> is unable to read from the requested Event Hub partition due to another reader having
+               asserted exclusive ownership.  In this case, the <see cref="T:Azure.Messaging.EventHubs.EventHubsException.FailureReason" /> will be set to <see cref="F:Azure.Messaging.EventHubs.EventHubsException.FailureReason.ConsumerDisconnected" />.
+             </exception>
         <altmember cref="M:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient.ReadEventsFromPartitionAsync(System.String,Azure.Messaging.EventHubs.Consumer.EventPosition,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
@@ -788,11 +1008,16 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

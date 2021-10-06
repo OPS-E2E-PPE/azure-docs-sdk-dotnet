@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type DataLakeSasBuilder = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.1.0</AssemblyVersion>
+    <AssemblyVersion>12.6.2.0</AssemblyVersion>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -15,9 +18,12 @@
   <Docs>
     <summary>
       <see cref="T:Azure.Storage.Sas.DataLakeSasBuilder" /> is used to generate a Shared Access
-            Signature (SAS) for a Data Lake file system or path
-            For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas" />.
-            </summary>
+             Signature (SAS) for a Data Lake file system or path
+            
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas">
+             Constructing a Service SAS</see>.
+             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -29,11 +35,133 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.DataLakeSasBuilder" />
+            class.
+            </summary>
+        <remarks>
+            This constructor has been deprecated. Please consider using
+            <see cref="M:Azure.Storage.Sas.DataLakeSasBuilder.#ctor(Azure.Storage.Sas.DataLakeSasPermissions,System.DateTimeOffset)" />
+            to create a Service SAS. This change does not have any impact on how
+            your application generates or makes use of SAS tokens.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeSasBuilder (Azure.Storage.Sas.DataLakeFileSystemSasPermissions permissions, DateTimeOffset expiresOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Azure.Storage.Sas.DataLakeFileSystemSasPermissions permissions, valuetype System.DateTimeOffset expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.DataLakeSasBuilder.#ctor(Azure.Storage.Sas.DataLakeFileSystemSasPermissions,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (permissions As DataLakeFileSystemSasPermissions, expiresOn As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Sas.DataLakeSasBuilder : Azure.Storage.Sas.DataLakeFileSystemSasPermissions * DateTimeOffset -&gt; Azure.Storage.Sas.DataLakeSasBuilder" Usage="new Azure.Storage.Sas.DataLakeSasBuilder (permissions, expiresOn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissions" Type="Azure.Storage.Sas.DataLakeFileSystemSasPermissions" />
+        <Parameter Name="expiresOn" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="permissions">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <param name="expiresOn">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.DataLakeSasBuilder" />
+            class to create a Blob Service Sas.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeSasBuilder (Azure.Storage.Sas.DataLakeSasPermissions permissions, DateTimeOffset expiresOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Azure.Storage.Sas.DataLakeSasPermissions permissions, valuetype System.DateTimeOffset expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.DataLakeSasBuilder.#ctor(Azure.Storage.Sas.DataLakeSasPermissions,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (permissions As DataLakeSasPermissions, expiresOn As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Sas.DataLakeSasBuilder : Azure.Storage.Sas.DataLakeSasPermissions * DateTimeOffset -&gt; Azure.Storage.Sas.DataLakeSasBuilder" Usage="new Azure.Storage.Sas.DataLakeSasBuilder (permissions, expiresOn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissions" Type="Azure.Storage.Sas.DataLakeSasPermissions" />
+        <Parameter Name="expiresOn" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="permissions">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <param name="expiresOn">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.DataLakeSasBuilder" />
+            class to create a Blob Service Sas.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AgentObjectId">
+      <MemberSignature Language="C#" Value="public string AgentObjectId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AgentObjectId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Sas.DataLakeSasBuilder.AgentObjectId" />
+      <MemberSignature Language="VB.NET" Value="Public Property AgentObjectId As String" />
+      <MemberSignature Language="F#" Value="member this.AgentObjectId : string with get, set" Usage="Azure.Storage.Sas.DataLakeSasBuilder.AgentObjectId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Beginning in version 2020-02-10, this value will be used for
+            the AAD Object ID of a user authorized by the owner of the
+            User Delegation Key to perform the action granted by the SAS.
+            The Azure Storage service will ensure that the owner of the
+            user delegation key has the required permissions before granting access.
+            the Azure Storage Service will perform an additional POSIX ACL check to
+            determine if the user is authorized to perform the requested operation.
+            This cannot be used in conjuction with <see cref="P:Azure.Storage.Sas.DataLakeSasBuilder.PreauthorizedAgentObjectId" />.
+            This is only used with generating User Delegation SAS.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -46,7 +174,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -68,7 +199,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -91,7 +225,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -113,7 +250,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -135,7 +275,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -143,6 +286,34 @@
       <Docs>
         <summary>
             Override the value returned for Cache-Type response header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Sas.DataLakeSasBuilder.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CorrelationId As String" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : string with get, set" Usage="Azure.Storage.Sas.DataLakeSasBuilder.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Beginning in version 2020-02-10, this value will be used for
+            to correlate the storage audit logs with the audit logs used by the
+            principal generating and distributing SAS. This is only used for
+            User Delegation SAS.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -157,11 +328,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -173,7 +348,7 @@
       <Docs>
         <param name="obj">The instance to compare to.</param>
         <summary>
-            Check if two BlobSasBuilder instances are equal.
+            Check if two DataLakeSasBuilder instances are equal.
             </summary>
         <returns>True if they're equal, false otherwise.</returns>
         <remarks>To be added.</remarks>
@@ -188,7 +363,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -212,7 +390,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -234,11 +415,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -247,9 +432,9 @@
       <Parameters />
       <Docs>
         <summary>
-            Get a hash code for the BlobSasBuilder.
+            Get a hash code for the DataLakeSasBuilder.
             </summary>
-        <returns>Hash code for the BlobSasBuilder.</returns>
+        <returns>Hash code for the DataLakeSasBuilder.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,7 +447,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -285,7 +473,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.SasIPRange</ReturnType>
@@ -303,6 +494,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="IsDirectory">
+      <MemberSignature Language="C#" Value="public bool? IsDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsDirectory" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Sas.DataLakeSasBuilder.IsDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsDirectory As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IsDirectory : Nullable&lt;bool&gt; with get, set" Usage="Azure.Storage.Sas.DataLakeSasBuilder.IsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Beginning in version 2020-02-10, this value defines whether or
+            not the <see cref="P:Azure.Storage.Sas.DataLakeSasBuilder.Path" /> is a directory. If this value is
+            set to true, the Path is a Directory for a Directory SAS.
+            If set to false or default, the Path is a File Path for a
+            File Path SAS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Path">
       <MemberSignature Language="C#" Value="public string Path { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Path" />
@@ -312,7 +532,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -321,6 +544,10 @@
         <summary>
             The name of the path being made accessible, or
             <see cref="F:System.String.Empty" /> for a file system SAS.
+            Beginning in version 2020-02-10, setting
+            <see cref="P:Azure.Storage.Sas.DataLakeSasBuilder.IsDirectory" /> to true means we will accept the
+            Path as a directory for a directory SAS. If not set, this
+            value is assumed to be a File Path for a File Path SAS.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -335,7 +562,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -354,6 +584,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PreauthorizedAgentObjectId">
+      <MemberSignature Language="C#" Value="public string PreauthorizedAgentObjectId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreauthorizedAgentObjectId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Sas.DataLakeSasBuilder.PreauthorizedAgentObjectId" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreauthorizedAgentObjectId As String" />
+      <MemberSignature Language="F#" Value="member this.PreauthorizedAgentObjectId : string with get, set" Usage="Azure.Storage.Sas.DataLakeSasBuilder.PreauthorizedAgentObjectId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Beginning in version 2020-02-10, this value will be used for
+            the AAD Object ID of a user authorized by the owner of the
+            User Delegation Key to perform the action granted by the SAS.
+            The Azure Storage service will ensure that the owner of the
+            user delegation key has the required permissions before granting access.
+            No additional permission check for the user specified in this value will be performed.
+            This cannot be used in conjuction with <see cref="P:Azure.Storage.Sas.DataLakeSasBuilder.AgentObjectId" />.
+            This is only used with generating User Delegation SAS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Protocol">
       <MemberSignature Language="C#" Value="public Azure.Storage.Sas.SasProtocol Protocol { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.Storage.Sas.SasProtocol Protocol" />
@@ -363,7 +625,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.SasProtocol</ReturnType>
@@ -389,7 +654,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -410,6 +678,11 @@
              is a blob snapshot.  This grants access to the content and
              metadata of the specific snapshot, but not the corresponding root
              blob.
+            
+             Beginning in version 2020-02-10, specify "d" if the shared resource
+             is a DataLake directory. This grants access to the paths in the
+             directory and to list the paths in the directory. When "d" is
+             specified, the sdd query parameter is also required.
              </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -424,7 +697,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -451,7 +727,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -478,7 +757,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -505,7 +787,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -521,6 +806,40 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SetPermissions">
+      <MemberSignature Language="C#" Value="public void SetPermissions (string rawPermissions, bool normalize = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPermissions(string rawPermissions, bool normalize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.DataLakeSasBuilder.SetPermissions(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPermissions (rawPermissions As String, Optional normalize As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.SetPermissions : string * bool -&gt; unit" Usage="dataLakeSasBuilder.SetPermissions (rawPermissions, normalize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawPermissions" Type="System.String" />
+        <Parameter Name="normalize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rawPermissions">
+            Raw permissions string for the SAS.
+            </param>
+        <param name="normalize">
+            If the permissions should be validated and correctly ordered.
+            </param>
+        <summary>
+            Sets the permissions for the SAS using a raw permissions string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StartsOn">
       <MemberSignature Language="C#" Value="public DateTimeOffset StartsOn { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset StartsOn" />
@@ -530,7 +849,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -555,7 +877,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.DataLakeSasQueryParameters</ReturnType>
@@ -588,7 +913,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.DataLakeSasQueryParameters</ReturnType>
@@ -623,11 +951,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -651,8 +983,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -663,7 +1004,12 @@
             when handling requests made with this shared access signature.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This property has been deprecated and we will always use the latest
+            storage SAS version of the Storage service supported. This change
+            does not have any impact on how your application generates or makes
+            use of SAS tokens.
+            </remarks>
       </Docs>
     </Member>
   </Members>

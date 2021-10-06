@@ -6,10 +6,12 @@
   <TypeSignature Language="F#" Value="type EncryptionSetIdentity = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-    <AssemblyVersion>30.0.0.0</AssemblyVersion>
-    <AssemblyVersion>31.0.0.0</AssemblyVersion>
-    <AssemblyVersion>32.0.0.0</AssemblyVersion>
-    <AssemblyVersion>33.0.0.0</AssemblyVersion>
+    <AssemblyVersion>45.0.0.1</AssemblyVersion>
+    <AssemblyVersion>46.0.0.0</AssemblyVersion>
+    <AssemblyVersion>47.0.0.0</AssemblyVersion>
+    <AssemblyVersion>48.0.0.0</AssemblyVersion>
+    <AssemblyVersion>49.0.0.0</AssemblyVersion>
+    <AssemblyVersion>49.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,10 +33,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,15 +52,17 @@
       <MemberSignature Language="C#" Value="public EncryptionSetIdentity (string type = default, string principalId = default, string tenantId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string principalId, string tenantId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity.#ctor(System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional type As String = null, Optional principalId As String = null, Optional tenantId As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional type As String = Nothing, Optional principalId As String = Nothing, Optional tenantId As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity : string * string * string -&gt; Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity" Usage="new Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity (type, principalId, tenantId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="type" Type="System.String" />
@@ -65,8 +71,12 @@
       </Parameters>
       <Docs>
         <param name="type">The type of Managed Identity used by the
-            DiskEncryptionSet. Only SystemAssigned is supported. Possible
-            values include: 'SystemAssigned'</param>
+            DiskEncryptionSet. Only SystemAssigned is supported for new
+            creations. Disk Encryption Sets can be updated with Identity type
+            None during migration of subscription to a new Azure Active
+            Directory tenant; it will cause the encrypted resources to lose
+            access to the keys. Possible values include: 'SystemAssigned',
+            'None'</param>
         <param name="principalId">The object id of the Managed Identity
             Resource. This will be sent to the RP from ARM via the
             x-ms-identity-principal-id header in the PUT request if the
@@ -90,14 +100,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="principalId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="principalId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="principalId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -123,14 +136,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tenantId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tenantId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tenantId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -155,14 +171,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="type")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="type")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -171,8 +190,12 @@
       <Docs>
         <summary>
             Gets or sets the type of Managed Identity used by the
-            DiskEncryptionSet. Only SystemAssigned is supported. Possible
-            values include: 'SystemAssigned'
+            DiskEncryptionSet. Only SystemAssigned is supported for new
+            creations. Disk Encryption Sets can be updated with Identity type
+            None during migration of subscription to a new Azure Active
+            Directory tenant; it will cause the encrypted resources to lose
+            access to the keys. Possible values include: 'SystemAssigned',
+            'None'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

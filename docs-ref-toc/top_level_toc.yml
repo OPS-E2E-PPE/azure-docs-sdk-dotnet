@@ -11,7 +11,6 @@
       uid: azure.net.sdk.landingPage.services.ActiveDirectory.Client
       landingPageType: Service
       children:
-      - 'Azure.Identity*'
       - 'Microsoft.Identity*'
   - name: Advisor
     uid: azure.net.sdk.landingPage.services.Advisor
@@ -33,19 +32,16 @@
       - 'Microsoft.Azure.Management.ApiManagement*'
   - name: App Configuration
     uid: azure.net.sdk.landingPage.services.AppConfiguration
-    landingPageType: Service
-    items:
-    - name: Client
-      uid: azure.net.sdk.landingPage.services.AppConfiguration.Client
-      landingPageType: Service
-      children:
-      - 'Microsoft.Azure.AppConfiguration*'
-      - 'Azure.Data.AppConfiguration*'
-      - 'ManagedIdentityConnector*'
-      - 'Microsoft.Extensions.Configuration.AzureAppConfiguration*'
-      - 'Microsoft.FeatureManagement*'
-      - 'Microsoft.FeatureManagement.FeatureFilters*'
-      - 'Microsoft.FeatureManagement.TagHelpers*'
+    href: ~/api/overview/azure/data.appconfiguration-readme.md
+    children:
+    - 'Azure.Data.AppConfiguration*'
+    - 'Azure.ResourceManager.AppConfiguration*'
+    - 'ManagedIdentityConnector*'
+    - 'Microsoft.Azure.AppConfiguration*'
+    - 'Microsoft.Extensions.Configuration.AzureAppConfiguration*'
+    - 'Microsoft.FeatureManagement*'
+    - 'Microsoft.FeatureManagement.FeatureFilters*'
+    - 'Microsoft.FeatureManagement.TagHelpers*'
   - name: Application Insights
     uid: azure.net.sdk.landingPage.services.Insights
     href: ~/api/overview/azure/insights.md
@@ -181,47 +177,56 @@
           - 'Microsoft.Azure.CognitiveServices.AnomalyDetector*'
         - name: Bing AutoSuggest
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.AutoSuggest
+          href: ~/api/overview/azure/cognitiveservices/bing-autosuggest-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.AutoSuggest*'
         - name: Bing Custom Search
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.CustomSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-custom-search-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.CustomSearch*'
           - 'Microsoft.Azure.CognitiveServices.Search.CustomImageSearch*'
         - name: Bing Entity Search API
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.EntitySearch
+          href: ~/api/overview/azure/cognitiveservices/bing-entity-search-api-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.EntitySearch*'
         - name: Bing Image Search
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.ImageSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-image-search-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.ImageSearch*'
         - name: Bing News Search
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.NewsSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-news-search-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.NewsSearch*'
         - name: Bing Spell Check
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.SpellCheck
+          href: ~/api/overview/azure/cognitiveservices/bing-spell-check-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Language.SpellCheck*'
         - name: Bing Video Search
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.VideoSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-video-search-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.VideoSearch*'
         - name: Bing Visual Search
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.VisualSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-visual-search-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.VisualSearch*'
         - name: Bing Web Search API
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.WebSearch
+          href: ~/api/overview/azure/cognitiveservices/bing-web-search-api-readme.md
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Search.WebSearch*'
@@ -244,21 +249,25 @@
           - 'Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training*'
         - name: Face API
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.Face
-          landingPageType: Service
+          href: ~/api/overview/azure/cognitiveservices/face-readme.md
           children:
           - 'Microsoft.Azure.CognitiveServices.Vision.Face*'
         - name: Form Recognizer
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.FormRecognizer
-          landingPageType: Service
+          href:  ~/api/overview/azure/ai.formrecognizer-readme.md
           children:
-          - 'Microsoft.Azure.CognitiveServices.FormRecognizer*'
-          - 'Microsoft.Azure.CognitiveServices.FormRecognizer.Models*'
+          - 'Azure.AI.FormRecognizer*'
         - name: Language Understanding
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.LUIS
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Language.LUIS.Authoring*' 
           - 'Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime*'
+        - name: Metrics Advisor
+          uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.MetricsAdvisor
+          href: ~/api/overview/azure/ai.metricsadvisor-readme-pre.md
+          children:
+          - 'Azure.AI.MetricsAdvisor*'
         - name: Personalizer
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.Personalizer
           landingPageType: Service
@@ -272,14 +281,63 @@
           - 'Microsoft.CognitiveServices.Speech*'
         - name: Text Analytics 
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.TextAnalytics
-          landingPageType: Service
+          href: ~/api/overview/azure/ai.textanalytics-readme.md
           children:
-          - 'Microsoft.Azure.CognitiveServices.Language.TextAnalytics*'
+          - 'Azure.AI.TextAnalytics*'
+        - name: Translation
+          uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.Translation
+          href: ~/api/overview/azure/ai.translation.document-readme-pre.md
+          children:
+          - 'Azure.AI.Translation.Document*'
         - name: QnA Maker 
           uid: azure.net.sdk.landingPage.services.CognitiveServices.Client.QnAMaker
           landingPageType: Service
           children:
           - 'Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker*'
+  - name: Communication
+    uid: azure.net.sdk.landingPage.services.Communication
+    landingPageType: Service
+    items:
+    - name: Calling Server
+      uid: azure.net.sdk.landingPage.services.Communication.CallingServer
+      href: ~/api/overview/azure/communication.callingserver-readme-pre.md
+      children:
+      - 'Azure.Communication.CallingServer*'
+    - name: Chat
+      uid: azure.net.sdk.landingPage.services.Communication.Chat
+      href: ~/api/overview/azure/communication.chat-readme.md
+      children:
+      - 'Azure.Communication.Chat*'
+    - name: Common
+      uid: azure.net.sdk.landingPage.services.Communication.Common
+      href: ~/api/overview/azure/communication.common-readme.md
+      children:
+      - 'Azure.Communication.Common*'
+    - name: Identity
+      uid: azure.net.sdk.landingPage.services.Communication.Identity
+      href: ~/api/overview/azure/communication.identity-readme.md
+      children:
+      - 'Azure.Communication.Identity*'
+    - name: Network Traversal
+      uid: azure.net.sdk.landingPage.services.Communication.NetworkTraversal
+      landingPageType: Service
+      children:
+      - 'Azure.Communication.NetworkTraversal*'
+    - name: Phone Numbers
+      uid: azure.net.sdk.landingPage.services.Communication.PhoneNumbers
+      href: ~/api/overview/azure/communication.sms-readme.md
+      children:
+      - 'Azure.Communication.PhoneNumbers*'
+    - name: SMS
+      uid: azure.net.sdk.landingPage.services.Communication.SMS
+      href: ~/api/overview/azure/communication.sms-readme.md
+      children:
+      - 'Azure.Communication.Sms*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Communication.Management
+      href: ~/api/overview/azure/resourcemanager.communication-readme.md
+      children:
+      - 'Azure.ResourceManager.Communication*'
   - name: Consumption
     uid: azure.net.sdk.landingPage.services.Consumption
     landingPageType: Service
@@ -302,6 +360,11 @@
     uid: azure.net.sdk.landingPage.services.containerregistry
     landingPageType: Service
     items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.ContainerRegistry.Client
+      href: ~/api/overview/azure/containers.containerregistry-readme-pre.md
+      children:
+      - 'Azure.Containers.ContainerRegistry*'
     - name: Management
       uid: azure.net.sdk.landingPage.services.containerregistry.management
       landingPageType: Service
@@ -318,12 +381,8 @@
       - 'Microsoft.Azure.Management.ContainerService*'
   - name: Core
     uid: azure.net.sdk.landingPage.services.core
-    landingPageType: Service
-    items:
-    - name: Client
-      uid: azure.net.sdk.landingPage.services.core.Client
-      landingPageType: Service
-      children:
+    href: ~/api/overview/azure/core-readme.md
+    children:
       - 'Azure'
       - 'Azure.Core*'
   - name: Cosmos DB
@@ -339,9 +398,15 @@
       - 'Microsoft.Azure.Graphs*'
       - 'Microsoft.Azure.CosmosDB*'
       - 'Microsoft.Azure.Cosmos*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.CosmosDB.Management
+      landingPageType: Service
+      children:
+      - 'Azure.ResourceManager.CosmosDB*'
   - name: Data Box
     landingPageType: Service
     uid: azure.net.sdk.landingPage.services.databox
+    href: ~/api/overview/azure/databox.md
     items:
     - name: Management
       uid: azure.net.sdk.landingPage.services.databox.Management
@@ -420,18 +485,25 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.DeploymentManager*'
-  - name: Digital Twin
-    uid: azure.net.sdk.landingPage.services.digitaltwin
+  - name: Digital Twins
+    uid: azure.net.sdk.landingPage.services.digitaltwins
     landingPageType: Service
     items:
     - name: Client
-      uid: azure.net.sdk.landingPage.services.digitaltwin.Client
+      uid: azure.net.sdk.landingPage.services.digitaltwins.Client
       landingPageType: Service
       children:
-      - 'Microsoft.Azure.IoT.DigitalTwin.Model.Contracts*'
-      - 'Microsoft.Azure.IoT.DigitalTwin.Model.Contracts.Contexts*'
-      - 'Microsoft.Azure.IoT.DigitalTwin.Model.Parser*'
-      - 'Microsoft.Azure.IoT.DigitalTwin.Model.Parser.Parser*'
+      - 'Azure.DigitalTwins.Core*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.digitaltwins.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.DigitalTwins*'
+    - name: Parser
+      uid: azure.net.sdk.landingPage.services.digitaltwins.Parser
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.IoT.DigitalTwin*'
   - name: DNS
     uid: azure.net.sdk.landingPage.services.DNS
     href: ~/api/overview/azure/dns.md
@@ -440,6 +512,7 @@
       uid: azure.net.sdk.landingPage.services.DNS.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.Dns*'
       - 'Microsoft.Azure.Management.Dns*'
   - name: Edge Gateway
     landingPageType: Service
@@ -454,10 +527,11 @@
     href: ~/api/overview/azure/eventgrid.md
     uid: azure.net.sdk.landingPage.services.EventGrid
     items:
-    - name: Publish
+    - name: Client
       uid: azure.net.sdk.landingPage.services.EventGrid.Client
-      landingPageType: Service
+      href: ~/api/overview/azure/messaging.eventgrid-readme-pre.md
       children:
+      - 'Azure.Messaging.EventGrid*'
       - 'Microsoft.Azure.EventGrid*'
     - name: Management
       uid: azure.net.sdk.landingPage.services.EventGrid.Management
@@ -466,20 +540,46 @@
       - 'Microsoft.Azure.Management.EventGrid*'
   - name: Event Hubs
     uid: azure.net.sdk.landingPage.services.EventHub
-    landingPageType: Service
+    href: ~/api/overview/azure/event-hubs.md
     items:
     - name: Management
       uid: azure.net.sdk.landingPage.services.EventHub.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.EventHubs*'
       - 'Microsoft.Azure.Management.EventHub*'
       - 'TrackOne'
-    - name: Client
+    - name: Event Hubs Processor
+      uid: azure.net.sdk.landingPage.services.EventHub.Processor
+      href: ~/api/overview/azure/messaging.eventhubs.processor-readme.md
+      children:
+      - 'Azure.Messaging.EventHubs.Processor*'
+    - name: Event Hubs Client
       uid: azure.net.sdk.landingPage.services.EventHub.Client
+      href: ~/api/overview/azure/messaging.eventhubs-readme.md
+      children:
+      - 'Azure.Messaging.EventHubs*'
+    - name: V4
+      uid: azure.net.sdk.landingPage.services.EventHub.Client.Legacy
       landingPageType: Service
       children:
       - 'Microsoft.Azure.EventHubs*'
-      - 'Azure.Messaging.EventHubs*'
+  - name: Extensions
+    uid: azure.net.sdk.landingPage.extensions.core
+    landingPageType: Service
+    children:
+      - 'Microsoft.AspNetCore.DataProtection*'
+      - 'Azure.Extensions.AspNetCore.Configuration.Secrets*'
+  - name: Form Recognizer
+    uid: azure.net.sdk.landingPage.services.FormRecognizer
+    href:  ~/api/overview/azure/ai.formrecognizer-readme.md
+    children:
+      - 'Azure.AI.FormRecognizer*'
+  - name: Anomaly Detector
+    uid: azure.net.sdk.landingPage.services.AnomalyDetector
+    href:  ~/api/overview/azure/ai.anomalydetector-readme-pre.md
+    children:
+      - 'Azure.AI.AnomalyDetector*'
   - name: Functions
     uid: azure.net.sdk.landingPage.services.WebJobs
     href: ~/api/overview/azure/functions.md
@@ -491,15 +591,42 @@
       children:
       - 'Microsoft.Azure.WebJobs*'
       - 'Microsoft.Azure.WebJobs.Extensions.DurableTask*'
+      - 'Microsoft.Extensions.Hosting*'
+      - 'Microsoft.Extensions.Logging*'
+      - 'Microsoft.Azure.Functions.Worker*'
   - name: HDInsight
     uid: azure.net.sdk.landingPage.services.HDInsights
     href: ~/api/overview/azure/hdinsight.md
     items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.HDInsights.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.HDInsight.Job*'
     - name: Management
       uid: azure.net.sdk.landingPage.services.HDInsights.Management
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.HDInsight*'
+  - name: HPC Storage Cache
+    uid: azure.net.sdk.landingPage.services.StorageCache
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.StorageCache.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.StorageCache*'
+  - name: Hybrid Compute
+    uid: azure.net.sdk.landingPage.services.HybridCompute
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.HybridCompute.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.HybridCompute*'
+      - 'Microsoft.Azure.Management.HybridCompute.Models*'
   - name: IoT
     uid: azure.net.sdk.landingPage.services.IoT
     href: ~/api/overview/azure/iot.md
@@ -513,36 +640,56 @@
       uid: azure.net.sdk.landingPage.services.IoT.Management
       landingPageType: Service
       children:
+      - 'Microsoft.Azure.Management.DeviceUpdate*'
       - 'Microsoft.Azure.Management.IotHub*'
+  - name: Identity
+    uid: azure.net.sdk.landingPage.services.Identity
+    landingPageType: Service
+    items:
+    - name: Identity Client
+      uid: azure.net.sdk.landingPage.services.Identity.Client
+      href: ~/api/overview/azure/identity-readme.md
+      children:
+      - 'Azure.Identity*'
+    - name: AppAuthentication Client (Legacy)
+      uid: azure.net.sdk.landingPage.services.Identity.AppAuthentication
+      href: ~/api/overview/azure/service-to-service-authentication.md
+      items:
+      - name: Migration Guide to Azure.Identity
+        uid: azure.net.sdk.landingPage.services.Identity.AppAuthentication.Migration
+        href: ~/api/overview/azure/app-auth-migration.md
   - name: Key Vault
     uid: azure.net.sdk.landingPage.services.KeyVault
     href: ~/api/overview/azure/key-vault.md
     items:
-    - name: Common
-      uid: azure.net.sdk.landingPage.services.KeyVault.Common
+    - name: Administration
+      uid: azure.net.sdk.landingPage.services.KeyVault.Administration
+      href: ~/api/overview/azure/security.keyvault.administration-readme-pre.md
       children:
-      - 'KeyVault.TestFramework*'
+      - 'Azure.Security.KeyVault.Administration*'
+      - 'Azure.Security.KeyVault.Administration.Models*'
     - name: Keys
       uid: azure.net.sdk.landingPage.services.KeyVault.Keys
-      href: ~/api/overview/azure/keyvault-keys-readme.md
+      href: ~/api/overview/azure/security.keyvault.keys-readme.md
       children:
       - 'Azure.Security.KeyVault.Keys*'
       - 'Microsoft.Extensions.Azure.KeyClientBuilderExtensions'
     - name: Secrets
       uid: azure.net.sdk.landingPage.services.KeyVault.Secrets
-      href: ~/api/overview/azure/keyvault-secrets-readme.md
+      href: ~/api/overview/azure/security.keyvault.secrets-readme.md
       children:
       - 'Azure.Security.KeyVault.Secrets*'
       - 'Microsoft.Extensions.Azure.SecretClientBuilderExtensions'
     - name: Certificates
       uid: azure.net.sdk.landingPage.services.KeyVault.Certificates
-      href: ~/api/overview/azure/keyvault-certificates-readme.md
+      href: ~/api/overview/azure/security.keyvault.certificates-readme.md
       children:
       - 'Azure.Security.KeyVault.Certificates*'
     - name: Management
       uid: azure.net.sdk.landingPage.services.KeyVault.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.KeyVault*'
       - 'Microsoft.Azure.Management.KeyVault*'
     - name: V3
       uid: azure.net.sdk.landingPage.services.KeyVault.Client
@@ -602,6 +749,16 @@
       landingPageType: Service
       children:
       - 'Microsoft.WindowsAzure.MediaServices*'
+    - name: Live Video Analytics Edge
+      uid: azure.net.sdk.landingPage.services.MediaServices.Analytics
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Media.LiveVideoAnalytics.Edge*'
+  - name: Metrics Advisor
+    uid: azure.net.sdk.landingPage.services.MetricsAdvisor
+    href: ~/api/overview/azure/ai.metricsadvisor-readme-pre.md
+    children:
+    - 'Azure.AI.MetricsAdvisor*'
   - name: Mixed Reality
     uid: azure.net.sdk.landingPage.services.MixedReality
     href: ~/api/overview/azure/mixed-reality.md
@@ -635,9 +792,11 @@
     href: ~/api/overview/azure/mysql.md
     uid: azure.net.sdk.landingpage.services.MySQL
     items: 
-    - name: Client
-      uid: azure.net.sdk.landingpage.services.MySQL.Client
+    - name: Management
+      uid: azure.net.sdk.landingpage.services.MySQL.Management
       landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.MySQL*'
   - name: Network
     uid: azure.net.sdk.landingPage.services.Networking
     href: ~/api/overview/azure/virtual-network.md
@@ -646,6 +805,7 @@
       uid: azure.net.sdk.landingPage.services.Networking.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.Network*'
       - 'Microsoft.Azure.Management.Network*'
   - name: Notification Hubs
     uid: azure.net.sdk.landingPage.services.NotificationHubs
@@ -688,9 +848,11 @@
     href: ~/api/overview/azure/postgresql.md
     uid: azure.net.sdk.landingpage.services.PostgreSQL
     items: 
-    - name: Client
-      uid: azure.net.sdk.landingpage.services.PostgreSQL.Client
+    - name: Management
+      uid: azure.net.sdk.landingpage.services.Management.Client
       landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.PostgreSQL*'
   - name: Power BI
     uid: azure.net.sdk.landingPage.services.PowerBI
     href: ~/api/overview/azure/powerbi-embedded.md
@@ -714,6 +876,21 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.PrivateDns*'
+  - name: Purview Resource Provider
+    uid: azure.net.sdk.landingPage.services.purview
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.purview.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Purview*'
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.purview.Client
+      landingPageType: Service
+      children:
+      - 'Azure.Analytics.Purview.Account*'
+      - 'Azure.Analytics.Purview.Scanning*'
   - name: Recovery Services and Backup
     uid: azure.net.sdk.landingPage.services.Recovery
     href: ~/api/overview/azure/recovery-services.md
@@ -724,6 +901,16 @@
       children:
       - 'Microsoft.Azure.Management.RecoveryServices*'
       - 'Microsoft.Azure.Management.BackupServices*'
+  - name: Region Move
+    uid: azure.net.sdk.landingPage.services.RegionMove
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.RegionMove.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Migrate.ResourceMover*'
+      - 'Microsoft.Azure.Management.Migrate.ResourceMover.Models*'
   - name: Azure Cache for Redis
     uid: azure.net.sdk.landingPage.services.RedisCache
     href: ~/api/overview/azure/redis-cache.md
@@ -742,6 +929,11 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Relay*'
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Relay.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.Relay*'
   - name: Resource Graph
     uid: azure.net.sdk.landingPage.services.ResourceGraph
     landingPageType: Service
@@ -759,23 +951,40 @@
       uid: azure.net.sdk.landingPage.services.Resources.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.Insights*'
+      - 'Azure.ResourceManager.Insights.Models*'
+      - 'Azure.ResourceManager.Resources'
+      - 'Azure.ResourceManager.Resources.*'
       - 'Microsoft.Azure.Management.ResourceManager*'
+  - name: Schema Registry
+    uid: azure.net.sdk.landingPage.services.SchemaRegistry
+    landingPageType: Service
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.SchemaRegistry.Client
+      landingPageType: Service
+      children:
+      - 'Azure.Data.SchemaRegistry*'
+      - 'Microsoft.Azure.Data.SchemaRegistry.ApacheAvro*'
   - name: Search
     uid: azure.net.sdk.landingPage.services.Search
     href: ~/api/overview/azure/search.md
     items:
+    - name: Client 11
+      uid: azure.net.sdk.landingPage.services.Search.Client
+      href: ~/api/overview/azure/search.documents-readme.md
+      children:
+      - 'Azure.Search*'  
+    - name: Client 10
+      uid: azure.net.sdk.landingPage.services.Search.Client.10
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Search*'
     - name: Management
       uid: azure.net.sdk.landingPage.services.Search.Management
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.Search*'
-    - name: Client
-      uid: azure.net.sdk.landingPage.services.Search.Client
-      landingPageType: Service
-      children:
-      - 'Azure.Search*'  
-      - 'Microsoft.Azure.Search*'
-      - 'Microsoft.Rest.Azure*'
   - name: Service Bus
     uid: azure.net.sdk.landingPage.services.ServiceBus
     href: ~/api/overview/azure/service-bus.md
@@ -788,8 +997,10 @@
       - 'Microsoft.Azure.Management.Fluent.ServiceBus.*'
     - name: Client
       uid: azure.net.sdk.landingPage.services.ServiceBus.Client
+      href: ~/api/overview/azure/messaging.servicebus-readme.md
       landingPageType: Service
       children:
+      - 'Azure.Messaging.ServiceBus*'
       - 'Microsoft.Azure.ServiceBus*'
       - 'Microsoft.ServiceBus*'
   - name: Service Fabric
@@ -831,6 +1042,16 @@
       - 'System.Fabric'
       - 'System.Fabric.Common*'
       - 'System.Fabric.Common.Tracing*'
+  - name: Spring Cloud
+    uid: azure.net.sdk.landingPage.services.springcloud
+    href: ~/api/overview/azure/sql.md
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.springcloud.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.AppPlatform*'
+      - 'Microsoft.Azure.Management.AppPlatform.Models*'
   - name: SQL
     uid: azure.net.sdk.landingPage.services.SQL
     href: ~/api/overview/azure/sql.md
@@ -839,45 +1060,66 @@
       uid: azure.net.sdk.landingPage.services.SQL.Management
       landingPageType: Service
       children:
-      - 'Microsoft.Azure.Management.Sql*'
+      - 'Microsoft.Azure.Management.Sql'
+      - 'Microsoft.Azure.Management.Sql.*'
     - name: Client
       uid: azure.net.sdk.landingPage.services.SQL.Client
       landingPageType: Service
       children:
       - 'Microsoft.Azure.SqlDatabase.ElasticScale*'
       - 'System.Data.Sql*'
+  - name: SQL Virtual Machine
+    uid: azure.net.sdk.landingPage.services.SQLVM
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.SQLVM.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.SqlVirtualMachine*'
+  - name: Stack HCI
+    uid: azure.net.sdk.landingPage.services.stackhci
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.stackhci.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.AzureStackHCI'
+      - 'Microsoft.Azure.Management.AzureStackHCI.*'
   - name: Storage
     uid: azure.net.sdk.landingPage.services.Storage
     href: ~/api/overview/azure/storage.md
     items:
     - name: Common
       uid: azure.net.sdk.landingPage.services.Storage.Client.Common
-      landingPageType: Service
+      href: ~/api/overview/azure/storage.common-readme.md
       children:
       - 'Azure.Storage'
       - 'Azure.Storage.Common'
       - 'Azure.Storage.Sas'
     - name: Blobs
       uid: azure.net.sdk.landingPage.services.Storage.Client.Blobs
-      href: ~/api/overview/azure/storage-blob-readme.md
+      href: ~/api/overview/azure/storage.blobs-readme.md
       children:
       - 'Azure.Storage.Blobs*'
       - 'Azure.Storage.Blobs.Models*'
       - 'Azure.Storage.Blobs.Specialized*'
     - name: Queues
       uid: azure.net.sdk.landingPage.services.Storage.Client.Queues
-      href: ~/api/overview/azure/storage-queues-readme.md
+      href: ~/api/overview/azure/storage.queues-readme.md
       children:
       - 'Azure.Storage.Queues'
       - 'Azure.Storage.Queues.Models'
+      - 'Azure.Storage.Queues.Specialized'
     - name: Files
       uid: azure.net.sdk.landingPage.services.Storage.Client.Files
-      href: ~/api/overview/azure/storage-fileshares-readme.md
+      href: ~/api/overview/azure/storage.files.shares-readme.md
       children:
       - 'Azure.Storage.Files.Shares*'
       - 'Azure.Storage.Files.Models'
     - name: Data Lake
-      uid: azure.net.sdk.landingPage.services.Storage.Client.DataLake
+      href: ~/api/overview/azure/storage.files.datalake-readme.md
       children:
       - 'Azure.Storage.Files.DataLake*'
     - name: Version 11
@@ -903,7 +1145,9 @@
       uid: azure.net.sdk.landingPage.services.Storage.Management
       landingPageType: Service
       children:
-      - 'Microsoft.Azure.Management.Storage*'
+      - 'Azure.ResourceManager.Storage'
+      - 'Azure.ResourceManager.Storage.*'
+      - 'Microsoft.Azure.Management.Storage'
       - 'Microsoft.Azure.Management.Storage.*'
   - name: Storage Sync
     uid: azure.net.sdk.landingPage.services.StorageSync
@@ -943,15 +1187,33 @@
       children:
       - 'Microsoft.Azure.Management.Support*'
       - 'Microsoft.Azure.Management.Support.Models*'
-  - name: Text Analytics
-    uid: azure.net.sdk.landingPage.services.TextAnalytics
+  - name: Synapse Analytics
+    uid: azure.net.sdk.landingPage.services.Synapse
     landingPageType: Service
     items:
-    - name: Client
-      uid: azure.net.sdk.landingPage.services.TextAnalytics.Client
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.Synapse.Management
       landingPageType: Service
       children:
-      - 'Azure.AI.TextAnalytics*'
+      - 'Microsoft.Azure.Management.Synapse*'
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.Synapse.Client
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Synapse*'
+      - 'Azure.Analytics.Synapse.Artifacts*'
+      - 'Azure.Analytics.Synapse.Spark*'
+      - 'Azure.Analytics.Synapse.AccessControl*'
+  - name: Tables
+    uid: azure.net.sdk.landingPage.services.Tables
+    href:  ~/api/overview/azure/data.tables-readme.md
+    children:
+      - 'Azure.Data.Tables*'
+  - name: Text Analytics
+    uid: azure.net.sdk.landingPage.services.TextAnalytics
+    href: ~/api/overview/azure/ai.textanalytics-readme.md
+    children:
+    - 'Azure.AI.TextAnalytics*'
   - name: Traffic Manager
     uid: azure.net.sdk.landingPage.services.TrafficManager
     href: ~/api/overview/azure/traffic-manager.md
@@ -961,6 +1223,20 @@
       landingPageType: Service
       children:
       - 'Microsoft.Azure.Management.TrafficManager*'
+  - name: Translation
+    uid: azure.net.sdk.landingPage.services.Translation
+    href: ~/api/overview/azure/ai.translation.document-readme-pre.md
+    children:
+    - 'Azure.AI.Translation.Document*'
+  - name: Video Analyzer
+    uid: azure.net.sdk.landingPage.services.VideoAnalyzer
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.VideoAnalyzer.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.VideoAnalyzer*'
   - name: Virtual Machines
     uid: azure.net.sdk.landingPage.services.VirtualMachines
     href: ~/api/overview/azure/virtualmachines.md
@@ -969,29 +1245,29 @@
       uid: azure.net.sdk.landingPage.services.VirtualMachines.Management
       landingPageType: Service
       children:
+      - 'Azure.ResourceManager.Compute*'
       - 'Microsoft.Azure.Management.Compute*'
+  - name: Virtual Machine Health
+    uid: azure.net.sdk.landingPage.services.WorkloadMonitor
+    landingPageType: Service
+    items:
+    - name: Management
+      uid: azure.net.sdk.landingPage.services.WorkloadMonitor.Management
+      landingPageType: Service
+      children:
+      - 'Microsoft.Azure.Management.WorkloadMonitor*'
+  - name: Web PubSub
+    uid: azure.net.sdk.landingPage.services.webpubsub
+    href: ~/api/overview/azure/messaging.webpubsub-readme-pre.md
+    landingPageType: Service
+    items:
+    - name: Client
+      uid: azure.net.sdk.landingPage.services.webpubsub.Client
+      landingPageType: Service
+      children:
+      - 'Azure.Messaging.WebPubSub*'
   - name: Other
     uid: azure.net.sdk.landingPage.services.Other
-    landingPageType: Service
-    children:
-    - 'Microsoft.Extensions.Azure*'
-    - 'Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling*'
-    - 'Microsoft.Azure.Management.Fluent*'
-    - 'Microsoft.Azure.Management.Graph.RBAC.Fluent*'
-    - 'Microsoft.IdentityModel.Protocols*'
-    - 'System.IdentityModel.Tokens.Jwt'
-    - 'System.Net*'
-    - 'System.Web*'
-    - 'Owin*'
-    - 'System.Security.Principal*'
-    - 'Microsoft.Xml.Serialization.GeneratedAssembly*'
-    - 'Microsoft.Rest.ClientRuntime.Azure*'
-    - 'Microsoft.Rest*'
-    - 'Microsoft.Rest.Serialization*'
-    - 'Microsoft.Rest.TransientFaultHandling*'
-    - 'Azure.ApplicationModel.Configuration'
-  - name: Should Not Show
-    uid: azure.net.sdk.landingPage.services.ShouldNotShow
     landingPageType: Service
     children:
     - '*'

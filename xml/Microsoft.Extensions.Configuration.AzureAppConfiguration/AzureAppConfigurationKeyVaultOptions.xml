@@ -6,7 +6,9 @@
   <TypeSignature Language="F#" Value="type AzureAppConfigurationKeyVaultOptions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +29,9 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,7 +48,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions</ReturnType>
@@ -70,7 +76,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions</ReturnType>
@@ -82,6 +90,92 @@
         <param name="credential">Default token credentials.</param>
         <summary>
             Sets the credentials used to authenticate to key vaults that have no registered <see cref="T:Azure.Security.KeyVault.Secrets.SecretClient" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecretRefreshInterval">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretRefreshInterval (TimeSpan refreshInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretRefreshInterval(valuetype System.TimeSpan refreshInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions.SetSecretRefreshInterval(System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetSecretRefreshInterval (refreshInterval As TimeSpan) As AzureAppConfigurationKeyVaultOptions" />
+      <MemberSignature Language="F#" Value="member this.SetSecretRefreshInterval : TimeSpan -&gt; Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions" Usage="azureAppConfigurationKeyVaultOptions.SetSecretRefreshInterval refreshInterval" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="refreshInterval">Minimum time that must elapse before the secrets are reloaded from Key Vault.</param>
+        <summary>
+            Sets the refresh interval for periodically reloading all those secrets which do not have individual refresh intervals. 
+            Any refresh operation triggered using <see cref="T:Microsoft.Extensions.Configuration.AzureAppConfiguration.IConfigurationRefresher" /> will not update the value for a Key Vault secret until the cached value for that secret has expired.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecretRefreshInterval">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretRefreshInterval (string secretReferenceKey, TimeSpan refreshInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretRefreshInterval(string secretReferenceKey, valuetype System.TimeSpan refreshInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions.SetSecretRefreshInterval(System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetSecretRefreshInterval (secretReferenceKey As String, refreshInterval As TimeSpan) As AzureAppConfigurationKeyVaultOptions" />
+      <MemberSignature Language="F#" Value="member this.SetSecretRefreshInterval : string * TimeSpan -&gt; Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions" Usage="azureAppConfigurationKeyVaultOptions.SetSecretRefreshInterval (secretReferenceKey, refreshInterval)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="secretReferenceKey" Type="System.String" />
+        <Parameter Name="refreshInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="secretReferenceKey">Key of the Key Vault reference in Azure App Configuration.</param>
+        <param name="refreshInterval">Minimum time that must elapse before the secret is reloaded from Key Vault.</param>
+        <summary>
+            Sets the refresh interval for periodically reloading a secret from Key Vault. 
+            Any refresh operation triggered using <see cref="T:Microsoft.Extensions.Configuration.AzureAppConfiguration.IConfigurationRefresher" /> will not update the value for a Key Vault secret until the cached value for that secret has expired.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecretResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretResolver (Func&lt;Uri,System.Threading.Tasks.ValueTask&lt;string&gt;&gt; secretResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions SetSecretResolver(class System.Func`2&lt;class System.Uri, valuetype System.Threading.Tasks.ValueTask`1&lt;string&gt;&gt; secretResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions.SetSecretResolver(System.Func{System.Uri,System.Threading.Tasks.ValueTask{System.String}})" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetSecretResolver (secretResolver As Func(Of Uri, ValueTask(Of String))) As AzureAppConfigurationKeyVaultOptions" />
+      <MemberSignature Language="F#" Value="member this.SetSecretResolver : Func&lt;Uri, System.Threading.Tasks.ValueTask&lt;string&gt;&gt; -&gt; Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions" Usage="azureAppConfigurationKeyVaultOptions.SetSecretResolver secretResolver" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.Configuration.AzureAppConfiguration</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Configuration.AzureAppConfiguration.AzureAppConfigurationKeyVaultOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="secretResolver" Type="System.Func&lt;System.Uri,System.Threading.Tasks.ValueTask&lt;System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="secretResolver">A callback that maps the <see cref="T:System.Uri" /> of the key vault secret to its value.</param>
+        <summary>
+            Sets the callback used to resolve key vault references that have no registered <see cref="T:Azure.Security.KeyVault.Secrets.SecretClient" />.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

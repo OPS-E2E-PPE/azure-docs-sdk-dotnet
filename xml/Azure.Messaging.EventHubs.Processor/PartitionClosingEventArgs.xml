@@ -6,8 +6,11 @@
   <TypeSignature Language="F#" Value="type PartitionClosingEventArgs = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
+    <AssemblyVersion>5.4.1.0</AssemblyVersion>
+    <AssemblyVersion>5.5.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,13 +27,16 @@
       <MemberSignature Language="C#" Value="public PartitionClosingEventArgs (string partitionId, Azure.Messaging.EventHubs.Processor.ProcessingStoppedReason reason, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string partitionId, valuetype Azure.Messaging.EventHubs.Processor.ProcessingStoppedReason reason, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Messaging.EventHubs.Processor.PartitionClosingEventArgs.#ctor(System.String,Azure.Messaging.EventHubs.Processor.ProcessingStoppedReason,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (partitionId As String, reason As ProcessingStoppedReason, Optional cancellationToken As CancellationToken = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (partitionId As String, reason As ProcessingStoppedReason, Optional cancellationToken As CancellationToken = Nothing)" />
       <MemberSignature Language="F#" Value="new Azure.Messaging.EventHubs.Processor.PartitionClosingEventArgs : string * Azure.Messaging.EventHubs.Processor.ProcessingStoppedReason * System.Threading.CancellationToken -&gt; Azure.Messaging.EventHubs.Processor.PartitionClosingEventArgs" Usage="new Azure.Messaging.EventHubs.Processor.PartitionClosingEventArgs (partitionId, reason, cancellationToken)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="partitionId" Type="System.String" />
@@ -56,18 +62,27 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-               A <see cref="P:Azure.Messaging.EventHubs.Processor.PartitionClosingEventArgs.CancellationToken" /> instance to signal the request to cancel the operation.
+               A <see cref="T:System.Threading.CancellationToken" /> to indicate that the processor is requesting that the
+               handler stop its activities.  If this token is requesting cancellation, then the processor is attempting
+               to shutdown.
              </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+               The handler for closing has responsibility for deciding whether or not to honor
+               the cancellation request.  If the application chooses not to do so, the processor will wait for the
+               handler to complete before taking further action.
+             </remarks>
       </Docs>
     </Member>
     <Member MemberName="PartitionId">
@@ -79,8 +94,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -102,8 +120,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.EventHubs.Processor.ProcessingStoppedReason</ReturnType>

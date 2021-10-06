@@ -6,7 +6,11 @@
   <TypeSignature Language="F#" Value="type PartitionContext = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <AssemblyVersion>5.4.0.0</AssemblyVersion>
+    <AssemblyVersion>5.4.1.0</AssemblyVersion>
+    <AssemblyVersion>5.5.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.0.0</AssemblyVersion>
+    <AssemblyVersion>5.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,7 +33,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="partitionId" Type="System.String" />
@@ -51,7 +59,11 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -73,7 +85,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Messaging.EventHubs</AssemblyName>
-        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>5.4.0.0</AssemblyVersion>
+        <AssemblyVersion>5.4.1.0</AssemblyVersion>
+        <AssemblyVersion>5.5.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.0.0</AssemblyVersion>
+        <AssemblyVersion>5.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Messaging.EventHubs.Consumer.LastEnqueuedEventProperties</ReturnType>
@@ -85,15 +101,15 @@
                associated with this context as events are received from the Event Hubs service.  This is only available if the consumer was
                created with <see cref="P:Azure.Messaging.EventHubs.Consumer.ReadEventOptions.TrackLastEnqueuedEventProperties" /> set.
              </summary>
-        <returns>The set of properties for the last event that was enqueued to the partition.</returns>
+        <returns>The set of properties for the last event that was enqueued to the partition.  If no events were read or tracking was not set, the properties will be returned with default values.</returns>
         <remarks>
                When information about the partition's last enqueued event is being tracked, each event received from the Event Hubs
                service will carry metadata about the partition that it otherwise would not. This results in a small amount of
                additional network bandwidth consumption that is generally a favorable trade-off when considered
                against periodically making requests for partition properties using an Event Hub client.
              </remarks>
-        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">Occurs when the Event Hubs client needed to read this information is no longer available.</exception>
         <exception cref="T:System.InvalidOperationException">Occurs when this method is invoked without <see cref="P:Azure.Messaging.EventHubs.Consumer.ReadEventOptions.TrackLastEnqueuedEventProperties" /> set.</exception>
+        <exception cref="T:Azure.Messaging.EventHubs.EventHubsException">Occurs when the Event Hubs client needed to read this information is no longer available.</exception>
       </Docs>
     </Member>
   </Members>

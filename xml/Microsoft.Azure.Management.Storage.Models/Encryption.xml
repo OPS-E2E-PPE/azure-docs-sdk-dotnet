@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type Encryption = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>21.0.0.0</AssemblyVersion>
+    <AssemblyVersion>22.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,20 +40,23 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Encryption (string keySource, Microsoft.Azure.Management.Storage.Models.EncryptionServices services = default, Microsoft.Azure.Management.Storage.Models.KeyVaultProperties keyVaultProperties = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keySource, class Microsoft.Azure.Management.Storage.Models.EncryptionServices services, class Microsoft.Azure.Management.Storage.Models.KeyVaultProperties keyVaultProperties) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.Encryption.#ctor(System.String,Microsoft.Azure.Management.Storage.Models.EncryptionServices,Microsoft.Azure.Management.Storage.Models.KeyVaultProperties)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (keySource As String, Optional services As EncryptionServices = null, Optional keyVaultProperties As KeyVaultProperties = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.Encryption : string * Microsoft.Azure.Management.Storage.Models.EncryptionServices * Microsoft.Azure.Management.Storage.Models.KeyVaultProperties -&gt; Microsoft.Azure.Management.Storage.Models.Encryption" Usage="new Microsoft.Azure.Management.Storage.Models.Encryption (keySource, services, keyVaultProperties)" />
+      <MemberSignature Language="C#" Value="public Encryption (string keySource, Microsoft.Azure.Management.Storage.Models.EncryptionServices services = default, bool? requireInfrastructureEncryption = default, Microsoft.Azure.Management.Storage.Models.KeyVaultProperties keyVaultProperties = default, Microsoft.Azure.Management.Storage.Models.EncryptionIdentity encryptionIdentity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keySource, class Microsoft.Azure.Management.Storage.Models.EncryptionServices services, valuetype System.Nullable`1&lt;bool&gt; requireInfrastructureEncryption, class Microsoft.Azure.Management.Storage.Models.KeyVaultProperties keyVaultProperties, class Microsoft.Azure.Management.Storage.Models.EncryptionIdentity encryptionIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.Encryption.#ctor(System.String,Microsoft.Azure.Management.Storage.Models.EncryptionServices,System.Nullable{System.Boolean},Microsoft.Azure.Management.Storage.Models.KeyVaultProperties,Microsoft.Azure.Management.Storage.Models.EncryptionIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (keySource As String, Optional services As EncryptionServices = Nothing, Optional requireInfrastructureEncryption As Nullable(Of Boolean) = Nothing, Optional keyVaultProperties As KeyVaultProperties = Nothing, Optional encryptionIdentity As EncryptionIdentity = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.Encryption : string * Microsoft.Azure.Management.Storage.Models.EncryptionServices * Nullable&lt;bool&gt; * Microsoft.Azure.Management.Storage.Models.KeyVaultProperties * Microsoft.Azure.Management.Storage.Models.EncryptionIdentity -&gt; Microsoft.Azure.Management.Storage.Models.Encryption" Usage="new Microsoft.Azure.Management.Storage.Models.Encryption (keySource, services, requireInfrastructureEncryption, keyVaultProperties, encryptionIdentity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="keySource" Type="System.String" />
         <Parameter Name="services" Type="Microsoft.Azure.Management.Storage.Models.EncryptionServices" />
+        <Parameter Name="requireInfrastructureEncryption" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="keyVaultProperties" Type="Microsoft.Azure.Management.Storage.Models.KeyVaultProperties" />
+        <Parameter Name="encryptionIdentity" Type="Microsoft.Azure.Management.Storage.Models.EncryptionIdentity" />
       </Parameters>
       <Docs>
         <param name="keySource">The encryption keySource (provider).
@@ -60,11 +65,46 @@
             'Microsoft.Keyvault'</param>
         <param name="services">List of services which support
             encryption.</param>
+        <param name="requireInfrastructureEncryption">A boolean indicating
+            whether or not the service applies a secondary layer of encryption
+            with platform managed keys for data at rest.</param>
         <param name="keyVaultProperties">Properties provided by key
             vault.</param>
+        <param name="encryptionIdentity">The identity to be used with
+            service-side encryption at rest.</param>
         <summary>
             Initializes a new instance of the Encryption class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.EncryptionIdentity EncryptionIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.EncryptionIdentity EncryptionIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.Encryption.EncryptionIdentity" />
+      <MemberSignature Language="VB.NET" Value="Public Property EncryptionIdentity As EncryptionIdentity" />
+      <MemberSignature Language="F#" Value="member this.EncryptionIdentity : Microsoft.Azure.Management.Storage.Models.EncryptionIdentity with get, set" Usage="Microsoft.Azure.Management.Storage.Models.Encryption.EncryptionIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="identity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="identity")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.EncryptionIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the identity to be used with service-side encryption
+            at rest.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -77,11 +117,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="keySource")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="keySource")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="keySource")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -106,11 +148,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="keyvaultproperties")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="keyvaultproperties")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="keyvaultproperties")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -119,6 +163,37 @@
       <Docs>
         <summary>
             Gets or sets properties provided by key vault.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireInfrastructureEncryption">
+      <MemberSignature Language="C#" Value="public bool? RequireInfrastructureEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; RequireInfrastructureEncryption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.Encryption.RequireInfrastructureEncryption" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequireInfrastructureEncryption As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RequireInfrastructureEncryption : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.Encryption.RequireInfrastructureEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="requireInfrastructureEncryption")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="requireInfrastructureEncryption")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a boolean indicating whether or not the service
+            applies a secondary layer of encryption with platform managed keys
+            for data at rest.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -133,11 +208,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="services")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="services")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="services")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -160,7 +237,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

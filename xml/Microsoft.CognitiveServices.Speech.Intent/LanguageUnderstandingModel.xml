@@ -6,9 +6,9 @@
   <TypeSignature Language="F#" Value="type LanguageUnderstandingModel = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-    <AssemblyVersion>1.8.0.28</AssemblyVersion>
-    <AssemblyVersion>1.9.0.28</AssemblyVersion>
-    <AssemblyVersion>1.10.0.28</AssemblyVersion>
+    <AssemblyVersion>1.16.0.28</AssemblyVersion>
+    <AssemblyVersion>1.17.0.28</AssemblyVersion>
+    <AssemblyVersion>1.18.0.28</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,7 +18,9 @@
     <summary>
             Represents language understanding model used for intent recognition.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            See also: [Add a LanguageUnderstandingModel and intents](/azure/cognitive-services/speech-service/quickstarts/intent-recognition)
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="FromAppId">
@@ -30,9 +32,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Intent.LanguageUnderstandingModel</ReturnType>
@@ -41,12 +43,14 @@
         <Parameter Name="appId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="appId">A string that represents the application id of Language Understanding service.</param>
+        <param name="appId">The app ID in the LUIS portal.</param>
         <summary>
-            Creates an language understanding model using the application id of Language Understanding service.
+            Creates a language understanding model using the application id of Language Understanding service.
             </summary>
         <returns>The language understanding model being created.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            See also: [Add a LanguageUnderstandingModel and intents](/azure/cognitive-services/speech-service/quickstarts/intent-recognition)
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="FromEndpoint">
@@ -58,9 +62,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Intent.LanguageUnderstandingModel</ReturnType>
@@ -69,12 +73,14 @@
         <Parameter Name="uri" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="uri">A string that represents the endpoint of the language understanding model.</param>
+        <param name="uri">Endpoint of the language understanding model.</param>
         <summary>
-            Creates an language understanding model using the specified endpoint.
+            Creates a language understanding model using the specified endpoint URL.
             </summary>
         <returns>The language understanding model being created.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The Speech SDK only supports LUIS v2.0 endpoints. For details, see [Get started with intent recognition](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/intent-recognition).
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="FromSubscription">
@@ -86,9 +92,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.Intent.LanguageUnderstandingModel</ReturnType>
@@ -99,11 +105,11 @@
         <Parameter Name="region" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="subscriptionKey">A string that represents the subscription key of Language Understanding service.</param>
-        <param name="appId">A string that represents the application id of Language Understanding service.</param>
-        <param name="region">A string that represents the region of the Language Understanding service (see the <a href="https://aka.ms/csspeech/region">region page</a>).</param>
+        <param name="subscriptionKey">The subscription key of Language Understanding service.</param>
+        <param name="appId">The app ID in the LUIS portal.</param>
+        <param name="region">The region identifier for the given subscription key.</param>
         <summary>
-            Creates an language understanding model using hostname, subscription key and application id of Language Understanding service.
+            Creates a language understanding model using hostname, subscription key and application id of Language Understanding service.
             </summary>
         <returns>The language understanding model being created.</returns>
         <remarks>To be added.</remarks>

@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ExpressRouteCircuitPeeringConfig = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -42,12 +42,12 @@
       <MemberSignature Language="C#" Value="public ExpressRouteCircuitPeeringConfig (System.Collections.Generic.IList&lt;string&gt; advertisedPublicPrefixes = default, System.Collections.Generic.IList&lt;string&gt; advertisedCommunities = default, string advertisedPublicPrefixesState = default, int? legacyMode = default, int? customerASN = default, string routingRegistryName = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;string&gt; advertisedPublicPrefixes, class System.Collections.Generic.IList`1&lt;string&gt; advertisedCommunities, string advertisedPublicPrefixesState, valuetype System.Nullable`1&lt;int32&gt; legacyMode, valuetype System.Nullable`1&lt;int32&gt; customerASN, string routingRegistryName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig.#ctor(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional advertisedPublicPrefixes As IList(Of String) = null, Optional advertisedCommunities As IList(Of String) = null, Optional advertisedPublicPrefixesState As String = null, Optional legacyMode As Nullable(Of Integer) = null, Optional customerASN As Nullable(Of Integer) = null, Optional routingRegistryName As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional advertisedPublicPrefixes As IList(Of String) = Nothing, Optional advertisedCommunities As IList(Of String) = Nothing, Optional advertisedPublicPrefixesState As String = Nothing, Optional legacyMode As Nullable(Of Integer) = Nothing, Optional customerASN As Nullable(Of Integer) = Nothing, Optional routingRegistryName As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig : System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * string * Nullable&lt;int&gt; * Nullable&lt;int&gt; * string -&gt; Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig" Usage="new Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig (advertisedPublicPrefixes, advertisedCommunities, advertisedPublicPrefixesState, legacyMode, customerASN, routingRegistryName)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="advertisedPublicPrefixes" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
@@ -58,14 +58,13 @@
         <Parameter Name="routingRegistryName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="advertisedPublicPrefixes">The reference of
+        <param name="advertisedPublicPrefixes">The reference to
             AdvertisedPublicPrefixes.</param>
         <param name="advertisedCommunities">The communities of bgp peering.
-            Spepcified for microsoft peering</param>
-        <param name="advertisedPublicPrefixesState">AdvertisedPublicPrefixState of
-            the Peering resource. Possible values are 'NotConfigured',
-            'Configuring', 'Configured', and 'ValidationNeeded'. Possible
-            values include: 'NotConfigured', 'Configuring', 'Configured',
+            Specified for microsoft peering.</param>
+        <param name="advertisedPublicPrefixesState">The advertised public
+            prefix state of the Peering resource. Possible values include:
+            'NotConfigured', 'Configuring', 'Configured',
             'ValidationNeeded'</param>
         <param name="legacyMode">The legacy mode of the peering.</param>
         <param name="customerASN">The CustomerASN of the peering.</param>
@@ -87,11 +86,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="advertisedCommunities")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="advertisedCommunities")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="advertisedCommunities")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -99,8 +99,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the communities of bgp peering. Spepcified for
-            microsoft peering
+            Gets or sets the communities of bgp peering. Specified for
+            microsoft peering.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,11 +115,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixes")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixes")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixes")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -127,26 +128,27 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the reference of AdvertisedPublicPrefixes.
+            Gets or sets the reference to AdvertisedPublicPrefixes.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AdvertisedPublicPrefixesState">
-      <MemberSignature Language="C#" Value="public string AdvertisedPublicPrefixesState { get; set; }" />
+      <MemberSignature Language="C#" Value="public string AdvertisedPublicPrefixesState { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AdvertisedPublicPrefixesState" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig.AdvertisedPublicPrefixesState" />
-      <MemberSignature Language="VB.NET" Value="Public Property AdvertisedPublicPrefixesState As String" />
-      <MemberSignature Language="F#" Value="member this.AdvertisedPublicPrefixesState : string with get, set" Usage="Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig.AdvertisedPublicPrefixesState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdvertisedPublicPrefixesState As String" />
+      <MemberSignature Language="F#" Value="member this.AdvertisedPublicPrefixesState : string" Usage="Microsoft.Azure.Management.Network.Models.ExpressRouteCircuitPeeringConfig.AdvertisedPublicPrefixesState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixesState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixesState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="advertisedPublicPrefixesState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -154,10 +156,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets advertisedPublicPrefixState of the Peering resource.
-            Possible values are 'NotConfigured', 'Configuring', 'Configured',
-            and 'ValidationNeeded'. Possible values include: 'NotConfigured',
-            'Configuring', 'Configured', 'ValidationNeeded'
+            Gets the advertised public prefix state of the Peering resource.
+            Possible values include: 'NotConfigured', 'Configuring',
+            'Configured', 'ValidationNeeded'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -172,11 +173,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="customerASN")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="customerASN")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="customerASN")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -199,11 +201,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="legacyMode")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="legacyMode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="legacyMode")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -226,11 +229,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="routingRegistryName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="routingRegistryName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="routingRegistryName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

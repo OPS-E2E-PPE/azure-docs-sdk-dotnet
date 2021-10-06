@@ -38,11 +38,11 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BackupResourceVaultConfig (string storageModelType = default, string storageType = default, string storageTypeState = default, string enhancedSecurityState = default, string softDeleteFeatureState = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string storageModelType, string storageType, string storageTypeState, string enhancedSecurityState, string softDeleteFeatureState) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig.#ctor(System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional storageModelType As String = null, Optional storageType As String = null, Optional storageTypeState As String = null, Optional enhancedSecurityState As String = null, Optional softDeleteFeatureState As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig : string * string * string * string * string -&gt; Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig" Usage="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig (storageModelType, storageType, storageTypeState, enhancedSecurityState, softDeleteFeatureState)" />
+      <MemberSignature Language="C#" Value="public BackupResourceVaultConfig (string storageModelType = default, string storageType = default, string storageTypeState = default, string enhancedSecurityState = default, string softDeleteFeatureState = default, System.Collections.Generic.IList&lt;string&gt; resourceGuardOperationRequests = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string storageModelType, string storageType, string storageTypeState, string enhancedSecurityState, string softDeleteFeatureState, class System.Collections.Generic.IList`1&lt;string&gt; resourceGuardOperationRequests) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig.#ctor(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional storageModelType As String = Nothing, Optional storageType As String = Nothing, Optional storageTypeState As String = Nothing, Optional enhancedSecurityState As String = Nothing, Optional softDeleteFeatureState As String = Nothing, Optional resourceGuardOperationRequests As IList(Of String) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig : string * string * string * string * string * System.Collections.Generic.IList&lt;string&gt; -&gt; Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig" Usage="new Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig (storageModelType, storageType, storageTypeState, enhancedSecurityState, softDeleteFeatureState, resourceGuardOperationRequests)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
@@ -54,12 +54,15 @@
         <Parameter Name="storageTypeState" Type="System.String" />
         <Parameter Name="enhancedSecurityState" Type="System.String" />
         <Parameter Name="softDeleteFeatureState" Type="System.String" />
+        <Parameter Name="resourceGuardOperationRequests" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="storageModelType">Storage type. Possible values
-            include: 'Invalid', 'GeoRedundant', 'LocallyRedundant'</param>
+            include: 'Invalid', 'GeoRedundant', 'LocallyRedundant',
+            'ZoneRedundant', 'ReadAccessGeoZoneRedundant'</param>
         <param name="storageType">Storage type. Possible values include:
-            'Invalid', 'GeoRedundant', 'LocallyRedundant'</param>
+            'Invalid', 'GeoRedundant', 'LocallyRedundant', 'ZoneRedundant',
+            'ReadAccessGeoZoneRedundant'</param>
         <param name="storageTypeState">Locked or Unlocked. Once a machine
             is registered against a resource, the storageTypeState is always
             Locked. Possible values include: 'Invalid', 'Locked',
@@ -68,6 +71,8 @@
             values include: 'Invalid', 'Enabled', 'Disabled'</param>
         <param name="softDeleteFeatureState">Soft Delete feature state.
             Possible values include: 'Invalid', 'Enabled', 'Disabled'</param>
+        <param name="resourceGuardOperationRequests">ResourceGuard
+            Operation Requests</param>
         <summary>
             Initializes a new instance of the BackupResourceVaultConfig class.
             </summary>
@@ -87,7 +92,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="enhancedSecurityState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="enhancedSecurityState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="enhancedSecurityState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -97,6 +103,34 @@
         <summary>
             Gets or sets enabled or Disabled. Possible values include:
             'Invalid', 'Enabled', 'Disabled'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceGuardOperationRequests">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; ResourceGuardOperationRequests { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; ResourceGuardOperationRequests" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig.ResourceGuardOperationRequests" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResourceGuardOperationRequests As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ResourceGuardOperationRequests : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfig.ResourceGuardOperationRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.RecoveryServices.Backup</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resourceGuardOperationRequests")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resourceGuardOperationRequests")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets resourceGuard Operation Requests
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,7 +149,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="softDeleteFeatureState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="softDeleteFeatureState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="softDeleteFeatureState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -143,7 +178,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="storageModelType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="storageModelType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="storageModelType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -152,7 +188,8 @@
       <Docs>
         <summary>
             Gets or sets storage type. Possible values include: 'Invalid',
-            'GeoRedundant', 'LocallyRedundant'
+            'GeoRedundant', 'LocallyRedundant', 'ZoneRedundant',
+            'ReadAccessGeoZoneRedundant'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -171,7 +208,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="storageType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="storageType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="storageType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -180,7 +218,8 @@
       <Docs>
         <summary>
             Gets or sets storage type. Possible values include: 'Invalid',
-            'GeoRedundant', 'LocallyRedundant'
+            'GeoRedundant', 'LocallyRedundant', 'ZoneRedundant',
+            'ReadAccessGeoZoneRedundant'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -199,7 +238,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="storageTypeState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="storageTypeState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="storageTypeState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

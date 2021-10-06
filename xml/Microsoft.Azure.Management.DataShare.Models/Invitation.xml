@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type Invitation = class&#xA;    inherit ProxyDto" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.DataShare.Models.ProxyDto</BaseTypeName>
@@ -15,7 +14,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,8 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,21 +44,22 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Invitation (string id = default, string name = default, string type = default, string invitationId = default, string invitationStatus = default, DateTime? respondedAt = default, DateTime? sentAt = default, string targetActiveDirectoryId = default, string targetEmail = default, string targetObjectId = default, string userEmail = default, string userName = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string invitationId, string invitationStatus, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; respondedAt, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; sentAt, string targetActiveDirectoryId, string targetEmail, string targetObjectId, string userEmail, string userName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.Invitation.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional invitationId As String = null, Optional invitationStatus As String = null, Optional respondedAt As Nullable(Of DateTime) = null, Optional sentAt As Nullable(Of DateTime) = null, Optional targetActiveDirectoryId As String = null, Optional targetEmail As String = null, Optional targetObjectId As String = null, Optional userEmail As String = null, Optional userName As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.Invitation : string * string * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string * string * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.Invitation" Usage="new Microsoft.Azure.Management.DataShare.Models.Invitation (id, name, type, invitationId, invitationStatus, respondedAt, sentAt, targetActiveDirectoryId, targetEmail, targetObjectId, userEmail, userName)" />
+      <MemberSignature Language="C#" Value="public Invitation (string id = default, string name = default, Microsoft.Azure.Management.DataShare.Models.SystemData systemData = default, string type = default, DateTime? expirationDate = default, string invitationId = default, string invitationStatus = default, DateTime? respondedAt = default, DateTime? sentAt = default, string targetActiveDirectoryId = default, string targetEmail = default, string targetObjectId = default, string userEmail = default, string userName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, class Microsoft.Azure.Management.DataShare.Models.SystemData systemData, string type, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationDate, string invitationId, string invitationStatus, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; respondedAt, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; sentAt, string targetActiveDirectoryId, string targetEmail, string targetObjectId, string userEmail, string userName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.Invitation.#ctor(System.String,System.String,Microsoft.Azure.Management.DataShare.Models.SystemData,System.String,System.Nullable{System.DateTime},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional systemData As SystemData = Nothing, Optional type As String = Nothing, Optional expirationDate As Nullable(Of DateTime) = Nothing, Optional invitationId As String = Nothing, Optional invitationStatus As String = Nothing, Optional respondedAt As Nullable(Of DateTime) = Nothing, Optional sentAt As Nullable(Of DateTime) = Nothing, Optional targetActiveDirectoryId As String = Nothing, Optional targetEmail As String = Nothing, Optional targetObjectId As String = Nothing, Optional userEmail As String = Nothing, Optional userName As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.Invitation : string * string * Microsoft.Azure.Management.DataShare.Models.SystemData * string * Nullable&lt;DateTime&gt; * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string * string * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.Invitation" Usage="new Microsoft.Azure.Management.DataShare.Models.Invitation (id, name, systemData, type, expirationDate, invitationId, invitationStatus, respondedAt, sentAt, targetActiveDirectoryId, targetEmail, targetObjectId, userEmail, userName)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.DataShare.Models.SystemData" />
         <Parameter Name="type" Type="System.String" />
+        <Parameter Name="expirationDate" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="invitationId" Type="System.String" />
         <Parameter Name="invitationStatus" Type="System.String" />
         <Parameter Name="respondedAt" Type="System.Nullable&lt;System.DateTime&gt;" />
@@ -73,7 +73,10 @@
       <Docs>
         <param name="id">The resource id of the azure resource</param>
         <param name="name">Name of the azure resource</param>
+        <param name="systemData">System Data of the Azure resource.</param>
         <param name="type">Type of the azure resource</param>
+        <param name="expirationDate">The expiration date for the invitation
+            and share subscription.</param>
         <param name="invitationId">unique invitation id</param>
         <param name="invitationStatus">The status of the invitation.
             Possible values include: 'Pending', 'Accepted', 'Rejected',
@@ -102,6 +105,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ExpirationDate">
+      <MemberSignature Language="C#" Value="public DateTime? ExpirationDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ExpirationDate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataShare.Models.Invitation.ExpirationDate" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpirationDate As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.ExpirationDate : Nullable&lt;DateTime&gt; with get, set" Usage="Microsoft.Azure.Management.DataShare.Models.Invitation.ExpirationDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationDate")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the expiration date for the invitation and share
+            subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="InvitationId">
       <MemberSignature Language="C#" Value="public string InvitationId { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string InvitationId" />
@@ -111,12 +143,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -139,12 +171,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.invitationStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -168,12 +200,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.respondedAt")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.respondedAt")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.respondedAt")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -196,12 +228,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.sentAt")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.sentAt")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.sentAt")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -224,12 +256,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.targetActiveDirectoryId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.targetActiveDirectoryId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.targetActiveDirectoryId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -252,12 +284,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.targetEmail")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.targetEmail")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.targetEmail")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -280,12 +312,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.targetObjectId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.targetObjectId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.targetObjectId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -312,12 +344,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.userEmail")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.userEmail")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.userEmail")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -340,12 +372,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.userName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.userName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.userName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

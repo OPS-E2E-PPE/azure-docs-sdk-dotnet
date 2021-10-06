@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type RuleManagementEventDataSource = class&#xA;    inherit RuleDataSource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-    <AssemblyVersion>0.24.1.0</AssemblyVersion>
+    <AssemblyVersion>0.25.2.0</AssemblyVersion>
+    <AssemblyVersion>0.25.4.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Monitor.Models.RuleDataSource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,7 +35,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,18 +48,21 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public RuleManagementEventDataSource (string resourceUri = default, string eventName = default, string eventSource = default, string level = default, string operationName = default, string resourceGroupName = default, string resourceProviderName = default, string status = default, string subStatus = default, Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource claims = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceUri, string eventName, string eventSource, string level, string operationName, string resourceGroupName, string resourceProviderName, string status, string subStatus, class Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource claims) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resourceUri As String = null, Optional eventName As String = null, Optional eventSource As String = null, Optional level As String = null, Optional operationName As String = null, Optional resourceGroupName As String = null, Optional resourceProviderName As String = null, Optional status As String = null, Optional subStatus As String = null, Optional claims As RuleManagementEventClaimsDataSource = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource : string * string * string * string * string * string * string * string * string * Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource -&gt; Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource" Usage="new Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource (resourceUri, eventName, eventSource, level, operationName, resourceGroupName, resourceProviderName, status, subStatus, claims)" />
+      <MemberSignature Language="C#" Value="public RuleManagementEventDataSource (string resourceUri = default, string legacyResourceId = default, string resourceLocation = default, string metricNamespace = default, string eventName = default, string eventSource = default, string level = default, string operationName = default, string resourceGroupName = default, string resourceProviderName = default, string status = default, string subStatus = default, Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource claims = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceUri, string legacyResourceId, string resourceLocation, string metricNamespace, string eventName, string eventSource, string level, string operationName, string resourceGroupName, string resourceProviderName, string status, string subStatus, class Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resourceUri As String = Nothing, Optional legacyResourceId As String = Nothing, Optional resourceLocation As String = Nothing, Optional metricNamespace As String = Nothing, Optional eventName As String = Nothing, Optional eventSource As String = Nothing, Optional level As String = Nothing, Optional operationName As String = Nothing, Optional resourceGroupName As String = Nothing, Optional resourceProviderName As String = Nothing, Optional status As String = Nothing, Optional subStatus As String = Nothing, Optional claims As RuleManagementEventClaimsDataSource = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource : string * string * string * string * string * string * string * string * string * string * string * string * Microsoft.Azure.Management.Monitor.Models.RuleManagementEventClaimsDataSource -&gt; Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource" Usage="new Microsoft.Azure.Management.Monitor.Models.RuleManagementEventDataSource (resourceUri, legacyResourceId, resourceLocation, metricNamespace, eventName, eventSource, level, operationName, resourceGroupName, resourceProviderName, status, subStatus, claims)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="resourceUri" Type="System.String" />
+        <Parameter Name="legacyResourceId" Type="System.String" />
+        <Parameter Name="resourceLocation" Type="System.String" />
+        <Parameter Name="metricNamespace" Type="System.String" />
         <Parameter Name="eventName" Type="System.String" />
         <Parameter Name="eventSource" Type="System.String" />
         <Parameter Name="level" Type="System.String" />
@@ -71,6 +77,12 @@
         <param name="resourceUri">the resource identifier of the resource
             the rule monitors. **NOTE**: this property cannot be updated for an
             existing rule.</param>
+        <param name="legacyResourceId">the legacy resource identifier of
+            the resource the rule monitors. **NOTE**: this property cannot be
+            updated for an existing rule.</param>
+        <param name="resourceLocation">the location of the
+            resource.</param>
+        <param name="metricNamespace">the namespace of the metric.</param>
         <param name="eventName">the event name.</param>
         <param name="eventSource">the event source.</param>
         <param name="level">the level.</param>
@@ -101,11 +113,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="claims")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="claims")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="claims")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -128,11 +142,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="eventName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="eventName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="eventName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -155,11 +171,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="eventSource")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="eventSource")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="eventSource")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -182,11 +200,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="level")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="level")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="level")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -209,11 +229,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="operationName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="operationName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="operationName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -237,11 +259,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resourceGroupName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resourceGroupName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resourceGroupName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -264,11 +288,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resourceProviderName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resourceProviderName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resourceProviderName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -291,11 +317,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -319,11 +347,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="subStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="subStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="subStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -1,19 +1,22 @@
 <Type Name="DeviceAuthenticationWithX509Certificate" FullName="Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate">
-  <TypeSignature Language="C#" Value="public sealed class DeviceAuthenticationWithX509Certificate : Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeviceAuthenticationWithX509Certificate extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod" />
+  <TypeSignature Language="C#" Value="public sealed class DeviceAuthenticationWithX509Certificate : IDisposable, Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeviceAuthenticationWithX509Certificate extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod, class System.IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeviceAuthenticationWithX509Certificate&#xA;Implements IAuthenticationMethod" />
-  <TypeSignature Language="F#" Value="type DeviceAuthenticationWithX509Certificate = class&#xA;    interface IAuthenticationMethod" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeviceAuthenticationWithX509Certificate&#xA;Implements IAuthenticationMethod, IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+  <TypeSignature Language="F#" Value="type DeviceAuthenticationWithX509Certificate = class&#xA;    interface IAuthenticationMethod&#xA;    interface IDisposable" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+  <TypeSignature Language="C#" Value="public sealed class DeviceAuthenticationWithX509Certificate : Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeviceAuthenticationWithX509Certificate extends System.Object implements class Microsoft.Azure.Devices.Client.IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeviceAuthenticationWithX509Certificate&#xA;Implements IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="F#" Value="type DeviceAuthenticationWithX509Certificate = class&#xA;    interface IAuthenticationMethod" FrameworkAlternate="azure-dotnet-preview" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-    <AssemblyVersion>1.21.2.0</AssemblyVersion>
-    <AssemblyVersion>1.21.3.0</AssemblyVersion>
-    <AssemblyVersion>1.21.4.0</AssemblyVersion>
-    <AssemblyVersion>1.22.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.1.0</AssemblyVersion>
-    <AssemblyVersion>1.23.2.0</AssemblyVersion>
-    <AssemblyVersion>1.24.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.0.0</AssemblyVersion>
+    <AssemblyVersion>1.37.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.2.0</AssemblyVersion>
+    <AssemblyVersion>1.38.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,6 +24,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Azure.Devices.Client.IAuthenticationMethod</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="azure-dotnet;azure-dotnet-legacy">
+      <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -39,22 +45,44 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="deviceId" Type="System.String" />
-        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="deviceId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="deviceId">To be added.</param>
+        <param name="certificate">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceAuthenticationWithX509Certificate (string deviceId, System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, System.Security.Cryptography.X509Certificates.X509Certificate2Collection chainCertificates = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string deviceId, class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, class System.Security.Cryptography.X509Certificates.X509Certificate2Collection chainCertificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (deviceId As String, certificate As X509Certificate2, Optional chainCertificates As X509Certificate2Collection = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate : string * System.Security.Cryptography.X509Certificates.X509Certificate2 * System.Security.Cryptography.X509Certificates.X509Certificate2Collection -&gt; Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate" Usage="new Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate (deviceId, certificate, chainCertificates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="deviceId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" Index="1" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+        <Parameter Name="chainCertificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" Index="2" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
       </Parameters>
       <Docs>
         <param name="deviceId">Device Identifier.</param>
         <param name="certificate">X.509 Certificate.</param>
+        <param name="chainCertificates">Certificates in the device certificate chain.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate" /> class.
             </summary>
@@ -70,21 +98,49 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the X.509 certificate associated with this device
+            Gets or sets the X.509 certificate associated with this device.
+            The private key should be available in the <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> object, or should be loaded into the system where the <see cref="T:Microsoft.Azure.Devices.Client.DeviceClient" /> will be used. /&gt;
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainCertificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection ChainCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection ChainCertificates" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate.ChainCertificates" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChainCertificates As X509Certificate2Collection" />
+      <MemberSignature Language="F#" Value="member this.ChainCertificates : System.Security.Cryptography.X509Certificates.X509Certificate2Collection" Usage="Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate.ChainCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Full chain of certificates from the one used to sign the device certificate to the one uploaded to the service. Private keys are not required for these certificates.
+            This is only supported on AMQP_Tcp_Only and Mqtt_Tcp_Only
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -99,14 +155,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -116,6 +171,36 @@
             Gets or sets the device identifier.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.DeviceAuthenticationWithX509Certificate.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="deviceAuthenticationWithX509Certificate.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the X509 certificate associated with this authentication method.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -131,14 +216,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.Client.IotHubConnectionStringBuilder</ReturnType>

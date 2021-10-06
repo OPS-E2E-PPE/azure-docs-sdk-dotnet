@@ -6,10 +6,8 @@
   <TypeSignature Language="F#" Value="type CdnManagementClient = class&#xA;    inherit FluentServiceClientBase&lt;CdnManagementClient&gt;&#xA;    interface ICdnManagementClient&#xA;    interface IDisposable&#xA;    interface IAzureClient" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-    <AssemblyVersion>1.0.0.61</AssemblyVersion>
-    <AssemblyVersion>1.0.0.62</AssemblyVersion>
-    <AssemblyVersion>1.0.0.63</AssemblyVersion>
-    <AssemblyVersion>1.0.0.64</AssemblyVersion>
+    <AssemblyVersion>1.0.0.69</AssemblyVersion>
+    <AssemblyVersion>1.0.0.70</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.ResourceManager.Fluent.Core.FluentServiceClientBase&lt;Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient&gt;</BaseTypeName>
@@ -30,9 +28,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Use these APIs to manage Azure CDN resources through the Azure Resource
-            Manager. You must make sure that requests made to these resources are
-            secure.
+            Cdn Management Client
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -46,28 +42,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="restClient" Type="Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient" />
       </Parameters>
       <Docs>
         <param name="restClient">To be added.</param>
-        <param name="baseUri">
-            Optional. The base URI of the service.
-            </param>
-        <param name="credentials">
-            Required. Credentials needed for the client to connect to Azure.
-            </param>
-        <param name="rootHandler">
-            Optional. The http client handler used to handle http transport.
-            </param>
-        <param name="handlers">
-            Optional. The delegating handlers to add to the http client pipeline.
-            </param>
         <summary>
             Initializes a new instance of the CdnManagementClient class.
             </summary>
@@ -89,17 +71,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the preferred language for the response.
+            The preferred language for the response.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -114,10 +94,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -135,7 +113,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt; CheckNameAvailabilityWithHttpMessagesAsync (string name, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt; CheckNameAvailabilityWithHttpMessagesAsync(string name, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.CheckNameAvailabilityWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CheckNameAvailabilityWithHttpMessagesAsync (name As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = null, Optional cancellationToken As CancellationToken = null) As Task(Of AzureOperationResponse(Of CheckNameAvailabilityOutputInner))" />
+      <MemberSignature Language="VB.NET" Value="Public Function CheckNameAvailabilityWithHttpMessagesAsync (name As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CheckNameAvailabilityOutputInner))" />
       <MemberSignature Language="F#" Value="abstract member CheckNameAvailabilityWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt;&#xA;override this.CheckNameAvailabilityWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt;" Usage="cdnManagementClient.CheckNameAvailabilityWithHttpMessagesAsync (name, customHeaders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -143,14 +121,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -198,7 +175,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt; CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync (string name, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt; CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync(string name, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync (name As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = null, Optional cancellationToken As CancellationToken = null) As Task(Of AzureOperationResponse(Of CheckNameAvailabilityOutputInner))" />
+      <MemberSignature Language="VB.NET" Value="Public Function CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync (name As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CheckNameAvailabilityOutputInner))" />
       <MemberSignature Language="F#" Value="abstract member CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt;&#xA;override this.CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.CheckNameAvailabilityOutputInner&gt;&gt;" Usage="cdnManagementClient.CheckNameAvailabilityWithSubscriptionWithHttpMessagesAsync (name, customHeaders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -206,14 +183,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -266,10 +242,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.ICustomDomainsOperations</ReturnType>
@@ -291,10 +265,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
@@ -307,26 +279,24 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="EdgeNodeInners">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodeInnersOperations EdgeNodeInners { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodeInnersOperations EdgeNodeInners" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.EdgeNodeInners" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EdgeNodeInners As IEdgeNodeInnersOperations" />
-      <MemberSignature Language="F#" Value="member this.EdgeNodeInners : Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodeInnersOperations" Usage="Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.EdgeNodeInners" />
+    <Member MemberName="EdgeNodes">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodesOperations EdgeNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodesOperations EdgeNodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.EdgeNodes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EdgeNodes As IEdgeNodesOperations" />
+      <MemberSignature Language="F#" Value="member this.EdgeNodes : Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodesOperations" Usage="Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.EdgeNodes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodeInnersOperations</ReturnType>
+        <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IEdgeNodesOperations</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the IEdgeNodeInnersOperations.
+            Gets the IEdgeNodesOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -341,10 +311,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IEndpointsOperations</ReturnType>
@@ -370,18 +338,17 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            When set to true a unique x-ms-client-request-id value is generated and
-            included in each request. Default is true.
+            Whether a unique x-ms-client-request-id should be generated. When set to
+            true a unique x-ms-client-request-id value is generated and included in
+            each request. Default is true.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -396,10 +363,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -425,20 +390,43 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the retry timeout in seconds for Long Running Operations.
-            Default value is 30.
+            The retry timeout in seconds for Long Running Operations. Default value is
+            30.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewInstance">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient NewInstance (Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient restClient);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient NewInstance(class Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient restClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.NewInstance(Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NewInstance (restClient As RestClient) As CdnManagementClient" />
+      <MemberSignature Language="F#" Value="static member NewInstance : Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient -&gt; Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient" Usage="Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.NewInstance restClient" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="restClient" Type="Microsoft.Azure.Management.ResourceManager.Fluent.Core.RestClient" />
+      </Parameters>
+      <Docs>
+        <param name="restClient">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -451,10 +439,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IOperations</ReturnType>
@@ -476,10 +462,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IOriginsOperations</ReturnType>
@@ -501,10 +485,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IProfilesOperations</ReturnType>
@@ -517,26 +499,24 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ResourceUsageInner">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageInnerOperations ResourceUsageInner { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageInnerOperations ResourceUsageInner" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.ResourceUsageInner" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ResourceUsageInner As IResourceUsageInnerOperations" />
-      <MemberSignature Language="F#" Value="member this.ResourceUsageInner : Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageInnerOperations" Usage="Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.ResourceUsageInner" />
+    <Member MemberName="ResourceUsage">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageOperations ResourceUsage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageOperations ResourceUsage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.ResourceUsage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ResourceUsage As IResourceUsageOperations" />
+      <MemberSignature Language="F#" Value="member this.ResourceUsage : Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageOperations" Usage="Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.ResourceUsage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageInnerOperations</ReturnType>
+        <ReturnType>Microsoft.Azure.Management.Cdn.Fluent.IResourceUsageOperations</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the IResourceUsageInnerOperations.
+            Gets the IResourceUsageOperations.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -551,10 +531,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
@@ -579,10 +557,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -599,7 +575,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.ValidateProbeOutputInner&gt;&gt; ValidateProbeWithHttpMessagesAsync (string probeURL, System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; customHeaders = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.AzureOperationResponse`1&lt;class Microsoft.Azure.Management.Cdn.Fluent.Models.ValidateProbeOutputInner&gt;&gt; ValidateProbeWithHttpMessagesAsync(string probeURL, class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; customHeaders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Cdn.Fluent.CdnManagementClient.ValidateProbeWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ValidateProbeWithHttpMessagesAsync (probeURL As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = null, Optional cancellationToken As CancellationToken = null) As Task(Of AzureOperationResponse(Of ValidateProbeOutputInner))" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateProbeWithHttpMessagesAsync (probeURL As String, Optional customHeaders As Dictionary(Of String, List(Of String)) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of ValidateProbeOutputInner))" />
       <MemberSignature Language="F#" Value="abstract member ValidateProbeWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.ValidateProbeOutputInner&gt;&gt;&#xA;override this.ValidateProbeWithHttpMessagesAsync : string * System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.AzureOperationResponse&lt;Microsoft.Azure.Management.Cdn.Fluent.Models.ValidateProbeOutputInner&gt;&gt;" Usage="cdnManagementClient.ValidateProbeWithHttpMessagesAsync (probeURL, customHeaders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -607,14 +583,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Cdn.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

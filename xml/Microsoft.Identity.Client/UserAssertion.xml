@@ -6,19 +6,30 @@
   <TypeSignature Language="F#" Value="type UserAssertion = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-    <AssemblyVersion>4.7.0.0</AssemblyVersion>
-    <AssemblyVersion>4.7.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.0.0</AssemblyVersion>
-    <AssemblyVersion>4.8.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.2.0</AssemblyVersion>
-    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.1.0</AssemblyVersion>
+    <AssemblyVersion>4.31.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.1.0</AssemblyVersion>
+    <AssemblyVersion>4.33.0.0</AssemblyVersion>
+    <AssemblyVersion>4.34.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.0.0</AssemblyVersion>
+    <AssemblyVersion>4.36.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            Type containing an assertion representing a user's credentials. This type is used in the
+            On-Behalf-Of flow in confidential client applications, enabling a web API to request a token
+            for another downstream API in the name of the user whose credentials are held by this <c>UserAssertion</c>
+            See https://aka.ms/msal-net-on-behalf-of
+            </summary>
     <remarks>To be added.</remarks>
     <altmember cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
   </Docs>
@@ -32,12 +43,18 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="jwtBearerToken" Type="System.String" />
@@ -58,12 +75,18 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="assertion" Type="System.String" />
@@ -72,8 +95,8 @@
       <Docs>
         <param name="assertion">Assertion representing the user.</param>
         <param name="assertionType">Type of the assertion representing the user. Accepted types are currently:
-            <list type="bullet"><item>urn:ietf:params:oauth:grant-type:jwt-bearer<term></term><description>JWT bearer token. Passing this is equivalent to using
-            the other (simpler) constructor</description></item><item>urn:ietf:params:oauth:grant-type:saml1_1-bearer<term></term><description>SAML 1.1 bearer token</description></item><item>urn:ietf:params:oauth:grant-type:jwt-bearer<term></term><description>SAML 2 bearer token</description></item></list></param>
+            <list type="bullet"><item><term>urn:ietf:params:oauth:grant-type:jwt-bearer</term><description>JWT bearer token. Passing this is equivalent to using
+            the other (simpler) constructor</description></item><item><term>urn:ietf:params:oauth:grant-type:saml1_1-bearer</term><description>SAML 1.1 bearer token</description></item><item><term>urn:ietf:params:oauth:grant-type:jwt-bearer</term><description>SAML 2 bearer token</description></item></list></param>
         <summary>
             Constructor of a UserAssertion specifying the assertionType in addition to the assertion
             </summary>
@@ -89,12 +112,18 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -116,12 +145,18 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

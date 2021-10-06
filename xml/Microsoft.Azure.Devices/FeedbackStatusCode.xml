@@ -6,23 +6,24 @@
   <TypeSignature Language="F#" Value="type FeedbackStatusCode = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-    <AssemblyVersion>1.18.2.0</AssemblyVersion>
-    <AssemblyVersion>1.18.3.0</AssemblyVersion>
-    <AssemblyVersion>1.18.4.0</AssemblyVersion>
-    <AssemblyVersion>1.19.0.0</AssemblyVersion>
-    <AssemblyVersion>1.20.0.0</AssemblyVersion>
+    <AssemblyVersion>1.31.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.33.0.0</AssemblyVersion>
+    <AssemblyVersion>1.34.0.0</AssemblyVersion>
+    <AssemblyVersion>1.35.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Attributes>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            Specifies the various feedback status codes for a command sent to a device.
+            Specifies the various feedback status codes for a cloud-to-device message sent to a device.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -36,18 +37,22 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.FeedbackStatusCode</ReturnType>
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Indicates that the cloud-to-device message has been placed in a dead-lettered state.
+            This happens when the message reaches the maximum count for the number of times it can transition between enqueued and invisible states.
+            For information on cloud-to-device message life cycle, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="Expired">
@@ -59,18 +64,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.FeedbackStatusCode</ReturnType>
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Indicates that the cloud-to-device message expired before it could be delivered to the device.
+            For information on cloud-to-device message life cycle, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="Purged">
@@ -82,18 +90,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.FeedbackStatusCode</ReturnType>
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Indicates that the cloud-to-device message was purged from IoT Hub.
+            For information on cloud-to-device message life cycle, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="Rejected">
@@ -105,18 +116,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.FeedbackStatusCode</ReturnType>
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Indicates that the cloud-to-device message was rejected by the device.
+            For information on cloud-to-device message life cycle, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="Success">
@@ -128,18 +142,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
-        <AssemblyVersion>1.18.2.0</AssemblyVersion>
-        <AssemblyVersion>1.18.3.0</AssemblyVersion>
-        <AssemblyVersion>1.18.4.0</AssemblyVersion>
-        <AssemblyVersion>1.19.0.0</AssemblyVersion>
-        <AssemblyVersion>1.20.0.0</AssemblyVersion>
+        <AssemblyVersion>1.31.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.33.0.0</AssemblyVersion>
+        <AssemblyVersion>1.34.0.0</AssemblyVersion>
+        <AssemblyVersion>1.35.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Devices.FeedbackStatusCode</ReturnType>
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Indicates that the cloud-to-device message was successfully delivered to the device.
+            For information on cloud-to-device message life cycle, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
+            </summary>
       </Docs>
     </Member>
   </Members>

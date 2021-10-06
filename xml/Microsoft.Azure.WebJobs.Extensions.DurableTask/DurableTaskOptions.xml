@@ -37,6 +37,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AppLeaseOptions">
+      <MemberSignature Language="C#" Value="public DurableTask.AzureStorage.Partitioning.AppLeaseOptions AppLeaseOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class DurableTask.AzureStorage.Partitioning.AppLeaseOptions AppLeaseOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.AppLeaseOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppLeaseOptions As AppLeaseOptions" />
+      <MemberSignature Language="F#" Value="member this.AppLeaseOptions : DurableTask.AzureStorage.Partitioning.AppLeaseOptions with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.AppLeaseOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>DurableTask.AzureStorage.Partitioning.AppLeaseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If UseAppLease is true, gets or sets the AppLeaaseOptions used for acquiring the lease to start the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AzureStorageConnectionStringName">
       <MemberSignature Language="C#" Value="public string AzureStorageConnectionStringName { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AzureStorageConnectionStringName" />
@@ -435,6 +457,32 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="LocalRpcEndpointEnabled">
+      <MemberSignature Language="C#" Value="public bool? LocalRpcEndpointEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; LocalRpcEndpointEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.LocalRpcEndpointEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property LocalRpcEndpointEnabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.LocalRpcEndpointEnabled : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.LocalRpcEndpointEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether to enable the local RPC endpoint managed by this extension.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The local RPC endpoint is intended to allow out-of-process functions to make direct calls into this
+            extension. This is primarily intended to support instance management APIs used by the durable client
+            binding. The following values are allowed:
+            <list type="table"><item><term>null</term><description>(Default) The local RPC endpoint is enabled only for non-.NET function apps.</description></item><item><term>true</term><description>A local RPC endpoint will be enabled and listen at <c>http://127.0.0.1:17071/durabletask/</c>.</description></item><item><term>false</term><description>The local RPC endpoint will be disabled.</description></item></list></remarks>
+      </Docs>
+    </Member>
     <Member MemberName="LogReplayEvents">
       <MemberSignature Language="C#" Value="public bool LogReplayEvents { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool LogReplayEvents" />
@@ -462,11 +510,15 @@
       </Docs>
     </Member>
     <Member MemberName="MaxConcurrentActivityFunctions">
-      <MemberSignature Language="C#" Value="public int MaxConcurrentActivityFunctions { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentActivityFunctions" />
+      <MemberSignature Language="C#" Value="public int? MaxConcurrentActivityFunctions { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxConcurrentActivityFunctions" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentActivityFunctions" />
-      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentActivityFunctions As Integer" />
-      <MemberSignature Language="F#" Value="member this.MaxConcurrentActivityFunctions : int with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentActivityFunctions" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentActivityFunctions As Nullable(Of Integer)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.MaxConcurrentActivityFunctions : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentActivityFunctions" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public int MaxConcurrentActivityFunctions { get; set; }" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentActivityFunctions" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentActivityFunctions As Integer" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="F#" Value="member this.MaxConcurrentActivityFunctions : int with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentActivityFunctions" FrameworkAlternate="azure-dotnet-legacy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
@@ -474,14 +526,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.Nullable&lt;System.Int32&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-legacy">System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets the maximum number of activity functions that can be processed concurrently on a single host instance.
             </summary>
         <value>
-            A positive integer configured by the host. The default value is 10X the number of processors on the current machine.
+            A positive integer configured by the host.
             </value>
         <remarks>
             Increasing activity function concurrent can result in increased throughput but can
@@ -490,11 +543,15 @@
       </Docs>
     </Member>
     <Member MemberName="MaxConcurrentOrchestratorFunctions">
-      <MemberSignature Language="C#" Value="public int MaxConcurrentOrchestratorFunctions { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentOrchestratorFunctions" />
+      <MemberSignature Language="C#" Value="public int? MaxConcurrentOrchestratorFunctions { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxConcurrentOrchestratorFunctions" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentOrchestratorFunctions" />
-      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentOrchestratorFunctions As Integer" />
-      <MemberSignature Language="F#" Value="member this.MaxConcurrentOrchestratorFunctions : int with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentOrchestratorFunctions" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentOrchestratorFunctions As Nullable(Of Integer)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.MaxConcurrentOrchestratorFunctions : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentOrchestratorFunctions" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public int MaxConcurrentOrchestratorFunctions { get; set; }" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentOrchestratorFunctions" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrentOrchestratorFunctions As Integer" FrameworkAlternate="azure-dotnet-legacy" />
+      <MemberSignature Language="F#" Value="member this.MaxConcurrentOrchestratorFunctions : int with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.MaxConcurrentOrchestratorFunctions" FrameworkAlternate="azure-dotnet-legacy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
@@ -502,14 +559,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.Nullable&lt;System.Int32&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-legacy">System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets the maximum number of orchestrator functions that can be processed concurrently on a single host instance.
             </summary>
         <value>
-            A positive integer configured by the host. The default value is 10X the number of processors on the current machine.
+            A positive integer configured by the host.
             </value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -654,6 +712,35 @@
             the partition count can also increase the amount of load placed on the storage
             account and on the thread pool if the number of workers is smaller than the
             number of partitions.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RollbackEntityOperationsOnExceptions">
+      <MemberSignature Language="C#" Value="public bool RollbackEntityOperationsOnExceptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RollbackEntityOperationsOnExceptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.RollbackEntityOperationsOnExceptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property RollbackEntityOperationsOnExceptions As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RollbackEntityOperationsOnExceptions : bool with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.RollbackEntityOperationsOnExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Controls whether an uncaught exception inside an entity operation should roll back the effects of the operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The rollback undoes all internal effects of an operation
+            (sent signals, and state creation, deletion, or modification).
+            However, it does not roll back external effects (such as I/O that was performed).
+            This setting can affect serialization overhead: if true, the entity state is serialized
+            after each individual operation. If false, the entity state is serialized
+            only after an entire batch of operations completes.
             </remarks>
       </Docs>
     </Member>
@@ -814,6 +901,28 @@
             This property is only used when <see cref="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.TrackingStoreConnectionStringName" /> is specified.
             If no prefix is specified, the default prefix value is "DurableTask".
             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAppLease">
+      <MemberSignature Language="C#" Value="public bool UseAppLease { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAppLease" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.UseAppLease" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseAppLease As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseAppLease : bool with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurableTaskOptions.UseAppLease" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, takes a lease on the task hub container, allowing for only one app to process messages in a task hub at a time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="UseGracefulShutdown">

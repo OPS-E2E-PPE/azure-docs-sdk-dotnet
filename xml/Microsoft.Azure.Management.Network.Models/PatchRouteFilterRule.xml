@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type PatchRouteFilterRule = class&#xA;    inherit SubResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Network.Models.SubResource</BaseTypeName>
@@ -14,12 +14,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            Route Filter Rule Resource
+            Route Filter Rule Resource.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +47,12 @@
       <MemberSignature Language="C#" Value="public PatchRouteFilterRule (string access, System.Collections.Generic.IList&lt;string&gt; communities, string id = default, string provisioningState = default, string name = default, string etag = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string access, class System.Collections.Generic.IList`1&lt;string&gt; communities, string id, string provisioningState, string name, string etag) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.PatchRouteFilterRule.#ctor(System.String,System.Collections.Generic.IList{System.String},System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (access As String, communities As IList(Of String), Optional id As String = null, Optional provisioningState As String = null, Optional name As String = null, Optional etag As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (access As String, communities As IList(Of String), Optional id As String = Nothing, Optional provisioningState As String = Nothing, Optional name As String = Nothing, Optional etag As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.PatchRouteFilterRule : string * System.Collections.Generic.IList&lt;string&gt; * string * string * string * string -&gt; Microsoft.Azure.Management.Network.Models.PatchRouteFilterRule" Usage="new Microsoft.Azure.Management.Network.Models.PatchRouteFilterRule (access, communities, id, provisioningState, name, etag)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="access" Type="System.String" />
@@ -62,14 +63,14 @@
         <Parameter Name="etag" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="access">The access type of the rule. Valid values are:
-            'Allow', 'Deny'. Possible values include: 'Allow', 'Deny'</param>
+        <param name="access">The access type of the rule. Possible values
+            include: 'Allow', 'Deny'</param>
         <param name="communities">The collection for bgp community values
-            to filter on. e.g. ['12076:5010','12076:5020']</param>
+            to filter on. e.g. ['12076:5010','12076:5020'].</param>
         <param name="id">Resource ID.</param>
-        <param name="provisioningState">The provisioning state of the
-            resource. Possible values are: 'Updating', 'Deleting', 'Succeeded'
-            and 'Failed'.</param>
+        <param name="provisioningState">The provisioning state of the route
+            filter rule resource. Possible values include: 'Succeeded',
+            'Updating', 'Deleting', 'Failed'</param>
         <param name="name">The name of the resource that is unique within a
             resource group. This name can be used to access the
             resource.</param>
@@ -90,11 +91,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.access")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.access")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.access")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -102,8 +104,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the access type of the rule. Valid values are:
-            'Allow', 'Deny'. Possible values include: 'Allow', 'Deny'
+            Gets or sets the access type of the rule. Possible values include:
+            'Allow', 'Deny'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -118,11 +120,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.communities")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.communities")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.communities")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -131,7 +134,7 @@
       <Docs>
         <summary>
             Gets or sets the collection for bgp community values to filter on.
-            e.g. ['12076:5010','12076:5020']
+            e.g. ['12076:5010','12076:5020'].
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -146,11 +149,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="etag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="etag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="etag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -174,11 +178,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -202,11 +207,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -214,8 +220,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the provisioning state of the resource. Possible values are:
-            'Updating', 'Deleting', 'Succeeded' and 'Failed'.
+            Gets the provisioning state of the route filter rule resource.
+            Possible values include: 'Succeeded', 'Updating', 'Deleting',
+            'Failed'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -230,11 +237,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.routeFilterRuleType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.routeFilterRuleType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.routeFilterRuleType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -242,7 +250,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The rule type of the rule. Valid value is: 'Community'
+            The rule type of the rule.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -257,7 +265,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

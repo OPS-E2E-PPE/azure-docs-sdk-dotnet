@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type LiveEventPreview = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +17,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The Live Event preview.
+            Live event preview settings.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +30,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +47,15 @@
       <MemberSignature Language="C#" Value="public LiveEventPreview (System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; endpoints = default, Microsoft.Azure.Management.Media.Models.LiveEventPreviewAccessControl accessControl = default, string previewLocator = default, string streamingPolicyName = default, string alternativeMediaId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; endpoints, class Microsoft.Azure.Management.Media.Models.LiveEventPreviewAccessControl accessControl, string previewLocator, string streamingPolicyName, string alternativeMediaId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.Models.LiveEventPreview.#ctor(System.Collections.Generic.IList{Microsoft.Azure.Management.Media.Models.LiveEventEndpoint},Microsoft.Azure.Management.Media.Models.LiveEventPreviewAccessControl,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional endpoints As IList(Of LiveEventEndpoint) = null, Optional accessControl As LiveEventPreviewAccessControl = null, Optional previewLocator As String = null, Optional streamingPolicyName As String = null, Optional alternativeMediaId As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional endpoints As IList(Of LiveEventEndpoint) = Nothing, Optional accessControl As LiveEventPreviewAccessControl = Nothing, Optional previewLocator As String = Nothing, Optional streamingPolicyName As String = Nothing, Optional alternativeMediaId As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Media.Models.LiveEventPreview : System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt; * Microsoft.Azure.Management.Media.Models.LiveEventPreviewAccessControl * string * string * string -&gt; Microsoft.Azure.Management.Media.Models.LiveEventPreview" Usage="new Microsoft.Azure.Management.Media.Models.LiveEventPreview (endpoints, accessControl, previewLocator, streamingPolicyName, alternativeMediaId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="endpoints" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Media.Models.LiveEventEndpoint&gt;" />
@@ -56,20 +65,21 @@
         <Parameter Name="alternativeMediaId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="endpoints">The endpoints for preview.</param>
-        <param name="accessControl">The access control for LiveEvent
+        <param name="endpoints">The endpoints for preview. Do not share the
+            preview URL with the live event audience.</param>
+        <param name="accessControl">The access control for live event
             preview.</param>
         <param name="previewLocator">The identifier of the preview locator
-            in Guid format.  Specifying this at creation time allows the caller
-            to know the preview locator url before the event is created.  If
-            omitted, the service will generate a random identifier.  This value
+            in Guid format. Specifying this at creation time allows the caller
+            to know the preview locator url before the event is created. If
+            omitted, the service will generate a random identifier. This value
             cannot be updated once the live event is created.</param>
         <param name="streamingPolicyName">The name of streaming policy used
-            for the LiveEvent preview.  This value is specified at creation
+            for the live event preview. This value is specified at creation
             time and cannot be updated.</param>
-        <param name="alternativeMediaId">An Alternative Media Identifier
-            associated with the StreamingLocator created for the preview.  This
-            value is specified at creation time and cannot be updated.  The
+        <param name="alternativeMediaId">An alternative media identifier
+            associated with the streaming locator created for the preview. This
+            value is specified at creation time and cannot be updated. The
             identifier can be used in the CustomLicenseAcquisitionUrlTemplate
             or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy
             specified in the StreamingPolicyName field.</param>
@@ -88,11 +98,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="accessControl")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="accessControl")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="accessControl")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -100,7 +114,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the access control for LiveEvent preview.
+            Gets or sets the access control for live event preview.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,11 +129,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="alternativeMediaId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="alternativeMediaId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="alternativeMediaId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -127,9 +145,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets an Alternative Media Identifier associated with the
-            StreamingLocator created for the preview.  This value is specified
-            at creation time and cannot be updated.  The identifier can be used
+            Gets or sets an alternative media identifier associated with the
+            streaming locator created for the preview. This value is specified
+            at creation time and cannot be updated. The identifier can be used
             in the CustomLicenseAcquisitionUrlTemplate or the
             CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in
             the StreamingPolicyName field.
@@ -147,11 +165,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="endpoints")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="endpoints")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="endpoints")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -159,7 +181,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the endpoints for preview.
+            Gets or sets the endpoints for preview. Do not share the preview
+            URL with the live event audience.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -174,11 +197,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="previewLocator")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="previewLocator")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="previewLocator")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -188,8 +215,8 @@
         <summary>
             Gets or sets the identifier of the preview locator in Guid format.
             Specifying this at creation time allows the caller to know the
-            preview locator url before the event is created.  If omitted, the
-            service will generate a random identifier.  This value cannot be
+            preview locator url before the event is created. If omitted, the
+            service will generate a random identifier. This value cannot be
             updated once the live event is created.
             </summary>
         <value>To be added.</value>
@@ -205,11 +232,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="streamingPolicyName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="streamingPolicyName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="streamingPolicyName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -217,8 +248,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the name of streaming policy used for the LiveEvent
-            preview.  This value is specified at creation time and cannot be
+            Gets or sets the name of streaming policy used for the live event
+            preview. This value is specified at creation time and cannot be
             updated.
             </summary>
         <value>To be added.</value>

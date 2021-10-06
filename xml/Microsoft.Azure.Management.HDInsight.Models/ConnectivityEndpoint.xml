@@ -7,7 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,7 +30,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,25 +45,57 @@
       <MemberSignature Language="C#" Value="public ConnectivityEndpoint (string name = default, string protocol = default, string location = default, int? port = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string protocol, string location, valuetype System.Nullable`1&lt;int32&gt; port) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = null, Optional protocol As String = null, Optional location As String = null, Optional port As Nullable(Of Integer) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = Nothing, Optional protocol As String = Nothing, Optional location As String = Nothing, Optional port As Nullable(Of Integer) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint : string * string * string * Nullable&lt;int&gt; -&gt; Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint" Usage="new Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint (name, protocol, location, port)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="protocol" Type="System.String" />
-        <Parameter Name="location" Type="System.String" />
-        <Parameter Name="port" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="protocol" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="port" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="name">The name of the endpoint.</param>
         <param name="protocol">The protocol of the endpoint.</param>
         <param name="location">The location of the endpoint.</param>
         <param name="port">The port to connect to.</param>
+        <summary>
+            Initializes a new instance of the ConnectivityEndpoint class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectivityEndpoint (string name = default, string protocol = default, string location = default, int? port = default, string privateIPAddress = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string protocol, string location, valuetype System.Nullable`1&lt;int32&gt; port, string privateIPAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = Nothing, Optional protocol As String = Nothing, Optional location As String = Nothing, Optional port As Nullable(Of Integer) = Nothing, Optional privateIPAddress As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint : string * string * string * Nullable&lt;int&gt; * string -&gt; Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint" Usage="new Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint (name, protocol, location, port, privateIPAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="protocol" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="location" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="port" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="privateIPAddress" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the endpoint.</param>
+        <param name="protocol">The protocol of the endpoint.</param>
+        <param name="location">The location of the endpoint.</param>
+        <param name="port">The port to connect to.</param>
+        <param name="privateIPAddress">The private ip address of the
+            endpoint.</param>
         <summary>
             Initializes a new instance of the ConnectivityEndpoint class.
             </summary>
@@ -78,11 +112,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="location")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="location")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="location")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -106,11 +142,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -134,11 +172,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="port")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="port")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="port")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -147,6 +187,35 @@
       <Docs>
         <summary>
             Gets or sets the port to connect to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateIPAddress">
+      <MemberSignature Language="C#" Value="public string PrivateIPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateIPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint.PrivateIPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property PrivateIPAddress As String" />
+      <MemberSignature Language="F#" Value="member this.PrivateIPAddress : string with get, set" Usage="Microsoft.Azure.Management.HDInsight.Models.ConnectivityEndpoint.PrivateIPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet">
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="privateIPAddress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="privateIPAddress")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the private ip address of the endpoint.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -162,11 +231,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="protocol")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="protocol")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="protocol")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

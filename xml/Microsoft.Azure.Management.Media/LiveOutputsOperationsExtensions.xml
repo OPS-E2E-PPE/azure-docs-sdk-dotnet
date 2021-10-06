@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type LiveOutputsOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +31,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.LiveOutput</ReturnType>
@@ -52,10 +58,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="parameters">
             Live Output properties needed for creation.
@@ -65,7 +71,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Creates a Live Output.
+            Creates a new live output.
             </remarks>
       </Docs>
     </Member>
@@ -73,18 +79,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt; BeginCreateAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, Microsoft.Azure.Management.Media.Models.LiveOutput parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Media.Models.LiveOutput&gt; BeginCreateAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, class Microsoft.Azure.Management.Media.Models.LiveOutput parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.BeginCreateAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Media.Models.LiveOutput,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, parameters As LiveOutput, Optional cancellationToken As CancellationToken = null) As Task(Of LiveOutput)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, parameters As LiveOutput, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LiveOutput)" />
       <MemberSignature Language="F#" Value="static member BeginCreateAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * string * Microsoft.Azure.Management.Media.Models.LiveOutput * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.BeginCreateAsync (operations, resourceGroupName, accountName, liveEventName, liveOutputName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;</ReturnType>
       </ReturnValue>
@@ -108,10 +112,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="parameters">
             Live Output properties needed for creation.
@@ -124,7 +128,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Creates a Live Output.
+            Creates a new live output.
             </remarks>
       </Docs>
     </Member>
@@ -137,7 +141,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -160,16 +167,17 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <summary>
             Delete Live Output
             </summary>
         <remarks>
-            Deletes a Live Output.
+            Deletes a live output. Deleting a live output does not delete the asset the
+            live output is writing to.
             </remarks>
       </Docs>
     </Member>
@@ -177,18 +185,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginDeleteAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member BeginDeleteAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.BeginDeleteAsync (operations, resourceGroupName, accountName, liveEventName, liveOutputName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -211,10 +217,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -224,7 +230,8 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Deletes a Live Output.
+            Deletes a live output. Deleting a live output does not delete the asset the
+            live output is writing to.
             </remarks>
       </Docs>
     </Member>
@@ -237,7 +244,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.LiveOutput</ReturnType>
@@ -261,10 +271,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="parameters">
             Live Output properties needed for creation.
@@ -274,7 +284,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Creates a Live Output.
+            Creates a new live output.
             </remarks>
       </Docs>
     </Member>
@@ -282,18 +292,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt; CreateAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, Microsoft.Azure.Management.Media.Models.LiveOutput parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Media.Models.LiveOutput&gt; CreateAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, class Microsoft.Azure.Management.Media.Models.LiveOutput parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.CreateAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.Media.Models.LiveOutput,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, parameters As LiveOutput, Optional cancellationToken As CancellationToken = null) As Task(Of LiveOutput)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, parameters As LiveOutput, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LiveOutput)" />
       <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * string * Microsoft.Azure.Management.Media.Models.LiveOutput * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.CreateAsync (operations, resourceGroupName, accountName, liveEventName, liveOutputName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;</ReturnType>
       </ReturnValue>
@@ -317,10 +325,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="parameters">
             Live Output properties needed for creation.
@@ -333,7 +341,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Creates a Live Output.
+            Creates a new live output.
             </remarks>
       </Docs>
     </Member>
@@ -346,7 +354,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -369,16 +380,17 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <summary>
             Delete Live Output
             </summary>
         <remarks>
-            Deletes a Live Output.
+            Deletes a live output. Deleting a live output does not delete the asset the
+            live output is writing to.
             </remarks>
       </Docs>
     </Member>
@@ -386,18 +398,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.DeleteAsync (operations, resourceGroupName, accountName, liveEventName, liveOutputName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -420,10 +430,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -433,7 +443,8 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Deletes a Live Output.
+            Deletes a live output. Deleting a live output does not delete the asset the
+            live output is writing to.
             </remarks>
       </Docs>
     </Member>
@@ -446,7 +457,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.LiveOutput</ReturnType>
@@ -469,17 +483,17 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <summary>
             Get Live Output
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Gets a Live Output.
+            Gets a live output.
             </remarks>
       </Docs>
     </Member>
@@ -487,18 +501,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt; GetAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Media.Models.LiveOutput&gt; GetAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, string liveOutputName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = null) As Task(Of LiveOutput)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, liveOutputName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of LiveOutput)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.GetAsync (operations, resourceGroupName, accountName, liveEventName, liveOutputName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;</ReturnType>
       </ReturnValue>
@@ -521,10 +533,10 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="liveOutputName">
-            The name of the Live Output.
+            The name of the live output.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -534,7 +546,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Gets a Live Output.
+            Gets a live output.
             </remarks>
       </Docs>
     </Member>
@@ -547,7 +559,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;</ReturnType>
@@ -569,14 +584,14 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <summary>
             List Live Outputs
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Lists the Live Outputs in the Live Event.
+            Lists the live outputs of a live event.
             </remarks>
       </Docs>
     </Member>
@@ -584,18 +599,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt; ListAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt; ListAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string resourceGroupName, string accountName, string liveEventName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of LiveOutput))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As ILiveOutputsOperations, resourceGroupName As String, accountName As String, liveEventName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of LiveOutput))" />
       <MemberSignature Language="F#" Value="static member ListAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt;" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.ListAsync (operations, resourceGroupName, accountName, liveEventName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -617,7 +630,7 @@
             The Media Services account name.
             </param>
         <param name="liveEventName">
-            The name of the Live Event.
+            The name of the live event, maximum length is 32.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -627,7 +640,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Lists the Live Outputs in the Live Event.
+            Lists the live outputs of a live event.
             </remarks>
       </Docs>
     </Member>
@@ -640,7 +653,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;</ReturnType>
@@ -661,7 +677,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Lists the Live Outputs in the Live Event.
+            Lists the live outputs of a live event.
             </remarks>
       </Docs>
     </Member>
@@ -669,18 +685,16 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt; ListNextAsync (this Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt; ListNextAsync(class Microsoft.Azure.Management.Media.ILiveOutputsOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Media.ILiveOutputsOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListNextAsync (operations As ILiveOutputsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of LiveOutput))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListNextAsync (operations As ILiveOutputsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of LiveOutput))" />
       <MemberSignature Language="F#" Value="static member ListNextAsync : Microsoft.Azure.Management.Media.ILiveOutputsOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt;" Usage="Microsoft.Azure.Management.Media.LiveOutputsOperationsExtensions.ListNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Media.Models.LiveOutput&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -704,7 +718,7 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            Lists the Live Outputs in the Live Event.
+            Lists the live outputs of a live event.
             </remarks>
       </Docs>
     </Member>

@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type TriggerCondition = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-    <AssemblyVersion>0.24.1.0</AssemblyVersion>
+    <AssemblyVersion>0.25.2.0</AssemblyVersion>
+    <AssemblyVersion>0.25.4.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +43,13 @@
       <MemberSignature Language="C#" Value="public TriggerCondition (string thresholdOperator, double threshold, Microsoft.Azure.Management.Monitor.Models.LogMetricTrigger metricTrigger = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string thresholdOperator, float64 threshold, class Microsoft.Azure.Management.Monitor.Models.LogMetricTrigger metricTrigger) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Monitor.Models.TriggerCondition.#ctor(System.String,System.Double,Microsoft.Azure.Management.Monitor.Models.LogMetricTrigger)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (thresholdOperator As String, threshold As Double, Optional metricTrigger As LogMetricTrigger = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (thresholdOperator As String, threshold As Double, Optional metricTrigger As LogMetricTrigger = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Monitor.Models.TriggerCondition : string * double * Microsoft.Azure.Management.Monitor.Models.LogMetricTrigger -&gt; Microsoft.Azure.Management.Monitor.Models.TriggerCondition" Usage="new Microsoft.Azure.Management.Monitor.Models.TriggerCondition (thresholdOperator, threshold, metricTrigger)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="thresholdOperator" Type="System.String" />
@@ -55,8 +58,9 @@
       </Parameters>
       <Docs>
         <param name="thresholdOperator">Evaluation operation for rule -
-            'GreaterThan' or 'LessThan. Possible values include: 'GreaterThan',
-            'LessThan', 'Equal'</param>
+            'GreaterThan' or 'LessThan. Possible values include:
+            'GreaterThanOrEqual', 'LessThanOrEqual', 'GreaterThan', 'LessThan',
+            'Equal'</param>
         <param name="threshold">Result or count threshold based on which
             rule should be triggered.</param>
         <param name="metricTrigger">Trigger condition for metric query
@@ -76,11 +80,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="metricTrigger")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="metricTrigger")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="metricTrigger")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -103,11 +109,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="threshold")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="threshold")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="threshold")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -131,11 +139,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="thresholdOperator")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="thresholdOperator")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="thresholdOperator")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -144,8 +154,8 @@
       <Docs>
         <summary>
             Gets or sets evaluation operation for rule - 'GreaterThan' or
-            'LessThan. Possible values include: 'GreaterThan', 'LessThan',
-            'Equal'
+            'LessThan. Possible values include: 'GreaterThanOrEqual',
+            'LessThanOrEqual', 'GreaterThan', 'LessThan', 'Equal'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -160,7 +170,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Monitor</AssemblyName>
-        <AssemblyVersion>0.24.1.0</AssemblyVersion>
+        <AssemblyVersion>0.25.2.0</AssemblyVersion>
+        <AssemblyVersion>0.25.4.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

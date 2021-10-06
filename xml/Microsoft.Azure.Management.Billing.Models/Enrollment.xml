@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type Enrollment = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Current entity level details
+            The properties of an enrollment.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +41,12 @@
       <MemberSignature Language="C#" Value="public Enrollment (DateTime? startDate = default, DateTime? endDate = default, string currency = default, string channel = default, Microsoft.Azure.Management.Billing.Models.EnrollmentPolicies policies = default, string language = default, string countryCode = default, string status = default, string billingCycle = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; startDate, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; endDate, string currency, string channel, class Microsoft.Azure.Management.Billing.Models.EnrollmentPolicies policies, string language, string countryCode, string status, string billingCycle) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.Enrollment.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,Microsoft.Azure.Management.Billing.Models.EnrollmentPolicies,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional startDate As Nullable(Of DateTime) = null, Optional endDate As Nullable(Of DateTime) = null, Optional currency As String = null, Optional channel As String = null, Optional policies As EnrollmentPolicies = null, Optional language As String = null, Optional countryCode As String = null, Optional status As String = null, Optional billingCycle As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional startDate As Nullable(Of DateTime) = Nothing, Optional endDate As Nullable(Of DateTime) = Nothing, Optional currency As String = Nothing, Optional channel As String = Nothing, Optional policies As EnrollmentPolicies = Nothing, Optional language As String = Nothing, Optional countryCode As String = Nothing, Optional status As String = Nothing, Optional billingCycle As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.Enrollment : Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string * Microsoft.Azure.Management.Billing.Models.EnrollmentPolicies * string * string * string * string -&gt; Microsoft.Azure.Management.Billing.Models.Enrollment" Usage="new Microsoft.Azure.Management.Billing.Models.Enrollment (startDate, endDate, currency, channel, policies, language, countryCode, status, billingCycle)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="startDate" Type="System.Nullable&lt;System.DateTime&gt;" />
@@ -60,17 +60,19 @@
         <Parameter Name="billingCycle" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="startDate">Enrollment Start Date</param>
-        <param name="endDate">Enrollment End Date</param>
-        <param name="currency">The currency associated with
-            enrollment</param>
-        <param name="channel">The channel for Enrollment</param>
-        <param name="policies">The attributes associated with legacy
+        <param name="startDate">The start date of the enrollment.</param>
+        <param name="endDate">The end date of the enrollment.</param>
+        <param name="currency">The billing currency for the
             enrollment.</param>
-        <param name="language">The language for Enrollment</param>
-        <param name="countryCode">The countryCode for Enrollment</param>
-        <param name="status">Enrollment status</param>
-        <param name="billingCycle">Enrollment billing cycle</param>
+        <param name="channel">The channel type of the enrollment.</param>
+        <param name="policies">The policies for Enterprise Agreement
+            enrollments.</param>
+        <param name="language">The language for the enrollment.</param>
+        <param name="countryCode">The country code of the
+            enrollment.</param>
+        <param name="status">The current status of the enrollment.</param>
+        <param name="billingCycle">The billing cycle for the
+            enrollment.</param>
         <summary>
             Initializes a new instance of the Enrollment class.
             </summary>
@@ -86,11 +88,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="billingCycle")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="billingCycle")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="billingCycle")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -98,7 +101,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets enrollment billing cycle
+            Gets the billing cycle for the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -113,11 +116,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="channel")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="channel")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="channel")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -125,7 +129,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the channel for Enrollment
+            Gets the channel type of the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -140,11 +144,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="countryCode")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="countryCode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="countryCode")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -152,7 +157,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the countryCode for Enrollment
+            Gets the country code of the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -167,11 +172,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="currency")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="currency")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="currency")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -179,7 +185,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the currency associated with enrollment
+            Gets the billing currency for the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -194,11 +200,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="endDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="endDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="endDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -206,7 +213,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets enrollment End Date
+            Gets or sets the end date of the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -221,11 +228,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="language")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="language")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="language")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -233,7 +241,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the language for Enrollment
+            Gets the language for the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -248,11 +256,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="policies")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="policies")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="policies")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -260,7 +269,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the attributes associated with legacy enrollment.
+            Gets the policies for Enterprise Agreement enrollments.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -275,11 +284,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="startDate")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="startDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="startDate")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -287,7 +297,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets enrollment Start Date
+            Gets or sets the start date of the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -302,11 +312,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -314,7 +325,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets enrollment status
+            Gets the current status of the enrollment.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

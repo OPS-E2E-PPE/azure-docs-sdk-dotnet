@@ -6,10 +6,8 @@
   <TypeSignature Language="F#" Value="type VirtualMachineScaleSetManagedDiskParameters = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-    <AssemblyVersion>1.0.0.61</AssemblyVersion>
-    <AssemblyVersion>1.0.0.62</AssemblyVersion>
-    <AssemblyVersion>1.0.0.63</AssemblyVersion>
-    <AssemblyVersion>1.0.0.64</AssemblyVersion>
+    <AssemblyVersion>1.0.0.69</AssemblyVersion>
+    <AssemblyVersion>1.0.0.70</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,10 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,21 +41,20 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public VirtualMachineScaleSetManagedDiskParameters (Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes storageAccountType = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes storageAccountType) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters.#ctor(Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional storageAccountType As StorageAccountTypes = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters : Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes -&gt; Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters" Usage="new Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters storageAccountType" />
+      <MemberSignature Language="C#" Value="public VirtualMachineScaleSetManagedDiskParameters (Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes storageAccountType = default, Microsoft.Azure.Management.ResourceManager.Fluent.SubResource diskEncryptionSet = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes storageAccountType, class Microsoft.Azure.Management.ResourceManager.Fluent.SubResource diskEncryptionSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters.#ctor(Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes,Microsoft.Azure.Management.ResourceManager.Fluent.SubResource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional storageAccountType As StorageAccountTypes = Nothing, Optional diskEncryptionSet As SubResource = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters : Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes * Microsoft.Azure.Management.ResourceManager.Fluent.SubResource -&gt; Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters" Usage="new Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters (storageAccountType, diskEncryptionSet)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="storageAccountType" Type="Microsoft.Azure.Management.Compute.Fluent.Models.StorageAccountTypes" />
+        <Parameter Name="diskEncryptionSet" Type="Microsoft.Azure.Management.ResourceManager.Fluent.SubResource" />
       </Parameters>
       <Docs>
         <param name="storageAccountType">Specifies the storage account type
@@ -67,10 +62,42 @@
             disks, it cannot be used with OS Disk. Possible values include:
             'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS',
             'UltraSSD_LRS'</param>
+        <param name="diskEncryptionSet">Specifies the customer managed disk
+            encryption set resource id for the managed disk.</param>
         <summary>
             Initializes a new instance of the
             VirtualMachineScaleSetManagedDiskParameters class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiskEncryptionSet">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.ResourceManager.Fluent.SubResource DiskEncryptionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.ResourceManager.Fluent.SubResource DiskEncryptionSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters.DiskEncryptionSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property DiskEncryptionSet As SubResource" />
+      <MemberSignature Language="F#" Value="member this.DiskEncryptionSet : Microsoft.Azure.Management.ResourceManager.Fluent.SubResource with get, set" Usage="Microsoft.Azure.Management.Compute.Fluent.Models.VirtualMachineScaleSetManagedDiskParameters.DiskEncryptionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="diskEncryptionSet")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="diskEncryptionSet")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.ResourceManager.Fluent.SubResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets specifies the customer managed disk encryption set
+            resource id for the managed disk.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,14 +110,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="storageAccountType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="storageAccountType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="storageAccountType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -6,8 +6,9 @@
   <TypeSignature Language="F#" Value="type PoolEndpointConfiguration = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
-    <AssemblyVersion>13.0.0.0</AssemblyVersion>
+    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +29,9 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,8 +50,9 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="inboundNATPools" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Batch.Protocol.Models.InboundNATPool&gt;" />
@@ -73,12 +76,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Batch</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="inboundNATPools")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="inboundNATPools")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="inboundNATPools")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -93,7 +98,8 @@
         <remarks>
             The maximum number of inbound NAT Pools per Batch Pool is 5. If the
             maximum number of inbound NAT Pools is exceeded the request fails
-            with HTTP status code 400.
+            with HTTP status code 400. This cannot be specified if the
+            IPAddressProvisioningType is NoPublicIPAddresses.
             </remarks>
       </Docs>
     </Member>

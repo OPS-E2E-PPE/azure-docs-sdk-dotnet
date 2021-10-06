@@ -6,10 +6,8 @@
   <TypeSignature Language="F#" Value="type BootDiagnostics = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-    <AssemblyVersion>1.0.0.61</AssemblyVersion>
-    <AssemblyVersion>1.0.0.62</AssemblyVersion>
-    <AssemblyVersion>1.0.0.63</AssemblyVersion>
-    <AssemblyVersion>1.0.0.64</AssemblyVersion>
+    <AssemblyVersion>1.0.0.69</AssemblyVersion>
+    <AssemblyVersion>1.0.0.70</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,10 +32,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,15 +47,13 @@
       <MemberSignature Language="C#" Value="public BootDiagnostics (bool? enabled = default, string storageUri = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;bool&gt; enabled, string storageUri) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.Fluent.Models.BootDiagnostics.#ctor(System.Nullable{System.Boolean},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional enabled As Nullable(Of Boolean) = null, Optional storageUri As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional enabled As Nullable(Of Boolean) = Nothing, Optional storageUri As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Compute.Fluent.Models.BootDiagnostics : Nullable&lt;bool&gt; * string -&gt; Microsoft.Azure.Management.Compute.Fluent.Models.BootDiagnostics" Usage="new Microsoft.Azure.Management.Compute.Fluent.Models.BootDiagnostics (enabled, storageUri)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="enabled" Type="System.Nullable&lt;System.Boolean&gt;" />
@@ -69,7 +63,9 @@
         <param name="enabled">Whether boot diagnostics should be enabled on
             the Virtual Machine.</param>
         <param name="storageUri">Uri of the storage account to use for
-            placing the console output and screenshot.</param>
+            placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If
+            storageUri is not specified while enabling boot diagnostics,
+            managed storage will be used.</param>
         <summary>
             Initializes a new instance of the BootDiagnostics class.
             </summary>
@@ -85,14 +81,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="enabled")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="enabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="enabled")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -116,14 +111,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="storageUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="storageUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="storageUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -133,6 +127,8 @@
         <summary>
             Gets or sets uri of the storage account to use for placing the
             console output and screenshot.
+            &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;If storageUri is not specified
+            while enabling boot diagnostics, managed storage will be used.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

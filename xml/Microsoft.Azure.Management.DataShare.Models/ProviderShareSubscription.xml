@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type ProviderShareSubscription = class&#xA;    inherit ProxyDto" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.DataShare.Models.ProxyDto</BaseTypeName>
@@ -15,7 +14,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,8 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,25 +44,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ProviderShareSubscription (string id = default, string name = default, string type = default, string consumerEmail = default, string consumerName = default, string consumerTenantName = default, DateTime? createdAt = default, string providerEmail = default, string providerName = default, DateTime? sharedAt = default, string shareSubscriptionObjectId = default, string shareSubscriptionStatus = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string consumerEmail, string consumerName, string consumerTenantName, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; createdAt, string providerEmail, string providerName, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; sharedAt, string shareSubscriptionObjectId, string shareSubscriptionStatus) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.String,System.String,System.Nullable{System.DateTime},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional consumerEmail As String = null, Optional consumerName As String = null, Optional consumerTenantName As String = null, Optional createdAt As Nullable(Of DateTime) = null, Optional providerEmail As String = null, Optional providerName As String = null, Optional sharedAt As Nullable(Of DateTime) = null, Optional shareSubscriptionObjectId As String = null, Optional shareSubscriptionStatus As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription : string * string * string * string * string * string * Nullable&lt;DateTime&gt; * string * string * Nullable&lt;DateTime&gt; * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription" Usage="new Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription (id, name, type, consumerEmail, consumerName, consumerTenantName, createdAt, providerEmail, providerName, sharedAt, shareSubscriptionObjectId, shareSubscriptionStatus)" />
+      <MemberSignature Language="C#" Value="public ProviderShareSubscription (string id = default, string name = default, Microsoft.Azure.Management.DataShare.Models.SystemData systemData = default, string type = default, string consumerEmail = default, string consumerName = default, string consumerTenantName = default, DateTime? createdAt = default, DateTime? expirationDate = default, string providerEmail = default, string providerName = default, DateTime? sharedAt = default, string shareSubscriptionObjectId = default, string shareSubscriptionStatus = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, class Microsoft.Azure.Management.DataShare.Models.SystemData systemData, string type, string consumerEmail, string consumerName, string consumerTenantName, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; createdAt, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationDate, string providerEmail, string providerName, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; sharedAt, string shareSubscriptionObjectId, string shareSubscriptionStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription.#ctor(System.String,System.String,Microsoft.Azure.Management.DataShare.Models.SystemData,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.Nullable{System.DateTime},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional systemData As SystemData = Nothing, Optional type As String = Nothing, Optional consumerEmail As String = Nothing, Optional consumerName As String = Nothing, Optional consumerTenantName As String = Nothing, Optional createdAt As Nullable(Of DateTime) = Nothing, Optional expirationDate As Nullable(Of DateTime) = Nothing, Optional providerEmail As String = Nothing, Optional providerName As String = Nothing, Optional sharedAt As Nullable(Of DateTime) = Nothing, Optional shareSubscriptionObjectId As String = Nothing, Optional shareSubscriptionStatus As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription : string * string * Microsoft.Azure.Management.DataShare.Models.SystemData * string * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * string * string * Nullable&lt;DateTime&gt; * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription" Usage="new Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription (id, name, systemData, type, consumerEmail, consumerName, consumerTenantName, createdAt, expirationDate, providerEmail, providerName, sharedAt, shareSubscriptionObjectId, shareSubscriptionStatus)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.DataShare.Models.SystemData" />
         <Parameter Name="type" Type="System.String" />
         <Parameter Name="consumerEmail" Type="System.String" />
         <Parameter Name="consumerName" Type="System.String" />
         <Parameter Name="consumerTenantName" Type="System.String" />
         <Parameter Name="createdAt" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="expirationDate" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="providerEmail" Type="System.String" />
         <Parameter Name="providerName" Type="System.String" />
         <Parameter Name="sharedAt" Type="System.Nullable&lt;System.DateTime&gt;" />
@@ -73,6 +73,7 @@
       <Docs>
         <param name="id">The resource id of the azure resource</param>
         <param name="name">Name of the azure resource</param>
+        <param name="systemData">System Data of the Azure resource.</param>
         <param name="type">Type of the azure resource</param>
         <param name="consumerEmail">Email of the consumer who created the
             share subscription</param>
@@ -81,6 +82,8 @@
         <param name="consumerTenantName">Tenant name of the consumer who
             created the share subscription</param>
         <param name="createdAt">created at</param>
+        <param name="expirationDate">Expiration date of the share
+            subscription in UTC format</param>
         <param name="providerEmail">Email of the provider who created the
             share</param>
         <param name="providerName">Name of the provider who created the
@@ -106,12 +109,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerEmail")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerEmail")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerEmail")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -134,12 +137,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -162,12 +165,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerTenantName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerTenantName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.consumerTenantName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -190,12 +193,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.createdAt")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.createdAt")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.createdAt")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -204,6 +207,35 @@
       <Docs>
         <summary>
             Gets created at
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpirationDate">
+      <MemberSignature Language="C#" Value="public DateTime? ExpirationDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ExpirationDate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription.ExpirationDate" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpirationDate As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.ExpirationDate : Nullable&lt;DateTime&gt; with get, set" Usage="Microsoft.Azure.Management.DataShare.Models.ProviderShareSubscription.ExpirationDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationDate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationDate")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets expiration date of the share subscription in UTC
+            format
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -218,12 +250,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.providerEmail")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.providerEmail")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.providerEmail")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -246,12 +278,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.providerName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.providerName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.providerName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -274,12 +306,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.sharedAt")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.sharedAt")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.sharedAt")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -302,12 +334,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionObjectId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionObjectId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionObjectId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -330,12 +362,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.shareSubscriptionStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

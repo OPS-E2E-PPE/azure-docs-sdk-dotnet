@@ -6,12 +6,18 @@
   <TypeSignature Language="F#" Value="type Prompt = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-    <AssemblyVersion>4.7.0.0</AssemblyVersion>
-    <AssemblyVersion>4.7.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.0.0</AssemblyVersion>
-    <AssemblyVersion>4.8.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.2.0</AssemblyVersion>
-    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.1.0</AssemblyVersion>
+    <AssemblyVersion>4.31.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.1.0</AssemblyVersion>
+    <AssemblyVersion>4.33.0.0</AssemblyVersion>
+    <AssemblyVersion>4.34.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.0.0</AssemblyVersion>
+    <AssemblyVersion>4.36.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -19,8 +25,8 @@
   <Interfaces />
   <Docs>
     <summary>
-                Structure containing static members that you can use to specify how the interactive overrides
-                of AcquireTokenAsync in <see cref="T:Microsoft.Identity.Client.IPublicClientApplication" /> should prompt the user.
+            Structure containing static members that you can use to specify how the interactive overrides
+            of AcquireTokenAsync in <see cref="T:Microsoft.Identity.Client.IPublicClientApplication" /> should prompt the user.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -34,22 +40,61 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-                The user will be prompted to consent, even if consent was granted before. It is achieved
-                by sending <c>prompt=consent</c> to Azure AD.
+            The user will be prompted to consent, even if consent was granted before. It is achieved
+            by sending <c>prompt=consent</c> to the authorization server's authorize endpoint.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Identity.Client.Prompt Create;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Identity.Client.Prompt Create" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.Prompt.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Create As Prompt " />
+      <MemberSignature Language="F#" Value=" staticval mutable Create : Microsoft.Identity.Client.Prompt" Usage="Microsoft.Identity.Client.Prompt.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            AcquireToken will send <c>prompt=create</c> to the authorization server's authorize endpoint
+            which would trigger a sign-up experience, used for External Identities. 
+            </summary>
+        <remarks>More details at https://aka.ms/msal-net-prompt-create. </remarks>
       </Docs>
     </Member>
     <Member MemberName="Equals">
@@ -61,12 +106,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -77,7 +128,7 @@
       <Docs>
         <param name="obj">object to compare against</param>
         <summary>
-                Equals method override to compare Prompt structs
+            Equals method override to compare Prompt structs
             </summary>
         <returns>true if object are equal.</returns>
         <remarks>To be added.</remarks>
@@ -92,20 +143,26 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-                The user will be prompted for credentials by the service. It is achieved
-                by sending <c>prompt=login</c> to the Azure AD service.
+            The user will be prompted for credentials by the service. It is achieved
+            by sending <c>prompt=login</c> to the authorize endpoint.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,12 +176,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -132,37 +195,9 @@
       <Parameters />
       <Docs>
         <summary>
-                Override to compute hashcode
+            Override to compute hash code
             </summary>
         <returns>hash code of the PromptValue</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Never">
-      <MemberSignature Language="C#" Value="public static readonly Microsoft.Identity.Client.Prompt Never;" />
-      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Identity.Client.Prompt Never" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.Prompt.Never" />
-      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Never As Prompt " />
-      <MemberSignature Language="F#" Value=" staticval mutable Never : Microsoft.Identity.Client.Prompt" Usage="Microsoft.Identity.Client.Prompt.Never" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Only available on .NET platform. AcquireToken will send <c>prompt=attempt_none</c> to
-            Azure AD's authorize endpoint and the library will use a hidden webview (and its cookies) to authenticate the user.
-            This can fail, and in that case a <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" /> will be thrown.
-            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -175,26 +210,28 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-                Does not request any specific UI to the service, which therefore decides based on the
-                number of signed-in identities.
-                This Prompt is, for the moment, recommended for Azure AD B2C scenarios where
-                the developer does not want the user to re-select the account (for instance when applying
-                policies like EditProfile, or ResetPassword, which should apply to the currently signed-in account.
-                It's not recommended to use this Prompt in Azure AD scenarios at the moment).
+            Let the identity service decide on the best user experience, based on browser cookies and 
+            on the login hint, which can be specified using WithAccount() or WithLoginHint()
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>This is the recommended prompt</remarks>
       </Docs>
     </Member>
     <Member MemberName="op_Equality">
@@ -206,12 +243,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -224,7 +267,7 @@
         <param name="x">first value</param>
         <param name="y">second value</param>
         <summary>
-                operator overload to equality check
+            Operator overload to check equality
             </summary>
         <returns>true if the objects are equal</returns>
         <remarks>To be added.</remarks>
@@ -239,12 +282,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -257,7 +306,7 @@
         <param name="x">first value</param>
         <param name="y">second value</param>
         <summary>
-                operator overload to equality check
+            Operator overload to check inequality
             </summary>
         <returns>true if the objects are not equal</returns>
         <remarks>To be added.</remarks>
@@ -272,23 +321,31 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Prompt</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-                AcquireToken will send <c>prompt=select_account</c> to Azure AD's authorize endpoint
-                which would present to the user a list of accounts from which one can be selected for
-                authentication.
+            AcquireToken will send <c>prompt=select_account</c> to the authorization server's authorize endpoint.
+            which would present to the user a list of accounts from which one can be selected for
+            authentication.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This is the default prompt for backwards compatibility reasons. Please use <see cref="F:Microsoft.Identity.Client.Prompt.NoPrompt" /> for the best user experience.
+            </remarks>
       </Docs>
     </Member>
   </Members>

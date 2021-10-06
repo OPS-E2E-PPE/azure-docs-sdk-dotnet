@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ConnectivityParameters = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,28 +38,32 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ConnectivityParameters (Microsoft.Azure.Management.Network.Models.ConnectivitySource source, Microsoft.Azure.Management.Network.Models.ConnectivityDestination destination, string protocol = default, Microsoft.Azure.Management.Network.Models.ProtocolConfiguration protocolConfiguration = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Network.Models.ConnectivitySource source, class Microsoft.Azure.Management.Network.Models.ConnectivityDestination destination, string protocol, class Microsoft.Azure.Management.Network.Models.ProtocolConfiguration protocolConfiguration) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.ConnectivityParameters.#ctor(Microsoft.Azure.Management.Network.Models.ConnectivitySource,Microsoft.Azure.Management.Network.Models.ConnectivityDestination,System.String,Microsoft.Azure.Management.Network.Models.ProtocolConfiguration)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (source As ConnectivitySource, destination As ConnectivityDestination, Optional protocol As String = null, Optional protocolConfiguration As ProtocolConfiguration = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.ConnectivityParameters : Microsoft.Azure.Management.Network.Models.ConnectivitySource * Microsoft.Azure.Management.Network.Models.ConnectivityDestination * string * Microsoft.Azure.Management.Network.Models.ProtocolConfiguration -&gt; Microsoft.Azure.Management.Network.Models.ConnectivityParameters" Usage="new Microsoft.Azure.Management.Network.Models.ConnectivityParameters (source, destination, protocol, protocolConfiguration)" />
+      <MemberSignature Language="C#" Value="public ConnectivityParameters (Microsoft.Azure.Management.Network.Models.ConnectivitySource source, Microsoft.Azure.Management.Network.Models.ConnectivityDestination destination, string protocol = default, Microsoft.Azure.Management.Network.Models.ProtocolConfiguration protocolConfiguration = default, string preferredIPVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Network.Models.ConnectivitySource source, class Microsoft.Azure.Management.Network.Models.ConnectivityDestination destination, string protocol, class Microsoft.Azure.Management.Network.Models.ProtocolConfiguration protocolConfiguration, string preferredIPVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.ConnectivityParameters.#ctor(Microsoft.Azure.Management.Network.Models.ConnectivitySource,Microsoft.Azure.Management.Network.Models.ConnectivityDestination,System.String,Microsoft.Azure.Management.Network.Models.ProtocolConfiguration,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As ConnectivitySource, destination As ConnectivityDestination, Optional protocol As String = Nothing, Optional protocolConfiguration As ProtocolConfiguration = Nothing, Optional preferredIPVersion As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.ConnectivityParameters : Microsoft.Azure.Management.Network.Models.ConnectivitySource * Microsoft.Azure.Management.Network.Models.ConnectivityDestination * string * Microsoft.Azure.Management.Network.Models.ProtocolConfiguration * string -&gt; Microsoft.Azure.Management.Network.Models.ConnectivityParameters" Usage="new Microsoft.Azure.Management.Network.Models.ConnectivityParameters (source, destination, protocol, protocolConfiguration, preferredIPVersion)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="source" Type="Microsoft.Azure.Management.Network.Models.ConnectivitySource" />
         <Parameter Name="destination" Type="Microsoft.Azure.Management.Network.Models.ConnectivityDestination" />
         <Parameter Name="protocol" Type="System.String" />
         <Parameter Name="protocolConfiguration" Type="Microsoft.Azure.Management.Network.Models.ProtocolConfiguration" />
+        <Parameter Name="preferredIPVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="source">To be added.</param>
-        <param name="destination">To be added.</param>
-        <param name="protocolConfiguration">To be added.</param>
+        <param name="source">The source of the connection.</param>
+        <param name="destination">The destination of connection.</param>
         <param name="protocol">Network protocol. Possible values include:
             'Tcp', 'Http', 'Https', 'Icmp'</param>
+        <param name="protocolConfiguration">Configuration of the
+            protocol.</param>
+        <param name="preferredIPVersion">Preferred IP version of the
+            connection. Possible values include: 'IPv4', 'IPv6'</param>
         <summary>
             Initializes a new instance of the ConnectivityParameters class.
             </summary>
@@ -75,18 +79,50 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="destination")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="destination")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="destination")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectivityDestination</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary />
+        <summary>
+            Gets or sets the destination of connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredIPVersion">
+      <MemberSignature Language="C#" Value="public string PreferredIPVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredIPVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Network.Models.ConnectivityParameters.PreferredIPVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreferredIPVersion As String" />
+      <MemberSignature Language="F#" Value="member this.PreferredIPVersion : string with get, set" Usage="Microsoft.Azure.Management.Network.Models.ConnectivityParameters.PreferredIPVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="preferredIPVersion")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="preferredIPVersion")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets preferred IP version of the connection. Possible
+            values include: 'IPv4', 'IPv6'
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -100,11 +136,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="protocol")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="protocol")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="protocol")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -128,18 +165,21 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="protocolConfiguration")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="protocolConfiguration")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="protocolConfiguration")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ProtocolConfiguration</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary />
+        <summary>
+            Gets or sets configuration of the protocol.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -153,18 +193,21 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="source")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="source")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="source")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectivitySource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary />
+        <summary>
+            Gets or sets the source of the connection.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -178,7 +221,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

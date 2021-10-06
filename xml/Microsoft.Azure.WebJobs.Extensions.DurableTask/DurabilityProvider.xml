@@ -186,6 +186,28 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="ConfigurationJson">
+      <MemberSignature Language="C#" Value="public virtual Newtonsoft.Json.Linq.JObject ConfigurationJson { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Newtonsoft.Json.Linq.JObject ConfigurationJson" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.ConfigurationJson" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ConfigurationJson As JObject" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationJson : Newtonsoft.Json.Linq.JObject" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.ConfigurationJson" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Newtonsoft.Json.Linq.JObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            JSON representation of configuration to emit in telemetry.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ConnectionName">
       <MemberSignature Language="C#" Value="public virtual string ConnectionName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ConnectionName" />
@@ -422,6 +444,28 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="EventSourceName">
+      <MemberSignature Language="C#" Value="public virtual string EventSourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventSourceName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.EventSourceName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property EventSourceName As String" />
+      <MemberSignature Language="F#" Value="member this.EventSourceName : string with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.EventSourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event source name (e.g. DurableTask-AzureStorage).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ForceTerminateTaskOrchestrationAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ForceTerminateTaskOrchestrationAsync (string instanceId, string reason);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task ForceTerminateTaskOrchestrationAsync(string instanceId, string reason) cil managed" />
@@ -489,6 +533,12 @@
         <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;DurableTask.Core.OrchestrationState&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -712,6 +762,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GuaranteesOrderedDelivery">
+      <MemberSignature Language="C#" Value="public virtual bool GuaranteesOrderedDelivery { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GuaranteesOrderedDelivery" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.GuaranteesOrderedDelivery" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property GuaranteesOrderedDelivery As Boolean" />
+      <MemberSignature Language="F#" Value="member this.GuaranteesOrderedDelivery : bool" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.GuaranteesOrderedDelivery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether this backend delivers messages in order.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="IsMaxMessageCountExceeded">
       <MemberSignature Language="C#" Value="public bool IsMaxMessageCountExceeded (int currentMessageCount, DurableTask.Core.OrchestrationRuntimeState runtimeState);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsMaxMessageCountExceeded(int32 currentMessageCount, class DurableTask.Core.OrchestrationRuntimeState runtimeState) cil managed" />
@@ -802,6 +874,51 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="LongRunningTimerIntervalLength">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan LongRunningTimerIntervalLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan LongRunningTimerIntervalLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.LongRunningTimerIntervalLength" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property LongRunningTimerIntervalLength As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.LongRunningTimerIntervalLength : TimeSpan with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.LongRunningTimerIntervalLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Interval time used for long running timers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeCurrentAppPrimaryAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task MakeCurrentAppPrimaryAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task MakeCurrentAppPrimaryAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.MakeCurrentAppPrimaryAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function MakeCurrentAppPrimaryAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member MakeCurrentAppPrimaryAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.MakeCurrentAppPrimaryAsync : unit -&gt; System.Threading.Tasks.Task" Usage="durabilityProvider.MakeCurrentAppPrimaryAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Makes the current app the primary app, if it isn't already. Must be using the AppLease feature.
+            </summary>
+        <returns>A task that completes when the operation has started.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MaxConcurrentTaskActivityWorkItems">
       <MemberSignature Language="C#" Value="public int MaxConcurrentTaskActivityWorkItems { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentTaskActivityWorkItems" />
@@ -848,6 +965,28 @@
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumDelayTime">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan MaximumDelayTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaximumDelayTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.MaximumDelayTime" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property MaximumDelayTime As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.MaximumDelayTime : TimeSpan with get, set" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.MaximumDelayTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value of maximum durable timer delay. Used for long running durable timers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="PurgeHistoryByFilters">
@@ -1125,7 +1264,8 @@
         <Parameter Name="messages" Type="DurableTask.Core.TaskMessage[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -1238,6 +1378,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SupportsPollFreeWait">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsPollFreeWait { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPollFreeWait" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.SupportsPollFreeWait" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SupportsPollFreeWait As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsPollFreeWait : bool" Usage="Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.SupportsPollFreeWait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether the backend's WaitForOrchestration is implemented without polling.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TaskActivityDispatcherCount">
       <MemberSignature Language="C#" Value="public int TaskActivityDispatcherCount { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 TaskActivityDispatcherCount" />
@@ -1284,6 +1446,40 @@
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetScaleMonitor">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetScaleMonitor (string functionId, string functionName, string hubName, string storageConnectionString, out Microsoft.Azure.WebJobs.Host.Scale.IScaleMonitor scaleMonitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetScaleMonitor(string functionId, string functionName, string hubName, string storageConnectionString, [out] class Microsoft.Azure.WebJobs.Host.Scale.IScaleMonitor&amp; scaleMonitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.WebJobs.Extensions.DurableTask.DurabilityProvider.TryGetScaleMonitor(System.String,System.String,System.String,System.String,Microsoft.Azure.WebJobs.Host.Scale.IScaleMonitor@)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function TryGetScaleMonitor (functionId As String, functionName As String, hubName As String, storageConnectionString As String, ByRef scaleMonitor As IScaleMonitor) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryGetScaleMonitor : string * string * string * string * IScaleMonitor -&gt; bool&#xA;override this.TryGetScaleMonitor : string * string * string * string * IScaleMonitor -&gt; bool" Usage="durabilityProvider.TryGetScaleMonitor (functionId, functionName, hubName, storageConnectionString, scaleMonitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DurableTask</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionId" Type="System.String" />
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="hubName" Type="System.String" />
+        <Parameter Name="storageConnectionString" Type="System.String" />
+        <Parameter Name="scaleMonitor" Type="Microsoft.Azure.WebJobs.Host.Scale.IScaleMonitor" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="functionId">Function id.</param>
+        <param name="functionName">Function name.</param>
+        <param name="hubName">Task hub name.</param>
+        <param name="storageConnectionString">Storage account connection string, used for Azure Storage provider.</param>
+        <param name="scaleMonitor">The scale monitor.</param>
+        <summary>
+            Tries to obtain a scale monitor for autoscaling.
+            </summary>
+        <returns>True if autoscaling is supported, false otherwise.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ValidateDelayTime">

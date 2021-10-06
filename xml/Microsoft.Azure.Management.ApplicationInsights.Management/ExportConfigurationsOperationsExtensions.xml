@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ExportConfigurationsOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <AssemblyVersion>0.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +28,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;</ReturnType>
@@ -44,7 +44,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -65,13 +65,19 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt; CreateAsync (this Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest exportProperties, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt; CreateAsync(class Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest exportProperties, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.CreateAsync(Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations,System.String,System.String,Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportProperties As ApplicationInsightsComponentExportRequest, Optional cancellationToken As CancellationToken = null) As Task(Of IList(Of ApplicationInsightsComponentExportConfiguration))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportProperties As ApplicationInsightsComponentExportRequest, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IList(Of ApplicationInsightsComponentExportConfiguration))" />
       <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations * string * string * Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt;" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.CreateAsync (operations, resourceGroupName, resourceName, exportProperties, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -87,7 +93,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -116,7 +122,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration</ReturnType>
@@ -132,7 +138,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -153,13 +159,19 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; DeleteAsync (this Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; DeleteAsync(class Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, Optional cancellationToken As CancellationToken = null) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.DeleteAsync (operations, resourceGroupName, resourceName, exportId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;</ReturnType>
       </ReturnValue>
@@ -175,7 +187,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -204,7 +216,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration</ReturnType>
@@ -220,7 +232,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -240,13 +252,19 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; GetAsync (this Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; GetAsync(class Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.GetAsync(Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, Optional cancellationToken As CancellationToken = null) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.GetAsync (operations, resourceGroupName, resourceName, exportId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;</ReturnType>
       </ReturnValue>
@@ -262,7 +280,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -290,7 +308,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;</ReturnType>
@@ -305,7 +323,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -322,13 +340,19 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt; ListAsync (this Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt; ListAsync(class Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.ListAsync(Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IList(Of ApplicationInsightsComponentExportConfiguration))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IList(Of ApplicationInsightsComponentExportConfiguration))" />
       <MemberSignature Language="F#" Value="static member ListAsync : Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt;" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.ListAsync (operations, resourceGroupName, resourceName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -343,7 +367,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -368,7 +392,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration</ReturnType>
@@ -385,7 +409,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.
@@ -409,13 +433,19 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; UpdateAsync (this Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest exportProperties, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt; UpdateAsync(class Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations operations, string resourceGroupName, string resourceName, string exportId, class Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest exportProperties, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, exportProperties As ApplicationInsightsComponentExportRequest, Optional cancellationToken As CancellationToken = null) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As IExportConfigurationsOperations, resourceGroupName As String, resourceName As String, exportId As String, exportProperties As ApplicationInsightsComponentExportRequest, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ApplicationInsightsComponentExportConfiguration)" />
       <MemberSignature Language="F#" Value="static member UpdateAsync : Microsoft.Azure.Management.ApplicationInsights.Management.IExportConfigurationsOperations * string * string * string * Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;" Usage="Microsoft.Azure.Management.ApplicationInsights.Management.ExportConfigurationsOperationsExtensions.UpdateAsync (operations, resourceGroupName, resourceName, exportId, exportProperties, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ApplicationInsights.Management.Models.ApplicationInsightsComponentExportConfiguration&gt;</ReturnType>
       </ReturnValue>
@@ -432,7 +462,7 @@
             The operations group for this extension method.
             </param>
         <param name="resourceGroupName">
-            The name of the resource group.
+            The name of the resource group. The name is case insensitive.
             </param>
         <param name="resourceName">
             The name of the Application Insights component resource.

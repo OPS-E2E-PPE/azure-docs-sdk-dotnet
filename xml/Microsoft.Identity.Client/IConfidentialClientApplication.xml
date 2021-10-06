@@ -6,12 +6,18 @@
   <TypeSignature Language="F#" Value="type IConfidentialClientApplication = interface&#xA;    interface IClientApplicationBase" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-    <AssemblyVersion>4.7.0.0</AssemblyVersion>
-    <AssemblyVersion>4.7.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.0.0</AssemblyVersion>
-    <AssemblyVersion>4.8.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.2.0</AssemblyVersion>
-    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.1.0</AssemblyVersion>
+    <AssemblyVersion>4.31.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.1.0</AssemblyVersion>
+    <AssemblyVersion>4.33.0.0</AssemblyVersion>
+    <AssemblyVersion>4.34.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.0.0</AssemblyVersion>
+    <AssemblyVersion>4.36.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -20,7 +26,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Component to be used with confidential client applications like Web Apps/API.
+            Component to be used with confidential client applications like web apps/API.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -34,12 +40,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -55,7 +67,7 @@
             [V3 API] Acquires a security token from the authority configured in the app using the authorization code
             previously received from the STS.
             It uses the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
-            It's usually used in Web Apps (for instance ASP.NET / ASP.NET Core Web apps) which sign-in users,
+            It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users,
             and can request an authorization code.
             This method does not lookup the token cache, but stores the result in it, so it can be looked up
             using other methods such as <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />.
@@ -76,16 +88,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -115,12 +138,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -151,16 +180,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -187,16 +227,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenForClient instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -225,12 +276,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -264,16 +321,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -302,16 +370,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -342,12 +421,18 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -363,6 +448,48 @@
             and updated silently if needed when calling <see cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})" /></Summary>
       </Docs>
     </Member>
+    <Member MemberName="GetAccountsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt; GetAccountsAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Client.IAccount&gt;&gt; GetAccountsAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAccountsAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccountsAsync () As Task(Of IEnumerable(Of IAccount))" />
+      <MemberSignature Language="F#" Value="abstract member GetAccountsAsync : unit -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.Identity.Client.IAccount&gt;&gt;" Usage="iConfidentialClientApplication.GetAccountsAsync " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAccountAsync in web apps and web APIs, and use a token cache serializer for better security and performance. See https://aka.ms/msal-net-cca-token-cache-serialization.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAccountAsync in web apps and web APIs, and use a token cache serializer for better security and performance. See https://aka.ms/msal-net-cca-token-cache-serialization.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
     <Member MemberName="GetAuthorizationRequestUrl">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder GetAuthorizationRequestUrl (System.Collections.Generic.IEnumerable&lt;string&gt; scopes);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder GetAuthorizationRequestUrl(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" />
@@ -372,12 +499,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -407,16 +540,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -447,16 +591,27 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes", true)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

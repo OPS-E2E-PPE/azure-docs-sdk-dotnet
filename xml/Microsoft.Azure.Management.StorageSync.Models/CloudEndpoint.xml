@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type CloudEndpoint = class&#xA;    inherit ProxyResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.StorageSync.Models.ProxyResource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +46,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public CloudEndpoint (string id = default, string name = default, string type = default, string storageAccountResourceId = default, string azureFileShareName = default, string storageAccountTenantId = default, string partnershipId = default, string friendlyName = default, string backupEnabled = default, string provisioningState = default, string lastWorkflowId = default, string lastOperationName = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string storageAccountResourceId, string azureFileShareName, string storageAccountTenantId, string partnershipId, string friendlyName, string backupEnabled, string provisioningState, string lastWorkflowId, string lastOperationName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional storageAccountResourceId As String = null, Optional azureFileShareName As String = null, Optional storageAccountTenantId As String = null, Optional partnershipId As String = null, Optional friendlyName As String = null, Optional backupEnabled As String = null, Optional provisioningState As String = null, Optional lastWorkflowId As String = null, Optional lastOperationName As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint : string * string * string * string * string * string * string * string * string * string * string * string -&gt; Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint" Usage="new Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint (id, name, type, storageAccountResourceId, azureFileShareName, storageAccountTenantId, partnershipId, friendlyName, backupEnabled, provisioningState, lastWorkflowId, lastOperationName)" />
+      <MemberSignature Language="C#" Value="public CloudEndpoint (string id = default, string name = default, string type = default, string storageAccountResourceId = default, string azureFileShareName = default, string storageAccountTenantId = default, string partnershipId = default, string friendlyName = default, string backupEnabled = default, string provisioningState = default, string lastWorkflowId = default, string lastOperationName = default, Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus changeEnumerationStatus = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string storageAccountResourceId, string azureFileShareName, string storageAccountTenantId, string partnershipId, string friendlyName, string backupEnabled, string provisioningState, string lastWorkflowId, string lastOperationName, class Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus changeEnumerationStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional storageAccountResourceId As String = Nothing, Optional azureFileShareName As String = Nothing, Optional storageAccountTenantId As String = Nothing, Optional partnershipId As String = Nothing, Optional friendlyName As String = Nothing, Optional backupEnabled As String = Nothing, Optional provisioningState As String = Nothing, Optional lastWorkflowId As String = Nothing, Optional lastOperationName As String = Nothing, Optional changeEnumerationStatus As CloudEndpointChangeEnumerationStatus = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint : string * string * string * string * string * string * string * string * string * string * string * string * Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus -&gt; Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint" Usage="new Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint (id, name, type, storageAccountResourceId, azureFileShareName, storageAccountTenantId, partnershipId, friendlyName, backupEnabled, provisioningState, lastWorkflowId, lastOperationName, changeEnumerationStatus)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -66,14 +69,15 @@
         <Parameter Name="provisioningState" Type="System.String" />
         <Parameter Name="lastWorkflowId" Type="System.String" />
         <Parameter Name="lastOperationName" Type="System.String" />
+        <Parameter Name="changeEnumerationStatus" Type="Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus" />
       </Parameters>
       <Docs>
-        <param name="id">Fully qualified resource Id for the resource. Ex -
+        <param name="id">Fully qualified resource ID for the resource. Ex -
             /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
         <param name="name">The name of the resource</param>
-        <param name="type">The type of the resource. Ex-
-            Microsoft.Compute/virtualMachines or
-            Microsoft.Storage/storageAccounts.</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
         <param name="storageAccountResourceId">Storage Account Resource
             Id</param>
         <param name="azureFileShareName">Azure file share name</param>
@@ -87,6 +91,8 @@
         <param name="lastWorkflowId">CloudEndpoint lastWorkflowId</param>
         <param name="lastOperationName">Resource Last Operation
             Name</param>
+        <param name="changeEnumerationStatus">Cloud endpoint change
+            enumeration status</param>
         <summary>
             Initializes a new instance of the CloudEndpoint class.
             </summary>
@@ -102,11 +108,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFileShareName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFileShareName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFileShareName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -129,11 +137,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.backupEnabled")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.backupEnabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.backupEnabled")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -142,6 +152,34 @@
       <Docs>
         <summary>
             Gets backup Enabled
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeEnumerationStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus ChangeEnumerationStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus ChangeEnumerationStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint.ChangeEnumerationStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangeEnumerationStatus As CloudEndpointChangeEnumerationStatus" />
+      <MemberSignature Language="F#" Value="member this.ChangeEnumerationStatus : Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus" Usage="Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint.ChangeEnumerationStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.changeEnumerationStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.changeEnumerationStatus")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.StorageSync.Models.CloudEndpointChangeEnumerationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets cloud endpoint change enumeration status
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -156,11 +194,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.friendlyName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.friendlyName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.friendlyName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -183,11 +223,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.lastOperationName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.lastOperationName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.lastOperationName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -210,11 +252,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.lastWorkflowId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.lastWorkflowId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.lastWorkflowId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -237,11 +281,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.partnershipId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.partnershipId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.partnershipId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -264,11 +310,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -291,11 +339,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountResourceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountResourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountResourceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -318,11 +368,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.1.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountTenantId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountTenantId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.storageAccountTenantId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -334,6 +386,31 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.StorageSync.Models.CloudEndpoint.Validate" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Validate ()" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit&#xA;override this.Validate : unit -&gt; unit" Usage="cloudEndpoint.Validate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.StorageSync</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Validate the object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
       </Docs>
     </Member>
   </Members>

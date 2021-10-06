@@ -7,7 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,7 +31,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -64,19 +66,15 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, scriptName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, scriptName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.DeleteAsync (operations, resourceGroupName, clusterName, scriptName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
@@ -110,6 +108,90 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetExecutionAsyncOperationStatus">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult GetExecutionAsyncOperationStatus (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string operationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult GetExecutionAsyncOperationStatus(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string operationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionAsyncOperationStatus(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetExecutionAsyncOperationStatus (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, operationId As String) As AsyncOperationResult" />
+      <MemberSignature Language="F#" Value="static member GetExecutionAsyncOperationStatus : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * string -&gt; Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionAsyncOperationStatus (operations, resourceGroupName, clusterName, operationId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.HDInsight.IScriptActionsOperations" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="clusterName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="operationId" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="clusterName">
+            The name of the cluster.
+            </param>
+        <param name="operationId">
+            The long running operation id.
+            </param>
+        <summary>
+            Gets the async operation status of execution operation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExecutionAsyncOperationStatusAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult&gt; GetExecutionAsyncOperationStatusAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string operationId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult&gt; GetExecutionAsyncOperationStatusAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string operationId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionAsyncOperationStatusAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetExecutionAsyncOperationStatusAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, operationId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AsyncOperationResult)" />
+      <MemberSignature Language="F#" Value="static member GetExecutionAsyncOperationStatusAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionAsyncOperationStatusAsync (operations, resourceGroupName, clusterName, operationId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.AsyncOperationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.HDInsight.IScriptActionsOperations" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="clusterName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="operationId" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="clusterName">
+            The name of the cluster.
+            </param>
+        <param name="operationId">
+            The long running operation id.
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            Gets the async operation status of execution operation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetExecutionDetail">
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail GetExecutionDetail (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptExecutionId);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail GetExecutionDetail(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptExecutionId) cil managed" />
@@ -120,7 +202,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail</ReturnType>
@@ -155,19 +238,15 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt; GetExecutionDetailAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptExecutionId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt; GetExecutionDetailAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, string scriptExecutionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionDetailAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetExecutionDetailAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, scriptExecutionId As String, Optional cancellationToken As CancellationToken = null) As Task(Of RuntimeScriptActionDetail)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetExecutionDetailAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, scriptExecutionId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RuntimeScriptActionDetail)" />
       <MemberSignature Language="F#" Value="static member GetExecutionDetailAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.GetExecutionDetailAsync (operations, resourceGroupName, clusterName, scriptExecutionId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;</ReturnType>
       </ReturnValue>
@@ -210,7 +289,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;</ReturnType>
@@ -241,18 +321,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListByClusterAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListByClusterAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListByClusterAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByClusterAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByClusterAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
       <MemberSignature Language="F#" Value="static member ListByClusterAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListByClusterAsync (operations, resourceGroupName, clusterName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -291,7 +367,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;</ReturnType>
@@ -318,18 +395,14 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListByClusterNextAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListByClusterNextAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListByClusterNextAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByClusterNextAsync (operations As IScriptActionsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByClusterNextAsync (operations As IScriptActionsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
       <MemberSignature Language="F#" Value="static member ListByClusterNextAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListByClusterNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -395,7 +468,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListPersistedScriptsAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListPersistedScriptsAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string resourceGroupName, string clusterName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListPersistedScriptsAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListPersistedScriptsAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListPersistedScriptsAsync (operations As IScriptActionsOperations, resourceGroupName As String, clusterName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
       <MemberSignature Language="F#" Value="static member ListPersistedScriptsAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListPersistedScriptsAsync (operations, resourceGroupName, clusterName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -467,7 +540,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListPersistedScriptsNextAsync (this Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt; ListPersistedScriptsNextAsync(class Microsoft.Azure.Management.HDInsight.IScriptActionsOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListPersistedScriptsNextAsync(Microsoft.Azure.Management.HDInsight.IScriptActionsOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListPersistedScriptsNextAsync (operations As IScriptActionsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListPersistedScriptsNextAsync (operations As IScriptActionsOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of RuntimeScriptActionDetail))" />
       <MemberSignature Language="F#" Value="static member ListPersistedScriptsNextAsync : Microsoft.Azure.Management.HDInsight.IScriptActionsOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.HDInsight.Models.RuntimeScriptActionDetail&gt;&gt;" Usage="Microsoft.Azure.Management.HDInsight.ScriptActionsOperationsExtensions.ListPersistedScriptsNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>

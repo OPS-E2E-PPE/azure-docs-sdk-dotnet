@@ -6,10 +6,8 @@
   <TypeSignature Language="F#" Value="type TopLevelModifiableResources&lt;'IFluentResourceT, #'IFluentResourceT, 'InnerResourceT, 'InnerCollectionT, 'ManagerT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt; and 'ManagerT :&gt; IManagerBase)&gt; = class&#xA;    inherit GroupableResources&lt;'IFluentResourceT, #'IFluentResourceT, 'InnerResourceT, 'InnerCollectionT, 'ManagerT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt; and 'ManagerT :&gt; IManagerBase)&gt;&#xA;    interface ISupportsGettingById&lt;'IFluentResourceT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt;)&gt;&#xA;    interface ISupportsGettingByResourceGroup&lt;'IFluentResourceT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt;)&gt;&#xA;    interface ISupportsDeletingByResourceGroup&#xA;    interface IHasManager&lt;'ManagerT (requires 'ManagerT :&gt; IManagerBase)&gt;&#xA;    interface ISupportsListing&lt;'IFluentResourceT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt;)&gt;&#xA;    interface ISupportsListingByResourceGroup&lt;'IFluentResourceT (requires 'IFluentResourceT : null and 'IFluentResourceT :&gt; IGroupableResource&lt;'ManagerT, 'InnerResourceT&gt;)&gt;&#xA;    interface IHasInner&lt;'InnerCollectionT&gt;&#xA;    interface ISupportsBatchDeletion&#xA;    interface IBeta" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-    <AssemblyVersion>1.0.0.61</AssemblyVersion>
-    <AssemblyVersion>1.0.0.62</AssemblyVersion>
-    <AssemblyVersion>1.0.0.63</AssemblyVersion>
-    <AssemblyVersion>1.0.0.64</AssemblyVersion>
+    <AssemblyVersion>1.0.0.69</AssemblyVersion>
+    <AssemblyVersion>1.0.0.70</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="IFluentResourceT">
@@ -89,10 +87,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="innerCollection" Type="InnerCollectionT" />
@@ -114,10 +110,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;InnerResourceT&gt;</ReturnType>
@@ -144,10 +138,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -173,10 +165,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -185,7 +175,8 @@
         <Parameter Name="ids" Type="System.String[]">
           <Attributes>
             <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -200,7 +191,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt; DeleteByIdsAsync (System.Collections.Generic.IList&lt;string&gt; ids, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;string&gt;&gt; DeleteByIdsAsync(class System.Collections.Generic.IList`1&lt;string&gt; ids, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ResourceManager.Fluent.Core.TopLevelModifiableResources`5.DeleteByIdsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function DeleteByIdsAsync (ids As IList(Of String), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of String))" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteByIdsAsync (ids As IList(Of String), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of String))" />
       <MemberSignature Language="F#" Value="abstract member DeleteByIdsAsync : System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;string&gt;&gt;&#xA;override this.DeleteByIdsAsync : System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;string&gt;&gt;" Usage="topLevelModifiableResources.DeleteByIdsAsync (ids, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -208,14 +199,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -237,7 +227,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt; DeleteByIdsAsync (string[] ids, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;string&gt;&gt; DeleteByIdsAsync(string[] ids, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ResourceManager.Fluent.Core.TopLevelModifiableResources`5.DeleteByIdsAsync(System.String[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function DeleteByIdsAsync (ids As String(), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of String))" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteByIdsAsync (ids As String(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of String))" />
       <MemberSignature Language="F#" Value="abstract member DeleteByIdsAsync : string[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;string&gt;&gt;&#xA;override this.DeleteByIdsAsync : string[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;string&gt;&gt;" Usage="topLevelModifiableResources.DeleteByIdsAsync (ids, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -245,10 +235,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;System.String&gt;&gt;</ReturnType>
@@ -277,10 +265,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;IFluentResourceT&gt;</ReturnType>
@@ -296,7 +282,7 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;IFluentResourceT&gt;&gt; ListAsync (bool loadAllPages = true, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection`1&lt;!IFluentResourceT&gt;&gt; ListAsync(bool loadAllPages, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ResourceManager.Fluent.Core.TopLevelModifiableResources`5.ListAsync(System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ListAsync (Optional loadAllPages As Boolean = true, Optional cancellationToken As CancellationToken = null) As Task(Of IPagedCollection(Of IFluentResourceT))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ListAsync (Optional loadAllPages As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPagedCollection(Of IFluentResourceT))" />
       <MemberSignature Language="F#" Value="abstract member ListAsync : bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;'IFluentResourceT&gt;&gt;&#xA;override this.ListAsync : bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;'IFluentResourceT&gt;&gt;" Usage="topLevelModifiableResources.ListAsync (loadAllPages, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -304,14 +290,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -341,10 +326,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;IFluentResourceT&gt;</ReturnType>
@@ -363,7 +346,7 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;IFluentResourceT&gt;&gt; ListByResourceGroupAsync (string resourceGroupName, bool loadAllPages = true, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection`1&lt;!IFluentResourceT&gt;&gt; ListByResourceGroupAsync(string resourceGroupName, bool loadAllPages, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ResourceManager.Fluent.Core.TopLevelModifiableResources`5.ListByResourceGroupAsync(System.String,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ListByResourceGroupAsync (resourceGroupName As String, Optional loadAllPages As Boolean = true, Optional cancellationToken As CancellationToken = null) As Task(Of IPagedCollection(Of IFluentResourceT))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ListByResourceGroupAsync (resourceGroupName As String, Optional loadAllPages As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPagedCollection(Of IFluentResourceT))" />
       <MemberSignature Language="F#" Value="abstract member ListByResourceGroupAsync : string * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;'IFluentResourceT&gt;&gt;&#xA;override this.ListByResourceGroupAsync : string * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.ResourceManager.Fluent.Core.IPagedCollection&lt;'IFluentResourceT&gt;&gt;" Usage="topLevelModifiableResources.ListByResourceGroupAsync (resourceGroupName, loadAllPages, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -371,14 +354,13 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -407,10 +389,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;InnerResourceT&gt;&gt;</ReturnType>
@@ -434,10 +414,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;InnerResourceT&gt;&gt;</ReturnType>
@@ -463,10 +441,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;InnerResourceT&gt;&gt;</ReturnType>
@@ -492,10 +468,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceManager.Fluent</AssemblyName>
-        <AssemblyVersion>1.0.0.61</AssemblyVersion>
-        <AssemblyVersion>1.0.0.62</AssemblyVersion>
-        <AssemblyVersion>1.0.0.63</AssemblyVersion>
-        <AssemblyVersion>1.0.0.64</AssemblyVersion>
+        <AssemblyVersion>1.0.0.69</AssemblyVersion>
+        <AssemblyVersion>1.0.0.70</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;InnerResourceT&gt;&gt;</ReturnType>

@@ -6,12 +6,18 @@
   <TypeSignature Language="F#" Value="type AbstractConfidentialClientAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; = class&#xA;    inherit AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-    <AssemblyVersion>4.7.0.0</AssemblyVersion>
-    <AssemblyVersion>4.7.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.0.0</AssemblyVersion>
-    <AssemblyVersion>4.8.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.2.0</AssemblyVersion>
-    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.1.0</AssemblyVersion>
+    <AssemblyVersion>4.31.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.1.0</AssemblyVersion>
+    <AssemblyVersion>4.33.0.0</AssemblyVersion>
+    <AssemblyVersion>4.34.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.0.0</AssemblyVersion>
+    <AssemblyVersion>4.36.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.2.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -44,12 +50,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -63,6 +75,60 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WithProofOfPossession">
+      <MemberSignature Language="C#" Value="public T WithProofOfPossession (Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration popAuthenticationConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithProofOfPossession(class Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration popAuthenticationConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithProofOfPossession (popAuthenticationConfiguration As PoPAuthenticationConfiguration) As T" />
+      <MemberSignature Language="F#" Value="member this.WithProofOfPossession : Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration -&gt; 'T" Usage="abstractConfidentialClientAcquireTokenParameterBuilder.WithProofOfPossession popAuthenticationConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="popAuthenticationConfiguration" Type="Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="popAuthenticationConfiguration">Configuration properties used to construct a proof of possession request.</param>
+        <summary>
+             Modifies the token acquisition request so that the acquired token is a Proof of Possession token (PoP), rather than a Bearer token. 
+             PoP tokens are similar to Bearer tokens, but are bound to the HTTP request and to a cryptographic key, which MSAL can manage on Windows.
+             See https://aka.ms/msal-net-pop
+            </summary>
+        <returns>The builder.</returns>
+        <remarks>
+          <list type="bullet">
+            <item>
+              <description>An Authentication header is automatically added to the request</description>
+            </item>
+            <item>
+              <description>The PoP token is bound to the HTTP request, more specifically to the HTTP method (GET, POST, etc.) and to the Uri (path and query, but not query parameters).</description>
+            </item>
+            <item>
+              <description>MSAL creates, reads and stores a key in memory that will be cycled every 8 hours.</description>
+            </item>
+            <item>
+              <description>This is an experimental API. The method signature may change in the future without involving a major version upgrade.</description>
+            </item>
+          </list>
+        </remarks>
       </Docs>
     </Member>
   </Members>

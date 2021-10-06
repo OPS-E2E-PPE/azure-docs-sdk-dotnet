@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type MetricsPostBodySchemaParameters = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-    <AssemblyVersion>0.9.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -42,12 +42,12 @@
       <MemberSignature Language="C#" Value="public MetricsPostBodySchemaParameters (string metricId, string timespan = default, System.Collections.Generic.IList&lt;string&gt; aggregation = default, TimeSpan? interval = default, System.Collections.Generic.IList&lt;string&gt; segment = default, int? top = default, string orderby = default, string filter = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string metricId, string timespan, class System.Collections.Generic.IList`1&lt;string&gt; aggregation, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; interval, class System.Collections.Generic.IList`1&lt;string&gt; segment, valuetype System.Nullable`1&lt;int32&gt; top, string orderby, string filter) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.ApplicationInsights.Query.Models.MetricsPostBodySchemaParameters.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Nullable{System.TimeSpan},System.Collections.Generic.IList{System.String},System.Nullable{System.Int32},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (metricId As String, Optional timespan As String = null, Optional aggregation As IList(Of String) = null, Optional interval As Nullable(Of TimeSpan) = null, Optional segment As IList(Of String) = null, Optional top As Nullable(Of Integer) = null, Optional orderby As String = null, Optional filter As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (metricId As String, Optional timespan As String = Nothing, Optional aggregation As IList(Of String) = Nothing, Optional interval As Nullable(Of TimeSpan) = Nothing, Optional segment As IList(Of String) = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional orderby As String = Nothing, Optional filter As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.ApplicationInsights.Query.Models.MetricsPostBodySchemaParameters : string * string * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;TimeSpan&gt; * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;int&gt; * string * string -&gt; Microsoft.Azure.ApplicationInsights.Query.Models.MetricsPostBodySchemaParameters" Usage="new Microsoft.Azure.ApplicationInsights.Query.Models.MetricsPostBodySchemaParameters (metricId, timespan, aggregation, interval, segment, top, orderby, filter)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metricId" Type="System.String" />
@@ -60,13 +60,6 @@
         <Parameter Name="filter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="timespan">To be added.</param>
-        <param name="aggregation">To be added.</param>
-        <param name="interval">To be added.</param>
-        <param name="segment">To be added.</param>
-        <param name="top">To be added.</param>
-        <param name="orderby">To be added.</param>
-        <param name="filter">To be added.</param>
         <param name="metricId">Possible values include: 'requests/count',
             'requests/duration', 'requests/failed', 'users/count',
             'users/authenticated', 'pageViews/count', 'pageViews/duration',
@@ -87,6 +80,13 @@
             'availabilityResults/availabilityPercentage',
             'availabilityResults/duration', 'billing/telemetryCount',
             'customEvents/count'</param>
+        <param name="timespan">To be added.</param>
+        <param name="aggregation">To be added.</param>
+        <param name="interval">To be added.</param>
+        <param name="segment">To be added.</param>
+        <param name="top">To be added.</param>
+        <param name="orderby">To be added.</param>
+        <param name="filter">To be added.</param>
         <summary>
             Initializes a new instance of the MetricsPostBodySchemaParameters
             class.
@@ -103,11 +103,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="aggregation")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="aggregation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="aggregation")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -128,11 +129,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="filter")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="filter")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="filter")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -153,11 +155,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="interval")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="interval")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="interval")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -178,11 +181,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="metricId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="metricId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="metricId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -224,11 +228,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="orderby")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="orderby")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="orderby")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -249,11 +254,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="segment")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="segment")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="segment")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -274,11 +280,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="timespan")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="timespan")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="timespan")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -299,11 +306,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="top")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="top")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="top")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -324,7 +332,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.ApplicationInsights.Query</AssemblyName>
-        <AssemblyVersion>0.9.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type Reseller = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Details about a reseller.
+            Details of the reseller.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,20 +41,20 @@
       <MemberSignature Language="C#" Value="public Reseller (string resellerId = default, string description = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resellerId, string description) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.Reseller.#ctor(System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resellerId As String = null, Optional description As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resellerId As String = Nothing, Optional description As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.Reseller : string * string -&gt; Microsoft.Azure.Management.Billing.Models.Reseller" Usage="new Microsoft.Azure.Management.Billing.Models.Reseller (resellerId, description)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="resellerId" Type="System.String" />
         <Parameter Name="description" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="resellerId">The reseller id.</param>
-        <param name="description">A description of the reseller.</param>
+        <param name="resellerId">The MPN ID of the reseller.</param>
+        <param name="description">The name of the reseller.</param>
         <summary>
             Initializes a new instance of the Reseller class.
             </summary>
@@ -70,11 +70,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="description")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="description")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="description")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -82,7 +83,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets a description of the reseller.
+            Gets the name of the reseller.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -97,11 +98,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="resellerId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="resellerId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="resellerId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -109,7 +111,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the reseller id.
+            Gets the MPN ID of the reseller.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

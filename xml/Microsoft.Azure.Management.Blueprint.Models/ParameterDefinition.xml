@@ -7,7 +7,6 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
     <AssemblyVersion>0.10.0.0</AssemblyVersion>
-    <AssemblyVersion>0.14.0.0</AssemblyVersion>
     <AssemblyVersion>0.20.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -16,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -35,7 +35,6 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -50,13 +49,12 @@
       <MemberSignature Language="C#" Value="public ParameterDefinition (string type, string displayName = default, string description = default, string strongType = default, object defaultValue = default, System.Collections.Generic.IList&lt;object&gt; allowedValues = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string displayName, string description, string strongType, object defaultValue, class System.Collections.Generic.IList`1&lt;object&gt; allowedValues) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Blueprint.Models.ParameterDefinition.#ctor(System.String,System.String,System.String,System.String,System.Object,System.Collections.Generic.IList{System.Object})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, Optional displayName As String = null, Optional description As String = null, Optional strongType As String = null, Optional defaultValue As Object = null, Optional allowedValues As IList(Of Object) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, Optional displayName As String = Nothing, Optional description As String = Nothing, Optional strongType As String = Nothing, Optional defaultValue As Object = Nothing, Optional allowedValues As IList(Of Object) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Blueprint.Models.ParameterDefinition : string * string * string * string * obj * System.Collections.Generic.IList&lt;obj&gt; -&gt; Microsoft.Azure.Management.Blueprint.Models.ParameterDefinition" Usage="new Microsoft.Azure.Management.Blueprint.Models.ParameterDefinition (type, displayName, description, strongType, defaultValue, allowedValues)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -76,7 +74,8 @@
         <param name="description">Description of this
             parameter/resourceGroup.</param>
         <param name="strongType">StrongType for UI to render rich
-            experience during blueprint assignment.</param>
+            experience during blueprint assignment. Supported strong types are
+            resourceType, principalId and location.</param>
         <param name="defaultValue">Default Value for this
             parameter.</param>
         <param name="allowedValues">Array of allowed values for this
@@ -97,12 +96,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="allowedValues")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="allowedValues")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="allowedValues")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -126,12 +125,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="defaultValue")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="defaultValue")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="defaultValue")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -155,12 +154,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="metadata.description")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="metadata.description")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="metadata.description")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -184,12 +183,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="metadata.displayName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="metadata.displayName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="metadata.displayName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -213,12 +212,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="metadata.strongType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="metadata.strongType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="metadata.strongType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -227,7 +226,8 @@
       <Docs>
         <summary>
             Gets or sets strongType for UI to render rich experience during
-            blueprint assignment.
+            blueprint assignment. Supported strong types are resourceType,
+            principalId and location.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -243,12 +243,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="type")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="type")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -274,7 +274,6 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Blueprint</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>0.14.0.0</AssemblyVersion>
         <AssemblyVersion>0.20.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

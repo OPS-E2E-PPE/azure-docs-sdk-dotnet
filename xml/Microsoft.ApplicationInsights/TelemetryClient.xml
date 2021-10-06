@@ -6,11 +6,8 @@
   <TypeSignature Language="F#" Value="type TelemetryClient = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-    <AssemblyVersion>2.11.0.0</AssemblyVersion>
-    <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-    <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-    <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-    <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+    <AssemblyVersion>2.17.0.146</AssemblyVersion>
+    <AssemblyVersion>2.18.0.315</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,12 +28,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("We do not recommend using TelemetryConfiguration.Active on .NET Core. See https://github.com/microsoft/ApplicationInsights-dotnet/issues/1152 for more details")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("We do not recommend using TelemetryConfiguration.Active on .NET Core. See https://github.com/microsoft/ApplicationInsights-dotnet/issues/1152 for more details")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>
@@ -54,11 +54,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="configuration" Type="Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration" />
@@ -82,11 +79,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.DataContracts.TelemetryContext</ReturnType>
@@ -108,11 +102,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -127,6 +118,36 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.TelemetryClient.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FlushAsync (cancellationToken As CancellationToken) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.FlushAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="telemetryClient.FlushAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Asynchronously Flushes the in-memory buffer and any metrics being pre-aggregated.
+            </summary>
+        <returns>
+            Returns true when telemetry data is transferred out of process (application insights server or local storage) and are emitted before the flush invocation.
+            Returns false when transfer of telemetry data to server has failed with non-retriable http status.
+            FlushAsync on InMemoryChannel always returns true, as the channel offers minimal reliability guarantees and doesn't retry sending telemetry after a failure.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetMetric">
       <MemberSignature Language="C#" Value="public Microsoft.ApplicationInsights.Metric GetMetric (Microsoft.ApplicationInsights.Metrics.MetricIdentifier metricIdentifier);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.ApplicationInsights.Metric GetMetric(class Microsoft.ApplicationInsights.Metrics.MetricIdentifier metricIdentifier) cil managed" />
@@ -136,11 +157,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -175,11 +193,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -218,11 +233,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -262,11 +274,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -308,11 +317,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -351,11 +357,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -394,11 +397,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -439,11 +439,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -487,11 +484,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -532,11 +526,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -579,11 +570,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -629,11 +617,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -676,11 +661,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -725,11 +707,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -777,11 +756,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -826,11 +802,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -877,11 +850,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -931,11 +901,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.ApplicationInsights.Metric</ReturnType>
@@ -984,15 +951,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1018,15 +983,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1052,11 +1015,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1078,11 +1038,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1096,6 +1053,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TelemetryConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration TelemetryConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration TelemetryConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ApplicationInsights.TelemetryClient.TelemetryConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TelemetryConfiguration As TelemetryConfiguration" />
+      <MemberSignature Language="F#" Value="member this.TelemetryConfiguration : Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration" Usage="Microsoft.ApplicationInsights.TelemetryClient.TelemetryConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="P:Microsoft.ApplicationInsights.TelemetryClient.TelemetryConfiguration" /> object associated with this telemetry client instance.
+            Changes made to the configuration can affect other clients.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Track">
       <MemberSignature Language="C#" Value="public void Track (Microsoft.ApplicationInsights.Channel.ITelemetry telemetry);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Track(class Microsoft.ApplicationInsights.Channel.ITelemetry telemetry) cil managed" />
@@ -1105,15 +1092,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1139,11 +1124,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1166,16 +1148,13 @@
       <MemberSignature Language="C#" Value="public void TrackAvailability (string name, DateTimeOffset timeStamp, TimeSpan duration, string runLocation, bool success, string message = default, System.Collections.Generic.IDictionary&lt;string,string&gt; properties = default, System.Collections.Generic.IDictionary&lt;string,double&gt; metrics = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrackAvailability(string name, valuetype System.DateTimeOffset timeStamp, valuetype System.TimeSpan duration, string runLocation, bool success, string message, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; properties, class System.Collections.Generic.IDictionary`2&lt;string, float64&gt; metrics) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.TelemetryClient.TrackAvailability(System.String,System.DateTimeOffset,System.TimeSpan,System.String,System.Boolean,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.Double})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub TrackAvailability (name As String, timeStamp As DateTimeOffset, duration As TimeSpan, runLocation As String, success As Boolean, Optional message As String = null, Optional properties As IDictionary(Of String, String) = null, Optional metrics As IDictionary(Of String, Double) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrackAvailability (name As String, timeStamp As DateTimeOffset, duration As TimeSpan, runLocation As String, success As Boolean, Optional message As String = Nothing, Optional properties As IDictionary(Of String, String) = Nothing, Optional metrics As IDictionary(Of String, Double) = Nothing)" />
       <MemberSignature Language="F#" Value="member this.TrackAvailability : string * DateTimeOffset * TimeSpan * string * bool * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.IDictionary&lt;string, double&gt; -&gt; unit" Usage="telemetryClient.TrackAvailability (name, timeStamp, duration, runLocation, success, message, properties, metrics)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1216,11 +1195,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1248,15 +1224,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Please use a different overload of TrackDependency")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("Please use a different overload of TrackDependency")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Please use a different overload of TrackDependency")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1292,11 +1266,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1333,11 +1304,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1378,11 +1346,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1405,16 +1370,13 @@
       <MemberSignature Language="C#" Value="public void TrackEvent (string eventName, System.Collections.Generic.IDictionary&lt;string,string&gt; properties = default, System.Collections.Generic.IDictionary&lt;string,double&gt; metrics = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrackEvent(string eventName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; properties, class System.Collections.Generic.IDictionary`2&lt;string, float64&gt; metrics) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.TelemetryClient.TrackEvent(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.Double})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub TrackEvent (eventName As String, Optional properties As IDictionary(Of String, String) = null, Optional metrics As IDictionary(Of String, Double) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrackEvent (eventName As String, Optional properties As IDictionary(Of String, String) = Nothing, Optional metrics As IDictionary(Of String, Double) = Nothing)" />
       <MemberSignature Language="F#" Value="member this.TrackEvent : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.IDictionary&lt;string, double&gt; -&gt; unit" Usage="telemetryClient.TrackEvent (eventName, properties, metrics)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1445,11 +1407,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1472,16 +1431,13 @@
       <MemberSignature Language="C#" Value="public void TrackException (Exception exception, System.Collections.Generic.IDictionary&lt;string,string&gt; properties = default, System.Collections.Generic.IDictionary&lt;string,double&gt; metrics = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrackException(class System.Exception exception, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; properties, class System.Collections.Generic.IDictionary`2&lt;string, float64&gt; metrics) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.TelemetryClient.TrackException(System.Exception,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.Double})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub TrackException (exception As Exception, Optional properties As IDictionary(Of String, String) = null, Optional metrics As IDictionary(Of String, Double) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrackException (exception As Exception, Optional properties As IDictionary(Of String, String) = Nothing, Optional metrics As IDictionary(Of String, Double) = Nothing)" />
       <MemberSignature Language="F#" Value="member this.TrackException : Exception * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.IDictionary&lt;string, double&gt; -&gt; unit" Usage="telemetryClient.TrackException (exception, properties, metrics)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1512,11 +1468,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1541,16 +1494,13 @@
       <MemberSignature Language="C#" Value="public void TrackMetric (string name, double value, System.Collections.Generic.IDictionary&lt;string,string&gt; properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrackMetric(string name, float64 value, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; properties) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.ApplicationInsights.TelemetryClient.TrackMetric(System.String,System.Double,System.Collections.Generic.IDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub TrackMetric (name As String, value As Double, Optional properties As IDictionary(Of String, String) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrackMetric (name As String, value As Double, Optional properties As IDictionary(Of String, String) = Nothing)" />
       <MemberSignature Language="F#" Value="member this.TrackMetric : string * double * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="telemetryClient.TrackMetric (name, value, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1584,11 +1534,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1616,11 +1563,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1647,11 +1591,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1679,11 +1620,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1718,11 +1656,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1750,11 +1685,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1781,11 +1713,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1814,11 +1743,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1847,11 +1773,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ApplicationInsights</AssemblyName>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.12.0.21496</AssemblyVersion>
-        <AssemblyVersion>2.12.1.36699</AssemblyVersion>
-        <AssemblyVersion>2.13.0.10578</AssemblyVersion>
-        <AssemblyVersion>2.13.1.12554</AssemblyVersion>
+        <AssemblyVersion>2.17.0.146</AssemblyVersion>
+        <AssemblyVersion>2.18.0.315</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type BatchAccountCreateParameters = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-    <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>13.0.0.0</AssemblyVersion>
+    <AssemblyVersion>14.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,15 +47,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BatchAccountCreateParameters (string location, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties autoStorage = default, Microsoft.Azure.Management.Batch.Models.PoolAllocationMode? poolAllocationMode = default, Microsoft.Azure.Management.Batch.Models.KeyVaultReference keyVaultReference = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties autoStorage, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.PoolAllocationMode&gt; poolAllocationMode, class Microsoft.Azure.Management.Batch.Models.KeyVaultReference keyVaultReference) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties,System.Nullable{Microsoft.Azure.Management.Batch.Models.PoolAllocationMode},Microsoft.Azure.Management.Batch.Models.KeyVaultReference)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional tags As IDictionary(Of String, String) = null, Optional autoStorage As AutoStorageBaseProperties = null, Optional poolAllocationMode As Nullable(Of PoolAllocationMode) = null, Optional keyVaultReference As KeyVaultReference = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties * Nullable&lt;Microsoft.Azure.Management.Batch.Models.PoolAllocationMode&gt; * Microsoft.Azure.Management.Batch.Models.KeyVaultReference -&gt; Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters" Usage="new Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters (location, tags, autoStorage, poolAllocationMode, keyVaultReference)" />
+      <MemberSignature Language="C#" Value="public BatchAccountCreateParameters (string location, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties autoStorage = default, Microsoft.Azure.Management.Batch.Models.PoolAllocationMode? poolAllocationMode = default, Microsoft.Azure.Management.Batch.Models.KeyVaultReference keyVaultReference = default, Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType? publicNetworkAccess = default, Microsoft.Azure.Management.Batch.Models.EncryptionProperties encryption = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode?&gt; allowedAuthenticationModes = default, Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity identity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties autoStorage, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.PoolAllocationMode&gt; poolAllocationMode, class Microsoft.Azure.Management.Batch.Models.KeyVaultReference keyVaultReference, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt; publicNetworkAccess, class Microsoft.Azure.Management.Batch.Models.EncryptionProperties encryption, class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt; allowedAuthenticationModes, class Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties,System.Nullable{Microsoft.Azure.Management.Batch.Models.PoolAllocationMode},Microsoft.Azure.Management.Batch.Models.KeyVaultReference,System.Nullable{Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType},Microsoft.Azure.Management.Batch.Models.EncryptionProperties,System.Collections.Generic.IList{System.Nullable{Microsoft.Azure.Management.Batch.Models.AuthenticationMode}},Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional tags As IDictionary(Of String, String) = Nothing, Optional autoStorage As AutoStorageBaseProperties = Nothing, Optional poolAllocationMode As Nullable(Of PoolAllocationMode) = Nothing, Optional keyVaultReference As KeyVaultReference = Nothing, Optional publicNetworkAccess As Nullable(Of PublicNetworkAccessType) = Nothing, Optional encryption As EncryptionProperties = Nothing, Optional allowedAuthenticationModes As IList(Of Nullable(Of AuthenticationMode)) = Nothing, Optional identity As BatchAccountIdentity = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties * Nullable&lt;Microsoft.Azure.Management.Batch.Models.PoolAllocationMode&gt; * Microsoft.Azure.Management.Batch.Models.KeyVaultReference * Nullable&lt;Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt; * Microsoft.Azure.Management.Batch.Models.EncryptionProperties * System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt; * Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity -&gt; Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters" Usage="new Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters (location, tags, autoStorage, poolAllocationMode, keyVaultReference, publicNetworkAccess, encryption, allowedAuthenticationModes, identity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="location" Type="System.String" />
@@ -60,6 +63,10 @@
         <Parameter Name="autoStorage" Type="Microsoft.Azure.Management.Batch.Models.AutoStorageBaseProperties" />
         <Parameter Name="poolAllocationMode" Type="System.Nullable&lt;Microsoft.Azure.Management.Batch.Models.PoolAllocationMode&gt;" />
         <Parameter Name="keyVaultReference" Type="Microsoft.Azure.Management.Batch.Models.KeyVaultReference" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt;" />
+        <Parameter Name="encryption" Type="Microsoft.Azure.Management.Batch.Models.EncryptionProperties" />
+        <Parameter Name="allowedAuthenticationModes" Type="System.Collections.Generic.IList&lt;System.Nullable&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt;" />
+        <Parameter Name="identity" Type="Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity" />
       </Parameters>
       <Docs>
         <param name="location">The region in which to create the
@@ -72,10 +79,49 @@
             creating pools in the Batch account.</param>
         <param name="keyVaultReference">A reference to the Azure key vault
             associated with the Batch account.</param>
+        <param name="publicNetworkAccess">The network access type for
+            accessing Azure Batch account.</param>
+        <param name="encryption">The encryption configuration for the Batch
+            account.</param>
+        <param name="allowedAuthenticationModes">List of allowed
+            authentication modes for the Batch account that can be used to
+            authenticate with the data plane. This does not affect
+            authentication with the control plane.</param>
+        <param name="identity">The identity of the Batch account.</param>
         <summary>
             Initializes a new instance of the BatchAccountCreateParameters
             class.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedAuthenticationModes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode?&gt; AllowedAuthenticationModes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt; AllowedAuthenticationModes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.AllowedAuthenticationModes" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowedAuthenticationModes As IList(Of Nullable(Of AuthenticationMode))" />
+      <MemberSignature Language="F#" Value="member this.AllowedAuthenticationModes : System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt; with get, set" Usage="Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.AllowedAuthenticationModes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.allowedAuthenticationModes")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.allowedAuthenticationModes")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Nullable&lt;Microsoft.Azure.Management.Batch.Models.AuthenticationMode&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets list of allowed authentication modes for the Batch
+            account that can be used to authenticate with the data plane. This
+            does not affect authentication with the control plane.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -88,11 +134,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.autoStorage")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.autoStorage")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.autoStorage")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -101,6 +149,68 @@
       <Docs>
         <summary>
             Gets or sets the properties related to the auto-storage account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Batch.Models.EncryptionProperties Encryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Batch.Models.EncryptionProperties Encryption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.Encryption" />
+      <MemberSignature Language="VB.NET" Value="Public Property Encryption As EncryptionProperties" />
+      <MemberSignature Language="F#" Value="member this.Encryption : Microsoft.Azure.Management.Batch.Models.EncryptionProperties with get, set" Usage="Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.Encryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.encryption")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.encryption")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Batch.Models.EncryptionProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the encryption configuration for the Batch account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Configures how customer data is encrypted inside the Batch account.
+            By default, accounts are encrypted using a Microsoft managed key.
+            For additional control, a customer-managed key can be used instead.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity Identity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.Identity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Identity As BatchAccountIdentity" />
+      <MemberSignature Language="F#" Value="member this.Identity : Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity with get, set" Usage="Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="identity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="identity")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Batch.Models.BatchAccountIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the identity of the Batch account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,11 +225,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.keyVaultReference")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.keyVaultReference")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.keyVaultReference")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -143,11 +255,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="location")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="location")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="location")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -170,11 +284,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.poolAllocationMode")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.poolAllocationMode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.poolAllocationMode")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -196,6 +312,39 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="PublicNetworkAccess">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType? PublicNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt; PublicNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.PublicNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property PublicNetworkAccess As Nullable(Of PublicNetworkAccessType)" />
+      <MemberSignature Language="F#" Value="member this.PublicNetworkAccess : Nullable&lt;Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt; with get, set" Usage="Microsoft.Azure.Management.Batch.Models.BatchAccountCreateParameters.PublicNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccess")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccess")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the network access type for accessing Azure Batch
+            account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If not specified, the default value is 'enabled'. Possible values
+            include: 'Enabled', 'Disabled'
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Tags">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Tags { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Tags" />
@@ -205,11 +354,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tags")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tags")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tags")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -232,7 +383,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Batch</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>13.0.0.0</AssemblyVersion>
+        <AssemblyVersion>14.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

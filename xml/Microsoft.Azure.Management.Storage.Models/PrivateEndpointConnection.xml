@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type PrivateEndpointConnection = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>21.0.0.0</AssemblyVersion>
+    <AssemblyVersion>22.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Storage.Models.Resource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +49,13 @@
       <MemberSignature Language="C#" Value="public PrivateEndpointConnection (Microsoft.Azure.Management.Storage.Models.PrivateLinkServiceConnectionState privateLinkServiceConnectionState, string id = default, string name = default, string type = default, Microsoft.Azure.Management.Storage.Models.PrivateEndpoint privateEndpoint = default, string provisioningState = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.Storage.Models.PrivateLinkServiceConnectionState privateLinkServiceConnectionState, string id, string name, string type, class Microsoft.Azure.Management.Storage.Models.PrivateEndpoint privateEndpoint, string provisioningState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection.#ctor(Microsoft.Azure.Management.Storage.Models.PrivateLinkServiceConnectionState,System.String,System.String,System.String,Microsoft.Azure.Management.Storage.Models.PrivateEndpoint,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (privateLinkServiceConnectionState As PrivateLinkServiceConnectionState, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional privateEndpoint As PrivateEndpoint = null, Optional provisioningState As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (privateLinkServiceConnectionState As PrivateLinkServiceConnectionState, Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional privateEndpoint As PrivateEndpoint = Nothing, Optional provisioningState As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection : Microsoft.Azure.Management.Storage.Models.PrivateLinkServiceConnectionState * string * string * string * Microsoft.Azure.Management.Storage.Models.PrivateEndpoint * string -&gt; Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection" Usage="new Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection (privateLinkServiceConnectionState, id, name, type, privateEndpoint, provisioningState)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="privateLinkServiceConnectionState" Type="Microsoft.Azure.Management.Storage.Models.PrivateLinkServiceConnectionState" />
@@ -65,12 +69,12 @@
         <param name="privateLinkServiceConnectionState">A collection of
             information about the state of the connection between service
             consumer and provider.</param>
-        <param name="id">Fully qualified resource Id for the resource. Ex -
+        <param name="id">Fully qualified resource ID for the resource. Ex -
             /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
         <param name="name">The name of the resource</param>
-        <param name="type">The type of the resource. Ex-
-            Microsoft.Compute/virtualMachines or
-            Microsoft.Storage/storageAccounts.</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
         <param name="privateEndpoint">The resource of private end
             point.</param>
         <param name="provisioningState">The provisioning state of the
@@ -91,11 +95,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpoint")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpoint")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -118,11 +124,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.privateLinkServiceConnectionState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateLinkServiceConnectionState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateLinkServiceConnectionState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -146,11 +154,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -175,7 +185,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type FailoverTestScenario = class&#xA;    inherit TestScenario" />
   <AssemblyInfo>
     <AssemblyName>System.Fabric</AssemblyName>
-    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Fabric.Testability.Scenario.TestScenario</BaseTypeName>
@@ -14,7 +14,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Obsolete("This class is deprecated.  Please use Chaos instead https://docs.microsoft.com/azure/service-fabric/service-fabric-controlled-chaos")</AttributeName>
+      <AttributeName Language="C#">[System.Obsolete("This class is deprecated.  Please use Chaos instead https://docs.microsoft.com/azure/service-fabric/service-fabric-controlled-chaos")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This class is deprecated.  Please use Chaos instead https://docs.microsoft.com/azure/service-fabric/service-fabric-controlled-chaos")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -25,7 +26,7 @@
             The faults induced put the partition through some specific failover scenarios to ensure those paths are tested and exercised. Running your workload against the service
             at the same time as the test being run will increase the chances of inducing and discovering bugs with the service. The faults induced for the
             Primary, Secondaries and stateless instances are RestartReplica(only persisted), RemoveReplica, ResartDeployedCodePackage, MovePrimary (only stateful),
-            MoveSecondary (Only stateful), RestartPartition (no data loss).
+            MoveSecondary (Only stateful), MoveInstance (Only stateless), RestartPartition (no data loss), MoveAuxiliary (Only stateful persisted).
             </remarks>
   </Docs>
   <Members>
@@ -38,7 +39,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fabricClient" Type="System.Fabric.FabricClient" />
@@ -62,7 +63,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -87,7 +88,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -113,7 +114,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type Hls = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +17,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The HLS configuration.
+            HTTP Live Streaming (HLS) packing setting for the live output.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +30,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,19 +47,24 @@
       <MemberSignature Language="C#" Value="public Hls (int? fragmentsPerTsSegment = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int32&gt; fragmentsPerTsSegment) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Media.Models.Hls.#ctor(System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional fragmentsPerTsSegment As Nullable(Of Integer) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional fragmentsPerTsSegment As Nullable(Of Integer) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Media.Models.Hls : Nullable&lt;int&gt; -&gt; Microsoft.Azure.Management.Media.Models.Hls" Usage="new Microsoft.Azure.Management.Media.Models.Hls fragmentsPerTsSegment" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fragmentsPerTsSegment" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
-        <param name="fragmentsPerTsSegment">The amount of fragments per
-            HTTP Live Streaming (HLS) segment.</param>
+        <param name="fragmentsPerTsSegment">The number of fragments in an
+            HTTP Live Streaming (HLS) TS segment in the output of the live
+            event. This value does not affect the packing ratio for HLS CMAF
+            output.</param>
         <summary>
             Initializes a new instance of the Hls class.
             </summary>
@@ -69,11 +80,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="fragmentsPerTsSegment")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="fragmentsPerTsSegment")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="fragmentsPerTsSegment")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -81,8 +96,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the amount of fragments per HTTP Live Streaming (HLS)
-            segment.
+            Gets or sets the number of fragments in an HTTP Live Streaming
+            (HLS) TS segment in the output of the live event. This value does
+            not affect the packing ratio for HLS CMAF output.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

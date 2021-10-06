@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type EncoderNamedPreset = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.4.0</AssemblyVersion>
+    <AssemblyVersion>3.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -18,7 +21,8 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Management.Media.Models.EncoderNamedPresetConverter))</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Management.Media.Models.EncoderNamedPresetConverter))]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Management.Media.Models.EncoderNamedPresetConverter))&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +41,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -59,7 +66,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -68,11 +78,9 @@
         <summary>
             Produces a set of GOP aligned MP4 files with H.264 video and stereo
             AAC audio. Auto-generates a bitrate ladder based on the input
-            resolution and bitrate. The auto-generated preset will never exceed
-            the input resolution and bitrate. For example, if the input is 720p
-            at 3 Mbps, output will remain 720p at best, and will start at rates
-            lower than 3 Mbps. The output will have video and audio in separate
-            MP4 files, which is optimal for adaptive streaming.
+            resolution, bitrate and frame rate. The auto-generated preset will
+            never exceed the input resolution. For example, if the input is
+            720p, output will remain 720p at best.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,7 +94,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -115,7 +126,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -132,6 +146,33 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CopyAllBitrateNonInterleaved">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset CopyAllBitrateNonInterleaved;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset CopyAllBitrateNonInterleaved" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.CopyAllBitrateNonInterleaved" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly CopyAllBitrateNonInterleaved As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable CopyAllBitrateNonInterleaved : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.CopyAllBitrateNonInterleaved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Copy all video and audio streams from the input asset as
+            non-interleaved video and audio output files. This preset can be
+            used to clip an existing asset or convert a group of key frame
+            (GOP) aligned MP4 files as an asset that can be streamed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Equals">
       <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Azure.Management.Media.Models.EncoderNamedPreset e);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset e) cil managed" />
@@ -144,7 +185,10 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -170,7 +214,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -196,7 +243,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -219,7 +269,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -228,7 +281,7 @@
         <summary>
             Produces a set of 8 GOP-aligned MP4 files, ranging from 6000 kbps
             to 400 kbps, and stereo AAC audio. Resolution starts at 1080p and
-            goes down to 360p.
+            goes down to 180p.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -242,7 +295,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -251,7 +307,7 @@
         <summary>
             Produces a set of 6 GOP-aligned MP4 files, ranging from 3400 kbps
             to 400 kbps, and stereo AAC audio. Resolution starts at 720p and
-            goes down to 360p.
+            goes down to 180p.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -265,16 +321,19 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Produces a set of 5 GOP-aligned MP4 files, ranging from 1600kbps to
+            Produces a set of 5 GOP-aligned MP4 files, ranging from 1900kbps to
             400 kbps, and stereo AAC audio. Resolution starts at 480p and goes
-            down to 360p.
+            down to 240p.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -288,7 +347,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -297,7 +359,7 @@
         <summary>
             Produces an MP4 file where the video is encoded with H.264 codec at
             6750 kbps and a picture height of 1080 pixels, and the stereo audio
-            is encoded with AAC-LC codec at 64 kbps.
+            is encoded with AAC-LC codec at 128 kbps.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -311,7 +373,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -320,7 +385,7 @@
         <summary>
             Produces an MP4 file where the video is encoded with H.264 codec at
             4500 kbps and a picture height of 720 pixels, and the stereo audio
-            is encoded with AAC-LC codec at 64 kbps.
+            is encoded with AAC-LC codec at 128 kbps.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -334,7 +399,10 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -343,7 +411,145 @@
         <summary>
             Produces an MP4 file where the video is encoded with H.264 codec at
             2200 kbps and a picture height of 480 pixels, and the stereo audio
-            is encoded with AAC-LC codec at 64 kbps.
+            is encoded with AAC-LC codec at 128 kbps.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="H265AdaptiveStreaming">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265AdaptiveStreaming;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265AdaptiveStreaming" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265AdaptiveStreaming" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly H265AdaptiveStreaming As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable H265AdaptiveStreaming : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265AdaptiveStreaming" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Produces a set of GOP aligned MP4 files with H.265 video and stereo
+            AAC audio. Auto-generates a bitrate ladder based on the input
+            resolution, bitrate and frame rate. The auto-generated preset will
+            never exceed the input resolution. For example, if the input is
+            720p, output will remain 720p at best.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="H265ContentAwareEncoding">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265ContentAwareEncoding;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265ContentAwareEncoding" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265ContentAwareEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly H265ContentAwareEncoding As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable H265ContentAwareEncoding : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265ContentAwareEncoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Produces a set of GOP-aligned MP4s by using content-aware encoding.
+            Given any input content, the service performs an initial
+            lightweight analysis of the input content, and uses the results to
+            determine the optimal number of layers, appropriate bitrate and
+            resolution settings for delivery by adaptive streaming. This preset
+            is particularly effective for low and medium complexity videos,
+            where the output files will be at lower bitrates but at a quality
+            that still delivers a good experience to viewers. The output will
+            contain MP4 files with video and audio interleaved.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="H265SingleBitrate1080p">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate1080p;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate1080p" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate1080p" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly H265SingleBitrate1080p As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable H265SingleBitrate1080p : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate1080p" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Produces an MP4 file where the video is encoded with H.265 codec at
+            3500 kbps and a picture height of 1080 pixels, and the stereo audio
+            is encoded with AAC-LC codec at 128 kbps.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="H265SingleBitrate4K">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate4K;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate4K" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate4K" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly H265SingleBitrate4K As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable H265SingleBitrate4K : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate4K" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Produces an MP4 file where the video is encoded with H.265 codec at
+            9500 kbps and a picture height of 2160 pixels, and the stereo audio
+            is encoded with AAC-LC codec at 128 kbps.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="H265SingleBitrate720p">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate720p;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Azure.Management.Media.Models.EncoderNamedPreset H265SingleBitrate720p" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate720p" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly H265SingleBitrate720p As EncoderNamedPreset " />
+      <MemberSignature Language="F#" Value=" staticval mutable H265SingleBitrate720p : Microsoft.Azure.Management.Media.Models.EncoderNamedPreset" Usage="Microsoft.Azure.Management.Media.Models.EncoderNamedPreset.H265SingleBitrate720p" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Produces an MP4 file where the video is encoded with H.265 codec at
+            1800 kbps and a picture height of 720 pixels, and the stereo audio
+            is encoded with AAC-LC codec at 128 kbps.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,7 +563,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -385,7 +594,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -411,7 +623,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Media.Models.EncoderNamedPreset</ReturnType>
@@ -437,7 +652,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -465,7 +683,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Media</AssemblyName>
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.4.0</AssemblyVersion>
+        <AssemblyVersion>3.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

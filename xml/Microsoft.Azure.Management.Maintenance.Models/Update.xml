@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type Update = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +49,13 @@
       <MemberSignature Language="C#" Value="public Update (string maintenanceScope = default, string impactType = default, string status = default, int? impactDurationInSec = default, DateTime? notBefore = default, string resourceId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string maintenanceScope, string impactType, string status, valuetype System.Nullable`1&lt;int32&gt; impactDurationInSec, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; notBefore, string resourceId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Maintenance.Models.Update.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional maintenanceScope As String = null, Optional impactType As String = null, Optional status As String = null, Optional impactDurationInSec As Nullable(Of Integer) = null, Optional notBefore As Nullable(Of DateTime) = null, Optional resourceId As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional maintenanceScope As String = Nothing, Optional impactType As String = Nothing, Optional status As String = Nothing, Optional impactDurationInSec As Nullable(Of Integer) = Nothing, Optional notBefore As Nullable(Of DateTime) = Nothing, Optional resourceId As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Maintenance.Models.Update : string * string * string * Nullable&lt;int&gt; * Nullable&lt;DateTime&gt; * string -&gt; Microsoft.Azure.Management.Maintenance.Models.Update" Usage="new Microsoft.Azure.Management.Maintenance.Models.Update (maintenanceScope, impactType, status, impactDurationInSec, notBefore, resourceId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maintenanceScope" Type="System.String" />
@@ -63,7 +67,8 @@
       </Parameters>
       <Docs>
         <param name="maintenanceScope">The impact area. Possible values
-            include: 'All', 'Host', 'Resource', 'InResource'</param>
+            include: 'Host', 'OSImage', 'Extension', 'InGuestPatch', 'SQLDB',
+            'SQLManagedInstance'</param>
         <param name="impactType">The impact type. Possible values include:
             'None', 'Freeze', 'Restart', 'Redeploy'</param>
         <param name="status">The status. Possible values include:
@@ -89,11 +94,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="impactDurationInSec")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="impactDurationInSec")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="impactDurationInSec")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -116,11 +123,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="impactType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="impactType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="impactType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -144,11 +153,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="maintenanceScope")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="maintenanceScope")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="maintenanceScope")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -156,8 +167,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the impact area. Possible values include: 'All',
-            'Host', 'Resource', 'InResource'
+            Gets or sets the impact area. Possible values include: 'Host',
+            'OSImage', 'Extension', 'InGuestPatch', 'SQLDB',
+            'SQLManagedInstance'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -172,11 +184,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="notBefore")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="notBefore")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="notBefore")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -200,11 +214,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -227,11 +243,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -6,10 +6,12 @@
   <TypeSignature Language="F#" Value="type ItemRequestOptions = class&#xA;    inherit RequestOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-    <AssemblyVersion>3.4.1.0</AssemblyVersion>
-    <AssemblyVersion>3.5.0.0</AssemblyVersion>
-    <AssemblyVersion>3.5.1.0</AssemblyVersion>
-    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.17.1.0</AssemblyVersion>
+    <AssemblyVersion>3.18.0.0</AssemblyVersion>
+    <AssemblyVersion>3.19.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.0.0</AssemblyVersion>
+    <AssemblyVersion>3.20.1.0</AssemblyVersion>
+    <AssemblyVersion>3.21.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Cosmos.RequestOptions</BaseTypeName>
@@ -30,10 +32,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -50,10 +54,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Microsoft.Azure.Cosmos.ConsistencyLevel&gt;</ReturnType>
@@ -72,6 +78,46 @@
             </para></remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableContentResponseOnWrite">
+      <MemberSignature Language="C#" Value="public bool? EnableContentResponseOnWrite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableContentResponseOnWrite" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Cosmos.ItemRequestOptions.EnableContentResponseOnWrite" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableContentResponseOnWrite As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableContentResponseOnWrite : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Cosmos.ItemRequestOptions.EnableContentResponseOnWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the boolean to only return the headers and status code in
+            the Cosmos DB response for write item operation like Create, Upsert, Patch and Replace.
+            Setting the option to false will cause the response to have a null resource. This reduces networking and CPU load by not sending
+            the resource back over the network and serializing it on the client.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is optimal for workloads where the returned resource is not used.
+            </remarks>
+        <example>
+          <code language="c#"><![CDATA[
+            ItemRequestOption requestOptions = new ItemRequestOptions() { EnableContentResponseOnWrite = false };
+            ItemResponse itemResponse = await this.container.CreateItemAsync<ToDoActivity>(tests, new PartitionKey(test.status), requestOptions);
+            Assert.AreEqual(HttpStatusCode.Created, itemResponse.StatusCode);
+            Assert.IsNull(itemResponse.Resource);
+            ]]></code>
+        </example>
+      </Docs>
+    </Member>
     <Member MemberName="IndexingDirective">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Cosmos.IndexingDirective? IndexingDirective { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Cosmos.IndexingDirective&gt; IndexingDirective" />
@@ -81,10 +127,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Microsoft.Azure.Cosmos.IndexingDirective&gt;</ReturnType>
@@ -97,8 +145,8 @@
             The indexing directive to use with a request.
             </value>
         <remarks>To be added.</remarks>
-        <altmember cref="T:Microsoft.Azure.Cosmos.IndexingPolicy" />
         <altmember cref="P:Microsoft.Azure.Cosmos.ItemRequestOptions.IndexingDirective" />
+        <altmember cref="T:Microsoft.Azure.Cosmos.IndexingPolicy" />
       </Docs>
     </Member>
     <Member MemberName="PostTriggers">
@@ -110,10 +158,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -140,10 +190,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -170,10 +222,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Client</AssemblyName>
-        <AssemblyVersion>3.4.1.0</AssemblyVersion>
-        <AssemblyVersion>3.5.0.0</AssemblyVersion>
-        <AssemblyVersion>3.5.1.0</AssemblyVersion>
-        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.17.1.0</AssemblyVersion>
+        <AssemblyVersion>3.18.0.0</AssemblyVersion>
+        <AssemblyVersion>3.19.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.20.1.0</AssemblyVersion>
+        <AssemblyVersion>3.21.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

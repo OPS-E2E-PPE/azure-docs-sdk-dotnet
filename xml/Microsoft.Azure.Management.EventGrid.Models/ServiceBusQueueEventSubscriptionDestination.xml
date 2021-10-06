@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type ServiceBusQueueEventSubscriptionDestination = class&#xA;    inherit EventSubscriptionDestination" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination</BaseTypeName>
@@ -14,10 +15,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("ServiceBusQueue")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("ServiceBusQueue")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("ServiceBusQueue")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -36,7 +39,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,15 +55,15 @@
       <MemberSignature Language="C#" Value="public ServiceBusQueueEventSubscriptionDestination (string resourceId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination.#ctor(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resourceId As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resourceId As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination : string -&gt; Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination" Usage="new Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination resourceId" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="resourceId" Type="System.String" />
+        <Parameter Name="resourceId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="resourceId">The Azure Resource Id that represents the
@@ -72,6 +76,62 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceBusQueueEventSubscriptionDestination (string resourceId = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; deliveryAttributeMappings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceId, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; deliveryAttributeMappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination.#ctor(System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional resourceId As String = Nothing, Optional deliveryAttributeMappings As IList(Of DeliveryAttributeMapping) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination : string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; -&gt; Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination" Usage="new Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination (resourceId, deliveryAttributeMappings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="deliveryAttributeMappings" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">The Azure Resource Id that represents the
+            endpoint of the Service Bus destination of an event
+            subscription.</param>
+        <param name="deliveryAttributeMappings">Delivery attribute
+            details.</param>
+        <summary>
+            Initializes a new instance of the
+            ServiceBusQueueEventSubscriptionDestination class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryAttributeMappings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; DeliveryAttributeMappings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; DeliveryAttributeMappings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination.DeliveryAttributeMappings" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeliveryAttributeMappings As IList(Of DeliveryAttributeMapping)" />
+      <MemberSignature Language="F#" Value="member this.DeliveryAttributeMappings : System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt; with get, set" Usage="Microsoft.Azure.Management.EventGrid.Models.ServiceBusQueueEventSubscriptionDestination.DeliveryAttributeMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryAttributeMappings")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryAttributeMappings")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Azure.Management.EventGrid.Models.DeliveryAttributeMapping&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets delivery attribute details.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ResourceId">
       <MemberSignature Language="C#" Value="public string ResourceId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ResourceId" />
@@ -81,11 +141,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

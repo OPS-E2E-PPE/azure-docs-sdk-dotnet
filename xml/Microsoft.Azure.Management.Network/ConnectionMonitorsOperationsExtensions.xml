@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ConnectionMonitorsOperationsExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -20,15 +20,15 @@
   </Docs>
   <Members>
     <Member MemberName="BeginCreateOrUpdate">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult BeginCreateOrUpdate (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult BeginCreateOrUpdate(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdate(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateOrUpdate (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor) As ConnectionMonitorResult" />
-      <MemberSignature Language="F#" Value="static member BeginCreateOrUpdate : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdate (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult BeginCreateOrUpdate (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult BeginCreateOrUpdate(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdate(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateOrUpdate (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional migrate As String = Nothing) As ConnectionMonitorResult" />
+      <MemberSignature Language="F#" Value="static member BeginCreateOrUpdate : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * string -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdate (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, migrate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult</ReturnType>
@@ -39,6 +39,7 @@
         <Parameter Name="networkWatcherName" Type="System.String" />
         <Parameter Name="connectionMonitorName" Type="System.String" />
         <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.ConnectionMonitor" />
+        <Parameter Name="migrate" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -56,6 +57,10 @@
         <param name="parameters">
             Parameters that define the operation to create a connection monitor.
             </param>
+        <param name="migrate">
+            Value indicating whether connection monitor V1 should be migrated to V2
+            format.
+            </param>
         <summary>
             Create or update a connection monitor.
             </summary>
@@ -64,15 +69,15 @@
       </Docs>
     </Member>
     <Member MemberName="BeginCreateOrUpdateAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; BeginCreateOrUpdateAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; BeginCreateOrUpdateAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdateAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateOrUpdateAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional cancellationToken As CancellationToken = null) As Task(Of ConnectionMonitorResult)" />
-      <MemberSignature Language="F#" Value="static member BeginCreateOrUpdateAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdateAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; BeginCreateOrUpdateAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; BeginCreateOrUpdateAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdateAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginCreateOrUpdateAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional migrate As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorResult)" />
+      <MemberSignature Language="F#" Value="static member BeginCreateOrUpdateAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginCreateOrUpdateAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, migrate, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
@@ -83,6 +88,7 @@
         <Parameter Name="networkWatcherName" Type="System.String" />
         <Parameter Name="connectionMonitorName" Type="System.String" />
         <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.ConnectionMonitor" />
+        <Parameter Name="migrate" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -100,6 +106,10 @@
             </param>
         <param name="parameters">
             Parameters that define the operation to create a connection monitor.
+            </param>
+        <param name="migrate">
+            Value indicating whether connection monitor V1 should be migrated to V2
+            format.
             </param>
         <param name="cancellationToken">
             The cancellation token.
@@ -120,7 +130,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -154,12 +164,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginDeleteAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginDeleteAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeleteAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member BeginDeleteAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginDeleteAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -203,7 +213,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult</ReturnType>
@@ -238,12 +248,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt; BeginQueryAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt; BeginQueryAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginQueryAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginQueryAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task(Of ConnectionMonitorQueryResult)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginQueryAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorQueryResult)" />
       <MemberSignature Language="F#" Value="static member BeginQueryAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginQueryAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt;</ReturnType>
@@ -287,7 +297,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -321,12 +331,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginStartAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginStartAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginStartAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginStartAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginStartAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member BeginStartAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginStartAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -370,7 +380,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -404,12 +414,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task BeginStopAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task BeginStopAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginStopAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginStopAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginStopAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member BeginStopAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.BeginStopAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -445,15 +455,15 @@
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdate">
-      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult CreateOrUpdate (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult CreateOrUpdate(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdate (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor) As ConnectionMonitorResult" />
-      <MemberSignature Language="F#" Value="static member CreateOrUpdate : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdate (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult CreateOrUpdate (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult CreateOrUpdate(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdate (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional migrate As String = Nothing) As ConnectionMonitorResult" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdate : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * string -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdate (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, migrate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult</ReturnType>
@@ -464,6 +474,7 @@
         <Parameter Name="networkWatcherName" Type="System.String" />
         <Parameter Name="connectionMonitorName" Type="System.String" />
         <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.ConnectionMonitor" />
+        <Parameter Name="migrate" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="operations">
@@ -481,6 +492,10 @@
         <param name="parameters">
             Parameters that define the operation to create a connection monitor.
             </param>
+        <param name="migrate">
+            Value indicating whether connection monitor V1 should be migrated to V2
+            format.
+            </param>
         <summary>
             Create or update a connection monitor.
             </summary>
@@ -489,15 +504,15 @@
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional cancellationToken As CancellationToken = null) As Task(Of ConnectionMonitorResult)" />
-      <MemberSignature Language="F#" Value="static member CreateOrUpdateAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters, string migrate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor, Optional migrate As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorResult)" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdateAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, migrate, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
@@ -508,6 +523,7 @@
         <Parameter Name="networkWatcherName" Type="System.String" />
         <Parameter Name="connectionMonitorName" Type="System.String" />
         <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.ConnectionMonitor" />
+        <Parameter Name="migrate" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -526,8 +542,56 @@
         <param name="parameters">
             Parameters that define the operation to create a connection monitor.
             </param>
+        <param name="migrate">
+            Value indicating whether connection monitor V1 should be migrated to V2
+            format.
+            </param>
         <param name="cancellationToken">
             The cancellation token.
+            </param>
+        <summary>
+            Create or update a connection monitor.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrUpdateV1">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateV1 (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; CreateOrUpdateV1(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.ConnectionMonitor parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateV1(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.ConnectionMonitor)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateV1 (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As ConnectionMonitor) As Task(Of ConnectionMonitorResult)" />
+      <MemberSignature Language="F#" Value="static member CreateOrUpdateV1 : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.ConnectionMonitor -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.CreateOrUpdateV1 (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.ConnectionMonitor" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group containing Network Watcher.
+            </param>
+        <param name="networkWatcherName">
+            The name of the Network Watcher resource.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <param name="parameters">
+            Parameters that define the operation to create a connection monitor.
             </param>
         <summary>
             Create or update a connection monitor.
@@ -545,7 +609,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -579,12 +643,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.DeleteAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -628,7 +692,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult</ReturnType>
@@ -663,12 +727,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; GetAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; GetAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task(Of ConnectionMonitorResult)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorResult)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.GetAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
@@ -703,6 +767,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetV1">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult GetV1 (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult GetV1(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.GetV1(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetV1 (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String) As ConnectionMonitorResult" />
+      <MemberSignature Language="F#" Value="static member GetV1 : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.GetV1 (operations, resourceGroupName, networkWatcherName, connectionMonitorName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group containing Network Watcher.
+            </param>
+        <param name="networkWatcherName">
+            The name of the Network Watcher resource.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <summary>
+            Gets a connection monitor by name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="List">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; List (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; List(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName) cil managed" />
@@ -712,7 +816,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
@@ -743,12 +847,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;&gt; ListAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;&gt; ListAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ConnectionMonitorResult))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ConnectionMonitorResult))" />
       <MemberSignature Language="F#" Value="static member ListAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.ListAsync (operations, resourceGroupName, networkWatcherName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;&gt;</ReturnType>
@@ -788,7 +892,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult</ReturnType>
@@ -823,12 +927,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt; QueryAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt; QueryAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.QueryAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function QueryAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task(Of ConnectionMonitorQueryResult)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function QueryAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorQueryResult)" />
       <MemberSignature Language="F#" Value="static member QueryAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.QueryAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorQueryResult&gt;</ReturnType>
@@ -872,7 +976,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -906,12 +1010,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task StartAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task StartAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StartAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function StartAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function StartAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member StartAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StartAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -946,6 +1050,45 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartV1">
+      <MemberSignature Language="C#" Value="public static void StartV1 (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartV1(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StartV1(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub StartV1 (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String)" />
+      <MemberSignature Language="F#" Value="static member StartV1 : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StartV1 (operations, resourceGroupName, networkWatcherName, connectionMonitorName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group containing Network Watcher.
+            </param>
+        <param name="networkWatcherName">
+            The name of the Network Watcher resource.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <summary>
+            Starts the specified connection monitor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Stop">
       <MemberSignature Language="C#" Value="public static void Stop (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Stop(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName) cil managed" />
@@ -955,7 +1098,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -989,12 +1132,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task StopAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task StopAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StopAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function StopAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function StopAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member StopAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StopAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1024,6 +1167,137 @@
             </param>
         <summary>
             Stops the specified connection monitor.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopV1">
+      <MemberSignature Language="C#" Value="public static void StopV1 (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StopV1(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StopV1(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub StopV1 (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String)" />
+      <MemberSignature Language="F#" Value="static member StopV1 : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.StopV1 (operations, resourceGroupName, networkWatcherName, connectionMonitorName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group containing Network Watcher.
+            </param>
+        <param name="networkWatcherName">
+            The name of the Network Watcher resource.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <summary>
+            Stops the specified connection monitor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTags">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult UpdateTags (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.TagsObject parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult UpdateTags(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.TagsObject parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.UpdateTags(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.TagsObject)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateTags (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As TagsObject) As ConnectionMonitorResult" />
+      <MemberSignature Language="F#" Value="static member UpdateTags : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.TagsObject -&gt; Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.UpdateTags (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.TagsObject" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="networkWatcherName">
+            The name of the network watcher.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <param name="parameters">
+            Parameters supplied to update connection monitor tags.
+            </param>
+        <summary>
+            Update tags of the specified connection monitor.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTagsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; UpdateTagsAsync (this Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, Microsoft.Azure.Management.Network.Models.TagsObject parameters, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt; UpdateTagsAsync(class Microsoft.Azure.Management.Network.IConnectionMonitorsOperations operations, string resourceGroupName, string networkWatcherName, string connectionMonitorName, class Microsoft.Azure.Management.Network.Models.TagsObject parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.UpdateTagsAsync(Microsoft.Azure.Management.Network.IConnectionMonitorsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Network.Models.TagsObject,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateTagsAsync (operations As IConnectionMonitorsOperations, resourceGroupName As String, networkWatcherName As String, connectionMonitorName As String, parameters As TagsObject, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConnectionMonitorResult)" />
+      <MemberSignature Language="F#" Value="static member UpdateTagsAsync : Microsoft.Azure.Management.Network.IConnectionMonitorsOperations * string * string * string * Microsoft.Azure.Management.Network.Models.TagsObject * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;" Usage="Microsoft.Azure.Management.Network.ConnectionMonitorsOperationsExtensions.UpdateTagsAsync (operations, resourceGroupName, networkWatcherName, connectionMonitorName, parameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Network.Models.ConnectionMonitorResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Network.IConnectionMonitorsOperations" RefType="this" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="networkWatcherName" Type="System.String" />
+        <Parameter Name="connectionMonitorName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Azure.Management.Network.Models.TagsObject" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">
+            The operations group for this extension method.
+            </param>
+        <param name="resourceGroupName">
+            The name of the resource group.
+            </param>
+        <param name="networkWatcherName">
+            The name of the network watcher.
+            </param>
+        <param name="connectionMonitorName">
+            The name of the connection monitor.
+            </param>
+        <param name="parameters">
+            Parameters supplied to update connection monitor tags.
+            </param>
+        <param name="cancellationToken">
+            The cancellation token.
+            </param>
+        <summary>
+            Update tags of the specified connection monitor.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -59,7 +59,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Automation.Models.JobSchedule</ReturnType>
@@ -128,12 +128,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; CreateAsync (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Guid jobScheduleId, Microsoft.Azure.Management.Automation.Models.JobScheduleCreateParameters parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; CreateAsync(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Guid jobScheduleId, class Microsoft.Azure.Management.Automation.Models.JobScheduleCreateParameters parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.CreateAsync(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid,Microsoft.Azure.Management.Automation.Models.JobScheduleCreateParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, parameters As JobScheduleCreateParameters, Optional cancellationToken As CancellationToken = null) As Task(Of JobSchedule)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, parameters As JobScheduleCreateParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of JobSchedule)" />
       <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid * Microsoft.Azure.Management.Automation.Models.JobScheduleCreateParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.CreateAsync (operations, resourceGroupName, automationAccountName, jobScheduleId, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;</ReturnType>
@@ -173,26 +173,36 @@
       </Docs>
     </Member>
     <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.AzureOperationResponse Delete (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccount, Guid jobScheduleName);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.AzureOperationResponse Delete(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccount, valuetype System.Guid jobScheduleName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Delete(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Delete (operations As IJobScheduleOperations, resourceGroupName As String, automationAccount As String, jobScheduleName As Guid) As AzureOperationResponse" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid -&gt; Microsoft.Azure.AzureOperationResponse" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Delete (operations, resourceGroupName, automationAccount, jobScheduleName)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="C#" Value="public static void Delete (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Guid jobScheduleId);" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Guid jobScheduleId) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Delete(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub Delete (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid -&gt; unit" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Delete (operations, resourceGroupName, automationAccountName, jobScheduleId)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.AzureOperationResponse</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IJobScheduleOperations" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IJobScheduleOperations" RefType="this" Index="0" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" />
+        <Parameter Name="automationAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="automationAccountName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="jobScheduleName" Type="System.Guid" Index="3" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="jobScheduleId" Type="System.Guid" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
+        <param name="automationAccount">To be added.</param>
+        <param name="jobScheduleName">To be added.</param>
         <param name="operations">
             The operations group for this extension method.
             </param>
@@ -208,6 +218,7 @@
         <summary>
             Delete the job schedule identified by job schedule name.
             <see href="http://aka.ms/azureautomationsdk/jobscheduleoperations" /></summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,12 +256,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Guid jobScheduleId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Guid jobScheduleId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.DeleteAsync (operations, resourceGroupName, automationAccountName, jobScheduleId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -286,26 +297,36 @@
       </Docs>
     </Member>
     <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.JobScheduleGetResponse Get (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccount, Guid jobScheduleName);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.JobScheduleGetResponse Get(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccount, valuetype System.Guid jobScheduleName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Get(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IJobScheduleOperations, resourceGroupName As String, automationAccount As String, jobScheduleName As Guid) As JobScheduleGetResponse" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid -&gt; Microsoft.Azure.Management.Automation.Models.JobScheduleGetResponse" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Get (operations, resourceGroupName, automationAccount, jobScheduleName)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.JobSchedule Get (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Guid jobScheduleId);" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.JobSchedule Get(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Guid jobScheduleId) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Get(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid) As JobSchedule" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid -&gt; Microsoft.Azure.Management.Automation.Models.JobSchedule" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.Get (operations, resourceGroupName, automationAccountName, jobScheduleId)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.Automation.Models.JobSchedule</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Management.Automation.Models.JobScheduleGetResponse</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Management.Automation.Models.JobSchedule</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IJobScheduleOperations" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.IJobScheduleOperations" RefType="this" Index="0" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" />
+        <Parameter Name="automationAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="automationAccountName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="jobScheduleName" Type="System.Guid" Index="3" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="jobScheduleId" Type="System.Guid" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
+        <param name="automationAccount">To be added.</param>
+        <param name="jobScheduleName">To be added.</param>
         <param name="operations">
             The operations group for this extension method.
             </param>
@@ -359,12 +380,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; GetAsync (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Guid jobScheduleId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; GetAsync(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Guid jobScheduleId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.GetAsync(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,System.Guid,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, Optional cancellationToken As CancellationToken = null) As Task(Of JobSchedule)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, jobScheduleId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Task(Of JobSchedule)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.GetAsync (operations, resourceGroupName, automationAccountName, jobScheduleId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;</ReturnType>
@@ -459,12 +480,12 @@
       <MemberSignature Language="C#" Value="public static Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; ListByAutomationAccount (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Microsoft.Rest.Azure.OData.ODataQuery&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; odataQuery = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; ListByAutomationAccount(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, class Microsoft.Rest.Azure.OData.ODataQuery`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; odataQuery) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccount(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Automation.Models.JobSchedule})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccount (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, Optional odataQuery As ODataQuery(Of JobSchedule) = null) As IPage(Of JobSchedule)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccount (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, Optional odataQuery As ODataQuery(Of JobSchedule) = Nothing) As IPage(Of JobSchedule)" />
       <MemberSignature Language="F#" Value="static member ListByAutomationAccount : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Microsoft.Rest.Azure.OData.ODataQuery&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; -&gt; Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccount (operations, resourceGroupName, automationAccountName, odataQuery)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;</ReturnType>
@@ -499,12 +520,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt; ListByAutomationAccountAsync (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, Microsoft.Rest.Azure.OData.ODataQuery&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; odataQuery = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt; ListByAutomationAccountAsync(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string resourceGroupName, string automationAccountName, class Microsoft.Rest.Azure.OData.ODataQuery`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; odataQuery, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccountAsync(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Automation.Models.JobSchedule},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, Optional odataQuery As ODataQuery(Of JobSchedule) = null, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of JobSchedule))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountAsync (operations As IJobScheduleOperations, resourceGroupName As String, automationAccountName As String, Optional odataQuery As ODataQuery(Of JobSchedule) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of JobSchedule))" />
       <MemberSignature Language="F#" Value="static member ListByAutomationAccountAsync : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * string * Microsoft.Rest.Azure.OData.ODataQuery&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccountAsync (operations, resourceGroupName, automationAccountName, odataQuery, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt;</ReturnType>
@@ -548,7 +569,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;</ReturnType>
@@ -575,12 +596,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt; ListByAutomationAccountNextAsync (this Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt; ListByAutomationAccountNextAsync(class Microsoft.Azure.Management.Automation.IJobScheduleOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccountNextAsync(Microsoft.Azure.Management.Automation.IJobScheduleOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountNextAsync (operations As IJobScheduleOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of JobSchedule))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountNextAsync (operations As IJobScheduleOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of JobSchedule))" />
       <MemberSignature Language="F#" Value="static member ListByAutomationAccountNextAsync : Microsoft.Azure.Management.Automation.IJobScheduleOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.JobScheduleOperationsExtensions.ListByAutomationAccountNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.JobSchedule&gt;&gt;</ReturnType>

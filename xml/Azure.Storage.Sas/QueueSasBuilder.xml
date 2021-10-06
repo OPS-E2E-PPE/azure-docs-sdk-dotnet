@@ -6,11 +6,10 @@
   <TypeSignature Language="F#" Value="type QueueSasBuilder = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Queues</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
-    <AssemblyVersion>12.1.0.0</AssemblyVersion>
-    <AssemblyVersion>12.1.1.0</AssemblyVersion>
-    <AssemblyVersion>12.2.0.0</AssemblyVersion>
-    <AssemblyVersion>12.3.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.1.0</AssemblyVersion>
+    <AssemblyVersion>12.6.2.0</AssemblyVersion>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,9 +18,12 @@
   <Docs>
     <summary>
       <see cref="T:Azure.Storage.Sas.QueueSasBuilder" /> is used to generate a Shared Access
-            Signature (SAS) for an Azure Storage queue.
-            For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas" />.
-            </summary>
+             Signature (SAS) for an Azure Storage queue.
+            
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas">
+             Create  a Service SAS</see>.
+             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -33,15 +35,102 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.QueueSasBuilder" />
+            class.
+            </summary>
+        <remarks>
+            This constructor has been deprecated. Please consider using
+            <see cref="M:Azure.Storage.Sas.QueueSasBuilder.#ctor(Azure.Storage.Sas.QueueSasPermissions,System.DateTimeOffset)" />
+            to create a Service SAS or
+            <see cref="M:Azure.Storage.Sas.QueueSasBuilder.#ctor(Azure.Storage.Sas.QueueAccountSasPermissions,System.DateTimeOffset)" />
+            to create an Account SAS. This change does not have any impact on how
+            your application generates or makes use of SAS tokens.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueueSasBuilder (Azure.Storage.Sas.QueueAccountSasPermissions permissions, DateTimeOffset expiresOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Azure.Storage.Sas.QueueAccountSasPermissions permissions, valuetype System.DateTimeOffset expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.QueueSasBuilder.#ctor(Azure.Storage.Sas.QueueAccountSasPermissions,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (permissions As QueueAccountSasPermissions, expiresOn As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Sas.QueueSasBuilder : Azure.Storage.Sas.QueueAccountSasPermissions * DateTimeOffset -&gt; Azure.Storage.Sas.QueueSasBuilder" Usage="new Azure.Storage.Sas.QueueSasBuilder (permissions, expiresOn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Queues</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissions" Type="Azure.Storage.Sas.QueueAccountSasPermissions" />
+        <Parameter Name="expiresOn" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="permissions">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <param name="expiresOn">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.QueueSasBuilder" />
+            class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueueSasBuilder (Azure.Storage.Sas.QueueSasPermissions permissions, DateTimeOffset expiresOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Azure.Storage.Sas.QueueSasPermissions permissions, valuetype System.DateTimeOffset expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.QueueSasBuilder.#ctor(Azure.Storage.Sas.QueueSasPermissions,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (permissions As QueueSasPermissions, expiresOn As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Sas.QueueSasBuilder : Azure.Storage.Sas.QueueSasPermissions * DateTimeOffset -&gt; Azure.Storage.Sas.QueueSasBuilder" Usage="new Azure.Storage.Sas.QueueSasBuilder (permissions, expiresOn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Queues</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissions" Type="Azure.Storage.Sas.QueueSasPermissions" />
+        <Parameter Name="expiresOn" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="permissions">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <param name="expiresOn">
+            The time at which the shared access signature becomes invalid.
+            This field must be omitted if it has been specified in an
+            associated stored access policy.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Sas.QueueSasBuilder" />
+            class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -54,15 +143,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -89,11 +178,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -117,15 +205,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -149,11 +237,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -176,11 +263,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.SasIPRange</ReturnType>
@@ -207,11 +293,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -238,11 +323,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.SasProtocol</ReturnType>
@@ -268,11 +352,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -294,11 +377,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -325,11 +407,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -356,11 +437,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -376,6 +456,40 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SetPermissions">
+      <MemberSignature Language="C#" Value="public void SetPermissions (string rawPermissions, bool normalize = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPermissions(string rawPermissions, bool normalize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Sas.QueueSasBuilder.SetPermissions(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPermissions (rawPermissions As String, Optional normalize As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.SetPermissions : string * bool -&gt; unit" Usage="queueSasBuilder.SetPermissions (rawPermissions, normalize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Queues</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawPermissions" Type="System.String" />
+        <Parameter Name="normalize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rawPermissions">
+            Raw permissions string for the SAS.
+            </param>
+        <param name="normalize">
+            If the permissions should be validated and correctly ordered.
+            </param>
+        <summary>
+            Sets the permissions for the SAS using a raw permissions string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StartsOn">
       <MemberSignature Language="C#" Value="public DateTimeOffset StartsOn { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset StartsOn" />
@@ -385,11 +499,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -414,11 +527,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Sas.SasQueryParameters</ReturnType>
@@ -451,15 +563,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -483,12 +595,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Queues</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.1.1.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
-        <AssemblyVersion>12.3.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -499,7 +616,12 @@
             when handling requests made with this shared access signature.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This property has been deprecated and we will always use the latest
+            storage SAS version of the Storage service supported. This change
+            does not have any impact on how your application generates or makes
+            use of SAS tokens.
+            </remarks>
       </Docs>
     </Member>
   </Members>

@@ -6,18 +6,22 @@
   <TypeSignature Language="F#" Value="type ResultReason = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-    <AssemblyVersion>1.8.0.28</AssemblyVersion>
-    <AssemblyVersion>1.9.0.28</AssemblyVersion>
-    <AssemblyVersion>1.10.0.28</AssemblyVersion>
+    <AssemblyVersion>1.16.0.28</AssemblyVersion>
+    <AssemblyVersion>1.17.0.28</AssemblyVersion>
+    <AssemblyVersion>1.18.0.28</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
     <summary>
-            Defines the possible reasons a recognition result might be generated.
+            Describes a recognition result.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            See also:
+            * [Text-dependent verification](/azure/cognitive-services/speech-service/get-started-speaker-recognition#text-dependent-verification)
+            * [Error handling](/azure/cognitive-services/speech-service/get-started-speech-to-text#error-handling)
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="Canceled">
@@ -29,9 +33,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -39,7 +43,79 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            Indicates that the recognition was canceled. More details can be found using the CancellationDetails object.
+            Indicates that the recognition was canceled. Use <see cref="T:Microsoft.CognitiveServices.Speech.CancellationDetails" /> for details.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletedVoiceProfile">
+      <MemberSignature Language="C#" Value="DeletedVoiceProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason DeletedVoiceProfile = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.DeletedVoiceProfile" />
+      <MemberSignature Language="VB.NET" Value="DeletedVoiceProfile" />
+      <MemberSignature Language="F#" Value="DeletedVoiceProfile = 22" Usage="Microsoft.CognitiveServices.Speech.ResultReason.DeletedVoiceProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>22</MemberValue>
+      <Docs>
+        <summary>
+            Indicates a voice profile has been deleted.
+            Added in 1.12.0
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnrolledVoiceProfile">
+      <MemberSignature Language="C#" Value="EnrolledVoiceProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason EnrolledVoiceProfile = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.EnrolledVoiceProfile" />
+      <MemberSignature Language="VB.NET" Value="EnrolledVoiceProfile" />
+      <MemberSignature Language="F#" Value="EnrolledVoiceProfile = 18" Usage="Microsoft.CognitiveServices.Speech.ResultReason.EnrolledVoiceProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>18</MemberValue>
+      <Docs>
+        <summary>
+            Indicates the voice profile has been enrolled.
+            Added in 1.12.0
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnrollingVoiceProfile">
+      <MemberSignature Language="C#" Value="EnrollingVoiceProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason EnrollingVoiceProfile = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.EnrollingVoiceProfile" />
+      <MemberSignature Language="VB.NET" Value="EnrollingVoiceProfile" />
+      <MemberSignature Language="F#" Value="EnrollingVoiceProfile = 17" Usage="Microsoft.CognitiveServices.Speech.ResultReason.EnrollingVoiceProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>17</MemberValue>
+      <Docs>
+        <summary>
+            Indicates the voice profile is being enrolled and more audio is needed to complete a voice profile.
+            Added in 1.12.0
             </summary>
       </Docs>
     </Member>
@@ -52,9 +128,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -62,7 +138,7 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            Indicates speech could not be recognized. More details can be found in the NoMatchDetails object.
+            Indicates speech could not be recognized. Use <see cref="T:Microsoft.CognitiveServices.Speech.NoMatchDetails" />  for details.
             </summary>
       </Docs>
     </Member>
@@ -75,9 +151,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -86,7 +162,7 @@
       <Docs>
         <summary>
             Indicates the intent result contains final text and intent.
-            Speech Recognition and Intent determination are now complete for this phrase.
+            Speech recognition and intent determination are now complete for this phrase.
             </summary>
       </Docs>
     </Member>
@@ -99,9 +175,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -110,7 +186,55 @@
       <Docs>
         <summary>
             Indicates that keyword recognition completed recognizing the given keyword.
-            Added in version 1.3.0
+            Added in 1.3.0
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RecognizedSpeaker">
+      <MemberSignature Language="C#" Value="RecognizedSpeaker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason RecognizedSpeaker = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.RecognizedSpeaker" />
+      <MemberSignature Language="VB.NET" Value="RecognizedSpeaker" />
+      <MemberSignature Language="F#" Value="RecognizedSpeaker = 20" Usage="Microsoft.CognitiveServices.Speech.ResultReason.RecognizedSpeaker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>20</MemberValue>
+      <Docs>
+        <summary>
+            Indicates successful verification of a speaker.
+            Added in 1.12.0
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RecognizedSpeakers">
+      <MemberSignature Language="C#" Value="RecognizedSpeakers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason RecognizedSpeakers = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.RecognizedSpeakers" />
+      <MemberSignature Language="VB.NET" Value="RecognizedSpeakers" />
+      <MemberSignature Language="F#" Value="RecognizedSpeakers = 19" Usage="Microsoft.CognitiveServices.Speech.ResultReason.RecognizedSpeakers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>19</MemberValue>
+      <Docs>
+        <summary>
+            Indicates successful identification of some speakers.
+            Added in 1.12.0
             </summary>
       </Docs>
     </Member>
@@ -123,9 +247,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -134,7 +258,7 @@
       <Docs>
         <summary>
             Indicates the speech result contains final text that has been recognized.
-            Speech Recognition is now complete for this phrase.
+            Speech recognition is now complete for this phrase.
             </summary>
       </Docs>
     </Member>
@@ -147,9 +271,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -170,9 +294,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -181,7 +305,7 @@
       <Docs>
         <summary>
             Indicates the speech result contains (unverified) keyword text.
-            Added in version 1.3.0
+            Added in 1.3.0
             </summary>
       </Docs>
     </Member>
@@ -194,9 +318,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -205,6 +329,30 @@
       <Docs>
         <summary>
             Indicates the speech result contains hypothesis text.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetVoiceProfile">
+      <MemberSignature Language="C#" Value="ResetVoiceProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason ResetVoiceProfile = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.ResetVoiceProfile" />
+      <MemberSignature Language="VB.NET" Value="ResetVoiceProfile" />
+      <MemberSignature Language="F#" Value="ResetVoiceProfile = 21" Usage="Microsoft.CognitiveServices.Speech.ResultReason.ResetVoiceProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>21</MemberValue>
+      <Docs>
+        <summary>
+            Indicates a voice profile has been reset.
+            Added in 1.12.0
             </summary>
       </Docs>
     </Member>
@@ -217,9 +365,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -227,7 +375,7 @@
       <MemberValue>8</MemberValue>
       <Docs>
         <summary>
-            Indicates the synthesized audio result contains a non-zero amount of audio data
+            Indicates the synthesized audio result contains a non-zero amount of audio data.
             </summary>
       </Docs>
     </Member>
@@ -240,9 +388,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -263,9 +411,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -274,7 +422,7 @@
       <Docs>
         <summary>
             Indicates the speech synthesis is now started.
-            Added in version 1.4.0
+            Added in 1.4.0
             </summary>
       </Docs>
     </Member>
@@ -287,8 +435,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -298,7 +447,7 @@
         <summary>
             Indicates the transcription result contains the instant message and corresponding
             translation(s).
-            Added in version 1.9.0
+            Added in 1.9.0
             </summary>
       </Docs>
     </Member>
@@ -311,8 +460,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -322,7 +472,7 @@
         <summary>
             Indicates the transcription result contains the instant message for other participants
             in the conversation and corresponding translation(s).
-            Added in version 1.9.0
+            Added in 1.9.0
             </summary>
       </Docs>
     </Member>
@@ -335,8 +485,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -345,9 +496,9 @@
       <Docs>
         <summary>
             Indicates the transcription result contains final text and corresponding translation(s)
-            for other participants in the conversation. Speech Recognition and Translation are now
+            for other participants in the conversation. Speech recognition and translation are now
             complete for this phrase.
-            Added in version 1.9.0
+            Added in 1.9.0
             </summary>
       </Docs>
     </Member>
@@ -360,9 +511,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -371,7 +522,7 @@
       <Docs>
         <summary>
             Indicates the translation result contains final text and corresponding translation(s).
-            Speech Recognition and Translation are now complete for this phrase.
+            Speech recognition and translation are now complete for this phrase.
             </summary>
       </Docs>
     </Member>
@@ -384,8 +535,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -395,7 +547,7 @@
         <summary>
             Indicates the transcription result contains hypothesis text and its translation(s) for
             other participants in the conversation.
-            Added in version 1.9.0
+            Added in 1.9.0
             </summary>
       </Docs>
     </Member>
@@ -408,9 +560,9 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
@@ -419,6 +571,30 @@
       <Docs>
         <summary>
             Indicates the translation result contains hypothesis text and its translation(s).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VoicesListRetrieved">
+      <MemberSignature Language="C#" Value="VoicesListRetrieved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CognitiveServices.Speech.ResultReason VoicesListRetrieved = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CognitiveServices.Speech.ResultReason.VoicesListRetrieved" />
+      <MemberSignature Language="VB.NET" Value="VoicesListRetrieved" />
+      <MemberSignature Language="F#" Value="VoicesListRetrieved = 23" Usage="Microsoft.CognitiveServices.Speech.ResultReason.VoicesListRetrieved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CognitiveServices.Speech.ResultReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>23</MemberValue>
+      <Docs>
+        <summary>
+            Indicates the voices list has been retrieved successfully.
+            Added in 1.16.0
             </summary>
       </Docs>
     </Member>

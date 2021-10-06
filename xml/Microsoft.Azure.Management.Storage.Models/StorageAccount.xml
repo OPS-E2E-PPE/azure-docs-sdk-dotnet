@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type StorageAccount = class&#xA;    inherit TrackedResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-    <AssemblyVersion>14.0.0.0</AssemblyVersion>
+    <AssemblyVersion>21.0.0.0</AssemblyVersion>
+    <AssemblyVersion>22.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Storage.Models.TrackedResource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +46,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public StorageAccount (string location, string id = default, string name = default, string type = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Microsoft.Azure.Management.Storage.Models.Sku sku = default, string kind = default, Microsoft.Azure.Management.Storage.Models.Identity identity = default, Microsoft.Azure.Management.Storage.Models.ProvisioningState? provisioningState = default, Microsoft.Azure.Management.Storage.Models.Endpoints primaryEndpoints = default, string primaryLocation = default, Microsoft.Azure.Management.Storage.Models.AccountStatus? statusOfPrimary = default, DateTime? lastGeoFailoverTime = default, string secondaryLocation = default, Microsoft.Azure.Management.Storage.Models.AccountStatus? statusOfSecondary = default, DateTime? creationTime = default, Microsoft.Azure.Management.Storage.Models.CustomDomain customDomain = default, Microsoft.Azure.Management.Storage.Models.Endpoints secondaryEndpoints = default, Microsoft.Azure.Management.Storage.Models.Encryption encryption = default, Microsoft.Azure.Management.Storage.Models.AccessTier? accessTier = default, Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication azureFilesIdentityBasedAuthentication = default, bool? enableHttpsTrafficOnly = default, Microsoft.Azure.Management.Storage.Models.NetworkRuleSet networkRuleSet = default, bool? isHnsEnabled = default, Microsoft.Azure.Management.Storage.Models.GeoReplicationStats geoReplicationStats = default, bool? failoverInProgress = default, string largeFileSharesState = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; privateEndpointConnections = default, Microsoft.Azure.Management.Storage.Models.RoutingPreference routingPreference = default, Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus blobRestoreStatus = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, string id, string name, string type, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class Microsoft.Azure.Management.Storage.Models.Sku sku, string kind, class Microsoft.Azure.Management.Storage.Models.Identity identity, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.ProvisioningState&gt; provisioningState, class Microsoft.Azure.Management.Storage.Models.Endpoints primaryEndpoints, string primaryLocation, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; statusOfPrimary, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; lastGeoFailoverTime, string secondaryLocation, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; statusOfSecondary, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; creationTime, class Microsoft.Azure.Management.Storage.Models.CustomDomain customDomain, class Microsoft.Azure.Management.Storage.Models.Endpoints secondaryEndpoints, class Microsoft.Azure.Management.Storage.Models.Encryption encryption, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccessTier&gt; accessTier, class Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication azureFilesIdentityBasedAuthentication, valuetype System.Nullable`1&lt;bool&gt; enableHttpsTrafficOnly, class Microsoft.Azure.Management.Storage.Models.NetworkRuleSet networkRuleSet, valuetype System.Nullable`1&lt;bool&gt; isHnsEnabled, class Microsoft.Azure.Management.Storage.Models.GeoReplicationStats geoReplicationStats, valuetype System.Nullable`1&lt;bool&gt; failoverInProgress, string largeFileSharesState, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; privateEndpointConnections, class Microsoft.Azure.Management.Storage.Models.RoutingPreference routingPreference, class Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus blobRestoreStatus) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.StorageAccount.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Azure.Management.Storage.Models.Sku,System.String,Microsoft.Azure.Management.Storage.Models.Identity,System.Nullable{Microsoft.Azure.Management.Storage.Models.ProvisioningState},Microsoft.Azure.Management.Storage.Models.Endpoints,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccountStatus},System.Nullable{System.DateTime},System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccountStatus},System.Nullable{System.DateTime},Microsoft.Azure.Management.Storage.Models.CustomDomain,Microsoft.Azure.Management.Storage.Models.Endpoints,Microsoft.Azure.Management.Storage.Models.Encryption,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccessTier},Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication,System.Nullable{System.Boolean},Microsoft.Azure.Management.Storage.Models.NetworkRuleSet,System.Nullable{System.Boolean},Microsoft.Azure.Management.Storage.Models.GeoReplicationStats,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection},Microsoft.Azure.Management.Storage.Models.RoutingPreference,Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional tags As IDictionary(Of String, String) = null, Optional sku As Sku = null, Optional kind As String = null, Optional identity As Identity = null, Optional provisioningState As Nullable(Of ProvisioningState) = null, Optional primaryEndpoints As Endpoints = null, Optional primaryLocation As String = null, Optional statusOfPrimary As Nullable(Of AccountStatus) = null, Optional lastGeoFailoverTime As Nullable(Of DateTime) = null, Optional secondaryLocation As String = null, Optional statusOfSecondary As Nullable(Of AccountStatus) = null, Optional creationTime As Nullable(Of DateTime) = null, Optional customDomain As CustomDomain = null, Optional secondaryEndpoints As Endpoints = null, Optional encryption As Encryption = null, Optional accessTier As Nullable(Of AccessTier) = null, Optional azureFilesIdentityBasedAuthentication As AzureFilesIdentityBasedAuthentication = null, Optional enableHttpsTrafficOnly As Nullable(Of Boolean) = null, Optional networkRuleSet As NetworkRuleSet = null, Optional isHnsEnabled As Nullable(Of Boolean) = null, Optional geoReplicationStats As GeoReplicationStats = null, Optional failoverInProgress As Nullable(Of Boolean) = null, Optional largeFileSharesState As String = null, Optional privateEndpointConnections As IList(Of PrivateEndpointConnection) = null, Optional routingPreference As RoutingPreference = null, Optional blobRestoreStatus As BlobRestoreStatus = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.StorageAccount : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Microsoft.Azure.Management.Storage.Models.Sku * string * Microsoft.Azure.Management.Storage.Models.Identity * Nullable&lt;Microsoft.Azure.Management.Storage.Models.ProvisioningState&gt; * Microsoft.Azure.Management.Storage.Models.Endpoints * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; * Nullable&lt;DateTime&gt; * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; * Nullable&lt;DateTime&gt; * Microsoft.Azure.Management.Storage.Models.CustomDomain * Microsoft.Azure.Management.Storage.Models.Endpoints * Microsoft.Azure.Management.Storage.Models.Encryption * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccessTier&gt; * Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication * Nullable&lt;bool&gt; * Microsoft.Azure.Management.Storage.Models.NetworkRuleSet * Nullable&lt;bool&gt; * Microsoft.Azure.Management.Storage.Models.GeoReplicationStats * Nullable&lt;bool&gt; * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; * Microsoft.Azure.Management.Storage.Models.RoutingPreference * Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus -&gt; Microsoft.Azure.Management.Storage.Models.StorageAccount" Usage="new Microsoft.Azure.Management.Storage.Models.StorageAccount (location, id, name, type, tags, sku, kind, identity, provisioningState, primaryEndpoints, primaryLocation, statusOfPrimary, lastGeoFailoverTime, secondaryLocation, statusOfSecondary, creationTime, customDomain, secondaryEndpoints, encryption, accessTier, azureFilesIdentityBasedAuthentication, enableHttpsTrafficOnly, networkRuleSet, isHnsEnabled, geoReplicationStats, failoverInProgress, largeFileSharesState, privateEndpointConnections, routingPreference, blobRestoreStatus)" />
+      <MemberSignature Language="C#" Value="public StorageAccount (string location, string id = default, string name = default, string type = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Microsoft.Azure.Management.Storage.Models.Sku sku = default, string kind = default, Microsoft.Azure.Management.Storage.Models.Identity identity = default, Microsoft.Azure.Management.Storage.Models.ExtendedLocation extendedLocation = default, Microsoft.Azure.Management.Storage.Models.ProvisioningState? provisioningState = default, Microsoft.Azure.Management.Storage.Models.Endpoints primaryEndpoints = default, string primaryLocation = default, Microsoft.Azure.Management.Storage.Models.AccountStatus? statusOfPrimary = default, DateTime? lastGeoFailoverTime = default, string secondaryLocation = default, Microsoft.Azure.Management.Storage.Models.AccountStatus? statusOfSecondary = default, DateTime? creationTime = default, Microsoft.Azure.Management.Storage.Models.CustomDomain customDomain = default, Microsoft.Azure.Management.Storage.Models.SasPolicy sasPolicy = default, Microsoft.Azure.Management.Storage.Models.KeyPolicy keyPolicy = default, Microsoft.Azure.Management.Storage.Models.KeyCreationTime keyCreationTime = default, Microsoft.Azure.Management.Storage.Models.Endpoints secondaryEndpoints = default, Microsoft.Azure.Management.Storage.Models.Encryption encryption = default, Microsoft.Azure.Management.Storage.Models.AccessTier? accessTier = default, Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication azureFilesIdentityBasedAuthentication = default, bool? enableHttpsTrafficOnly = default, Microsoft.Azure.Management.Storage.Models.NetworkRuleSet networkRuleSet = default, bool? isHnsEnabled = default, Microsoft.Azure.Management.Storage.Models.GeoReplicationStats geoReplicationStats = default, bool? failoverInProgress = default, string largeFileSharesState = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; privateEndpointConnections = default, Microsoft.Azure.Management.Storage.Models.RoutingPreference routingPreference = default, Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus blobRestoreStatus = default, bool? allowBlobPublicAccess = default, string minimumTlsVersion = default, bool? allowSharedKeyAccess = default, bool? enableNfsV3 = default, bool? allowCrossTenantReplication = default, bool? defaultToOAuthAuthentication = default, string publicNetworkAccess = default, Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount immutableStorageWithVersioning = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string location, string id, string name, string type, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class Microsoft.Azure.Management.Storage.Models.Sku sku, string kind, class Microsoft.Azure.Management.Storage.Models.Identity identity, class Microsoft.Azure.Management.Storage.Models.ExtendedLocation extendedLocation, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.ProvisioningState&gt; provisioningState, class Microsoft.Azure.Management.Storage.Models.Endpoints primaryEndpoints, string primaryLocation, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; statusOfPrimary, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; lastGeoFailoverTime, string secondaryLocation, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; statusOfSecondary, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; creationTime, class Microsoft.Azure.Management.Storage.Models.CustomDomain customDomain, class Microsoft.Azure.Management.Storage.Models.SasPolicy sasPolicy, class Microsoft.Azure.Management.Storage.Models.KeyPolicy keyPolicy, class Microsoft.Azure.Management.Storage.Models.KeyCreationTime keyCreationTime, class Microsoft.Azure.Management.Storage.Models.Endpoints secondaryEndpoints, class Microsoft.Azure.Management.Storage.Models.Encryption encryption, valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.Storage.Models.AccessTier&gt; accessTier, class Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication azureFilesIdentityBasedAuthentication, valuetype System.Nullable`1&lt;bool&gt; enableHttpsTrafficOnly, class Microsoft.Azure.Management.Storage.Models.NetworkRuleSet networkRuleSet, valuetype System.Nullable`1&lt;bool&gt; isHnsEnabled, class Microsoft.Azure.Management.Storage.Models.GeoReplicationStats geoReplicationStats, valuetype System.Nullable`1&lt;bool&gt; failoverInProgress, string largeFileSharesState, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; privateEndpointConnections, class Microsoft.Azure.Management.Storage.Models.RoutingPreference routingPreference, class Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus blobRestoreStatus, valuetype System.Nullable`1&lt;bool&gt; allowBlobPublicAccess, string minimumTlsVersion, valuetype System.Nullable`1&lt;bool&gt; allowSharedKeyAccess, valuetype System.Nullable`1&lt;bool&gt; enableNfsV3, valuetype System.Nullable`1&lt;bool&gt; allowCrossTenantReplication, valuetype System.Nullable`1&lt;bool&gt; defaultToOAuthAuthentication, string publicNetworkAccess, class Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount immutableStorageWithVersioning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Storage.Models.StorageAccount.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Azure.Management.Storage.Models.Sku,System.String,Microsoft.Azure.Management.Storage.Models.Identity,Microsoft.Azure.Management.Storage.Models.ExtendedLocation,System.Nullable{Microsoft.Azure.Management.Storage.Models.ProvisioningState},Microsoft.Azure.Management.Storage.Models.Endpoints,System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccountStatus},System.Nullable{System.DateTime},System.String,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccountStatus},System.Nullable{System.DateTime},Microsoft.Azure.Management.Storage.Models.CustomDomain,Microsoft.Azure.Management.Storage.Models.SasPolicy,Microsoft.Azure.Management.Storage.Models.KeyPolicy,Microsoft.Azure.Management.Storage.Models.KeyCreationTime,Microsoft.Azure.Management.Storage.Models.Endpoints,Microsoft.Azure.Management.Storage.Models.Encryption,System.Nullable{Microsoft.Azure.Management.Storage.Models.AccessTier},Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication,System.Nullable{System.Boolean},Microsoft.Azure.Management.Storage.Models.NetworkRuleSet,System.Nullable{System.Boolean},Microsoft.Azure.Management.Storage.Models.GeoReplicationStats,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection},Microsoft.Azure.Management.Storage.Models.RoutingPreference,Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus,System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (location As String, Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional sku As Sku = Nothing, Optional kind As String = Nothing, Optional identity As Identity = Nothing, Optional extendedLocation As ExtendedLocation = Nothing, Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional primaryEndpoints As Endpoints = Nothing, Optional primaryLocation As String = Nothing, Optional statusOfPrimary As Nullable(Of AccountStatus) = Nothing, Optional lastGeoFailoverTime As Nullable(Of DateTime) = Nothing, Optional secondaryLocation As String = Nothing, Optional statusOfSecondary As Nullable(Of AccountStatus) = Nothing, Optional creationTime As Nullable(Of DateTime) = Nothing, Optional customDomain As CustomDomain = Nothing, Optional sasPolicy As SasPolicy = Nothing, Optional keyPolicy As KeyPolicy = Nothing, Optional keyCreationTime As KeyCreationTime = Nothing, Optional secondaryEndpoints As Endpoints = Nothing, Optional encryption As Encryption = Nothing, Optional accessTier As Nullable(Of AccessTier) = Nothing, Optional azureFilesIdentityBasedAuthentication As AzureFilesIdentityBasedAuthentication = Nothing, Optional enableHttpsTrafficOnly As Nullable(Of Boolean) = Nothing, Optional networkRuleSet As NetworkRuleSet = Nothing, Optional isHnsEnabled As Nullable(Of Boolean) = Nothing, Optional geoReplicationStats As GeoReplicationStats = Nothing, Optional failoverInProgress As Nullable(Of Boolean) = Nothing, Optional largeFileSharesState As String = Nothing, Optional privateEndpointConnections As IList(Of PrivateEndpointConnection) = Nothing, Optional routingPreference As RoutingPreference = Nothing, Optional blobRestoreStatus As BlobRestoreStatus = Nothing, Optional allowBlobPublicAccess As Nullable(Of Boolean) = Nothing, Optional minimumTlsVersion As String = Nothing, Optional allowSharedKeyAccess As Nullable(Of Boolean) = Nothing, Optional enableNfsV3 As Nullable(Of Boolean) = Nothing, Optional allowCrossTenantReplication As Nullable(Of Boolean) = Nothing, Optional defaultToOAuthAuthentication As Nullable(Of Boolean) = Nothing, Optional publicNetworkAccess As String = Nothing, Optional immutableStorageWithVersioning As ImmutableStorageAccount = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Storage.Models.StorageAccount : string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Microsoft.Azure.Management.Storage.Models.Sku * string * Microsoft.Azure.Management.Storage.Models.Identity * Microsoft.Azure.Management.Storage.Models.ExtendedLocation * Nullable&lt;Microsoft.Azure.Management.Storage.Models.ProvisioningState&gt; * Microsoft.Azure.Management.Storage.Models.Endpoints * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; * Nullable&lt;DateTime&gt; * string * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccountStatus&gt; * Nullable&lt;DateTime&gt; * Microsoft.Azure.Management.Storage.Models.CustomDomain * Microsoft.Azure.Management.Storage.Models.SasPolicy * Microsoft.Azure.Management.Storage.Models.KeyPolicy * Microsoft.Azure.Management.Storage.Models.KeyCreationTime * Microsoft.Azure.Management.Storage.Models.Endpoints * Microsoft.Azure.Management.Storage.Models.Encryption * Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccessTier&gt; * Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication * Nullable&lt;bool&gt; * Microsoft.Azure.Management.Storage.Models.NetworkRuleSet * Nullable&lt;bool&gt; * Microsoft.Azure.Management.Storage.Models.GeoReplicationStats * Nullable&lt;bool&gt; * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt; * Microsoft.Azure.Management.Storage.Models.RoutingPreference * Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus * Nullable&lt;bool&gt; * string * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * string * Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount -&gt; Microsoft.Azure.Management.Storage.Models.StorageAccount" Usage="new Microsoft.Azure.Management.Storage.Models.StorageAccount (location, id, name, type, tags, sku, kind, identity, extendedLocation, provisioningState, primaryEndpoints, primaryLocation, statusOfPrimary, lastGeoFailoverTime, secondaryLocation, statusOfSecondary, creationTime, customDomain, sasPolicy, keyPolicy, keyCreationTime, secondaryEndpoints, encryption, accessTier, azureFilesIdentityBasedAuthentication, enableHttpsTrafficOnly, networkRuleSet, isHnsEnabled, geoReplicationStats, failoverInProgress, largeFileSharesState, privateEndpointConnections, routingPreference, blobRestoreStatus, allowBlobPublicAccess, minimumTlsVersion, allowSharedKeyAccess, enableNfsV3, allowCrossTenantReplication, defaultToOAuthAuthentication, publicNetworkAccess, immutableStorageWithVersioning)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="location" Type="System.String" />
@@ -62,6 +65,7 @@
         <Parameter Name="sku" Type="Microsoft.Azure.Management.Storage.Models.Sku" />
         <Parameter Name="kind" Type="System.String" />
         <Parameter Name="identity" Type="Microsoft.Azure.Management.Storage.Models.Identity" />
+        <Parameter Name="extendedLocation" Type="Microsoft.Azure.Management.Storage.Models.ExtendedLocation" />
         <Parameter Name="provisioningState" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.ProvisioningState&gt;" />
         <Parameter Name="primaryEndpoints" Type="Microsoft.Azure.Management.Storage.Models.Endpoints" />
         <Parameter Name="primaryLocation" Type="System.String" />
@@ -71,6 +75,9 @@
         <Parameter Name="statusOfSecondary" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccountStatus&gt;" />
         <Parameter Name="creationTime" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="customDomain" Type="Microsoft.Azure.Management.Storage.Models.CustomDomain" />
+        <Parameter Name="sasPolicy" Type="Microsoft.Azure.Management.Storage.Models.SasPolicy" />
+        <Parameter Name="keyPolicy" Type="Microsoft.Azure.Management.Storage.Models.KeyPolicy" />
+        <Parameter Name="keyCreationTime" Type="Microsoft.Azure.Management.Storage.Models.KeyCreationTime" />
         <Parameter Name="secondaryEndpoints" Type="Microsoft.Azure.Management.Storage.Models.Endpoints" />
         <Parameter Name="encryption" Type="Microsoft.Azure.Management.Storage.Models.Encryption" />
         <Parameter Name="accessTier" Type="System.Nullable&lt;Microsoft.Azure.Management.Storage.Models.AccessTier&gt;" />
@@ -84,22 +91,32 @@
         <Parameter Name="privateEndpointConnections" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Storage.Models.PrivateEndpointConnection&gt;" />
         <Parameter Name="routingPreference" Type="Microsoft.Azure.Management.Storage.Models.RoutingPreference" />
         <Parameter Name="blobRestoreStatus" Type="Microsoft.Azure.Management.Storage.Models.BlobRestoreStatus" />
+        <Parameter Name="allowBlobPublicAccess" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="minimumTlsVersion" Type="System.String" />
+        <Parameter Name="allowSharedKeyAccess" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="enableNfsV3" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="allowCrossTenantReplication" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="defaultToOAuthAuthentication" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="publicNetworkAccess" Type="System.String" />
+        <Parameter Name="immutableStorageWithVersioning" Type="Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount" />
       </Parameters>
       <Docs>
         <param name="location">The geo-location where the resource
             lives</param>
-        <param name="id">Fully qualified resource Id for the resource. Ex -
+        <param name="id">Fully qualified resource ID for the resource. Ex -
             /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</param>
         <param name="name">The name of the resource</param>
-        <param name="type">The type of the resource. Ex-
-            Microsoft.Compute/virtualMachines or
-            Microsoft.Storage/storageAccounts.</param>
+        <param name="type">The type of the resource. E.g.
+            "Microsoft.Compute/virtualMachines" or
+            "Microsoft.Storage/storageAccounts"</param>
         <param name="tags">Resource tags.</param>
         <param name="sku">Gets the SKU.</param>
         <param name="kind">Gets the Kind. Possible values include:
             'Storage', 'StorageV2', 'BlobStorage', 'FileStorage',
             'BlockBlobStorage'</param>
         <param name="identity">The identity of the resource.</param>
+        <param name="extendedLocation">The extendedLocation of the
+            resource.</param>
         <param name="provisioningState">Gets the status of the storage
             account at the time the operation was called. Possible values
             include: 'Creating', 'ResolvingDNS', 'Succeeded'</param>
@@ -130,6 +147,12 @@
             storage account in UTC.</param>
         <param name="customDomain">Gets the custom domain the user assigned
             to this storage account.</param>
+        <param name="sasPolicy">SasPolicy assigned to the storage
+            account.</param>
+        <param name="keyPolicy">KeyPolicy assigned to the storage
+            account.</param>
+        <param name="keyCreationTime">Storage account keys creation
+            time.</param>
         <param name="secondaryEndpoints">Gets the URLs that are used to
             perform a retrieval of a public blob, queue, or table object from
             the secondary location of the storage account. Only available if
@@ -157,6 +180,35 @@
         <param name="routingPreference">Maintains information about the
             network routing choice opted by the user for data transfer</param>
         <param name="blobRestoreStatus">Blob restore status</param>
+        <param name="allowBlobPublicAccess">Allow or disallow public access
+            to all blobs or containers in the storage account. The default
+            interpretation is true for this property.</param>
+        <param name="minimumTlsVersion">Set the minimum TLS version to be
+            permitted on requests to storage. The default interpretation is TLS
+            1.0 for this property. Possible values include: 'TLS1_0', 'TLS1_1',
+            'TLS1_2'</param>
+        <param name="allowSharedKeyAccess">Indicates whether the storage
+            account permits requests to be authorized with the account access
+            key via Shared Key. If false, then all requests, including shared
+            access signatures, must be authorized with Azure Active Directory
+            (Azure AD). The default value is null, which is equivalent to
+            true.</param>
+        <param name="enableNfsV3">NFS 3.0 protocol support enabled if set
+            to true.</param>
+        <param name="allowCrossTenantReplication">Allow or disallow cross
+            AAD tenant object replication. The default interpretation is true
+            for this property.</param>
+        <param name="defaultToOAuthAuthentication">A boolean flag which
+            indicates whether the default authentication is OAuth or not. The
+            default interpretation is false for this property.</param>
+        <param name="publicNetworkAccess">Allow or disallow public network
+            access to Storage Account. Value is optional but if passed in, must
+            be 'Enabled' or 'Disabled'. Possible values include: 'Enabled',
+            'Disabled'</param>
+        <param name="immutableStorageWithVersioning">The property is
+            immutable and can only be set to true at the account creation time.
+            When set to true, it enables object level immutability for all the
+            containers in the account by default.</param>
         <summary>
             Initializes a new instance of the StorageAccount class.
             </summary>
@@ -172,11 +224,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.accessTier")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.accessTier")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.accessTier")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -192,6 +246,99 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AllowBlobPublicAccess">
+      <MemberSignature Language="C#" Value="public bool? AllowBlobPublicAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; AllowBlobPublicAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowBlobPublicAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowBlobPublicAccess As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.AllowBlobPublicAccess : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowBlobPublicAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.allowBlobPublicAccess")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.allowBlobPublicAccess")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets allow or disallow public access to all blobs or
+            containers in the storage account. The default interpretation is
+            true for this property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCrossTenantReplication">
+      <MemberSignature Language="C#" Value="public bool? AllowCrossTenantReplication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; AllowCrossTenantReplication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowCrossTenantReplication" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowCrossTenantReplication As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.AllowCrossTenantReplication : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowCrossTenantReplication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.allowCrossTenantReplication")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.allowCrossTenantReplication")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets allow or disallow cross AAD tenant object replication.
+            The default interpretation is true for this property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSharedKeyAccess">
+      <MemberSignature Language="C#" Value="public bool? AllowSharedKeyAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; AllowSharedKeyAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowSharedKeyAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowSharedKeyAccess As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.AllowSharedKeyAccess : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.AllowSharedKeyAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.allowSharedKeyAccess")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.allowSharedKeyAccess")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets indicates whether the storage account permits requests
+            to be authorized with the account access key via Shared Key. If
+            false, then all requests, including shared access signatures, must
+            be authorized with Azure Active Directory (Azure AD). The default
+            value is null, which is equivalent to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AzureFilesIdentityBasedAuthentication">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication AzureFilesIdentityBasedAuthentication { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.AzureFilesIdentityBasedAuthentication AzureFilesIdentityBasedAuthentication" />
@@ -201,11 +348,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFilesIdentityBasedAuthentication")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFilesIdentityBasedAuthentication")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.azureFilesIdentityBasedAuthentication")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -229,11 +378,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.blobRestoreStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.blobRestoreStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.blobRestoreStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -256,11 +407,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.creationTime")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.creationTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.creationTime")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -283,11 +436,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.customDomain")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.customDomain")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.customDomain")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -296,6 +451,36 @@
       <Docs>
         <summary>
             Gets the custom domain the user assigned to this storage account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToOAuthAuthentication">
+      <MemberSignature Language="C#" Value="public bool? DefaultToOAuthAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; DefaultToOAuthAuthentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.DefaultToOAuthAuthentication" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultToOAuthAuthentication As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DefaultToOAuthAuthentication : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.DefaultToOAuthAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.defaultToOAuthAuthentication")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.defaultToOAuthAuthentication")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a boolean flag which indicates whether the default
+            authentication is OAuth or not. The default interpretation is false
+            for this property.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -310,11 +495,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.supportsHttpsTrafficOnly")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.supportsHttpsTrafficOnly")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.supportsHttpsTrafficOnly")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -329,6 +516,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableNfsV3">
+      <MemberSignature Language="C#" Value="public bool? EnableNfsV3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableNfsV3" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.EnableNfsV3" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableNfsV3 As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableNfsV3 : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.EnableNfsV3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.isNfsV3Enabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.isNfsV3Enabled")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets NFS 3.0 protocol support enabled if set to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Encryption">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.Encryption Encryption { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.Encryption Encryption" />
@@ -338,11 +554,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.encryption")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.encryption")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.encryption")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -357,6 +575,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ExtendedLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.ExtendedLocation ExtendedLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.ExtendedLocation ExtendedLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.ExtendedLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedLocation As ExtendedLocation" />
+      <MemberSignature Language="F#" Value="member this.ExtendedLocation : Microsoft.Azure.Management.Storage.Models.ExtendedLocation with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.ExtendedLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="extendedLocation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="extendedLocation")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.ExtendedLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the extendedLocation of the resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FailoverInProgress">
       <MemberSignature Language="C#" Value="public bool? FailoverInProgress { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; FailoverInProgress" />
@@ -366,11 +613,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.failoverInProgress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.failoverInProgress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.failoverInProgress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -394,11 +643,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.geoReplicationStats")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.geoReplicationStats")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.geoReplicationStats")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -421,11 +672,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="identity")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="identity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="identity")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -434,6 +687,37 @@
       <Docs>
         <summary>
             Gets or sets the identity of the resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImmutableStorageWithVersioning">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount ImmutableStorageWithVersioning { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount ImmutableStorageWithVersioning" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.ImmutableStorageWithVersioning" />
+      <MemberSignature Language="VB.NET" Value="Public Property ImmutableStorageWithVersioning As ImmutableStorageAccount" />
+      <MemberSignature Language="F#" Value="member this.ImmutableStorageWithVersioning : Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.ImmutableStorageWithVersioning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.immutableStorageWithVersioning")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.immutableStorageWithVersioning")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.ImmutableStorageAccount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the property is immutable and can only be set to true
+            at the account creation time. When set to true, it enables object
+            level immutability for all the containers in the account by
+            default.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -448,11 +732,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.isHnsEnabled")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.isHnsEnabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.isHnsEnabled")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -461,6 +747,64 @@
       <Docs>
         <summary>
             Gets or sets account HierarchicalNamespace enabled if sets to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyCreationTime">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.KeyCreationTime KeyCreationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.KeyCreationTime KeyCreationTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.KeyCreationTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeyCreationTime As KeyCreationTime" />
+      <MemberSignature Language="F#" Value="member this.KeyCreationTime : Microsoft.Azure.Management.Storage.Models.KeyCreationTime" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.KeyCreationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.keyCreationTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.keyCreationTime")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.KeyCreationTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets storage account keys creation time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.KeyPolicy KeyPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.KeyPolicy KeyPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.KeyPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeyPolicy As KeyPolicy" />
+      <MemberSignature Language="F#" Value="member this.KeyPolicy : Microsoft.Azure.Management.Storage.Models.KeyPolicy" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.KeyPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.keyPolicy")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.keyPolicy")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.KeyPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets keyPolicy assigned to the storage account.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -475,11 +819,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="kind")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="kind")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="kind")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -503,11 +849,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.largeFileSharesState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.largeFileSharesState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.largeFileSharesState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -532,11 +880,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.lastGeoFailoverTime")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.lastGeoFailoverTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.lastGeoFailoverTime")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -554,6 +904,37 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MinimumTlsVersion">
+      <MemberSignature Language="C#" Value="public string MinimumTlsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinimumTlsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.MinimumTlsVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinimumTlsVersion As String" />
+      <MemberSignature Language="F#" Value="member this.MinimumTlsVersion : string with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.MinimumTlsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.minimumTlsVersion")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.minimumTlsVersion")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets set the minimum TLS version to be permitted on
+            requests to storage. The default interpretation is TLS 1.0 for this
+            property. Possible values include: 'TLS1_0', 'TLS1_1', 'TLS1_2'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="NetworkRuleSet">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.NetworkRuleSet NetworkRuleSet { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.NetworkRuleSet NetworkRuleSet" />
@@ -563,11 +944,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.networkAcls")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.networkAcls")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.networkAcls")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -590,11 +973,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryEndpoints")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryEndpoints")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryEndpoints")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -619,11 +1004,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryLocation")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryLocation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.primaryLocation")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -647,11 +1034,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpointConnections")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpointConnections")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateEndpointConnections")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -675,11 +1064,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -695,6 +1086,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PublicNetworkAccess">
+      <MemberSignature Language="C#" Value="public string PublicNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.PublicNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property PublicNetworkAccess As String" />
+      <MemberSignature Language="F#" Value="member this.PublicNetworkAccess : string with get, set" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.PublicNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccess")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.publicNetworkAccess")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets allow or disallow public network access to Storage
+            Account. Value is optional but if passed in, must be 'Enabled' or
+            'Disabled'. Possible values include: 'Enabled', 'Disabled'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RoutingPreference">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.RoutingPreference RoutingPreference { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.RoutingPreference RoutingPreference" />
@@ -704,11 +1125,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.routingPreference")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.routingPreference")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.routingPreference")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -723,6 +1146,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SasPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.SasPolicy SasPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.SasPolicy SasPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Storage.Models.StorageAccount.SasPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SasPolicy As SasPolicy" />
+      <MemberSignature Language="F#" Value="member this.SasPolicy : Microsoft.Azure.Management.Storage.Models.SasPolicy" Usage="Microsoft.Azure.Management.Storage.Models.StorageAccount.SasPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.sasPolicy")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.sasPolicy")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.Storage.Models.SasPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets sasPolicy assigned to the storage account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SecondaryEndpoints">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.Storage.Models.Endpoints SecondaryEndpoints { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.Storage.Models.Endpoints SecondaryEndpoints" />
@@ -732,11 +1184,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryEndpoints")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryEndpoints")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryEndpoints")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -761,11 +1215,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryLocation")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryLocation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.secondaryLocation")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -790,11 +1246,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="sku")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="sku")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="sku")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -817,11 +1275,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfPrimary")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfPrimary")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfPrimary")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -846,11 +1306,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfSecondary")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfSecondary")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.statusOfSecondary")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -876,7 +1338,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Storage</AssemblyName>
-        <AssemblyVersion>14.0.0.0</AssemblyVersion>
+        <AssemblyVersion>21.0.0.0</AssemblyVersion>
+        <AssemblyVersion>22.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type TableQuery = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-    <AssemblyVersion>1.0.5.0</AssemblyVersion>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
+    <AssemblyVersion>1.0.8.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -18,7 +17,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            Represents a query against a specified table.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -30,8 +31,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -39,8 +39,11 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            Represents a query against a specified table.
+            </summary>
+        <remarks>A <see cref="T:Microsoft.Azure.Cosmos.Table.TableQuery" /> instance aggregates the query parameters to use when the query is executed. One of the <c>executeQuery</c> or <c>executeQuerySegmented</c> methods 
+            of <see cref="T:Microsoft.Azure.Cosmos.Table.CloudTableClient" /> must be called to execute the query. The parameters are encoded and passed to the server when the table query is executed.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CombineFilters">
@@ -52,8 +55,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -68,11 +70,13 @@
         <Parameter Name="filterB" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="filterA">To be added.</param>
-        <param name="operatorString">To be added.</param>
-        <param name="filterB">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="filterA">A string containing the first formatted filter condition.</param>
+        <param name="operatorString">A string containing the operator to use (AND, OR).</param>
+        <param name="filterB">A string containing the second formatted filter condition.</param>
+        <summary>
+            Creates a filter condition using the specified logical operator on two filter conditions.
+            </summary>
+        <returns>A string containing the combined filter expression.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -85,8 +89,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -97,8 +100,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Make a shallow copy of this TableQuery object.
+            </summary>
+        <returns>The newly created shallow copy.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -111,8 +116,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -122,8 +126,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>
+            Gets or sets the filter expression to use in the table query.
+            </summary>
+        <value>A string containing the filter expression to use in the query.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -136,8 +142,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -152,11 +157,13 @@
         <Parameter Name="givenValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A string containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the string value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -169,8 +176,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -185,11 +191,13 @@
         <Parameter Name="givenValue" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A byte array containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the binary value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -202,8 +210,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -218,11 +225,13 @@
         <Parameter Name="givenValue" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A <c>bool</c> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the boolean value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -235,8 +244,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -251,11 +259,13 @@
         <Parameter Name="givenValue" Type="System.DateTimeOffset" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A <see cref="T:System.DateTimeOffset" /> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the <see cref="T:System.DateTimeOffset" /> value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -268,8 +278,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -284,11 +293,13 @@
         <Parameter Name="givenValue" Type="System.Double" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A <see cref="T:System.Double" /> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the <see cref="T:System.Double" /> value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -301,8 +312,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -317,11 +327,13 @@
         <Parameter Name="givenValue" Type="System.Guid" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">A <see cref="T:System.Guid" /> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for the <see cref="T:System.Guid" /> value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -334,8 +346,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -350,11 +361,13 @@
         <Parameter Name="givenValue" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">An <see cref="T:System.Int32" /> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for an <see cref="T:System.Int32" /> value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -367,8 +380,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -383,11 +395,13 @@
         <Parameter Name="givenValue" Type="System.Int64" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <param name="operation">To be added.</param>
-        <param name="givenValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName">A string containing the name of the property to compare.</param>
+        <param name="operation">A string containing the comparison operator to use.</param>
+        <param name="givenValue">An <see cref="T:System.Int64" /> containing the value to compare with the property.</param>
+        <summary>
+            Generates a property filter condition string for an <see cref="T:System.Int64" /> value.
+            </summary>
+        <returns>A string containing the formatted filter condition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -400,8 +414,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -414,9 +427,11 @@
         <Parameter Name="propertyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName" />
+        <summary>
+            Define order by expression for the table query. Only applied to Cosmos Table Endpoint. 
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -429,8 +444,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -443,9 +457,11 @@
         <Parameter Name="propertyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="propertyName" />
+        <summary>
+            Define order by desc expression for the table query. Only applied to Cosmos Table Endpoint.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -458,8 +474,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -476,18 +491,21 @@
         <Parameter Name="columns" Type="System.String[]">
           <Attributes>
             <Attribute FrameworkAlternate="azure-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
       </Parameters>
       <Docs>
-        <typeparam name="T">To be added.</typeparam>
-        <param name="entity">To be added.</param>
-        <param name="columns">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <typeparam name="T">The entity type of the query.</typeparam>
+        <param name="entity">The entity instance to project off of.</param>
+        <param name="columns">A list of string objects containing the names of the entity properties to return when the query is executed.</param>
+        <summary>
+            Specifies the names of the entity properties to return when the query is executed against the table. 
+            </summary>
+        <returns>A <see cref="T:Microsoft.Azure.Cosmos.Table.TableQuery" /> instance set with the entity properties to return.</returns>
+        <remarks>The Project clause is optional on a query, used to limit the properties returned from the server. By default, a query will return all properties from the entity.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -499,8 +517,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -513,10 +530,12 @@
         <Parameter Name="columns" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="columns">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="columns">A list of string objects containing the property names of the table entity properties to return when the query is executed.</param>
+        <summary>
+            Defines the property names of the table entity properties to return when the table query is executed. 
+            </summary>
+        <returns>A <see cref="T:Microsoft.Azure.Cosmos.Table.TableQuery" /> instance set with the table entity properties to return.</returns>
+        <remarks>The select clause is optional on a table query, used to limit the table properties returned from the server. By default, a query will return all properties from the table entity.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SelectColumns">
@@ -528,8 +547,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -539,8 +557,10 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>
+            Gets or sets the property names of the table entity properties to return when the table query is executed.
+            </summary>
+        <value>A list of strings containing the property names of the table entity properties to return when the query is executed.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -553,8 +573,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -567,9 +586,11 @@
         <Parameter Name="take" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
-        <param name="take">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="take">The maximum number of entities for the table query to return.</param>
+        <summary>
+            Defines the upper bound for the number of entities the query returns.
+            </summary>
+        <returns>A <see cref="T:Microsoft.Azure.Cosmos.Table.TableQuery" /> instance set with the number of entities to return.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -582,8 +603,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -593,8 +613,10 @@
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>
+            Gets or sets the number of entities the table query will return. 
+            </summary>
+        <value>The maximum number of entities for the table query to return.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -607,8 +629,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
-        <AssemblyVersion>1.0.5.0</AssemblyVersion>
-        <AssemblyVersion>1.0.6.0</AssemblyVersion>
+        <AssemblyVersion>1.0.8.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Table.Client</AssemblyName>
@@ -621,10 +642,12 @@
         <Parameter Name="filter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="filter">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="filter">A string containing the filter expression to apply to the table query.</param>
+        <summary>
+            Defines a filter expression for the table query. Only entities that satisfy the specified filter expression will be returned by the query. 
+            </summary>
+        <returns>A <see cref="T:Microsoft.Azure.Cosmos.Table.TableQuery" /> instance set with the filter on entities to return.</returns>
+        <remarks>Setting a filter expression is optional; by default, all entities in the table are returned if no filter expression is specified in the table query.</remarks>
       </Docs>
     </Member>
   </Members>

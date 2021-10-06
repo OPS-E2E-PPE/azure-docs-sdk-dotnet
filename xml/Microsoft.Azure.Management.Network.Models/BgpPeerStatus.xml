@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type BgpPeerStatus = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            BGP peer status details
+            BGP peer status details.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,20 +38,20 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BgpPeerStatus (string localAddress = default, string neighbor = default, int? asn = default, string state = default, string connectedDuration = default, long? routesReceived = default, long? messagesSent = default, long? messagesReceived = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localAddress, string neighbor, valuetype System.Nullable`1&lt;int32&gt; asn, string state, string connectedDuration, valuetype System.Nullable`1&lt;int64&gt; routesReceived, valuetype System.Nullable`1&lt;int64&gt; messagesSent, valuetype System.Nullable`1&lt;int64&gt; messagesReceived) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.BgpPeerStatus.#ctor(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional localAddress As String = null, Optional neighbor As String = null, Optional asn As Nullable(Of Integer) = null, Optional state As String = null, Optional connectedDuration As String = null, Optional routesReceived As Nullable(Of Long) = null, Optional messagesSent As Nullable(Of Long) = null, Optional messagesReceived As Nullable(Of Long) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.BgpPeerStatus : string * string * Nullable&lt;int&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; -&gt; Microsoft.Azure.Management.Network.Models.BgpPeerStatus" Usage="new Microsoft.Azure.Management.Network.Models.BgpPeerStatus (localAddress, neighbor, asn, state, connectedDuration, routesReceived, messagesSent, messagesReceived)" />
+      <MemberSignature Language="C#" Value="public BgpPeerStatus (string localAddress = default, string neighbor = default, long? asn = default, string state = default, string connectedDuration = default, long? routesReceived = default, long? messagesSent = default, long? messagesReceived = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localAddress, string neighbor, valuetype System.Nullable`1&lt;int64&gt; asn, string state, string connectedDuration, valuetype System.Nullable`1&lt;int64&gt; routesReceived, valuetype System.Nullable`1&lt;int64&gt; messagesSent, valuetype System.Nullable`1&lt;int64&gt; messagesReceived) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.BgpPeerStatus.#ctor(System.String,System.String,System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional localAddress As String = Nothing, Optional neighbor As String = Nothing, Optional asn As Nullable(Of Long) = Nothing, Optional state As String = Nothing, Optional connectedDuration As String = Nothing, Optional routesReceived As Nullable(Of Long) = Nothing, Optional messagesSent As Nullable(Of Long) = Nothing, Optional messagesReceived As Nullable(Of Long) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.BgpPeerStatus : string * string * Nullable&lt;int64&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; -&gt; Microsoft.Azure.Management.Network.Models.BgpPeerStatus" Usage="new Microsoft.Azure.Management.Network.Models.BgpPeerStatus (localAddress, neighbor, asn, state, connectedDuration, routesReceived, messagesSent, messagesReceived)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="localAddress" Type="System.String" />
         <Parameter Name="neighbor" Type="System.String" />
-        <Parameter Name="asn" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="asn" Type="System.Nullable&lt;System.Int64&gt;" />
         <Parameter Name="state" Type="System.String" />
         <Parameter Name="connectedDuration" Type="System.String" />
         <Parameter Name="routesReceived" Type="System.Nullable&lt;System.Int64&gt;" />
@@ -60,19 +60,19 @@
       </Parameters>
       <Docs>
         <param name="localAddress">The virtual network gateway's local
-            address</param>
-        <param name="neighbor">The remote BGP peer</param>
+            address.</param>
+        <param name="neighbor">The remote BGP peer.</param>
         <param name="asn">The autonomous system number of the remote BGP
-            peer</param>
+            peer.</param>
         <param name="state">The BGP peer state. Possible values include:
             'Unknown', 'Stopped', 'Idle', 'Connecting', 'Connected'</param>
         <param name="connectedDuration">For how long the peering has been
-            up</param>
+            up.</param>
         <param name="routesReceived">The number of routes learned from this
-            peer</param>
-        <param name="messagesSent">The number of BGP messages sent</param>
+            peer.</param>
+        <param name="messagesSent">The number of BGP messages sent.</param>
         <param name="messagesReceived">The number of BGP messages
-            received</param>
+            received.</param>
         <summary>
             Initializes a new instance of the BgpPeerStatus class.
             </summary>
@@ -80,27 +80,28 @@
       </Docs>
     </Member>
     <Member MemberName="Asn">
-      <MemberSignature Language="C#" Value="public int? Asn { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; Asn" />
+      <MemberSignature Language="C#" Value="public long? Asn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; Asn" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Network.Models.BgpPeerStatus.Asn" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Asn As Nullable(Of Integer)" />
-      <MemberSignature Language="F#" Value="member this.Asn : Nullable&lt;int&gt;" Usage="Microsoft.Azure.Management.Network.Models.BgpPeerStatus.Asn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Asn As Nullable(Of Long)" />
+      <MemberSignature Language="F#" Value="member this.Asn : Nullable&lt;int64&gt;" Usage="Microsoft.Azure.Management.Network.Models.BgpPeerStatus.Asn" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="asn")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="asn")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="asn")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the autonomous system number of the remote BGP peer
+            Gets the autonomous system number of the remote BGP peer.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -115,11 +116,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="connectedDuration")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="connectedDuration")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="connectedDuration")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -127,7 +129,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets for how long the peering has been up
+            Gets for how long the peering has been up.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -142,11 +144,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="localAddress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="localAddress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="localAddress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -154,7 +157,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the virtual network gateway's local address
+            Gets the virtual network gateway's local address.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -169,11 +172,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="messagesReceived")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="messagesReceived")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="messagesReceived")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -181,7 +185,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the number of BGP messages received
+            Gets the number of BGP messages received.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -196,11 +200,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="messagesSent")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="messagesSent")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="messagesSent")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -208,7 +213,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the number of BGP messages sent
+            Gets the number of BGP messages sent.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -223,11 +228,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="neighbor")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="neighbor")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="neighbor")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -235,7 +241,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the remote BGP peer
+            Gets the remote BGP peer.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -250,11 +256,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="routesReceived")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="routesReceived")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="routesReceived")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -262,7 +269,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the number of routes learned from this peer
+            Gets the number of routes learned from this peer.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -277,11 +284,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="state")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="state")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="state")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -294,6 +302,31 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.BgpPeerStatus.Validate" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Validate ()" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit&#xA;override this.Validate : unit -&gt; unit" Usage="bgpPeerStatus.Validate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Validate the object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
       </Docs>
     </Member>
   </Members>

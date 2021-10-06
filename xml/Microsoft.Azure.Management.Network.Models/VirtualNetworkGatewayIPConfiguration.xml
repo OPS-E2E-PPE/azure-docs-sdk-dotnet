@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type VirtualNetworkGatewayIPConfiguration = class&#xA;    inherit SubResource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Network.Models.SubResource</BaseTypeName>
@@ -14,12 +14,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            IP configuration for virtual network gateway
+            IP configuration for virtual network gateway.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,36 +45,39 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public VirtualNetworkGatewayIPConfiguration (string id = default, string privateIPAllocationMethod = default, Microsoft.Azure.Management.Network.Models.SubResource subnet = default, Microsoft.Azure.Management.Network.Models.SubResource publicIPAddress = default, string provisioningState = default, string name = default, string etag = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string privateIPAllocationMethod, class Microsoft.Azure.Management.Network.Models.SubResource subnet, class Microsoft.Azure.Management.Network.Models.SubResource publicIPAddress, string provisioningState, string name, string etag) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.#ctor(System.String,System.String,Microsoft.Azure.Management.Network.Models.SubResource,Microsoft.Azure.Management.Network.Models.SubResource,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional privateIPAllocationMethod As String = null, Optional subnet As SubResource = null, Optional publicIPAddress As SubResource = null, Optional provisioningState As String = null, Optional name As String = null, Optional etag As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration : string * string * Microsoft.Azure.Management.Network.Models.SubResource * Microsoft.Azure.Management.Network.Models.SubResource * string * string * string -&gt; Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration" Usage="new Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration (id, privateIPAllocationMethod, subnet, publicIPAddress, provisioningState, name, etag)" />
+      <MemberSignature Language="C#" Value="public VirtualNetworkGatewayIPConfiguration (string id = default, string privateIPAllocationMethod = default, Microsoft.Azure.Management.Network.Models.SubResource subnet = default, Microsoft.Azure.Management.Network.Models.SubResource publicIPAddress = default, string privateIPAddress = default, string provisioningState = default, string name = default, string etag = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string privateIPAllocationMethod, class Microsoft.Azure.Management.Network.Models.SubResource subnet, class Microsoft.Azure.Management.Network.Models.SubResource publicIPAddress, string privateIPAddress, string provisioningState, string name, string etag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.#ctor(System.String,System.String,Microsoft.Azure.Management.Network.Models.SubResource,Microsoft.Azure.Management.Network.Models.SubResource,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional privateIPAllocationMethod As String = Nothing, Optional subnet As SubResource = Nothing, Optional publicIPAddress As SubResource = Nothing, Optional privateIPAddress As String = Nothing, Optional provisioningState As String = Nothing, Optional name As String = Nothing, Optional etag As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration : string * string * Microsoft.Azure.Management.Network.Models.SubResource * Microsoft.Azure.Management.Network.Models.SubResource * string * string * string * string -&gt; Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration" Usage="new Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration (id, privateIPAllocationMethod, subnet, publicIPAddress, privateIPAddress, provisioningState, name, etag)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="privateIPAllocationMethod" Type="System.String" />
         <Parameter Name="subnet" Type="Microsoft.Azure.Management.Network.Models.SubResource" />
         <Parameter Name="publicIPAddress" Type="Microsoft.Azure.Management.Network.Models.SubResource" />
+        <Parameter Name="privateIPAddress" Type="System.String" />
         <Parameter Name="provisioningState" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="etag" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id">Resource ID.</param>
-        <param name="privateIPAllocationMethod">The private IP allocation
-            method. Possible values are: 'Static' and 'Dynamic'. Possible
-            values include: 'Static', 'Dynamic'</param>
-        <param name="subnet">The reference of the subnet resource.</param>
-        <param name="publicIPAddress">The reference of the public IP
+        <param name="privateIPAllocationMethod">The private IP address
+            allocation method. Possible values include: 'Static',
+            'Dynamic'</param>
+        <param name="subnet">The reference to the subnet resource.</param>
+        <param name="publicIPAddress">The reference to the public IP
             resource.</param>
+        <param name="privateIPAddress">Private IP Address for this
+            gateway.</param>
         <param name="provisioningState">The provisioning state of the
-            public IP resource. Possible values are: 'Updating', 'Deleting',
-            and 'Failed'.</param>
+            virtual network gateway IP configuration resource. Possible values
+            include: 'Succeeded', 'Updating', 'Deleting', 'Failed'</param>
         <param name="name">The name of the resource that is unique within a
             resource group. This name can be used to access the
             resource.</param>
@@ -87,19 +91,20 @@
       </Docs>
     </Member>
     <Member MemberName="Etag">
-      <MemberSignature Language="C#" Value="public string Etag { get; set; }" />
+      <MemberSignature Language="C#" Value="public string Etag { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Etag" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.Etag" />
-      <MemberSignature Language="VB.NET" Value="Public Property Etag As String" />
-      <MemberSignature Language="F#" Value="member this.Etag : string with get, set" Usage="Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.Etag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Etag As String" />
+      <MemberSignature Language="F#" Value="member this.Etag : string" Usage="Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.Etag" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="etag")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="etag")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="etag")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -107,8 +112,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a unique read-only string that changes whenever the
-            resource is updated.
+            Gets a unique read-only string that changes whenever the resource
+            is updated.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -123,11 +128,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -142,6 +148,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PrivateIPAddress">
+      <MemberSignature Language="C#" Value="public string PrivateIPAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateIPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.PrivateIPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrivateIPAddress As String" />
+      <MemberSignature Language="F#" Value="member this.PrivateIPAddress : string" Usage="Microsoft.Azure.Management.Network.Models.VirtualNetworkGatewayIPConfiguration.PrivateIPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateIPAddress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateIPAddress")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets private IP Address for this gateway.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PrivateIPAllocationMethod">
       <MemberSignature Language="C#" Value="public string PrivateIPAllocationMethod { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string PrivateIPAllocationMethod" />
@@ -151,11 +185,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.privateIPAllocationMethod")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.privateIPAllocationMethod")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.privateIPAllocationMethod")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -163,9 +198,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the private IP allocation method. Possible values are:
-            'Static' and 'Dynamic'. Possible values include: 'Static',
-            'Dynamic'
+            Gets or sets the private IP address allocation method. Possible
+            values include: 'Static', 'Dynamic'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -180,11 +214,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -192,8 +227,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the provisioning state of the public IP resource. Possible
-            values are: 'Updating', 'Deleting', and 'Failed'.
+            Gets the provisioning state of the virtual network gateway IP
+            configuration resource. Possible values include: 'Succeeded',
+            'Updating', 'Deleting', 'Failed'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -208,11 +244,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.publicIPAddress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.publicIPAddress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.publicIPAddress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -220,7 +257,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the reference of the public IP resource.
+            Gets or sets the reference to the public IP resource.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -235,11 +272,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.subnet")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.subnet")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.subnet")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -247,7 +285,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the reference of the subnet resource.
+            Gets or sets the reference to the subnet resource.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

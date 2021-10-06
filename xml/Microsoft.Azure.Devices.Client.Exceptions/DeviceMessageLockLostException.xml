@@ -6,14 +6,13 @@
   <TypeSignature Language="F#" Value="type DeviceMessageLockLostException = class&#xA;    inherit IotHubException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-    <AssemblyVersion>1.21.2.0</AssemblyVersion>
-    <AssemblyVersion>1.21.3.0</AssemblyVersion>
-    <AssemblyVersion>1.21.4.0</AssemblyVersion>
-    <AssemblyVersion>1.22.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.0.0</AssemblyVersion>
-    <AssemblyVersion>1.23.1.0</AssemblyVersion>
-    <AssemblyVersion>1.23.2.0</AssemblyVersion>
-    <AssemblyVersion>1.24.0.0</AssemblyVersion>
+    <AssemblyVersion>1.32.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.0.0</AssemblyVersion>
+    <AssemblyVersion>1.36.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.0.0</AssemblyVersion>
+    <AssemblyVersion>1.37.1.0</AssemblyVersion>
+    <AssemblyVersion>1.37.2.0</AssemblyVersion>
+    <AssemblyVersion>1.38.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Devices.Client.Exceptions.IotHubException</BaseTypeName>
@@ -21,15 +20,21 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Serializable</AttributeName>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            The exception that is thrown when an attempt to communicate with a device fails because the lock token was lost (if the connection is lost and regained for example). This timeout has the same effect as if the message was abandonned.
+            This exception is thrown when attempting to reject/abandon/complete a cloud-to-device message with a lock
+            token that has already expired. The lock token expires after the lock timeout set by the service, or if your
+            client connection was lost and regained while receiving the message but before you could reject/abandon/complete it.
             </summary>
     <remarks>
-            An abandoned message will be re-enqueued in the per-device queue, and the <see cref="T:Microsoft.Azure.Devices.Client.DeviceClient" /> instance will receive it again. A rejected message will be deleted from the queue and not received again by the device.
+            An abandoned message will be re-enqueued in the per-device/module queue, and the <see cref="T:Microsoft.Azure.Devices.Client.DeviceClient" /> instance will receive it again.
+            A rejected message will be deleted from the queue and not received again by the device.
+            For more information on the cause for this error and how to resolve, see <see href="https://docs.microsoft.com/azure/iot-hub/iot-hub-troubleshoot-error-412002-devicemessagelocklost" />.
+            For more information on cloud-to-device message lifecycle, see <see href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messages-c2d#the-cloud-to-device-message-life-cycle" />.
             </remarks>
   </Docs>
   <Members>
@@ -41,14 +46,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -67,14 +71,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -88,6 +91,35 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DeviceMessageLockLostException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException" Usage="new Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" Index="0" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" Index="1" FrameworkAlternate="azure-dotnet;azure-dotnet-legacy" />
+      </Parameters>
+      <Docs>
+        <param name="info">An object that holds the serialized object data about the exception being thrown.</param>
+        <param name="context">An object that contains contextual information about the source or destination.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException" /> class with the specified serialization and context information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DeviceMessageLockLostException (string message, Exception innerException);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Devices.Client.Exceptions.DeviceMessageLockLostException.#ctor(System.String,System.Exception)" />
@@ -96,14 +128,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -127,14 +158,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices.Client</AssemblyName>
-        <AssemblyVersion>1.21.2.0</AssemblyVersion>
-        <AssemblyVersion>1.21.3.0</AssemblyVersion>
-        <AssemblyVersion>1.21.4.0</AssemblyVersion>
-        <AssemblyVersion>1.22.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.0.0</AssemblyVersion>
-        <AssemblyVersion>1.23.1.0</AssemblyVersion>
-        <AssemblyVersion>1.23.2.0</AssemblyVersion>
-        <AssemblyVersion>1.24.0.0</AssemblyVersion>
+        <AssemblyVersion>1.32.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.0.0</AssemblyVersion>
+        <AssemblyVersion>1.36.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.0.0</AssemblyVersion>
+        <AssemblyVersion>1.37.1.0</AssemblyVersion>
+        <AssemblyVersion>1.37.2.0</AssemblyVersion>
+        <AssemblyVersion>1.38.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="deviceId" Type="System.String" />

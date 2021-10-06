@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type Extensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +28,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -38,11 +38,11 @@
         <Parameter Name="composeDeploymentDescription" Type="Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentDescription" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentDescription" /> that describes the compose deployment to be created.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <summary>
           <para>Creates and instantiates the Service Fabric compose deployment described by the compose deployment description.</para>
         </summary>
@@ -103,7 +103,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -114,11 +114,11 @@
         <Parameter Name="timeout" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentDescription" /> that describes the compose deployment to be created.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="timeout">
           <para>Defines the maximum amount of time the system will allow this operation to continue before returning <see cref="T:System.TimeoutException" />.</para>
         </param>
@@ -185,7 +185,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -197,11 +197,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentDescription" /> that describes the compose deployment to be created.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="timeout">
           <para>Defines the maximum amount of time the system will allow this operation to continue before returning <see cref="T:System.TimeoutException" />.</para>
         </param>
@@ -271,7 +271,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -295,6 +295,10 @@
         <remarks>
           <para>All compose deployment state will be lost and cannot be recovered after the compose deployment is deleted.</para>
         </remarks>
+        <exception cref="T:System.Fabric.FabricTransientException">
+          <para>
+            <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
+        </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">
           <para>The <see cref="T:System.Fabric.FabricClient" /> object is in a closed state. Dispose of the <see cref="T:System.Fabric.FabricClient" /> object you are using and instantiate a new <see cref="T:System.Fabric.FabricClient" /> object.</para>
         </exception>
@@ -303,7 +307,7 @@
             <see cref="F:System.Fabric.FabricErrorCode.ComposeDeploymentNotFound" />: The compose deployment does not exist.
             </para>
         </exception>
-        <exception cref="T:System.Fabric.FabricTransientException">
+        <exception cref="T:System.Fabric.FabricException">
           <para>
             <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
         </exception>
@@ -324,7 +328,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -352,6 +356,10 @@
         <remarks>
           <para>All application state will be lost and cannot be recovered after the application is deleted.</para>
         </remarks>
+        <exception cref="T:System.Fabric.FabricTransientException">
+          <para>
+            <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
+        </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">
           <para>The <see cref="T:System.Fabric.FabricClient" /> object is in a closed state. Dispose of the <see cref="T:System.Fabric.FabricClient" /> object you are using and instantiate a new <see cref="T:System.Fabric.FabricClient" /> object.</para>
         </exception>
@@ -360,7 +368,7 @@
             <see cref="F:System.Fabric.FabricErrorCode.ComposeDeploymentNotFound" />: The compose deployment does not exist.
             </para>
         </exception>
-        <exception cref="T:System.Fabric.FabricTransientException">
+        <exception cref="T:System.Fabric.FabricException">
           <para>
             <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
         </exception>
@@ -381,7 +389,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -413,6 +421,10 @@
         <remarks>
           <para>All application state will be lost and cannot be recovered after the application is deleted.</para>
         </remarks>
+        <exception cref="T:System.Fabric.FabricTransientException">
+          <para>
+            <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
+        </exception>
         <exception cref="T:System.Fabric.FabricObjectClosedException">
           <para>The <see cref="T:System.Fabric.FabricClient" /> object is in a closed state. Dispose of the <see cref="T:System.Fabric.FabricClient" /> object you are using and instantiate a new <see cref="T:System.Fabric.FabricClient" /> object.</para>
         </exception>
@@ -421,7 +433,7 @@
             <see cref="F:System.Fabric.FabricErrorCode.ComposeDeploymentNotFound" />: The compose deployment does not exist.
             </para>
         </exception>
-        <exception cref="T:System.Fabric.FabricTransientException">
+        <exception cref="T:System.Fabric.FabricException">
           <para>
             <see cref="F:System.Fabric.FabricErrorCode.ApplicationUpgradeInProgress" />: The application is being upgraded. </para>
         </exception>
@@ -442,7 +454,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Preview.Client.Query.ComposeDeploymentStatusList&gt;</ReturnType>
@@ -452,11 +464,11 @@
         <Parameter Name="composeDeploymentQueryDescription" Type="Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentStatusQueryDescription" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentQueryDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentStatusQueryDescription" /> that determines which compose deployments should be queried.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <summary>
           <para>Gets the status of compose deployments created that match filters specified in query description (if any).
             If the compose deployments do not fit in a page, one page of results is returned as well as a continuation token which can be used to get the next page.</para>
@@ -490,7 +502,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Preview.Client.Query.ComposeDeploymentStatusList&gt;</ReturnType>
@@ -501,11 +513,11 @@
         <Parameter Name="timeout" Type="System.TimeSpan" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentQueryDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentStatusQueryDescription" /> that determines which compose deployments should be queried.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="timeout">
           <para>Defines the maximum amount of time the system will allow this operation to continue before returning <see cref="T:System.TimeoutException" />.</para>
         </param>
@@ -542,7 +554,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ServiceFabric.Preview.Client.Query.ComposeDeploymentStatusList&gt;</ReturnType>
@@ -554,11 +566,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="client">
+          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="composeDeploymentQueryDescription">
           <para>The <see cref="T:Microsoft.ServiceFabric.Preview.Client.Description.ComposeDeploymentStatusQueryDescription" /> that determines which compose deployments should be queried.</para>
         </param>
-        <param name="client">
-          <see cref="T:System.Fabric.FabricClient" /> object.</param>
         <param name="timeout">
           <para>Defines the maximum amount of time the system will allow this operation to continue before returning <see cref="T:System.TimeoutException" />.</para>
         </param>
@@ -598,7 +610,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Fabric.ComposeDeploymentUpgradeProgress&gt;</ReturnType>
@@ -645,7 +657,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -688,7 +700,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -735,7 +747,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -786,7 +798,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -814,7 +826,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceFabric.Preview</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

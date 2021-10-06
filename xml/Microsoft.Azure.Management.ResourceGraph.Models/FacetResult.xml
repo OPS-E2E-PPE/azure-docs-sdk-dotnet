@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
     <AssemblyVersion>0.10.0.0</AssemblyVersion>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.ResourceGraph.Models.Facet</BaseTypeName>
@@ -30,7 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -81,7 +81,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="expression" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
@@ -96,8 +96,8 @@
             results.</param>
         <param name="count">Number of records returned in the facet
             response.</param>
-        <param name="data">A table containing the desired facets. Only
-            present if the facet is valid.</param>
+        <param name="data">A JObject array or Table containing the desired
+            facets. Only present if the facet is valid.</param>
         <summary>
             Initializes a new instance of the FacetResult class.
             </summary>
@@ -114,11 +114,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="count")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="count")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="count")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -146,20 +147,22 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="data")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="data")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="data")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.ResourceGraph.Models.Table</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.Object</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Management.ResourceGraph.Models.Table</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a table containing the desired facets. Only present if
-            the facet is valid.
+            Gets or sets a JObject array or Table containing the desired
+            facets. Only present if the facet is valid.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -175,11 +178,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="totalRecords")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="totalRecords")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="totalRecords")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -203,7 +207,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ResourceGraph</AssemblyName>
         <AssemblyVersion>0.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

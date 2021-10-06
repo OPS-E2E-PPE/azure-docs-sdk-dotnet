@@ -6,9 +6,9 @@
   <TypeSignature Language="F#" Value="type KeywordRecognitionModel = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-    <AssemblyVersion>1.8.0.28</AssemblyVersion>
-    <AssemblyVersion>1.9.0.28</AssemblyVersion>
-    <AssemblyVersion>1.10.0.28</AssemblyVersion>
+    <AssemblyVersion>1.16.0.28</AssemblyVersion>
+    <AssemblyVersion>1.17.0.28</AssemblyVersion>
+    <AssemblyVersion>1.18.0.28</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -20,9 +20,14 @@
   </Interfaces>
   <Docs>
     <summary>
-            Represents keyword recognition model used with StartKeywordRecognitionAsync.
+            Represents keyword recognition model that can trigger an event when pre-defined keywords are spoken.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            While this feature might work with other microphone types,
+            support is limited to the microphone arrays found in the Azure Kinect DK hardware or the Speech Devices SDK.
+              
+            See also: [Get started with Custom Keyword](/azure/cognitive-services/speech-service/custom-keyword-basics)
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="Dispose">
@@ -37,9 +42,9 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -61,9 +66,9 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CognitiveServices.Speech.KeywordRecognitionModel</ReturnType>
@@ -74,10 +79,12 @@
       <Docs>
         <param name="fileName">A string that represents file name for the keyword recognition model.</param>
         <summary>
-            Creates a keyword recognition model using the specified file.
+            Creates a keyword recognition model using the specified `.table` file.
             </summary>
         <returns>The keyword recognition model being created.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            See also: [Get started with Custom Keyword](/azure/cognitive-services/speech-service/custom-keyword-basics)
+            </remarks>
       </Docs>
     </Member>
   </Members>

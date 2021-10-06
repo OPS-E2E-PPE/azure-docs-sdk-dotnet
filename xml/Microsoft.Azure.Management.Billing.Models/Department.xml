@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type Department = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.Billing.Models.Resource</BaseTypeName>
@@ -14,12 +14,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            A department resource.
+            A department.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +47,12 @@
       <MemberSignature Language="C#" Value="public Department (string id = default, string name = default, string type = default, string departmentName = default, string costCenter = default, string status = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Billing.Models.EnrollmentAccount&gt; enrollmentAccounts = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string departmentName, string costCenter, string status, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.Billing.Models.EnrollmentAccount&gt; enrollmentAccounts) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.Department.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.Billing.Models.EnrollmentAccount})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional departmentName As String = null, Optional costCenter As String = null, Optional status As String = null, Optional enrollmentAccounts As IList(Of EnrollmentAccount) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional departmentName As String = Nothing, Optional costCenter As String = Nothing, Optional status As String = Nothing, Optional enrollmentAccounts As IList(Of EnrollmentAccount) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.Department : string * string * string * string * string * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.Billing.Models.EnrollmentAccount&gt; -&gt; Microsoft.Azure.Management.Billing.Models.Department" Usage="new Microsoft.Azure.Management.Billing.Models.Department (id, name, type, departmentName, costCenter, status, enrollmentAccounts)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -66,9 +67,10 @@
         <param name="id">Resource Id.</param>
         <param name="name">Resource name.</param>
         <param name="type">Resource type.</param>
-        <param name="departmentName">The name for department.</param>
-        <param name="costCenter">The cost center name.</param>
-        <param name="status">The status for department.</param>
+        <param name="departmentName">The name of the department.</param>
+        <param name="costCenter">The cost center associated with the
+            department.</param>
+        <param name="status">The status of the department.</param>
         <param name="enrollmentAccounts">Associated enrollment accounts. By
             default this is not populated, unless it's specified in
             $expand.</param>
@@ -87,11 +89,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.costCenter")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -99,7 +102,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the cost center name.
+            Gets or sets the cost center associated with the department.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -114,11 +117,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.departmentName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.departmentName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.departmentName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -126,7 +130,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the name for department.
+            Gets or sets the name of the department.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -141,11 +145,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.enrollmentAccounts")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.enrollmentAccounts")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.enrollmentAccounts")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -169,11 +174,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -181,7 +187,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the status for department.
+            Gets or sets the status of the department.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

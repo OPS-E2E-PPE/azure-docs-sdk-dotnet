@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type SqlDBTableDataSet = class&#xA;    inherit DataSet" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.DataShare.Models.DataSet</BaseTypeName>
@@ -15,10 +14,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>Newtonsoft.Json.JsonObject("SqlDBTable")</AttributeName>
+      <AttributeName Language="C#">[Newtonsoft.Json.JsonObject("SqlDBTable")]</AttributeName>
+      <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonObject("SqlDBTable")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -36,8 +37,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,16 +48,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public SqlDBTableDataSet (string databaseName, string schemaName, string sqlServerResourceId, string tableName, string id = default, string name = default, string type = default, string dataSetId = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string databaseName, string schemaName, string sqlServerResourceId, string tableName, string id, string name, string type, string dataSetId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (databaseName As String, schemaName As String, sqlServerResourceId As String, tableName As String, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional dataSetId As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet : string * string * string * string * string * string * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet" Usage="new Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet (databaseName, schemaName, sqlServerResourceId, tableName, id, name, type, dataSetId)" />
+      <MemberSignature Language="C#" Value="public SqlDBTableDataSet (string databaseName, string schemaName, string sqlServerResourceId, string tableName, string id = default, string name = default, Microsoft.Azure.Management.DataShare.Models.SystemData systemData = default, string type = default, string dataSetId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string databaseName, string schemaName, string sqlServerResourceId, string tableName, string id, string name, class Microsoft.Azure.Management.DataShare.Models.SystemData systemData, string type, string dataSetId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataShare.Models.SystemData,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (databaseName As String, schemaName As String, sqlServerResourceId As String, tableName As String, Optional id As String = Nothing, Optional name As String = Nothing, Optional systemData As SystemData = Nothing, Optional type As String = Nothing, Optional dataSetId As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet : string * string * string * string * string * string * Microsoft.Azure.Management.DataShare.Models.SystemData * string * string -&gt; Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet" Usage="new Microsoft.Azure.Management.DataShare.Models.SqlDBTableDataSet (databaseName, schemaName, sqlServerResourceId, tableName, id, name, systemData, type, dataSetId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="databaseName" Type="System.String" />
@@ -66,6 +65,7 @@
         <Parameter Name="tableName" Type="System.String" />
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.DataShare.Models.SystemData" />
         <Parameter Name="type" Type="System.String" />
         <Parameter Name="dataSetId" Type="System.String" />
       </Parameters>
@@ -78,6 +78,7 @@
         <param name="tableName">SQL DB table name.</param>
         <param name="id">The resource id of the azure resource</param>
         <param name="name">Name of the azure resource</param>
+        <param name="systemData">System Data of the Azure resource.</param>
         <param name="type">Type of the azure resource</param>
         <param name="dataSetId">Unique id for identifying a data set
             resource</param>
@@ -96,12 +97,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.databaseName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.databaseName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.databaseName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -124,12 +125,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.dataSetId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.dataSetId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.dataSetId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -152,12 +153,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.schemaName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.schemaName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.schemaName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -180,12 +181,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.sqlServerResourceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.sqlServerResourceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.sqlServerResourceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -208,12 +209,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.tableName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.tableName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.tableName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -236,8 +237,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataShare</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

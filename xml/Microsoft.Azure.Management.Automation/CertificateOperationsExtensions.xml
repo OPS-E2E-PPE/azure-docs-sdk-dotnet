@@ -7,7 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <AssemblyVersion>3.0.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -59,7 +59,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Automation.Models.Certificate</ReturnType>
@@ -128,12 +128,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt; CreateOrUpdateAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, Microsoft.Azure.Management.Automation.Models.CertificateCreateOrUpdateParameters parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.Certificate&gt; CreateOrUpdateAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, class Microsoft.Azure.Management.Automation.Models.CertificateCreateOrUpdateParameters parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Automation.Models.CertificateCreateOrUpdateParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, parameters As CertificateCreateOrUpdateParameters, Optional cancellationToken As CancellationToken = null) As Task(Of Certificate)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function CreateOrUpdateAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, parameters As CertificateCreateOrUpdateParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Certificate)" />
       <MemberSignature Language="F#" Value="static member CreateOrUpdateAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string * Microsoft.Azure.Management.Automation.Models.CertificateCreateOrUpdateParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.CreateOrUpdateAsync (operations, resourceGroupName, automationAccountName, certificateName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;</ReturnType>
@@ -173,26 +173,34 @@
       </Docs>
     </Member>
     <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.AzureOperationResponse Delete (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccount, string certificateName);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.AzureOperationResponse Delete(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccount, string certificateName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Delete(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Delete (operations As ICertificateOperations, resourceGroupName As String, automationAccount As String, certificateName As String) As AzureOperationResponse" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string -&gt; Microsoft.Azure.AzureOperationResponse" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Delete (operations, resourceGroupName, automationAccount, certificateName)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="C#" Value="public static void Delete (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName);" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Delete(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub Delete (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="F#" Value="static member Delete : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string -&gt; unit" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Delete (operations, resourceGroupName, automationAccountName, certificateName)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.AzureOperationResponse</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.ICertificateOperations" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.ICertificateOperations" RefType="this" Index="0" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" />
+        <Parameter Name="automationAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="automationAccountName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="certificateName" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="certificateName" Type="System.String" Index="3" />
       </Parameters>
       <Docs>
+        <param name="automationAccount">To be added.</param>
         <param name="operations">
             The operations group for this extension method.
             </param>
@@ -208,6 +216,7 @@
         <summary>
             Delete the certificate.
             <see href="http://aka.ms/azureautomationsdk/certificateoperations" /></summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,12 +254,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task DeleteAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task DeleteAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, Optional cancellationToken As CancellationToken = null) As Task" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DeleteAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
       <MemberSignature Language="F#" Value="static member DeleteAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.DeleteAsync (operations, resourceGroupName, automationAccountName, certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -286,26 +295,34 @@
       </Docs>
     </Member>
     <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.CertificateGetResponse Get (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccount, string certificateName);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.CertificateGetResponse Get(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccount, string certificateName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Get(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As ICertificateOperations, resourceGroupName As String, automationAccount As String, certificateName As String) As CertificateGetResponse" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string -&gt; Microsoft.Azure.Management.Automation.Models.CertificateGetResponse" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Get (operations, resourceGroupName, automationAccount, certificateName)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="C#" Value="public static Microsoft.Azure.Management.Automation.Models.Certificate Get (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName);" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Azure.Management.Automation.Models.Certificate Get(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Get(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Get (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String) As Certificate" FrameworkAlternate="azure-dotnet-preview" />
       <MemberSignature Language="F#" Value="static member Get : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string -&gt; Microsoft.Azure.Management.Automation.Models.Certificate" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.Get (operations, resourceGroupName, automationAccountName, certificateName)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Management.Automation.Models.Certificate</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Management.Automation.Models.CertificateGetResponse</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Management.Automation.Models.Certificate</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.ICertificateOperations" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="operations" Type="Microsoft.Azure.Management.Automation.ICertificateOperations" RefType="this" Index="0" />
+        <Parameter Name="resourceGroupName" Type="System.String" Index="1" />
+        <Parameter Name="automationAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="automationAccountName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="certificateName" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="certificateName" Type="System.String" Index="3" />
       </Parameters>
       <Docs>
+        <param name="automationAccount">To be added.</param>
         <param name="operations">
             The operations group for this extension method.
             </param>
@@ -359,12 +376,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt; GetAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.Certificate&gt; GetAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.GetAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, Optional cancellationToken As CancellationToken = null) As Task(Of Certificate)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Certificate)" />
       <MemberSignature Language="F#" Value="static member GetAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.GetAsync (operations, resourceGroupName, automationAccountName, certificateName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;</ReturnType>
@@ -464,7 +481,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;</ReturnType>
@@ -495,12 +512,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt; ListByAutomationAccountAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt; ListByAutomationAccountAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.ListByAutomationAccountAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of Certificate))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of Certificate))" />
       <MemberSignature Language="F#" Value="static member ListByAutomationAccountAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.ListByAutomationAccountAsync (operations, resourceGroupName, automationAccountName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt;</ReturnType>
@@ -540,7 +557,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;</ReturnType>
@@ -567,12 +584,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt; ListByAutomationAccountNextAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string nextPageLink, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Rest.Azure.IPage`1&lt;class Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt; ListByAutomationAccountNextAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string nextPageLink, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.ListByAutomationAccountNextAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountNextAsync (operations As ICertificateOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = null) As Task(Of IPage(Of Certificate))" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ListByAutomationAccountNextAsync (operations As ICertificateOperations, nextPageLink As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of Certificate))" />
       <MemberSignature Language="F#" Value="static member ListByAutomationAccountNextAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt;" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.ListByAutomationAccountNextAsync (operations, nextPageLink, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.Azure.IPage&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;&gt;</ReturnType>
@@ -720,7 +737,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Management.Automation.Models.Certificate</ReturnType>
@@ -759,12 +776,12 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt; UpdateAsync (this Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, Microsoft.Azure.Management.Automation.Models.CertificateUpdateParameters parameters, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Azure.Management.Automation.Models.Certificate&gt; UpdateAsync(class Microsoft.Azure.Management.Automation.ICertificateOperations operations, string resourceGroupName, string automationAccountName, string certificateName, class Microsoft.Azure.Management.Automation.Models.CertificateUpdateParameters parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Automation.ICertificateOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Automation.Models.CertificateUpdateParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, parameters As CertificateUpdateParameters, Optional cancellationToken As CancellationToken = null) As Task(Of Certificate)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function UpdateAsync (operations As ICertificateOperations, resourceGroupName As String, automationAccountName As String, certificateName As String, parameters As CertificateUpdateParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Certificate)" />
       <MemberSignature Language="F#" Value="static member UpdateAsync : Microsoft.Azure.Management.Automation.ICertificateOperations * string * string * string * Microsoft.Azure.Management.Automation.Models.CertificateUpdateParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;" Usage="Microsoft.Azure.Management.Automation.CertificateOperationsExtensions.UpdateAsync (operations, resourceGroupName, automationAccountName, certificateName, parameters, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Automation</AssemblyName>
-        <AssemblyVersion>3.0.1.0</AssemblyVersion>
+        <AssemblyVersion>3.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Azure.Management.Automation.Models.Certificate&gt;</ReturnType>

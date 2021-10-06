@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.DataBoxEdge.Models.ARMBaseModel</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,6 +35,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,21 +46,22 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Container (string dataFormat, string id = default, string name = default, string type = default, string containerStatus = default, Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails refreshDetails = default, DateTime? createdDateTime = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dataFormat, string id, string name, string type, string containerStatus, class Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails refreshDetails, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; createdDateTime) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.Container.#ctor(System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails,System.Nullable{System.DateTime})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (dataFormat As String, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional containerStatus As String = null, Optional refreshDetails As RefreshDetails = null, Optional createdDateTime As Nullable(Of DateTime) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.Container : string * string * string * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails * Nullable&lt;DateTime&gt; -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.Container" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.Container (dataFormat, id, name, type, containerStatus, refreshDetails, createdDateTime)" />
+      <MemberSignature Language="C#" Value="public Container (string dataFormat, string id = default, string name = default, string type = default, Microsoft.Azure.Management.DataBoxEdge.Models.SystemData systemData = default, string containerStatus = default, Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails refreshDetails = default, DateTime? createdDateTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dataFormat, string id, string name, string type, class Microsoft.Azure.Management.DataBoxEdge.Models.SystemData systemData, string containerStatus, class Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails refreshDetails, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; createdDateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.Container.#ctor(System.String,System.String,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.SystemData,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails,System.Nullable{System.DateTime})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dataFormat As String, Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional systemData As SystemData = Nothing, Optional containerStatus As String = Nothing, Optional refreshDetails As RefreshDetails = Nothing, Optional createdDateTime As Nullable(Of DateTime) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.Container : string * string * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.SystemData * string * Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails * Nullable&lt;DateTime&gt; -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.Container" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.Container (dataFormat, id, name, type, systemData, containerStatus, refreshDetails, createdDateTime)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="dataFormat" Type="System.String" />
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="type" Type="System.String" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.DataBoxEdge.Models.SystemData" />
         <Parameter Name="containerStatus" Type="System.String" />
         <Parameter Name="refreshDetails" Type="Microsoft.Azure.Management.DataBoxEdge.Models.RefreshDetails" />
         <Parameter Name="createdDateTime" Type="System.Nullable&lt;System.DateTime&gt;" />
@@ -69,6 +73,7 @@
             object.</param>
         <param name="name">The object name.</param>
         <param name="type">The hierarchical type of the object.</param>
+        <param name="systemData">Container in DataBoxEdge Resource</param>
         <param name="containerStatus">Current status of the container.
             Possible values include: 'OK', 'Offline', 'Unknown', 'Updating',
             'NeedsAttention'</param>
@@ -92,10 +97,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.containerStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.containerStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.containerStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -120,10 +127,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.createdDateTime")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.createdDateTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.createdDateTime")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -147,10 +156,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.dataFormat")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.dataFormat")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.dataFormat")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -175,10 +186,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshDetails")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshDetails")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshDetails")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -187,6 +200,34 @@
       <Docs>
         <summary>
             Gets details of the refresh job on this container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemData">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.DataBoxEdge.Models.SystemData SystemData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.DataBoxEdge.Models.SystemData SystemData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataBoxEdge.Models.Container.SystemData" />
+      <MemberSignature Language="VB.NET" Value="Public Property SystemData As SystemData" />
+      <MemberSignature Language="F#" Value="member this.SystemData : Microsoft.Azure.Management.DataBoxEdge.Models.SystemData with get, set" Usage="Microsoft.Azure.Management.DataBoxEdge.Models.Container.SystemData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="systemData")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="systemData")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.DataBoxEdge.Models.SystemData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets container in DataBoxEdge Resource
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -202,6 +243,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

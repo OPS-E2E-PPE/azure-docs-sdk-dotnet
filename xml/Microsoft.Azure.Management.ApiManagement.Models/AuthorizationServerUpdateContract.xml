@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type AuthorizationServerUpdateContract = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.ApiManagement.Models.Resource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,15 +47,16 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AuthorizationServerUpdateContract (string id = default, string name = default, string type = default, string description = default, System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; authorizationMethods = default, System.Collections.Generic.IList&lt;string&gt; clientAuthenticationMethod = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; tokenBodyParameters = default, string tokenEndpoint = default, bool? supportState = default, string defaultScope = default, System.Collections.Generic.IList&lt;string&gt; bearerTokenSendingMethods = default, string clientSecret = default, string resourceOwnerUsername = default, string resourceOwnerPassword = default, string displayName = default, string clientRegistrationEndpoint = default, string authorizationEndpoint = default, System.Collections.Generic.IList&lt;string&gt; grantTypes = default, string clientId = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string description, class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; authorizationMethods, class System.Collections.Generic.IList`1&lt;string&gt; clientAuthenticationMethod, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; tokenBodyParameters, string tokenEndpoint, valuetype System.Nullable`1&lt;bool&gt; supportState, string defaultScope, class System.Collections.Generic.IList`1&lt;string&gt; bearerTokenSendingMethods, string clientSecret, string resourceOwnerUsername, string resourceOwnerPassword, string displayName, string clientRegistrationEndpoint, string authorizationEndpoint, class System.Collections.Generic.IList`1&lt;string&gt; grantTypes, string clientId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.Nullable{Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod}},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract},System.String,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IList{System.String},System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional description As String = null, Optional authorizationMethods As IList(Of Nullable(Of AuthorizationMethod)) = null, Optional clientAuthenticationMethod As IList(Of String) = null, Optional tokenBodyParameters As IList(Of TokenBodyParameterContract) = null, Optional tokenEndpoint As String = null, Optional supportState As Nullable(Of Boolean) = null, Optional defaultScope As String = null, Optional bearerTokenSendingMethods As IList(Of String) = null, Optional clientSecret As String = null, Optional resourceOwnerUsername As String = null, Optional resourceOwnerPassword As String = null, Optional displayName As String = null, Optional clientRegistrationEndpoint As String = null, Optional authorizationEndpoint As String = null, Optional grantTypes As IList(Of String) = null, Optional clientId As String = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract : string * string * string * string * System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; * string * Nullable&lt;bool&gt; * string * System.Collections.Generic.IList&lt;string&gt; * string * string * string * string * string * string * System.Collections.Generic.IList&lt;string&gt; * string -&gt; Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract" Usage="new Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract (id, name, type, description, authorizationMethods, clientAuthenticationMethod, tokenBodyParameters, tokenEndpoint, supportState, defaultScope, bearerTokenSendingMethods, clientSecret, resourceOwnerUsername, resourceOwnerPassword, displayName, clientRegistrationEndpoint, authorizationEndpoint, grantTypes, clientId)" />
+      <MemberSignature Language="C#" Value="public AuthorizationServerUpdateContract (string id = default, string name = default, string type = default, string description = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod?&gt; authorizationMethods = default, System.Collections.Generic.IList&lt;string&gt; clientAuthenticationMethod = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; tokenBodyParameters = default, string tokenEndpoint = default, bool? supportState = default, string defaultScope = default, System.Collections.Generic.IList&lt;string&gt; bearerTokenSendingMethods = default, string resourceOwnerUsername = default, string resourceOwnerPassword = default, string displayName = default, string clientRegistrationEndpoint = default, string authorizationEndpoint = default, System.Collections.Generic.IList&lt;string&gt; grantTypes = default, string clientId = default, string clientSecret = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string description, class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; authorizationMethods, class System.Collections.Generic.IList`1&lt;string&gt; clientAuthenticationMethod, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; tokenBodyParameters, string tokenEndpoint, valuetype System.Nullable`1&lt;bool&gt; supportState, string defaultScope, class System.Collections.Generic.IList`1&lt;string&gt; bearerTokenSendingMethods, string resourceOwnerUsername, string resourceOwnerPassword, string displayName, string clientRegistrationEndpoint, string authorizationEndpoint, class System.Collections.Generic.IList`1&lt;string&gt; grantTypes, string clientId, string clientSecret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.Nullable{Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod}},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract},System.String,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IList{System.String},System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional description As String = Nothing, Optional authorizationMethods As IList(Of Nullable(Of AuthorizationMethod)) = Nothing, Optional clientAuthenticationMethod As IList(Of String) = Nothing, Optional tokenBodyParameters As IList(Of TokenBodyParameterContract) = Nothing, Optional tokenEndpoint As String = Nothing, Optional supportState As Nullable(Of Boolean) = Nothing, Optional defaultScope As String = Nothing, Optional bearerTokenSendingMethods As IList(Of String) = Nothing, Optional resourceOwnerUsername As String = Nothing, Optional resourceOwnerPassword As String = Nothing, Optional displayName As String = Nothing, Optional clientRegistrationEndpoint As String = Nothing, Optional authorizationEndpoint As String = Nothing, Optional grantTypes As IList(Of String) = Nothing, Optional clientId As String = Nothing, Optional clientSecret As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract : string * string * string * string * System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.TokenBodyParameterContract&gt; * string * Nullable&lt;bool&gt; * string * System.Collections.Generic.IList&lt;string&gt; * string * string * string * string * string * System.Collections.Generic.IList&lt;string&gt; * string * string -&gt; Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract" Usage="new Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract (id, name, type, description, authorizationMethods, clientAuthenticationMethod, tokenBodyParameters, tokenEndpoint, supportState, defaultScope, bearerTokenSendingMethods, resourceOwnerUsername, resourceOwnerPassword, displayName, clientRegistrationEndpoint, authorizationEndpoint, grantTypes, clientId, clientSecret)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -66,7 +70,6 @@
         <Parameter Name="supportState" Type="System.Nullable&lt;System.Boolean&gt;" />
         <Parameter Name="defaultScope" Type="System.String" />
         <Parameter Name="bearerTokenSendingMethods" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
-        <Parameter Name="clientSecret" Type="System.String" />
         <Parameter Name="resourceOwnerUsername" Type="System.String" />
         <Parameter Name="resourceOwnerPassword" Type="System.String" />
         <Parameter Name="displayName" Type="System.String" />
@@ -74,6 +77,7 @@
         <Parameter Name="authorizationEndpoint" Type="System.String" />
         <Parameter Name="grantTypes" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
         <Parameter Name="clientId" Type="System.String" />
+        <Parameter Name="clientSecret" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id">Resource ID.</param>
@@ -107,8 +111,6 @@
             values.</param>
         <param name="bearerTokenSendingMethods">Specifies the mechanism by
             which access token is passed to the API. </param>
-        <param name="clientSecret">Client or app secret registered with
-            this authorization server.</param>
         <param name="resourceOwnerUsername">Can be optionally specified
             when resource owner password grant type is supported by this
             authorization server. Default resource owner username.</param>
@@ -127,6 +129,10 @@
             client uses to request the access token.</param>
         <param name="clientId">Client or app id registered with this
             authorization server.</param>
+        <param name="clientSecret">Client or app secret registered with
+            this authorization server. This property will not be filled on
+            'GET' operations! Use '/listSecrets' POST request to get the
+            value.</param>
         <summary>
             Initializes a new instance of the AuthorizationServerUpdateContract
             class.
@@ -143,11 +149,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationEndpoint")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationEndpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationEndpoint")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -163,7 +171,7 @@
       </Docs>
     </Member>
     <Member MemberName="AuthorizationMethods">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; AuthorizationMethods { get; set; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod?&gt; AuthorizationMethods { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.ApiManagement.Models.AuthorizationMethod&gt;&gt; AuthorizationMethods" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.ApiManagement.Models.AuthorizationServerUpdateContract.AuthorizationMethods" />
       <MemberSignature Language="VB.NET" Value="Public Property AuthorizationMethods As IList(Of Nullable(Of AuthorizationMethod))" />
@@ -171,11 +179,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationMethods")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationMethods")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.authorizationMethods")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -199,11 +209,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.bearerTokenSendingMethods")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.bearerTokenSendingMethods")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.bearerTokenSendingMethods")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -227,11 +239,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.clientAuthenticationMethod")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.clientAuthenticationMethod")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.clientAuthenticationMethod")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -258,11 +272,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.clientId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.clientId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.clientId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -286,11 +302,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.clientRegistrationEndpoint")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.clientRegistrationEndpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.clientRegistrationEndpoint")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -315,11 +333,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.clientSecret")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.clientSecret")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.clientSecret")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -328,7 +348,8 @@
       <Docs>
         <summary>
             Gets or sets client or app secret registered with this
-            authorization server.
+            authorization server. This property will not be filled on 'GET'
+            operations! Use '/listSecrets' POST request to get the value.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -343,11 +364,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.defaultScope")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.defaultScope")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.defaultScope")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -372,11 +395,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.description")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.description")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.description")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -400,11 +425,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.displayName")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -427,11 +454,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.grantTypes")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.grantTypes")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.grantTypes")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -455,11 +484,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerPassword")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerPassword")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerPassword")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -484,11 +515,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerUsername")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerUsername")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.resourceOwnerUsername")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -513,11 +546,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.supportState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.supportState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.supportState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -542,11 +577,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenBodyParameters")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenBodyParameters")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenBodyParameters")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -572,11 +609,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenEndpoint")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenEndpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.tokenEndpoint")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -600,7 +639,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.ApiManagement</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

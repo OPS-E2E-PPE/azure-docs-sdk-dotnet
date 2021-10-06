@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ChaosParameters = class&#xA;    inherit ByteSerializable" />
   <AssemblyInfo>
     <AssemblyName>System.Fabric</AssemblyName>
-    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Fabric.ByteSerializable</BaseTypeName>
@@ -14,7 +14,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Serializable</AttributeName>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -47,12 +48,12 @@
       <MemberSignature Language="C#" Value="public ChaosParameters (long maxConcurrentFaults, TimeSpan? timeToRun = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 maxConcurrentFaults, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; timeToRun) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.Chaos.DataStructures.ChaosParameters.#ctor(System.Int64,System.Nullable{System.TimeSpan})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (maxConcurrentFaults As Long, Optional timeToRun As Nullable(Of TimeSpan) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (maxConcurrentFaults As Long, Optional timeToRun As Nullable(Of TimeSpan) = Nothing)" />
       <MemberSignature Language="F#" Value="new System.Fabric.Chaos.DataStructures.ChaosParameters : int64 * Nullable&lt;TimeSpan&gt; -&gt; System.Fabric.Chaos.DataStructures.ChaosParameters" Usage="new System.Fabric.Chaos.DataStructures.ChaosParameters (maxConcurrentFaults, timeToRun)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maxConcurrentFaults" Type="System.Int64" />
@@ -73,12 +74,12 @@
       <MemberSignature Language="C#" Value="public ChaosParameters (TimeSpan maxClusterStabilizationTimeout, long maxConcurrentFaults, bool enableMoveReplicaFaults, TimeSpan? timeToRun = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan maxClusterStabilizationTimeout, int64 maxConcurrentFaults, bool enableMoveReplicaFaults, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; timeToRun) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Fabric.Chaos.DataStructures.ChaosParameters.#ctor(System.TimeSpan,System.Int64,System.Boolean,System.Nullable{System.TimeSpan})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (maxClusterStabilizationTimeout As TimeSpan, maxConcurrentFaults As Long, enableMoveReplicaFaults As Boolean, Optional timeToRun As Nullable(Of TimeSpan) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (maxClusterStabilizationTimeout As TimeSpan, maxConcurrentFaults As Long, enableMoveReplicaFaults As Boolean, Optional timeToRun As Nullable(Of TimeSpan) = Nothing)" />
       <MemberSignature Language="F#" Value="new System.Fabric.Chaos.DataStructures.ChaosParameters : TimeSpan * int64 * bool * Nullable&lt;TimeSpan&gt; -&gt; System.Fabric.Chaos.DataStructures.ChaosParameters" Usage="new System.Fabric.Chaos.DataStructures.ChaosParameters (maxClusterStabilizationTimeout, maxConcurrentFaults, enableMoveReplicaFaults, timeToRun)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maxClusterStabilizationTimeout" Type="System.TimeSpan" />
@@ -90,7 +91,7 @@
         <param name="maxClusterStabilizationTimeout">The maximum amount of time to wait for the entire cluster to stabilize after a fault iteration; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="maxConcurrentFaults">Maximum number of concurrent faults induced per iteration with the lowest being 1. The higher the concurrency the more aggressive the failovers
             thus inducing more complex series of failures to uncover bugs. using 2 or 3 for this is recommended.</param>
-        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary and MoveSecondary faults.</param>
+        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary, MoveSecondary, MoveInstance, and MoveAuxiliary faults.</param>
         <param name="timeToRun">Total time Chaos should run; maximum allowed value is TimeSpan.FromSeconds(uint.MaxValue)</param>
         <summary>
           <para>Initializes a new instance of the <see cref="T:System.Fabric.Chaos.DataStructures.ChaosParameters" /> class.</para>
@@ -108,7 +109,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maxClusterStabilizationTimeout" Type="System.TimeSpan" />
@@ -121,7 +122,7 @@
         <param name="maxClusterStabilizationTimeout">The maximum amount of time to wait for the entire cluster to stabilize after a fault iteration; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="maxConcurrentFaults">Maximum number of concurrent faults induced per iteration with the lowest being 1. The higher the concurrency the more aggressive the failovers
             thus inducing more complex series of failures to uncover bugs. using 2 or 3 for this is recommended.</param>
-        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary and MoveSecondary faults.</param>
+        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary, MoveSecondary, MoveInstance, and MoveAuxiliary faults.</param>
         <param name="timeToRun">After running for this much time, Chaos will stop; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="context">This is a bag of (key, value) pairs. This can be used to record detailed context about why Chaos is being started for example.</param>
         <summary>
@@ -140,7 +141,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maxClusterStabilizationTimeout" Type="System.TimeSpan" />
@@ -155,7 +156,7 @@
         <param name="maxClusterStabilizationTimeout">The maximum amount of time to wait for the entire cluster to stabilize after a fault iteration; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="maxConcurrentFaults">Maximum number of concurrent faults induced per iteration with the lowest being 1. The higher the concurrency the more aggressive the failovers
             thus inducing more complex series of failures to uncover bugs. using 2 or 3 for this is recommended.</param>
-        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary and MoveSecondary faults.</param>
+        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary, MoveSecondary, MoveInstance, and MoveAuxiliary faults.</param>
         <param name="timeToRun">After running for this much time, Chaos will stop; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="context">This is a bag of (key, value) pairs. This can be used to record detailed context about why Chaos is being started for example.</param>
         <param name="waitTimeBetweenIterations">This is the amount of pause between two consecutive iterations of fault inducing. The more the pause, the less is the rate of faults over time; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
@@ -175,7 +176,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="maxClusterStabilizationTimeout" Type="System.TimeSpan" />
@@ -191,7 +192,7 @@
         <param name="maxClusterStabilizationTimeout">The maximum amount of time to wait for the entire cluster to stabilize after a fault iteration; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="maxConcurrentFaults">Maximum number of concurrent faults induced per iteration with the lowest being 1. The higher the concurrency the more aggressive the failovers
             thus inducing more complex series of failures to uncover bugs. using 2 or 3 for this is recommended.</param>
-        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary and MoveSecondary faults.</param>
+        <param name="enableMoveReplicaFaults">Enables or disables the MovePrimary, MoveSecondary, MoveInstance, and MoveAuxiliary faults.</param>
         <param name="timeToRun">After running for this much time, Chaos will stop; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
         <param name="context">This is a bag of (key, value) pairs. This can be used to record detailed context about why Chaos is being started for example.</param>
         <param name="waitTimeBetweenIterations">This is the amount of pause between two consecutive iterations of fault inducing. The more the pause, the less is the rate of faults over time; cannot exceed TimeSpan.FromSeconds(uint.MaxValue)</param>
@@ -212,7 +213,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Fabric.Chaos.DataStructures.ChaosTargetFilter</ReturnType>
@@ -235,11 +236,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -266,11 +268,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -293,11 +296,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -305,7 +309,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Enables or disables the MovePrimary and MoveSecondary faults.
+            Enables or disables the MovePrimary, MoveSecondary, MoveInstance, and MoveAuxiliary faults.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -320,11 +324,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -349,11 +354,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -377,7 +383,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -404,7 +410,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -429,11 +435,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -458,7 +465,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -481,11 +488,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -510,11 +518,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -539,7 +548,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Fabric</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

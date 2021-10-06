@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type VmSizeCompatibilityFilterV2 = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,15 +47,16 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public VmSizeCompatibilityFilterV2 (string filterMode = default, System.Collections.Generic.IList&lt;string&gt; regions = default, System.Collections.Generic.IList&lt;string&gt; clusterFlavors = default, System.Collections.Generic.IList&lt;string&gt; nodeTypes = default, System.Collections.Generic.IList&lt;string&gt; clusterVersions = default, System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.HDInsight.Models.OSType&gt;&gt; osType = default, System.Collections.Generic.IList&lt;string&gt; vmSizes = default);" />
+      <MemberSignature Language="C#" Value="public VmSizeCompatibilityFilterV2 (string filterMode = default, System.Collections.Generic.IList&lt;string&gt; regions = default, System.Collections.Generic.IList&lt;string&gt; clusterFlavors = default, System.Collections.Generic.IList&lt;string&gt; nodeTypes = default, System.Collections.Generic.IList&lt;string&gt; clusterVersions = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.HDInsight.Models.OSType?&gt; osType = default, System.Collections.Generic.IList&lt;string&gt; vmSizes = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filterMode, class System.Collections.Generic.IList`1&lt;string&gt; regions, class System.Collections.Generic.IList`1&lt;string&gt; clusterFlavors, class System.Collections.Generic.IList`1&lt;string&gt; nodeTypes, class System.Collections.Generic.IList`1&lt;string&gt; clusterVersions, class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.HDInsight.Models.OSType&gt;&gt; osType, class System.Collections.Generic.IList`1&lt;string&gt; vmSizes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.HDInsight.Models.VmSizeCompatibilityFilterV2.#ctor(System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.Nullable{Microsoft.Azure.Management.HDInsight.Models.OSType}},System.Collections.Generic.IList{System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional filterMode As String = null, Optional regions As IList(Of String) = null, Optional clusterFlavors As IList(Of String) = null, Optional nodeTypes As IList(Of String) = null, Optional clusterVersions As IList(Of String) = null, Optional osType As IList(Of Nullable(Of OSType)) = null, Optional vmSizes As IList(Of String) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional filterMode As String = Nothing, Optional regions As IList(Of String) = Nothing, Optional clusterFlavors As IList(Of String) = Nothing, Optional nodeTypes As IList(Of String) = Nothing, Optional clusterVersions As IList(Of String) = Nothing, Optional osType As IList(Of Nullable(Of OSType)) = Nothing, Optional vmSizes As IList(Of String) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.HDInsight.Models.VmSizeCompatibilityFilterV2 : string * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.HDInsight.Models.OSType&gt;&gt; * System.Collections.Generic.IList&lt;string&gt; -&gt; Microsoft.Azure.Management.HDInsight.Models.VmSizeCompatibilityFilterV2" Usage="new Microsoft.Azure.Management.HDInsight.Models.VmSizeCompatibilityFilterV2 (filterMode, regions, clusterFlavors, nodeTypes, clusterVersions, osType, vmSizes)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="filterMode" Type="System.String" />
@@ -67,7 +70,8 @@
       <Docs>
         <param name="filterMode">The filtering mode. Effectively this can
             enabling or disabling the VM sizes in a particular set. Possible
-            values include: 'Exclude', 'Include'</param>
+            values include: 'Exclude', 'Include', 'Recommend',
+            'Default'</param>
         <param name="regions">The list of regions under the effect of the
             filter.</param>
         <param name="clusterFlavors">The list of cluster flavors under the
@@ -95,11 +99,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="clusterFlavors")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="clusterFlavors")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="clusterFlavors")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -123,11 +129,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="clusterVersions")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="clusterVersions")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="clusterVersions")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -151,11 +159,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="filterMode")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="filterMode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="filterMode")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -165,7 +175,7 @@
         <summary>
             Gets or sets the filtering mode. Effectively this can enabling or
             disabling the VM sizes in a particular set. Possible values
-            include: 'Exclude', 'Include'
+            include: 'Exclude', 'Include', 'Recommend', 'Default'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -180,11 +190,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="nodeTypes")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="nodeTypes")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="nodeTypes")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -199,7 +211,7 @@
       </Docs>
     </Member>
     <Member MemberName="OsType">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Nullable&lt;Microsoft.Azure.Management.HDInsight.Models.OSType&gt;&gt; OsType { get; set; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Azure.Management.HDInsight.Models.OSType?&gt; OsType { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Nullable`1&lt;valuetype Microsoft.Azure.Management.HDInsight.Models.OSType&gt;&gt; OsType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.HDInsight.Models.VmSizeCompatibilityFilterV2.OsType" />
       <MemberSignature Language="VB.NET" Value="Public Property OsType As IList(Of Nullable(Of OSType))" />
@@ -207,11 +219,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="osType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="osType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="osType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -234,11 +248,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="regions")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="regions")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="regions")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -261,11 +277,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.HDInsight</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="vmSizes")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="vmSizes")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="vmSizes")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

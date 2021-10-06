@@ -6,9 +6,9 @@
   <TypeSignature Language="F#" Value="type DetailedSpeechRecognitionResult = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-    <AssemblyVersion>1.8.0.28</AssemblyVersion>
-    <AssemblyVersion>1.9.0.28</AssemblyVersion>
-    <AssemblyVersion>1.10.0.28</AssemblyVersion>
+    <AssemblyVersion>1.16.0.28</AssemblyVersion>
+    <AssemblyVersion>1.17.0.28</AssemblyVersion>
+    <AssemblyVersion>1.18.0.28</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -16,15 +16,23 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.Serialization.DataContract]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataContract&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            Detailed recognition result.
-            Changed in version 1.7.0.
-            </summary>
-    <remarks>To be added.</remarks>
+             Contains recognition details including confidence score, recognized text, raw lexical form, normalized form, 
+             and normalized form with masked profanity.
+             Changed in 1.7.0
+             </summary>
+    <remarks>
+             The following example shows differences between display forms:
+            
+             * Text: Can we meet at 2:40 PM today?
+             * LexicalForm: can we meet at two forty pm today
+             * NormalizedForm: can we meet at 2:40 PM today
+             </remarks>
   </Docs>
   <Members>
     <Member MemberName="Confidence">
@@ -36,13 +44,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -50,7 +59,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Confidence of recognition.
+            Confidence of recognition, from 0.0 (no confidence) to 1.0 (full confidence)
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -65,13 +74,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember(Name="Lexical")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember(Name="Lexical")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember(Name="Lexical")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -79,7 +89,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Raw lexical form.
+            Raw lexical form of recognized text (the actual words recognized)
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -94,13 +104,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember(Name="MaskedITN")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember(Name="MaskedITN")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember(Name="MaskedITN")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -108,7 +119,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Normalized form with masked profanity.
+            Normalized form with profanity masked
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -123,13 +134,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember(Name="ITN")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember(Name="ITN")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember(Name="ITN")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -137,7 +149,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Normalized form.
+            Inverse-text-normalized ("canonical") form of the recognized text, with phone numbers, numbers, abbreviations ("doctor smith" to "dr smith"), and other transformations applied
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -152,13 +164,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember(Name="Display")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember(Name="Display")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember(Name="Display")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -181,13 +194,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CognitiveServices.Speech.csharp</AssemblyName>
-        <AssemblyVersion>1.8.0.28</AssemblyVersion>
-        <AssemblyVersion>1.9.0.28</AssemblyVersion>
-        <AssemblyVersion>1.10.0.28</AssemblyVersion>
+        <AssemblyVersion>1.16.0.28</AssemblyVersion>
+        <AssemblyVersion>1.17.0.28</AssemblyVersion>
+        <AssemblyVersion>1.18.0.28</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.Serialization.DataMember(Name="Words")</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.Serialization.DataMember(Name="Words")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataMember(Name="Words")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -195,8 +209,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Word level timing result list
-            Added in version 1.7.0.
+            Word level timing result list.
+            Added in 1.7.0
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

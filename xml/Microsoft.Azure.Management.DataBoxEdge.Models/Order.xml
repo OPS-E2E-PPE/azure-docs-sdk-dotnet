@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.DataBoxEdge.Models.ARMBaseModel</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,6 +35,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,35 +46,38 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Order (Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails contactInformation, Microsoft.Azure.Management.DataBoxEdge.Models.Address shippingAddress, string id = default, string name = default, string type = default, Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus currentStatus = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; orderHistory = default, string serialNumber = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; deliveryTrackingInfo = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; returnTrackingInfo = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails contactInformation, class Microsoft.Azure.Management.DataBoxEdge.Models.Address shippingAddress, string id, string name, string type, class Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus currentStatus, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; orderHistory, string serialNumber, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; deliveryTrackingInfo, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; returnTrackingInfo) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.Order.#ctor(Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails,Microsoft.Azure.Management.DataBoxEdge.Models.Address,System.String,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus,System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus},System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo},System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (contactInformation As ContactDetails, shippingAddress As Address, Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional currentStatus As OrderStatus = null, Optional orderHistory As IList(Of OrderStatus) = null, Optional serialNumber As String = null, Optional deliveryTrackingInfo As IList(Of TrackingInfo) = null, Optional returnTrackingInfo As IList(Of TrackingInfo) = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.Order : Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails * Microsoft.Azure.Management.DataBoxEdge.Models.Address * string * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.Order" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.Order (contactInformation, shippingAddress, id, name, type, currentStatus, orderHistory, serialNumber, deliveryTrackingInfo, returnTrackingInfo)" />
+      <MemberSignature Language="C#" Value="public Order (Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails contactInformation, string id = default, string name = default, string type = default, Microsoft.Azure.Management.DataBoxEdge.Models.SystemData systemData = default, Microsoft.Azure.Management.DataBoxEdge.Models.Address shippingAddress = default, Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus currentStatus = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; orderHistory = default, string serialNumber = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; deliveryTrackingInfo = default, System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; returnTrackingInfo = default, string shipmentType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails contactInformation, string id, string name, string type, class Microsoft.Azure.Management.DataBoxEdge.Models.SystemData systemData, class Microsoft.Azure.Management.DataBoxEdge.Models.Address shippingAddress, class Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus currentStatus, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; orderHistory, string serialNumber, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; deliveryTrackingInfo, class System.Collections.Generic.IList`1&lt;class Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; returnTrackingInfo, string shipmentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.Order.#ctor(Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails,System.String,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.SystemData,Microsoft.Azure.Management.DataBoxEdge.Models.Address,Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus,System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus},System.String,System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo},System.Collections.Generic.IList{Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (contactInformation As ContactDetails, Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional systemData As SystemData = Nothing, Optional shippingAddress As Address = Nothing, Optional currentStatus As OrderStatus = Nothing, Optional orderHistory As IList(Of OrderStatus) = Nothing, Optional serialNumber As String = Nothing, Optional deliveryTrackingInfo As IList(Of TrackingInfo) = Nothing, Optional returnTrackingInfo As IList(Of TrackingInfo) = Nothing, Optional shipmentType As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.Order : Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails * string * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.SystemData * Microsoft.Azure.Management.DataBoxEdge.Models.Address * Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt; * string * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; * System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt; * string -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.Order" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.Order (contactInformation, id, name, type, systemData, shippingAddress, currentStatus, orderHistory, serialNumber, deliveryTrackingInfo, returnTrackingInfo, shipmentType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="contactInformation" Type="Microsoft.Azure.Management.DataBoxEdge.Models.ContactDetails" />
-        <Parameter Name="shippingAddress" Type="Microsoft.Azure.Management.DataBoxEdge.Models.Address" />
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="type" Type="System.String" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.DataBoxEdge.Models.SystemData" />
+        <Parameter Name="shippingAddress" Type="Microsoft.Azure.Management.DataBoxEdge.Models.Address" />
         <Parameter Name="currentStatus" Type="Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus" />
         <Parameter Name="orderHistory" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus&gt;" />
         <Parameter Name="serialNumber" Type="System.String" />
         <Parameter Name="deliveryTrackingInfo" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt;" />
         <Parameter Name="returnTrackingInfo" Type="System.Collections.Generic.IList&lt;Microsoft.Azure.Management.DataBoxEdge.Models.TrackingInfo&gt;" />
+        <Parameter Name="shipmentType" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="contactInformation">The contact details.</param>
-        <param name="shippingAddress">The shipping address.</param>
         <param name="id">The path ID that uniquely identifies the
             object.</param>
         <param name="name">The object name.</param>
         <param name="type">The hierarchical type of the object.</param>
+        <param name="systemData">Order configured on ASE resource</param>
+        <param name="shippingAddress">The shipping address.</param>
         <param name="currentStatus">Current status of the order.</param>
         <param name="orderHistory">List of status changes in the
             order.</param>
@@ -82,6 +88,9 @@
         <param name="returnTrackingInfo">Tracking information for the
             package returned from the customer whether it has an original or a
             replacement device.</param>
+        <param name="shipmentType">ShipmentType of the order. Possible
+            values include: 'NotApplicable', 'ShippedToCustomer',
+            'SelfPickup'</param>
         <summary>
             Initializes a new instance of the Order class.
             </summary>
@@ -98,10 +107,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.contactInformation")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.contactInformation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.contactInformation")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -116,19 +127,21 @@
       </Docs>
     </Member>
     <Member MemberName="CurrentStatus">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus CurrentStatus { get; set; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus CurrentStatus { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus CurrentStatus" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataBoxEdge.Models.Order.CurrentStatus" />
-      <MemberSignature Language="VB.NET" Value="Public Property CurrentStatus As OrderStatus" />
-      <MemberSignature Language="F#" Value="member this.CurrentStatus : Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus with get, set" Usage="Microsoft.Azure.Management.DataBoxEdge.Models.Order.CurrentStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentStatus As OrderStatus" />
+      <MemberSignature Language="F#" Value="member this.CurrentStatus : Microsoft.Azure.Management.DataBoxEdge.Models.OrderStatus" Usage="Microsoft.Azure.Management.DataBoxEdge.Models.Order.CurrentStatus" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStatus")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStatus")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStatus")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -136,7 +149,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets current status of the order.
+            Gets current status of the order.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -152,10 +165,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryTrackingInfo")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryTrackingInfo")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryTrackingInfo")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -180,10 +195,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.orderHistory")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.orderHistory")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.orderHistory")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -207,10 +224,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.returnTrackingInfo")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.returnTrackingInfo")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.returnTrackingInfo")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -235,10 +254,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.serialNumber")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.serialNumber")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.serialNumber")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -247,6 +268,35 @@
       <Docs>
         <summary>
             Gets serial number of the device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShipmentType">
+      <MemberSignature Language="C#" Value="public string ShipmentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShipmentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataBoxEdge.Models.Order.ShipmentType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShipmentType As String" />
+      <MemberSignature Language="F#" Value="member this.ShipmentType : string with get, set" Usage="Microsoft.Azure.Management.DataBoxEdge.Models.Order.ShipmentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.shipmentType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.shipmentType")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets shipmentType of the order. Possible values include:
+            'NotApplicable', 'ShippedToCustomer', 'SelfPickup'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -262,10 +312,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.shippingAddress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.shippingAddress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.shippingAddress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -274,6 +326,34 @@
       <Docs>
         <summary>
             Gets or sets the shipping address.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemData">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.DataBoxEdge.Models.SystemData SystemData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.DataBoxEdge.Models.SystemData SystemData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.DataBoxEdge.Models.Order.SystemData" />
+      <MemberSignature Language="VB.NET" Value="Public Property SystemData As SystemData" />
+      <MemberSignature Language="F#" Value="member this.SystemData : Microsoft.Azure.Management.DataBoxEdge.Models.SystemData with get, set" Usage="Microsoft.Azure.Management.DataBoxEdge.Models.Order.SystemData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="systemData")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="systemData")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.DataBoxEdge.Models.SystemData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets order configured on ASE resource
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -289,6 +369,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

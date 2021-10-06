@@ -3117,12 +3117,12 @@
       </Docs>
     </Member>
     <Member MemberName="ProtocolVersion">
-      <MemberSignature Language="C#" Value="public const string ProtocolVersion;" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal string ProtocolVersion" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.ServiceBus.NamespaceManager.ProtocolVersion" />
-      <MemberSignature Language="VB.NET" Value="Public Const ProtocolVersion As String " />
-      <MemberSignature Language="F#" Value="val mutable ProtocolVersion : string" Usage="Microsoft.ServiceBus.NamespaceManager.ProtocolVersion" />
-      <MemberType>Field</MemberType>
+      <MemberSignature Language="C#" Value="public static string ProtocolVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ProtocolVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ServiceBus.NamespaceManager.ProtocolVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property ProtocolVersion As String" />
+      <MemberSignature Language="F#" Value="member this.ProtocolVersion : string with get, set" Usage="Microsoft.ServiceBus.NamespaceManager.ProtocolVersion" />
+      <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.ServiceBus</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -3132,6 +3132,7 @@
       </ReturnValue>
       <Docs>
         <summary>Specifies the string of the format "YYYY-MM" that indicates the client protocol version.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3252,7 +3253,7 @@
       <Docs>
         <param name="path">The path to an existing queue.</param>
         <param name="newPath">The new path to the renamed queue.</param>
-        <summary>Renames a queue inside a namespace.</summary>
+        <summary>Renames a queue inside a namespace. This is currently NOT supported with Premium Service Bus SKU.</summary>
         <returns>Returns <see cref="T:Microsoft.ServiceBus.Messaging.QueueDescription" />.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">Thrown when <paramref name="path" /> is null or empty.</exception>
@@ -3289,7 +3290,7 @@
       <Docs>
         <param name="path">The path to an existing queue.</param>
         <param name="newPath">The new path to the renamed queue.</param>
-        <summary>Asynchronous version of <see cref="M:Microsoft.ServiceBus.NamespaceManager.RenameQueue(System.String,System.String)" />.</summary>
+        <summary>Asynchronous version of <see cref="M:Microsoft.ServiceBus.NamespaceManager.RenameQueue(System.String,System.String)" />. This is currently NOT supported with Premium Service Bus SKU.</summary>
         <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">Thrown when <paramref name="path" /> is null or empty.</exception>
@@ -3326,7 +3327,7 @@
       <Docs>
         <param name="path">The path to an existing topic.</param>
         <param name="newPath">The new path to the renamed topic.</param>
-        <summary>Renames a topic inside a namespace.</summary>
+        <summary>Renames a topic inside a namespace. This is currently NOT supported with Premium Service Bus SKU.</summary>
         <returns>Returns <see cref="T:Microsoft.ServiceBus.Messaging.TopicDescription" />.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">Thrown when <paramref name="path" /> is null or empty.</exception>
@@ -3363,7 +3364,7 @@
       <Docs>
         <param name="path">The path to an existing topic.</param>
         <param name="newPath">The new path to the renamed topic.</param>
-        <summary>Asynchronous version of <see cref="M:Microsoft.ServiceBus.NamespaceManager.RenameTopic(System.String,System.String)" />.</summary>
+        <summary>Asynchronous version of <see cref="M:Microsoft.ServiceBus.NamespaceManager.RenameTopic(System.String,System.String)" />. This is currently NOT supported with Premium Service Bus SKU.</summary>
         <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">Thrown when <paramref name="path" /> is null or empty.</exception>

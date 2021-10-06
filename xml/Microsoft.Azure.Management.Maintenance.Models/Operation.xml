@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type Operation = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,27 +40,30 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Operation (string name = default, Microsoft.Azure.Management.Maintenance.Models.OperationInfo display = default, string origin = default, object properties = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Microsoft.Azure.Management.Maintenance.Models.OperationInfo display, string origin, object properties) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Maintenance.Models.Operation.#ctor(System.String,Microsoft.Azure.Management.Maintenance.Models.OperationInfo,System.String,System.Object)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = null, Optional display As OperationInfo = null, Optional origin As String = null, Optional properties As Object = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Maintenance.Models.Operation : string * Microsoft.Azure.Management.Maintenance.Models.OperationInfo * string * obj -&gt; Microsoft.Azure.Management.Maintenance.Models.Operation" Usage="new Microsoft.Azure.Management.Maintenance.Models.Operation (name, display, origin, properties)" />
+      <MemberSignature Language="C#" Value="public Operation (string name = default, Microsoft.Azure.Management.Maintenance.Models.OperationInfo display = default, string origin = default, object properties = default, bool? isDataAction = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Microsoft.Azure.Management.Maintenance.Models.OperationInfo display, string origin, object properties, valuetype System.Nullable`1&lt;bool&gt; isDataAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Maintenance.Models.Operation.#ctor(System.String,Microsoft.Azure.Management.Maintenance.Models.OperationInfo,System.String,System.Object,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = Nothing, Optional display As OperationInfo = Nothing, Optional origin As String = Nothing, Optional properties As Object = Nothing, Optional isDataAction As Nullable(Of Boolean) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Maintenance.Models.Operation : string * Microsoft.Azure.Management.Maintenance.Models.OperationInfo * string * obj * Nullable&lt;bool&gt; -&gt; Microsoft.Azure.Management.Maintenance.Models.Operation" Usage="new Microsoft.Azure.Management.Maintenance.Models.Operation (name, display, origin, properties, isDataAction)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="display" Type="Microsoft.Azure.Management.Maintenance.Models.OperationInfo" />
         <Parameter Name="origin" Type="System.String" />
         <Parameter Name="properties" Type="System.Object" />
+        <Parameter Name="isDataAction" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="name">Name of the operation</param>
         <param name="display">Display name of the operation</param>
         <param name="origin">Origin of the operation</param>
         <param name="properties">Properties of the operation</param>
+        <param name="isDataAction">Indicates whether the operation is a
+            data action</param>
         <summary>
             Initializes a new instance of the Operation class.
             </summary>
@@ -74,11 +79,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="display")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="display")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="display")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -87,6 +94,34 @@
       <Docs>
         <summary>
             Gets or sets display name of the operation
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataAction">
+      <MemberSignature Language="C#" Value="public bool? IsDataAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsDataAction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.Maintenance.Models.Operation.IsDataAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsDataAction As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IsDataAction : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Azure.Management.Maintenance.Models.Operation.IsDataAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="isDataAction")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="isDataAction")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets indicates whether the operation is a data action
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -101,11 +136,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -128,11 +165,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="origin")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="origin")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="origin")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -155,11 +194,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Maintenance</AssemblyName>
-        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

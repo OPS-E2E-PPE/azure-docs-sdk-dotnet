@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type PaymentProperties = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The properties of the payment.
+            The properties of a payment.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +41,12 @@
       <MemberSignature Language="C#" Value="public PaymentProperties (string paymentType = default, Microsoft.Azure.Management.Billing.Models.Amount amount = default, DateTime? date = default, string paymentMethodFamily = default, string paymentMethodType = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string paymentType, class Microsoft.Azure.Management.Billing.Models.Amount amount, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; date, string paymentMethodFamily, string paymentMethodType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Billing.Models.PaymentProperties.#ctor(System.String,Microsoft.Azure.Management.Billing.Models.Amount,System.Nullable{System.DateTime},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional paymentType As String = null, Optional amount As Amount = null, Optional date As Nullable(Of DateTime) = null, Optional paymentMethodFamily As String = null, Optional paymentMethodType As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional paymentType As String = Nothing, Optional amount As Amount = Nothing, Optional date As Nullable(Of DateTime) = Nothing, Optional paymentMethodFamily As String = Nothing, Optional paymentMethodType As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Billing.Models.PaymentProperties : string * Microsoft.Azure.Management.Billing.Models.Amount * Nullable&lt;DateTime&gt; * string * string -&gt; Microsoft.Azure.Management.Billing.Models.PaymentProperties" Usage="new Microsoft.Azure.Management.Billing.Models.PaymentProperties (paymentType, amount, date, paymentMethodFamily, paymentMethodType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="paymentType" Type="System.String" />
@@ -58,8 +58,8 @@
       <Docs>
         <param name="paymentType">The type of payment.</param>
         <param name="amount">The paid amount.</param>
-        <param name="date">The date of the payment.</param>
-        <param name="paymentMethodFamily">The payment method family.
+        <param name="date">The date when the payment was made.</param>
+        <param name="paymentMethodFamily">The family of payment method.
             Possible values include: 'Credits', 'CheckWire', 'CreditCard',
             'None'</param>
         <param name="paymentMethodType">The type of payment method.</param>
@@ -78,11 +78,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="amount")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="amount")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="amount")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -105,11 +106,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="date")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="date")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="date")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -117,7 +119,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the date of the payment.
+            Gets the date when the payment was made.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -132,11 +134,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodFamily")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodFamily")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodFamily")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -144,7 +147,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the payment method family. Possible values include:
+            Gets or sets the family of payment method. Possible values include:
             'Credits', 'CheckWire', 'CreditCard', 'None'
             </summary>
         <value>To be added.</value>
@@ -160,11 +163,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="paymentMethodType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -187,11 +191,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Billing</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="paymentType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="paymentType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="paymentType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

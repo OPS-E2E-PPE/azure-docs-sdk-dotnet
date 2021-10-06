@@ -6,7 +6,8 @@
   <TypeSignature Language="F#" Value="type EventSubscription = class&#xA;    inherit Resource" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <AssemblyVersion>6.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Azure.Management.EventGrid.Models.Resource</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,7 +34,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,15 +46,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public EventSubscription (string id = default, string name = default, string type = default, string topic = default, string provisioningState = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter = default, System.Collections.Generic.IList&lt;string&gt; labels = default, DateTime? expirationTimeUtc = default, Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string topic, string provisioningState, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter, class System.Collections.Generic.IList`1&lt;string&gt; labels, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTimeUtc, class Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.EventSubscription.#ctor(System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter,System.Collections.Generic.IList{System.String},System.Nullable{System.DateTime},Microsoft.Azure.Management.EventGrid.Models.RetryPolicy,Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional topic As String = null, Optional provisioningState As String = null, Optional destination As EventSubscriptionDestination = null, Optional filter As EventSubscriptionFilter = null, Optional labels As IList(Of String) = null, Optional expirationTimeUtc As Nullable(Of DateTime) = null, Optional retryPolicy As RetryPolicy = null, Optional deadLetterDestination As DeadLetterDestination = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription : string * string * string * string * string * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;DateTime&gt; * Microsoft.Azure.Management.EventGrid.Models.RetryPolicy * Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination -&gt; Microsoft.Azure.Management.EventGrid.Models.EventSubscription" Usage="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription (id, name, type, topic, provisioningState, destination, filter, labels, expirationTimeUtc, retryPolicy, deadLetterDestination)" />
+      <MemberSignature Language="C#" Value="public EventSubscription (string id = default, string name = default, string type = default, string topic = default, string provisioningState = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter = default, System.Collections.Generic.IList&lt;string&gt; labels = default, DateTime? expirationTimeUtc = default, string eventDeliverySchema = default, Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string topic, string provisioningState, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter, class System.Collections.Generic.IList`1&lt;string&gt; labels, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTimeUtc, string eventDeliverySchema, class Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.EventSubscription.#ctor(System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter,System.Collections.Generic.IList{System.String},System.Nullable{System.DateTime},System.String,Microsoft.Azure.Management.EventGrid.Models.RetryPolicy,Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional topic As String = Nothing, Optional provisioningState As String = Nothing, Optional destination As EventSubscriptionDestination = Nothing, Optional filter As EventSubscriptionFilter = Nothing, Optional labels As IList(Of String) = Nothing, Optional expirationTimeUtc As Nullable(Of DateTime) = Nothing, Optional eventDeliverySchema As String = Nothing, Optional retryPolicy As RetryPolicy = Nothing, Optional deadLetterDestination As DeadLetterDestination = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription : string * string * string * string * string * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;DateTime&gt; * string * Microsoft.Azure.Management.EventGrid.Models.RetryPolicy * Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination -&gt; Microsoft.Azure.Management.EventGrid.Models.EventSubscription" Usage="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription (id, name, type, topic, provisioningState, destination, filter, labels, expirationTimeUtc, eventDeliverySchema, retryPolicy, deadLetterDestination)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
@@ -63,8 +66,9 @@
         <Parameter Name="filter" Type="Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter" Index="6" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="labels" Type="System.Collections.Generic.IList&lt;System.String&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
         <Parameter Name="expirationTimeUtc" Type="System.Nullable&lt;System.DateTime&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="retryPolicy" Type="Microsoft.Azure.Management.EventGrid.Models.RetryPolicy" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deadLetterDestination" Type="Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination" Index="10" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="eventDeliverySchema" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="retryPolicy" Type="Microsoft.Azure.Management.EventGrid.Models.RetryPolicy" Index="10" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="deadLetterDestination" Type="Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination" Index="11" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="id">Fully qualified identifier of the
@@ -84,6 +88,9 @@
         <param name="labels">List of user defined labels.</param>
         <param name="expirationTimeUtc">Expiration time of the event
             subscription.</param>
+        <param name="eventDeliverySchema">The event delivery schema for the
+            event subscription. Possible values include: 'EventGridSchema',
+            'CustomInputSchema', 'CloudEventSchemaV1_0'</param>
         <param name="retryPolicy">The retry policy for events. This can be
             used to configure maximum number of delivery attempts and time to
             live for events.</param>
@@ -96,15 +103,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public EventSubscription (string id = default, string name = default, string type = default, string topic = default, string provisioningState = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination = default, Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity deliveryWithResourceIdentity = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter = default, System.Collections.Generic.IList&lt;string&gt; labels = default, DateTime? expirationTimeUtc = default, string eventDeliverySchema = default, Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity deadLetterWithResourceIdentity = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string topic, string provisioningState, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination, class Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity deliveryWithResourceIdentity, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter, class System.Collections.Generic.IList`1&lt;string&gt; labels, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTimeUtc, string eventDeliverySchema, class Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity deadLetterWithResourceIdentity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.EventSubscription.#ctor(System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination,Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter,System.Collections.Generic.IList{System.String},System.Nullable{System.DateTime},System.String,Microsoft.Azure.Management.EventGrid.Models.RetryPolicy,Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination,Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional topic As String = null, Optional provisioningState As String = null, Optional destination As EventSubscriptionDestination = null, Optional deliveryWithResourceIdentity As DeliveryWithResourceIdentity = null, Optional filter As EventSubscriptionFilter = null, Optional labels As IList(Of String) = null, Optional expirationTimeUtc As Nullable(Of DateTime) = null, Optional eventDeliverySchema As String = null, Optional retryPolicy As RetryPolicy = null, Optional deadLetterDestination As DeadLetterDestination = null, Optional deadLetterWithResourceIdentity As DeadLetterWithResourceIdentity = null)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription : string * string * string * string * string * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination * Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;DateTime&gt; * string * Microsoft.Azure.Management.EventGrid.Models.RetryPolicy * Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination * Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity -&gt; Microsoft.Azure.Management.EventGrid.Models.EventSubscription" Usage="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription (id, name, type, topic, provisioningState, destination, deliveryWithResourceIdentity, filter, labels, expirationTimeUtc, eventDeliverySchema, retryPolicy, deadLetterDestination, deadLetterWithResourceIdentity)" />
+      <MemberSignature Language="C#" Value="public EventSubscription (string id = default, string name = default, string type = default, string topic = default, string provisioningState = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination = default, Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity deliveryWithResourceIdentity = default, Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter = default, System.Collections.Generic.IList&lt;string&gt; labels = default, DateTime? expirationTimeUtc = default, string eventDeliverySchema = default, Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination = default, Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity deadLetterWithResourceIdentity = default, Microsoft.Azure.Management.EventGrid.Models.SystemData systemData = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string topic, string provisioningState, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination destination, class Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity deliveryWithResourceIdentity, class Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter filter, class System.Collections.Generic.IList`1&lt;string&gt; labels, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTimeUtc, string eventDeliverySchema, class Microsoft.Azure.Management.EventGrid.Models.RetryPolicy retryPolicy, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination deadLetterDestination, class Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity deadLetterWithResourceIdentity, class Microsoft.Azure.Management.EventGrid.Models.SystemData systemData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.EventGrid.Models.EventSubscription.#ctor(System.String,System.String,System.String,System.String,System.String,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination,Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity,Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter,System.Collections.Generic.IList{System.String},System.Nullable{System.DateTime},System.String,Microsoft.Azure.Management.EventGrid.Models.RetryPolicy,Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination,Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity,Microsoft.Azure.Management.EventGrid.Models.SystemData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional topic As String = Nothing, Optional provisioningState As String = Nothing, Optional destination As EventSubscriptionDestination = Nothing, Optional deliveryWithResourceIdentity As DeliveryWithResourceIdentity = Nothing, Optional filter As EventSubscriptionFilter = Nothing, Optional labels As IList(Of String) = Nothing, Optional expirationTimeUtc As Nullable(Of DateTime) = Nothing, Optional eventDeliverySchema As String = Nothing, Optional retryPolicy As RetryPolicy = Nothing, Optional deadLetterDestination As DeadLetterDestination = Nothing, Optional deadLetterWithResourceIdentity As DeadLetterWithResourceIdentity = Nothing, Optional systemData As SystemData = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription : string * string * string * string * string * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionDestination * Microsoft.Azure.Management.EventGrid.Models.DeliveryWithResourceIdentity * Microsoft.Azure.Management.EventGrid.Models.EventSubscriptionFilter * System.Collections.Generic.IList&lt;string&gt; * Nullable&lt;DateTime&gt; * string * Microsoft.Azure.Management.EventGrid.Models.RetryPolicy * Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination * Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity * Microsoft.Azure.Management.EventGrid.Models.SystemData -&gt; Microsoft.Azure.Management.EventGrid.Models.EventSubscription" Usage="new Microsoft.Azure.Management.EventGrid.Models.EventSubscription (id, name, type, topic, provisioningState, destination, deliveryWithResourceIdentity, filter, labels, expirationTimeUtc, eventDeliverySchema, retryPolicy, deadLetterDestination, deadLetterWithResourceIdentity, systemData)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
@@ -121,12 +128,13 @@
         <Parameter Name="retryPolicy" Type="Microsoft.Azure.Management.EventGrid.Models.RetryPolicy" Index="11" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="deadLetterDestination" Type="Microsoft.Azure.Management.EventGrid.Models.DeadLetterDestination" Index="12" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="deadLetterWithResourceIdentity" Type="Microsoft.Azure.Management.EventGrid.Models.DeadLetterWithResourceIdentity" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Microsoft.Azure.Management.EventGrid.Models.SystemData" Index="14" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="id">Fully qualified identifier of the
             resource.</param>
-        <param name="name">Name of the resource</param>
-        <param name="type">Type of the resource</param>
+        <param name="name">Name of the resource.</param>
+        <param name="type">Type of the resource.</param>
         <param name="topic">Name of the topic of the event
             subscription.</param>
         <param name="provisioningState">Provisioning state of the event
@@ -166,6 +174,8 @@
             Uses the managed identity setup on the parent resource (namely,
             topic or domain) to acquire the authentication tokens being used
             during delivery / dead-lettering.</param>
+        <param name="systemData">The system metadata relating to this
+            resource.</param>
         <summary>
             Initializes a new instance of the EventSubscription class.
             </summary>
@@ -181,11 +191,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterDestination")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterDestination")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterDestination")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -212,11 +224,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="azure-dotnet-preview">
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterWithResourceIdentity")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterWithResourceIdentity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.deadLetterWithResourceIdentity")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -244,11 +257,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="azure-dotnet-preview">
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryWithResourceIdentity")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryWithResourceIdentity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.deliveryWithResourceIdentity")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -275,11 +289,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.destination")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.destination")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.destination")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -305,11 +321,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet-preview">
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.eventDeliverySchema")</AttributeName>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.eventDeliverySchema")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.eventDeliverySchema")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -334,11 +352,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationTimeUtc")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationTimeUtc")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.expirationTimeUtc")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -361,11 +381,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.filter")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.filter")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.filter")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -389,11 +411,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.labels")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.labels")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.labels")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -416,11 +440,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.provisioningState")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -445,11 +471,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.retryPolicy")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.retryPolicy")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.retryPolicy")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -465,6 +493,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SystemData">
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Management.EventGrid.Models.SystemData SystemData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Management.EventGrid.Models.SystemData SystemData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Management.EventGrid.Models.EventSubscription.SystemData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SystemData As SystemData" />
+      <MemberSignature Language="F#" Value="member this.SystemData : Microsoft.Azure.Management.EventGrid.Models.SystemData" Usage="Microsoft.Azure.Management.EventGrid.Models.EventSubscription.SystemData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="systemData")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="systemData")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Azure.Management.EventGrid.Models.SystemData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the system metadata relating to this resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Topic">
       <MemberSignature Language="C#" Value="public string Topic { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Topic" />
@@ -474,11 +530,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.EventGrid</AssemblyName>
-        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <AssemblyVersion>6.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.topic")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.topic")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.topic")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

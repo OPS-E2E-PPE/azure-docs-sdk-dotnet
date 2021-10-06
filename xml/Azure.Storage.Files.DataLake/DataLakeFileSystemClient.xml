@@ -6,7 +6,10 @@
   <TypeSignature Language="F#" Value="type DataLakeFileSystemClient = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-    <AssemblyVersion>12.0.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.1.0</AssemblyVersion>
+    <AssemblyVersion>12.6.2.0</AssemblyVersion>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +31,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +54,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -66,6 +75,80 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (string connectionString, string fileSystemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString, string fileSystemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (connectionString As String, fileSystemName As String)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient : string * string -&gt; Azure.Storage.Files.DataLake.DataLakeFileSystemClient" Usage="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient (connectionString, fileSystemName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="fileSystemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">
+             A connection string includes the authentication information
+             required for your application to access data in an Azure Storage
+             account at runtime.
+            
+             For more information,
+             <see href="https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string">
+             Configure Azure Storage connection strings</see>.
+             </param>
+        <param name="fileSystemName">
+             The name of the blob container in the storage account to reference.
+             </param>
+        <summary>
+             Initializes a new instance of the <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileSystemClient" />
+             class.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (Uri fileSystemUri, Azure.AzureSasCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri fileSystemUri, class Azure.AzureSasCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.Uri,Azure.AzureSasCredential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (fileSystemUri As Uri, credential As AzureSasCredential)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient : Uri * Azure.AzureSasCredential -&gt; Azure.Storage.Files.DataLake.DataLakeFileSystemClient" Usage="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient (fileSystemUri, credential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileSystemUri" Type="System.Uri" />
+        <Parameter Name="credential" Type="Azure.AzureSasCredential" />
+      </Parameters>
+      <Docs>
+        <param name="fileSystemUri">
+            A <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Uri" /> referencing the share that includes the
+            name of the account and the name of the file system.
+            Must not contain shared access signature, which should be passed in the second parameter.
+            </param>
+        <param name="credential">
+            The shared access signature credential used to sign requests.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileSystemClient" />
+            class.
+            </summary>
+        <remarks>
+            This constructor should only be used when shared access signature needs to be updated during lifespan of this client.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (Uri fileSystemUri, Azure.Core.TokenCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri fileSystemUri, class Azure.Core.TokenCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.Uri,Azure.Core.TokenCredential)" />
@@ -74,7 +157,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -104,7 +190,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -136,7 +225,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -158,6 +250,92 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (string connectionString, string fileSystemName, Azure.Storage.Files.DataLake.DataLakeClientOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString, string fileSystemName, class Azure.Storage.Files.DataLake.DataLakeClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.String,System.String,Azure.Storage.Files.DataLake.DataLakeClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (connectionString As String, fileSystemName As String, options As DataLakeClientOptions)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient : string * string * Azure.Storage.Files.DataLake.DataLakeClientOptions -&gt; Azure.Storage.Files.DataLake.DataLakeFileSystemClient" Usage="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient (connectionString, fileSystemName, options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="fileSystemName" Type="System.String" />
+        <Parameter Name="options" Type="Azure.Storage.Files.DataLake.DataLakeClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">
+             A connection string includes the authentication information
+             required for your application to access data in an Azure Storage
+             account at runtime.
+            
+             For more information,
+             <see href="https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string">
+             Configure Azure Storage connection strings</see>.
+             </param>
+        <param name="fileSystemName">
+             The name of the blob container in the storage account to reference.
+             </param>
+        <param name="options">
+             Optional client options that define the transport pipeline
+             policies for authentication, retries, etc., that are applied to
+             every request.
+             </param>
+        <summary>
+             Initializes a new instance of the <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileSystemClient" />
+             class.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (Uri fileSystemUri, Azure.AzureSasCredential credential, Azure.Storage.Files.DataLake.DataLakeClientOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri fileSystemUri, class Azure.AzureSasCredential credential, class Azure.Storage.Files.DataLake.DataLakeClientOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.Uri,Azure.AzureSasCredential,Azure.Storage.Files.DataLake.DataLakeClientOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (fileSystemUri As Uri, credential As AzureSasCredential, options As DataLakeClientOptions)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient : Uri * Azure.AzureSasCredential * Azure.Storage.Files.DataLake.DataLakeClientOptions -&gt; Azure.Storage.Files.DataLake.DataLakeFileSystemClient" Usage="new Azure.Storage.Files.DataLake.DataLakeFileSystemClient (fileSystemUri, credential, options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileSystemUri" Type="System.Uri" />
+        <Parameter Name="credential" Type="Azure.AzureSasCredential" />
+        <Parameter Name="options" Type="Azure.Storage.Files.DataLake.DataLakeClientOptions" />
+      </Parameters>
+      <Docs>
+        <param name="fileSystemUri">
+            A <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Uri" /> referencing the share that includes the
+            name of the account and the name of the file system.
+            Must not contain shared access signature, which should be passed in the second parameter.
+            </param>
+        <param name="credential">
+            The shared access signature credential used to sign requests.
+            </param>
+        <param name="options">
+            Optional client options that define the transport pipeline
+            policies for authentication, retries, etc., that are applied to
+            every request.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileSystemClient" />
+            class.
+            </summary>
+        <remarks>
+            This constructor should only be used when shared access signature needs to be updated during lifespan of this client.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DataLakeFileSystemClient (Uri fileSystemUri, Azure.Core.TokenCredential credential, Azure.Storage.Files.DataLake.DataLakeClientOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri fileSystemUri, class Azure.Core.TokenCredential credential, class Azure.Storage.Files.DataLake.DataLakeClientOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.#ctor(System.Uri,Azure.Core.TokenCredential,Azure.Storage.Files.DataLake.DataLakeClientOptions)" />
@@ -166,7 +344,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -202,7 +383,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileSystemUri" Type="System.Uri" />
@@ -238,7 +422,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -251,16 +438,45 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CanGenerateSasUri">
+      <MemberSignature Language="C#" Value="public virtual bool CanGenerateSasUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGenerateSasUri" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CanGenerateSasUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CanGenerateSasUri As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanGenerateSasUri : bool" Usage="Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CanGenerateSasUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the client is able to generate a SAS.
+            If the client is authenticated with a <see cref="T:Azure.Storage.StorageSharedKeyCredential" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; Create (Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; Create(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Create(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Create (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Create (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemInfo)" />
       <MemberSignature Language="F#" Value="abstract member Create : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&#xA;override this.Create : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;" Usage="dataLakeFileSystemClient.Create (publicAccessType, metadata, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;</ReturnType>
@@ -296,7 +512,9 @@
              under the specified account. If the file system with the same name
              already exists, the operation fails.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/create-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/create-container">
+             Create Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the newly
@@ -312,12 +530,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; CreateAsync (Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; CreateAsync(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateAsync(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAsync (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAsync (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemInfo))" />
       <MemberSignature Language="F#" Value="abstract member CreateAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;&#xA;override this.CreateAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;" Usage="dataLakeFileSystemClient.CreateAsync (publicAccessType, metadata, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;</ReturnType>
@@ -353,7 +574,9 @@
              under the specified account. If the file system with the same name
              already exists, the operation fails.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/create-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/create-container">
+             Create Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the newly
@@ -369,12 +592,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt; CreateDirectory (string path, Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, string permissions = default, string umask = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt; CreateDirectory(string path, class Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, string permissions, string umask, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateDirectory(System.String,Azure.Storage.Files.DataLake.Models.PathHttpHeaders,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateDirectory (path As String, Optional httpHeaders As PathHttpHeaders = null, Optional metadata As IDictionary(Of String, String) = null, Optional permissions As String = null, Optional umask As String = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of DataLakeDirectoryClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateDirectory (path As String, Optional httpHeaders As PathHttpHeaders = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional permissions As String = Nothing, Optional umask As String = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DataLakeDirectoryClient)" />
       <MemberSignature Language="F#" Value="abstract member CreateDirectory : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&#xA;override this.CreateDirectory : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;" Usage="dataLakeFileSystemClient.CreateDirectory (path, httpHeaders, metadata, permissions, umask, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;</ReturnType>
@@ -443,12 +669,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&gt; CreateDirectoryAsync (string path, Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, string permissions = default, string umask = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&gt; CreateDirectoryAsync(string path, class Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, string permissions, string umask, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateDirectoryAsync(System.String,Azure.Storage.Files.DataLake.Models.PathHttpHeaders,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateDirectoryAsync (path As String, Optional httpHeaders As PathHttpHeaders = null, Optional metadata As IDictionary(Of String, String) = null, Optional permissions As String = null, Optional umask As String = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of DataLakeDirectoryClient))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateDirectoryAsync (path As String, Optional httpHeaders As PathHttpHeaders = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional permissions As String = Nothing, Optional umask As String = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DataLakeDirectoryClient))" />
       <MemberSignature Language="F#" Value="abstract member CreateDirectoryAsync : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&gt;&#xA;override this.CreateDirectoryAsync : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&gt;" Usage="dataLakeFileSystemClient.CreateDirectoryAsync (path, httpHeaders, metadata, permissions, umask, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeDirectoryClient&gt;&gt;</ReturnType>
@@ -517,12 +746,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt; CreateFile (string path, Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, string permissions = default, string umask = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakeFileClient&gt; CreateFile(string path, class Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, string permissions, string umask, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateFile(System.String,Azure.Storage.Files.DataLake.Models.PathHttpHeaders,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateFile (path As String, Optional httpHeaders As PathHttpHeaders = null, Optional metadata As IDictionary(Of String, String) = null, Optional permissions As String = null, Optional umask As String = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of DataLakeFileClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateFile (path As String, Optional httpHeaders As PathHttpHeaders = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional permissions As String = Nothing, Optional umask As String = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DataLakeFileClient)" />
       <MemberSignature Language="F#" Value="abstract member CreateFile : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&#xA;override this.CreateFile : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;" Usage="dataLakeFileSystemClient.CreateFile (path, httpHeaders, metadata, permissions, umask, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;</ReturnType>
@@ -591,12 +823,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&gt; CreateFileAsync (string path, Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, string permissions = default, string umask = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&gt; CreateFileAsync(string path, class Azure.Storage.Files.DataLake.Models.PathHttpHeaders httpHeaders, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, string permissions, string umask, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateFileAsync(System.String,Azure.Storage.Files.DataLake.Models.PathHttpHeaders,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateFileAsync (path As String, Optional httpHeaders As PathHttpHeaders = null, Optional metadata As IDictionary(Of String, String) = null, Optional permissions As String = null, Optional umask As String = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of DataLakeFileClient))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateFileAsync (path As String, Optional httpHeaders As PathHttpHeaders = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional permissions As String = Nothing, Optional umask As String = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DataLakeFileClient))" />
       <MemberSignature Language="F#" Value="abstract member CreateFileAsync : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&gt;&#xA;override this.CreateFileAsync : string * Azure.Storage.Files.DataLake.Models.PathHttpHeaders * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&gt;" Usage="dataLakeFileSystemClient.CreateFileAsync (path, httpHeaders, metadata, permissions, umask, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakeFileClient&gt;&gt;</ReturnType>
@@ -665,12 +900,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; CreateIfNotExists (Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; CreateIfNotExists(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateIfNotExists(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIfNotExists (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIfNotExists (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemInfo)" />
       <MemberSignature Language="F#" Value="abstract member CreateIfNotExists : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&#xA;override this.CreateIfNotExists : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;" Usage="dataLakeFileSystemClient.CreateIfNotExists (publicAccessType, metadata, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;</ReturnType>
@@ -706,7 +944,9 @@
              under the specified account. If the file system with the same name
              already exists, the operation fails.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/create-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/create-container">
+             Create Container</see>.
              </summary>
         <returns>
              If the container does not already exist, a <see cref="T:Azure.Response`1" />
@@ -722,12 +962,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; CreateIfNotExistsAsync (Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; CreateIfNotExistsAsync(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType publicAccessType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CreateIfNotExistsAsync(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIfNotExistsAsync (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateIfNotExistsAsync (Optional publicAccessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemInfo))" />
       <MemberSignature Language="F#" Value="abstract member CreateIfNotExistsAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;&#xA;override this.CreateIfNotExistsAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;" Usage="dataLakeFileSystemClient.CreateIfNotExistsAsync (publicAccessType, metadata, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;</ReturnType>
@@ -763,7 +1006,9 @@
              under the specified account. If the file system with the same name
              already exists, the operation fails.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/create-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/create-container">
+             Create Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the newly
@@ -779,12 +1024,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response Delete (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response Delete(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Delete(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Delete (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Delete (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response" />
       <MemberSignature Language="F#" Value="abstract member Delete : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.Delete : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response" Usage="dataLakeFileSystemClient.Delete (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -807,7 +1055,9 @@
              file system for deletion. The file system and any paths contained
              within it are later deleted during garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container">
+             Delete Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> if successful.
@@ -822,12 +1072,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteAsync (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; DeleteAsync(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteAsync(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteAsync (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteAsync (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member DeleteAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.DeleteAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="dataLakeFileSystemClient.DeleteAsync (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -850,7 +1103,9 @@
              file system for deletion. The file system and any paths contained
              within it are later deleted during garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container">
+             Delete Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> if successful.
@@ -865,12 +1120,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response DeleteDirectory (string path, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response DeleteDirectory(string path, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteDirectory(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDirectory (path As String, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDirectory (path As String, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response" />
       <MemberSignature Language="F#" Value="abstract member DeleteDirectory : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.DeleteDirectory : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response" Usage="dataLakeFileSystemClient.DeleteDirectory (path, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -897,7 +1155,9 @@
              deletion. The path is later deleted during
              garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete">
+             Delete Path</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> on successfully deleting.
@@ -912,12 +1172,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteDirectoryAsync (string path, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; DeleteDirectoryAsync(string path, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteDirectoryAsync(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDirectoryAsync (path As String, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDirectoryAsync (path As String, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member DeleteDirectoryAsync : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.DeleteDirectoryAsync : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="dataLakeFileSystemClient.DeleteDirectoryAsync (path, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -943,7 +1206,9 @@
              The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteDirectoryAsync(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" /> deletes a directory in this file system.
              garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete">
+             Delete Path</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> on successfully deleting.
@@ -958,12 +1223,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response DeleteFile (string path, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response DeleteFile(string path, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteFile(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteFile (path As String, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteFile (path As String, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response" />
       <MemberSignature Language="F#" Value="abstract member DeleteFile : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.DeleteFile : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response" Usage="dataLakeFileSystemClient.DeleteFile (path, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -988,7 +1256,9 @@
         <summary>
              The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteFile(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" /> deletes a file in this file system.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete">
+             Delete Path</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> on successfully deleting.
@@ -1003,12 +1273,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteFileAsync (string path, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; DeleteFileAsync(string path, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteFileAsync(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteFileAsync (path As String, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteFileAsync (path As String, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member DeleteFileAsync : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.DeleteFileAsync : string * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="dataLakeFileSystemClient.DeleteFileAsync (path, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -1033,7 +1306,9 @@
         <summary>
              The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteFileAsync(System.String,Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" /> deletes a file in this file system.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/delete">
+             Delete Path</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> on successfully deleting.
@@ -1048,12 +1323,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;bool&gt; DeleteIfExists (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;bool&gt; DeleteIfExists(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteIfExists(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIfExists (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIfExists (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of Boolean)" />
       <MemberSignature Language="F#" Value="abstract member DeleteIfExists : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;bool&gt;&#xA;override this.DeleteIfExists : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;bool&gt;" Usage="dataLakeFileSystemClient.DeleteIfExists (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Boolean&gt;</ReturnType>
@@ -1076,7 +1354,9 @@
              file system for deletion if it exists. The file system and any files
              and directories contained within it are later deleted during garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container">
+             Delete Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> if successful.
@@ -1091,12 +1371,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt; DeleteIfExistsAsync (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;bool&gt;&gt; DeleteIfExistsAsync(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.DeleteIfExistsAsync(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIfExistsAsync (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of Boolean))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteIfExistsAsync (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of Boolean))" />
       <MemberSignature Language="F#" Value="abstract member DeleteIfExistsAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt;&#xA;override this.DeleteIfExistsAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt;" Usage="dataLakeFileSystemClient.DeleteIfExistsAsync (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Boolean&gt;&gt;</ReturnType>
@@ -1119,7 +1402,9 @@
              file system for deletion if it exists. The file system and any files
              and directories contained within it are later deleted during garbage collection.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/delete-container">
+             Delete Container</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response" /> if successful.
@@ -1134,12 +1419,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;bool&gt; Exists (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;bool&gt; Exists(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Exists(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Exists (Optional cancellationToken As CancellationToken = null) As Response(Of Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Exists (Optional cancellationToken As CancellationToken = Nothing) As Response(Of Boolean)" />
       <MemberSignature Language="F#" Value="abstract member Exists : System.Threading.CancellationToken -&gt; Azure.Response&lt;bool&gt;&#xA;override this.Exists : System.Threading.CancellationToken -&gt; Azure.Response&lt;bool&gt;" Usage="dataLakeFileSystemClient.Exists cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Boolean&gt;</ReturnType>
@@ -1173,12 +1461,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt; ExistsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;bool&gt;&gt; ExistsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.ExistsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ExistsAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of Boolean))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ExistsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of Boolean))" />
       <MemberSignature Language="F#" Value="abstract member ExistsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt;&#xA;override this.ExistsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;bool&gt;&gt;" Usage="dataLakeFileSystemClient.ExistsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Boolean&gt;&gt;</ReturnType>
@@ -1208,16 +1499,117 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="GenerateSasUri">
+      <MemberSignature Language="C#" Value="public virtual Uri GenerateSasUri (Azure.Storage.Sas.DataLakeSasBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri GenerateSasUri(class Azure.Storage.Sas.DataLakeSasBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GenerateSasUri(Azure.Storage.Sas.DataLakeSasBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateSasUri (builder As DataLakeSasBuilder) As Uri" />
+      <MemberSignature Language="F#" Value="abstract member GenerateSasUri : Azure.Storage.Sas.DataLakeSasBuilder -&gt; Uri&#xA;override this.GenerateSasUri : Azure.Storage.Sas.DataLakeSasBuilder -&gt; Uri" Usage="dataLakeFileSystemClient.GenerateSasUri builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Azure.Storage.Sas.DataLakeSasBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">
+             Used to generate a Shared Access Signature (SAS).
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GenerateSasUri(Azure.Storage.Sas.DataLakeSasBuilder)" /> returns a <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Uri" />
+             that generates a DataLake FileSystem Service Shared Access Signature (SAS)
+             Uri based on the Client properties and builder passed.
+             The SAS is signed by the shared key credential of the client.
+            
+             To check if the client is able to sign a Service Sas see
+             <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CanGenerateSasUri" />.
+            
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas">
+             Constructing a Service SAS</see>.
+             </summary>
+        <returns>
+             A <see cref="T:Azure.Storage.Sas.DataLakeSasBuilder" /> on successfully deleting.
+             </returns>
+        <remarks>
+             A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+             a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSasUri">
+      <MemberSignature Language="C#" Value="public virtual Uri GenerateSasUri (Azure.Storage.Sas.DataLakeFileSystemSasPermissions permissions, DateTimeOffset expiresOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri GenerateSasUri(valuetype Azure.Storage.Sas.DataLakeFileSystemSasPermissions permissions, valuetype System.DateTimeOffset expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GenerateSasUri(Azure.Storage.Sas.DataLakeFileSystemSasPermissions,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateSasUri (permissions As DataLakeFileSystemSasPermissions, expiresOn As DateTimeOffset) As Uri" />
+      <MemberSignature Language="F#" Value="abstract member GenerateSasUri : Azure.Storage.Sas.DataLakeFileSystemSasPermissions * DateTimeOffset -&gt; Uri&#xA;override this.GenerateSasUri : Azure.Storage.Sas.DataLakeFileSystemSasPermissions * DateTimeOffset -&gt; Uri" Usage="dataLakeFileSystemClient.GenerateSasUri (permissions, expiresOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="permissions" Type="Azure.Storage.Sas.DataLakeFileSystemSasPermissions" />
+        <Parameter Name="expiresOn" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="permissions">
+             Required. Specifies the list of permissions to be associated with the SAS.
+             See <see cref="T:Azure.Storage.Sas.DataLakeFileSystemSasPermissions" />.
+             </param>
+        <param name="expiresOn">
+             Required. Specifies the time at which the SAS becomes invalid. This field
+             must be omitted if it has been specified in an associated stored access policy.
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GenerateSasUri(Azure.Storage.Sas.DataLakeFileSystemSasPermissions,System.DateTimeOffset)" />
+             returns a <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Uri" /> that generates a DataLake FileSystem Service
+             Shared Access Signature (SAS) Uri based on the <see cref="T:Azure.Storage.Blobs.BlobContainerClient" />
+             properties and parameters passed. The SAS is signed by the shared key credential
+             of the client.
+            
+             To check if the client is able to sign a Service Sas see
+             <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.CanGenerateSasUri" />.
+            
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas">
+             Constructing a service SAS</see>.
+             </summary>
+        <returns>
+             A <see cref="P:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.Uri" /> containing the SAS Uri.
+             </returns>
+        <remarks>
+             A <see cref="T:System.Exception" /> will be thrown if a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetAccessPolicy">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt; GetAccessPolicy (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt; GetAccessPolicy(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetAccessPolicy(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAccessPolicy (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemAccessPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAccessPolicy (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemAccessPolicy)" />
       <MemberSignature Language="F#" Value="abstract member GetAccessPolicy : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&#xA;override this.GetAccessPolicy : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;" Usage="dataLakeFileSystemClient.GetAccessPolicy (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;</ReturnType>
@@ -1240,7 +1632,9 @@
              permissions for this file system. The permissions indicate whether
              file system data may be accessed publicly.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-acl" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-acl">
+             Get Container ACL</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing
@@ -1256,12 +1650,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&gt; GetAccessPolicyAsync (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&gt; GetAccessPolicyAsync(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetAccessPolicyAsync(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAccessPolicyAsync (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemAccessPolicy))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAccessPolicyAsync (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemAccessPolicy))" />
       <MemberSignature Language="F#" Value="abstract member GetAccessPolicyAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&gt;&#xA;override this.GetAccessPolicyAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&gt;" Usage="dataLakeFileSystemClient.GetAccessPolicyAsync (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemAccessPolicy&gt;&gt;</ReturnType>
@@ -1284,7 +1681,9 @@
              permissions for this file system. The permissions indicate whether
              file system data may be accessed publicly.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-acl" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-acl">
+             Get Container ACL</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing
@@ -1296,6 +1695,86 @@
              </remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetDeletedPaths">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt; GetDeletedPaths (string pathPrefix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt; GetDeletedPaths(string pathPrefix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetDeletedPaths(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedPaths (Optional pathPrefix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of PathDeletedItem)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeletedPaths : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;&#xA;override this.GetDeletedPaths : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;" Usage="dataLakeFileSystemClient.GetDeletedPaths (pathPrefix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathPrefix" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pathPrefix">
+            Filters results to paths within the specified directory.
+            </param>
+        <param name="cancellationToken">
+            Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+            notifications that the operation should be cancelled.
+            </param>
+        <summary>
+            Gets the paths that have recently been soft deleted in this file system.
+            </summary>
+        <returns>
+            An <see cref="T:Azure.Pageable`1" />
+            describing the deleted paths in the file system.
+            </returns>
+        <remarks>
+            A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+            a failure occurs.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeletedPathsAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt; GetDeletedPathsAsync (string pathPrefix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt; GetDeletedPathsAsync(string pathPrefix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetDeletedPathsAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedPathsAsync (Optional pathPrefix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of PathDeletedItem)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeletedPathsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;&#xA;override this.GetDeletedPathsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;" Usage="dataLakeFileSystemClient.GetDeletedPathsAsync (pathPrefix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathDeletedItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathPrefix" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pathPrefix">
+            Filters results to paths within the specified directory.
+            </param>
+        <param name="cancellationToken">
+            Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+            notifications that the operation should be cancelled.
+            </param>
+        <summary>
+            Gets the paths that have recently been soft deleted in this file system.
+            </summary>
+        <returns>
+            An <see cref="T:Azure.Pageable`1" />
+            describing the deleted paths in the file system.
+            </returns>
+        <remarks>
+            A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+            a failure occurs.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetDirectoryClient">
       <MemberSignature Language="C#" Value="public virtual Azure.Storage.Files.DataLake.DataLakeDirectoryClient GetDirectoryClient (string directoryName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Storage.Files.DataLake.DataLakeDirectoryClient GetDirectoryClient(string directoryName) cil managed" />
@@ -1305,7 +1784,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Files.DataLake.DataLakeDirectoryClient</ReturnType>
@@ -1334,7 +1816,10 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Files.DataLake.DataLakeFileClient</ReturnType>
@@ -1350,7 +1835,7 @@
             new <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileClient" /> uses the same request policy
             pipeline as the <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileClient" />.
             </summary>
-        <returns>A new <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileClient" /> instance.</returns>
+        <returns>A new <see cref="T:Azure.Storage.Files.DataLake.DataLakeFileSystemClient" /> instance.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1358,12 +1843,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt; GetPaths (string path = default, bool recursive = false, bool userPrincipalName = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Storage.Files.DataLake.Models.PathItem&gt; GetPaths(string path, bool recursive, bool userPrincipalName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPaths(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPaths (Optional path As String = null, Optional recursive As Boolean = false, Optional userPrincipalName As Boolean = false, Optional cancellationToken As CancellationToken = null) As Pageable(Of PathItem)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPaths (Optional path As String = Nothing, Optional recursive As Boolean = false, Optional userPrincipalName As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of PathItem)" />
       <MemberSignature Language="F#" Value="abstract member GetPaths : string * bool * bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;&#xA;override this.GetPaths : string * bool * bool * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;" Usage="dataLakeFileSystemClient.GetPaths (path, recursive, userPrincipalName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;</ReturnType>
@@ -1394,11 +1882,14 @@
              notifications that the operation should be cancelled.
              </param>
         <summary>
-             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPaths(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" /> operation returns an async sequence
-             of paths in this file system.  Enumerating the paths may make
-             multiple requests to the service while fetching all the values.
+             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPaths(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" />
+             operation returns an async sequence of paths in this file system.
+             Enumerating the paths may make multiple requests to the service
+             while fetching all the values.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/list" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/datalakestoragegen2/path/list">
+             List Path(s)</see>.
              </summary>
         <returns>
              An <see cref="T:Azure.Pageable`1" />
@@ -1414,12 +1905,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt; GetPathsAsync (string path = default, bool recursive = false, bool userPrincipalName = false, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Storage.Files.DataLake.Models.PathItem&gt; GetPathsAsync(string path, bool recursive, bool userPrincipalName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPathsAsync(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPathsAsync (Optional path As String = null, Optional recursive As Boolean = false, Optional userPrincipalName As Boolean = false, Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of PathItem)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPathsAsync (Optional path As String = Nothing, Optional recursive As Boolean = false, Optional userPrincipalName As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of PathItem)" />
       <MemberSignature Language="F#" Value="abstract member GetPathsAsync : string * bool * bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;&#xA;override this.GetPathsAsync : string * bool * bool * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;" Usage="dataLakeFileSystemClient.GetPathsAsync (path, recursive, userPrincipalName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Storage.Files.DataLake.Models.PathItem&gt;</ReturnType>
@@ -1450,12 +1944,14 @@
              notifications that the operation should be cancelled.
              </param>
         <summary>
-             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPathsAsync(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" /> operation returns an async
-             sequence of paths in this file system.  Enumerating the paths may
-             make multiple requests to the service while fetching all the
+             The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPathsAsync(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)" />
+             operation returns an async sequence of paths in this file system.  Enumerating
+             the paths may make multiple requests to the service while fetching all the
              values.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/datalakestoragegen2/path/list" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/datalakestoragegen2/path/list">
+             List Path(s)</see>.
              </summary>
         <returns>
              An <see cref="T:Azure.AsyncPageable`1" /> describing the
@@ -1471,12 +1967,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt; GetProperties (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt; GetProperties(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetProperties(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetProperties (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetProperties (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetProperties : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&#xA;override this.GetProperties : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;" Usage="dataLakeFileSystemClient.GetProperties (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;</ReturnType>
@@ -1500,7 +1999,9 @@
              file system. The data returned does not include the file system's
              list of paths.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-properties" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-properties">
+             Get Container Properties</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the
@@ -1516,12 +2017,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&gt; GetPropertiesAsync (Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&gt; GetPropertiesAsync(class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetPropertiesAsync(Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesAsync (Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemProperties))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesAsync (Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemProperties))" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&gt;&#xA;override this.GetPropertiesAsync : Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&gt;" Usage="dataLakeFileSystemClient.GetPropertiesAsync (conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemProperties&gt;&gt;</ReturnType>
@@ -1545,7 +2049,9 @@
              file system. The data returned does not include the file system's
              list of paths.
             
-             For more information, see <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-properties" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/en-us/rest/api/storageservices/get-container-properties">
+             Get Container Properties</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the
@@ -1566,7 +2072,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1583,12 +2092,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; SetAccessPolicy (Azure.Storage.Files.DataLake.Models.PublicAccessType accessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IEnumerable&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; permissions = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; SetAccessPolicy(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType accessType, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; permissions, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetAccessPolicy(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IEnumerable{Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetAccessPolicy (Optional accessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional permissions As IEnumerable(Of DataLakeSignedIdentifier) = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetAccessPolicy (Optional accessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional permissions As IEnumerable(Of DataLakeSignedIdentifier) = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemInfo)" />
       <MemberSignature Language="F#" Value="abstract member SetAccessPolicy : Azure.Storage.Files.DataLake.Models.PublicAccessType * seq&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&#xA;override this.SetAccessPolicy : Azure.Storage.Files.DataLake.Models.PublicAccessType * seq&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;" Usage="dataLakeFileSystemClient.SetAccessPolicy (accessType, permissions, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;</ReturnType>
@@ -1630,7 +2142,9 @@
              permissions for the specified file system. The permissions indicate
              whether file system data may be accessed publicly.
             
-             For more information, see <see href=" https://docs.microsoft.com/rest/api/storageservices/set-container-acl" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-acl">
+             Set Container ACL</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the
@@ -1646,12 +2160,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; SetAccessPolicyAsync (Azure.Storage.Files.DataLake.Models.PublicAccessType accessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, System.Collections.Generic.IEnumerable&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; permissions = default, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; SetAccessPolicyAsync(valuetype Azure.Storage.Files.DataLake.Models.PublicAccessType accessType, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; permissions, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetAccessPolicyAsync(Azure.Storage.Files.DataLake.Models.PublicAccessType,System.Collections.Generic.IEnumerable{Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetAccessPolicyAsync (Optional accessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional permissions As IEnumerable(Of DataLakeSignedIdentifier) = null, Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetAccessPolicyAsync (Optional accessType As PublicAccessType = Azure.Storage.Files.DataLake.Models.PublicAccessType.None, Optional permissions As IEnumerable(Of DataLakeSignedIdentifier) = Nothing, Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemInfo))" />
       <MemberSignature Language="F#" Value="abstract member SetAccessPolicyAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * seq&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;&#xA;override this.SetAccessPolicyAsync : Azure.Storage.Files.DataLake.Models.PublicAccessType * seq&lt;Azure.Storage.Files.DataLake.Models.DataLakeSignedIdentifier&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;" Usage="dataLakeFileSystemClient.SetAccessPolicyAsync (accessType, permissions, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;</ReturnType>
@@ -1693,7 +2210,9 @@
              permissions for the specified file system. The permissions indicate
              whether the file system data may be accessed publicly.
             
-             For more information, see <see href=" https://docs.microsoft.com/rest/api/storageservices/set-container-acl" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-acl">
+             Set Container ACL</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> describing the
@@ -1709,12 +2228,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; SetMetadata (System.Collections.Generic.IDictionary&lt;string,string&gt; metadata, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt; SetMetadata(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetMetadata(System.Collections.Generic.IDictionary{System.String,System.String},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMetadata (metadata As IDictionary(Of String, String), Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Response(Of FileSystemInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMetadata (metadata As IDictionary(Of String, String), Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileSystemInfo)" />
       <MemberSignature Language="F#" Value="abstract member SetMetadata : System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&#xA;override this.SetMetadata : System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;" Usage="dataLakeFileSystemClient.SetMetadata (metadata, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;</ReturnType>
@@ -1740,7 +2262,9 @@
              The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetMetadata(System.Collections.Generic.IDictionary{System.String,System.String},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" /> operation sets one or more
              user-defined name-value pairs for the specified file system.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-metadata" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-metadata">
+             Set Container Metadata</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> if successful.
@@ -1755,12 +2279,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; SetMetadataAsync (System.Collections.Generic.IDictionary&lt;string,string&gt; metadata, Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt; SetMetadataAsync(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, class Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions conditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetMetadataAsync(System.Collections.Generic.IDictionary{System.String,System.String},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMetadataAsync (metadata As IDictionary(Of String, String), Optional conditions As DataLakeRequestConditions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileSystemInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMetadataAsync (metadata As IDictionary(Of String, String), Optional conditions As DataLakeRequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileSystemInfo))" />
       <MemberSignature Language="F#" Value="abstract member SetMetadataAsync : System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;&#xA;override this.SetMetadataAsync : System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;" Usage="dataLakeFileSystemClient.SetMetadataAsync (metadata, conditions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.Models.FileSystemInfo&gt;&gt;</ReturnType>
@@ -1786,7 +2313,9 @@
              The <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.SetMetadataAsync(System.Collections.Generic.IDictionary{System.String,System.String},Azure.Storage.Files.DataLake.Models.DataLakeRequestConditions,System.Threading.CancellationToken)" /> operation sets one or more
              user-defined name-value pairs for the specified file system.
             
-             For more information, see <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-metadata" />.
+             For more information, see
+             <see href="https://docs.microsoft.com/rest/api/storageservices/set-container-metadata">
+             Set Container Metadata</see>.
              </summary>
         <returns>
              A <see cref="T:Azure.Response`1" /> if successful.
@@ -1795,6 +2324,96 @@
              A <see cref="T:Azure.RequestFailedException" /> will be thrown if
              a failure occurs.
              </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndeletePath">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt; UndeletePath (string deletedPath, string deletionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakePathClient&gt; UndeletePath(string deletedPath, string deletionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.UndeletePath(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UndeletePath (deletedPath As String, deletionId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DataLakePathClient)" />
+      <MemberSignature Language="F#" Value="abstract member UndeletePath : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;&#xA;override this.UndeletePath : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;" Usage="dataLakeFileSystemClient.UndeletePath (deletedPath, deletionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deletedPath" Type="System.String" />
+        <Parameter Name="deletionId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="deletedPath">
+            Required.  The path of the deleted path.
+            </param>
+        <param name="deletionId">
+            Required.  The deletion ID associated with the soft deleted path.
+            You can get soft deleted paths and their assocaited deletion IDs with <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetDeletedPathsAsync(System.String,System.Threading.CancellationToken)" />.
+            </param>
+        <param name="cancellationToken">
+            Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+            notifications that the operation should be cancelled.
+            </param>
+        <summary>
+            Restores a soft deleted path.
+            </summary>
+        <returns>
+            A <see cref="T:Azure.Response`1" /> pointed at the newly
+            restored path.
+            </returns>
+        <remarks>
+            A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+            a failure occurs.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndeletePathAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;&gt; UndeletePathAsync (string deletedPath, string deletionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.DataLake.DataLakePathClient&gt;&gt; UndeletePathAsync(string deletedPath, string deletionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.UndeletePathAsync(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UndeletePathAsync (deletedPath As String, deletionId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DataLakePathClient))" />
+      <MemberSignature Language="F#" Value="abstract member UndeletePathAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;&gt;&#xA;override this.UndeletePathAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;&gt;" Usage="dataLakeFileSystemClient.UndeletePathAsync (deletedPath, deletionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.DataLake.DataLakePathClient&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deletedPath" Type="System.String" />
+        <Parameter Name="deletionId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="deletedPath">
+            Required.  The path of the deleted path.
+            </param>
+        <param name="deletionId">
+            Required.  The deletion ID associated with the soft deleted path.
+            You can get soft deleted paths and their associated deletion IDs with <see cref="M:Azure.Storage.Files.DataLake.DataLakeFileSystemClient.GetDeletedPathsAsync(System.String,System.Threading.CancellationToken)" />.
+            </param>
+        <param name="cancellationToken">
+            Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+            notifications that the operation should be cancelled.
+            </param>
+        <summary>
+            Restores a soft deleted path.
+            </summary>
+        <returns>
+            A <see cref="T:Azure.Response`1" /> pointed at the newly
+            restored path.
+            </returns>
+        <remarks>
+            A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+            a failure occurs.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Uri">
@@ -1806,7 +2425,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.DataLake</AssemblyName>
-        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

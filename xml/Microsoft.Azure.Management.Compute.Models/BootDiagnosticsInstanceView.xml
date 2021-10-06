@@ -6,10 +6,12 @@
   <TypeSignature Language="F#" Value="type BootDiagnosticsInstanceView = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-    <AssemblyVersion>30.0.0.0</AssemblyVersion>
-    <AssemblyVersion>31.0.0.0</AssemblyVersion>
-    <AssemblyVersion>32.0.0.0</AssemblyVersion>
-    <AssemblyVersion>33.0.0.0</AssemblyVersion>
+    <AssemblyVersion>45.0.0.1</AssemblyVersion>
+    <AssemblyVersion>46.0.0.0</AssemblyVersion>
+    <AssemblyVersion>47.0.0.0</AssemblyVersion>
+    <AssemblyVersion>48.0.0.0</AssemblyVersion>
+    <AssemblyVersion>49.0.0.0</AssemblyVersion>
+    <AssemblyVersion>49.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,10 +32,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,15 +52,17 @@
       <MemberSignature Language="C#" Value="public BootDiagnosticsInstanceView (string consoleScreenshotBlobUri = default, string serialConsoleLogBlobUri = default, Microsoft.Azure.Management.Compute.Models.InstanceViewStatus status = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string consoleScreenshotBlobUri, string serialConsoleLogBlobUri, class Microsoft.Azure.Management.Compute.Models.InstanceViewStatus status) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Compute.Models.BootDiagnosticsInstanceView.#ctor(System.String,System.String,Microsoft.Azure.Management.Compute.Models.InstanceViewStatus)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional consoleScreenshotBlobUri As String = null, Optional serialConsoleLogBlobUri As String = null, Optional status As InstanceViewStatus = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional consoleScreenshotBlobUri As String = Nothing, Optional serialConsoleLogBlobUri As String = Nothing, Optional status As InstanceViewStatus = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Compute.Models.BootDiagnosticsInstanceView : string * string * Microsoft.Azure.Management.Compute.Models.InstanceViewStatus -&gt; Microsoft.Azure.Management.Compute.Models.BootDiagnosticsInstanceView" Usage="new Microsoft.Azure.Management.Compute.Models.BootDiagnosticsInstanceView (consoleScreenshotBlobUri, serialConsoleLogBlobUri, status)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="consoleScreenshotBlobUri" Type="System.String" />
@@ -65,9 +71,11 @@
       </Parameters>
       <Docs>
         <param name="consoleScreenshotBlobUri">The console screenshot blob
-            URI.</param>
-        <param name="serialConsoleLogBlobUri">The Linux serial console log
-            blob Uri.</param>
+            URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot
+            diagnostics is currently enabled with managed storage.</param>
+        <param name="serialConsoleLogBlobUri">The serial console log blob
+            Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot
+            diagnostics is currently enabled with managed storage.</param>
         <param name="status">The boot diagnostics status information for
             the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are
             errors encountered in enabling boot diagnostics.</param>
@@ -87,14 +95,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="consoleScreenshotBlobUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="consoleScreenshotBlobUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="consoleScreenshotBlobUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -103,6 +114,8 @@
       <Docs>
         <summary>
             Gets the console screenshot blob URI.
+            &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;NOTE: This will **not** be set
+            if boot diagnostics is currently enabled with managed storage.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -117,14 +130,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="serialConsoleLogBlobUri")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="serialConsoleLogBlobUri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="serialConsoleLogBlobUri")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -132,7 +148,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the Linux serial console log blob Uri.
+            Gets the serial console log blob Uri.
+            &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;NOTE: This will **not** be set
+            if boot diagnostics is currently enabled with managed storage.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -147,14 +165,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Compute</AssemblyName>
-        <AssemblyVersion>30.0.0.0</AssemblyVersion>
-        <AssemblyVersion>31.0.0.0</AssemblyVersion>
-        <AssemblyVersion>32.0.0.0</AssemblyVersion>
-        <AssemblyVersion>33.0.0.0</AssemblyVersion>
+        <AssemblyVersion>45.0.0.1</AssemblyVersion>
+        <AssemblyVersion>46.0.0.0</AssemblyVersion>
+        <AssemblyVersion>47.0.0.0</AssemblyVersion>
+        <AssemblyVersion>48.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.0.0.0</AssemblyVersion>
+        <AssemblyVersion>49.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Microsoft.Rest.Serialization.JsonTransformation</AttributeName>
+      <AttributeName Language="C#">[Microsoft.Rest.Serialization.JsonTransformation]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Rest.Serialization.JsonTransformation&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,6 +35,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,12 +49,13 @@
       <MemberSignature Language="C#" Value="public Job (string id = default, string name = default, string type = default, string status = default, DateTime? startTime = default, DateTime? endTime = default, int? percentComplete = default, Microsoft.Azure.Management.DataBoxEdge.Models.JobErrorDetails error = default, string jobType = default, string currentStage = default, Microsoft.Azure.Management.DataBoxEdge.Models.UpdateDownloadProgress downloadProgress = default, Microsoft.Azure.Management.DataBoxEdge.Models.UpdateInstallProgress installProgress = default, int? totalRefreshErrors = default, string errorManifestFile = default, string refreshedEntityId = default, string folder = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string name, string type, string status, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; startTime, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; endTime, valuetype System.Nullable`1&lt;int32&gt; percentComplete, class Microsoft.Azure.Management.DataBoxEdge.Models.JobErrorDetails error, string jobType, string currentStage, class Microsoft.Azure.Management.DataBoxEdge.Models.UpdateDownloadProgress downloadProgress, class Microsoft.Azure.Management.DataBoxEdge.Models.UpdateInstallProgress installProgress, valuetype System.Nullable`1&lt;int32&gt; totalRefreshErrors, string errorManifestFile, string refreshedEntityId, string folder) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.Job.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},Microsoft.Azure.Management.DataBoxEdge.Models.JobErrorDetails,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.UpdateDownloadProgress,Microsoft.Azure.Management.DataBoxEdge.Models.UpdateInstallProgress,System.Nullable{System.Int32},System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = null, Optional name As String = null, Optional type As String = null, Optional status As String = null, Optional startTime As Nullable(Of DateTime) = null, Optional endTime As Nullable(Of DateTime) = null, Optional percentComplete As Nullable(Of Integer) = null, Optional error As JobErrorDetails = null, Optional jobType As String = null, Optional currentStage As String = null, Optional downloadProgress As UpdateDownloadProgress = null, Optional installProgress As UpdateInstallProgress = null, Optional totalRefreshErrors As Nullable(Of Integer) = null, Optional errorManifestFile As String = null, Optional refreshedEntityId As String = null, Optional folder As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional id As String = Nothing, Optional name As String = Nothing, Optional type As String = Nothing, Optional status As String = Nothing, Optional startTime As Nullable(Of DateTime) = Nothing, Optional endTime As Nullable(Of DateTime) = Nothing, Optional percentComplete As Nullable(Of Integer) = Nothing, Optional error As JobErrorDetails = Nothing, Optional jobType As String = Nothing, Optional currentStage As String = Nothing, Optional downloadProgress As UpdateDownloadProgress = Nothing, Optional installProgress As UpdateInstallProgress = Nothing, Optional totalRefreshErrors As Nullable(Of Integer) = Nothing, Optional errorManifestFile As String = Nothing, Optional refreshedEntityId As String = Nothing, Optional folder As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.Job : string * string * string * string * Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * Nullable&lt;int&gt; * Microsoft.Azure.Management.DataBoxEdge.Models.JobErrorDetails * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.UpdateDownloadProgress * Microsoft.Azure.Management.DataBoxEdge.Models.UpdateInstallProgress * Nullable&lt;int&gt; * string * string * string -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.Job" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.Job (id, name, type, status, startTime, endTime, percentComplete, error, jobType, currentStage, downloadProgress, installProgress, totalRefreshErrors, errorManifestFile, refreshedEntityId, folder)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.String" />
@@ -88,7 +92,8 @@
         <param name="error">The error details.</param>
         <param name="jobType">The type of the job. Possible values include:
             'Invalid', 'ScanForUpdates', 'DownloadUpdates', 'InstallUpdates',
-            'RefreshShare', 'RefreshContainer'</param>
+            'RefreshShare', 'RefreshContainer', 'Backup', 'Restore',
+            'TriggerSupportPackage'</param>
         <param name="currentStage">Current stage of the update operation.
             Possible values include: 'Unknown', 'Initial', 'ScanStarted',
             'ScanComplete', 'ScanFailed', 'DownloadStarted',
@@ -123,10 +128,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStage")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStage")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.currentStage")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -155,10 +162,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.downloadProgress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.downloadProgress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.downloadProgress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -182,10 +191,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="endTime")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="endTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="endTime")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -209,10 +220,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="error")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="error")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="error")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -236,10 +249,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.errorManifestFile")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.errorManifestFile")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.errorManifestFile")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -264,10 +279,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.folder")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.folder")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.folder")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -293,10 +310,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="id")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="id")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -320,10 +339,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.installProgress")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.installProgress")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.installProgress")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -347,10 +368,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.jobType")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.jobType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.jobType")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -360,7 +383,8 @@
         <summary>
             Gets the type of the job. Possible values include: 'Invalid',
             'ScanForUpdates', 'DownloadUpdates', 'InstallUpdates',
-            'RefreshShare', 'RefreshContainer'
+            'RefreshShare', 'RefreshContainer', 'Backup', 'Restore',
+            'TriggerSupportPackage'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -376,10 +400,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -403,10 +429,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="percentComplete")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="percentComplete")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="percentComplete")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -430,10 +458,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshedEntityId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshedEntityId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.refreshedEntityId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -457,10 +487,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="startTime")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="startTime")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="startTime")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -484,10 +516,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="status")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="status")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="status")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -513,10 +547,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="properties.totalRefreshErrors")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="properties.totalRefreshErrors")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="properties.totalRefreshErrors")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -540,10 +576,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="type")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="type")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -6,8 +6,10 @@
   <TypeSignature Language="F#" Value="type ShareLeaseClient = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-    <AssemblyVersion>12.1.0.0</AssemblyVersion>
-    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.1.0</AssemblyVersion>
+    <AssemblyVersion>12.6.2.0</AssemblyVersion>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+    <AssemblyVersion>12.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,8 +31,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -42,16 +46,48 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShareLeaseClient (Azure.Storage.Files.Shares.ShareClient client, string leaseId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Storage.Files.Shares.ShareClient client, string leaseId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.#ctor(Azure.Storage.Files.Shares.ShareClient,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (client As ShareClient, Optional leaseId As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Azure.Storage.Files.Shares.Specialized.ShareLeaseClient : Azure.Storage.Files.Shares.ShareClient * string -&gt; Azure.Storage.Files.Shares.Specialized.ShareLeaseClient" Usage="new Azure.Storage.Files.Shares.Specialized.ShareLeaseClient (client, leaseId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="client" Type="Azure.Storage.Files.Shares.ShareClient" />
+        <Parameter Name="leaseId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="client">
+            A <see cref="P:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ShareClient" /> representing the share being leased.
+            </param>
+        <param name="leaseId">
+            An optional lease ID.  If no lease ID is provided, a random lease
+            ID will be created.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ShareLeaseClient (Azure.Storage.Files.Shares.ShareFileClient client, string leaseId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Storage.Files.Shares.ShareFileClient client, string leaseId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.#ctor(Azure.Storage.Files.Shares.ShareFileClient,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (client As ShareFileClient, Optional leaseId As String = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (client As ShareFileClient, Optional leaseId As String = Nothing)" />
       <MemberSignature Language="F#" Value="new Azure.Storage.Files.Shares.Specialized.ShareLeaseClient : Azure.Storage.Files.Shares.ShareFileClient * string -&gt; Azure.Storage.Files.Shares.Specialized.ShareLeaseClient" Usage="new Azure.Storage.Files.Shares.Specialized.ShareLeaseClient (client, leaseId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="client" Type="Azure.Storage.Files.Shares.ShareFileClient" />
@@ -72,17 +108,25 @@
       </Docs>
     </Member>
     <Member MemberName="Acquire">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Acquire (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Acquire (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Acquire(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Acquire(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Acquire (Optional cancellationToken As CancellationToken = null) As Response(Of ShareFileLease)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Acquire (cancellationToken As CancellationToken) As Response(Of ShareFileLease)" />
       <MemberSignature Language="F#" Value="abstract member Acquire : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&#xA;override this.Acquire : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;" Usage="shareLeaseClient.Acquire cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;</ReturnType>
       </ReturnValue>
@@ -95,7 +139,58 @@
              notifications that the operation should be cancelled.
              </param>
         <summary>
-             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Acquire(System.Threading.CancellationToken)" /> operation acquires a lease on
+             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.AcquireAsync(System.Threading.CancellationToken)" /> operation acquires a lease on
+             the file.
+            
+             If the file does not have an active lease, the File service
+             creates a lease on the file and returns it.  If the
+             file has an active lease, you can only request a new lease
+             using the active lease ID as <see cref="P:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.LeaseId" /></summary>
+        <returns>
+             A <see cref="T:Azure.Response`1" /> describing the lease.
+             </returns>
+        <remarks>
+             A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+             a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acquire">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Acquire (TimeSpan? duration = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Acquire(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; duration, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Acquire(System.Nullable{System.TimeSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Acquire (Optional duration As Nullable(Of TimeSpan) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ShareFileLease)" />
+      <MemberSignature Language="F#" Value="abstract member Acquire : Nullable&lt;TimeSpan&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&#xA;override this.Acquire : Nullable&lt;TimeSpan&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;" Usage="shareLeaseClient.Acquire (duration, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <param name="duration">
+             Specifies the duration of the lease, in seconds, or specify
+             <see cref="F:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.InfiniteLeaseDuration" /> for a lease that never expires.
+             A non-infinite lease can be between 15 and 60 seconds.
+             Files only support infinite lease.
+             A lease duration cannot be changed using <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.RenewAsync(System.Threading.CancellationToken)" />
+             or <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ChangeAsync(System.String,System.Threading.CancellationToken)" />.
+             <param name="cancellationToken"></param>
+             Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+             notifications that the operation should be cancelled.
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Acquire(System.Nullable{System.TimeSpan},System.Threading.CancellationToken)" /> operation acquires a lease on
              the file.
             
              If the file does not have an active lease, the File service
@@ -112,17 +207,25 @@
       </Docs>
     </Member>
     <Member MemberName="AcquireAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; AcquireAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; AcquireAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; AcquireAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.AcquireAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AcquireAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of ShareFileLease))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AcquireAsync (cancellationToken As CancellationToken) As Task(Of Response(Of ShareFileLease))" />
       <MemberSignature Language="F#" Value="abstract member AcquireAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;&#xA;override this.AcquireAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;" Usage="shareLeaseClient.AcquireAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -153,17 +256,72 @@
              </remarks>
       </Docs>
     </Member>
+    <Member MemberName="AcquireAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; AcquireAsync (TimeSpan? duration = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; AcquireAsync(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; duration, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.AcquireAsync(System.Nullable{System.TimeSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AcquireAsync (Optional duration As Nullable(Of TimeSpan) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ShareFileLease))" />
+      <MemberSignature Language="F#" Value="abstract member AcquireAsync : Nullable&lt;TimeSpan&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;&#xA;override this.AcquireAsync : Nullable&lt;TimeSpan&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;" Usage="shareLeaseClient.AcquireAsync (duration, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="duration">
+             Specifies the duration of the lease, in seconds, or specify
+             <see cref="F:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.InfiniteLeaseDuration" /> for a lease that never expires.
+             A non-infinite lease can be between 15 and 60 seconds.
+             Files only support infinite lease.
+             A lease duration cannot be changed using <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.RenewAsync(System.Threading.CancellationToken)" />
+             or <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ChangeAsync(System.String,System.Threading.CancellationToken)" />.
+             </param>
+        <param name="cancellationToken">
+             Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+             notifications that the operation should be cancelled.
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.AcquireAsync(System.Nullable{System.TimeSpan},System.Threading.CancellationToken)" /> operation acquires a lease on
+             the file.
+            
+             If the file does not have an active lease, the File service
+             creates a lease on the file and returns it.  If the
+             file has an active lease, you can only request a new lease
+             using the active lease ID as <see cref="P:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.LeaseId" />.
+            
+             </summary>
+        <returns>
+             A <see cref="T:Azure.Response`1" /> describing the lease.
+             </returns>
+        <remarks>
+             A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+             a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Break">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Break (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Break(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Break(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Break (Optional cancellationToken As CancellationToken = null) As Response(Of ShareFileLease)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Break (Optional cancellationToken As CancellationToken = Nothing) As Response(Of ShareFileLease)" />
       <MemberSignature Language="F#" Value="abstract member Break : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&#xA;override this.Break : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;" Usage="shareLeaseClient.Break cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;</ReturnType>
@@ -202,13 +360,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; BreakAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; BreakAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.BreakAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BreakAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of ShareFileLease))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BreakAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ShareFileLease))" />
       <MemberSignature Language="F#" Value="abstract member BreakAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;&#xA;override this.BreakAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;" Usage="shareLeaseClient.BreakAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;</ReturnType>
@@ -247,13 +407,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Change (string proposedId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Change(string proposedId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Change(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Change (proposedId As String, Optional cancellationToken As CancellationToken = null) As Response(Of ShareFileLease)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Change (proposedId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ShareFileLease)" />
       <MemberSignature Language="F#" Value="abstract member Change : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&#xA;override this.Change : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;" Usage="shareLeaseClient.Change (proposedId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;</ReturnType>
@@ -291,13 +453,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; ChangeAsync (string proposedId, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; ChangeAsync(string proposedId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ChangeAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ChangeAsync (proposedId As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of ShareFileLease))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ChangeAsync (proposedId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ShareFileLease))" />
       <MemberSignature Language="F#" Value="abstract member ChangeAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;&#xA;override this.ChangeAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;" Usage="shareLeaseClient.ChangeAsync (proposedId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;</ReturnType>
@@ -340,8 +504,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Storage.Files.Shares.ShareFileClient</ReturnType>
@@ -354,6 +520,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="InfiniteLeaseDuration">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan InfiniteLeaseDuration;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan InfiniteLeaseDuration" />
+      <MemberSignature Language="DocId" Value="F:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.InfiniteLeaseDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly InfiniteLeaseDuration As TimeSpan " />
+      <MemberSignature Language="F#" Value=" staticval mutable InfiniteLeaseDuration : TimeSpan" Usage="Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.InfiniteLeaseDuration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:System.TimeSpan" /> representing an infinite lease duration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="LeaseId">
       <MemberSignature Language="C#" Value="public string LeaseId { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string LeaseId" />
@@ -363,8 +553,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -381,13 +573,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt; Release (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt; Release(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Release(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Release (Optional cancellationToken As CancellationToken = null) As Response(Of FileLeaseReleaseInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Release (Optional cancellationToken As CancellationToken = Nothing) As Response(Of FileLeaseReleaseInfo)" />
       <MemberSignature Language="F#" Value="abstract member Release : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&#xA;override this.Release : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;" Usage="shareLeaseClient.Release cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;</ReturnType>
@@ -424,13 +618,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&gt; ReleaseAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&gt; ReleaseAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ReleaseAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of FileLeaseReleaseInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of FileLeaseReleaseInfo))" />
       <MemberSignature Language="F#" Value="abstract member ReleaseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&gt;&#xA;override this.ReleaseAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&gt;" Usage="shareLeaseClient.ReleaseAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.FileLeaseReleaseInfo&gt;&gt;</ReturnType>
@@ -463,6 +659,123 @@
              </remarks>
       </Docs>
     </Member>
+    <Member MemberName="Renew">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Renew (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt; Renew(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Renew(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Renew (Optional cancellationToken As CancellationToken = Nothing) As Response(Of ShareFileLease)" />
+      <MemberSignature Language="F#" Value="abstract member Renew : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&#xA;override this.Renew : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;" Usage="shareLeaseClient.Renew cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">
+             Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+             notifications that the operation should be cancelled.
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.Renew(System.Threading.CancellationToken)" /> operation renews the
+             shares's previously-acquired lease.  This API does not
+             support files.
+            
+             The lease can be renewed if the leaseId
+             matches that associated with the share.  Note that the
+             lease may be renewed even if it has expired as long as the share
+             has not been leased again since the expiration of that
+             lease.  When you renew a lease, the lease duration clock resets.
+            
+             </summary>
+        <returns>
+             A <see cref="T:Azure.Response`1" /> describing the lease.
+             </returns>
+        <remarks>
+             A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+             a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; RenewAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt; RenewAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.RenewAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RenewAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ShareFileLease))" />
+      <MemberSignature Language="F#" Value="abstract member RenewAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;&#xA;override this.RenewAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;" Usage="shareLeaseClient.RenewAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Storage.Files.Shares.Models.ShareFileLease&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">
+             Optional <see cref="T:System.Threading.CancellationToken" /> to propagate
+             notifications that the operation should be cancelled.
+             </param>
+        <summary>
+             The <see cref="M:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.RenewAsync(System.Threading.CancellationToken)" /> operation renews the
+             shares's previously-acquired lease.  This API does not
+             support files.
+            
+             The lease can be renewed if the leaseId
+             matches that associated with the share.  Note that the
+             lease may be renewed even if it has expired as long as the share
+             has not been leased again since the expiration of that
+             lease.  When you renew a lease, the lease duration clock resets.
+            
+             </summary>
+        <returns>
+             A <see cref="T:Azure.Response`1" /> describing the lease.
+             </returns>
+        <remarks>
+             A <see cref="T:Azure.RequestFailedException" /> will be thrown if
+             a failure occurs.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShareClient">
+      <MemberSignature Language="C#" Value="protected virtual Azure.Storage.Files.Shares.ShareClient ShareClient { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Storage.Files.Shares.ShareClient ShareClient" />
+      <MemberSignature Language="DocId" Value="P:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ShareClient" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property ShareClient As ShareClient" />
+      <MemberSignature Language="F#" Value="member this.ShareClient : Azure.Storage.Files.Shares.ShareClient" Usage="Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ShareClient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Files.Shares.ShareClient</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="P:Azure.Storage.Files.Shares.Specialized.ShareLeaseClient.ShareClient" /> to manage leases for.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Uri">
       <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
@@ -472,8 +785,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Storage.Files.Shares</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
+        <AssemblyVersion>12.6.2.0</AssemblyVersion>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+        <AssemblyVersion>12.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

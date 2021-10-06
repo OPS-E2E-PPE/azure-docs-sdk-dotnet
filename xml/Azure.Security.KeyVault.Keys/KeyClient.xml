@@ -6,10 +6,10 @@
   <TypeSignature Language="F#" Value="type KeyClient = class" />
   <AssemblyInfo>
     <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <AssemblyVersion>4.0.1.0</AssemblyVersion>
-    <AssemblyVersion>4.0.2.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -32,10 +32,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -54,17 +54,20 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="vaultUri" Type="System.Uri" />
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="vaultUri">A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.</param>
+        <param name="vaultUri">
+            A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.
+            If you have a key <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, such as DefaultAzureCredential.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Azure.Security.KeyVault.Keys.KeyClient" /> class for the specified vault.
@@ -83,10 +86,10 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="vaultUri" Type="System.Uri" />
@@ -94,7 +97,10 @@
         <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.KeyClientOptions" />
       </Parameters>
       <Docs>
-        <param name="vaultUri">A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.</param>
+        <param name="vaultUri">
+            A <see cref="T:System.Uri" /> to the vault on which the client operates. Appears as "DNS Name" in the Azure portal.
+            If you have a key <see cref="T:System.Uri" />, use <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier" /> to parse the <see cref="P:Azure.Security.KeyVault.Keys.KeyVaultKeyIdentifier.VaultUri" /> and other information.
+            </param>
         <param name="credential">A <see cref="T:Azure.Core.TokenCredential" /> used to authenticate requests to the vault, such as DefaultAzureCredential.</param>
         <param name="options">
           <see cref="T:Azure.Security.KeyVault.Keys.KeyClientOptions" /> that allow to configure the management of the request sent to Key Vault.</param>
@@ -110,15 +116,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;byte[]&gt; BackupKey (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;unsigned int8[]&gt; BackupKey(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.BackupKey(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupKey (name As String, Optional cancellationToken As CancellationToken = null) As Response(Of Byte())" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupKey (name As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of Byte())" />
       <MemberSignature Language="F#" Value="abstract member BackupKey : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;byte[]&gt;&#xA;override this.BackupKey : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;byte[]&gt;" Usage="keyClient.BackupKey (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Byte[]&gt;</ReturnType>
@@ -160,15 +166,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt; BackupKeyAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;unsigned int8[]&gt;&gt; BackupKeyAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.BackupKeyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupKeyAsync (name As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of Byte()))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupKeyAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of Byte()))" />
       <MemberSignature Language="F#" Value="abstract member BackupKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt;&#xA;override this.BackupKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;byte[]&gt;&gt;" Usage="keyClient.BackupKeyAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Byte[]&gt;&gt;</ReturnType>
@@ -210,15 +216,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateEcKey (Azure.Security.KeyVault.Keys.CreateEcKeyOptions ecKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateEcKey(class Azure.Security.KeyVault.Keys.CreateEcKeyOptions ecKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateEcKey(Azure.Security.KeyVault.Keys.CreateEcKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateEcKey (ecKeyOptions As CreateEcKeyOptions, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateEcKey (ecKeyOptions As CreateEcKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member CreateEcKey : Azure.Security.KeyVault.Keys.CreateEcKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.CreateEcKey : Azure.Security.KeyVault.Keys.CreateEcKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.CreateEcKey (ecKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -232,7 +238,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new Elliptic Curve key in Key Vault. If the named key already exists,
-            Azure Key Vault creates a new version of the key. It requires the keys/create permission.
+            Azure Key Vault creates a new version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -245,15 +251,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateEcKeyAsync (Azure.Security.KeyVault.Keys.CreateEcKeyOptions ecKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateEcKeyAsync(class Azure.Security.KeyVault.Keys.CreateEcKeyOptions ecKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateEcKeyAsync(Azure.Security.KeyVault.Keys.CreateEcKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateEcKeyAsync (ecKeyOptions As CreateEcKeyOptions, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateEcKeyAsync (ecKeyOptions As CreateEcKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member CreateEcKeyAsync : Azure.Security.KeyVault.Keys.CreateEcKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.CreateEcKeyAsync : Azure.Security.KeyVault.Keys.CreateEcKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.CreateEcKeyAsync (ecKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -267,7 +273,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new Elliptic Curve key in Key Vault. If the named key already exists,
-            Azure Key Vault creates a new version of the key. It requires the keys/create permission.
+            Azure Key Vault creates a new version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -280,15 +286,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateKey (string name, Azure.Security.KeyVault.Keys.KeyType keyType, Azure.Security.KeyVault.Keys.CreateKeyOptions keyOptions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateKey(string name, valuetype Azure.Security.KeyVault.Keys.KeyType keyType, class Azure.Security.KeyVault.Keys.CreateKeyOptions keyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateKey(System.String,Azure.Security.KeyVault.Keys.KeyType,Azure.Security.KeyVault.Keys.CreateKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateKey (name As String, keyType As KeyType, Optional keyOptions As CreateKeyOptions = null, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateKey (name As String, keyType As KeyType, Optional keyOptions As CreateKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member CreateKey : string * Azure.Security.KeyVault.Keys.KeyType * Azure.Security.KeyVault.Keys.CreateKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.CreateKey : string * Azure.Security.KeyVault.Keys.KeyType * Azure.Security.KeyVault.Keys.CreateKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.CreateKey (name, keyType, keyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -306,7 +312,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new key in Key Vault. The create key operation can be used to create any key type in Azure Key Vault.
-            If the named key already exists, Azure Key Vault creates a new version of the key. It requires the keys/create permission.
+            If the named key already exists, Azure Key Vault creates a new version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -321,15 +327,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateKeyAsync (string name, Azure.Security.KeyVault.Keys.KeyType keyType, Azure.Security.KeyVault.Keys.CreateKeyOptions keyOptions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateKeyAsync(string name, valuetype Azure.Security.KeyVault.Keys.KeyType keyType, class Azure.Security.KeyVault.Keys.CreateKeyOptions keyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateKeyAsync(System.String,Azure.Security.KeyVault.Keys.KeyType,Azure.Security.KeyVault.Keys.CreateKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateKeyAsync (name As String, keyType As KeyType, Optional keyOptions As CreateKeyOptions = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateKeyAsync (name As String, keyType As KeyType, Optional keyOptions As CreateKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member CreateKeyAsync : string * Azure.Security.KeyVault.Keys.KeyType * Azure.Security.KeyVault.Keys.CreateKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.CreateKeyAsync : string * Azure.Security.KeyVault.Keys.KeyType * Azure.Security.KeyVault.Keys.CreateKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.CreateKeyAsync (name, keyType, keyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -347,7 +353,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new key in Key Vault. The create key operation can be used to create any key type in Azure Key Vault.
-            If the named key already exists, Azure Key Vault creates a new version of the key. It requires the keys/create permission.
+            If the named key already exists, Azure Key Vault creates a new version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -358,19 +364,85 @@
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
     </Member>
+    <Member MemberName="CreateOctKey">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateOctKey (Azure.Security.KeyVault.Keys.CreateOctKeyOptions octKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateOctKey(class Azure.Security.KeyVault.Keys.CreateOctKeyOptions octKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateOctKey(Azure.Security.KeyVault.Keys.CreateOctKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateOctKey (octKeyOptions As CreateOctKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="F#" Value="abstract member CreateOctKey : Azure.Security.KeyVault.Keys.CreateOctKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.CreateOctKey : Azure.Security.KeyVault.Keys.CreateOctKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.CreateOctKey (octKeyOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="octKeyOptions" Type="Azure.Security.KeyVault.Keys.CreateOctKeyOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="octKeyOptions">The key options object containing information about the AES key being created.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Creates and stores a new AES key in Key Vault. If the named key already exists, Azure Key Vault creates a new
+            version of the key. This operation requires the keys/create permission.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="octKeyOptions" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOctKeyAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateOctKeyAsync (Azure.Security.KeyVault.Keys.CreateOctKeyOptions octKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateOctKeyAsync(class Azure.Security.KeyVault.Keys.CreateOctKeyOptions octKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateOctKeyAsync(Azure.Security.KeyVault.Keys.CreateOctKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateOctKeyAsync (octKeyOptions As CreateOctKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="F#" Value="abstract member CreateOctKeyAsync : Azure.Security.KeyVault.Keys.CreateOctKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.CreateOctKeyAsync : Azure.Security.KeyVault.Keys.CreateOctKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.CreateOctKeyAsync (octKeyOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="octKeyOptions" Type="Azure.Security.KeyVault.Keys.CreateOctKeyOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="octKeyOptions">The key options object containing information about the AES key being created.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Creates and stores a new AES key in Key Vault. If the named key already exists, Azure Key Vault creates a new
+            version of the key. This operation requires the keys/create permission.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="octKeyOptions" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="CreateRsaKey">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateRsaKey (Azure.Security.KeyVault.Keys.CreateRsaKeyOptions rsaKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; CreateRsaKey(class Azure.Security.KeyVault.Keys.CreateRsaKeyOptions rsaKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateRsaKey(Azure.Security.KeyVault.Keys.CreateRsaKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateRsaKey (rsaKeyOptions As CreateRsaKeyOptions, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateRsaKey (rsaKeyOptions As CreateRsaKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member CreateRsaKey : Azure.Security.KeyVault.Keys.CreateRsaKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.CreateRsaKey : Azure.Security.KeyVault.Keys.CreateRsaKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.CreateRsaKey (rsaKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -384,7 +456,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new RSA key in Key Vault. If the named key already exists, Azure Key Vault creates a new
-            version of the key. It requires the keys/create permission.
+            version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -397,15 +469,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateRsaKeyAsync (Azure.Security.KeyVault.Keys.CreateRsaKeyOptions rsaKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; CreateRsaKeyAsync(class Azure.Security.KeyVault.Keys.CreateRsaKeyOptions rsaKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.CreateRsaKeyAsync(Azure.Security.KeyVault.Keys.CreateRsaKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateRsaKeyAsync (rsaKeyOptions As CreateRsaKeyOptions, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateRsaKeyAsync (rsaKeyOptions As CreateRsaKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member CreateRsaKeyAsync : Azure.Security.KeyVault.Keys.CreateRsaKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.CreateRsaKeyAsync : Azure.Security.KeyVault.Keys.CreateRsaKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.CreateRsaKeyAsync (rsaKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -419,7 +491,7 @@
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
         <summary>
             Creates and stores a new RSA key in Key Vault. If the named key already exists, Azure Key Vault creates a new
-            version of the key. It requires the keys/create permission.
+            version of the key. This operation requires the keys/create permission.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -432,15 +504,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKey (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKey(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetDeletedKey(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKey (name As String, Optional cancellationToken As CancellationToken = null) As Response(Of DeletedKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKey (name As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DeletedKey)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&#xA;override this.GetDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;" Usage="keyClient.GetDeletedKey (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;</ReturnType>
@@ -473,15 +545,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&gt; GetDeletedKeyAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.DeletedKey&gt;&gt; GetDeletedKeyAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetDeletedKeyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of DeletedKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DeletedKey))" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&gt;&#xA;override this.GetDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&gt;" Usage="keyClient.GetDeletedKeyAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&gt;</ReturnType>
@@ -514,15 +586,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKeys (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKeys(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetDeletedKeys(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeys (Optional cancellationToken As CancellationToken = null) As Pageable(Of DeletedKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeys (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of DeletedKey)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedKeys : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&#xA;override this.GetDeletedKeys : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;" Usage="keyClient.GetDeletedKeys cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;</ReturnType>
@@ -551,15 +623,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKeysAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Keys.DeletedKey&gt; GetDeletedKeysAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetDeletedKeysAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeysAsync (Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of DeletedKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeletedKeysAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of DeletedKey)" />
       <MemberSignature Language="F#" Value="abstract member GetDeletedKeysAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;&#xA;override this.GetDeletedKeysAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;" Usage="keyClient.GetDeletedKeysAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.DeletedKey&gt;</ReturnType>
@@ -588,15 +660,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; GetKey (string name, string version = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; GetKey(string name, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetKey(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKey (name As String, Optional version As String = null, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKey (name As String, Optional version As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member GetKey : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.GetKey : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.GetKey (name, version, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -630,15 +702,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; GetKeyAsync (string name, string version = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; GetKeyAsync(string name, string version, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetKeyAsync(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKeyAsync (name As String, Optional version As String = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKeyAsync (name As String, Optional version As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member GetKeyAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.GetKeyAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.GetKeyAsync (name, version, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -672,15 +744,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeys (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeys(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetPropertiesOfKeys(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeys (Optional cancellationToken As CancellationToken = null) As Pageable(Of KeyProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeys (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of KeyProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfKeys : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;&#xA;override this.GetPropertiesOfKeys : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;" Usage="keyClient.GetPropertiesOfKeys cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;</ReturnType>
@@ -708,15 +780,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeysAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeysAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetPropertiesOfKeysAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeysAsync (Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of KeyProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeysAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of KeyProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfKeysAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;&#xA;override this.GetPropertiesOfKeysAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;" Usage="keyClient.GetPropertiesOfKeysAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;</ReturnType>
@@ -743,15 +815,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeyVersions (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeyVersions(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetPropertiesOfKeyVersions(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeyVersions (name As String, Optional cancellationToken As CancellationToken = null) As Pageable(Of KeyProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeyVersions (name As String, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of KeyProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfKeyVersions : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;&#xA;override this.GetPropertiesOfKeyVersions : string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;" Usage="keyClient.GetPropertiesOfKeyVersions (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;</ReturnType>
@@ -782,15 +854,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeyVersionsAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Security.KeyVault.Keys.KeyProperties&gt; GetPropertiesOfKeyVersionsAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetPropertiesOfKeyVersionsAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeyVersionsAsync (name As String, Optional cancellationToken As CancellationToken = null) As AsyncPageable(Of KeyProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPropertiesOfKeyVersionsAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of KeyProperties)" />
       <MemberSignature Language="F#" Value="abstract member GetPropertiesOfKeyVersionsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;&#xA;override this.GetPropertiesOfKeyVersionsAsync : string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;" Usage="keyClient.GetPropertiesOfKeyVersionsAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.Security.KeyVault.Keys.KeyProperties&gt;</ReturnType>
@@ -817,19 +889,81 @@
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
     </Member>
+    <Member MemberName="GetRandomBytes">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt; GetRandomBytes (int count, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.RandomBytes&gt; GetRandomBytes(int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetRandomBytes(System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetRandomBytes (count As Integer, Optional cancellationToken As CancellationToken = Nothing) As Response(Of RandomBytes)" />
+      <MemberSignature Language="F#" Value="abstract member GetRandomBytes : int * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;&#xA;override this.GetRandomBytes : int * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;" Usage="keyClient.GetRandomBytes (count, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="count">The requested number of random bytes.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Get the requested number of bytes containing random values from a managed hardware security module (HSM).
+            </summary>
+        <returns>
+          <see cref="T:Azure.Security.KeyVault.Keys.RandomBytes" /> containing random values from a managed hardware security module (HSM).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> is less than 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRandomBytesAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;&gt; GetRandomBytesAsync (int count, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.RandomBytes&gt;&gt; GetRandomBytesAsync(int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.GetRandomBytesAsync(System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetRandomBytesAsync (count As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of RandomBytes))" />
+      <MemberSignature Language="F#" Value="abstract member GetRandomBytesAsync : int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;&gt;&#xA;override this.GetRandomBytesAsync : int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;&gt;" Usage="keyClient.GetRandomBytesAsync (count, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.RandomBytes&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="count">The requested number of random bytes.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Get the requested number of bytes containing random values from a managed hardware security module (HSM).
+            </summary>
+        <returns>
+          <see cref="T:Azure.Security.KeyVault.Keys.RandomBytes" /> containing random values from a managed hardware security module (HSM).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> is less than 0.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="ImportKey">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; ImportKey (Azure.Security.KeyVault.Keys.ImportKeyOptions importKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; ImportKey(class Azure.Security.KeyVault.Keys.ImportKeyOptions importKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ImportKey(Azure.Security.KeyVault.Keys.ImportKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKey (importKeyOptions As ImportKeyOptions, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKey (importKeyOptions As ImportKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member ImportKey : Azure.Security.KeyVault.Keys.ImportKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.ImportKey : Azure.Security.KeyVault.Keys.ImportKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.ImportKey (importKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -845,7 +979,7 @@
             Imports an externally created key, stores it, and returns key parameters
             and attributes to the client.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> that was imported.</returns>
         <remarks>
             The import key operation may be used to import any key type into an Azure
             Key Vault. If the named key already exists, Azure Key Vault creates a new
@@ -860,15 +994,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; ImportKey (string name, Azure.Security.KeyVault.Keys.JsonWebKey keyMaterial, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; ImportKey(string name, class Azure.Security.KeyVault.Keys.JsonWebKey keyMaterial, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ImportKey(System.String,Azure.Security.KeyVault.Keys.JsonWebKey,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKey (name As String, keyMaterial As JsonWebKey, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKey (name As String, keyMaterial As JsonWebKey, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member ImportKey : string * Azure.Security.KeyVault.Keys.JsonWebKey * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.ImportKey : string * Azure.Security.KeyVault.Keys.JsonWebKey * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.ImportKey (name, keyMaterial, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -886,7 +1020,7 @@
             Imports an externally created key, stores it, and returns key parameters
             and attributes to the client.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> that was imported.</returns>
         <remarks>
             The import key operation may be used to import any key type into an Azure
             Key Vault. If the named key already exists, Azure Key Vault creates a new
@@ -903,15 +1037,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; ImportKeyAsync (Azure.Security.KeyVault.Keys.ImportKeyOptions importKeyOptions, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; ImportKeyAsync(class Azure.Security.KeyVault.Keys.ImportKeyOptions importKeyOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ImportKeyAsync(Azure.Security.KeyVault.Keys.ImportKeyOptions,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKeyAsync (importKeyOptions As ImportKeyOptions, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKeyAsync (importKeyOptions As ImportKeyOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member ImportKeyAsync : Azure.Security.KeyVault.Keys.ImportKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.ImportKeyAsync : Azure.Security.KeyVault.Keys.ImportKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.ImportKeyAsync (importKeyOptions, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -927,7 +1061,7 @@
             Imports an externally created key, stores it, and returns key parameters
             and attributes to the client.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> that was imported.</returns>
         <remarks>
             The import key operation may be used to import any key type into an Azure
             Key Vault. If the named key already exists, Azure Key Vault creates a new
@@ -942,15 +1076,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; ImportKeyAsync (string name, Azure.Security.KeyVault.Keys.JsonWebKey keyMaterial, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; ImportKeyAsync(string name, class Azure.Security.KeyVault.Keys.JsonWebKey keyMaterial, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ImportKeyAsync(System.String,Azure.Security.KeyVault.Keys.JsonWebKey,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKeyAsync (name As String, keyMaterial As JsonWebKey, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ImportKeyAsync (name As String, keyMaterial As JsonWebKey, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member ImportKeyAsync : string * Azure.Security.KeyVault.Keys.JsonWebKey * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.ImportKeyAsync : string * Azure.Security.KeyVault.Keys.JsonWebKey * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.ImportKeyAsync (name, keyMaterial, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -968,7 +1102,7 @@
             Imports an externally created key, stores it, and returns key parameters
             and attributes to the client.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Azure.Security.KeyVault.Keys.KeyVaultKey" /> that was imported.</returns>
         <remarks>
             The import key operation may be used to import any key type into an Azure
             Key Vault. If the named key already exists, Azure Key Vault creates a new
@@ -985,15 +1119,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response PurgeDeletedKey (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response PurgeDeletedKey(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.PurgeDeletedKey(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedKey (name As String, Optional cancellationToken As CancellationToken = null) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedKey (name As String, Optional cancellationToken As CancellationToken = Nothing) As Response" />
       <MemberSignature Language="F#" Value="abstract member PurgeDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.PurgeDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Response" Usage="keyClient.PurgeDeletedKey (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response</ReturnType>
@@ -1026,15 +1160,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; PurgeDeletedKeyAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; PurgeDeletedKeyAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.PurgeDeletedKeyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = null) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function PurgeDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member PurgeDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.PurgeDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="keyClient.PurgeDeletedKeyAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
@@ -1063,19 +1197,183 @@
         <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ReleaseKey">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt; ReleaseKey (string name, string target, Azure.Security.KeyVault.Keys.ReleaseKeyOptions options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt; ReleaseKey(string name, string target, class Azure.Security.KeyVault.Keys.ReleaseKeyOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ReleaseKey(System.String,System.String,Azure.Security.KeyVault.Keys.ReleaseKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseKey (name As String, target As String, Optional options As ReleaseKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ReleaseKeyResult)" />
+      <MemberSignature Language="F#" Value="abstract member ReleaseKey : string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&#xA;override this.ReleaseKey : string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;" Usage="keyClient.ReleaseKey (name, target, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="target" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.ReleaseKeyOptions" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the key to release.</param>
+        <param name="target">The attestation assertion for the target of the key release.</param>
+        <param name="options">Optional <see cref="T:Azure.Security.KeyVault.Keys.ReleaseKeyOptions" /> containing additional options to release a key.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Releases the latest version of a key.
+            </summary>
+        <returns>The key release result containing the released key.</returns>
+        <remarks>
+            The key must be exportable.
+            This operation requires the keys/release permission.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> or <paramref name="target" /> contains an empty string.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> or <paramref name="target" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseKey">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt; ReleaseKey (string name, string version, string target, Azure.Security.KeyVault.Keys.ReleaseKeyOptions options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt; ReleaseKey(string name, string version, string target, class Azure.Security.KeyVault.Keys.ReleaseKeyOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ReleaseKey(System.String,System.String,System.String,Azure.Security.KeyVault.Keys.ReleaseKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseKey (name As String, version As String, target As String, Optional options As ReleaseKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ReleaseKeyResult)" />
+      <MemberSignature Language="F#" Value="abstract member ReleaseKey : string * string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&#xA;override this.ReleaseKey : string * string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;" Usage="keyClient.ReleaseKey (name, version, target, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="target" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.ReleaseKeyOptions" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the key to release.</param>
+        <param name="version">Optional version of the key to release.</param>
+        <param name="target">The attestation assertion for the target of the key release.</param>
+        <param name="options">Optional <see cref="T:Azure.Security.KeyVault.Keys.ReleaseKeyOptions" /> containing additional options to release a key.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Releases a key.
+            </summary>
+        <returns>The key release result containing the released key.</returns>
+        <remarks>
+            The key must be exportable.
+            This operation requires the keys/release permission.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> or <paramref name="target" /> contains an empty string.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> or <paramref name="target" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseKeyAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt; ReleaseKeyAsync (string name, string target, Azure.Security.KeyVault.Keys.ReleaseKeyOptions options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt; ReleaseKeyAsync(string name, string target, class Azure.Security.KeyVault.Keys.ReleaseKeyOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ReleaseKeyAsync(System.String,System.String,Azure.Security.KeyVault.Keys.ReleaseKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseKeyAsync (name As String, target As String, Optional options As ReleaseKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ReleaseKeyResult))" />
+      <MemberSignature Language="F#" Value="abstract member ReleaseKeyAsync : string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;&#xA;override this.ReleaseKeyAsync : string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;" Usage="keyClient.ReleaseKeyAsync (name, target, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="target" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.ReleaseKeyOptions" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the key to release.</param>
+        <param name="target">The attestation assertion for the target of the key release.</param>
+        <param name="options">Optional <see cref="T:Azure.Security.KeyVault.Keys.ReleaseKeyOptions" /> containing additional options to release a key.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Releases the latest version of a key.
+            </summary>
+        <returns>The key release result containing the released key.</returns>
+        <remarks>
+            The key must be exportable.
+            This operation requires the keys/release permission.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> or <paramref name="target" /> contains an empty string.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> or <paramref name="target" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseKeyAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt; ReleaseKeyAsync (string name, string version, string target, Azure.Security.KeyVault.Keys.ReleaseKeyOptions options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt; ReleaseKeyAsync(string name, string version, string target, class Azure.Security.KeyVault.Keys.ReleaseKeyOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.ReleaseKeyAsync(System.String,System.String,System.String,Azure.Security.KeyVault.Keys.ReleaseKeyOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReleaseKeyAsync (name As String, version As String, target As String, Optional options As ReleaseKeyOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ReleaseKeyResult))" />
+      <MemberSignature Language="F#" Value="abstract member ReleaseKeyAsync : string * string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;&#xA;override this.ReleaseKeyAsync : string * string * string * Azure.Security.KeyVault.Keys.ReleaseKeyOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;" Usage="keyClient.ReleaseKeyAsync (name, version, target, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.ReleaseKeyResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="target" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.Security.KeyVault.Keys.ReleaseKeyOptions" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the key to release.</param>
+        <param name="version">Optional version of the key to release.</param>
+        <param name="target">The attestation assertion for the target of the key release.</param>
+        <param name="options">Optional <see cref="T:Azure.Security.KeyVault.Keys.ReleaseKeyOptions" /> containing additional options to release a key.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> controlling the request lifetime.</param>
+        <summary>
+            Releases a key.
+            </summary>
+        <returns>The key release result containing the released key.</returns>
+        <remarks>
+            The key must be exportable.
+            This operation requires the keys/release permission.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> or <paramref name="target" /> contains an empty string.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> or <paramref name="target" /> is null.</exception>
+        <exception cref="T:Azure.RequestFailedException">The server returned an error. See <see cref="P:System.Exception.Message" /> for details returned from the server.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="RestoreKeyBackup">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; RestoreKeyBackup (byte[] backup, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; RestoreKeyBackup(unsigned int8[] backup, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.RestoreKeyBackup(System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreKeyBackup (backup As Byte(), Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreKeyBackup (backup As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member RestoreKeyBackup : byte[] * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.RestoreKeyBackup : byte[] * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.RestoreKeyBackup (backup, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -1117,15 +1415,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; RestoreKeyBackupAsync (byte[] backup, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; RestoreKeyBackupAsync(unsigned int8[] backup, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.RestoreKeyBackupAsync(System.Byte[],System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreKeyBackupAsync (backup As Byte(), Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreKeyBackupAsync (backup As Byte(), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member RestoreKeyBackupAsync : byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.RestoreKeyBackupAsync : byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.RestoreKeyBackupAsync (backup, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -1167,15 +1465,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.DeleteKeyOperation StartDeleteKey (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.DeleteKeyOperation StartDeleteKey(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.StartDeleteKey(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteKey (name As String, Optional cancellationToken As CancellationToken = null) As DeleteKeyOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteKey (name As String, Optional cancellationToken As CancellationToken = Nothing) As DeleteKeyOperation" />
       <MemberSignature Language="F#" Value="abstract member StartDeleteKey : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.DeleteKeyOperation&#xA;override this.StartDeleteKey : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.DeleteKeyOperation" Usage="keyClient.StartDeleteKey (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.DeleteKeyOperation</ReturnType>
@@ -1213,15 +1511,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.DeleteKeyOperation&gt; StartDeleteKeyAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.DeleteKeyOperation&gt; StartDeleteKeyAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.StartDeleteKeyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteKeyAsync (name As String, Optional cancellationToken As CancellationToken = null) As Task(Of DeleteKeyOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartDeleteKeyAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of DeleteKeyOperation)" />
       <MemberSignature Language="F#" Value="abstract member StartDeleteKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.DeleteKeyOperation&gt;&#xA;override this.StartDeleteKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.DeleteKeyOperation&gt;" Usage="keyClient.StartDeleteKeyAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.DeleteKeyOperation&gt;</ReturnType>
@@ -1259,15 +1557,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation StartRecoverDeletedKey (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation StartRecoverDeletedKey(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.StartRecoverDeletedKey(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedKey (name As String, Optional cancellationToken As CancellationToken = null) As RecoverDeletedKeyOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedKey (name As String, Optional cancellationToken As CancellationToken = Nothing) As RecoverDeletedKeyOperation" />
       <MemberSignature Language="F#" Value="abstract member StartRecoverDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&#xA;override this.StartRecoverDeletedKey : string * System.Threading.CancellationToken -&gt; Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation" Usage="keyClient.StartRecoverDeletedKey (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation</ReturnType>
@@ -1301,15 +1599,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&gt; StartRecoverDeletedKeyAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&gt; StartRecoverDeletedKeyAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.StartRecoverDeletedKeyAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = null) As Task(Of RecoverDeletedKeyOperation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartRecoverDeletedKeyAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RecoverDeletedKeyOperation)" />
       <MemberSignature Language="F#" Value="abstract member StartRecoverDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&gt;&#xA;override this.StartRecoverDeletedKeyAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&gt;" Usage="keyClient.StartRecoverDeletedKeyAsync (name, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Security.KeyVault.Keys.RecoverDeletedKeyOperation&gt;</ReturnType>
@@ -1343,15 +1641,15 @@
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt; UpdateKeyProperties (Azure.Security.KeyVault.Keys.KeyProperties properties, System.Collections.Generic.IEnumerable&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; keyOperations = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt; UpdateKeyProperties(class Azure.Security.KeyVault.Keys.KeyProperties properties, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.Security.KeyVault.Keys.KeyOperation&gt; keyOperations, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.UpdateKeyProperties(Azure.Security.KeyVault.Keys.KeyProperties,System.Collections.Generic.IEnumerable{Azure.Security.KeyVault.Keys.KeyOperation},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateKeyProperties (properties As KeyProperties, Optional keyOperations As IEnumerable(Of KeyOperation) = null, Optional cancellationToken As CancellationToken = null) As Response(Of KeyVaultKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateKeyProperties (properties As KeyProperties, Optional keyOperations As IEnumerable(Of KeyOperation) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of KeyVaultKey)" />
       <MemberSignature Language="F#" Value="abstract member UpdateKeyProperties : Azure.Security.KeyVault.Keys.KeyProperties * seq&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&#xA;override this.UpdateKeyProperties : Azure.Security.KeyVault.Keys.KeyProperties * seq&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;" Usage="keyClient.UpdateKeyProperties (properties, keyOperations, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;</ReturnType>
@@ -1384,15 +1682,15 @@
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; UpdateKeyPropertiesAsync (Azure.Security.KeyVault.Keys.KeyProperties properties, System.Collections.Generic.IEnumerable&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; keyOperations = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt; UpdateKeyPropertiesAsync(class Azure.Security.KeyVault.Keys.KeyProperties properties, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.Security.KeyVault.Keys.KeyOperation&gt; keyOperations, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Security.KeyVault.Keys.KeyClient.UpdateKeyPropertiesAsync(Azure.Security.KeyVault.Keys.KeyProperties,System.Collections.Generic.IEnumerable{Azure.Security.KeyVault.Keys.KeyOperation},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateKeyPropertiesAsync (properties As KeyProperties, Optional keyOperations As IEnumerable(Of KeyOperation) = null, Optional cancellationToken As CancellationToken = null) As Task(Of Response(Of KeyVaultKey))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateKeyPropertiesAsync (properties As KeyProperties, Optional keyOperations As IEnumerable(Of KeyOperation) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of KeyVaultKey))" />
       <MemberSignature Language="F#" Value="abstract member UpdateKeyPropertiesAsync : Azure.Security.KeyVault.Keys.KeyProperties * seq&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;&#xA;override this.UpdateKeyPropertiesAsync : Azure.Security.KeyVault.Keys.KeyProperties * seq&lt;Azure.Security.KeyVault.Keys.KeyOperation&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;" Usage="keyClient.UpdateKeyPropertiesAsync (properties, keyOperations, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.Security.KeyVault.Keys.KeyVaultKey&gt;&gt;</ReturnType>
@@ -1430,10 +1728,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.KeyVault.Keys</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>

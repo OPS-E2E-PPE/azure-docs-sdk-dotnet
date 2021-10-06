@@ -6,12 +6,18 @@
   <TypeSignature Language="F#" Value="type MsalError = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-    <AssemblyVersion>4.7.0.0</AssemblyVersion>
-    <AssemblyVersion>4.7.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.0.0</AssemblyVersion>
-    <AssemblyVersion>4.8.1.0</AssemblyVersion>
-    <AssemblyVersion>4.8.2.0</AssemblyVersion>
-    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.0.0</AssemblyVersion>
+    <AssemblyVersion>4.30.1.0</AssemblyVersion>
+    <AssemblyVersion>4.31.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.0.0</AssemblyVersion>
+    <AssemblyVersion>4.32.1.0</AssemblyVersion>
+    <AssemblyVersion>4.33.0.0</AssemblyVersion>
+    <AssemblyVersion>4.34.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.0.0</AssemblyVersion>
+    <AssemblyVersion>4.35.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.0.0</AssemblyVersion>
+    <AssemblyVersion>4.36.1.0</AssemblyVersion>
+    <AssemblyVersion>4.36.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,12 +39,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -59,12 +71,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -81,6 +99,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AccessTokenTypeMissing">
+      <MemberSignature Language="C#" Value="public const string AccessTokenTypeMissing;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AccessTokenTypeMissing" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing" />
+      <MemberSignature Language="VB.NET" Value="Public Const AccessTokenTypeMissing As String " />
+      <MemberSignature Language="F#" Value="val mutable AccessTokenTypeMissing : string" Usage="Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>The response from the token endpoint does not contain the token_type parameter.
+            <para>Mitigation</para>This happens if the identity provider (AAD, B2C, ADFS, etc.) did not include the access token type in the token response. Verify the configuration of the identity provider.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ActivityRequired">
       <MemberSignature Language="C#" Value="public const string ActivityRequired;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string ActivityRequired" />
@@ -90,19 +138,24 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            TODO: UPDATE DOCUMENTATION!
             On Android, you need to call <c>AcquireTokenInteractiveParameterBuilder.WithParentActivityOrWindow(object)</c> passing
             the activity. See https://aka.ms/msal-interactive-android
             </summary>
@@ -118,10 +171,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -142,10 +203,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -166,12 +235,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -194,12 +269,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -224,12 +305,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -252,12 +339,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -274,6 +367,66 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AuthorityHostMismatch">
+      <MemberSignature Language="C#" Value="public const string AuthorityHostMismatch;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AuthorityHostMismatch" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.AuthorityHostMismatch" />
+      <MemberSignature Language="VB.NET" Value="Public Const AuthorityHostMismatch As String " />
+      <MemberSignature Language="F#" Value="val mutable AuthorityHostMismatch : string" Usage="Microsoft.Identity.Client.MsalError.AuthorityHostMismatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The cloud (authority url host) defined at the application level cannot be different than the cloud at the request level.
+            <para>What happens?</para>You did not define an authority at the application level, so it defaults to the public cloud (login.microsoft.com), but the authority at the request level is for a different cloud. Only the tenant can be changed at the request level.
+            <para>Mitigation</para>Add .WithAuthority("https://login.windows-ppe.net/common) at the application level and specify the tenant at the request level: .WithAuthority("https://login.windows-ppe.net/1234-567-890-12345678). 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorityTenantSpecifiedTwice">
+      <MemberSignature Language="C#" Value="public const string AuthorityTenantSpecifiedTwice;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AuthorityTenantSpecifiedTwice" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.AuthorityTenantSpecifiedTwice" />
+      <MemberSignature Language="VB.NET" Value="Public Const AuthorityTenantSpecifiedTwice As String " />
+      <MemberSignature Language="F#" Value="val mutable AuthorityTenantSpecifiedTwice : string" Usage="Microsoft.Identity.Client.MsalError.AuthorityTenantSpecifiedTwice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>You specified a tenant twice - once in WithAuthority() and once using WithTenant()
+            <para>Mitigation</para>Specify the tenant once.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AuthorityTypeMismatch">
       <MemberSignature Language="C#" Value="public const string AuthorityTypeMismatch;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string AuthorityTypeMismatch" />
@@ -283,7 +436,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -305,12 +469,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -338,12 +508,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -364,15 +540,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>A broker application is required, but one could not be found.
+          <para>What happens?</para>A broker application is required, but one could not be found or communicated with.
             <para>Mitigation</para>Install a broker application, such as Authenticator, from the application store
             </summary>
         <remarks>To be added.</remarks>
@@ -387,12 +573,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -413,12 +605,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -439,12 +637,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -465,12 +669,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -494,12 +704,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -508,6 +724,72 @@
         <summary>
             MSAL is not able to invoke the broker. Possible reasons are the broker is not installed on the user's device,
             or there were issues with the UiParent or CallerViewController being null. See https://aka.ms/msal-brokers
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertWithoutPrivateKey">
+      <MemberSignature Language="C#" Value="public const string CertWithoutPrivateKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CertWithoutPrivateKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.CertWithoutPrivateKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const CertWithoutPrivateKey As String " />
+      <MemberSignature Language="F#" Value="val mutable CertWithoutPrivateKey : string" Usage="Microsoft.Identity.Client.MsalError.CertWithoutPrivateKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>The certificate provided does not have a private key.
+            <para>Mitigation</para>Ensure the certificate has a private key.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialAuthenticationTypeMustBeDefined">
+      <MemberSignature Language="C#" Value="public const string ClientCredentialAuthenticationTypeMustBeDefined;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ClientCredentialAuthenticationTypeMustBeDefined" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypeMustBeDefined" />
+      <MemberSignature Language="VB.NET" Value="Public Const ClientCredentialAuthenticationTypeMustBeDefined As String " />
+      <MemberSignature Language="F#" Value="val mutable ClientCredentialAuthenticationTypeMustBeDefined : string" Usage="Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypeMustBeDefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>You configured MSAL confidential client authentication without an authentication type (Certificate, Secret, Client Assertion)
+            <para>Mitigation</para>Either call ConfidentialClientApplicationBuilder.WithClientSecret, ConfidentialClientApplicationBuilder.WithCertificate, ConfidentialClientApplicationBuilder.WithClientAssertion
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -521,12 +803,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -547,19 +835,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>You've specified a client ID that is not a <see cref="T:System.Guid" /><para>Mitigation</para>Use the application ID (a Guid) from the application portal as client ID in this SDK
+          <para>What happens?</para>You've specified a client ID that is not a <see cref="T:System.Guid" /><para>Mitigation</para>Use the application ID (a GUID) from the application portal as client ID in this SDK
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -573,12 +867,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -594,6 +894,107 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CryptoNet45">
+      <MemberSignature Language="C#" Value="public const string CryptoNet45;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CryptoNet45" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.CryptoNet45" />
+      <MemberSignature Language="VB.NET" Value="Public Const CryptoNet45 As String " />
+      <MemberSignature Language="F#" Value="val mutable CryptoNet45 : string" Usage="Microsoft.Identity.Client.MsalError.CryptoNet45" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>MSAL cannot use the certificate for signing.
+            <para>Mitigation</para>Possible cause: use of CNG certificates with .Net classic 4.6 or lower. Either target a higher version of .NET desktop - 4.6.1 and above, or use a different certificate type (non-CNG) 
+            or sign your own assertion as described at https://aka.ms/msal-net-signed-assertion
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentBrokerAccount">
+      <MemberSignature Language="C#" Value="public const string CurrentBrokerAccount;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CurrentBrokerAccount" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.CurrentBrokerAccount" />
+      <MemberSignature Language="VB.NET" Value="Public Const CurrentBrokerAccount As String " />
+      <MemberSignature Language="F#" Value="val mutable CurrentBrokerAccount : string" Usage="Microsoft.Identity.Client.MsalError.CurrentBrokerAccount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This error code comes back from <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" /> calls when the 
+            <see cref="P:Microsoft.Identity.Client.PublicClientApplication.OperatingSystemAccount" /> user is passed as the <c>account</c> parameter. Only some brokers (WAM) can login the current user.
+            <para>Mitigation</para>
+            On Windows, use the broker via .WithBroker(true), use a different account, or otherwise call <see cref="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMetadataInstanceOrUri">
+      <MemberSignature Language="C#" Value="public const string CustomMetadataInstanceOrUri;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CustomMetadataInstanceOrUri" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.CustomMetadataInstanceOrUri" />
+      <MemberSignature Language="VB.NET" Value="Public Const CustomMetadataInstanceOrUri As String " />
+      <MemberSignature Language="F#" Value="val mutable CustomMetadataInstanceOrUri : string" Usage="Microsoft.Identity.Client.MsalError.CustomMetadataInstanceOrUri" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>You have configured your own instance metadata using both an Uri and a string. Only one is supported.
+            <para>Mitigation</para>Call WithInstanceDiscoveryMetadata only once. See https://aka.ms/msal-net-custom-instance-metadata for more details.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CustomWebUiRedirectUriMismatch">
       <MemberSignature Language="C#" Value="public const string CustomWebUiRedirectUriMismatch;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string CustomWebUiRedirectUriMismatch" />
@@ -603,20 +1004,26 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Error code used when the CustomWebUI has returned an uri, but it does not match the Authority and AbsolutePath of
-            the configured redirect uri.
+            Error code used when the CustomWebUI has returned a URI, but it does not match the Authority and AbsolutePath of
+            the configured redirect URI.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -630,20 +1037,26 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Error code used when the <see cref="T:Microsoft.Identity.Client.Extensibility.ICustomWebUi" /> has returned an uri, but it is invalid - it is either null or has no code.
-            Consider throwing an exception if you are unable to intercept the uri containing the code.
+            Error code used when the <see cref="T:Microsoft.Identity.Client.Extensibility.ICustomWebUi" /> has returned a URI, but it is invalid - it is either null or has no code.
+            Consider throwing an exception if you are unable to intercept the URI containing the code.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -657,12 +1070,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -670,6 +1089,38 @@
       <Docs>
         <summary>
             RedirectUri validation failed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceCertificateNotFound">
+      <MemberSignature Language="C#" Value="public const string DeviceCertificateNotFound;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DeviceCertificateNotFound" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.DeviceCertificateNotFound" />
+      <MemberSignature Language="VB.NET" Value="Public Const DeviceCertificateNotFound As String " />
+      <MemberSignature Language="F#" Value="val mutable DeviceCertificateNotFound : string" Usage="Microsoft.Identity.Client.MsalError.DeviceCertificateNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Device certificate not found.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -683,12 +1134,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -714,12 +1171,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -743,10 +1206,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -768,12 +1239,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -791,6 +1268,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FailedToGetBrokerResponse">
+      <MemberSignature Language="C#" Value="public const string FailedToGetBrokerResponse;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FailedToGetBrokerResponse" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.FailedToGetBrokerResponse" />
+      <MemberSignature Language="VB.NET" Value="Public Const FailedToGetBrokerResponse As String " />
+      <MemberSignature Language="F#" Value="val mutable FailedToGetBrokerResponse : string" Usage="Microsoft.Identity.Client.MsalError.FailedToGetBrokerResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>You are trying to authenticate with the broker but MSAL is unable to read the response from the broker.
+            <para>Mitigation</para>The currently installed broker may not support MSAL.Xamarin, you need to ensure that you have installed either Intune Company Portal (5.0.4689.0 or greater) or Microsoft Authenticator (6.2001.0140 or greater). see https://aka.ms/Brokered-Authentication-for-Android"
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FailedToRefreshToken">
       <MemberSignature Language="C#" Value="public const string FailedToRefreshToken;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string FailedToRefreshToken" />
@@ -800,12 +1310,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -833,12 +1349,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -863,12 +1385,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -876,6 +1404,38 @@
       <Docs>
         <summary>
             Failed to get user name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpListenerError">
+      <MemberSignature Language="C#" Value="public const string HttpListenerError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpListenerError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.HttpListenerError" />
+      <MemberSignature Language="VB.NET" Value="Public Const HttpListenerError As String " />
+      <MemberSignature Language="F#" Value="val mutable HttpListenerError : string" Usage="Microsoft.Identity.Client.MsalError.HttpListenerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An HttpListenerException occurred while listening for the system browser to complete the login.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -889,12 +1449,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -916,12 +1482,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -929,6 +1501,61 @@
       <Docs>
         <summary>
             Error code used when the HTTP response returns HttpStatusCode.NotFound
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeProcessSecurityError">
+      <MemberSignature Language="C#" Value="public const string InitializeProcessSecurityError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string InitializeProcessSecurityError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.InitializeProcessSecurityError" />
+      <MemberSignature Language="VB.NET" Value="Public Const InitializeProcessSecurityError As String " />
+      <MemberSignature Language="F#" Value="val mutable InitializeProcessSecurityError : string" Usage="Microsoft.Identity.Client.MsalError.InitializeProcessSecurityError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>Failure setting process security to enable WAM Account Picker in an elevated process.
+            <para>Mitigation</para>For troubleshooting details, see https://aka.ms/msal-net-wam .
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegratedWindowsAuthenticationFailed">
+      <MemberSignature Language="C#" Value="public const string IntegratedWindowsAuthenticationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string IntegratedWindowsAuthenticationFailed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.IntegratedWindowsAuthenticationFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Const IntegratedWindowsAuthenticationFailed As String " />
+      <MemberSignature Language="F#" Value="val mutable IntegratedWindowsAuthenticationFailed : string" Usage="Microsoft.Identity.Client.MsalError.IntegratedWindowsAuthenticationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This can occur if there is an configuration issue in the ADFS environment where this is authenticating. See https://aka.ms/msal-net-iwa-troubleshooting for more details
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -942,12 +1569,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -955,6 +1588,42 @@
       <Docs>
         <summary>
             Integrated Windows Auth is only supported for "federated" users
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InteractionRequired">
+      <MemberSignature Language="C#" Value="public const string InteractionRequired;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string InteractionRequired" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.InteractionRequired" />
+      <MemberSignature Language="VB.NET" Value="Public Const InteractionRequired As String " />
+      <MemberSignature Language="F#" Value="val mutable InteractionRequired : string" Usage="Microsoft.Identity.Client.MsalError.InteractionRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Standard OAuth2 protocol error code. It indicates that the application needs to expose the UI to the user
+            so the user can do an interactive log-in to get a token with updated claims.
+            <para>Mitigation:</para> If your application is a <see cref="T:IPublicClientApplication" /> call <c>AcquireTokenInteractive</c>
+            perform an interactive authentication. If your application is a <see cref="T:ConfidentialClientApplication" /> chances are that the Claims member
+            of the exception is not empty. See <see cref="P:MsalServiceException.Claims" /> for the right mitigation
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -968,12 +1637,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -981,6 +1656,39 @@
       <Docs>
         <summary>
             Internal error
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidAdalCacheMultipleRTs">
+      <MemberSignature Language="C#" Value="public const string InvalidAdalCacheMultipleRTs;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string InvalidAdalCacheMultipleRTs" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.InvalidAdalCacheMultipleRTs" />
+      <MemberSignature Language="VB.NET" Value="Public Const InvalidAdalCacheMultipleRTs As String " />
+      <MemberSignature Language="F#" Value="val mutable InvalidAdalCacheMultipleRTs : string" Usage="Microsoft.Identity.Client.MsalError.InvalidAdalCacheMultipleRTs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>The ADAL cache is invalid as it contains multiple refresh token entries for one user.
+            <para>Mitigation</para>Delete the ADAL cache. If you do not maintain an ADAL cache, this may be a bug in MSAL.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -994,12 +1702,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1024,12 +1738,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1053,12 +1773,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1079,12 +1805,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1107,12 +1839,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1137,12 +1875,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1163,7 +1907,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1185,12 +1940,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1214,12 +1975,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1248,12 +2015,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1270,32 +2043,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="InvalidServiceUrl">
-      <MemberSignature Language="C#" Value="public const string InvalidServiceUrl;" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal string InvalidServiceUrl" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.InvalidServiceUrl" />
-      <MemberSignature Language="VB.NET" Value="Public Const InvalidServiceUrl As String " />
-      <MemberSignature Language="F#" Value="val mutable InvalidServiceUrl : string" Usage="Microsoft.Identity.Client.MsalError.InvalidServiceUrl" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Invalid service URL.
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="InvalidUserInstanceMetadata">
       <MemberSignature Language="C#" Value="public const string InvalidUserInstanceMetadata;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string InvalidUserInstanceMetadata" />
@@ -1305,12 +2052,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1332,12 +2085,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1361,19 +2120,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>MSAL tried to open the browser on Linux using the xdg-open tool, but failed.
+          <para>What happens?</para>MSAL tried to open the browser on Linux using the xdg-open, gnome-open, or kfmclient tools, but failed.
             <para>Mitigation</para>Make sure you can open a page using xdg-open tool. See https://aka.ms/msal-net-os-browser for details.
             </summary>
         <remarks>To be added.</remarks>
@@ -1388,20 +2153,26 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>The current redirect Url is not a loopback Url.
-            <para>Mitigation</para> To use the OS browser, a loopback url, with or without a port, must be configured both during app registration and when initializing the IPublicClientApplication object. See https://aka.ms/msal-net-os-browser for details.
+          <para>What happens?</para>The current redirect URL is not a loopback URL.
+            <para>Mitigation</para> To use the OS browser, a loopback URL, with or without a port, must be configured both during app registration and when initializing the IPublicClientApplication object. See https://aka.ms/msal-net-os-browser for details.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1415,12 +2186,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1428,9 +2205,9 @@
       <Docs>
         <summary>
           <para>What happens?</para>MSAL has intercepted a Uri possibly containing an authorization code, but it does not match 
-            the configured redirect url.
+            the configured redirect URL.
             <para>Mitigation</para>If you are using an ICustomWebUi implementation, make sure the
-            redirect url matches the url containing the auth code. If you are not using an ICustomWebUI,
+            redirect URL matches the URL containing the auth code. If you are not using an ICustomWebUI,
             this could be a man-in-the middle attack.
             </summary>
         <remarks>To be added.</remarks>
@@ -1445,19 +2222,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Federation Metadata Url is missing for federated user.
+            Federation Metadata URL is missing for federated user.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1471,12 +2254,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1501,12 +2290,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1528,12 +2323,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1558,16 +2359,23 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("MSAL no longer throws this error - it will allow the HttpClient exceptions to propagate. App developers may write their own logic for detecting access to the network issues, for example by using Xamarin.Essentials. ")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("MSAL no longer throws this error - it will allow the HttpClient exceptions to propagate. App developers may write their own logic for detecting access to the network issues, for example by using Xamarin.Essentials. ")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("MSAL no longer throws this error - it will allow the HttpClient exceptions to propagate. App developers may write their own logic for detecting access to the network issues, for example by using Xamarin.Essentials. ")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1591,12 +2399,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1620,10 +2434,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1644,10 +2466,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1668,12 +2498,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1681,33 +2517,7 @@
       <Docs>
         <summary>
           <para>What happens?</para>You haven't set a client ID.
-            <para>Mitigation</para>Use the application ID (a Guid) from the application portal as client ID in this SDK
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="NoDataFromSts">
-      <MemberSignature Language="C#" Value="public const string NoDataFromSts;" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal string NoDataFromSts" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.NoDataFromSts" />
-      <MemberSignature Language="VB.NET" Value="Public Const NoDataFromSts As String " />
-      <MemberSignature Language="F#" Value="val mutable NoDataFromSts : string" Usage="Microsoft.Identity.Client.MsalError.NoDataFromSts" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            No data from STS.
+            <para>Mitigation</para>Use the application ID (a GUID) from the application portal as client ID in this SDK
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1721,12 +2531,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1749,12 +2565,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1775,12 +2597,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1806,12 +2634,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1833,12 +2667,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1847,12 +2687,12 @@
         <summary>
             No token was found in the token cache.
             <para>Mitigation:</para> If your application is a <see cref="T:Microsoft.Identity.Client.IPublicClientApplication" /> call <c>AcquireTokenInteractive</c> so
-            that the user of your application signs-in and accepts consent. If your application is a <see cref="T:ConfidentialClientApplication" />.:
-            <list type="bullet"><item>
-            If it's a Web App you should have previously called <see cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+            that the user of your application signs-in and accepts consent.
+            <list type="bullet"><item><description>
+            If it's a web app you should have previously called IConfidentialClientApplication.AcquireTokenByAuthorizationCode
             as described in https://aka.ms/msal-net-authorization-code. You need to make sure that you have requested the right scopes. For details
             See https://github.com/Azure-Samples/ms-identity-aspnetcore-webapp-tutorial
-            </item><item>This error should not happen in Web APIs</item></list></summary>
+            </description></item><item><description>This error should not happen in web APIs</description></item></list></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1865,7 +2705,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1886,10 +2737,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1910,12 +2769,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1936,12 +2801,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1965,12 +2836,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1994,12 +2871,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2020,12 +2903,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2041,6 +2930,105 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RegionalAuthorityValidation">
+      <MemberSignature Language="C#" Value="public const string RegionalAuthorityValidation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RegionalAuthorityValidation" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.RegionalAuthorityValidation" />
+      <MemberSignature Language="VB.NET" Value="Public Const RegionalAuthorityValidation As String " />
+      <MemberSignature Language="F#" Value="val mutable RegionalAuthorityValidation : string" Usage="Microsoft.Identity.Client.MsalError.RegionalAuthorityValidation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>You configured both Regional Authority and Authority Validation. Authority validation is not currently supported for regional authorities.
+            <para>Mitigation</para>Set the validateAuthority flag to false to use Azure Regional authority. Do not disable authority validation if you read the authority from an untrusted source, 
+            for example from the WWWAuthenticate header of an HTTP request that resulted in a 401 response. 
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionDiscoveryFailed">
+      <MemberSignature Language="C#" Value="public const string RegionDiscoveryFailed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RegionDiscoveryFailed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.RegionDiscoveryFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Const RegionDiscoveryFailed As String " />
+      <MemberSignature Language="F#" Value="val mutable RegionDiscoveryFailed : string" Usage="Microsoft.Identity.Client.MsalError.RegionDiscoveryFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Region discovery failed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionDiscoveryNotEnabled">
+      <MemberSignature Language="C#" Value="public const string RegionDiscoveryNotEnabled;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RegionDiscoveryNotEnabled" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.RegionDiscoveryNotEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Const RegionDiscoveryNotEnabled As String " />
+      <MemberSignature Language="F#" Value="val mutable RegionDiscoveryNotEnabled : string" Usage="Microsoft.Identity.Client.MsalError.RegionDiscoveryNotEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>WithAzureRegion is set to true
+            <para>Mitigation</para>Region discovery cannot be performed for ADFS authority.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RequestTimeout">
       <MemberSignature Language="C#" Value="public const string RequestTimeout;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string RequestTimeout" />
@@ -2050,20 +3038,93 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The Http Request to the STS timed out.
+            The HTTP Request to the STS timed out.
             <para>Mitigation</para> you can retry after a delay.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RopcDoesNotSupportMsaAccounts">
+      <MemberSignature Language="C#" Value="public const string RopcDoesNotSupportMsaAccounts;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RopcDoesNotSupportMsaAccounts" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.RopcDoesNotSupportMsaAccounts" />
+      <MemberSignature Language="VB.NET" Value="Public Const RopcDoesNotSupportMsaAccounts As String " />
+      <MemberSignature Language="F#" Value="val mutable RopcDoesNotSupportMsaAccounts : string" Usage="Microsoft.Identity.Client.MsalError.RopcDoesNotSupportMsaAccounts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Resource Owner Password Credential (ROPC) grant attempted with an MSA (Microsoft personal) account.
+            ROPC does not support MSA accounts.
+            See https://aka.ms/msal-net-ropc for details.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopesRequired">
+      <MemberSignature Language="C#" Value="public const string ScopesRequired;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ScopesRequired" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.ScopesRequired" />
+      <MemberSignature Language="VB.NET" Value="Public Const ScopesRequired As String " />
+      <MemberSignature Language="F#" Value="val mutable ScopesRequired : string" Usage="Microsoft.Identity.Client.MsalError.ScopesRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>No scopes have been requested
+            <para>Mitigation</para>At least one scope must be specified for this authentication flow
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2077,12 +3138,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2104,12 +3171,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2131,12 +3204,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2160,19 +3239,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>You configured MSAL interactive authentication to use an embedded webview and you also configured <see cref="T:Microsoft.Identity.Client.SystemWebViewOptions" />.
+          <para>What happens?</para>You configured MSAL interactive authentication to use an embedded WebView and you also configured <see cref="T:Microsoft.Identity.Client.SystemWebViewOptions" />.
             These are mutually exclusive.
             <para>Mitigation</para>Either set <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)" /> to true or do not use
             <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithSystemWebViewOptions(Microsoft.Identity.Client.SystemWebViewOptions)" /></summary>
@@ -2188,20 +3273,26 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>You have configured both a telememtry callback and a telemetry config. 
-            <para>Mitigation</para>Only one telememtry mechanism can be configured.
+          <para>What happens?</para>You have configured both a telemetry callback and a telemetry config. 
+            <para>Mitigation</para>Only one telemetry mechanism can be configured.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2215,12 +3306,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2245,16 +3342,23 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("This error code is not in use")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("This error code is not in use")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This error code is not in use")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2277,10 +3381,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2302,12 +3414,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2334,12 +3452,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2357,6 +3481,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="UnknownBrokerError">
+      <MemberSignature Language="C#" Value="public const string UnknownBrokerError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string UnknownBrokerError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.UnknownBrokerError" />
+      <MemberSignature Language="VB.NET" Value="Public Const UnknownBrokerError As String " />
+      <MemberSignature Language="F#" Value="val mutable UnknownBrokerError : string" Usage="Microsoft.Identity.Client.MsalError.UnknownBrokerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unknown broker error occurred.
+            <para>Mitigation</para> None. You might want to inform the end user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UnknownError">
       <MemberSignature Language="C#" Value="public const string UnknownError;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string UnknownError" />
@@ -2366,19 +3523,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Unknown Error occured.
+            Unknown Error occurred.
             <para>Mitigation</para> None. You might want to inform the end user.
             </summary>
         <remarks>To be added.</remarks>
@@ -2393,12 +3556,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2423,12 +3592,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2454,23 +3629,59 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            loginHint should be a Upn
+            loginHint should be a UPN
             <para>What happens?</para> An override of a token acquisition operation was called in <see cref="T:IPublicClientApplication" /> which
             takes a <c>loginHint</c> as a parameters, but this login hint was not using the UserPrincipalName (UPN) format, e.g. <c>john.doe@contoso.com</c>
             expected by the service
             <para>Remediation</para> Make sure in your code that you enforce <c>loginHint</c> to be a UPN
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAssertionNullError">
+      <MemberSignature Language="C#" Value="public const string UserAssertionNullError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string UserAssertionNullError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.UserAssertionNullError" />
+      <MemberSignature Language="VB.NET" Value="Public Const UserAssertionNullError As String " />
+      <MemberSignature Language="F#" Value="val mutable UserAssertionNullError : string" Usage="Microsoft.Identity.Client.MsalError.UserAssertionNullError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This error code comes back from <see cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" /> 
+            calls when a null user assertion is passed as the <c>UserAssertion</c> parameter. 
+            <para>Mitigation</para>
+            Pass a valid value for user assertion
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2484,12 +3695,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2510,12 +3727,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2539,12 +3762,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2565,19 +3794,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <para>What happens?</para>You have configured your own instance metadata, and have also configured custom metadata. These are mutually exclusive. 
+          <para>What happens?</para>You have configured your own instance metadata, and have also set validate authority to true. These are mutually exclusive. 
             <para>Mitigation</para>Set the validate authority flag to false. See https://aka.ms/msal-net-custom-instance-metadata for more details.
             </summary>
         <remarks>To be added.</remarks>
@@ -2592,12 +3827,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2606,6 +3847,200 @@
         <summary>
           <para>What happens?</para>Windows Authentication Broker, which handles the interaction between the user and AAD, has failed.
             <para>Mitigation</para>See the error message for more details. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WamInteractiveError">
+      <MemberSignature Language="C#" Value="public const string WamInteractiveError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WamInteractiveError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WamInteractiveError" />
+      <MemberSignature Language="VB.NET" Value="Public Const WamInteractiveError As String " />
+      <MemberSignature Language="F#" Value="val mutable WamInteractiveError : string" Usage="Microsoft.Identity.Client.MsalError.WamInteractiveError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WAM service exception that can occur when calling AcquireTokenInteractive
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WamNoB2C">
+      <MemberSignature Language="C#" Value="public const string WamNoB2C;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WamNoB2C" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WamNoB2C" />
+      <MemberSignature Language="VB.NET" Value="Public Const WamNoB2C As String " />
+      <MemberSignature Language="F#" Value="val mutable WamNoB2C : string" Usage="Microsoft.Identity.Client.MsalError.WamNoB2C" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Windows broker (WAM) is only supported in conjunction  with "work and school" accounts 
+            and with Microsoft accounts.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WamPickerError">
+      <MemberSignature Language="C#" Value="public const string WamPickerError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WamPickerError" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WamPickerError" />
+      <MemberSignature Language="VB.NET" Value="Public Const WamPickerError As String " />
+      <MemberSignature Language="F#" Value="val mutable WamPickerError : string" Usage="Microsoft.Identity.Client.MsalError.WamPickerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WAM service exception that can occur when calling AcquireTokenInteractive and the account picker 
+            pops up
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WamUiThread">
+      <MemberSignature Language="C#" Value="public const string WamUiThread;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WamUiThread" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WamUiThread" />
+      <MemberSignature Language="VB.NET" Value="Public Const WamUiThread As String " />
+      <MemberSignature Language="F#" Value="val mutable WamUiThread : string" Usage="Microsoft.Identity.Client.MsalError.WamUiThread" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When calling AcquireTokenInteractive with the WAM broker, the call must be made from the UI thread.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebView2LoaderNotFound">
+      <MemberSignature Language="C#" Value="public const string WebView2LoaderNotFound;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WebView2LoaderNotFound" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WebView2LoaderNotFound" />
+      <MemberSignature Language="VB.NET" Value="Public Const WebView2LoaderNotFound As String " />
+      <MemberSignature Language="F#" Value="val mutable WebView2LoaderNotFound : string" Usage="Microsoft.Identity.Client.MsalError.WebView2LoaderNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>The embedded WebView2 browser cannot be started because a runtime component cannot be loaded.
+            <para>Mitigation</para> For troubleshooting details, see https://aka.ms/msal-net-webview2 .
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebView2NotInstalled">
+      <MemberSignature Language="C#" Value="public const string WebView2NotInstalled;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WebView2NotInstalled" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalError.WebView2NotInstalled" />
+      <MemberSignature Language="VB.NET" Value="Public Const WebView2NotInstalled As String " />
+      <MemberSignature Language="F#" Value="val mutable WebView2NotInstalled : string" Usage="Microsoft.Identity.Client.MsalError.WebView2NotInstalled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>What happens?</para>The embedded browser cannot be started because a runtime component is missing.
+            <para>Mitigation</para>"The embedded browser needs WebView2 runtime to be installed. An end user of the app can download and install the WebView2 runtime from https://go.microsoft.com/fwlink/p/?LinkId=2124703 and restart the app.
+             or the app developer can install the WebView2 runtime https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2619,19 +4054,25 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The selected webview is not available on this platform. You can switch to a different webview using <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)" />. See https://aka.ms/msal-net-os-browser for details
+            The selected WebView is not available on this platform. You can switch to a different WebView using <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)" />. See https://aka.ms/msal-net-os-browser for details
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2645,12 +4086,18 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
-        <AssemblyVersion>4.7.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
-        <AssemblyVersion>4.8.1.0</AssemblyVersion>
-        <AssemblyVersion>4.8.2.0</AssemblyVersion>
-        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.0.0</AssemblyVersion>
+        <AssemblyVersion>4.30.1.0</AssemblyVersion>
+        <AssemblyVersion>4.31.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.0.0</AssemblyVersion>
+        <AssemblyVersion>4.32.1.0</AssemblyVersion>
+        <AssemblyVersion>4.33.0.0</AssemblyVersion>
+        <AssemblyVersion>4.34.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.0.0</AssemblyVersion>
+        <AssemblyVersion>4.35.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.0.0</AssemblyVersion>
+        <AssemblyVersion>4.36.1.0</AssemblyVersion>
+        <AssemblyVersion>4.36.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

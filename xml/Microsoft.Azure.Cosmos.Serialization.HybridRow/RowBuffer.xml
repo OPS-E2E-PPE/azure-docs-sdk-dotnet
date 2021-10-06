@@ -6,6 +6,7 @@
   <TypeSignature Language="F#" Value="type RowBuffer = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -21,11 +22,12 @@
       <MemberSignature Language="C#" Value="public RowBuffer (int capacity, Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer&lt;byte&gt; resizer = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer`1&lt;unsigned int8&gt; resizer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer.#ctor(System.Int32,Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer{System.Byte})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (capacity As Integer, Optional resizer As ISpanResizer(Of Byte) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (capacity As Integer, Optional resizer As ISpanResizer(Of Byte) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer : int * Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer&lt;byte&gt; -&gt; Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer" Usage="new Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer (capacity, resizer)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -43,11 +45,12 @@
       <MemberSignature Language="C#" Value="public RowBuffer (Span&lt;byte&gt; buffer, Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowVersion version, Microsoft.Azure.Cosmos.Serialization.HybridRow.Layouts.LayoutResolver resolver, Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer&lt;byte&gt; resizer = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Span`1&lt;unsigned int8&gt; buffer, valuetype Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowVersion version, class Microsoft.Azure.Cosmos.Serialization.HybridRow.Layouts.LayoutResolver resolver, class Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer`1&lt;unsigned int8&gt; resizer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer.#ctor(System.Span{System.Byte},Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowVersion,Microsoft.Azure.Cosmos.Serialization.HybridRow.Layouts.LayoutResolver,Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer{System.Byte})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (buffer As Span(Of Byte), version As HybridRowVersion, resolver As LayoutResolver, Optional resizer As ISpanResizer(Of Byte) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buffer As Span(Of Byte), version As HybridRowVersion, resolver As LayoutResolver, Optional resizer As ISpanResizer(Of Byte) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer : Span&lt;byte&gt; * Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowVersion * Microsoft.Azure.Cosmos.Serialization.HybridRow.Layouts.LayoutResolver * Microsoft.Azure.Cosmos.Serialization.HybridRow.ISpanResizer&lt;byte&gt; -&gt; Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer" Usage="new Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer (buffer, version, resolver, resizer)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -65,6 +68,27 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AsSpan">
+      <MemberSignature Language="C#" Value="public ReadOnlySpan&lt;byte&gt; AsSpan ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; AsSpan() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Cosmos.Serialization.HybridRow.RowBuffer.AsSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Function AsSpan () As ReadOnlySpan(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.AsSpan : unit -&gt; ReadOnlySpan&lt;byte&gt;" Usage="rowBuffer.AsSpan " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Header">
       <MemberSignature Language="C#" Value="public Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowHeader Header { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Azure.Cosmos.Serialization.HybridRow.HybridRowHeader Header" />
@@ -74,6 +98,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -94,6 +119,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -121,6 +147,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -141,6 +168,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -169,6 +197,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -199,6 +228,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -219,6 +249,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -239,6 +270,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -260,6 +292,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

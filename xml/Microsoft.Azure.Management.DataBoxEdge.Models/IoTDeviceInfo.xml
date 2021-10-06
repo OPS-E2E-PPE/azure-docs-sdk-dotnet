@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,6 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +43,13 @@
       <MemberSignature Language="C#" Value="public IoTDeviceInfo (string deviceId, string ioTHostHub, string ioTHostHubId = default, Microsoft.Azure.Management.DataBoxEdge.Models.Authentication authentication = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string deviceId, string ioTHostHub, string ioTHostHubId, class Microsoft.Azure.Management.DataBoxEdge.Models.Authentication authentication) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.DataBoxEdge.Models.IoTDeviceInfo.#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.DataBoxEdge.Models.Authentication)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (deviceId As String, ioTHostHub As String, Optional ioTHostHubId As String = null, Optional authentication As Authentication = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (deviceId As String, ioTHostHub As String, Optional ioTHostHubId As String = Nothing, Optional authentication As Authentication = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.DataBoxEdge.Models.IoTDeviceInfo : string * string * string * Microsoft.Azure.Management.DataBoxEdge.Models.Authentication -&gt; Microsoft.Azure.Management.DataBoxEdge.Models.IoTDeviceInfo" Usage="new Microsoft.Azure.Management.DataBoxEdge.Models.IoTDeviceInfo (deviceId, ioTHostHub, ioTHostHubId, authentication)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="deviceId" Type="System.String" />
@@ -60,8 +63,8 @@
             the device.</param>
         <param name="ioTHostHubId">Id for the IoT hub associated to the
             device.</param>
-        <param name="authentication">IoT device authentication
-            info.</param>
+        <param name="authentication">Encrypted IoT device/IoT edge device
+            connection string.</param>
         <summary>
             Initializes a new instance of the IoTDeviceInfo class.
             </summary>
@@ -78,10 +81,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="authentication")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="authentication")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="authentication")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -89,7 +94,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets ioT device authentication info.
+            Gets or sets encrypted IoT device/IoT edge device connection
+            string.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -105,10 +111,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="deviceId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="deviceId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="deviceId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -132,10 +140,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHub")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHub")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHub")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -159,10 +169,12 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHubId")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHubId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="ioTHostHubId")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -186,6 +198,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

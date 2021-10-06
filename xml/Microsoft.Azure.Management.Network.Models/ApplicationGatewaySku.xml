@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type ApplicationGatewaySku = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-    <AssemblyVersion>20.0.0.0</AssemblyVersion>
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -14,7 +14,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            SKU of an application gateway
+            SKU of an application gateway.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,12 +41,12 @@
       <MemberSignature Language="C#" Value="public ApplicationGatewaySku (string name = default, string tier = default, int? capacity = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string tier, valuetype System.Nullable`1&lt;int32&gt; capacity) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Azure.Management.Network.Models.ApplicationGatewaySku.#ctor(System.String,System.String,System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = null, Optional tier As String = null, Optional capacity As Nullable(Of Integer) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional name As String = Nothing, Optional tier As String = Nothing, Optional capacity As Nullable(Of Integer) = Nothing)" />
       <MemberSignature Language="F#" Value="new Microsoft.Azure.Management.Network.Models.ApplicationGatewaySku : string * string * Nullable&lt;int&gt; -&gt; Microsoft.Azure.Management.Network.Models.ApplicationGatewaySku" Usage="new Microsoft.Azure.Management.Network.Models.ApplicationGatewaySku (name, tier, capacity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -56,9 +56,10 @@
       <Docs>
         <param name="name">Name of an application gateway SKU. Possible
             values include: 'Standard_Small', 'Standard_Medium',
-            'Standard_Large', 'WAF_Medium', 'WAF_Large'</param>
+            'Standard_Large', 'WAF_Medium', 'WAF_Large', 'Standard_v2',
+            'WAF_v2'</param>
         <param name="tier">Tier of an application gateway. Possible values
-            include: 'Standard', 'WAF'</param>
+            include: 'Standard', 'WAF', 'Standard_v2', 'WAF_v2'</param>
         <param name="capacity">Capacity (instance count) of an application
             gateway.</param>
         <summary>
@@ -76,11 +77,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="capacity")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="capacity")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="capacity")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -103,11 +105,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="name")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -117,7 +120,7 @@
         <summary>
             Gets or sets name of an application gateway SKU. Possible values
             include: 'Standard_Small', 'Standard_Medium', 'Standard_Large',
-            'WAF_Medium', 'WAF_Large'
+            'WAF_Medium', 'WAF_Large', 'Standard_v2', 'WAF_v2'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -132,11 +135,12 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Management.Network</AssemblyName>
-        <AssemblyVersion>20.0.0.0</AssemblyVersion>
+        <AssemblyVersion>20.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Newtonsoft.Json.JsonProperty(PropertyName="tier")</AttributeName>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="tier")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="tier")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -145,7 +149,7 @@
       <Docs>
         <summary>
             Gets or sets tier of an application gateway. Possible values
-            include: 'Standard', 'WAF'
+            include: 'Standard', 'WAF', 'Standard_v2', 'WAF_v2'
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
