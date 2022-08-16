@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Security.ConfidentialLedger</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.Core.ClientOptions</BaseTypeName>
@@ -27,6 +28,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Security.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="version" Type="Azure.Security.ConfidentialLedger.ConfidentialLedgerClientOptions+ServiceVersion" />
@@ -37,25 +39,25 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="OperationPollingInterval">
-      <MemberSignature Language="C#" Value="public TimeSpan OperationPollingInterval { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OperationPollingInterval" />
-      <MemberSignature Language="DocId" Value="P:Azure.Security.ConfidentialLedger.ConfidentialLedgerClientOptions.OperationPollingInterval" />
-      <MemberSignature Language="VB.NET" Value="Public Property OperationPollingInterval As TimeSpan" />
-      <MemberSignature Language="F#" Value="member this.OperationPollingInterval : TimeSpan with get, set" Usage="Azure.Security.ConfidentialLedger.ConfidentialLedgerClientOptions.OperationPollingInterval" />
+    <Member MemberName="CertificateEndpoint">
+      <MemberSignature Language="C#" Value="public Uri CertificateEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CertificateEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Azure.Security.ConfidentialLedger.ConfidentialLedgerClientOptions.CertificateEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property CertificateEndpoint As Uri" />
+      <MemberSignature Language="F#" Value="member this.CertificateEndpoint : Uri with get, set" Usage="Azure.Security.ConfidentialLedger.ConfidentialLedgerClientOptions.CertificateEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Security.ConfidentialLedger</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.TimeSpan</ReturnType>
+        <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The default polling interval for client methods that return an <see cref="T:Azure.Operation" /> when waitForCompletion is <c>true</c>.
+            The Identity Service URL. If not provided, the default endpoint "https://identity.confidential-ledger.core.azure.com" will be used.
             </summary>
-        <value>To be added.</value>
+        <value />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
