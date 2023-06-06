@@ -16,6 +16,7 @@
     <AssemblyVersion>1.37.1.0</AssemblyVersion>
     <AssemblyVersion>1.38.0.0</AssemblyVersion>
     <AssemblyVersion>1.38.1.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -46,11 +47,12 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            Create an ExportImportDevice.
+            Create an instance of this class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,6 +76,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="device" Type="Microsoft.Azure.Devices.Device" />
@@ -83,7 +86,7 @@
         <param name="device">Device properties</param>
         <param name="importmode">Identifies the behavior when merging a device to the registry during import actions.</param>
         <summary>
-            Create an ExportImportDevice.
+            Create an instance of this class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -107,6 +110,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -129,11 +133,15 @@
       </Docs>
     </Member>
     <Member MemberName="Capabilities">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.Shared.DeviceCapabilities Capabilities { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Devices.Shared.DeviceCapabilities Capabilities" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.Shared.DeviceCapabilities Capabilities { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Devices.Shared.DeviceCapabilities Capabilities" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.Capabilities" />
-      <MemberSignature Language="VB.NET" Value="Public Property Capabilities As DeviceCapabilities" />
-      <MemberSignature Language="F#" Value="member this.Capabilities : Microsoft.Azure.Devices.Shared.DeviceCapabilities with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Capabilities" />
+      <MemberSignature Language="VB.NET" Value="Public Property Capabilities As DeviceCapabilities" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.Capabilities : Microsoft.Azure.Devices.Shared.DeviceCapabilities with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Capabilities" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.ClientCapabilities Capabilities { get; set; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Devices.ClientCapabilities Capabilities" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Property Capabilities As ClientCapabilities" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.Capabilities : Microsoft.Azure.Devices.ClientCapabilities with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Capabilities" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
@@ -147,6 +155,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -155,7 +164,8 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Devices.Shared.DeviceCapabilities</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Devices.Shared.DeviceCapabilities</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Devices.ClientCapabilities</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -180,6 +190,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -192,25 +203,28 @@
       </ReturnValue>
       <Docs>
         <summary>
-             The scope of the device. For edge devices, this is auto-generated and immutable. For leaf
-             devices, set this to create child/parent relationship.
-             </summary>
+            The scope of the device. For edge devices, this is auto-generated and immutable. For leaf
+            devices, set this to create child/parent relationship.
+            </summary>
         <value>To be added.</value>
         <remarks>
-             For leaf devices, the value to set a parent edge device can be retrieved from the parent
-             edge device's device scope property.
-            
-             For more information, see
-             <see href="https://docs.microsoft.com/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11#parent-and-child-relationships" />.
-             </remarks>
+            For leaf devices, the value to set a parent edge device can be retrieved from the parent
+            edge device's device scope property.
+            For more information, see
+            <see href="https://docs.microsoft.com/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11#parent-and-child-relationships" />.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="ETag">
-      <MemberSignature Language="C#" Value="public string ETag { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string ETag" />
+      <MemberSignature Language="C#" Value="public string ETag { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ETag" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.ETag" />
-      <MemberSignature Language="VB.NET" Value="Public Property ETag As String" />
-      <MemberSignature Language="F#" Value="member this.ETag : string with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.ETag" />
+      <MemberSignature Language="VB.NET" Value="Public Property ETag As String" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.ETag : string with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.ETag" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public Azure.ETag ETag { get; set; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.ETag ETag" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Property ETag As ETag" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.ETag : Azure.ETag with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.ETag" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
@@ -224,15 +238,21 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="eTag")]</AttributeName>
           <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="eTag")&gt;]</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Devices.NewtonsoftJsonETagConverter))]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Devices.NewtonsoftJsonETagConverter))&gt;]</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Azure.ETag</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -264,6 +284,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -301,6 +322,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -338,6 +360,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -375,6 +398,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -394,11 +418,15 @@
       </Docs>
     </Member>
     <Member MemberName="Status">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.DeviceStatus Status { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Azure.Devices.DeviceStatus Status" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.DeviceStatus Status { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Azure.Devices.DeviceStatus Status" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.Status" />
-      <MemberSignature Language="VB.NET" Value="Public Property Status As DeviceStatus" />
-      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Azure.Devices.DeviceStatus with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As DeviceStatus" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Azure.Devices.DeviceStatus with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Status" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.ClientStatus Status { get; set; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Azure.Devices.ClientStatus Status" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As ClientStatus" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Azure.Devices.ClientStatus with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Status" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
@@ -412,6 +440,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -420,7 +449,8 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Devices.DeviceStatus</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Devices.DeviceStatus</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Azure.Devices.ClientStatus</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -451,6 +481,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -472,11 +503,15 @@
       </Docs>
     </Member>
     <Member MemberName="Tags">
-      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.Shared.TwinCollection Tags { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Devices.Shared.TwinCollection Tags" />
+      <MemberSignature Language="C#" Value="public Microsoft.Azure.Devices.Shared.TwinCollection Tags { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Azure.Devices.Shared.TwinCollection Tags" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.Tags" />
-      <MemberSignature Language="VB.NET" Value="Public Property Tags As TwinCollection" />
-      <MemberSignature Language="F#" Value="member this.Tags : Microsoft.Azure.Devices.Shared.TwinCollection with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Tags" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tags As TwinCollection" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.Tags : Microsoft.Azure.Devices.Shared.TwinCollection with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.Tags" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Tags { get; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Tags" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tags As IDictionary(Of String, Object)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.Tags : System.Collections.Generic.IDictionary&lt;string, obj&gt;" Usage="Microsoft.Azure.Devices.ExportImportDevice.Tags" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
@@ -490,6 +525,7 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -498,7 +534,8 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Microsoft.Azure.Devices.Shared.TwinCollection</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">Microsoft.Azure.Devices.Shared.TwinCollection</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -509,11 +546,15 @@
       </Docs>
     </Member>
     <Member MemberName="TwinETag">
-      <MemberSignature Language="C#" Value="public string TwinETag { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TwinETag" />
+      <MemberSignature Language="C#" Value="public string TwinETag { get; set; }" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TwinETag" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Azure.Devices.ExportImportDevice.TwinETag" />
-      <MemberSignature Language="VB.NET" Value="Public Property TwinETag As String" />
-      <MemberSignature Language="F#" Value="member this.TwinETag : string with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.TwinETag" />
+      <MemberSignature Language="VB.NET" Value="Public Property TwinETag As String" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.TwinETag : string with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.TwinETag" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public Azure.ETag TwinETag { get; set; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.ETag TwinETag" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Property TwinETag As ETag" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.TwinETag : Azure.ETag with get, set" Usage="Microsoft.Azure.Devices.ExportImportDevice.TwinETag" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Azure.Devices</AssemblyName>
@@ -527,15 +568,21 @@
         <AssemblyVersion>1.37.1.0</AssemblyVersion>
         <AssemblyVersion>1.38.0.0</AssemblyVersion>
         <AssemblyVersion>1.38.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="twinETag")]</AttributeName>
           <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(NullValueHandling=Newtonsoft.Json.NullValueHandling.Ignore, PropertyName="twinETag")&gt;]</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Devices.NewtonsoftJsonETagConverter))]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Microsoft.Azure.Devices.NewtonsoftJsonETagConverter))&gt;]</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="azure-dotnet-preview">Azure.ETag</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
