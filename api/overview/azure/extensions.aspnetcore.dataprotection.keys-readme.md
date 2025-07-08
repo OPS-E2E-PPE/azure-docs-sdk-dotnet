@@ -15,7 +15,7 @@ ms.service: extensions
 
 The `Azure.Extensions.AspNetCore.DataProtection.Keys` package allows protecting keys at rest using Azure Key Vault Key Encryption/Wrapping feature.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

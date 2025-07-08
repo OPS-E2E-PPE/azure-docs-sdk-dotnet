@@ -16,7 +16,7 @@ ms.service:
 
 Azure Schema Registry is a schema repository service hosted by Azure Event Hubs, providing schema storage, versioning, and management. This package provides an Avro serializer capable of serializing and deserializing payloads containing Schema Registry schema identifiers and Avro-encoded data.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

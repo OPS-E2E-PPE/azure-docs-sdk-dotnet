@@ -25,7 +25,7 @@ Use the client library for Azure Container Registry to:
 
 [Source code][source] | [Package (NuGet)][package] | [API reference documentation][docs] | [REST API documentation][rest_docs] | [Product documentation][product_docs]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

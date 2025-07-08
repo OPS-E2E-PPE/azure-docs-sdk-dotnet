@@ -16,7 +16,7 @@ ms.service: webjobs
 
 This extension provides functionality for receiving Event Grid webhook calls in Azure Functions, allowing you to easily write functions that respond to any event published to Event Grid.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

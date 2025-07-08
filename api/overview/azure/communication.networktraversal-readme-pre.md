@@ -17,7 +17,7 @@ ms.service:
 Azure Communication Network Traversal enables high bandwidth, low latency connections between peers for real-time communication scenarios and data transfer scenarios by providing access to low-level STUN and TURN services.
 
 [Source code][source] <!--| [Package (NuGet)][package]--> | [Product documentation][product_docs] <!--| [Samples][source_samples]-->
-## Getting started
+## Getting start
 
 ### Install the package
 

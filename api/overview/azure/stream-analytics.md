@@ -56,7 +56,7 @@ StreamingJob streamingJob = new StreamingJob()
     Tags = new Dictionary<string, string>()
     {
         { "Origin", ".NET SDK" },
-        { "ReasonCreated", "Getting started tutorial" }
+        { "ReasonCreated", "Getting start tutorial" }
     },
     Location = "West US",
     EventsOutOfOrderPolicy = EventsOutOfOrderPolicy.Drop,

@@ -15,7 +15,7 @@ ms.service: extensions
 
 The `Azure.Extensions.AspNetCore.Configuration.Secrets` package allows storing configuration values using Azure Key Vault Secrets.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

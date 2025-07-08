@@ -23,7 +23,7 @@ Azure Communication Administration is managing tokens and phone numbers for Azur
 
 [Source code][source] | [Package (NuGet)][package] | [Product documentation][product_docs]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Communication Administration client library for .NET with [NuGet][nuget]:

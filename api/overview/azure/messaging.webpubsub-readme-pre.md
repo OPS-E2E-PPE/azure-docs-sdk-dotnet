@@ -32,7 +32,7 @@ Package TBD |
 [Product documentation](https://aka.ms/awps/doc) |
 [Samples][samples_ref]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

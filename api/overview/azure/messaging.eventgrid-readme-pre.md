@@ -23,7 +23,7 @@ Use the client library for Azure Event Grid to:
 
   [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventGrid_4.0.0-beta.5/sdk/eventgrid/Azure.Messaging.EventGrid/src) | [Package (NuGet)](https://www.nuget.org/packages/Azure.Messaging.EventGrid/) | [API reference documentation](https://azure.github.io/azure-sdk-for-net/eventgrid.html) | [Product documentation](https://docs.microsoft.com/azure/event-grid/) | [Samples](https://github.com/Azure/azure-sdk-for-net/blob/Azure.Messaging.EventGrid_4.0.0-beta.5/sdk/eventgrid/Azure.Messaging.EventGrid/samples)
 
-## Getting started
+## Getting start
 
 ### Install the package
 

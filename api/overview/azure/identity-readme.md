@@ -17,7 +17,7 @@ ms.service: identity
 
   [Source code][source] | [Package (nuget)][package] | [API reference documentation][identity_api_docs] | [Azure Active Directory documentation][aad_doc]
 
-## Getting started
+## Getting start
 
 ### Install the package
 
@@ -80,7 +80,7 @@ See [Credential Classes](#credential-classes) for a complete listing of availabl
 ### DefaultAzureCredential
 The `DefaultAzureCredential` is appropriate for most scenarios where the application is intended to ultimately be run in the Azure Cloud. This is because the `DefaultAzureCredential` combines credentials commonly used to authenticate when deployed, with credentials used to authenticate in a development environment.
 
-> Note: `DefaultAzureCredential` is intended to simplify getting started with the SDK by handling common scenarios with reasonable default behaviors. Developers who want more control or whose scenario isn't served by the default settings should use other credential types.
+> Note: `DefaultAzureCredential` is intended to simplify Getting start with the SDK by handling common scenarios with reasonable default behaviors. Developers who want more control or whose scenario isn't served by the default settings should use other credential types.
 
 The `DefaultAzureCredential` will attempt to authenticate via the following mechanisms in order.
 

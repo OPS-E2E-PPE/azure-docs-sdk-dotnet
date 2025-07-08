@@ -19,7 +19,7 @@ Azure Object Anchors enables an application to detect an object in the physical 
 [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Azure.MixedReality.ObjectAnchors.Conversion_0.2.0-beta.1/sdk/objectanchors/Azure.MixedReality.ObjectAnchors.Conversion) | NuGet
 
 - [Azure Object Anchors client library for .NET](#azure-object-anchors-client-library-for-net)
-  - [Getting started](#getting-started)
+  - [Getting start](#getting-started)
     - [Install the package](#install-the-package)
     - [Prerequisites](#prerequisites)
     - [Authenticate the client](#authenticate-the-client)
@@ -33,7 +33,7 @@ Azure Object Anchors enables an application to detect an object in the physical 
   - [Next steps](#next-steps)
   - [Contributing](#contributing)
 
-## Getting started
+## Getting start
 
 ### Install the package
 

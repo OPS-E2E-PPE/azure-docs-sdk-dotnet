@@ -23,7 +23,7 @@ Use the client library for Video Analyzer Edge to:
 
 [Product documentation][doc_product] | [Direct methods][doc_direct_methods] | [Pipelines][doc_pipelines] | [Source code][source] | [Samples][samples]
 
-## Getting started
+## Getting start
 
 This is a models-only SDK. All client operations are done using the [Microsoft Azure IoT SDKs](https://github.com/azure/azure-iot-sdks). This SDK provides models you can use to interact with the Azure IoT SDKs.
 

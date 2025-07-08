@@ -15,7 +15,7 @@ ms.service:
 
 The [Microsoft.Spatial package][microsoft_spatial_package] contains classes and methods that support geographic operations. This library contains converters dependent on System.Text.Json for use with Microsoft.Spatial when using the Azure SDK for .NET.
 
-## Getting started
+## Getting start
 
 Install this package if you use the Microsoft.Spatial package in your application and want to serialize supported classes with System.Text.Json.
 

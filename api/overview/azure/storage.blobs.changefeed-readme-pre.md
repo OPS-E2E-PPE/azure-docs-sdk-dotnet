@@ -24,7 +24,7 @@ process change events that occur in your Blob Storage account at a low cost.
 
 [Source code][source] | [Package (NuGet)][package] | [Product documentation][product_docs]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

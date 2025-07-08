@@ -50,7 +50,7 @@ Use the Azure.Search.Documents client library to:
 
 [Source code][source] | [Package (NuGet)][package] | [API reference documentation][docs] | [REST API documentation][rest_docs] | [Product documentation][product_docs]
 
-## Getting started
+## Getting start
 
 ### Install the package
 
@@ -67,7 +67,7 @@ You need an [Azure subscription][azure_sub] and a
 
 To create a new search service, you can use the [Azure portal][create_search_service_docs],
 [Azure PowerShell][create_search_service_ps], or the [Azure CLI][create_search_service_cli].
-Here's an example using the Azure CLI to create a free instance for getting started:
+Here's an example using the Azure CLI to create a free instance for Getting start:
 
 ```Powershell
 az search service create --name <mysearch> --resource-group <mysearch-rg> --sku free --location westus

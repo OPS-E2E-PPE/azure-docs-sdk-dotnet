@@ -23,7 +23,7 @@ Use the client library for Live Video Analytics on IoT Edge to:
 
 [Product documentation][doc_product] | [Direct methods][doc_direct_methods] | [Media graphs][doc_media_graph] | [Source code][source] | [Samples][samples]
 
-## Getting started
+## Getting start
 
 This is a models only sdk. All client operations are done using the [Microsoft Azure IoT SDKs](https://github.com/azure/azure-iot-sdks). This sdk provides models you can use to interact with the Azure Iot SDKs.
 

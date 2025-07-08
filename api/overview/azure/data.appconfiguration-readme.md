@@ -23,7 +23,7 @@ Use the client library for App Configuration to:
 
 [Source code][source_root] | [Package (NuGet)][package] | [API reference documentation][reference_docs] | [Product documentation][azconfig_docs] | [Samples][source_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 
@@ -72,7 +72,7 @@ var client = new ConfigurationClient(connectionString);
 
 #### Create ConfigurationClient with Azure Active Directory Credential
 
-Client subscription key authentication is used in most of the examples in this getting started guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity]. To use the [DefaultAzureCredential][azure_identity_dac] provider shown below,
+Client subscription key authentication is used in most of the examples in this Getting start guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity]. To use the [DefaultAzureCredential][azure_identity_dac] provider shown below,
 or other credential providers provided with the Azure SDK, please install the Azure.Identity package:
 
 ```PowerShell

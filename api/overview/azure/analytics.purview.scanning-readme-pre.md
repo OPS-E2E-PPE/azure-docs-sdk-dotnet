@@ -24,7 +24,7 @@ Azure Purview Scanning is a fully managed cloud service whose users can scan you
 
 [Source code][source_code] | [Package (NuGet)][client_nuget_package] | [Product documentation][catalog_product_documentation]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

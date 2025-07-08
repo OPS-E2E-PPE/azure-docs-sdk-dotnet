@@ -15,7 +15,7 @@ ms.service:
 
 This library can be used to enable publishing CloudNative CloudEvents using the Azure Event Grid library.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

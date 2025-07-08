@@ -32,7 +32,7 @@ Install-Package Microsoft.Azure.WebJobs.Extensions.DurableTask
 dotnet add package Microsoft.Azure.WebJobs.Extensions.DurableTask
 ```
 
-### Getting started
+### Getting start
 
 > [!div class="nextstepaction"]
 > [Durable Functions quickstart](/azure/azure-functions/durable/durable-functions-create-first-csharp)

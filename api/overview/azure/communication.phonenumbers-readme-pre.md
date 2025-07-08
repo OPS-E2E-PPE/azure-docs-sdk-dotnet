@@ -22,7 +22,7 @@ Azure Communication Phone Numbers is managing phone numbers for Azure Communicat
 
 [Source code][source] <!--| [Package (NuGet)][package]--> | [Product documentation][product_docs] | [Samples][source_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

@@ -21,7 +21,7 @@ Azure Cognitive Services Form Recognizer is a cloud service that uses machine le
 
 [Source code][formreco_client_src] | [Package (NuGet)][formreco_nuget_package] | [API reference documentation][formreco_refdocs] | [Product documentation][formreco_docs] | [Samples][formreco_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Form Recognizer client library for .NET with [NuGet][nuget]:
@@ -91,7 +91,7 @@ var client = new FormRecognizerClient(new Uri(endpoint), credential);
 
 #### Create FormRecognizerClient with Azure Active Directory Credential
 
-`AzureKeyCredential` authentication is used in the examples in this getting started guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity]. Note that regional endpoints do not support AAD authentication. Create a [custom subdomain][custom_subdomain] for your resource in order to use this type of authentication.
+`AzureKeyCredential` authentication is used in the examples in this Getting start guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity]. Note that regional endpoints do not support AAD authentication. Create a [custom subdomain][custom_subdomain] for your resource in order to use this type of authentication.
 
 To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below, or other credential providers provided with the Azure SDK, please install the `Azure.Identity` package:
 

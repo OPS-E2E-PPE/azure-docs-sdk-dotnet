@@ -16,7 +16,7 @@ ms.service: functions
 
 This extension provides functionality for accessing Azure Storage Blobs in Azure Functions.
 
-## Getting started
+## Getting start
 
 ### Install the package
 
