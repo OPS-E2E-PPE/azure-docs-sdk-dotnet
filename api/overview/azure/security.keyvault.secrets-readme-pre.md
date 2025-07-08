@@ -19,7 +19,7 @@ The Azure Key Vault secrets client library allows you to securely store and cont
 
 [Source code][secret_client_src] | [Package (NuGet)][secret_client_nuget_package] | [API reference documentation][API_reference] | [Product documentation][keyvault_docs] | [Samples][secret_client_samples] | [Migration guide][migration_guide]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Key Vault secrets client library for .NET with [NuGet][nuget]:
@@ -42,7 +42,7 @@ az keyvault create --resource-group <your-resource-group-name> --name <your-key-
 In order to interact with the Azure Key Vault service, you'll need to create an instance of the [SecretClient][secret_client_class] class. You need a **vault url**, which you may see as "DNS Name" in the portal,
  and **client secret credentials (client id, client secret, tenant id)** to instantiate a client object.
 
-Client secret credential authentication is being used in this getting started section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
+Client secret credential authentication is being used in this Getting start section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
 or other credential providers provided with the Azure SDK, you should install the Azure.Identity package:
 
 ```PowerShell

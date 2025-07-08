@@ -22,7 +22,7 @@ Azure Cognitive Services Document Translation is a cloud service that translates
 
 [Source code][documenttranslation_client_src] | [Package (NuGet)][documenttranslation_nuget_package] | [API reference documentation][documenttranslation_refdocs] | [Product documentation][documenttranslation_docs] | [Samples][documenttranslation_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Document Translation client library for .NET with [NuGet][nuget]:

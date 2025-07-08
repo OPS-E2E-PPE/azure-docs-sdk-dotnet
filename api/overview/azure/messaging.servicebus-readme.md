@@ -28,7 +28,7 @@ Use the client library for Azure Service Bus to:
 
 [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.ServiceBus_7.1.2/sdk/servicebus/Azure.Messaging.ServiceBus/src) | [Package (NuGet)](https://www.nuget.org/packages/Azure.Messaging.ServiceBus/) | [API reference documentation](https://docs.microsoft.com/dotnet/api/azure.messaging.servicebus?view=azure-dotnet) | [Product documentation](https://docs.microsoft.com/azure/service-bus/) | [Migration guide](https://github.com/Azure/azure-sdk-for-net/blob/Azure.Messaging.ServiceBus_7.1.2/sdk/servicebus/Azure.Messaging.ServiceBus/MigrationGuide.md)
 
-## Getting started
+## Getting start
 
 ### Prerequisites
 

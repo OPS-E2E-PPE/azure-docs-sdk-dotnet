@@ -18,7 +18,7 @@ This library provides functionality for interacting with the [Azure IoT Models R
 
 [Source code][source] | Package (nuget)
 
-## Getting started
+## Getting start
 
 The complete Microsoft Azure SDK can be downloaded from the [Microsoft Azure downloads][microsoft_sdk_download] page, and it ships with support for building deployment packages, integrating with tooling, rich command-line tooling, and more.
 

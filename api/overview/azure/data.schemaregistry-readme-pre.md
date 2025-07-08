@@ -16,7 +16,7 @@ ms.service: schemaregistry
 
 Azure Schema Registry is a schema repository service hosted by Azure Event Hubs, providing schema storage, versioning, and management. The registry is leveraged by serializers to reduce payload size while describing payload structure with schema identifiers rather than full schemas.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

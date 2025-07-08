@@ -23,7 +23,7 @@ This package contains a C# SDK for Azure Communication Services for chat.
 [Source code][source] | [Package (NuGet)][package] | [Product documentation][product_docs]
 
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Communication Chat client library for .NET with [NuGet][nuget]:

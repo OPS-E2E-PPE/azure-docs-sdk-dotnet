@@ -15,7 +15,7 @@ ms.service: extensions
 
 The `Azure.Extensions.AspNetCore.DataProtection.Blobs` package allows storing ASP.NET Core DataProtection keys in Azure Blob Storage. Keys can be shared across several instances of a web app. Apps can share authentication cookies or CSRF protection across multiple servers.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

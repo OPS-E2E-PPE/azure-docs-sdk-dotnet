@@ -29,7 +29,7 @@ The Azure Tables client library can seamlessly target either Azure Table storage
 
 [Source code][table_client_src] | [Package (NuGet)][table_client_nuget_package] | [API reference documentation][api_reference] | [Samples][table_client_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Tables client library for .NET with [NuGet][table_client_nuget_package]:

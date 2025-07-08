@@ -22,7 +22,7 @@ Azure Cognitive Services Text Analytics is a cloud service that provides advance
 
 [Source code][textanalytics_client_src] | [Package (NuGet)][textanalytics_nuget_package] | [API reference documentation][textanalytics_refdocs] | [Product documentation][textanalytics_docs] | [Samples][textanalytics_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Text Analytics client library for .NET with [NuGet][nuget]:
@@ -92,7 +92,7 @@ var client = new TextAnalyticsClient(new Uri(endpoint), credential);
 
 #### Create TextAnalyticsClient with Azure Active Directory Credential
 
-Client API key authentication is used in most of the examples in this getting started guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity].  Note that regional endpoints do not support AAD authentication. Create a [custom subdomain][custom_subdomain] for your resource in order to use this type of authentication.  
+Client API key authentication is used in most of the examples in this Getting start guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity].  Note that regional endpoints do not support AAD authentication. Create a [custom subdomain][custom_subdomain] for your resource in order to use this type of authentication.  
 
 To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
 or other credential providers provided with the Azure SDK, please install the Azure.Identity package:

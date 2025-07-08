@@ -19,7 +19,7 @@ portfolio, Azure Confidential Ledger runs in SGX enclaves. It is built on Micros
 
   [Source code][client_src] | [Package (NuGet)][client_nuget_package] <!--| [API reference documentation][api_reference] | [Samples][samples] -->
 
-## Getting started
+## Getting start
 
 This section should include everything a developer needs to do to install and create their first client connection *very quickly*.
 

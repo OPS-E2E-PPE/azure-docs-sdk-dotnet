@@ -24,7 +24,7 @@ ms.service: identity
 
 
 
-## Getting started
+## Getting start
 
 ### Install the package
 

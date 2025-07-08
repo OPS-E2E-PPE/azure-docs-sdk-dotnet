@@ -24,7 +24,7 @@ so that once you learn how to use these APIs in one client library, you will kno
 
 [Source code][source] | [Package (NuGet)][package] | [API reference documentation][docs]
 
-## Getting started
+## Getting start
 
 Typically, you will not need to install Azure.Core; 
 it will be installed for you when you install one of the client libraries using it. 

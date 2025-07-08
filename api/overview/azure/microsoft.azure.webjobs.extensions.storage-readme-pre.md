@@ -16,7 +16,7 @@ ms.service: webjobs
 
 This extension provides functionality for accessing Azure Storage Blobs and Queues in Azure Functions. This package is a metapackage created for backwards compatibity. Using `Azure.WebJobs.Extensions.Storage.Blobs` and `Azure.WebJobs.Extensions.Storage.Queues` directly is recommended.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

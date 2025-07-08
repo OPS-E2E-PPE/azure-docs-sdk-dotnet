@@ -16,7 +16,7 @@ ms.service: core
 The [Azure.Core package][azure_core_package] contains types shared by all Azure SDK client libraries.
 This library contains converters dependent on the [Newtonsoft.Json package][newtonsoft_json_package] for use with Azure.Core.
 
-## Getting started
+## Getting start
 
 Install this package if you want to use Newtonsoft.Json to serialize and deserialize model types with some Azure SDKs.
 

@@ -26,7 +26,7 @@ the lifetime of remote rendering sessions.
 
 [Product documentation](https://docs.microsoft.com/azure/remote-rendering/)
 
-## Getting started
+## Getting start
 
 ### Install the package
 

@@ -23,7 +23,7 @@ Use the management library for Azure Communication Services to:
 - Get the keys for that resource
 - Delete a resource
 
-## Getting started
+## Getting start
 
 ### Prerequisites
 

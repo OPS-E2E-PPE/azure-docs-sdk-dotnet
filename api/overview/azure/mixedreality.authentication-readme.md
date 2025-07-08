@@ -23,7 +23,7 @@ token from the STS that can be used to access Mixed Reality services.
 ![Mixed Reality service authentication diagram](https://docs.microsoft.com/azure/spatial-anchors/concepts/media/spatial-anchors-authentication-overview.png)
 
 - [Azure Mixed Reality Authentication client library for .NET](#azure-mixed-reality-authentication-client-library-for-net)
-  - [Getting started](#getting-started)
+  - [Getting start](#getting-started)
     - [Install the package](#install-the-package)
     - [Prerequisites](#prerequisites)
     - [Authenticate the client](#authenticate-the-client)
@@ -44,7 +44,7 @@ token from the STS that can be used to access Mixed Reality services.
     - [Client libraries supporting authentication with Mixed Reality Authentication](#client-libraries-supporting-authentication-with-mixed-reality-authentication)
   - [Contributing](#contributing)
 
-## Getting started
+## Getting start
 
 ### Install the package
 

@@ -23,7 +23,7 @@ Azure Cognitive Services Metrics Advisor is a cloud service that uses machine le
 
 [Source code][metricsadv_client_src] | [Package (NuGet)][metricsadv_nuget_package] | [API reference documentation][metricsadv_refdocs] | [Product documentation][metricsadv_docs] | [Samples][metricsadv_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 
@@ -111,7 +111,7 @@ var adminClient = new MetricsAdvisorAdministrationClient(new Uri(endpoint), cred
 
 #### Create a MetricsAdvisorClient or a MetricsAdvisorAdministrationClient with Azure Active Directory
 
-`MetricsAdvisorKeyCredential` authentication is used in the examples in this getting started guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity].
+`MetricsAdvisorKeyCredential` authentication is used in the examples in this Getting start guide, but you can also authenticate with Azure Active Directory using the [Azure Identity library][azure_identity].
 
 To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below, or other credential providers provided with the Azure SDK, please install the `Azure.Identity` package:
 

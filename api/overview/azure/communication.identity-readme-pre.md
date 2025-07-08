@@ -21,7 +21,7 @@ Azure Communication Identity is managing tokens for Azure Communication Services
 
 [Source code][source] <!--| [Package (NuGet)][package]--> | [Product documentation][product_docs] | [Samples][source_samples]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

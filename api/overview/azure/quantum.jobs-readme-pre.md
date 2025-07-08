@@ -20,7 +20,7 @@ Azure Quantum is a Microsoft Azure service that you can use to run quantum compu
 
   [Source code][source] | [API reference documentation](https://docs.microsoft.com/qsharp/api/) | [Product documentation](https://docs.microsoft.com/azure/quantum/)
 
-## Getting started
+## Getting start
 
 This section should include everything a developer needs to do to install and create their first client connection *very quickly*.
 

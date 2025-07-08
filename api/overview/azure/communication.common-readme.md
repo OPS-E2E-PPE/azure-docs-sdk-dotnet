@@ -17,7 +17,7 @@ ms.service: communication
 This package contains common code for Azure Communication Service libraries.
 
 [Source code][source] | [Package (NuGet)][package] | [Product documentation][product_docs]
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Communication Common client library for .NET with [NuGet][nuget].

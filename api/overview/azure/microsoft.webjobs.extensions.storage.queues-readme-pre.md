@@ -16,7 +16,7 @@ ms.service:
 
 This extension provides functionality for accessing Azure Storage Queues in Azure Functions.
 
-## Getting started
+## Getting start
 
 ### Install the package
 

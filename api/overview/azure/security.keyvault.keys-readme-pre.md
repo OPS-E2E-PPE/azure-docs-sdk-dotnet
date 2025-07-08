@@ -24,7 +24,7 @@ The Azure Key Vault keys library client supports RSA keys and Elliptic Curve (EC
 
 [Source code][key_client_src] | [Package (NuGet)][key_client_nuget_package] | [API reference documentation][API_reference] | [Product documentation][keyvault_docs] | [Samples][key_client_samples] | [Migration guide][migration_guide]
 
-## Getting started
+## Getting start
 
 ### Install the package
 Install the Azure Key Vault keys client library for .NET with [NuGet][nuget]:
@@ -43,7 +43,7 @@ See the final two steps in the next section for details on creating the Key Vaul
 In order to interact with the Key Vault service, you'll need to create an instance of the [KeyClient][key_client_class] class. You need a **vault url**, which you may see as "DNS Name" in the portal,
  and **client secret credentials (client id, client secret, tenant id)** to instantiate a client object.
 
-Client secret credential authentication is being used in this getting started section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
+Client secret credential authentication is being used in this Getting start section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
 or other credential providers provided with the Azure SDK, you should install the Azure.Identity package:
 
 ```PowerShell

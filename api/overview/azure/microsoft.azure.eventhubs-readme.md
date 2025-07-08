@@ -43,7 +43,7 @@ Use the client library for Event Hubs to:
 
 [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs_4.3.2/sdk/eventhub/Microsoft.Azure.EventHubs) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.EventHubs/) | [API reference documentation](https://docs.microsoft.com/dotnet/api/overview/azure/event-hubs?view=azure-dotnet) | [Product documentation](https://docs.microsoft.com/azure/event-hubs/)
 
-## Getting started
+## Getting start
 
 The complete Microsoft Azure SDK can be downloaded from the [Microsoft Azure Downloads Page](https://azure.microsoft.com/downloads/?sdk=net) and ships with support for building deployment packages, integrating with tooling, rich command line tooling, and more.
 

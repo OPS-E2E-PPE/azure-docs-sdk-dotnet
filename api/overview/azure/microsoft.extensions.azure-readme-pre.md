@@ -17,7 +17,7 @@ Microsoft.Extensions.Azure.Core provides shared primitives to integrate Azure cl
 
 [Source code][source_root] | [Package (NuGet)][package]
 
-## Getting started
+## Getting start
 
 ### Install the package
 

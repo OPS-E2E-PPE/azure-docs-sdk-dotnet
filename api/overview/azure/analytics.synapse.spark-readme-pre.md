@@ -22,7 +22,7 @@ Use the client library for Synapse to:
 
 Azure Synapse is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless on-demand or provisioned resources—at scale. Azure Synapse brings these two worlds together with a unified experience to ingest, prepare, manage, and serve data for immediate BI and machine learning needs. 
 
-## Getting started
+## Getting start
 
 The complete Microsoft Azure SDK can be downloaded from the [Microsoft Azure Downloads Page](https://azure.microsoft.com/downloads/?sdk=net) and ships with support for building deployment packages, integrating with tooling, rich command line tooling, and more.
 
@@ -56,7 +56,7 @@ az synapse workspace create \
 In order to interact with the Azure Synapse Analytics service, you'll need to create an instance of the [SparkBatchClient](https://github.com/Azure/azure-sdk-for-net/blob/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/synapse/Azure.Analytics.Synapse.Spark/src/Generated/SparkBatchClient.cs) or [SparkSessionClient](https://github.com/Azure/azure-sdk-for-net/blob/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/synapse/Azure.Analytics.Synapse.Spark/src/Generated/SparkSessionClient.cs) class. You need a **workspace endpoint**, which you may see as "Development endpoint" in the portal,
  and **client secret credentials (client id, client secret, tenant id)** to instantiate a client object.
 
-Client secret credential authentication is being used in this getting started section but you can find more ways to authenticate with [Azure identity](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/identity/Azure.Identity). To use the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/identity/Azure.Identity#defaultazurecredential) provider shown below,
+Client secret credential authentication is being used in this Getting start section but you can find more ways to authenticate with [Azure identity](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/identity/Azure.Identity). To use the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Analytics.Synapse.Spark_1.0.0-preview.6/sdk/identity/Azure.Identity#defaultazurecredential) provider shown below,
 or other credential providers provided with the Azure SDK, you should install the Azure.Identity package:
 
 ```PowerShell

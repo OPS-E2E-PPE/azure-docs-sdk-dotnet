@@ -35,7 +35,7 @@ Use the guidelines in each section of this template to ensure consistency and re
 
 > TIP: Your README should be as **brief** as possible but **no more brief** than necessary to get a developer new to Azure, the service, or the package up and running quickly. Keep it brief, but include everything a developer needs to make their first API call successfully.
 
-## Getting started
+## Getting start
 
 This section should include everything a developer needs to do to install and create their first client connection *very quickly*.
 

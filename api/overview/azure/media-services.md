@@ -12,7 +12,7 @@ ms.service: media-services
 
 Microsoft Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications. Media Services is based on REST APIs that enable you to securely upload, store, encode, and package video or audio content for both on-demand and live streaming delivery to various clients (for example, TV, PC, and mobile devices). 
 
-To learn more, see [Overview](/azure/media-services/media-services-overview) and [Getting started with .NET](/azure/media-services/media-services-dotnet-how-to-use). 
+To learn more, see [Overview](/azure/media-services/media-services-overview) and [Getting start with .NET](/azure/media-services/media-services-dotnet-how-to-use). 
 
 ## Client library
 

@@ -26,7 +26,7 @@ Azure Attestation receives evidence from compute entities, turns them into a set
 
   [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-beta.2/sdk/attestation) | [Package (NuGet)](https://www.nuget.org/packages/Azure.Security.Attestation) | [API reference documentation][API_reference] | [Product documentation](https://docs.microsoft.com/azure/attestation/)
 
-## Getting started
+## Getting start
 
 ### Prerequisites
 * An Azure subscription.  To use Azure services, including the Microsoft Azure Attestation service, you'll need a subscription.  If you do not have an existing Azure account, you may sign up for a [free trial][azure_sub] or use your [Visual Studio Subscription](https://visualstudio.microsoft.com/subscriptions/) benefits when you [create an account](https://account.windowsazure.com/Home/Index).
@@ -43,7 +43,7 @@ dotnet add package Azure.Security.Attestation --prerelease
 In order to interact with the Microsoft Azure Attestation service, you'll need to create an instance of the [Attestation Client][attestation_client] or [Attestation Administration Client][attestation_admin_client] class. You need a **attestation instance url**, which you may see as "DNS Name" in the portal,
  and **client secret credentials (client id, client secret, tenant id)** to instantiate a client object.
 
-Client secret credential authentication is being used in this getting started section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
+Client secret credential authentication is being used in this Getting start section but you can find more ways to authenticate with [Azure identity][azure_identity]. To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below,
 or other credential providers provided with the Azure SDK, you should install the Azure.Identity package:
 
 ```PowerShell

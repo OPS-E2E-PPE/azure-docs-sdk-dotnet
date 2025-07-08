@@ -19,7 +19,7 @@ The library provides access to the Device Update for IoT Hub service that enable
   [Source code](https://github.com/Azure/azure-sdk-for-net/tree/Azure.IoT.DeviceUpdate_1.0.0-beta.2/sdk) | [Package](https://www.nuget.org) | [Product documentation](https://docs.microsoft.com/azure/iot-hub-device-update/understand-device-update)
 
 
-## Getting started
+## Getting start
 
 The complete Microsoft Azure SDK can be downloaded from the [Microsoft Azure Downloads](https://azure.microsoft.com/downloads/?sdk=net) page and ships with support for building deployment packages, integrating with tooling, rich command line tooling, and more.
 

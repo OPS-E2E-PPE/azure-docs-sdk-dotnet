@@ -16,7 +16,7 @@ ms.service: webjobs
 
 This extension provides functionality for accessing Azure Service Bus from an Azure Function.
 
-## Getting started
+## Getting start
 
 ### Install the package
 
